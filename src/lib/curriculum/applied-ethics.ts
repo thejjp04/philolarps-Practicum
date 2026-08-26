@@ -1,0 +1,558 @@
+import type { Subject } from "@/lib/types";
+
+export const appliedEthics: Subject = {
+  slug: "applied-ethics",
+  name: "Applied Ethics",
+  group: "applied",
+  oneLine: "Working out what the moral theories actually say about hard cases.",
+  scope:
+    "Applied ethics takes the general normative theories and asks what they deliver when the question is a real one: whether to end a pregnancy, whether to eat animals, whether to execute a murderer. The beginner tier builds the tools every case uses, including moral status, harm and consent, the doing and allowing distinction, and the shape of rights and duties. The intermediate tier works through the standard debates one at a time. The advanced tier turns to the problems that break the standard framework: the non-identity problem, the impossibility results in population ethics, whether numbers count, moral uncertainty, risk, and what a machine would have to be before it could be wronged.",
+  ladder: {
+    beginner: [
+      {
+        slug: "theory-and-cases",
+        title: "From Theory to Cases",
+        summary:
+          "How consequentialist, deontological, and virtue-based reasoning each turn a moral question into a verdict",
+        estReadMin: 9,
+        introduces: [
+          "applied ethics",
+          "normative theory",
+          "consequentialism",
+          "utilitarianism",
+          "deontology",
+          "virtue ethics",
+          "moral principle",
+          "casuistry",
+          "reflective equilibrium",
+        ],
+      },
+      {
+        slug: "moral-status",
+        title: "Moral Status",
+        summary:
+          "The question of which beings count, and the difference between owing duties to something and having duties about it",
+        estReadMin: 8,
+        introduces: [
+          "moral status",
+          "moral agent",
+          "moral patient",
+          "sentience",
+          "interest",
+          "harm",
+        ],
+        requires: ["applied ethics", "normative theory", "moral principle"],
+      },
+      {
+        slug: "harm-benefit-and-consent",
+        title: "Harm, Benefit, and Consent",
+        summary:
+          "What makes a person worse off, when agreement changes what may be done to them, and where paternalism starts",
+        estReadMin: 10,
+        introduces: [
+          "benefit",
+          "autonomy",
+          "informed consent",
+          "decision-making capacity",
+          "paternalism",
+          "counterfactual account of harm",
+        ],
+        requires: ["harm", "interest", "moral agent"],
+      },
+      {
+        slug: "doing-and-allowing",
+        title: "Doing, Allowing, and Double Effect",
+        summary:
+          "Whether killing is worse than letting die, and whether a harm you foresee differs from one you intend",
+        estReadMin: 11,
+        introduces: [
+          "acts and omissions doctrine",
+          "killing and letting die",
+          "doctrine of double effect",
+          "intention and foresight",
+          "trolley problem",
+        ],
+        requires: ["harm", "moral agent", "deontology", "consequentialism"],
+      },
+      {
+        slug: "rights-duties-and-supererogation",
+        title: "Rights, Duties, and Going Beyond Duty",
+        summary:
+          "Claims that others must respect, duties that specify no particular recipient, and acts that are good without being required",
+        estReadMin: 10,
+        introduces: [
+          "claim right",
+          "negative duty",
+          "positive duty",
+          "duty of rescue",
+          "imperfect duty",
+          "supererogation",
+        ],
+        requires: ["deontology", "moral patient", "harm", "autonomy"],
+      },
+    ],
+    intermediate: [
+      {
+        slug: "principlism-and-medical-ethics",
+        title: "Principlism and Medical Ethics",
+        summary:
+          "The four-principle framework that clinical ethics actually runs on, and what it does when two of the principles conflict",
+        estReadMin: 16,
+        introduces: [
+          "principlism",
+          "beneficence",
+          "non-maleficence",
+          "justice in health care",
+          "confidentiality",
+          "surrogate decision-making",
+        ],
+        requires: [
+          "autonomy",
+          "informed consent",
+          "decision-making capacity",
+          "harm",
+          "benefit",
+          "moral principle",
+        ],
+      },
+      {
+        slug: "abortion",
+        title: "Abortion",
+        summary:
+          "Thomson's violinist, Marquis's future-like-ours argument, and why the dispute splits between what the fetus is and what it may demand",
+        estReadMin: 20,
+        introduces: [
+          "personhood",
+          "Thomson's violinist",
+          "future-like-ours argument",
+          "potentiality argument",
+          "bodily autonomy",
+          "right to life",
+        ],
+        requires: [
+          "moral status",
+          "moral patient",
+          "deontology",
+          "consequentialism",
+          "claim right",
+        ],
+      },
+      {
+        slug: "euthanasia-and-assisted-dying",
+        title: "Euthanasia and Assisted Dying",
+        summary:
+          "How autonomy arguments and slippery slope worries are pressed against each other once the acts and omissions line is in place",
+        estReadMin: 17,
+        introduces: [
+          "euthanasia",
+          "voluntary euthanasia",
+          "physician-assisted suicide",
+          "advance directive",
+          "slippery slope argument",
+        ],
+        requires: [
+          "bodily autonomy",
+          "right to life",
+          "acts and omissions doctrine",
+          "doctrine of double effect",
+          "decision-making capacity",
+          "principlism",
+        ],
+      },
+      {
+        slug: "animal-ethics",
+        title: "Animal Ethics",
+        summary:
+          "Singer's case from equal consideration of interests, Regan's case from inherent value, and the argument from marginal cases",
+        estReadMin: 16,
+        introduces: [
+          "speciesism",
+          "equal consideration of interests",
+          "animal rights",
+          "subject-of-a-life",
+          "marginal cases argument",
+        ],
+        requires: ["moral status", "sentience", "interest", "utilitarianism"],
+      },
+      {
+        slug: "punishment-and-the-death-penalty",
+        title: "Punishment and the Death Penalty",
+        summary:
+          "Retributive and deterrence justifications of punishment, and where the capital case turns on desert, error, and proportionality",
+        estReadMin: 18,
+        introduces: [
+          "retributivism",
+          "deterrence",
+          "desert",
+          "proportionality",
+          "rehabilitation",
+          "capital punishment",
+        ],
+        requires: [
+          "consequentialism",
+          "deontology",
+          "right to life",
+          "moral agent",
+        ],
+      },
+      {
+        slug: "lying-and-promise-keeping",
+        title: "Lying and Promise-Keeping",
+        summary:
+          "The murderer at the door, Kant's absolutism about truthfulness, and Ross's answer that duties can be overridden without being cancelled",
+        estReadMin: 14,
+        introduces: [
+          "categorical imperative",
+          "universalizability",
+          "moral absolutism",
+          "prima facie duty",
+          "moral dilemma",
+        ],
+        requires: [
+          "deontology",
+          "consequentialism",
+          "moral principle",
+          "reflective equilibrium",
+        ],
+      },
+      {
+        slug: "famine-affluence-and-global-poverty",
+        title: "Famine, Affluence, and Global Poverty",
+        summary:
+          "Singer's drowning child, the demandingness objection, and whether easy rescue at a distance is charity or obligation",
+        estReadMin: 18,
+        introduces: [
+          "drowning child argument",
+          "demandingness objection",
+          "agent-centred prerogative",
+          "effective altruism",
+          "moral distance",
+        ],
+        requires: [
+          "utilitarianism",
+          "duty of rescue",
+          "positive duty",
+          "imperfect duty",
+          "supererogation",
+        ],
+      },
+      {
+        slug: "free-speech-and-harm",
+        title: "Free Speech and Its Limits",
+        summary:
+          "Mill's harm principle applied to expression, and whether offence, incitement, or silencing can extend the limit",
+        estReadMin: 16,
+        introduces: [
+          "harm principle",
+          "offence principle",
+          "incitement",
+          "hate speech",
+          "marketplace of ideas",
+        ],
+        requires: [
+          "harm",
+          "autonomy",
+          "consequentialism",
+          "deontology",
+          "claim right",
+        ],
+      },
+      {
+        slug: "war-and-just-war-theory",
+        title: "War and Just War Theory",
+        summary:
+          "The conditions for going to war and for fighting well, and the traditional doctrine that soldiers on both sides fight as equals",
+        estReadMin: 22,
+        introduces: [
+          "jus ad bellum",
+          "jus in bello",
+          "principle of discrimination",
+          "moral equality of combatants",
+          "supreme emergency",
+          "pacifism",
+        ],
+        requires: [
+          "doctrine of double effect",
+          "intention and foresight",
+          "proportionality",
+          "deontology",
+          "consequentialism",
+        ],
+      },
+      {
+        slug: "environmental-ethics",
+        title: "Environmental Ethics",
+        summary:
+          "Whether ecosystems and species have value apart from any use we make of them, and what follows for how we treat them",
+        estReadMin: 18,
+        introduces: [
+          "anthropocentrism",
+          "biocentrism",
+          "ecocentrism",
+          "intrinsic value",
+          "deep ecology",
+          "sustainability",
+        ],
+        requires: ["moral status", "interest", "animal rights", "sentience"],
+      },
+    ],
+    advanced: [
+      {
+        slug: "theories-of-moral-status",
+        title: "Theories of Moral Status and Their Conflicts",
+        summary:
+          "Sentience, cognitive capacity, and relationship as rival criteria, and whether status comes in degrees or not at all",
+        estReadMin: 24,
+        introduces: [
+          "gradualist moral status",
+          "relational account of moral status",
+          "cognitive criterion",
+          "moral individualism",
+          "moral circle",
+        ],
+        requires: [
+          "moral status",
+          "sentience",
+          "personhood",
+          "subject-of-a-life",
+          "speciesism",
+        ],
+      },
+      {
+        slug: "the-non-identity-problem",
+        title: "The Non-Identity Problem",
+        summary:
+          "Parfit's result that an act can seem wrong while harming nobody, because a different act would have produced different people",
+        estReadMin: 22,
+        introduces: [
+          "non-identity problem",
+          "person-affecting principle",
+          "impersonal value",
+          "wrongful life",
+        ],
+        requires: [
+          "harm",
+          "counterfactual account of harm",
+          "interest",
+          "personhood",
+          "utilitarianism",
+        ],
+      },
+      {
+        slug: "procreative-ethics-and-antinatalism",
+        title: "Procreative Ethics and Antinatalism",
+        summary:
+          "Benatar's asymmetry between absent pain and absent pleasure, Savulescu's procreative beneficence, and the repugnant conclusion that squeezes both",
+        estReadMin: 24,
+        introduces: [
+          "antinatalism",
+          "asymmetry argument",
+          "procreative beneficence",
+          "repugnant conclusion",
+          "total view",
+          "prior existence view",
+        ],
+        requires: [
+          "non-identity problem",
+          "person-affecting principle",
+          "utilitarianism",
+          "harm",
+        ],
+      },
+      {
+        slug: "population-axiology-and-impossibility-results",
+        title: "Population Axiology and the Impossibility Results",
+        summary:
+          "Every way of ranking populations by size and welfare violates one of a small set of conditions that all look compulsory",
+        estReadMin: 28,
+        introduces: [
+          "population axiology",
+          "mere addition paradox",
+          "critical level view",
+          "variable value view",
+          "average view",
+          "impossibility theorem in population ethics",
+        ],
+        requires: [
+          "repugnant conclusion",
+          "total view",
+          "prior existence view",
+          "impersonal value",
+          "person-affecting principle",
+        ],
+      },
+      {
+        slug: "aggregation-and-the-numbers-problem",
+        title: "Aggregation and the Numbers Problem",
+        summary:
+          "Taurek's claim that you may flip a coin rather than save the five, and the partial aggregation views built to avoid both extremes",
+        estReadMin: 26,
+        introduces: [
+          "the numbers problem",
+          "aggregation",
+          "contractualist tie-breaker",
+          "partial aggregation",
+          "relevance view",
+          "separateness of persons",
+        ],
+        requires: [
+          "utilitarianism",
+          "deontology",
+          "duty of rescue",
+          "prima facie duty",
+          "trolley problem",
+        ],
+      },
+      {
+        slug: "moral-uncertainty-and-decision-procedures",
+        title: "Moral Uncertainty",
+        summary:
+          "What to do when you are unsure which moral theory is true, and why maximising expected choiceworthiness needs theories to be comparable",
+        estReadMin: 26,
+        introduces: [
+          "moral uncertainty",
+          "expected choiceworthiness",
+          "intertheoretic comparison",
+          "my favourite theory",
+          "fanaticism",
+        ],
+        requires: [
+          "normative theory",
+          "reflective equilibrium",
+          "utilitarianism",
+          "deontology",
+          "prima facie duty",
+          "aggregation",
+        ],
+      },
+      {
+        slug: "the-ethics-of-risk",
+        title: "The Ethics of Risk",
+        summary:
+          "Imposing a chance of harm on someone who is never in fact harmed, and whether contractualism should evaluate that before or after the outcome",
+        estReadMin: 26,
+        introduces: [
+          "risk imposition",
+          "ex ante contractualism",
+          "ex post contractualism",
+          "statistical and identified lives",
+          "precautionary principle",
+        ],
+        requires: [
+          "harm",
+          "informed consent",
+          "the numbers problem",
+          "separateness of persons",
+          "moral uncertainty",
+        ],
+      },
+      {
+        slug: "enhancement-and-germline-editing",
+        title: "Enhancement and Germline Editing",
+        summary:
+          "Whether the therapy and enhancement line can bear weight, what heritable editing does to consent, and the objection that selection expresses a judgment about existing lives",
+        estReadMin: 26,
+        introduces: [
+          "therapy-enhancement distinction",
+          "germline editing",
+          "expressivist objection",
+          "argument from giftedness",
+          "preimplantation selection",
+        ],
+        requires: [
+          "procreative beneficence",
+          "non-identity problem",
+          "informed consent",
+          "moral status",
+          "harm",
+        ],
+      },
+      {
+        slug: "allocating-scarce-medical-resources",
+        title: "Allocating Scarce Medical Resources",
+        summary:
+          "What a quality-adjusted life year measures, why disability advocates object to it, and whether a lottery treats claimants more fairly than triage",
+        estReadMin: 26,
+        introduces: [
+          "quality-adjusted life year",
+          "fair innings argument",
+          "disability discrimination objection",
+          "triage",
+          "health prioritarianism",
+          "weighted lottery",
+        ],
+        requires: [
+          "justice in health care",
+          "beneficence",
+          "the numbers problem",
+          "aggregation",
+          "utilitarianism",
+        ],
+      },
+      {
+        slug: "revisionist-just-war-theory",
+        title: "Revisionist Just War Theory",
+        summary:
+          "McMahan's argument that liability to attack depends on responsibility for an unjust threat, which denies combatants on the two sides equal standing",
+        estReadMin: 28,
+        introduces: [
+          "liability to defensive harm",
+          "unjust combatant",
+          "the independence thesis",
+          "narrow proportionality",
+          "contingent pacifism",
+        ],
+        requires: [
+          "jus ad bellum",
+          "jus in bello",
+          "moral equality of combatants",
+          "principle of discrimination",
+          "proportionality",
+          "pacifism",
+        ],
+      },
+      {
+        slug: "climate-ethics-and-collective-harm",
+        title: "Climate Ethics and Collective Harm",
+        summary:
+          "Discounting future welfare, dividing responsibility for emissions already made, and the problem that no single act makes a detectable difference",
+        estReadMin: 26,
+        introduces: [
+          "intergenerational justice",
+          "social discount rate",
+          "collective harm problem",
+          "causal impotence objection",
+          "historical responsibility",
+        ],
+        requires: [
+          "intrinsic value",
+          "sustainability",
+          "non-identity problem",
+          "impersonal value",
+          "moral circle",
+        ],
+      },
+      {
+        slug: "ai-ethics-and-moral-patiency",
+        title: "AI Ethics and Moral Patiency",
+        summary:
+          "Who answers for an automated decision, and what would have to be true of a system before it could be wronged rather than merely misused",
+        estReadMin: 24,
+        introduces: [
+          "artificial moral agency",
+          "responsibility gap",
+          "algorithmic bias",
+          "value alignment",
+        ],
+        requires: [
+          "moral agent",
+          "moral patient",
+          "sentience",
+          "relational account of moral status",
+          "moral individualism",
+          "moral uncertainty",
+        ],
+      },
+    ],
+  },
+};

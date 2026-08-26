@@ -1,0 +1,654 @@
+import type { Subject } from "@/lib/types";
+
+export const theism: Subject = {
+  slug: "theism",
+  name: "Theism",
+  group: "religion",
+  oneLine: "Whether there is a God, and what would count as a reason either way.",
+  scope:
+    "Theism examines the claim that a personal, perfect, creating God exists, along with the arguments offered for and against it. The beginner tier fixes what the word God is standardly taken to mean, separates theism, atheism, and agnosticism, and sets out what a proof in this area could even look like. The intermediate tier works through the classical arguments, religious experience, pragmatic arguments for belief, the problem of evil, miracles, the afterlife, and the naturalistic explanations of religious belief itself. The advanced tier takes up the modal, epistemological, and semantic disputes that professional philosophy of religion now turns on, including aseity and the bootstrapping problem, skeptical theism's costs, the no-best-world problem, and whether it would be better if God existed.",
+  ladder: {
+    beginner: [
+      {
+        slug: "what-god-is-claimed-to-be",
+        title: "What God Is Claimed to Be",
+        summary:
+          "The package of attributes the word normally carries: maximal power, maximal knowledge, perfect goodness, and responsibility for everything else",
+        estReadMin: 8,
+        introduces: [
+          "God",
+          "omnipotence",
+          "omniscience",
+          "omnibenevolence",
+          "personal God",
+          "classical theism",
+        ],
+      },
+      {
+        slug: "theism-atheism-agnosticism",
+        title: "Theism, Atheism, and Agnosticism",
+        summary:
+          "Three positions distinguished by what each asserts rather than by how confident anyone feels",
+        estReadMin: 9,
+        introduces: [
+          "theism",
+          "atheism",
+          "agnosticism",
+          "weak atheism",
+          "strong atheism",
+          "burden of proof",
+        ],
+        requires: ["God", "classical theism"],
+      },
+      {
+        slug: "creation-conservation-and-providence",
+        title: "Creation, Conservation, and Providence",
+        summary:
+          "What it means for everything else to depend on God, both at the first moment and at every moment after it",
+        estReadMin: 9,
+        introduces: [
+          "creation ex nihilo",
+          "divine conservation",
+          "transcendence",
+          "immanence",
+          "providence",
+        ],
+        requires: ["God", "classical theism", "omnipotence"],
+      },
+      {
+        slug: "faith-and-reason",
+        title: "Faith and Reason",
+        summary:
+          "Whether faith supplements argument, replaces it, or is answerable to it, and what each answer commits you to",
+        estReadMin: 10,
+        introduces: [
+          "faith",
+          "fideism",
+          "evidentialism",
+          "natural theology",
+          "revealed theology",
+        ],
+        requires: ["theism", "atheism", "burden of proof"],
+      },
+      {
+        slug: "how-arguments-about-god-work",
+        title: "How Arguments About God Work",
+        summary:
+          "Why almost nobody now offers a proof, and what it means to argue that a hypothesis is instead made more likely by the evidence",
+        estReadMin: 10,
+        introduces: [
+          "demonstrative argument",
+          "probabilistic argument",
+          "cumulative case argument",
+          "presumption of atheism",
+        ],
+        requires: [
+          "natural theology",
+          "evidentialism",
+          "burden of proof",
+          "theism",
+          "atheism",
+        ],
+      },
+    ],
+    intermediate: [
+      {
+        slug: "cosmological-arguments",
+        title: "Cosmological Arguments",
+        summary:
+          "Three arguments from the existence of the universe: Kalam from a temporal beginning, Leibniz from contingency, Aquinas from an ordered causal series",
+        estReadMin: 18,
+        introduces: [
+          "cosmological argument",
+          "Kalam cosmological argument",
+          "principle of sufficient reason",
+          "contingency",
+          "necessary being",
+          "actual infinite",
+          "causal series per se",
+        ],
+        requires: ["natural theology", "God", "creation ex nihilo"],
+      },
+      {
+        slug: "teleological-and-fine-tuning",
+        title: "Design and Fine-Tuning Arguments",
+        summary:
+          "From biological order to the narrow constants of physics, and the multiverse and observer-selection replies",
+        estReadMin: 16,
+        introduces: [
+          "teleological argument",
+          "argument from design",
+          "fine-tuning argument",
+          "anthropic principle",
+          "multiverse hypothesis",
+        ],
+        requires: [
+          "natural theology",
+          "cosmological argument",
+          "probabilistic argument",
+        ],
+      },
+      {
+        slug: "ontological-arguments",
+        title: "Ontological Arguments",
+        summary:
+          "Anselm's inference from a concept, Descartes' perfection version, Kant's objection that existence adds nothing, and Plantinga's modal reformulation",
+        estReadMin: 17,
+        introduces: [
+          "ontological argument",
+          "a priori argument",
+          "great-making property",
+          "existence as a predicate",
+          "modal ontological argument",
+          "maximal greatness",
+        ],
+        requires: [
+          "God",
+          "omnipotence",
+          "omniscience",
+          "natural theology",
+          "demonstrative argument",
+        ],
+      },
+      {
+        slug: "moral-arguments",
+        title: "Moral Arguments",
+        summary:
+          "The claim that binding obligations need a commanding will, met by the Euthyphro dilemma and by secular accounts of moral facts",
+        estReadMin: 15,
+        introduces: [
+          "moral argument",
+          "moral realism",
+          "divine command theory",
+          "Euthyphro dilemma",
+          "moral obligation",
+        ],
+        requires: ["theism", "God", "omnibenevolence"],
+      },
+      {
+        slug: "religious-experience",
+        title: "Religious Experience",
+        summary:
+          "Swinburne's principle of credulity applied to seeming to perceive God, and the objections from conflicting claims and from naturalistic explanation",
+        estReadMin: 17,
+        introduces: [
+          "religious experience",
+          "principle of credulity",
+          "principle of testimony",
+          "mystical experience",
+          "the numinous",
+          "conflicting claims objection",
+        ],
+        requires: [
+          "evidentialism",
+          "faith",
+          "probabilistic argument",
+          "personal God",
+        ],
+      },
+      {
+        slug: "pragmatic-arguments-for-belief",
+        title: "Pragmatic Arguments for Belief",
+        summary:
+          "Pascal's wager and James's will to believe argue from what belief gets you rather than from what is true, and both have to answer for that",
+        estReadMin: 16,
+        introduces: [
+          "pragmatic argument",
+          "Pascal's wager",
+          "many-gods objection",
+          "will to believe",
+          "doxastic voluntarism",
+        ],
+        requires: [
+          "agnosticism",
+          "evidentialism",
+          "faith",
+          "probabilistic argument",
+        ],
+      },
+      {
+        slug: "problem-of-evil",
+        title: "The Problem of Evil",
+        summary:
+          "The logical version claims outright contradiction, the evidential version claims that pointless suffering counts as evidence",
+        estReadMin: 18,
+        introduces: [
+          "problem of evil",
+          "logical problem of evil",
+          "evidential problem of evil",
+          "gratuitous evil",
+          "natural evil",
+          "moral evil",
+          "defence",
+        ],
+        requires: [
+          "omnipotence",
+          "omniscience",
+          "omnibenevolence",
+          "classical theism",
+          "providence",
+        ],
+      },
+      {
+        slug: "theodicies",
+        title: "Theodicies and Defences",
+        summary:
+          "Free will, character formation through hardship, and the claim that we are not positioned to see the reasons at all",
+        estReadMin: 19,
+        introduces: [
+          "theodicy",
+          "free will defence",
+          "soul-making theodicy",
+          "skeptical theism",
+          "greater good",
+          "transworld depravity",
+        ],
+        requires: [
+          "problem of evil",
+          "logical problem of evil",
+          "evidential problem of evil",
+          "gratuitous evil",
+          "defence",
+        ],
+      },
+      {
+        slug: "divine-attributes-in-tension",
+        title: "Divine Attributes and Their Tensions",
+        summary:
+          "Whether the perfections can be held jointly, from the stone paradox to the question of whether a perfect being has choices",
+        estReadMin: 16,
+        introduces: [
+          "perfect being theology",
+          "paradox of the stone",
+          "omnipresence",
+          "immutability",
+          "divine freedom",
+          "attribute incompatibility",
+        ],
+        requires: [
+          "omnipotence",
+          "omniscience",
+          "omnibenevolence",
+          "God",
+          "classical theism",
+        ],
+      },
+      {
+        slug: "miracles-and-hume",
+        title: "Miracles and Hume",
+        summary:
+          "Hume's claim that testimony can never make a violation of natural law the likelier story, and the replies that reject his weighting",
+        estReadMin: 15,
+        introduces: [
+          "miracle",
+          "Hume's argument against miracles",
+          "testimony",
+          "prior probability",
+          "law of nature",
+        ],
+        requires: [
+          "God",
+          "evidentialism",
+          "faith",
+          "probabilistic argument",
+          "divine conservation",
+        ],
+      },
+      {
+        slug: "death-and-the-afterlife",
+        title: "Death and the Afterlife",
+        summary:
+          "Survival as an immaterial soul against survival as a raised body, and what either would have to preserve for the survivor to be you",
+        estReadMin: 18,
+        introduces: [
+          "immortality of the soul",
+          "bodily resurrection",
+          "personal identity after death",
+          "reincarnation",
+          "problem of hell",
+          "annihilationism",
+        ],
+        requires: [
+          "personal God",
+          "omnibenevolence",
+          "providence",
+          "moral obligation",
+        ],
+      },
+      {
+        slug: "explaining-religion-naturally",
+        title: "Natural Explanations of Religious Belief",
+        summary:
+          "Projection theories and cognitive accounts of why belief in gods is so widespread, and whether explaining a belief's origin touches its truth",
+        estReadMin: 18,
+        introduces: [
+          "projection theory",
+          "cognitive science of religion",
+          "debunking argument",
+          "genetic fallacy",
+          "hyperactive agency detection",
+        ],
+        requires: [
+          "religious experience",
+          "atheism",
+          "theism",
+          "presumption of atheism",
+        ],
+      },
+    ],
+    advanced: [
+      {
+        slug: "modal-ontological-parodies",
+        title: "Modal Ontological Arguments and Their Parodies",
+        summary:
+          "The argument turns entirely on the possibility premise, and parallel arguments for a maximally great island or a necessary nonexistence exploit that",
+        estReadMin: 22,
+        introduces: [
+          "possibility premise",
+          "parody argument",
+          "Gaunilo's island",
+          "reverse ontological argument",
+          "metaphysical possibility",
+        ],
+        requires: [
+          "modal ontological argument",
+          "maximal greatness",
+          "ontological argument",
+          "great-making property",
+        ],
+      },
+      {
+        slug: "simplicity-timelessness-impassibility",
+        title: "Simplicity, Timelessness, and Impassibility",
+        summary:
+          "The classical doctrine that God has no parts, no temporal location, and no states caused from outside, and the collapse and personhood objections it faces",
+        estReadMin: 22,
+        introduces: [
+          "divine simplicity",
+          "divine timelessness",
+          "impassibility",
+          "sempiternity",
+          "modal collapse objection",
+        ],
+        requires: [
+          "perfect being theology",
+          "immutability",
+          "omnipresence",
+          "classical theism",
+        ],
+      },
+      {
+        slug: "aseity-and-the-bootstrapping-problem",
+        title: "Aseity and the Bootstrapping Problem",
+        summary:
+          "If God depends on nothing, numbers and properties cannot exist independently, and every way of making them depend on God threatens to presuppose them",
+        estReadMin: 26,
+        introduces: [
+          "aseity",
+          "abstract object",
+          "bootstrapping objection",
+          "theistic activism",
+          "absolute creationism",
+          "divine conceptualism",
+        ],
+        requires: [
+          "divine simplicity",
+          "necessary being",
+          "creation ex nihilo",
+          "classical theism",
+          "metaphysical possibility",
+        ],
+      },
+      {
+        slug: "foreknowledge-and-freedom",
+        title: "Divine Foreknowledge and Freedom",
+        summary:
+          "If a past belief about your next act is already fixed, the act looks unavoidable, and Molinism, Ockhamism, and open theism each break the chain at a different link",
+        estReadMin: 24,
+        introduces: [
+          "theological fatalism",
+          "Molinism",
+          "middle knowledge",
+          "counterfactuals of freedom",
+          "Ockhamism",
+          "open theism",
+          "accidental necessity",
+        ],
+        requires: [
+          "omniscience",
+          "divine freedom",
+          "free will defence",
+          "transworld depravity",
+          "divine timelessness",
+        ],
+      },
+      {
+        slug: "religious-language",
+        title: "Religious Language",
+        summary:
+          "Whether talk about God says anything at all: denial of positive description, analogical predication, and the verificationist charge of meaninglessness",
+        estReadMin: 22,
+        introduces: [
+          "apophatic theology",
+          "via negativa",
+          "analogy of being",
+          "univocal predication",
+          "verification principle",
+          "noncognitivism",
+        ],
+        requires: ["divine simplicity", "God", "omnipotence", "transcendence"],
+      },
+      {
+        slug: "reformed-epistemology",
+        title: "Reformed Epistemology and Proper Function",
+        summary:
+          "Plantinga's case that belief in God can be rational without argument if it comes from a faculty working as designed, and the objection that any belief could claim this",
+        estReadMin: 21,
+        introduces: [
+          "Reformed epistemology",
+          "properly basic belief",
+          "proper function",
+          "sensus divinitatis",
+          "defeater",
+          "Great Pumpkin objection",
+        ],
+        requires: [
+          "evidentialism",
+          "fideism",
+          "faith",
+          "theism",
+          "religious experience",
+        ],
+      },
+      {
+        slug: "naturalism-and-supernaturalism",
+        title: "Naturalism and Supernaturalism as Frameworks",
+        summary:
+          "Treating theism and naturalism as rival explanations of the same data, and the disputes over simplicity, scope, and gap-filling that follow",
+        estReadMin: 23,
+        introduces: [
+          "naturalism",
+          "supernaturalism",
+          "methodological naturalism",
+          "inference to the best explanation",
+          "explanatory power",
+          "God of the gaps",
+        ],
+        requires: [
+          "teleological argument",
+          "fine-tuning argument",
+          "miracle",
+          "atheism",
+          "cumulative case argument",
+        ],
+      },
+      {
+        slug: "the-evolutionary-argument-against-naturalism",
+        title: "The Evolutionary Argument Against Naturalism",
+        summary:
+          "Plantinga's claim that unguided evolution gives you no reason to trust your own faculties, which makes naturalism self-defeating rather than merely false",
+        estReadMin: 26,
+        introduces: [
+          "evolutionary argument against naturalism",
+          "self-defeat",
+          "reliability of cognitive faculties",
+          "adaptive but false belief",
+          "undercutting defeater",
+        ],
+        requires: [
+          "naturalism",
+          "proper function",
+          "defeater",
+          "inference to the best explanation",
+          "debunking argument",
+        ],
+      },
+      {
+        slug: "probabilistic-problem-of-evil",
+        title: "The Probabilistic Problem of Evil",
+        summary:
+          "Rowe's inference from apparently pointless suffering, the CORNEA restriction on such inferences, and how theodicies enter as competing likelihoods",
+        estReadMin: 24,
+        introduces: [
+          "Rowe's evidential argument",
+          "CORNEA",
+          "noseeum inference",
+          "Bayesian theodicy",
+          "total evidence requirement",
+        ],
+        requires: [
+          "evidential problem of evil",
+          "skeptical theism",
+          "gratuitous evil",
+          "prior probability",
+        ],
+      },
+      {
+        slug: "skeptical-theism-and-its-costs",
+        title: "Skeptical Theism and Its Costs",
+        summary:
+          "Granting that we cannot judge which goods God might be securing appears to also undercut ordinary moral reasoning and the evidence of our senses about the world",
+        estReadMin: 26,
+        introduces: [
+          "Bergmann's skeptical theses",
+          "moral paralysis objection",
+          "skeptical spillover",
+          "the deceptive appearances objection",
+        ],
+        requires: [
+          "skeptical theism",
+          "CORNEA",
+          "noseeum inference",
+          "gratuitous evil",
+          "greater good",
+        ],
+      },
+      {
+        slug: "divine-hiddenness",
+        title: "The Problem of Divine Hiddenness",
+        summary:
+          "Schellenberg's argument that a perfectly loving God would leave no one open to relationship yet unable to believe",
+        estReadMin: 20,
+        introduces: [
+          "argument from divine hiddenness",
+          "nonresistant nonbelief",
+          "divine love thesis",
+          "culpable nonbelief",
+        ],
+        requires: [
+          "theism",
+          "atheism",
+          "personal God",
+          "omnibenevolence",
+          "evidential problem of evil",
+          "sensus divinitatis",
+        ],
+      },
+      {
+        slug: "the-no-best-world-problem",
+        title: "The No-Best-World Problem",
+        summary:
+          "If for every world God could create there is a better one, then whatever God creates, a better being could have done more",
+        estReadMin: 24,
+        introduces: [
+          "best possible world",
+          "no-best-world problem",
+          "satisficing creation",
+          "theistic multiverse",
+          "principle of plenitude",
+        ],
+        requires: [
+          "perfect being theology",
+          "divine freedom",
+          "omnibenevolence",
+          "greater good",
+          "gratuitous evil",
+        ],
+      },
+      {
+        slug: "the-axiology-of-theism",
+        title: "The Axiology of Theism",
+        summary:
+          "Set aside whether God exists and ask whether it would be better if God did, which some atheists answer yes and some theists answer no",
+        estReadMin: 22,
+        introduces: [
+          "axiology of theism",
+          "pro-theism",
+          "anti-theism",
+          "meaningful life argument",
+          "privacy and autonomy objection",
+        ],
+        requires: [
+          "theism",
+          "atheism",
+          "omnibenevolence",
+          "best possible world",
+          "providence",
+        ],
+      },
+      {
+        slug: "pluralism-and-exclusivism",
+        title: "Religious Pluralism and Exclusivism",
+        summary:
+          "Whether one tradition can be uniquely right, whether all are responses to a single reality, and what disagreement among informed believers does to either claim",
+        estReadMin: 22,
+        introduces: [
+          "religious exclusivism",
+          "religious inclusivism",
+          "religious pluralism",
+          "Hick's pluralistic hypothesis",
+          "religious disagreement",
+        ],
+        requires: [
+          "Reformed epistemology",
+          "properly basic belief",
+          "defeater",
+          "theism",
+          "conflicting claims objection",
+        ],
+      },
+      {
+        slug: "beyond-monotheism",
+        title: "Philosophy of Religion Beyond Monotheism",
+        summary:
+          "Pantheism, panentheism, polytheism, deism, and traditions with no creator at all, and how the standard arguments fare when the target changes",
+        estReadMin: 20,
+        introduces: [
+          "pantheism",
+          "panentheism",
+          "polytheism",
+          "deism",
+          "nontheistic religion",
+        ],
+        requires: [
+          "classical theism",
+          "personal God",
+          "theism",
+          "religious pluralism",
+          "transcendence",
+          "immanence",
+        ],
+      },
+    ],
+  },
+};

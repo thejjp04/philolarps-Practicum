@@ -1,0 +1,797 @@
+import type { Subject } from "@/lib/types";
+
+export const metaphysics: Subject = {
+  slug: "metaphysics",
+  name: "Metaphysics",
+  group: "core",
+  oneLine: "What there is, and what it is like.",
+  scope:
+    "Metaphysics asks what exists and how it is structured, at a level more general than any particular science. The beginner tier builds the working vocabulary of objects, properties, the abstract and the concrete, identity, essence, causation, and modality from nothing. The intermediate tier works through the standard debates about universals, persistence, time, causation, free will, and possible worlds, and adds the two tools everything later depends on: supervenience and mereology. The advanced tier is contemporary analytic metaphysics proper, from grounding and truthmaking through hylomorphism, priority monism, structural-equations causation, and the metaphysics of time under relativity.",
+  ladder: {
+    beginner: [
+      {
+        slug: "what-metaphysics-asks",
+        title: "What Metaphysics Asks",
+        summary:
+          "The questions left over once the sciences have described how things behave",
+        estReadMin: 7,
+        introduces: ["metaphysics", "ontology", "first philosophy", "category"],
+      },
+      {
+        slug: "existence-and-non-existence",
+        title: "Existence and Non-Existence",
+        summary:
+          "Whether existence is a property, and what to say about Pegasus and the round square",
+        estReadMin: 8,
+        introduces: [
+          "existence",
+          "nonexistent object",
+          "Meinongianism",
+          "ontological commitment",
+        ],
+        requires: ["metaphysics", "ontology"],
+      },
+      {
+        slug: "objects-and-properties",
+        title: "Objects and Properties",
+        summary:
+          "The difference between a thing and the ways it is, and what instantiation is meant to be",
+        estReadMin: 9,
+        introduces: [
+          "object",
+          "property",
+          "instantiation",
+          "predication",
+          "intrinsic property",
+          "extrinsic property",
+        ],
+        requires: ["existence", "ontology"],
+      },
+      {
+        slug: "abstract-and-concrete",
+        title: "Abstract and Concrete",
+        summary:
+          "The distinction every later dispute leans on, and how badly it resists definition",
+        estReadMin: 9,
+        introduces: [
+          "abstract object",
+          "concrete object",
+          "spatiotemporal location",
+          "causal inefficacy",
+          "type-token distinction",
+        ],
+        requires: ["object", "property", "existence"],
+      },
+      {
+        slug: "change-and-identity-over-time",
+        title: "Change and Identity Over Time",
+        summary:
+          "How one thing can lose a property without thereby becoming a different thing",
+        estReadMin: 9,
+        introduces: [
+          "change",
+          "numerical identity",
+          "qualitative identity",
+          "persistence",
+          "Leibniz's law",
+        ],
+        requires: ["object", "property", "instantiation"],
+      },
+      {
+        slug: "the-ship-of-theseus",
+        title: "The Ship of Theseus",
+        summary:
+          "Repair and reassembly leave two equally good candidates for being the original ship",
+        estReadMin: 7,
+        introduces: [
+          "the ship of Theseus",
+          "sortal",
+          "spatiotemporal continuity",
+        ],
+        requires: [
+          "numerical identity",
+          "persistence",
+          "Leibniz's law",
+          "change",
+        ],
+      },
+      {
+        slug: "causation-first-pass",
+        title: "Causation, First Pass",
+        summary:
+          "Why regular succession is not yet causation, and why counterfactual tests do better",
+        estReadMin: 10,
+        introduces: [
+          "causation",
+          "cause",
+          "effect",
+          "necessary condition",
+          "sufficient condition",
+          "causal chain",
+        ],
+        requires: ["change", "object"],
+      },
+      {
+        slug: "possibility-and-necessity-informally",
+        title: "Possibility and Necessity, Informally",
+        summary:
+          "Sorting logical, physical, and metaphysical impossibility before any formal apparatus",
+        estReadMin: 9,
+        introduces: [
+          "possibility",
+          "necessity",
+          "modality",
+          "contingent truth",
+          "logical possibility",
+          "metaphysical possibility",
+        ],
+        requires: ["existence", "property"],
+      },
+      {
+        slug: "essence-and-accident",
+        title: "Essence and Accident",
+        summary:
+          "Some of a thing's properties it could not have lacked; most of them it could have",
+        estReadMin: 9,
+        introduces: ["essence", "essential property", "accidental property"],
+        requires: ["property", "object", "necessity", "possibility"],
+      },
+    ],
+    intermediate: [
+      {
+        slug: "universals-and-particulars",
+        title: "Universals and Particulars",
+        summary:
+          "Three answers to how two red things share one property: realism, nominalism, tropes",
+        estReadMin: 16,
+        introduces: [
+          "universal",
+          "particular",
+          "realism about universals",
+          "nominalism",
+          "trope",
+          "trope theory",
+          "resemblance class",
+          "the one over many",
+        ],
+        requires: ["property", "instantiation", "predication"],
+      },
+      {
+        slug: "substance-and-bundle-theories",
+        title: "Substance and Bundle Theories",
+        summary:
+          "Whether a thing is anything over and above its properties, and what a substratum would do",
+        estReadMin: 14,
+        introduces: [
+          "substance",
+          "bare particular",
+          "substratum",
+          "bundle theory",
+          "the identity of indiscernibles",
+        ],
+        requires: ["property", "universal", "particular", "Leibniz's law"],
+      },
+      {
+        slug: "facts-events-and-states-of-affairs",
+        title: "Facts, Events, and States of Affairs",
+        summary:
+          "The entities that causal and truthmaking talk quantifies over, and how finely they should be individuated",
+        estReadMin: 15,
+        introduces: [
+          "fact",
+          "event",
+          "states of affairs",
+          "property exemplification",
+          "coarse-grained event",
+          "fine-grained event",
+        ],
+        requires: ["object", "property", "instantiation", "causation"],
+      },
+      {
+        slug: "supervenience",
+        title: "Supervenience",
+        summary:
+          "No difference of one kind without a difference of another, and why that is weaker than dependence",
+        estReadMin: 15,
+        introduces: [
+          "supervenience",
+          "subvenient base",
+          "weak supervenience",
+          "strong supervenience",
+          "global supervenience",
+        ],
+        requires: ["property", "instantiation", "necessity", "object"],
+      },
+      {
+        slug: "persistence-endurantism-and-perdurantism",
+        title: "Persistence: Endurantism and Perdurantism",
+        summary:
+          "Being wholly present at each moment versus having a different temporal part at each",
+        estReadMin: 15,
+        introduces: [
+          "endurantism",
+          "perdurantism",
+          "temporal part",
+          "wholly present",
+          "the problem of temporary intrinsics",
+        ],
+        requires: [
+          "persistence",
+          "numerical identity",
+          "change",
+          "intrinsic property",
+        ],
+      },
+      {
+        slug: "personal-identity",
+        title: "Personal Identity",
+        summary:
+          "Psychological, biological, and narrative criteria, and how fission cases break each one",
+        estReadMin: 16,
+        introduces: [
+          "personal identity",
+          "psychological continuity",
+          "biological continuity",
+          "animalism",
+          "narrative identity",
+          "fission case",
+        ],
+        requires: [
+          "numerical identity",
+          "persistence",
+          "the ship of Theseus",
+          "endurantism",
+        ],
+      },
+      {
+        slug: "theories-of-time",
+        title: "Theories of Time",
+        summary:
+          "McTaggart's argument, and what presentism, eternalism, and the growing block each keep",
+        estReadMin: 18,
+        introduces: [
+          "A-theory",
+          "B-theory",
+          "presentism",
+          "eternalism",
+          "growing block theory",
+          "temporal becoming",
+          "McTaggart's argument",
+        ],
+        requires: ["change", "temporal part", "perdurantism", "persistence"],
+      },
+      {
+        slug: "theories-of-causation",
+        title: "Theories of Causation",
+        summary:
+          "Regularity, counterfactual, probabilistic, and interventionist accounts tested against preemption",
+        estReadMin: 17,
+        introduces: [
+          "regularity theory",
+          "counterfactual analysis of causation",
+          "probabilistic causation",
+          "interventionism",
+          "causal overdetermination",
+          "preemption",
+        ],
+        requires: [
+          "causation",
+          "cause",
+          "effect",
+          "event",
+          "necessary condition",
+          "sufficient condition",
+        ],
+      },
+      {
+        slug: "free-will-and-determinism",
+        title: "Free Will and Determinism",
+        summary:
+          "The consequence argument, and whether compatibilism answers it or changes the subject",
+        estReadMin: 18,
+        introduces: [
+          "determinism",
+          "indeterminism",
+          "compatibilism",
+          "libertarian free will",
+          "the consequence argument",
+          "the principle of alternate possibilities",
+          "moral responsibility",
+        ],
+        requires: [
+          "causation",
+          "causal chain",
+          "possibility",
+          "metaphysical possibility",
+        ],
+      },
+      {
+        slug: "modality-and-possible-worlds",
+        title: "Modality and Possible Worlds",
+        summary:
+          "Using worlds to analyse de re and de dicto claims, and the cost of transworld identity",
+        estReadMin: 16,
+        introduces: [
+          "possible worlds analysis",
+          "de re modality",
+          "de dicto modality",
+          "transworld identity",
+        ],
+        requires: [
+          "possibility",
+          "necessity",
+          "modality",
+          "contingent truth",
+          "logical possibility",
+        ],
+      },
+      {
+        slug: "modal-realism-and-ersatzism",
+        title: "Modal Realism and Ersatzism",
+        summary:
+          "Lewis's concrete worlds against abstract surrogates, and what each charges for actuality",
+        estReadMin: 22,
+        introduces: [
+          "modal realism",
+          "ersatzism",
+          "counterpart theory",
+          "concrete world",
+          "abstract world",
+          "indexical theory of actuality",
+        ],
+        requires: [
+          "possible worlds analysis",
+          "transworld identity",
+          "de re modality",
+          "abstract object",
+          "concrete object",
+        ],
+      },
+      {
+        slug: "essentialism-and-origin-essentialism",
+        title: "Essentialism and the Argument from Origins",
+        summary:
+          "Kripke's case that a thing could not have come from different material, and the necessary a posteriori it depends on",
+        estReadMin: 20,
+        introduces: [
+          "essentialism",
+          "origin essentialism",
+          "sortal essentialism",
+          "necessary a posteriori",
+        ],
+        requires: [
+          "essence",
+          "essential property",
+          "accidental property",
+          "de re modality",
+          "counterpart theory",
+          "sortal",
+        ],
+      },
+      {
+        slug: "mereology-and-composition",
+        title: "Mereology and Composition",
+        summary:
+          "Axioms for parthood, and the special composition question that nihilism and universalism answer",
+        estReadMin: 17,
+        introduces: [
+          "mereology",
+          "parthood",
+          "proper part",
+          "mereological fusion",
+          "the special composition question",
+          "mereological nihilism",
+          "mereological universalism",
+        ],
+        requires: ["object", "existence", "ontological commitment"],
+      },
+    ],
+    advanced: [
+      {
+        slug: "grounding-and-metaphysical-explanation",
+        title: "Grounding and Metaphysical Explanation",
+        summary:
+          "The in virtue of relation, its logical behaviour, and why supervenience was never going to do this job",
+        estReadMin: 22,
+        introduces: [
+          "grounding",
+          "metaphysical explanation",
+          "full ground",
+          "partial ground",
+          "grounding necessitarianism",
+        ],
+        requires: ["supervenience", "essence", "instantiation", "property"],
+      },
+      {
+        slug: "fine-on-essence-and-modality",
+        title: "Essence Is Not Modality",
+        summary:
+          "Socrates and his singleton share their necessary truths but not their natures, and what real definition puts in modality's place",
+        estReadMin: 22,
+        introduces: [
+          "real definition",
+          "Aristotelian essence",
+          "modal account of essence",
+          "essentialist source of necessity",
+        ],
+        requires: [
+          "essence",
+          "essential property",
+          "de re modality",
+          "grounding",
+          "abstract object",
+        ],
+      },
+      {
+        slug: "fundamentality-and-structure",
+        title: "Fundamentality and Structure",
+        summary:
+          "Naturalness as objective structure, and whether reality has a privileged description",
+        estReadMin: 20,
+        introduces: [
+          "fundamentality",
+          "naturalness",
+          "perfectly natural property",
+          "structure",
+          "ideology",
+        ],
+        requires: [
+          "grounding",
+          "metaphysical explanation",
+          "property",
+          "universal",
+        ],
+      },
+      {
+        slug: "ontological-dependence",
+        title: "Ontological Dependence",
+        summary:
+          "Existential, essential, rigid, and generic varieties, and why modal definitions misfire",
+        estReadMin: 18,
+        introduces: [
+          "ontological dependence",
+          "existential dependence",
+          "essential dependence",
+          "rigid dependence",
+          "generic dependence",
+        ],
+        requires: ["real definition", "grounding", "substance", "existence"],
+      },
+      {
+        slug: "truthmaker-theory",
+        title: "Truthmaker Theory",
+        summary:
+          "What makes a truth true, and why negative existentials strain maximalism",
+        estReadMin: 20,
+        introduces: [
+          "truthmaker",
+          "truthmaker principle",
+          "truthmaker maximalism",
+          "truth supervenes on being",
+          "negative existential",
+        ],
+        requires: [
+          "ontological dependence",
+          "grounding",
+          "states of affairs",
+          "fact",
+          "substance",
+        ],
+      },
+      {
+        slug: "the-problem-of-material-constitution",
+        title: "The Problem of Material Constitution",
+        summary:
+          "The statue and the clay share every part yet appear to differ in their modal properties",
+        estReadMin: 21,
+        introduces: [
+          "material constitution",
+          "coincident objects",
+          "dominant sortal",
+          "constitution without identity",
+        ],
+        requires: [
+          "the ship of Theseus",
+          "sortal",
+          "numerical identity",
+          "Leibniz's law",
+          "the identity of indiscernibles",
+          "essential property",
+        ],
+      },
+      {
+        slug: "hylomorphism-and-structure",
+        title: "Neo-Aristotelian Hylomorphism",
+        summary:
+          "Putting form back into the object: embodiment, structural parts, and the constitution problem dissolved rather than answered",
+        estReadMin: 22,
+        introduces: [
+          "hylomorphism",
+          "matter and form",
+          "theory of embodiment",
+          "structural part",
+        ],
+        requires: [
+          "material constitution",
+          "parthood",
+          "real definition",
+          "substance",
+          "structure",
+        ],
+      },
+      {
+        slug: "composition-as-identity",
+        title: "Composition as Identity",
+        summary:
+          "The claim that a whole just is its parts taken together, in strong, weak, and moderate forms",
+        estReadMin: 20,
+        introduces: [
+          "composition as identity",
+          "strong composition as identity",
+          "moderate composition as identity",
+          "collapse argument",
+        ],
+        requires: [
+          "mereological fusion",
+          "parthood",
+          "numerical identity",
+          "Leibniz's law",
+          "the special composition question",
+        ],
+      },
+      {
+        slug: "gunk-and-unrestricted-composition",
+        title: "Gunk, Atomless Mereology, and Unrestricted Composition",
+        summary:
+          "Worlds without atoms, and the price of letting any collection at all have a fusion",
+        estReadMin: 20,
+        introduces: [
+          "atomless gunk",
+          "mereological atom",
+          "unrestricted composition",
+          "arbitrary undetached parts",
+          "mereological essentialism",
+        ],
+        requires: [
+          "mereology",
+          "parthood",
+          "proper part",
+          "mereological fusion",
+          "the special composition question",
+          "mereological universalism",
+        ],
+      },
+      {
+        slug: "priority-monism",
+        title: "Priority Monism",
+        summary:
+          "The case that the cosmos is the one fundamental object and every part of it derivative",
+        estReadMin: 22,
+        introduces: [
+          "priority monism",
+          "priority pluralism",
+          "the cosmos",
+          "the argument from gunk",
+        ],
+        requires: [
+          "fundamentality",
+          "grounding",
+          "atomless gunk",
+          "mereological fusion",
+          "proper part",
+        ],
+      },
+      {
+        slug: "vagueness-and-ontic-indeterminacy",
+        title: "Vagueness and Ontic Indeterminacy",
+        summary:
+          "Whether sorites cases show loose language or fuzzy objects, and Evans's case against the latter",
+        estReadMin: 22,
+        introduces: [
+          "vagueness",
+          "sorites paradox",
+          "semantic indeterminacy",
+          "ontic vagueness",
+          "the problem of the many",
+          "Evans's argument",
+          "determinable-based indeterminacy",
+        ],
+        requires: [
+          "numerical identity",
+          "material constitution",
+          "parthood",
+          "object",
+        ],
+      },
+      {
+        slug: "metaontology-and-deflationism",
+        title: "Metaontology and Carnapian Deflationism",
+        summary:
+          "Internal versus external questions, quantifier variance, and whether ontological disputes are real",
+        estReadMin: 22,
+        introduces: [
+          "metaontology",
+          "internal question",
+          "external question",
+          "quantifier variance",
+          "ontological deflationism",
+        ],
+        requires: [
+          "ontology",
+          "ontological commitment",
+          "existence",
+          "the special composition question",
+          "mereological nihilism",
+          "structure",
+        ],
+      },
+      {
+        slug: "laws-of-nature",
+        title: "Laws of Nature",
+        summary:
+          "Best system Humeanism, necessitation between universals, and dispositional essentialist rivals",
+        estReadMin: 26,
+        introduces: [
+          "laws of nature",
+          "Humean supervenience",
+          "the best system analysis",
+          "nomic necessitation",
+          "dispositionalism",
+          "governing conception",
+        ],
+        requires: [
+          "regularity theory",
+          "causation",
+          "universal",
+          "necessity",
+          "supervenience",
+          "perfectly natural property",
+          "counterfactual analysis of causation",
+        ],
+      },
+      {
+        slug: "powers-and-dispositions",
+        title: "Powers and Dispositions",
+        summary:
+          "Finks and masks against the conditional analysis, and whether powers are irreducibly modal",
+        estReadMin: 20,
+        introduces: [
+          "disposition",
+          "causal power",
+          "categorical property",
+          "finkish disposition",
+          "the conditional analysis of dispositions",
+        ],
+        requires: [
+          "dispositionalism",
+          "laws of nature",
+          "property",
+          "essential property",
+          "counterfactual analysis of causation",
+        ],
+      },
+      {
+        slug: "absence-causation-and-omissions",
+        title: "Absence Causation and Omissions",
+        summary:
+          "The gardener who failed to water the plants, and why counting absences as causes lets in far too many of them",
+        estReadMin: 20,
+        introduces: [
+          "causation by absence",
+          "omission",
+          "the profligacy problem",
+          "quasi-causation",
+          "physical connection theory",
+        ],
+        requires: [
+          "counterfactual analysis of causation",
+          "causal power",
+          "event",
+          "causation",
+        ],
+      },
+      {
+        slug: "structural-equations-and-actual-causation",
+        title: "Structural Equations and Actual Causation",
+        summary:
+          "Causal models as the tool for reading token causation off a network, and the cases that still break it",
+        estReadMin: 26,
+        introduces: [
+          "structural equation model",
+          "causal network",
+          "actual causation",
+          "default and deviant",
+          "bogus prevention",
+        ],
+        requires: [
+          "interventionism",
+          "counterfactual analysis of causation",
+          "preemption",
+          "causal overdetermination",
+        ],
+      },
+      {
+        slug: "four-dimensionalism-and-stage-theory",
+        title: "Four-Dimensionalism and Stage Theory",
+        summary:
+          "Worms and stages disagree about which thing a name picks out at a given moment",
+        estReadMin: 21,
+        introduces: [
+          "four-dimensionalism",
+          "worm theory",
+          "stage theory",
+          "exdurantism",
+          "temporal counterpart",
+        ],
+        requires: [
+          "perdurantism",
+          "temporal part",
+          "eternalism",
+          "B-theory",
+          "counterpart theory",
+          "personal identity",
+        ],
+      },
+      {
+        slug: "presentism-and-relativity",
+        title: "Presentism and Relativity",
+        summary:
+          "Special relativity leaves no privileged present, and the moves presentists have made in response",
+        estReadMin: 22,
+        introduces: [
+          "relativity of simultaneity",
+          "the Rietdijk–Putnam argument",
+          "privileged foliation",
+          "block universe",
+        ],
+        requires: [
+          "presentism",
+          "eternalism",
+          "A-theory",
+          "B-theory",
+          "temporal becoming",
+        ],
+      },
+      {
+        slug: "the-moving-spotlight-and-fragmentalism",
+        title: "The Moving Spotlight and Fragmentalism",
+        summary:
+          "A-theories that keep the whole block, and Fine's proposal that reality itself is fragmented",
+        estReadMin: 22,
+        introduces: [
+          "moving spotlight theory",
+          "fragmentalism",
+          "absolute tense",
+          "coherence of reality",
+        ],
+        requires: [
+          "A-theory",
+          "eternalism",
+          "temporal becoming",
+          "McTaggart's argument",
+          "block universe",
+        ],
+      },
+      {
+        slug: "time-travel-and-causal-loops",
+        title: "Time Travel and Causal Loops",
+        summary:
+          "Why the grandfather paradox is not a contradiction, and what a loop with no origin would cost",
+        estReadMin: 22,
+        introduces: [
+          "the grandfather paradox",
+          "causal loop",
+          "bilking argument",
+          "external time and personal time",
+        ],
+        requires: [
+          "eternalism",
+          "causal chain",
+          "four-dimensionalism",
+          "possible worlds analysis",
+          "block universe",
+        ],
+      },
+    ],
+  },
+};

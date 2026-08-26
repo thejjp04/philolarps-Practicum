@@ -1,0 +1,108 @@
+---
+title: What an Argument Is
+subject: logic
+tier: beginner
+order: 1
+est_read_min: 6
+summary: Premises, conclusions, and the difference between arguing and asserting
+introduces: ["argument", "premise", "conclusion", "inference"]
+requires: []
+added: "2026-08-25"
+---
+
+Outside philosophy, an argument is two people raising their voices. Inside it, an argument is a structure: some claims offered in support of another claim. The two senses have almost nothing to do with each other, and the technical sense is the one every other page on this site relies on.
+
+<Definition term="Argument">
+A set of statements, one of which (the conclusion) is presented as being supported by the others (the premises).
+</Definition>
+
+Three things are doing work in that definition. There are statements. One of them is singled out. And the rest are *offered in support of* it. Remove any one and you no longer have an argument.
+
+## Statements, not questions or commands
+
+Only statements can be premises or conclusions. A statement is a sentence that is either true or false, whatever we happen to know about which. "The Earth has one moon" is a statement. So is "The Earth has four moons", which is a false one. Falsity does not disqualify a sentence from being a statement; it is the mark of one.
+
+"Close the door" is not a statement. Neither is "What time is it?" You cannot sensibly call a command true, and a question does not report anything that could fail to be the case. Both can appear inside an argument (an argument can be about a command), but neither can serve as a premise or a conclusion.
+
+Beginners often trip on sentences that look like statements and are not, and on sentences that look like questions and are. "Would it not be terrible if the bridge collapsed?" is a rhetorical question doing the work of a statement, and when you write it out as an argument you should replace it with the statement it stands in for.
+
+## Premises and conclusion
+
+<Definition term="Premise">
+A statement offered as a reason for accepting the conclusion of an argument.
+</Definition>
+
+<Definition term="Conclusion">
+The statement an argument is trying to establish, on the strength of its premises.
+</Definition>
+
+Here is an argument in ordinary prose:
+
+> Every mammal has a four-chambered heart. Whales are mammals. So whales have four-chambered hearts.
+
+Written out in standard form, with the premises listed and the conclusion set apart:
+
+<Argument name="Whales">
+  <Premise>Every mammal has a four-chambered heart.</Premise>
+  <Premise>Whales are mammals.</Premise>
+  <Conclusion>Whales have four-chambered hearts.</Conclusion>
+</Argument>
+
+The horizontal rule and the symbol <Symbol>∴</Symbol> both mean "therefore". Setting an argument out this way is called putting it in standard form, and it is worth the trouble even for arguments this simple. It forces you to decide what the conclusion actually is, and it exposes premises the prose left implicit.
+
+Notice that nothing in this argument depends on whales. Replace the subject matter with letters, using $F$ and $G$ for the two properties and $a$ for the individual, and what is left is $\text{Every } F \text{ is } G$; $a \text{ is } F$; therefore $a \text{ is } G$. Any argument with that shape behaves the same way. Studying the shapes rather than the whales is what makes the subject formal, and it starts in the next article.
+
+Nothing about the order of sentences tells you which is the conclusion. In the whale argument the conclusion came last. In "Whales have four-chambered hearts, since they are mammals and every mammal does" it comes first. Position is no guide at all. What you look for instead are indicator words.
+
+Premise indicators: *because*, *since*, *for*, *given that*, *as*, *on the grounds that*.
+
+Conclusion indicators: *so*, *therefore*, *thus*, *hence*, *it follows that*, *which shows that*.
+
+These are habits of English rather than rules. *Since* is temporal as often as it is logical ("since Tuesday"), and plenty of arguments use no indicator word at all. When the indicators run out, fall back on the test that actually defines the structure: which claim is the writer trying to get you to accept, and which claims are they leaning on to do it?
+
+## Inference
+
+The premises are supposed to get you somewhere. That movement is the inference.
+
+<Definition term="Inference">
+The step from premises to conclusion; the relation an argument claims holds between them.
+</Definition>
+
+An inference is not a fourth statement sitting alongside the three above. It is what the argument does with them. This matters because arguments can fail in two independent ways, and keeping them apart is most of what the next several articles are about. A premise can be false. Or the premises can be perfectly true and still fail to support the conclusion.
+
+<Argument name="A bad inference from true premises">
+  <Premise>Every mammal has a four-chambered heart.</Premise>
+  <Premise>Crocodiles have four-chambered hearts.</Premise>
+  <Conclusion>Crocodiles are mammals.</Conclusion>
+</Argument>
+
+Both premises are true. Crocodilians really do have four-chambered hearts, which is unusual among reptiles. The conclusion is false, and it is false while the premises are true, so something has gone wrong in the step rather than in the starting material. That failure has a name, and the next article gives it one.
+
+## Arguing versus asserting
+
+Asserting is putting a claim forward. Arguing is putting a claim forward *together with* something offered in its support. The difference is not one of confidence or tone.
+
+"Capital punishment is wrong" is an assertion. Say it louder and it is still an assertion. "Capital punishment is wrong, because the state should not have the power to kill its own citizens" is an argument, and a short one: it has a premise, a conclusion, and an indicator word joining them.
+
+The practical upshot is that a passage with no premises in it cannot be evaluated as an argument, and treating it as one produces a bad conversation. Political writing, advertising, and a good deal of published philosophy consist of assertion with the trappings of argument attached. Learning to notice which passages actually contain premises is a skill with immediate use.
+
+<Aside title="A warning about the word">
+Philosophers sometimes call a whole paper "an argument", meaning a long chain of small arguments where the conclusion of one becomes a premise of the next. Nothing in the definition rules this out. When you are reconstructing a chain, number the steps and say which earlier steps each one rests on, or you will lose track by the third page.
+</Aside>
+
+## Reconstructing an argument from prose
+
+Real prose rarely arrives in standard form. Reconstruction is the work of getting it there, and it has three steps.
+
+Find the conclusion first. Not the first claim, not the most striking one: the claim the passage is trying to get you to accept. Everything else is either supporting it or is decoration.
+
+Then find the premises. Only the claims genuinely offered in support count. Background, examples, and throat-clearing do not become premises just by sitting nearby.
+
+Then make the suppressed premises explicit. "Socrates is a man, so Socrates is mortal" leans on the unstated claim that all men are mortal. An argument with a suppressed premise is called an enthymeme, and most arguments in ordinary speech are enthymemes. Supply the missing premise in the form that makes the argument work, and be honest when the premise you had to supply is one the author would not have accepted.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), chapter 1.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), chapter 1.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), chapter 1.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Informal Logic"](https://plato.stanford.edu/entries/logic-informal/).</li>
+</FurtherReading>

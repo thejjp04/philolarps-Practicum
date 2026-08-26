@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Color system.
+ * Every color in the app comes from one of these custom properties.
+ * Components must never hardcode a hex value.
+ *
+ * The palette is sampled from the logo art: body #8543d2, bevel #a563ea,
+ * blade highlight #c494f3, outline #2b0264. The neutrals are biased toward
+ * that violet rather than being taken off a grey ramp.
+ *
+ * In dark mode the palette's roles flip: the pale violets become text and
+ * accent, and the mid violet becomes an active-state surface.
+ * ------------------------------------------------------------------ */
+
+:root {
+  --bg-page: #ffffff;
+  --bg-subtle: #eee6fb;
+  /* One step deeper than the logo's own outline (#2b0264), so the artwork's
+     outline still reads as an edge instead of dissolving into the ground. */
+  --bg-sidebar: #1c0546;
+  --surface: #ffffff;
+  --border: #d5c4ef;
+  --text-primary: #1b0a33;
+  /* Muted has to clear AA on both --bg-page and --bg-subtle.
+     #5f4a80 scores 7.56:1 on white and 6.24:1 on #eee6fb. */
+  --text-muted: #5f4a80;
+  /* The logo body colour, unchanged: 5.63:1 on white. */
+  --accent: #8543d2;
+  --accent-hover: #6d2fb4;
+  --on-accent: #ffffff;
+  --sidebar-text: #e6d9fa;
+  --sidebar-active-bg: #ffffff;
+  --sidebar-active-text: #4a1499;
+
+  /* Derived, still token-driven.
+
+     Both sidebars are dark now, so both washes mix toward the pale text.
+     The old rule (mix toward black in light mode) applied when --bg-sidebar
+     was a mid slate; against #2b0264 there is nothing left to darken. */
+  --accent-wash: color-mix(in srgb, var(--accent) 10%, transparent);
+  --sidebar-wash: color-mix(in srgb, var(--sidebar-text) 12%, var(--bg-sidebar));
+  --sidebar-track: color-mix(in srgb, var(--sidebar-text) 20%, var(--bg-sidebar));
+  --sidebar-rule: color-mix(in srgb, var(--sidebar-text) 22%, transparent);
+  --shadow-panel: 0 16px 48px -12px rgb(27 10 51 / 0.28);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg-page: #100a1a;
+  --bg-subtle: #1b1129;
+  --bg-sidebar: #150a2b;
+  --surface: #1b1129;
+  --border: #362449;
+  --text-primary: #ece3f8;
+  --text-muted: #a894c4;
+  --accent: #c494f3;
+  --accent-hover: #ddbcf9;
+  --on-accent: #180b2b;
+  --sidebar-text: #cbb4ea;
+  --sidebar-active-bg: #6b32b8;
+  --sidebar-active-text: #ffffff;
+
+  --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
+
+  color-scheme: dark;
+}
+
+/* No-JS fallback. The inline theme script normally resolves this before
+   first paint, so this only matters when scripting is unavailable. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page: #100a1a;
+    --bg-subtle: #1b1129;
+    --bg-sidebar: #150a2b;
+    --surface: #1b1129;
+    --border: #362449;
+    --text-primary: #ece3f8;
+    --text-muted: #a894c4;
+    --accent: #c494f3;
+    --accent-hover: #ddbcf9;
+    --on-accent: #180b2b;
+    --sidebar-text: #cbb4ea;
+    --sidebar-active-bg: #6b32b8;
+    --sidebar-active-text: #ffffff;
+    --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-subtle: var(--bg-subtle);
+  --color-sidebar: var(--bg-sidebar);
+  --color-surface: var(--surface);
+  --color-line: var(--border);
+  --color-primary: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-active: var(--sidebar-active-bg);
+  --color-sidebar-active-text: var(--sidebar-active-text);
+  --color-accent-wash: var(--accent-wash);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), Charter, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
+
+  --radius-card: 8px;
+  --radius-pill: 999px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Article prose
+ * ------------------------------------------------------------------ */
+
+.prose-article {
+  font-family: var(--font-source-serif), Charter, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.prose-article > * + * {
+  margin-top: 1.35em;
+}
+
+.prose-article h2,
+.prose-article h3,
+.prose-article h4 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  scroll-margin-top: 6rem;
+}
+
+.prose-article h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+  margin-top: 2.75em;
+}
+
+.prose-article h3 {
+  font-size: 1.175rem;
+  font-weight: 650;
+  margin-top: 2.25em;
+}
+
+.prose-article h4 {
+  font-size: 1rem;
+  font-weight: 650;
+  margin-top: 2em;
+}
+
+.prose-article a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.prose-article a:hover {
+  color: var(--accent-hover);
+  text-decoration-color: currentColor;
+}
+
+.prose-article strong {
+  font-weight: 650;
+}
+
+.prose-article ul,
+.prose-article ol {
+  padding-left: 1.5em;
+}
+
+.prose-article ul {
+  list-style: disc;
+}
+
+.prose-article ol {
+  list-style: decimal;
+}
+
+.prose-article li + li {
+  margin-top: 0.4em;
+}
+
+.prose-article li::marker {
+  color: var(--text-muted);
+}
+
+.prose-article blockquote {
+  border-left: 3px solid var(--border);
+  padding-left: 1.15em;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.prose-article code {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.875em;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.prose-article pre {
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-article pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.prose-article hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin-block: 2.5em;
+}
+
+/* Premise numbering inside <Argument>. */
+.argument-list {
+  counter-reset: premise;
+  list-style: none;
+  padding-left: 0;
+}
+
+.argument-list > .premise-row {
+  counter-increment: premise;
+}
+
+.premise-counter::before {
+  content: counter(premise) ".";
+}
+
+.prose-article .argument-list li + li {
+  margin-top: 0;
+}
+
+/* KaTeX inherits the token palette rather than its own defaults. */
+.katex {
+  color: var(--text-primary);
+  font-size: 1.02em;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.35rem;
+}
+
+/* ------------------------------------------------------------------ *
+ * Utilities
+ * ------------------------------------------------------------------ */
+
+.scrollbar-slim {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, currentColor 25%, transparent) transparent;
+}
+
+.scrollbar-slim::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: 999px;
+}
+
+.scrollbar-slim::-webkit-scrollbar-track {
+  background: transparent;
+}
