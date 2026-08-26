@@ -147,7 +147,7 @@ export function Search() {
             type="button"
             aria-label="Close search"
             onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-[color-mix(in_srgb,var(--text-primary)_45%,transparent)] backdrop-blur-[2px]"
+            className="absolute inset-0 bg-[var(--scrim)] backdrop-blur-[2px]"
           />
 
           <div

@@ -61,7 +61,7 @@ export function AppShell({
             type="button"
             aria-label="Close navigation"
             onClick={() => setDrawer(false)}
-            className="absolute inset-0 bg-[color-mix(in_srgb,var(--text-primary)_50%,transparent)]"
+            className="absolute inset-0 bg-[var(--scrim)]"
           />
           <div
             className="absolute inset-y-0 left-0 w-[280px]"

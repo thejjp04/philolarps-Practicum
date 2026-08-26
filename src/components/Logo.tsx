@@ -10,31 +10,36 @@ import Image from "next/image";
  * Source ratios: mark 631x860, wordmark 1284x466.
  */
 
-const MARK_W = 56;
-const MARK_H = 76;
-const WORD_W = 145;
-const WORD_H = 53;
+const MARK_W = 106;
+const MARK_H = 145;
+const WORD_W = 127;
+const WORD_H = 46;
 
-/* Lockup geometry, measured against the alpha channel of the two PNGs rather
-   than eyeballed.
+/* Lockup geometry, solved against the alpha channel of the two PNGs rather than
+   eyeballed.
 
-   Rotated -6deg about its centre, the mark's right edge tapers from x=56 at
-   y=38 down to x=34 at y=52, and below that only the bare blade is left,
-   holding x≈26-27 all the way to y=76. The wordmark's "h" begins in its first
-   opaque column, so the word's left edge is what has to clear the blade.
+   Two constraints fight each other. The word has to tuck into the notch the
+   blade leaves under the bowl, or the lockup reads as "P hilolarps" in two
+   pieces instead of one word. And the blade should finish on the word's
+   baseline, or the P floats above the word with its sword cut short.
 
-   Dropping the word to y=52 puts its top row past the bowl's taper, which frees
-   it to move left into the notch the blade leaves under the bowl. WORD_X 31
-   parks the "h" 4px off the blade on the tightest row, so the mark reads as the
-   P of one word instead of a separate glyph sitting next to it. An earlier
-   pairing (42, 50) cleared the blade by 15px and read as two pieces.
+   The artwork decides how those reconcile. Rotated -6deg, the bowl fills the
+   mark down to 78% of its height; only below that is the blade narrow enough to
+   tuck against. So the word must fit in the bottom 22%, which fixes the ratio
+   between the two: blade tip on the baseline needs MARK_H >= WORD_H / 0.22.
+
+   At the word's previous 53px that wanted a 209px lockup, and the sidebar's
+   padding leaves 200. Hence WORD_H 46: the word gives up a few pixels to buy
+   the descender, and the P roughly doubles. WORD_Y 99 puts the word's baseline
+   on row 145, which is exactly where the blade tip lands. WORD_X 55 parks the
+   "h" 5px off the blade on the tightest row.
 
    MARK_X exists because the crossguard overhangs the artwork's own left edge by
    2px once rotated; the offset keeps the lockup flush with the sidebar padding.
-   That padding leaves 200px, which is what caps WORD_X + WORD_W. */
+   That padding leaves 200px, which is what caps WORD_X + WORD_W at 182. */
 const MARK_X = 2;
-const WORD_X = 31;
-const WORD_Y = 52;
+const WORD_X = 55;
+const WORD_Y = 99;
 const MARK_TILT = -6;
 
 export function LogoMark({ className }: { className?: string }) {

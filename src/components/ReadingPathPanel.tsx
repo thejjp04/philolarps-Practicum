@@ -67,7 +67,7 @@ export function ReadingPathPanel({ nav }: { nav: NavData }) {
             type="button"
             aria-label="Close reading path"
             onClick={() => setOpen(false)}
-            className="absolute inset-0 bg-[color-mix(in_srgb,var(--text-primary)_45%,transparent)]"
+            className="absolute inset-0 bg-[var(--scrim)]"
           />
 
           <aside

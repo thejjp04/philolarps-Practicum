@@ -44,6 +44,12 @@
   --sidebar-rule: color-mix(in srgb, var(--sidebar-text) 22%, transparent);
   --shadow-panel: 0 16px 48px -12px rgb(27 10 51 / 0.28);
 
+  /* Behind modals. This has to be a token of its own rather than a mix of
+     --text-primary: that token inverts between themes, so reusing it veiled the
+     dark page in 45% near-white instead of dimming it. Each theme names a
+     colour that is dark in that theme. */
+  --scrim: color-mix(in srgb, var(--text-primary) 45%, transparent);
+
   color-scheme: light;
 }
 
@@ -63,6 +69,7 @@
   --sidebar-active-text: #ffffff;
 
   --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
+  --scrim: color-mix(in srgb, var(--bg-page) 78%, transparent);
 
   color-scheme: dark;
 }
@@ -85,6 +92,7 @@
     --sidebar-active-bg: #6b32b8;
     --sidebar-active-text: #ffffff;
     --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
+    --scrim: color-mix(in srgb, var(--bg-page) 78%, transparent);
     color-scheme: dark;
   }
 }
