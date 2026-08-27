@@ -15,7 +15,8 @@ export const metaphysics: Subject = {
         summary:
           "The questions left over once the sciences have described how things behave",
         estReadMin: 7,
-        introduces: ["metaphysics", "ontology", "first philosophy", "category"],
+        introduces: ["metaphysics", "first philosophy", "category"],
+        requires: ["ontology"],
       },
       {
         slug: "existence-and-non-existence",
@@ -23,13 +24,13 @@ export const metaphysics: Subject = {
         summary:
           "Whether existence is a property, and what to say about Pegasus and the round square",
         estReadMin: 8,
-        introduces: [
+        introduces: ["nonexistent object", "Meinongianism"],
+        requires: [
+          "metaphysics",
+          "ontology",
           "existence",
-          "nonexistent object",
-          "Meinongianism",
           "ontological commitment",
         ],
-        requires: ["metaphysics", "ontology"],
       },
       {
         slug: "objects-and-properties",
@@ -83,16 +84,13 @@ export const metaphysics: Subject = {
         summary:
           "Repair and reassembly leave two equally good candidates for being the original ship",
         estReadMin: 7,
-        introduces: [
-          "the ship of Theseus",
-          "sortal",
-          "spatiotemporal continuity",
-        ],
+        introduces: ["the ship of Theseus", "spatiotemporal continuity"],
         requires: [
           "numerical identity",
           "persistence",
           "Leibniz's law",
           "change",
+          "sortal",
         ],
       },
       {
@@ -145,16 +143,20 @@ export const metaphysics: Subject = {
           "Three answers to how two red things share one property: realism, nominalism, tropes",
         estReadMin: 16,
         introduces: [
-          "universal",
-          "particular",
           "realism about universals",
           "nominalism",
           "trope",
           "trope theory",
           "resemblance class",
+        ],
+        requires: [
+          "property",
+          "instantiation",
+          "predication",
+          "universal",
+          "particular",
           "the one over many",
         ],
-        requires: ["property", "instantiation", "predication"],
       },
       {
         slug: "substance-and-bundle-theories",
@@ -179,13 +181,12 @@ export const metaphysics: Subject = {
         estReadMin: 15,
         introduces: [
           "fact",
-          "event",
           "states of affairs",
           "property exemplification",
           "coarse-grained event",
           "fine-grained event",
         ],
-        requires: ["object", "property", "instantiation", "causation"],
+        requires: ["object", "property", "instantiation", "causation", "event"],
       },
       {
         slug: "supervenience",
@@ -379,7 +380,7 @@ export const metaphysics: Subject = {
           "parthood",
           "proper part",
           "mereological fusion",
-          "the special composition question",
+          "special composition question",
           "mereological nihilism",
           "mereological universalism",
         ],
@@ -433,13 +434,13 @@ export const metaphysics: Subject = {
           "naturalness",
           "perfectly natural property",
           "structure",
-          "ideology",
         ],
         requires: [
           "grounding",
           "metaphysical explanation",
           "property",
           "universal",
+          "ideological commitment",
         ],
       },
       {
@@ -449,13 +450,18 @@ export const metaphysics: Subject = {
           "Existential, essential, rigid, and generic varieties, and why modal definitions misfire",
         estReadMin: 18,
         introduces: [
-          "ontological dependence",
           "existential dependence",
           "essential dependence",
           "rigid dependence",
           "generic dependence",
         ],
-        requires: ["real definition", "grounding", "substance", "existence"],
+        requires: [
+          "real definition",
+          "grounding",
+          "substance",
+          "existence",
+          "ontological dependence",
+        ],
       },
       {
         slug: "truthmaker-theory",
@@ -464,8 +470,6 @@ export const metaphysics: Subject = {
           "What makes a truth true, and why negative existentials strain maximalism",
         estReadMin: 20,
         introduces: [
-          "truthmaker",
-          "truthmaker principle",
           "truthmaker maximalism",
           "truth supervenes on being",
           "negative existential",
@@ -476,6 +480,8 @@ export const metaphysics: Subject = {
           "states of affairs",
           "fact",
           "substance",
+          "truthmaker",
+          "truthmaker principle",
         ],
       },
       {
@@ -536,7 +542,7 @@ export const metaphysics: Subject = {
           "parthood",
           "numerical identity",
           "Leibniz's law",
-          "the special composition question",
+          "special composition question",
         ],
       },
       {
@@ -557,7 +563,7 @@ export const metaphysics: Subject = {
           "parthood",
           "proper part",
           "mereological fusion",
-          "the special composition question",
+          "special composition question",
           "mereological universalism",
         ],
       },
@@ -589,7 +595,6 @@ export const metaphysics: Subject = {
         estReadMin: 22,
         introduces: [
           "vagueness",
-          "sorites paradox",
           "semantic indeterminacy",
           "ontic vagueness",
           "the problem of the many",
@@ -601,6 +606,7 @@ export const metaphysics: Subject = {
           "material constitution",
           "parthood",
           "object",
+          "sorites paradox",
         ],
       },
       {
@@ -609,20 +615,18 @@ export const metaphysics: Subject = {
         summary:
           "Internal versus external questions, quantifier variance, and whether ontological disputes are real",
         estReadMin: 22,
-        introduces: [
-          "metaontology",
-          "internal question",
-          "external question",
-          "quantifier variance",
-          "ontological deflationism",
-        ],
+        introduces: ["ontological deflationism"],
         requires: [
           "ontology",
           "ontological commitment",
           "existence",
-          "the special composition question",
+          "special composition question",
           "mereological nihilism",
           "structure",
+          "metaontology",
+          "internal question",
+          "external question",
+          "quantifier variance",
         ],
       },
       {

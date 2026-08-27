@@ -533,7 +533,7 @@ export const THINKERS: Thinker[] = [
     position:
       "Held that what counts as knowledge is shaped by power, and traced punishment from spectacle to discipline",
     keyArticles: [
-      "applied-ethics/intermediate/punishment-and-the-death-penalty",
+      "applied-ethics/intermediate/the-death-penalty",
       "epistemology/intermediate/epistemic-injustice",
     ],
   },

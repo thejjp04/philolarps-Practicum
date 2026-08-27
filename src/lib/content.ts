@@ -83,7 +83,7 @@ function readAllFiles(): RawFile[] {
   if (problems.length > 0) {
     const report = problems.map((p) => `  - ${p}`).join("\n");
     throw new Error(
-      `Prerequisite ladder is broken. An article may not use a term before an earlier article introduces it.\n${report}`,
+      `Prerequisite ladder is broken. Each term is defined by exactly one article, site-wide, and no article may lean on a term that only a later or harder one defines.\n${report}`,
     );
   }
 

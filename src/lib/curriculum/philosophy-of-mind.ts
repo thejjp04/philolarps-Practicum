@@ -42,12 +42,11 @@ export const philosophyOfMind: Subject = {
         introduces: [
           "mental state",
           "propositional attitude",
-          "belief",
           "desire",
           "occurrent state",
           "dispositional state",
         ],
-        requires: ["mind-body problem", "cognition"],
+        requires: ["mind-body problem", "cognition", "belief"],
       },
       {
         slug: "sensation-and-perception",
@@ -62,7 +61,11 @@ export const philosophyOfMind: Subject = {
           "the argument from illusion",
           "hallucination",
         ],
-        requires: ["mental state", "phenomenal consciousness", "what it is like"],
+        requires: [
+          "mental state",
+          "phenomenal consciousness",
+          "what it is like",
+        ],
       },
       {
         slug: "introspection-and-its-limits",
@@ -112,10 +115,14 @@ export const philosophyOfMind: Subject = {
           "interactionism",
           "epiphenomenalism",
           "causal closure",
-          "supervenience",
           "mind-body supervenience",
         ],
-        requires: ["dualism", "physicalism", "mind-body problem"],
+        requires: [
+          "dualism",
+          "physicalism",
+          "mind-body problem",
+          "supervenience",
+        ],
       },
       {
         slug: "behaviourism-and-its-failure",
@@ -143,9 +150,13 @@ export const philosophyOfMind: Subject = {
           "type identity",
           "token identity",
           "reduction",
+        ],
+        requires: [
+          "physicalism",
+          "mental state",
+          "logical behaviourism",
           "Leibniz's law",
         ],
-        requires: ["physicalism", "mental state", "logical behaviourism"],
       },
       {
         slug: "functionalism-and-multiple-realizability",
@@ -341,19 +352,26 @@ export const philosophyOfMind: Subject = {
         requires: ["belief", "desire", "propositional attitude", "causal role"],
       },
       {
-        slug: "personal-identity-and-metaphysics",
-        title: "Personal Identity and Its Overlap With Metaphysics",
+        slug: "memory-circularity-and-the-brave-officer",
+        title: "Memory, Circularity, and the Brave Officer",
         summary:
-          "Whether what makes you the same person over time is psychological, bodily, or nothing that fission can preserve",
+          "Locke's memory criterion, Butler's charge that it presupposes the identity it was meant to define, and Reid's officer who both is and is not the boy",
         estReadMin: 18,
         introduces: [
-          "personal identity",
-          "psychological continuity",
           "memory criterion",
           "bodily criterion",
+          "Butler's circularity objection",
+          "brave officer paradox",
+          "quasi-memory",
+        ],
+        requires: [
+          "mental state",
+          "introspection",
+          "consciousness",
+          "personal identity",
+          "psychological continuity",
           "fission case",
         ],
-        requires: ["mental state", "introspection", "consciousness"],
       },
     ],
     advanced: [
@@ -627,7 +645,6 @@ export const philosophyOfMind: Subject = {
         introduces: [
           "mental causation",
           "exclusion problem",
-          "causal overdetermination",
           "anomalous monism",
           "non-reductive physicalism",
         ],
@@ -637,6 +654,7 @@ export const philosophyOfMind: Subject = {
           "epiphenomenalism",
           "token identity",
           "multiple realizability",
+          "causal overdetermination",
         ],
       },
       {

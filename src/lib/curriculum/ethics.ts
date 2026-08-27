@@ -4,7 +4,8 @@ export const ethics: Subject = {
   slug: "ethics",
   name: "Ethics",
   group: "core",
-  oneLine: "What makes actions right or wrong, and how the answers are defended.",
+  oneLine:
+    "What makes actions right or wrong, and how the answers are defended.",
   scope:
     "Ethics asks which actions are right, what makes them so, and what kind of claim a moral claim is in the first place. The beginner tier fixes the vocabulary: the difference between describing and evaluating, what a reason is, what a moral theory owes you, and what metaethics is asking that first-order ethics is not. The intermediate tier works through the standing families of theory and the metaethical landscape they sit in, including motivation and reasons, both of which are ordinary undergraduate material rather than specialist territory. The advanced tier is where the live disputes are: the embedding problem, the semantics of moral terms, the source of normative authority, holism about reasons, and the impossibility results in population ethics.",
   ladder: {
@@ -119,6 +120,7 @@ export const ethics: Subject = {
           "impartiality",
           "demandingness objection",
           "experience machine",
+          "agent-centred prerogative",
         ],
         requires: [
           "consequentialism",
@@ -182,20 +184,24 @@ export const ethics: Subject = {
       },
       {
         slug: "contractualism",
-        title: "Contractualism and the Social Contract",
+        title: "Scanlonian Contractualism",
         summary:
-          "From Hobbesian bargaining to Rawls's original position and Scanlon's reasonable rejection",
+          "What no one could reasonably reject, and how that differs from bargaining for mutual advantage",
         estReadMin: 19,
         introduces: [
-          "social contract",
-          "state of nature",
           "contractarianism",
           "contractualism",
-          "original position",
-          "veil of ignorance",
           "reasonable rejection",
         ],
-        requires: ["impartiality", "moral principle", "autonomy"],
+        requires: [
+          "impartiality",
+          "moral principle",
+          "autonomy",
+          "social contract",
+          "state of nature",
+          "original position",
+          "veil of ignorance",
+        ],
       },
       {
         slug: "care-ethics",
@@ -335,13 +341,13 @@ export const ethics: Subject = {
           "synthetic ethical naturalism",
           "moral twin earth",
           "causal theory of reference",
-          "reference magnetism",
         ],
         requires: [
           "ethical naturalism",
           "moral realism",
           "moral property",
           "open question argument",
+          "reference magnetism",
         ],
       },
       {
@@ -352,7 +358,6 @@ export const ethics: Subject = {
         estReadMin: 23,
         introduces: [
           "moral supervenience",
-          "strong supervenience",
           "resultance",
           "supervenience argument",
         ],
@@ -361,6 +366,7 @@ export const ethics: Subject = {
           "moral fact",
           "non-naturalism",
           "moral metaphysics",
+          "strong supervenience",
         ],
       },
       {
@@ -468,13 +474,13 @@ export const ethics: Subject = {
           "agent-neutral reason",
           "deontological constraint",
           "paradox of deontology",
-          "agent-centred prerogative",
         ],
         requires: [
           "deontology",
           "consequentialism",
           "normative reason",
           "doctrine of double effect",
+          "agent-centred prerogative",
         ],
       },
       {
@@ -528,9 +534,9 @@ export const ethics: Subject = {
       },
       {
         slug: "population-ethics",
-        title: "Population Ethics and the Impossibility Results",
+        title: "Population Ethics",
         summary:
-          "The total view, the repugnant conclusion, and the theorems showing that no axiology avoids every one of these costs",
+          "The total view, the repugnant conclusion, and the person-affecting intuitions that every proposed escape route gives up",
         estReadMin: 27,
         introduces: [
           "population ethics",
@@ -539,10 +545,14 @@ export const ethics: Subject = {
           "repugnant conclusion",
           "mere addition paradox",
           "person-affecting view",
-          "non-identity problem",
           "critical level view",
         ],
-        requires: ["aggregation", "utility", "act utilitarianism"],
+        requires: [
+          "aggregation",
+          "utility",
+          "act utilitarianism",
+          "non-identity problem",
+        ],
       },
       {
         slug: "evolutionary-debunking-arguments",
@@ -555,13 +565,13 @@ export const ethics: Subject = {
           "Darwinian dilemma",
           "genealogical critique",
           "third-factor response",
-          "tracking account",
         ],
         requires: [
           "moral realism",
           "moral intuition",
           "moral property",
           "error theory",
+          "tracking account",
         ],
       },
       {
@@ -581,6 +591,7 @@ export const ethics: Subject = {
           "moral intuition",
           "aggregation",
           "reflective equilibrium",
+          "expected choiceworthiness",
         ],
       },
     ],

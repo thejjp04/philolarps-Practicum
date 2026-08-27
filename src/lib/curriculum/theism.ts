@@ -4,7 +4,8 @@ export const theism: Subject = {
   slug: "theism",
   name: "Theism",
   group: "religion",
-  oneLine: "Whether there is a God, and what would count as a reason either way.",
+  oneLine:
+    "Whether there is a God, and what would count as a reason either way.",
   scope:
     "Theism examines the claim that a personal, perfect, creating God exists, along with the arguments offered for and against it. The beginner tier fixes what the word God is standardly taken to mean, separates theism, atheism, and agnosticism, and sets out what a proof in this area could even look like. The intermediate tier works through the classical arguments, religious experience, pragmatic arguments for belief, the problem of evil, miracles, the afterlife, and the naturalistic explanations of religious belief itself. The advanced tier takes up the modal, epistemological, and semantic disputes that professional philosophy of religion now turns on, including aseity and the bootstrapping problem, skeptical theism's costs, the no-best-world problem, and whether it would be better if God existed.",
   ladder: {
@@ -102,12 +103,16 @@ export const theism: Subject = {
           "cosmological argument",
           "Kalam cosmological argument",
           "principle of sufficient reason",
-          "contingency",
           "necessary being",
           "actual infinite",
           "causal series per se",
         ],
-        requires: ["natural theology", "God", "creation ex nihilo"],
+        requires: [
+          "natural theology",
+          "God",
+          "creation ex nihilo",
+          "contingency",
+        ],
       },
       {
         slug: "teleological-and-fine-tuning",
@@ -158,12 +163,11 @@ export const theism: Subject = {
         estReadMin: 15,
         introduces: [
           "moral argument",
-          "moral realism",
           "divine command theory",
           "Euthyphro dilemma",
           "moral obligation",
         ],
-        requires: ["theism", "God", "omnibenevolence"],
+        requires: ["theism", "God", "omnibenevolence", "moral realism"],
       },
       {
         slug: "religious-experience",
@@ -282,8 +286,6 @@ export const theism: Subject = {
         introduces: [
           "miracle",
           "Hume's argument against miracles",
-          "testimony",
-          "prior probability",
           "law of nature",
         ],
         requires: [
@@ -292,6 +294,8 @@ export const theism: Subject = {
           "faith",
           "probabilistic argument",
           "divine conservation",
+          "testimony",
+          "prior probability",
         ],
       },
       {
@@ -348,13 +352,13 @@ export const theism: Subject = {
           "parody argument",
           "Gaunilo's island",
           "reverse ontological argument",
-          "metaphysical possibility",
         ],
         requires: [
           "modal ontological argument",
           "maximal greatness",
           "ontological argument",
           "great-making property",
+          "metaphysical possibility",
         ],
       },
       {
@@ -385,8 +389,7 @@ export const theism: Subject = {
         estReadMin: 26,
         introduces: [
           "aseity",
-          "abstract object",
-          "bootstrapping objection",
+          "aseity bootstrapping problem",
           "theistic activism",
           "absolute creationism",
           "divine conceptualism",
@@ -397,6 +400,7 @@ export const theism: Subject = {
           "creation ex nihilo",
           "classical theism",
           "metaphysical possibility",
+          "abstract object",
         ],
       },
       {
@@ -434,9 +438,14 @@ export const theism: Subject = {
           "analogy of being",
           "univocal predication",
           "verification principle",
-          "noncognitivism",
         ],
-        requires: ["divine simplicity", "God", "omnipotence", "transcendence"],
+        requires: [
+          "divine simplicity",
+          "God",
+          "omnipotence",
+          "transcendence",
+          "non-cognitivism",
+        ],
       },
       {
         slug: "reformed-epistemology",
@@ -447,7 +456,6 @@ export const theism: Subject = {
         introduces: [
           "Reformed epistemology",
           "properly basic belief",
-          "proper function",
           "sensus divinitatis",
           "defeater",
           "Great Pumpkin objection",
@@ -458,6 +466,7 @@ export const theism: Subject = {
           "faith",
           "theism",
           "religious experience",
+          "proper function",
         ],
       },
       {

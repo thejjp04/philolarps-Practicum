@@ -37,14 +37,8 @@ export const epistemology: Subject = {
         summary:
           "Where beliefs actually come from, and the way each source can fail",
         estReadMin: 9,
-        introduces: [
-          "perception",
-          "memory",
-          "testimony",
-          "reason",
-          "introspection",
-        ],
-        requires: ["knowledge", "justification", "belief"],
+        introduces: ["perception", "memory", "testimony", "reason"],
+        requires: ["knowledge", "justification", "belief", "introspection"],
       },
       {
         slug: "skepticism-first-encounter",
@@ -433,7 +427,12 @@ export const epistemology: Subject = {
           "threshold view",
           "conjunction closure",
         ],
-        requires: ["credence", "degree of belief", "epistemic closure", "belief"],
+        requires: [
+          "credence",
+          "degree of belief",
+          "epistemic closure",
+          "belief",
+        ],
       },
       {
         slug: "self-locating-belief",
@@ -478,12 +477,16 @@ export const epistemology: Subject = {
           "A short proof that if every truth can be known, then every truth already is known",
         estReadMin: 23,
         introduces: [
-          "epistemic logic",
           "knowability principle",
           "Fitch's paradox",
           "restriction strategy",
         ],
-        requires: ["knowledge", "epistemic closure", "known entailment"],
+        requires: [
+          "knowledge",
+          "epistemic closure",
+          "known entailment",
+          "epistemic logic",
+        ],
       },
       {
         slug: "epistemology-of-modality",
@@ -493,11 +496,15 @@ export const epistemology: Subject = {
         estReadMin: 22,
         introduces: [
           "modal epistemology",
-          "conceivability argument",
           "modal knowledge",
           "essentialist modal epistemology",
         ],
-        requires: ["a priori", "rational intuition", "counterfactual"],
+        requires: [
+          "a priori",
+          "rational intuition",
+          "counterfactual",
+          "conceivability argument",
+        ],
       },
       {
         slug: "transformative-experience",

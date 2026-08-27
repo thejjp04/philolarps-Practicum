@@ -184,12 +184,7 @@ export const politicalPhilosophy: Subject = {
           "human development",
           "equality of what",
         ],
-        requires: [
-          "primary goods",
-          "distributive justice",
-          "equality",
-          "need",
-        ],
+        requires: ["primary goods", "distributive justice", "equality", "need"],
       },
       {
         slug: "four-political-positions",
@@ -561,13 +556,13 @@ export const politicalPhilosophy: Subject = {
           "public/private distinction",
           "intersectionality",
           "oppression",
-          "epistemic injustice",
         ],
         requires: [
           "social contract",
           "ideology",
           "non-ideal theory",
           "equality",
+          "epistemic injustice",
         ],
       },
       {

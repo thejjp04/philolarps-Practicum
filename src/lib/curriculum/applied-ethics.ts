@@ -15,15 +15,12 @@ export const appliedEthics: Subject = {
         summary:
           "How consequentialist, deontological, and virtue-based reasoning each turn a moral question into a verdict",
         estReadMin: 9,
-        introduces: [
-          "applied ethics",
-          "normative theory",
+        introduces: ["applied ethics", "normative theory", "casuistry"],
+        requires: [
           "consequentialism",
-          "utilitarianism",
           "deontology",
           "virtue ethics",
           "moral principle",
-          "casuistry",
           "reflective equilibrium",
         ],
       },
@@ -51,7 +48,7 @@ export const appliedEthics: Subject = {
         estReadMin: 10,
         introduces: [
           "benefit",
-          "autonomy",
+          "personal autonomy",
           "informed consent",
           "decision-making capacity",
           "paternalism",
@@ -68,11 +65,16 @@ export const appliedEthics: Subject = {
         introduces: [
           "acts and omissions doctrine",
           "killing and letting die",
-          "doctrine of double effect",
           "intention and foresight",
+        ],
+        requires: [
+          "harm",
+          "moral agent",
+          "deontology",
+          "consequentialism",
+          "doctrine of double effect",
           "trolley problem",
         ],
-        requires: ["harm", "moral agent", "deontology", "consequentialism"],
       },
       {
         slug: "rights-duties-and-supererogation",
@@ -81,14 +83,18 @@ export const appliedEthics: Subject = {
           "Claims that others must respect, duties that specify no particular recipient, and acts that are good without being required",
         estReadMin: 10,
         introduces: [
-          "claim right",
           "negative duty",
           "positive duty",
           "duty of rescue",
-          "imperfect duty",
           "supererogation",
         ],
-        requires: ["deontology", "moral patient", "harm", "autonomy"],
+        requires: [
+          "deontology",
+          "moral patient",
+          "harm",
+          "personal autonomy",
+          "claim right",
+        ],
       },
     ],
     intermediate: [
@@ -107,7 +113,7 @@ export const appliedEthics: Subject = {
           "surrogate decision-making",
         ],
         requires: [
-          "autonomy",
+          "personal autonomy",
           "informed consent",
           "decision-making capacity",
           "harm",
@@ -175,24 +181,21 @@ export const appliedEthics: Subject = {
         requires: ["moral status", "sentience", "interest", "utilitarianism"],
       },
       {
-        slug: "punishment-and-the-death-penalty",
-        title: "Punishment and the Death Penalty",
+        slug: "the-death-penalty",
+        title: "The Death Penalty",
         summary:
-          "Retributive and deterrence justifications of punishment, and where the capital case turns on desert, error, and proportionality",
+          "Where the capital case turns on desert, irreversible error, and whether proportionality has an upper limit",
         estReadMin: 18,
-        introduces: [
-          "retributivism",
-          "deterrence",
-          "desert",
-          "proportionality",
-          "rehabilitation",
-          "capital punishment",
-        ],
+        introduces: ["proportionality", "capital punishment"],
         requires: [
           "consequentialism",
           "deontology",
           "right to life",
           "moral agent",
+          "retributivism",
+          "deterrence",
+          "desert",
+          "rehabilitation",
         ],
       },
       {
@@ -201,18 +204,15 @@ export const appliedEthics: Subject = {
         summary:
           "The murderer at the door, Kant's absolutism about truthfulness, and Ross's answer that duties can be overridden without being cancelled",
         estReadMin: 14,
-        introduces: [
-          "categorical imperative",
-          "universalizability",
-          "moral absolutism",
-          "prima facie duty",
-          "moral dilemma",
-        ],
+        introduces: ["moral absolutism", "moral dilemma"],
         requires: [
           "deontology",
           "consequentialism",
           "moral principle",
           "reflective equilibrium",
+          "categorical imperative",
+          "universalizability",
+          "prima facie duty",
         ],
       },
       {
@@ -223,8 +223,6 @@ export const appliedEthics: Subject = {
         estReadMin: 18,
         introduces: [
           "drowning child argument",
-          "demandingness objection",
-          "agent-centred prerogative",
           "effective altruism",
           "moral distance",
         ],
@@ -234,6 +232,8 @@ export const appliedEthics: Subject = {
           "positive duty",
           "imperfect duty",
           "supererogation",
+          "demandingness objection",
+          "agent-centred prerogative",
         ],
       },
       {
@@ -243,7 +243,6 @@ export const appliedEthics: Subject = {
           "Mill's harm principle applied to expression, and whether offence, incitement, or silencing can extend the limit",
         estReadMin: 16,
         introduces: [
-          "harm principle",
           "offence principle",
           "incitement",
           "hate speech",
@@ -251,10 +250,11 @@ export const appliedEthics: Subject = {
         ],
         requires: [
           "harm",
-          "autonomy",
+          "personal autonomy",
           "consequentialism",
           "deontology",
           "claim right",
+          "harm principle",
         ],
       },
       {
@@ -348,8 +348,6 @@ export const appliedEthics: Subject = {
           "antinatalism",
           "asymmetry argument",
           "procreative beneficence",
-          "repugnant conclusion",
-          "total view",
           "prior existence view",
         ],
         requires: [
@@ -357,6 +355,8 @@ export const appliedEthics: Subject = {
           "person-affecting principle",
           "utilitarianism",
           "harm",
+          "repugnant conclusion",
+          "total view",
         ],
       },
       {
@@ -367,10 +367,7 @@ export const appliedEthics: Subject = {
         estReadMin: 28,
         introduces: [
           "population axiology",
-          "mere addition paradox",
-          "critical level view",
           "variable value view",
-          "average view",
           "impossibility theorem in population ethics",
         ],
         requires: [
@@ -379,21 +376,21 @@ export const appliedEthics: Subject = {
           "prior existence view",
           "impersonal value",
           "person-affecting principle",
+          "mere addition paradox",
+          "critical level view",
+          "average view",
         ],
       },
       {
-        slug: "aggregation-and-the-numbers-problem",
-        title: "Aggregation and the Numbers Problem",
+        slug: "partial-aggregation-and-the-relevance-view",
+        title: "Partial Aggregation and the Relevance View",
         summary:
-          "Taurek's claim that you may flip a coin rather than save the five, and the partial aggregation views built to avoid both extremes",
+          "Taurek's refusal to add the numbers up, and the views that let some claims compete while ruling others irrelevant",
         estReadMin: 26,
         introduces: [
-          "the numbers problem",
-          "aggregation",
           "contractualist tie-breaker",
           "partial aggregation",
           "relevance view",
-          "separateness of persons",
         ],
         requires: [
           "utilitarianism",
@@ -401,21 +398,18 @@ export const appliedEthics: Subject = {
           "duty of rescue",
           "prima facie duty",
           "trolley problem",
+          "aggregation",
+          "separateness of persons",
+          "numbers problem",
         ],
       },
       {
         slug: "moral-uncertainty-and-decision-procedures",
-        title: "Moral Uncertainty",
+        title: "Decision Procedures Under Moral Risk",
         summary:
-          "What to do when you are unsure which moral theory is true, and why maximising expected choiceworthiness needs theories to be comparable",
+          "Maximising expected choiceworthiness as a decision rule, and the fanaticism that follows when one theory assigns unbounded stakes",
         estReadMin: 26,
-        introduces: [
-          "moral uncertainty",
-          "expected choiceworthiness",
-          "intertheoretic comparison",
-          "my favourite theory",
-          "fanaticism",
-        ],
+        introduces: ["expected choiceworthiness", "fanaticism"],
         requires: [
           "normative theory",
           "reflective equilibrium",
@@ -423,6 +417,9 @@ export const appliedEthics: Subject = {
           "deontology",
           "prima facie duty",
           "aggregation",
+          "moral uncertainty",
+          "intertheoretic comparison",
+          "my favourite theory",
         ],
       },
       {
@@ -441,7 +438,7 @@ export const appliedEthics: Subject = {
         requires: [
           "harm",
           "informed consent",
-          "the numbers problem",
+          "numbers problem",
           "separateness of persons",
           "moral uncertainty",
         ],
@@ -484,7 +481,7 @@ export const appliedEthics: Subject = {
         requires: [
           "justice in health care",
           "beneficence",
-          "the numbers problem",
+          "numbers problem",
           "aggregation",
           "utilitarianism",
         ],

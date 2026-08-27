@@ -42,8 +42,10 @@ export type LadderEntry = {
    */
   introduces?: string[];
   /**
-   * Terms this article assumes. Every one must be introduced by an article
-   * that appears earlier in the same reading path, or the ladder check fails.
+   * Terms this article assumes. Each must be introduced either earlier in this
+   * subject's own ladder, or by another subject at this tier or an easier one,
+   * so that nothing filed under beginner rests on an advanced explanation.
+   * `validateLadders()` in `subjects.ts` enforces both cases.
    */
   requires?: string[];
 };

@@ -63,7 +63,12 @@ export const logic: Subject = {
         summary:
           "Building the table for any formula, and reading validity off it",
         estReadMin: 10,
-        introduces: ["truth table", "tautology", "contradiction", "contingency"],
+        introduces: [
+          "truth table",
+          "tautology",
+          "contradiction",
+          "contingency",
+        ],
         requires: [
           "proposition",
           "negation",
@@ -222,7 +227,11 @@ export const logic: Subject = {
           "deduction theorem",
           "derivation",
         ],
-        requires: ["proof system", "syntactic consequence", "natural deduction"],
+        requires: [
+          "proof system",
+          "syntactic consequence",
+          "natural deduction",
+        ],
       },
       {
         slug: "predicate-logic",
@@ -270,7 +279,7 @@ export const logic: Subject = {
           "relation",
           "function",
           "cardinality",
-          "countability",
+          "countable set",
           "power set",
         ],
         requires: ["recursive definition", "domain of discourse"],
@@ -581,13 +590,13 @@ export const logic: Subject = {
           "constant domain semantics",
           "variable domain semantics",
           "necessity of identity",
-          "counterpart theory",
         ],
         requires: [
           "universal quantifier",
           "necessity operator",
           "Kripke model",
           "identity predicate",
+          "counterpart theory",
         ],
       },
       {
@@ -719,7 +728,6 @@ export const logic: Subject = {
           "indicative conditional",
           "subjunctive conditional",
           "Stalnaker–Lewis semantics",
-          "conditional probability",
           "Adams' thesis",
           "triviality result",
         ],
@@ -728,6 +736,7 @@ export const logic: Subject = {
           "possible world",
           "possibility operator",
           "semantic consequence",
+          "conditional probability",
         ],
       },
       {
@@ -736,17 +745,13 @@ export const logic: Subject = {
         summary:
           "Quantifying without existence assumptions, and the positive, negative, and neutral variants",
         estReadMin: 18,
-        introduces: [
-          "free logic",
-          "existence predicate",
-          "outer domain",
-          "empty domain",
-        ],
+        introduces: ["free logic", "outer domain", "empty domain"],
         requires: [
           "universal quantifier",
           "existential quantifier",
           "definite description",
           "truth value gap",
+          "existence predicate",
         ],
       },
       {

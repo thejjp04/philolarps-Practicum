@@ -53,41 +53,80 @@ export function totalCount(subject: Subject): number {
   return TIERS.reduce((n, t) => n + subject.ladder[t].length, 0);
 }
 
+const TIER_RANK: Record<Tier, number> = {
+  beginner: 0,
+  intermediate: 1,
+  advanced: 2,
+};
+
 /**
- * Ladder integrity check.
+ * Ladder integrity check, run across the whole site rather than one subject at
+ * a time. Returns a list of violations; an empty list means the ladder is
+ * sound. Called at build time from `src/lib/content.ts`.
  *
- * An article may not use a term before some earlier article on its path has
- * introduced it. Returns a list of violations; an empty list means the ladder
- * is sound. Called at build time from `src/lib/content.ts`.
+ * Three rules:
+ *
+ * 1. A term is defined once, site-wide. When two subjects both claim to
+ *    introduce "universal", a reader has no answer to where it is explained,
+ *    and the two treatments drift apart as the articles get written.
+ * 2. Every required term is defined somewhere.
+ * 3. A rung may only lean on terms a reader already has. Within a subject that
+ *    means earlier in the ladder. Across subjects it means the same tier or an
+ *    easier one, since tiers are the site's difficulty promise: nothing filed
+ *    under beginner may rest on something only an advanced article explains.
+ *
+ * The earlier version scoped rule 1 to a single subject, so it could not see a
+ * term introduced twice in two different subjects, and had no form of rule 3.
  */
 export function validateLadders(): string[] {
   const problems: string[] = [];
 
-  for (const subject of SUBJECTS) {
-    const introduced = new Map<string, string>();
+  const rungs = SUBJECTS.flatMap((subject) => {
+    let step = 0;
+    return TIERS.flatMap((tier) =>
+      subject.ladder[tier].map((entry) => ({
+        entry,
+        tier,
+        subject: subject.slug,
+        where: `${subject.slug}/${tier}/${entry.slug}`,
+        step: step++,
+      })),
+    );
+  });
 
-    for (const tier of TIERS) {
-      for (const entry of subject.ladder[tier]) {
-        const where = `${subject.slug}/${tier}/${entry.slug}`;
+  const owner = new Map<string, (typeof rungs)[number]>();
 
-        for (const term of entry.requires ?? []) {
-          if (!introduced.has(term)) {
-            problems.push(
-              `${where} requires "${term}", which no earlier article introduces.`,
-            );
-          }
+  for (const rung of rungs) {
+    for (const term of rung.entry.introduces ?? []) {
+      const prior = owner.get(term);
+      if (prior) {
+        problems.push(
+          `${rung.where} re-introduces "${term}", already introduced by ${prior.where}.`,
+        );
+      } else {
+        owner.set(term, rung);
+      }
+    }
+  }
+
+  for (const rung of rungs) {
+    for (const term of rung.entry.requires ?? []) {
+      const source = owner.get(term);
+
+      if (!source) {
+        problems.push(
+          `${rung.where} requires "${term}", which no article introduces.`,
+        );
+      } else if (source.subject === rung.subject) {
+        if (source.step >= rung.step) {
+          problems.push(
+            `${rung.where} requires "${term}", which ${source.where} does not introduce until later in the same subject.`,
+          );
         }
-
-        for (const term of entry.introduces ?? []) {
-          const prior = introduced.get(term);
-          if (prior) {
-            problems.push(
-              `${where} re-introduces "${term}", already introduced by ${prior}.`,
-            );
-          } else {
-            introduced.set(term, where);
-          }
-        }
+      } else if (TIER_RANK[source.tier] > TIER_RANK[rung.tier]) {
+        problems.push(
+          `${rung.where} requires "${term}", but ${source.where} introduces it a tier harder. Move the term down, or lean on an easier one.`,
+        );
       }
     }
   }

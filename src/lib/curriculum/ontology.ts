@@ -23,15 +23,14 @@ export const ontology: Subject = {
         summary:
           "Ordinary things, happenings, qualities, and numbers, and why the last two are contested",
         estReadMin: 10,
-        introduces: [
+        introduces: ["event", "number", "particular"],
+        requires: [
+          "ontology",
+          "existence",
           "object",
-          "event",
           "property",
-          "number",
-          "particular",
           "instantiation",
         ],
-        requires: ["ontology", "existence"],
       },
       {
         slug: "universals-and-instances",
@@ -101,11 +100,15 @@ export const ontology: Subject = {
         introduces: [
           "Quine's criterion",
           "quantifier",
-          "bound variable",
           "regimentation",
           "Plato's beard",
         ],
-        requires: ["ontological commitment", "paraphrase", "existence claim"],
+        requires: [
+          "ontological commitment",
+          "paraphrase",
+          "existence claim",
+          "bound variable",
+        ],
       },
       {
         slug: "truthmaking-and-ontological-commitment",
@@ -141,18 +144,25 @@ export const ontology: Subject = {
         requires: ["being", "ontology", "object"],
       },
       {
-        slug: "abstract-and-concrete",
-        title: "Abstract and Concrete",
+        slug: "drawing-the-abstract-concrete-line",
+        title: "Drawing the Abstract/Concrete Line",
         summary:
           "Four ways of drawing the line, by causal power, location, mind dependence, and abstraction",
         estReadMin: 15,
         introduces: [
+          "causal criterion",
+          "spatiotemporal criterion",
+          "mind-dependence criterion",
+          "abstraction criterion",
+        ],
+        requires: [
+          "object",
+          "property",
+          "category of being",
           "abstract object",
           "concrete object",
-          "causal criterion",
           "spatiotemporal location",
         ],
-        requires: ["object", "property", "category of being"],
       },
       {
         slug: "natural-kinds",
@@ -162,12 +172,17 @@ export const ontology: Subject = {
         estReadMin: 17,
         introduces: [
           "natural kind",
-          "essence",
           "homeostatic property cluster",
           "promiscuous realism",
           "conventionalism about kinds",
         ],
-        requires: ["property", "universal", "category of being", "sortal"],
+        requires: [
+          "property",
+          "universal",
+          "category of being",
+          "sortal",
+          "essence",
+        ],
       },
       {
         slug: "platonism-and-nominalism",
@@ -177,12 +192,16 @@ export const ontology: Subject = {
         estReadMin: 18,
         introduces: [
           "mathematical platonism",
-          "nominalism",
           "indispensability argument",
           "fictionalism",
           "Benacerraf's dilemma",
         ],
-        requires: ["abstract object", "number", "Quine's criterion"],
+        requires: [
+          "abstract object",
+          "number",
+          "Quine's criterion",
+          "nominalism",
+        ],
       },
       {
         slug: "meinong-and-nonexistent-objects",
@@ -190,14 +209,14 @@ export const ontology: Subject = {
         summary:
           "Meinong on objects that bear properties without existing, and Russell's objections to them",
         estReadMin: 17,
-        introduces: [
+        introduces: ["subsistence", "fictional object", "nuclear property"],
+        requires: [
+          "existence claim",
+          "object",
+          "quantifier",
           "Meinongianism",
-          "subsistence",
-          "fictional object",
           "intentional object",
-          "nuclear property",
         ],
-        requires: ["existence claim", "object", "quantifier"],
       },
       {
         slug: "mereological-composition",
@@ -205,16 +224,17 @@ export const ontology: Subject = {
         summary:
           "When some things compose a further thing, and the nihilist and universalist answers",
         estReadMin: 18,
-        introduces: [
+        introduces: ["composition", "fusion"],
+        requires: [
+          "object",
+          "particular",
+          "ontological commitment",
           "mereology",
           "parthood",
-          "composition",
-          "fusion",
-          "special composition question",
           "mereological nihilism",
           "mereological universalism",
+          "special composition question",
         ],
-        requires: ["object", "particular", "ontological commitment"],
       },
       {
         slug: "aristotle-and-husserl",
@@ -223,13 +243,18 @@ export const ontology: Subject = {
           "Substance and accident in the Categories, and Husserl's dependence relations between regions",
         estReadMin: 19,
         introduces: [
-          "substance",
           "accident",
           "Aristotle's categories",
           "ontological dependence",
           "regional ontology",
         ],
-        requires: ["category of being", "property", "particular", "essence"],
+        requires: [
+          "category of being",
+          "property",
+          "particular",
+          "essence",
+          "substance",
+        ],
       },
       {
         slug: "carnap-and-quine",
@@ -243,7 +268,11 @@ export const ontology: Subject = {
           "external question",
           "analytic-synthetic distinction",
         ],
-        requires: ["Quine's criterion", "ontological commitment", "abstract object"],
+        requires: [
+          "Quine's criterion",
+          "ontological commitment",
+          "abstract object",
+        ],
       },
     ],
     advanced: [
@@ -352,7 +381,7 @@ export const ontology: Subject = {
           "Counting primitive notions as well as entities, and why the two economies pull against each other",
         estReadMin: 20,
         introduces: [
-          "ideology",
+          "ideological commitment",
           "primitive notion",
           "ideological parsimony",
           "qualitative parsimony",
@@ -409,14 +438,15 @@ export const ontology: Subject = {
         summary:
           "Ranking what there is by what holds in virtue of what, rather than listing it all flat",
         estReadMin: 26,
-        introduces: [
+        introduces: ["derivative entity", "purity"],
+        requires: [
+          "ontological dependence",
+          "substance",
+          "metaontology",
           "grounding",
           "fundamentality",
           "metaphysical explanation",
-          "derivative entity",
-          "purity",
         ],
-        requires: ["ontological dependence", "substance", "metaontology"],
       },
       {
         slug: "ontological-realism-and-joint-carving",
@@ -427,8 +457,6 @@ export const ontology: Subject = {
         introduces: [
           "ontological realism",
           "joint-carving",
-          "structure",
-          "naturalness",
           "reference magnetism",
         ],
         requires: [
@@ -437,6 +465,8 @@ export const ontology: Subject = {
           "fundamentality",
           "unrestricted quantifier",
           "ideology",
+          "structure",
+          "naturalness",
         ],
       },
       {
