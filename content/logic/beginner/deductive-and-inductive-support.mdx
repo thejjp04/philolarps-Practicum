@@ -1,0 +1,114 @@
+---
+title: Deductive and Inductive Support
+subject: logic
+tier: beginner
+order: 3
+est_read_min: 8
+summary: Two ways premises can back a conclusion, and why only one of them is the subject of this ladder
+prerequisites: ["what-is-an-argument", "validity-and-soundness"]
+introduces: ["deductive argument", "inductive strength", "ampliative inference", "abduction"]
+requires: ["argument", "inference", "validity"]
+added: "2026-08-27"
+---
+
+Validity is a demanding standard. It asks that the premises make the conclusion impossible to escape, and most of the reasoning anyone does in a day fails it flat. A doctor reading a scan, a jury weighing testimony, a physicist reporting a result: none of them has premises that shut every other option down, and none of them is doing anything wrong. There is a second way premises can support a conclusion, and this article is about telling the two apart.
+
+## Two standards, not two topics
+
+Start with a pair of arguments.
+
+<Argument name="The first">
+  <Premise>Every member of the choir can read music.</Premise>
+  <Premise>Nadia is a member of the choir.</Premise>
+  <Conclusion>Nadia can read music.</Conclusion>
+</Argument>
+
+<Argument name="The second">
+  <Premise>Every member of the choir I have met so far can read music.</Premise>
+  <Premise>I have met eleven of the twelve members.</Premise>
+  <Conclusion>The twelfth member can read music.</Conclusion>
+</Argument>
+
+The first is valid. Grant the premises and the conclusion is locked in. The second is not valid, and pointing that out is no criticism of it. The twelfth member might be the one who joined for the singing and never learned to read a stave. The premises make that unlikely. They do not make it impossible, and there is a real gap between those.
+
+What separates the two is the standard each is meant to meet.
+
+<Definition term="Deductive argument">
+An argument put forward as valid: one whose premises are meant to guarantee the conclusion, so that accepting the premises and rejecting the conclusion would be inconsistent. A deductive argument that fails its own standard is not a weak argument, it is an invalid one.
+</Definition>
+
+<Definition term="Inductive strength">
+The degree to which true premises would raise the probability of a conclusion without guaranteeing it. Inductive strength comes in degrees: an argument can be strong, moderate, or weak, and adding a premise can move it in either direction.
+</Definition>
+
+Two things follow from putting it this way. Deductive success is all or nothing, so there is no such thing as a nearly valid argument. Inductive success is a matter of degree, so there is no line above which an argument counts as inductively correct and below which it does not.
+
+## The distinction that people get wrong
+
+Older textbooks sometimes say that deduction goes from the general to the particular and induction from the particular to the general. That is not the distinction, and both halves of it fail.
+
+The choir argument above is deductive and runs from a general premise to a particular conclusion, which fits the slogan. But "Nadia can read music, so someone can read music" runs from particular to general and is valid. So does the argument from "these twelve are all the members, and each of them can read music" to "every member can read music", which is a complete enumeration and perfectly valid.
+
+Induction fails the other half just as badly. "The last four buses were late, so the next one will be late" runs from particular cases to a particular case and never touches a generalisation.
+
+The distinction is about what the arguer is claiming, not about the direction of travel. Deductive arguments claim a guarantee. Inductive arguments claim support short of a guarantee.
+
+<Aside title="A note on what an argument claims">
+Because the distinction turns on what is being claimed, it is possible to be unclear about which standard is in play, and possible to misjudge your own argument. Someone can offer an argument as deductive when it is invalid, in which case the right response is a counterexample. Someone can offer a piece of evidence as decisive when it is only suggestive, in which case the right response is to grant the support and deny the guarantee.
+
+Some authors handle borderline cases by classifying by the standard the argument is best evaluated against rather than the one its author had in mind. Nothing on this ladder turns on the choice.
+</Aside>
+
+## Why the gap exists at all
+
+There is a reason inductive arguments cannot be patched into valid ones, and it is worth seeing directly.
+
+<Definition term="Ampliative inference">
+An inference whose conclusion says more than its premises do, so that the conclusion could be false even if every premise is true. Every inductive inference is ampliative, and no valid argument is.
+</Definition>
+
+A valid argument never adds content. Whatever its conclusion says, the premises taken together have already ruled out every situation in which the conclusion fails. That is exactly why it cannot take you from truth to falsehood, and also why it cannot tell you anything the premises did not already settle. Validity is a way of moving truth around without risk and without gain.
+
+Ampliative inference is the opposite trade. The conclusion reaches past the premises, which is the only way to learn something new from evidence, and reaching past them is precisely what makes it possible to be wrong. There is no third option where you get the new content and the guarantee together.
+
+Judged by the deductive standard, then, every ampliative argument fails. This is why calling an inductive argument invalid is technically correct and completely useless. The word is doing no work, because failing to be valid is what ampliative arguments do by their nature.
+
+## Explanation as a reason to believe
+
+One kind of ampliative inference is common enough to deserve its own name.
+
+<Definition term="Abduction">
+An inference from a body of evidence to a hypothesis on the grounds that the hypothesis would explain the evidence better than the alternatives. Also called inference to the best explanation.
+</Definition>
+
+Your car will not start. The lights are dim, the radio is dead, and the engine turns over slowly and then not at all. You conclude the battery is flat. Nothing in the evidence entails a flat battery, and a bad starter motor or a loose earth strap could produce something similar. The flat battery accounts for all three symptoms at once, with one cause and no special pleading, and that is what makes it the inference to reach for.
+
+This form of reasoning does most of the work in the sciences and in ordinary diagnosis. It also carries obvious risks. Whether a hypothesis is the best explanation depends on which alternatives you happened to think of, and the best of a bad set is still bad. The criteria that make one explanation better than another, such as simplicity or scope or fit with what is already believed, are themselves contested.
+
+The name has some history worth being careful about. "Abduction" is due to C. S. Peirce, though what he meant by it was closer to the generation of a hypothesis worth testing than to a rule for accepting one. The phrase "inference to the best explanation" comes from Gilbert Harman's paper of that title in *The Philosophical Review*, volume 74 (1965), pages 88 to 95. The two labels are now used more or less interchangeably, and the epistemology ladder on this site takes the topic up properly.
+
+## The problem underneath
+
+Inductive arguments raise a question that logic cannot answer with its own tools: what entitles anyone to move from observed cases to unobserved ones at all?
+
+David Hume set the problem out in *An Enquiry Concerning Human Understanding* (1748), Section IV. Any defence of induction seems to need a premise saying that the unobserved resembles the observed. That premise is not provable by deduction, since its denial is consistent. And the obvious support for it is that this sort of reasoning has worked so far, which is itself an inductive argument and so assumes what was in question.
+
+This is a live problem, not a settled one, and it belongs to epistemology rather than to logic. Flagging it here is enough for now.
+
+## Why this ladder is about deduction
+
+Given that induction does more of the day-to-day work, it may look odd that the rest of this tier ignores it. The reason is practical.
+
+Validity depends only on form, and form can be checked mechanically. The next few articles build a small formal language and a procedure that decides, for any argument written in it, whether the argument is valid. The procedure never appeals to judgement and never asks what the sentences are about.
+
+Inductive strength has no such procedure. How much a body of evidence raises the probability of a hypothesis depends on the subject matter, on the background information, and on which alternatives are in play. There is a mathematics of probability that governs it, and there is no algorithm that reads an English argument and returns its strength.
+
+So the tier that follows is about the part of the subject that admits of exact answers. That is a choice about where to start, not a claim that the other part matters less.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on deduction, induction, and inductive strength.</li>
+  <li>David Hume, *An Enquiry Concerning Human Understanding* (1748), Section IV.</li>
+  <li>Gilbert Harman, "The Inference to the Best Explanation", *The Philosophical Review*, volume 74 (1965), pages 88 to 95.</li>
+  <li>Peter Lipton, *Inference to the Best Explanation*, 2nd edition, Routledge (2004).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Problem of Induction"](https://plato.stanford.edu/entries/induction-problem/) and ["Abduction"](https://plato.stanford.edu/entries/abduction/).</li>
+</FurtherReading>

@@ -203,6 +203,12 @@ export default async function ArticlePage({ params }: Params) {
       components: mdxComponents,
       options: {
         parseFrontmatter: true,
+        // next-mdx-remote v6 strips every JSX attribute expression by default,
+        // which is right for remote MDX and wrong here: the source is our own
+        // files in /content, and components like TruthTable take their data as
+        // arrays. Turning blockJS off leaves blockDangerousJS on, so eval,
+        // require, process and the constructor escapes are still refused.
+        blockJS: false,
         mdxOptions: {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeSlug, rehypeKatex],

@@ -1,0 +1,161 @@
+---
+title: Truth Tables
+subject: logic
+tier: beginner
+order: 5
+est_read_min: 10
+summary: Building the table for any formula, and reading validity off it
+prerequisites: ["validity-and-soundness", "statements-and-connectives"]
+introduces: ["truth table", "tautology", "contradiction", "contingency"]
+requires: ["proposition", "negation", "conjunction", "disjunction", "material conditional", "validity"]
+added: "2026-08-27"
+---
+
+Every connective in the previous article was defined by listing cases. That was not a teaching device. It is the whole content of the definitions, and it means the connectives can be chained: if the value of a compound depends only on the values of its parts, then the value of a compound built from compounds depends only on the values of the letters at the bottom. This article turns that observation into a procedure.
+
+## The construction
+
+<Definition term="Truth table">
+An exhaustive listing of the possible assignments of truth values to the letters in one or more formulas, with a column showing the value each formula takes under each assignment. A formula with $n$ distinct letters has $2^n$ rows.
+</Definition>
+
+The row count follows from counting. One letter can be true or false, so it takes two rows. A second letter doubles that to four, a third doubles it again to eight, and so on.
+
+The order of the rows is a convention, and keeping to it saves errors. The leftmost letter is true for the top half and false for the bottom half; the next letter alternates in blocks half that size; the rightmost letter alternates every row. For two letters that gives TT, TF, FT, FF, which is the order used throughout the last article.
+
+## Building a column
+
+Take the formula $\neg(P \land Q) \rightarrow (\neg P \lor \neg Q)$. It has two letters, so four rows.
+
+The way through is from the inside out. Compute the smallest parts first, then the parts built from those, and finish with the connective that applies to the whole formula last. Here that last connective is the arrow, because everything else sits inside one of its two sides.
+
+Start with the left side. It is a negation of a conjunction, so build the conjunction and then reverse it.
+
+<TruthTable
+  columns={["P", "Q", "P ∧ Q", "¬(P ∧ Q)"]}
+  rows={[
+    ["T", "T", "T", "F"],
+    ["T", "F", "F", "T"],
+    ["F", "T", "F", "T"],
+    ["F", "F", "F", "T"],
+  ]}
+  caption="The left side, built in two steps."
+/>
+
+Now the right side, which is a disjunction of two negations.
+
+<TruthTable
+  columns={["P", "Q", "¬P", "¬Q", "¬P ∨ ¬Q"]}
+  rows={[
+    ["T", "T", "F", "F", "F"],
+    ["T", "F", "F", "T", "T"],
+    ["F", "T", "T", "F", "T"],
+    ["F", "F", "T", "T", "T"],
+  ]}
+  caption="The right side, built from the two negations."
+/>
+
+The two sides now have a value in every row, so the arrow can be applied. A conditional is false only where its antecedent is true and its consequent false, and there is no such row here.
+
+<TruthTable
+  columns={["P", "Q", "¬(P ∧ Q)", "¬P ∨ ¬Q", "¬(P ∧ Q) → (¬P ∨ ¬Q)"]}
+  rows={[
+    ["T", "T", "F", "F", "T"],
+    ["T", "F", "T", "T", "T"],
+    ["F", "T", "T", "T", "T"],
+    ["F", "F", "T", "T", "T"],
+  ]}
+  caption="The finished column. Every row is true."
+/>
+
+Notice what the two middle columns show on their own. They match in every row, which means the two formulas cannot come apart: any situation making one true makes the other true. That is one of a pair of results usually named after Augustus De Morgan, and the tables prove it without any appeal to what $P$ and $Q$ are about.
+
+## Three kinds of formula
+
+The finished column above was true in every row. That is not typical, and it has a name.
+
+<Definition term="Tautology">
+A formula whose truth table column is true in every row. A tautology cannot be false, whatever the letters in it stand for.
+</Definition>
+
+<Definition term="Contradiction">
+A formula whose truth table column is false in every row. A contradiction cannot be true, whatever the letters in it stand for.
+</Definition>
+
+<Definition term="Contingency">
+A formula whose truth table column is true in at least one row and false in at least one row. Its value depends on how things stand, not on its form alone.
+</Definition>
+
+The plainest contradiction is $P \land \neg P$.
+
+<TruthTable
+  columns={["P", "¬P", "P ∧ ¬P"]}
+  rows={[["T", "F", "F"], ["F", "T", "F"]]}
+  caption="A contradiction: no row survives."
+/>
+
+Its negation, $\neg(P \land \neg P)$, is a tautology, and so is $P \lor \neg P$. Most formulas are neither. $P \land Q$ is true in one row of four and false in the other three, which makes it a contingency, and so are nearly all the sentences anyone actually asserts.
+
+These three categories are exhaustive and exclusive: every formula falls into exactly one of them, because a column either has a false row or does not, and either has a true row or does not.
+
+<Aside title="Three words that already have other jobs">
+"Contradiction" is used in ordinary logical talk for two claims that cannot both hold, as when someone says a witness contradicted himself. The technical sense here is narrower: a single formula whose column is false throughout. The two connect, since asserting both $P$ and $\neg P$ amounts to asserting the single formula $P \land \neg P$.
+
+"Tautology" in ordinary English means an empty repetition, as in "it is what it is". In logic it means only that the column is true throughout, and some tautologies are long enough to be surprising.
+</Aside>
+
+## Testing an argument
+
+The definition of validity refers to possible situations: an argument is valid when no possible situation makes the premises all true and the conclusion false. As far as the connectives are concerned, a possible situation is nothing more than an assignment of truth values to the letters. So the rows of a table are the situations, all of them, and validity becomes something you can look up.
+
+**To test an argument, build one table with a column for each premise and a column for the conclusion. Find the rows where every premise column is true. If the conclusion column is true in all of those rows, the argument is valid. If it is false in even one of them, that row is a counterexample and the argument is invalid.**
+
+Try it on a familiar pattern. The premises are $P \rightarrow Q$ and $P$; the conclusion is $Q$. Two letters, so four rows, and the columns for the two letters do double duty as the columns for $P$ and $Q$ wherever those appear alone.
+
+<TruthTable
+  columns={["P", "Q", "P → Q"]}
+  rows={[
+    ["T", "T", "T"],
+    ["T", "F", "F"],
+    ["F", "T", "T"],
+    ["F", "F", "T"],
+  ]}
+  caption="One table, three formulas: P, Q, and P → Q."
+/>
+
+The premises are the third column and the first. Both are true in row one only. In row one the conclusion column, the second, is also true. There is no row with true premises and a false conclusion, so the argument is valid.
+
+Now keep the same table and swap the roles. Let the premises be $P \rightarrow Q$ and $Q$, and the conclusion $P$. Those premises are both true in row one and in row three. Row three has $P$ false, so there is a situation making every premise true and the conclusion false. The argument is invalid, and row three is the counterexample, written out in full.
+
+That is the sprinkler argument from the article on validity, and the table has now settled in four lines what previously took a story about a groundskeeper. The pattern is common enough to have a name, and the next article gives it one.
+
+## Assuming the worst
+
+Eight rows is tolerable, sixteen is tedious, and there is a shortcut that often avoids the whole table. Instead of computing every row, assume the argument is invalid and see whether the assumption can be carried through.
+
+Take the premises $P \lor Q$, $P \rightarrow R$ and $Q \rightarrow R$, with conclusion $R$. Three letters means eight rows, and none of them need be written.
+
+Suppose some row makes all three premises true and the conclusion false. Then $R$ is false in that row. For $P \rightarrow R$ to be true with a false consequent, $P$ must be false. For $Q \rightarrow R$ to be true with a false consequent, $Q$ must be false. But then $P \lor Q$ has both parts false, so it is false, and the first premise is not true after all.
+
+The assumption collapsed, which means no such row exists, which means the argument is valid. Every step above was forced, so nothing was overlooked.
+
+When the assumption does not collapse, the shortcut is just as useful. Carrying it through produces an assignment of values to the letters that makes the premises true and the conclusion false, and that assignment is the counterexample. Either way the method delivers a verdict and, in the negative case, the evidence for it.
+
+The one thing to watch is a step that is not forced. If a premise is a disjunction that has to come out true, there may be more than one way to arrange that, and each branch has to be followed separately. Only when every branch collapses is the argument valid.
+
+## Where this runs out
+
+Truth tables settle every question in this part of logic. Whether a formula is a tautology, whether two formulas match in every row, whether an argument is valid: each is a matter of filling in a finite grid and looking at it, with no judgement required at any step. A method like that is rare and worth appreciating.
+
+It is also unusable past a certain size. The row count doubles with each new letter, so ten letters take 1,024 rows and twenty take more than a million. An argument with twenty distinct simple propositions in it is not exotic, and no one is filling in that table.
+
+The other limit is what the method can see. Truth tables read the connectives and nothing else. The argument "every mammal has a spine, whales are mammals, so whales have a spine" contains no connectives at all, so a table treats it as three unrelated letters and reports it invalid on the row where the first two are true and the third false. The argument is valid, and the validity lies inside the sentences, in the "every" and the "is", where this machinery cannot reach.
+
+Both limits are why the intermediate tier moves to proof systems and to a language that looks inside simple sentences. Neither limit takes anything away from what has been established here.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on truth tables for propositions and for arguments.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on symbolic logic.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on truth tables.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>

@@ -1,0 +1,113 @@
+---
+title: Validity and Soundness
+subject: logic
+tier: beginner
+order: 2
+est_read_min: 7
+summary: Why a valid argument can have a false conclusion, and what soundness adds
+prerequisites: ["what-is-an-argument"]
+introduces: ["validity", "soundness", "counterexample"]
+requires: ["argument", "premise", "conclusion"]
+added: "2026-08-27"
+---
+
+An argument can fail in two independent places. A premise can be false. Or the premises can be true and still not get you to the conclusion. The previous article ended on the second kind of failure, with true premises about hearts and a false conclusion about crocodiles. This article names the property that argument was missing.
+
+## Validity
+
+<Definition term="Validity">
+An argument is valid when there is no possible situation in which all of its premises are true and its conclusion is false. An argument that is not valid is invalid.
+</Definition>
+
+Read the definition slowly, because nearly every part of it is easy to misread.
+
+It does not say the premises are true. It says what would happen if they were. Validity is a claim about the relation between the premises and the conclusion, and you can settle it without knowing anything about whether the premises hold.
+
+It does not say the conclusion is true. It says the conclusion cannot be false *while the premises are all true*. Those are different claims, and the second is much weaker.
+
+"Possible situation" means logically possible: any way the world could consistently have been, not just any way it plausibly might be. A situation in which cats are amphibians is possible in the relevant sense. A situation in which some cats are both amphibians and not amphibians is not.
+
+Here is a valid argument with a false premise and a false conclusion:
+
+<Argument name="Penguins">
+  <Premise>Every bird can fly.</Premise>
+  <Premise>Penguins are birds.</Premise>
+  <Conclusion>Penguins can fly.</Conclusion>
+</Argument>
+
+The first premise is false and the conclusion is false. The argument is still valid, because there is no situation in which both premises hold and the conclusion fails. If every bird really could fly, and penguins really are birds, then penguins would fly. The argument is a working machine that has been fed bad input.
+
+## What validity does not rule out
+
+Take the two truth values a set of premises can have between them, and the two a conclusion can have. That gives four combinations. Validity rules out exactly one of them.
+
+**True premises, true conclusion.** "Every mammal has a four-chambered heart. Whales are mammals. So whales have four-chambered hearts." Valid.
+
+**False premise, false conclusion.** The penguin argument above. Valid.
+
+**False premise, true conclusion.** "Every mammal can fly. Bats are mammals. So bats can fly." The first premise is false, the conclusion is true, and the argument is valid.
+
+**True premises, false conclusion.** This is the one combination no valid argument can have. It is the definition, stated backwards.
+
+The fourth combination is also the only one that settles the question on its own. Finding true premises and a true conclusion tells you nothing: invalid arguments have that pattern all the time. "Some mammals live in the sea. Whales live in the sea. So whales are mammals" has true premises and a true conclusion and is invalid, which you can see by holding the form fixed and swapping in crocodiles.
+
+<Aside title="Two limiting cases">
+The definition has consequences that look wrong at first and are not.
+
+If an argument's premises contradict each other, there is no possible situation in which they are all true, so there is no possible situation in which they are all true and the conclusion is false. Every argument with contradictory premises comes out valid, whatever its conclusion says.
+
+If an argument's conclusion cannot possibly be false, then again no situation makes the premises true and the conclusion false, so the argument is valid whatever its premises say. "Grass is green, therefore every square has four sides" is valid.
+
+Both cases are valid and useless. They are the clearest sign that validity is a low bar, and that soundness is the thing you actually want.
+</Aside>
+
+## Counterexamples
+
+To show an argument is valid you have to rule out every situation of one kind. To show it is invalid you only have to produce one.
+
+<Definition term="Counterexample">
+A possible situation in which all of an argument's premises are true and its conclusion is false. An argument is invalid exactly when it has one.
+</Definition>
+
+Sometimes the situation is the actual world, which makes the work easy. The crocodile argument from the last article had true premises and a false conclusion as things actually stand, and that is a counterexample without any imagining required.
+
+More often the premises are not all true, so you have to describe a situation rather than point at one. Consider: "If it rained last night, the pitch is wet. The pitch is wet. So it rained last night." Imagine a night with no rain in which the groundskeeper ran the sprinklers. Both premises are true in that situation and the conclusion is false in it. The argument is invalid, and no amount of checking the weather will change that.
+
+The other standard technique is to keep the shape and change the subject matter. From the sprinkler argument, strip out the content:
+
+<Argument name="The shape of the sprinkler argument">
+  <Premise>If $P$ then $Q$.</Premise>
+  <Premise>$Q$.</Premise>
+  <Conclusion>$P$.</Conclusion>
+</Argument>
+
+Now fill it in with something transparently bad: "If Rome is in Japan, then Rome is in Asia. Rome is in Asia. So Rome is in Japan." Rome is in Europe, so the conclusion is false, and both premises are true (the first because its antecedent is false, a point the article on connectives will make properly). Any argument of this shape can be handled the same way.
+
+Strictly, a same-shape counterexample shows that *the shape* does not guarantee validity. An argument can occasionally be valid for reasons its visible form does not display, as with "this is a square, so this has four sides". Once we move to a formal language, where the form is all there is, the distinction stops mattering. Until then, when you kill an argument with a same-shape counterexample, the honest report is that its form does not carry it.
+
+## Soundness
+
+Validity is worth having and is not worth much on its own. What you want from an argument is a conclusion you can rely on, and for that you need the machine to work *and* the input to be true.
+
+<Definition term="Soundness">
+An argument is sound when it is valid and all of its premises are in fact true. An argument that is not sound is unsound.
+</Definition>
+
+A sound argument has a true conclusion, and this is not an extra assumption. Its premises are true, and validity rules out true premises with a false conclusion, so the conclusion is true. That single fact is the whole reason anyone cares about validity.
+
+Unsoundness comes in two flavours, and saying which one you mean is most of what a good objection does. An argument can be unsound because it is invalid, in which case you owe a counterexample. It can be unsound because a premise is false, in which case you owe a reason to think so and the argument's form is not in dispute at all.
+
+This also explains the division of labour on the rest of this site. Whether an argument is valid is a question about form, and logic can settle it mechanically, as the truth-table article will show. Whether its premises are true is a question about ethics, or physics, or history. Logic has nothing to say about that, and the ladders in the other subjects are where the work gets done.
+
+## Two words that get in the way
+
+In ordinary English "valid" means roughly "reasonable" or "worth taking seriously", and people say "that's a valid point" about a single claim. In logic, validity is a property of arguments only. A statement is never valid or invalid, and calling a premise valid is a category mistake rather than a compliment.
+
+"Sound" drifts the same way, usually meaning "sensible". Keep both words in their technical senses when you are doing this, and expect to translate when you read them elsewhere.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on validity, soundness and counterexamples.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on the basic concepts of argument.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Logical Consequence"](https://plato.stanford.edu/entries/logical-consequence/).</li>
+</FurtherReading>

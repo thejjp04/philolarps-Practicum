@@ -1,0 +1,102 @@
+---
+title: Common Formal Fallacies
+subject: logic
+tier: beginner
+order: 6
+est_read_min: 7
+summary: Affirming the consequent, denying the antecedent, and why they fail
+prerequisites: ["statements-and-connectives", "truth-tables"]
+introduces: ["affirming the consequent", "denying the antecedent", "formal fallacy"]
+requires: ["validity", "material conditional", "truth table"]
+added: "2026-08-27"
+---
+
+Two invalid patterns account for a large share of the bad reasoning anyone runs into, and both involve a conditional. They are worth naming, because a named pattern is one you can recognise in the wild, and because the truth-table method makes their failure exact rather than a matter of feel.
+
+## What makes a fallacy formal
+
+<Definition term="Formal fallacy">
+An invalid argument form: a pattern of premises and conclusion that fails to guarantee its conclusion no matter what is substituted into it. An argument commits a formal fallacy when it instantiates such a pattern and its arguer takes the pattern to secure the conclusion.
+</Definition>
+
+The word "formal" is doing real work there. A formal fallacy can be diagnosed with the content stripped out, by writing the argument as a schema and finding a row of a truth table where the premises hold and the conclusion fails. You never have to know what the argument is about.
+
+The other kind of fallacy is informal, and those are mistakes the form does not display. Attacking the person rather than the claim, or shifting the meaning of a word between premises, or treating the absence of evidence as evidence of absence: none of these shows up as a bad row in a table, because none of them is a matter of how the connectives are arranged. Informal fallacies belong to a different part of the subject and are handled by a different kind of scrutiny.
+
+Both patterns below are formal, and the tables that convict them run to four rows.
+
+## Affirming the consequent
+
+<Definition term="Affirming the consequent">
+The invalid form that takes a conditional and the truth of its consequent, and concludes the truth of its antecedent: from $P \rightarrow Q$ and $Q$, to $P$.
+</Definition>
+
+In English: "If the tap was left running, the floor is wet. The floor is wet. So the tap was left running."
+
+<TruthTable
+  columns={["P", "Q", "P → Q", "Q", "P"]}
+  rows={[
+    ["T", "T", "T", "T", "T"],
+    ["T", "F", "F", "F", "T"],
+    ["F", "T", "T", "T", "F"],
+    ["F", "F", "T", "F", "F"],
+  ]}
+  caption="Premises in the third and fourth columns, conclusion in the last. Row three has both premises true and the conclusion false."
+/>
+
+Row three is the counterexample and it is easy to describe: the tap was not left running, and the floor is wet anyway, because the dishwasher leaked. The first premise survives that situation untouched. It said what would follow from a running tap, and said nothing at all about what else might wet a floor.
+
+The pattern is tempting because a conditional is so often heard as though it ran in both directions. "If the tap was left running, the floor is wet" gets taken as though it also promised that a wet floor means a running tap. It promises no such thing. Making a claim in both directions requires the biconditional, and a speaker who wanted it would have had to say so.
+
+## Denying the antecedent
+
+<Definition term="Denying the antecedent">
+The invalid form that takes a conditional and the falsity of its antecedent, and concludes the falsity of its consequent: from $P \rightarrow Q$ and $\neg P$, to $\neg Q$.
+</Definition>
+
+In English: "If the tap was left running, the floor is wet. The tap was not left running. So the floor is not wet."
+
+<TruthTable
+  columns={["P", "Q", "P → Q", "¬P", "¬Q"]}
+  rows={[
+    ["T", "T", "T", "F", "F"],
+    ["T", "F", "F", "F", "T"],
+    ["F", "T", "T", "T", "F"],
+    ["F", "F", "T", "T", "T"],
+  ]}
+  caption="Again the third and fourth columns are the premises and the last is the conclusion. Row three convicts it."
+/>
+
+Row three is the same situation as before. No running tap, wet floor anyway. The two fallacies fail on the same row for the same underlying reason, which is that a conditional rules out exactly one combination and leaves the other three open.
+
+That single point is worth stating on its own, because it explains everything in this article. $P \rightarrow Q$ says: not the case that $P$ holds and $Q$ fails. It says nothing whatever about a situation where $P$ fails, and both fallacies work by extracting a claim about such a situation.
+
+## Two things a fallacy does not show
+
+**It does not show the conclusion is false.** The tap really might have been left running. What the counterexample establishes is that the premises given do not settle the matter, so the conclusion is unsupported rather than refuted. Someone who replies to a bad argument by asserting the opposite conclusion has overreached in the same way the original arguer did.
+
+This matters in practice, because arguments for true conclusions are fallacious all the time. Pointing out the fallacy is a complete answer to the argument and no answer at all to the claim.
+
+**It does not show the arguer meant the invalid form.** People compress. Someone who says "if it rained, the pitch is wet, and the pitch is wet, so it rained" may be relying on an unstated premise that nothing else could have wet the pitch. With that premise added, the argument is valid, and the honest report is that the argument as stated is invalid and that a suppressed premise would repair it. Whether the suppressed premise is true is then the live question.
+
+<Aside title="When the conditional really does run both ways">
+Ordinary speech often uses "if" where "if and only if" is meant. A parent who says "if you finish your homework, you can go out" is usually promising both directions, and a child who finishes and is kept in has a legitimate complaint.
+
+Where the two-way reading is genuinely intended, the argument from the consequent back to the antecedent is valid, because the premise being used is a biconditional rather than a conditional. This is not a loophole in the fallacy. It is a case where the fallacy is not being committed, because the premise is not the one the fallacy takes as input.
+
+The practical upshot is to settle which claim is on the table before ruling on the argument. A one-way conditional is what the arrow means and what a bare "if" says.
+</Aside>
+
+## Recognising them at speed
+
+Both fallacies start from a conditional and a second premise about one of its two sides. Which side, and whether affirmed or denied, decides the verdict.
+
+Affirming the antecedent is valid. Denying the consequent is valid. Affirming the consequent is not, and denying the antecedent is not. The two valid combinations have names of their own, and the next article introduces them along with two further forms.
+
+A useful habit when you meet an argument of this shape is to try building the counterexample directly rather than reasoning about the pattern. Ask what would happen if the antecedent were false and the consequent true. If the argument's premises are both satisfied in that situation and its conclusion is not, the diagnosis is finished, and it took one line.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on argument forms and on the informal fallacies.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on fallacies and on symbolic logic.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Fallacies"](https://plato.stanford.edu/entries/fallacies/).</li>
+</FurtherReading>

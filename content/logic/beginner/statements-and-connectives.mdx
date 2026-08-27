@@ -1,0 +1,171 @@
+---
+title: Statements and Connectives
+subject: logic
+tier: beginner
+order: 4
+est_read_min: 9
+summary: Negation, conjunction, disjunction, the conditional, and the biconditional
+prerequisites: ["what-is-an-argument"]
+introduces: ["proposition", "negation", "conjunction", "disjunction", "material conditional", "biconditional", "truth function"]
+requires: ["argument"]
+added: "2026-08-27"
+---
+
+So far the arguments on this ladder have been written in English, and English is a poor instrument for checking them. It is ambiguous, it carries implications that are not part of what is said, and the same claim can be phrased twenty ways. This article starts building something narrower: a handful of symbols with fixed meanings, precise enough that the value of a whole sentence can be computed from the values of its parts.
+
+## What the letters stand for
+
+Take two sentences: "The kettle is boiling" and "La bouilloire bout". They are different strings of words in different languages. What they say is the same thing, and if one of them is true then so is the other.
+
+<Definition term="Proposition">
+What a declarative sentence says: the thing that is true or false. Two sentences express the same proposition when they say the same thing, and one sentence can express different propositions on different occasions of use.
+</Definition>
+
+That last clause matters. "It is raining here" expresses a different proposition in Lisbon than in Oslo, and a different one today than last Tuesday. When a sentence is written down as a premise, one particular proposition is meant, and the same one has to stay fixed for the whole argument.
+
+Some writers avoid the word and speak of statements or of sentences instead, on the grounds that propositions look like abstract objects and it is not obvious that there are any. That is a genuine dispute and it belongs to metaphysics. Nothing in this tier depends on how it comes out. What is needed here is only that there are things that are true or false, and that the same one can be said twice.
+
+From now on, capital letters stand for propositions. $P$ might stand for "the kettle is boiling" and $Q$ for "the lid is on". A letter used this way is not an abbreviation for the sentence; it holds the place of whatever that sentence says. Choose the letters at the start, keep them fixed, and never reuse one for a second proposition in the same argument.
+
+A proposition written with a single letter is **simple**: it has no other proposition inside it. A proposition built out of others using the connectives below is **compound**.
+
+## Truth functions
+
+Some ways of joining sentences have a useful property. Once you know whether the parts are true, nothing else is needed to settle the whole.
+
+<Definition term="Truth function">
+A way of building a compound proposition whose truth value is fixed entirely by the truth values of its parts. Change the parts for others with the same truth values, and the value of the whole cannot change.
+</Definition>
+
+Not every connecting phrase in English works like this. Compare two sentences:
+
+> The window broke and the ball hit it.
+
+> The window broke because the ball hit it.
+
+Suppose both parts are true. The first sentence is then true, and that follows from the parts alone. The second might still be false: the window may have broken a minute earlier when the branch came down, and the ball hit an already broken window. Knowing the parts are true leaves "because" undecided, so "because" is not a truth function. The same goes for "before", for "it is possible that", and for "Priya believes that".
+
+Five truth functions are enough for this tier. Each gets a symbol, and each is defined by nothing more than a table of cases.
+
+## Negation
+
+<Definition term="Negation">
+The truth function written $\neg P$ and read "not $P$": true when $P$ is false, and false when $P$ is true.
+</Definition>
+
+<TruthTable
+  columns={["P", "¬P"]}
+  rows={[["T", "F"], ["F", "T"]]}
+  caption="Negation reverses the value, and two negations return it."
+/>
+
+Negation attaches to one proposition rather than joining two. In English it appears as "not", "it is not the case that", "it is false that", and sometimes as a prefix: "unhappy", "unmarried", "impossible".
+
+Be careful with the prefixed ones. "Priya is unhappy" is not the negation of "Priya is happy" in the sense the symbol has, because a person can be neither happy nor unhappy. $\neg P$ is true in every case where $P$ fails, with no middle ground allowed, so it must be read as "it is not the case that Priya is happy".
+
+## Conjunction
+
+<Definition term="Conjunction">
+The truth function written $P \land Q$ and read "$P$ and $Q$": true when both parts are true, and false otherwise.
+</Definition>
+
+<TruthTable
+  columns={["P", "Q", "P ∧ Q"]}
+  rows={[
+    ["T", "T", "T"],
+    ["T", "F", "F"],
+    ["F", "T", "F"],
+    ["F", "F", "F"],
+  ]}
+  caption="Conjunction: one false part is enough to sink the whole."
+/>
+
+English marks conjunction with more than "and". "But", "although", "yet", "however", "while", "moreover" and a plain semicolon all join two claims and assert both. "The talk was short but useful" says the talk was short and the talk was useful, and it also conveys a contrast between the two. The symbol keeps the first part and drops the second, because contrast is not a matter of truth values.
+
+Order is dropped as well, and this one costs something. "They married and had a child" and "They had a child and married" describe different sequences of events, and each is true in a case where the other is false. Rendered as $M \land C$ and $C \land M$, both come out with the same value in every case. Where the order of events is part of what is at issue, symbolising with $\land$ loses it, and the loss has to be noticed rather than hidden.
+
+## Disjunction
+
+<Definition term="Disjunction">
+The truth function written $P \lor Q$ and read "$P$ or $Q$": true when at least one part is true, and false only when both are false.
+</Definition>
+
+<TruthTable
+  columns={["P", "Q", "P ∨ Q"]}
+  rows={[
+    ["T", "T", "T"],
+    ["T", "F", "T"],
+    ["F", "T", "T"],
+    ["F", "F", "F"],
+  ]}
+  caption="Disjunction is inclusive: the first row is true, not false."
+/>
+
+The first row is where English and the symbol come apart. A waiter who says "the meal comes with soup or salad" will not be pleased if you take both, so that "or" excludes the case where both hold. A form that says "applicants who hold a degree or five years of experience may apply" plainly means to admit people who have both.
+
+The symbol is always the inclusive one. That choice is a convention, and it is the useful one because the exclusive reading can be built from the pieces already available. "$P$ or $Q$ but not both" comes out as
+
+$$(P \lor Q) \land \neg (P \land Q)$$
+
+whereas going the other way, defining inclusive from exclusive, takes more machinery. When you translate an English "or", decide which reading is meant and write the longer formula if the exclusive one is.
+
+## The conditional
+
+<Definition term="Material conditional">
+The truth function written $P \rightarrow Q$: false in the single case where $P$ is true and $Q$ is false, and true in every other case. $P$ is the antecedent and $Q$ the consequent.
+</Definition>
+
+<TruthTable
+  columns={["P", "Q", "P → Q"]}
+  rows={[
+    ["T", "T", "T"],
+    ["T", "F", "F"],
+    ["F", "T", "T"],
+    ["F", "F", "T"],
+  ]}
+  caption="One false row. A false antecedent makes the whole conditional true."
+/>
+
+This is the connective that causes trouble, and the trouble is worth stating now rather than later.
+
+The bottom two rows say that any conditional with a false antecedent is true. So "if the moon is made of cheese, then Lisbon is in Portugal" is true, and so is "if the moon is made of cheese, then Lisbon is in Japan". Neither sentence sounds true. Neither sounds false either, so much as beside the point, and the material conditional has no way of registering that.
+
+Notice the shape of the table matches one thing about English "if" exactly. A promise of the form "if you finish the work, I will pay you" is broken in exactly one circumstance: you finish and I do not pay. If you do not finish, the promise is not broken, whatever I do about the money. The material conditional is that pattern of broken and unbroken, generalised, with the case of a false antecedent counted as not broken and therefore true.
+
+Whether that is the right treatment of English "if" is a serious question and not one that this tier settles. The article on translation returns to it. For now, the definition is the table, and the table is all there is.
+
+## The biconditional
+
+<Definition term="Biconditional">
+The truth function written $P \leftrightarrow Q$ and read "$P$ if and only if $Q$": true when the two parts have the same truth value, and false when they differ.
+</Definition>
+
+<TruthTable
+  columns={["P", "Q", "P ↔ Q"]}
+  rows={[
+    ["T", "T", "T"],
+    ["T", "F", "F"],
+    ["F", "T", "F"],
+    ["F", "F", "T"],
+  ]}
+  caption="The biconditional asserts that the two sides match."
+/>
+
+In print this often appears as "if and only if", abbreviated "iff". In speech it hides inside phrases like "exactly when", "just in case", and "precisely if". Definitions in mathematics are usually biconditionals even when written with a bare "if": "a number is even if it is divisible by two" is meant as a claim in both directions.
+
+<Aside title="The main confusion to avoid">
+$P \rightarrow Q$ and $P \leftrightarrow Q$ differ in one row, the third, where $P$ is false and $Q$ is true. The conditional counts that case as true; the biconditional counts it as false.
+
+Reading a conditional as though it were a biconditional is the single most common mistake in this part of logic, and two named fallacies come out of it. "If it rained, the pitch is wet" does not say the pitch is wet only if it rained. A later article gives those fallacies their names.
+</Aside>
+
+## What has been built
+
+Five symbols, each fixed by a table, and a stock of letters standing for simple propositions. That is the whole vocabulary. Anything else is a matter of putting these together, and the next article shows how to compute the value of any combination and how to use that to test an argument.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on symbols and translation.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on symbolic logic.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on truth functions and conditionals.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Logic of Conditionals"](https://plato.stanford.edu/entries/logic-conditionals/).</li>
+</FurtherReading>

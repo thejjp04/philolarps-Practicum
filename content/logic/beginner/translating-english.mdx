@@ -1,0 +1,158 @@
+---
+title: Translating English into Symbols
+subject: logic
+tier: beginner
+order: 8
+est_read_min: 11
+summary: Where ordinary English and the truth-functional connectives come apart
+prerequisites: ["statements-and-connectives", "truth-tables"]
+introduces: ["scope", "translation key", "main connective"]
+requires: ["proposition", "conjunction", "disjunction", "material conditional", "biconditional", "negation"]
+added: "2026-08-27"
+---
+
+Everything the previous articles established works on formulas. Arguments in the world arrive as English. The step between the two is where nearly all the errors happen, and unlike the rest of this tier it is not mechanical: no procedure takes an English sentence and returns its symbolisation. What there is instead is a set of conventions, a stock of recurring patterns, and a short list of phrases that reliably catch people out.
+
+## Fixing the letters
+
+<Definition term="Translation key">
+An explicit list pairing each capital letter with the English proposition it stands for. The key is written down before any translating begins and does not change while the argument is being handled.
+</Definition>
+
+A key looks like this:
+
+> $B$: the seal is broken
+> $C$: the coolant failed
+> $S$: the sample is spoiled
+
+Three rules govern it. Each letter stands for a proposition, so what follows the colon must be a complete declarative sentence and not a phrase like "the seal" or "broken". Each letter stands for one proposition throughout, so a letter used for "the sample is spoiled" in a premise cannot quietly become "the sample was spoiled yesterday" in the conclusion. And the propositions in the key are the simple ones, with no connective left inside them: if a candidate entry contains a "not" or an "or", it should be split.
+
+That last rule is the one that decides how much detail the symbolisation captures. Assigning one letter to a whole compound sentence is not wrong, and it throws away the structure that the connectives were meant to expose. Break the sentence down as far as the connectives allow, and no further.
+
+## Which connective governs
+
+<Definition term="Main connective">
+The connective in a formula that applies last, so that the rest of the formula falls inside one or another of its parts. Every formula that is not a single letter has exactly one.
+</Definition>
+
+In $\neg P \lor Q$ the main connective is the disjunction, because the negation reaches only as far as $P$. In $\neg(P \lor Q)$ it is the negation, because the brackets put the whole disjunction inside it. The two formulas share every symbol and say different things.
+
+Finding the main connective is the first move in reading a formula and the last move in writing one. Working from English, ask what the sentence as a whole asserts. If it asserts a conditional relation, the arrow is the main connective and the two sides are translated separately. If it denies something, negation is the main connective and the thing denied gets translated and then bracketed.
+
+<Definition term="Scope">
+The portion of a formula that a given connective applies to. Brackets fix scope, and a formula whose brackets are missing may have no determinate meaning at all.
+</Definition>
+
+Consider the English sentence "the seal is broken and the coolant failed, or the sample was mishandled". Dropped straight into symbols it becomes $B \land C \lor M$, which is not a formula at all: it does not say which connective governs. Two readings are available and they differ.
+
+$(B \land C) \lor M$ says one of two things happened, either a double equipment failure or mishandling. It is true when $M$ alone is true.
+
+$B \land (C \lor M)$ says the seal was definitely broken, and in addition at least one of the other two things happened. It is false when $B$ is false.
+
+English resolves ambiguities of this kind with commas, with intonation, and with context, and it resolves them imperfectly. Brackets resolve them completely, which is the point of having them. When a sentence is genuinely ambiguous, the right response is to say so and to give both readings rather than to pick one and move on.
+
+## The reliable cues
+
+Most English connecting words map onto a symbol without incident.
+
+Conjunction is signalled by "and", "but", "although", "yet", "however", "while", "moreover", "still", and by a semicolon joining two clauses. All of these assert both parts, and the ones that also convey contrast lose the contrast in translation.
+
+Disjunction is signalled by "or" and by "either ... or". Both go to $\lor$ unless the exclusive reading is clearly meant, in which case the longer formula from the connectives article is needed.
+
+Negation is signalled by "not", "it is not the case that", "it is false that", and by "no" and "never" in sentences that are otherwise simple.
+
+The biconditional is signalled by "if and only if", by "iff" in print, and by "exactly when", "just in case", and "precisely when".
+
+The conditional is where the trouble starts, and it needs its own section.
+
+## Which side of the arrow
+
+Four English forms all produce a conditional, and they do not all put the same clause in front.
+
+**"If $A$, then $B$" and "if $A$, $B$"** give $A \rightarrow B$. The clause after "if" is the antecedent. This is the base case and it causes no difficulty.
+
+**"$B$ if $A$"** also gives $A \rightarrow B$. The word order has reversed and the meaning has not: "the sample is spoiled if the seal is broken" says the same as "if the seal is broken, the sample is spoiled". Whatever "if" is attached to is the antecedent, wherever it appears in the sentence.
+
+**"$A$ only if $B$"** gives $A \rightarrow B$, with $A$ in front. This is the one that catches people, because the antecedent is no longer the clause next to "if". "The sample is spoiled only if the seal is broken" says that a broken seal is required for spoiling, so finding the sample spoiled tells you the seal was broken. In symbols, $S \rightarrow B$.
+
+Test it against a case where the answer is obvious. "You can vote only if you are registered." That does not promise that every registered person votes, so it is not $R \rightarrow V$. It says being registered is required, so voting implies registration: $V \rightarrow R$. The clause after "only if" is the consequent.
+
+**"$A$ unless $B$"** gives $A \lor B$, equivalently $\neg B \rightarrow A$. "The fee is due unless a waiver is granted" says that if no waiver is granted, the fee is due, and it leaves open what happens when a waiver is granted. Treating "unless" as $\lor$ is the quicker route and the two come to the same thing, which a four-row table confirms.
+
+Some speakers use "unless" to mean "if and only if not", in which case the waiver would guarantee no fee. That is a stronger claim than the words require, and where it is meant it should be written out as a biconditional rather than assumed.
+
+<Aside title="Necessary and sufficient">
+The same distinction appears in the vocabulary of conditions, and it is worth lining the two up.
+
+To say $A$ is a **sufficient** condition for $B$ is to say that $A$ holding is enough for $B$: $A \rightarrow B$. Rain is sufficient for the pavement being wet.
+
+To say $A$ is a **necessary** condition for $B$ is to say that $B$ cannot hold without $A$: $B \rightarrow A$. Oxygen is necessary for combustion, so if something is burning, there is oxygen.
+
+Notice that "only if" states a necessary condition, which is why it puts its clause on the right of the arrow. And to say $A$ is necessary and sufficient for $B$ is to assert both directions, which is the biconditional.
+
+The arrow always runs from the sufficient condition to the necessary one. When a sentence has you unsure which way it points, ask which side could not fail while the other held, and put that side at the arrowhead.
+</Aside>
+
+## Where the negation lands
+
+Two English phrases put a negation in places that are easy to misplace.
+
+**"Neither $A$ nor $B$"** denies both, giving $\neg A \land \neg B$. It is also correctly written $\neg(A \lor B)$, and the tables for those two match in every row, which is the other of the two De Morgan results.
+
+**"Not both $A$ and $B$"** denies only the combination, giving $\neg(A \land B)$. It leaves open that one of them holds. "You may not have both the soup and the salad" is not a refusal of lunch.
+
+The pair to keep apart is $\neg(A \land B)$ and $\neg A \land \neg B$. The first says at least one fails; the second says both fail. The first is true in three of four rows and the second in one, so they are a long way from equivalent, and English marks the difference only by where the "not" sits.
+
+A general habit helps here. When a negation applies to a compound, translate the compound first, then wrap it in brackets, then put the negation in front. Building it in that order makes the scope error hard to commit.
+
+## Where the arrow and the word "if" come apart
+
+The material conditional is defined by its table, and the table has consequences that no ordinary use of "if" would license. These are usually filed under the name "the paradoxes of material implication", and they are not paradoxes so much as places where the approximation shows.
+
+A conditional with a false antecedent is true. So "if the moon is made of cheese, then Lisbon is in Portugal" comes out true, and so does "if the moon is made of cheese, then Lisbon is in Japan". Both sound wrong, and they sound wrong in the same way: neither says anything connecting its two halves.
+
+A conditional with a true consequent is true. So "if the moon is made of cheese, then two plus two is four" is true, and so is "if you read this article, then two plus two is four".
+
+Behind both is a single fact. The arrow registers no connection between antecedent and consequent. It reports only that a certain combination of values does not occur. Ordinary conditionals are usually asserted on the strength of some link, causal or evidential or definitional, and the arrow cannot represent a link.
+
+Counterfactual conditionals show the gap most sharply. "If Napoleon had won at Waterloo, Britain would have been invaded" and "if Napoleon had won at Waterloo, Britain would have been unaffected" have the same false antecedent, so as material conditionals both are true. At most one of them is actually right. Counterfactuals are not material conditionals, and translating them with the arrow is a mistake rather than an approximation.
+
+Whether ordinary indicative conditionals are material conditionals is a genuine and unresolved dispute. There are well-known arguments on both sides, and the topic sits at the boundary of logic and the philosophy of language. What is safe to say at this level is narrower. The arrow captures one thing about "if" exactly, which is that a conditional is broken by a true antecedent with a false consequent, and it captures nothing else. Use it, and notice when what you needed was the part it does not capture.
+
+## A worked translation
+
+Take three sentences.
+
+> The visa is granted only if the application is complete and the fee is paid. The fee has not been paid, unless the sponsor covered it. The sponsor did not cover it.
+
+Start with the key. Four simple propositions are in play.
+
+> $V$: the visa is granted
+> $C$: the application is complete
+> $F$: the fee is paid
+> $S$: the sponsor covered the fee
+
+Now the first sentence. Its main connective is the conditional, signalled by "only if", and the clause before "only if" goes on the left. The clause after it is itself a conjunction, so it is translated separately and bracketed: $V \rightarrow (C \land F)$.
+
+The second sentence is an "unless", so it becomes a disjunction of the two parts. The first part is a negation, "the fee has not been paid", so it enters as $\neg F$. That gives $\neg F \lor S$.
+
+The third is a plain negation: $\neg S$.
+
+The pieces are now in a form the previous article can work on. From $\neg F \lor S$ and $\neg S$, disjunctive syllogism gives $\neg F$. The table for conjunction says that a conjunction with a false part is false, so $C \land F$ is false. From $V \rightarrow (C \land F)$ together with the falsity of its consequent, modus tollens gives $\neg V$. The visa was not granted, and the conclusion of the application's completeness never came into it.
+
+Notice how much of that work was done in the translation rather than in the reasoning. Getting "only if" onto the correct side of the arrow, and getting the negation inside the disjunction rather than around it, determined the answer. The three rule applications afterwards were routine.
+
+## What to check before you trust a symbolisation
+
+Read the formula back into English and compare it with the original sentence. A symbolisation that reads back as something the speaker did not say is wrong however carefully it was built.
+
+Look for a case where the two differ. If you can describe a situation in which the English sentence is true and the formula false, or the other way round, the translation has lost something, and it is worth knowing what.
+
+Ask whether the difference matters for the argument at hand. Some losses are harmless: the contrast in "but", or the order of events in "and", often play no part in whether the argument goes through. Others are fatal, and a counterfactual translated with an arrow is the standard example. The skill being built here is not mechanical accuracy but knowing which losses you can afford.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on symbols and translation.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on symbolic language.</li>
+  <li>Dorothy Edgington, "On Conditionals", *Mind*, volume 104 (1995), pages 235 to 329.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Indicative Conditionals"](https://plato.stanford.edu/entries/conditionals/).</li>
+</FurtherReading>

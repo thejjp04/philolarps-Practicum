@@ -1,0 +1,131 @@
+---
+title: Basic Inference Rules
+subject: logic
+tier: beginner
+order: 7
+est_read_min: 9
+summary: Modus ponens, modus tollens, hypothetical syllogism, disjunctive syllogism
+prerequisites: ["statements-and-connectives", "truth-tables"]
+introduces: ["modus ponens", "modus tollens", "hypothetical syllogism", "disjunctive syllogism"]
+requires: ["material conditional", "disjunction", "negation", "validity"]
+added: "2026-08-27"
+---
+
+A truth table can decide any argument in this fragment of logic, and for anything longer than a few letters it is the wrong tool. What people actually do is take a small stock of forms known to be valid and put them end to end, so that a long argument becomes a sequence of short steps each of which is beyond dispute. This article establishes four of those forms.
+
+Each one gets checked once, here, by the methods of the previous articles. After that it can be used without rechecking, which is the entire point of having a stock of them.
+
+## Modus ponens
+
+<Definition term="Modus ponens">
+The valid form that takes a conditional together with its antecedent and yields its consequent: from $P \rightarrow Q$ and $P$, infer $Q$.
+</Definition>
+
+<Argument name="Modus ponens">
+  <Premise>If the seal is broken, the sample is spoiled.</Premise>
+  <Premise>The seal is broken.</Premise>
+  <Conclusion>The sample is spoiled.</Conclusion>
+</Argument>
+
+The check takes one line, using the shortcut from the truth-table article. Suppose some situation makes both premises true and the conclusion false. Then $Q$ is false and $P$ is true, which is exactly the combination that makes $P \rightarrow Q$ false. So the first premise is not true after all, and no such situation exists.
+
+The Latin name is short for *modus ponendo ponens*, the mode that affirms by affirming: affirm the antecedent, and you may affirm the consequent. It is worth holding on to the phrase, because the contrast with the next form lives in the Latin.
+
+## Modus tollens
+
+<Definition term="Modus tollens">
+The valid form that takes a conditional together with the denial of its consequent and yields the denial of its antecedent: from $P \rightarrow Q$ and $\neg Q$, infer $\neg P$.
+</Definition>
+
+<Argument name="Modus tollens">
+  <Premise>If the seal is broken, the sample is spoiled.</Premise>
+  <Premise>The sample is not spoiled.</Premise>
+  <Conclusion>The seal is not broken.</Conclusion>
+</Argument>
+
+Same method. Suppose a situation makes the premises true and the conclusion false. The conclusion $\neg P$ being false means $P$ is true. The second premise $\neg Q$ being true means $Q$ is false. True antecedent with false consequent makes the first premise false, contradicting the supposition.
+
+*Modus tollendo tollens* is the mode that denies by denying, and the denial has to fall on the consequent. Deny the antecedent instead and you get the fallacy of the previous article. The two arguments look alike on the page and differ entirely in what they establish, so it is worth being deliberate about which side of the arrow the second premise is talking about.
+
+This form does most of the work whenever a claim gets tested against the world. A hypothesis predicts something; the prediction fails; the hypothesis goes. Whether the discarded thing is really the hypothesis, rather than one of the background assumptions needed to derive the prediction, is a question the epistemology ladder takes up.
+
+## Hypothetical syllogism
+
+<Definition term="Hypothetical syllogism">
+The valid form that chains two conditionals sharing a middle term: from $P \rightarrow Q$ and $Q \rightarrow R$, infer $P \rightarrow R$.
+</Definition>
+
+<Argument name="Hypothetical syllogism">
+  <Premise>If the seal is broken, the sample is spoiled.</Premise>
+  <Premise>If the sample is spoiled, the run has to be repeated.</Premise>
+  <Conclusion>If the seal is broken, the run has to be repeated.</Conclusion>
+</Argument>
+
+Three letters means eight rows, and the shortcut again avoids all of them. Suppose the conclusion $P \rightarrow R$ is false. Then $P$ is true and $R$ is false. For the first premise to be true with $P$ true, $Q$ must be true. For the second premise to be true with $Q$ true, $R$ must be true. But $R$ is false, so the premises cannot both hold in that situation.
+
+Two features of this form are worth noticing. Its conclusion is itself a conditional, so it does not tell you that anything is the case; it hands you a new conditional to use later. And it chains indefinitely, which is what lets a long argument be assembled out of links.
+
+<Aside title="A caution about longer chains">
+The form is valid for the material conditional, which is what the arrow means and what the check above establishes. Conditionals in ordinary English do not always behave this way, and chains are where the difference shows.
+
+Consider: if I strike the match, it lights. If the match is soaked in water and I strike it, I strike it. Chaining those gives: if the match is soaked in water and I strike it, it lights. Every step looks like a legitimate link and the conclusion is false. Cases of this kind are why the logic of English conditionals is a live research area rather than a settled matter.
+
+Inside the formal language nothing is wrong, because the arrow is defined by its table and the table validates the chain. The lesson is about translation, which the next article takes up: the argument above goes astray in the move from English "if" to $\rightarrow$, not in the chaining.
+</Aside>
+
+## Disjunctive syllogism
+
+<Definition term="Disjunctive syllogism">
+The valid form that takes a disjunction together with the denial of one disjunct and yields the other: from $P \lor Q$ and $\neg P$, infer $Q$.
+</Definition>
+
+<Argument name="Disjunctive syllogism">
+  <Premise>Either the seal is broken or the coolant failed.</Premise>
+  <Premise>The seal is not broken.</Premise>
+  <Conclusion>The coolant failed.</Conclusion>
+</Argument>
+
+The check: suppose the premises are true and $Q$ false. From $\neg P$ true, $P$ is false. Both disjuncts false makes $P \lor Q$ false, contradicting the first premise.
+
+Note what the check did not need. It did not need the disjunction to be exclusive. The inclusive reading, the one the symbol has, allows the case where both disjuncts hold, and ruling out $P$ still leaves $Q$ standing whether or not both could have held. Disjunctive syllogism is valid on the weaker reading, which is why it is safe to use on any English "or" at all.
+
+Its Latin name is *modus tollendo ponens*, the mode that affirms by denying, which fits: deny one side and you may affirm the other.
+
+**The neighbouring form is not valid.** From $P \lor Q$ and $P$, nothing follows about $\neg Q$. On the inclusive reading, row one of the disjunction table has both parts true, and that row makes both premises true and $\neg Q$ false. "Either the seal is broken or the coolant failed. The seal is broken. So the coolant did not fail." Both could have gone wrong at once, and the premises leave that open.
+
+If the English "or" was genuinely exclusive, the argument is repaired by making the exclusivity a premise rather than smuggling it into the "or". Write the second half explicitly, as $\neg(P \land Q)$, and the inference goes through.
+
+## Putting them together
+
+Here is a small argument that no single rule settles.
+
+<Argument name="Four steps">
+  <Premise>Either the seal is broken or the coolant failed.</Premise>
+  <Premise>If the coolant failed, the log shows a temperature spike.</Premise>
+  <Premise>The log shows no temperature spike.</Premise>
+  <Premise>If the seal is broken, the sample is spoiled.</Premise>
+  <Conclusion>The sample is spoiled.</Conclusion>
+</Argument>
+
+Write $B$ for the seal being broken, $C$ for the coolant failing, $L$ for the log showing a spike, and $S$ for the sample being spoiled. The premises are $B \lor C$, $C \rightarrow L$, $\neg L$, and $B \rightarrow S$.
+
+From the second and third premises, modus tollens gives $\neg C$. That is not yet the conclusion, and it is progress: it is a new line, established, available to be used.
+
+From the first premise and $\neg C$, disjunctive syllogism gives $B$. The rule as stated above denies the left disjunct, and denying the right one works the same way, since a disjunction says the same thing whichever order its parts are written in.
+
+From the fourth premise and $B$, modus ponens gives $S$, which is the conclusion.
+
+Four letters would have made a sixteen-row table. Three rule applications did the same work, and each one was checked once and for all further back in this article. That trade is what a proof system formalises, and the intermediate tier builds one.
+
+## What this is not
+
+The four forms here are not a complete set. There are valid arguments in this fragment of logic that no chain of these four will reach, and there are further standard rules covering conjunction, disjunction and negation that a full system needs. A system that can reach every valid argument is a real achievement and is not something to take for granted; establishing it is a piece of metatheory that the advanced tier handles.
+
+There is also no claim here that reasoning in fact proceeds by applying named rules. People reason quickly and mostly without noticing steps. The rules are a standard for checking a piece of reasoning after the fact, which is a different job from describing how it was produced.
+
+<FurtherReading>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on the rules of implication.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on methods of deduction.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on conditionals and validity.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
