@@ -204,7 +204,7 @@ export function MusicProvider({ children }: { children: ReactNode }) {
      costs nothing while no station is playing. */
   useEffect(() => {
     const root = document.documentElement;
-    if (station) root.style.setProperty("--player-height", "76px");
+    if (station) root.style.setProperty("--player-height", "66px");
     else root.style.removeProperty("--player-height");
     return () => {
       root.style.removeProperty("--player-height");

@@ -15,6 +15,8 @@ export type NavSubject = {
   slug: string;
   name: string;
   href: string;
+  /** The one line from the curriculum. Used by the tour, so it is not rewritten. */
+  oneLine: string;
   counts: Record<Tier, number>;
   articles: NavArticle[];
 };

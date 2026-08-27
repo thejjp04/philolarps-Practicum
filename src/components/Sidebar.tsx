@@ -8,6 +8,7 @@ import { LogoLockup } from "@/components/Logo";
 import { ThemeToggle } from "@/components/theme";
 import {
   IconChevron,
+  IconCompass,
   IconGlossary,
   IconMusic,
   IconPaths,
@@ -15,6 +16,7 @@ import {
   SUBJECT_ICONS,
 } from "@/components/icons";
 import type { NavArticle, NavData, NavSubject } from "@/components/nav-data";
+import { useTour } from "@/components/tour";
 import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
 
 type Filter = Tier | "all";
@@ -35,6 +37,9 @@ const REFERENCE = [
   { href: "/music", label: "Music", Icon: IconMusic },
 ];
 
+/** The one Reference row the tour stops at. */
+const TOUR_REFERENCE = "/music";
+
 export function Sidebar({
   nav,
   onNavigate,
@@ -43,6 +48,7 @@ export function Sidebar({
   onNavigate?: () => void;
 }) {
   const pathname = usePathname();
+  const tour = useTour();
   const [filter, setFilter] = useState<Filter>("all");
   const [expanded, setExpanded] = useState<string[]>([]);
 
@@ -109,7 +115,7 @@ export function Sidebar({
       </div>
 
       {/* Tier switcher */}
-      <div className="shrink-0 px-4 pb-4 pt-3">
+      <div data-tour="tier-switcher" className="shrink-0 px-4 pb-4 pt-3">
         <div
           role="radiogroup"
           aria-label="Filter by tier"
@@ -142,11 +148,12 @@ export function Sidebar({
 
       {/* Nav tree */}
       <nav
+        data-tour="nav-tree"
         aria-label="Subjects"
         className="scrollbar-slim min-h-0 flex-1 overflow-y-auto px-3 pb-4"
       >
         {nav.groups.map((group) => (
-          <div key={group.key} className="mb-5">
+          <div key={group.key} data-tour={`group-${group.key}`} className="mb-5">
             <h2 className="px-3 pb-2 text-[10.5px] font-semibold uppercase tracking-[0.09em]">
               {group.label}
             </h2>
@@ -176,7 +183,7 @@ export function Sidebar({
           </h2>
           <ul className="space-y-[2px]">
             {REFERENCE.map(({ href, label, Icon }) => (
-              <li key={href}>
+              <li key={href} data-tour={href === TOUR_REFERENCE ? "music" : undefined}>
                 <Link
                   href={href}
                   onClick={onNavigate}
@@ -188,12 +195,34 @@ export function Sidebar({
                 </Link>
               </li>
             ))}
+
+            {/* Not a page, so it sits at the end of the list rather than in
+                the bottom slot, which has to stay one row tall to line up
+                with the player bar across the fold. */}
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  onNavigate?.();
+                  tour.start();
+                }}
+                className={`${rowClass(false)} w-full text-left`}
+              >
+                <IconCompass className="h-[17px] w-[17px] shrink-0 opacity-90" />
+                <span className="truncate">Take the tour</span>
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
 
-      {/* Bottom slot. The theme toggle lives where an account block usually would. */}
-      <div className="shrink-0 border-t border-[var(--sidebar-rule)] p-3">
+      {/* Bottom slot. The theme toggle lives where an account block usually
+          would. The height is fixed rather than left to the contents, because
+          the player bar starts where this rule does and the two have to meet. */}
+      <div
+        data-tour="theme-toggle"
+        className="flex h-[65px] shrink-0 items-center border-t border-[var(--sidebar-rule)] px-3"
+      >
         <ThemeToggle />
       </div>
     </div>

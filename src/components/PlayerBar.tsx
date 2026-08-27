@@ -54,12 +54,31 @@ export function PlayerBar() {
         />
       </div>
 
-      <div className="flex h-[74px] items-center gap-3 px-3 sm:px-4">
+      {/* 65px against a 1px rule, which is what the sidebar's bottom slot
+          measures. The two meet in the corner, so they have to agree. */}
+      <div className="flex h-[65px] items-center gap-3 px-3 sm:px-4">
         {/* Now playing */}
         <div className="flex min-w-0 flex-1 items-center gap-3 md:flex-none md:basis-[28%]">
-          <div className="h-[38px] w-[68px] shrink-0 overflow-hidden rounded-[6px] border border-[var(--border)] bg-[var(--bg-subtle)]">
-            {/* The embed lands here and becomes the artwork tile. */}
-            <Mount className="h-[38px] w-[68px] [&>iframe]:h-[38px] [&>iframe]:w-[68px]" />
+          <div className="pointer-events-none relative h-[38px] w-[68px] shrink-0 overflow-hidden rounded-[6px] border border-[var(--border)] bg-[var(--bg-subtle)]">
+            {/* The embed lands here. It has to stay on screen to keep
+                playing, but at 68px across its own play button and logo are
+                most of the tile, so the video's thumbnail covers it. */}
+            <Mount className="absolute inset-0 [&>iframe]:h-full [&>iframe]:w-full" />
+            <span className="absolute inset-0 block bg-[var(--bg-subtle)]">
+              {music.videoId && (
+                /* eslint-disable-next-line @next/next/no-img-element --
+                   68 by 38, straight from YouTube's own thumbnail host.
+                   Nothing for the image pipeline to do. */
+                <img
+                  src={`https://i.ytimg.com/vi/${music.videoId}/mqdefault.jpg`}
+                  alt=""
+                  className="h-full w-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              )}
+            </span>
           </div>
           <div className="min-w-0">
             <p className="truncate text-[13px] font-semibold leading-tight">
@@ -82,7 +101,7 @@ export function PlayerBar() {
         </div>
 
         {/* Transport */}
-        <div className="flex flex-col items-center gap-1.5 md:flex-1">
+        <div className="flex flex-col items-center gap-1 md:flex-1">
           <div className="flex items-center gap-1">
             {music.isMix ? (
               /* One long recording has no tracks to shuffle. The slot is kept

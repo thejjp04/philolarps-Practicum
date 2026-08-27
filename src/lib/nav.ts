@@ -42,6 +42,7 @@ export function buildNavData(): NavData {
         slug: subject.slug,
         name: subject.name,
         href: `/${subject.slug}`,
+        oneLine: subject.oneLine,
         counts: {
           beginner: getTierArticles(subject.slug, "beginner").length,
           intermediate: getTierArticles(subject.slug, "intermediate").length,

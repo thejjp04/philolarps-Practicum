@@ -300,6 +300,15 @@ export function IconRoute(p: IconProps) {
   );
 }
 
+export function IconCompass(p: IconProps) {
+  return (
+    <Base {...p}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.4 8.6-2 4.8-4.8 2 2-4.8Z" />
+    </Base>
+  );
+}
+
 export const SUBJECT_ICONS: Record<
   string,
   ((p: IconProps) => React.ReactElement) | undefined

@@ -82,10 +82,12 @@ export function TopBar({
       </nav>
 
       <div className="flex shrink-0 items-center gap-3">
-        <div className="w-auto md:w-[300px] xl:w-[380px]">
+        <div data-tour="search" className="w-auto md:w-[300px] xl:w-[380px]">
           <Search />
         </div>
-        <ReadingPathPanel nav={nav} />
+        <div data-tour="reading-path" className="flex">
+          <ReadingPathPanel nav={nav} />
+        </div>
       </div>
     </header>
   );
