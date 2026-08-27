@@ -214,6 +214,82 @@ export function IconClose(p: IconProps) {
   );
 }
 
+/* ---- Player icons ---- */
+
+export function IconMusic(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M9 17.5V6.1l10-2v11.2" />
+      <circle cx="6.4" cy="17.5" r="2.6" />
+      <circle cx="16.4" cy="15.3" r="2.6" />
+    </Base>
+  );
+}
+
+export function IconPlay(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M7.5 4.8 18.5 12l-11 7.2Z" fill="currentColor" />
+    </Base>
+  );
+}
+
+export function IconPause(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M9 4.8v14.4M15 4.8v14.4" strokeWidth="2.4" />
+    </Base>
+  );
+}
+
+export function IconNext(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M6 5.4 15 12l-9 6.6Z" fill="currentColor" />
+      <path d="M18.4 5.2v13.6" />
+    </Base>
+  );
+}
+
+export function IconPrev(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M18 5.4 9 12l9 6.6Z" fill="currentColor" />
+      <path d="M5.6 5.2v13.6" />
+    </Base>
+  );
+}
+
+export function IconShuffle(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M3.4 6.6h2.9a4 4 0 0 1 3.3 1.75l4.1 6.1a4 4 0 0 0 3.3 1.75h2.4" />
+      <path d="M3.4 17.4h2.9a4 4 0 0 0 3.3-1.75l.85-1.3" />
+      <path d="M13.7 8.35l.75-1.1a4 4 0 0 1 3.3-1.75h2.4" />
+      <path d="M18.1 3.2 20.9 5.5l-2.8 2.3M18.1 13.9l2.8 2.3-2.8 2.3" />
+    </Base>
+  );
+}
+
+export function IconVolume(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M4 9.4h3.3L11.6 5.8v12.4L7.3 14.6H4Z" />
+      <path d="M15 9.6a3.4 3.4 0 0 1 0 4.8" />
+      <path d="M17.6 7a7 7 0 0 1 0 10" />
+    </Base>
+  );
+}
+
+export function IconVolumeOff(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M4 9.4h3.3L11.6 5.8v12.4L7.3 14.6H4Z" />
+      <path d="M15.4 9.8 20 14.4M20 9.8l-4.6 4.6" />
+    </Base>
+  );
+}
+
 export function IconRoute(p: IconProps) {
   return (
     <Base {...p}>

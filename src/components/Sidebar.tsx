@@ -9,6 +9,7 @@ import { ThemeToggle } from "@/components/theme";
 import {
   IconChevron,
   IconGlossary,
+  IconMusic,
   IconPaths,
   IconThinkers,
   SUBJECT_ICONS,
@@ -31,6 +32,7 @@ const REFERENCE = [
   { href: "/glossary", label: "Glossary", Icon: IconGlossary },
   { href: "/thinkers", label: "Thinkers Index", Icon: IconThinkers },
   { href: "/reading-paths", label: "Reading Paths", Icon: IconPaths },
+  { href: "/music", label: "Music", Icon: IconMusic },
 ];
 
 export function Sidebar({

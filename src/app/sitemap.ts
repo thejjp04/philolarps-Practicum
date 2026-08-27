@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     at("/glossary", 0.6),
     at("/thinkers", 0.6),
     at("/tiers", 0.5),
+    at("/music", 0.4),
     ...TIERS.map((tier) => at(`/tiers/${tier}`, 0.5)),
     ...SUBJECTS.flatMap((s) => [
       at(`/${s.slug}`, 0.9),

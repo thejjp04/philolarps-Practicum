@@ -12,6 +12,7 @@ export function buildNavData(): NavData {
     "/glossary": "Glossary",
     "/thinkers": "Thinkers Index",
     "/reading-paths": "Reading Paths",
+    "/music": "Music",
   };
 
   titles["/tiers"] = "Tiers";
