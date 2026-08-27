@@ -675,6 +675,54 @@ export const metaphysics: Subject = {
         ],
       },
       {
+        slug: "act-potency-and-the-four-causes",
+        title: "Act, Potency, and the Four Causes",
+        summary:
+          "The Aristotelian apparatus the analytic mainstream mostly dropped, restated in terms a powers theorist can already recognise",
+        estReadMin: 26,
+        introduces: [
+          "act and potency",
+          "pure actuality",
+          "four causes",
+          "material cause",
+          "formal cause",
+          "efficient cause",
+          "final cause",
+          "immanent teleology",
+          "principle of proportionate causality",
+        ],
+        requires: [
+          "disposition",
+          "causal power",
+          "hylomorphism",
+          "matter and form",
+          "substance",
+          "essence",
+          "causation",
+        ],
+      },
+      {
+        slug: "essence-existence-and-the-real-distinction",
+        title: "Essence, Existence, and the Real Distinction",
+        summary:
+          "Whether what a thing is and that it is are two principles in the thing or one, and what follows for anything whose existence is not owed to something else",
+        estReadMin: 24,
+        introduces: [
+          "essence-existence distinction",
+          "real distinction",
+          "esse",
+          "subsistent existence",
+          "conceptual distinction",
+        ],
+        requires: [
+          "essence",
+          "act and potency",
+          "substance",
+          "essential property",
+          "ontological dependence",
+        ],
+      },
+      {
         slug: "absence-causation-and-omissions",
         title: "Absence Causation and Omissions",
         summary:

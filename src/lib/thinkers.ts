@@ -34,6 +34,7 @@ export const THINKERS: Thinker[] = [
       "ontology/intermediate/aristotle-and-husserl",
       "ethics/intermediate/virtue-ethics-and-eudaimonia",
       "metaphysics/intermediate/substance-and-bundle-theories",
+      "metaphysics/advanced/act-potency-and-the-four-causes",
     ],
   },
   {
@@ -57,7 +58,10 @@ export const THINKERS: Thinker[] = [
     dates: "c. 980–1037",
     position:
       "Distinguished essence from existence and argued from contingent beings to a necessary existent",
-    keyArticles: ["theism/intermediate/cosmological-arguments"],
+    keyArticles: [
+      "theism/intermediate/cosmological-arguments",
+      "metaphysics/advanced/essence-existence-and-the-real-distinction",
+    ],
   },
   {
     name: "Anselm of Canterbury",
@@ -88,6 +92,10 @@ export const THINKERS: Thinker[] = [
     keyArticles: [
       "theism/intermediate/cosmological-arguments",
       "theism/advanced/simplicity-timelessness-impassibility",
+      "theism/advanced/classical-theism-and-theistic-personalism",
+      "theism/advanced/existential-inertia-and-divine-conservation",
+      "metaphysics/advanced/act-potency-and-the-four-causes",
+      "metaphysics/advanced/essence-existence-and-the-real-distinction",
     ],
   },
   {
@@ -261,7 +269,10 @@ export const THINKERS: Thinker[] = [
     dates: "1839–1914",
     position:
       "Treated belief as a habit of action and truth as what inquiry would converge on in the long run",
-    keyArticles: ["epistemology/advanced/confirmation-theory-and-paradoxes"],
+    keyArticles: [
+      "epistemology/advanced/confirmation-theory-and-paradoxes",
+      "logic/advanced/probability-logic-and-uncertain-premises",
+    ],
   },
   {
     name: "Friedrich Nietzsche",
@@ -362,6 +373,7 @@ export const THINKERS: Thinker[] = [
     keyArticles: [
       "ontology/intermediate/carnap-and-quine",
       "ontology/advanced/metaontology-and-substantivity",
+      "logic/advanced/inductive-logic-and-the-carnap-programme",
     ],
   },
   {
@@ -390,7 +402,10 @@ export const THINKERS: Thinker[] = [
     dates: "1903–1930",
     position:
       "Showed that degrees of belief must satisfy the probability axioms on pain of accepting a set of bets that loses whatever happens",
-    keyArticles: ["epistemology/intermediate/credence-and-bayesian-confidence"],
+    keyArticles: [
+      "epistemology/intermediate/credence-and-bayesian-confidence",
+      "logic/intermediate/probability-as-an-extension-of-logic",
+    ],
   },
   {
     name: "Carl Hempel",
@@ -572,6 +587,16 @@ export const THINKERS: Thinker[] = [
     ],
   },
   {
+    name: "Jaakko Hintikka",
+    dates: "1929–2015",
+    position:
+      "Built the first systematic logic of knowledge and belief, and devised inductive systems that let a universal generalisation be confirmed at all",
+    keyArticles: [
+      "logic/advanced/inductive-logic-and-the-carnap-programme",
+      "logic/advanced/temporal-deontic-epistemic",
+    ],
+  },
+  {
     name: "Judith Jarvis Thomson",
     dates: "1929–2020",
     position:
@@ -612,6 +637,16 @@ export const THINKERS: Thinker[] = [
     position:
       "Shifted the measure of justice from resources to what people are actually able to do and be",
     keyArticles: ["political-philosophy/intermediate/capabilities-approach"],
+  },
+  {
+    name: "Richard Swinburne",
+    dates: "1934–",
+    position:
+      "Argued that theism is a simpler hypothesis than its rivals and made the whole case in probabilistic form, with simplicity carrying the prior",
+    keyArticles: [
+      "theism/advanced/bayesian-natural-theology",
+      "theism/intermediate/religious-experience",
+    ],
   },
   {
     name: "Jerry Fodor",
@@ -706,6 +741,13 @@ export const THINKERS: Thinker[] = [
       "ethics/intermediate/moral-realism-and-anti-realism",
       "ethics/advanced/frege-geach-and-quasi-realism",
     ],
+  },
+  {
+    name: "Marilyn McCord Adams",
+    dates: "1943–2017",
+    position:
+      "Held that evils which appear to ruin a life must be defeated within that life rather than outweighed by goods distributed anywhere else",
+    keyArticles: ["theism/advanced/horrendous-evils-and-anti-theodicy"],
   },
   {
     name: "Frank Jackson",

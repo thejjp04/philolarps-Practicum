@@ -285,6 +285,32 @@ export const logic: Subject = {
         requires: ["recursive definition", "domain of discourse"],
       },
       {
+        slug: "probability-as-an-extension-of-logic",
+        title: "Probability as an Extension of Logic",
+        summary:
+          "The Kolmogorov axioms read as a generalisation of the truth table, with Cox's derivation of them from constraints on plausible reasoning",
+        estReadMin: 18,
+        introduces: [
+          "Kolmogorov axioms",
+          "probability measure",
+          "field of events",
+          "finite additivity",
+          "Cox's theorem",
+          "statistical independence",
+          "principle of indifference",
+          "Bertrand's paradox",
+        ],
+        requires: [
+          "set",
+          "function",
+          "proposition",
+          "tautology",
+          "disjunction",
+          "truth function",
+          "conditional probability",
+        ],
+      },
+      {
         slug: "soundness-and-completeness-informally",
         title: "Soundness and Completeness, Informally",
         summary:
@@ -737,6 +763,54 @@ export const logic: Subject = {
           "possibility operator",
           "semantic consequence",
           "conditional probability",
+        ],
+      },
+      {
+        slug: "probability-logic-and-uncertain-premises",
+        title: "Probability Logic and Uncertain Premises",
+        summary:
+          "Validity fails to preserve certainty you never had, so the real question is how much uncertainty a valid inference can accumulate",
+        estReadMin: 26,
+        introduces: [
+          "probabilistic validity",
+          "uncertainty accumulation",
+          "probabilistic entailment interval",
+          "Popper function",
+          "primitive conditional probability",
+          "regularity",
+          "imprecise probability",
+        ],
+        requires: [
+          "Kolmogorov axioms",
+          "probability measure",
+          "finite additivity",
+          "Adams' thesis",
+          "semantic consequence",
+          "validity",
+          "conditional probability",
+        ],
+      },
+      {
+        slug: "inductive-logic-and-the-carnap-programme",
+        title: "Inductive Logic and the Carnap Programme",
+        summary:
+          "The attempt to make confirmation a matter of logical form alone, the parameter it needed, and the result that universal laws end up confirmed to degree zero",
+        estReadMin: 28,
+        introduces: [
+          "logical probability",
+          "inductive logic",
+          "continuum of inductive methods",
+          "exchangeability",
+          "zero confirmation of universal laws",
+          "Hintikka systems",
+        ],
+        requires: [
+          "probability measure",
+          "principle of indifference",
+          "probabilistic validity",
+          "induction",
+          "enumerative induction",
+          "new riddle of induction",
         ],
       },
       {

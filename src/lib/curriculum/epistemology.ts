@@ -445,9 +445,13 @@ export const epistemology: Subject = {
           "centred proposition",
           "Sleeping Beauty problem",
           "self-sampling assumption",
+        ],
+        requires: [
+          "credence",
+          "conditionalization",
+          "conditional probability",
           "principle of indifference",
         ],
-        requires: ["credence", "conditionalization", "conditional probability"],
       },
       {
         slug: "higher-order-evidence",

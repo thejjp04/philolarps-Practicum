@@ -246,6 +246,7 @@ export const theism: Subject = {
           "skeptical theism",
           "greater good",
           "transworld depravity",
+          "privation theory of evil",
         ],
         requires: [
           "problem of evil",
@@ -342,6 +343,53 @@ export const theism: Subject = {
     ],
     advanced: [
       {
+        slug: "bayesian-natural-theology",
+        title: "Bayesian Natural Theology",
+        summary:
+          "Recasting the arguments as claims about how much likelier the evidence is on theism, which moves the whole dispute onto the prior and onto what fixes it",
+        estReadMin: 26,
+        introduces: [
+          "Bayes factor",
+          "likelihood ratio",
+          "simplicity as a prior",
+          "problem of the priors",
+          "old evidence problem",
+          "evidential aggregation",
+        ],
+        requires: [
+          "probabilistic argument",
+          "cumulative case argument",
+          "demonstrative argument",
+          "Bayes's theorem",
+          "prior probability",
+          "posterior probability",
+          "conditional probability",
+          "fine-tuning argument",
+        ],
+      },
+      {
+        slug: "grim-reapers-and-causal-finitism",
+        title: "Grim Reaper Paradoxes and Causal Finitism",
+        summary:
+          "A supertask that yields a contradiction from apparently consistent parts, offered as a reason to deny that anything can have infinitely many causal antecedents",
+        estReadMin: 26,
+        introduces: [
+          "Grim Reaper paradox",
+          "Benardete paradox",
+          "causal finitism",
+          "supertask",
+          "Hilbert's hotel argument",
+          "successive addition",
+        ],
+        requires: [
+          "Kalam cosmological argument",
+          "actual infinite",
+          "causal series per se",
+          "cardinality",
+          "countable set",
+        ],
+      },
+      {
         slug: "modal-ontological-parodies",
         title: "Modal Ontological Arguments and Their Parodies",
         summary:
@@ -382,6 +430,29 @@ export const theism: Subject = {
         ],
       },
       {
+        slug: "classical-theism-and-theistic-personalism",
+        title: "Classical Theism Against Theistic Personalism",
+        summary:
+          "Whether God is a being among beings with a very good set of properties, or is not that kind of thing at all, and why classical theists treat the first as a category mistake rather than a rival view",
+        estReadMin: 26,
+        introduces: [
+          "theistic personalism",
+          "neo-classical theism",
+          "being among beings",
+          "anthropomorphism objection",
+        ],
+        requires: [
+          "classical theism",
+          "personal God",
+          "divine simplicity",
+          "perfect being theology",
+          "immutability",
+          "act and potency",
+          "pure actuality",
+          "essence-existence distinction",
+        ],
+      },
+      {
         slug: "aseity-and-the-bootstrapping-problem",
         title: "Aseity and the Bootstrapping Problem",
         summary:
@@ -401,6 +472,29 @@ export const theism: Subject = {
           "classical theism",
           "metaphysical possibility",
           "abstract object",
+        ],
+      },
+      {
+        slug: "existential-inertia-and-divine-conservation",
+        title: "Existential Inertia and Divine Conservation",
+        summary:
+          "If a thing once made would simply keep going on its own, conservation has nothing left to do, and the argument from an ordered causal series loses its terminus",
+        estReadMin: 24,
+        introduces: [
+          "existential inertia thesis",
+          "concurrentism",
+          "mere conservationism",
+          "occasionalism",
+          "secondary causation",
+        ],
+        requires: [
+          "divine conservation",
+          "creation ex nihilo",
+          "causal series per se",
+          "necessary being",
+          "act and potency",
+          "essence-existence distinction",
+          "principle of proportionate causality",
         ],
       },
       {
@@ -492,6 +586,27 @@ export const theism: Subject = {
         ],
       },
       {
+        slug: "the-argument-from-pain-and-pleasure",
+        title: "Draper's Argument from Pain and Pleasure",
+        summary:
+          "Not that suffering is pointless, but that its distribution tracks biological usefulness far more closely than theism would lead anyone to expect",
+        estReadMin: 24,
+        introduces: [
+          "hypothesis of indifference",
+          "argument from pain and pleasure",
+          "biological role of pain",
+          "evidential atheology",
+        ],
+        requires: [
+          "likelihood ratio",
+          "Bayes factor",
+          "evidential problem of evil",
+          "naturalism",
+          "gratuitous evil",
+          "inference to the best explanation",
+        ],
+      },
+      {
         slug: "the-evolutionary-argument-against-naturalism",
         title: "The Evolutionary Argument Against Naturalism",
         summary:
@@ -530,6 +645,8 @@ export const theism: Subject = {
           "skeptical theism",
           "gratuitous evil",
           "prior probability",
+          "likelihood ratio",
+          "Bayes factor",
         ],
       },
       {
@@ -550,6 +667,27 @@ export const theism: Subject = {
           "noseeum inference",
           "gratuitous evil",
           "greater good",
+        ],
+      },
+      {
+        slug: "horrendous-evils-and-anti-theodicy",
+        title: "Horrendous Evils and Anti-Theodicy",
+        summary:
+          "Evils that appear to ruin the life they fall on cannot be handled by a balance of goods, and there is a case that trying to justify them at all is the deeper mistake",
+        estReadMin: 24,
+        introduces: [
+          "horrendous evil",
+          "defeat within a life",
+          "anti-theodicy",
+          "moral insensitivity objection",
+        ],
+        requires: [
+          "theodicy",
+          "soul-making theodicy",
+          "greater good",
+          "gratuitous evil",
+          "problem of evil",
+          "skeptical theism",
         ],
       },
       {
