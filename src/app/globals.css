@@ -50,6 +50,32 @@
      colour that is dark in that theme. */
   --scrim: color-mix(in srgb, var(--text-primary) 45%, transparent);
 
+  /* ---- Subject hues ----
+     One per subject, spread around the wheel so nine icons in a column are
+     told apart at a glance. Each has two values: the deep one clears AA on
+     white, and the lift one clears it on a dark ground. The sidebar is dark
+     in both themes, so it always takes the lift; page surfaces take
+     --subject-x, which the dark blocks below point at the lift instead. */
+  --subject-metaphysics-lift: #c39cf7;
+  --subject-philosophy-of-mind-lift: #f79bc6;
+  --subject-ethics-lift: #f4a09a;
+  --subject-political-philosophy-lift: #efab6a;
+  --subject-theism-lift: #e8bf5c;
+  --subject-applied-ethics-lift: #b7db76;
+  --subject-ontology-lift: #6fd8ae;
+  --subject-epistemology-lift: #77cfe8;
+  --subject-logic-lift: #9db4f8;
+
+  --subject-metaphysics: #7134cf;
+  --subject-philosophy-of-mind: #b52a72;
+  --subject-ethics: #b03434;
+  --subject-political-philosophy: #a4530c;
+  --subject-theism: #8a6100;
+  --subject-applied-ethics: #43700d;
+  --subject-ontology: #0b7355;
+  --subject-epistemology: #0d6f8c;
+  --subject-logic: #2f56c9;
+
   color-scheme: light;
 }
 
@@ -70,6 +96,18 @@
 
   --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
   --scrim: color-mix(in srgb, var(--bg-page) 78%, transparent);
+
+  /* The deep set is for white. On this ground the lift set is the readable
+     one, so the page tokens point at it. */
+  --subject-metaphysics: var(--subject-metaphysics-lift);
+  --subject-philosophy-of-mind: var(--subject-philosophy-of-mind-lift);
+  --subject-ethics: var(--subject-ethics-lift);
+  --subject-political-philosophy: var(--subject-political-philosophy-lift);
+  --subject-theism: var(--subject-theism-lift);
+  --subject-applied-ethics: var(--subject-applied-ethics-lift);
+  --subject-ontology: var(--subject-ontology-lift);
+  --subject-epistemology: var(--subject-epistemology-lift);
+  --subject-logic: var(--subject-logic-lift);
 
   color-scheme: dark;
 }
@@ -93,6 +131,17 @@
     --sidebar-active-text: #ffffff;
     --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
     --scrim: color-mix(in srgb, var(--bg-page) 78%, transparent);
+
+    --subject-metaphysics: var(--subject-metaphysics-lift);
+    --subject-philosophy-of-mind: var(--subject-philosophy-of-mind-lift);
+    --subject-ethics: var(--subject-ethics-lift);
+    --subject-political-philosophy: var(--subject-political-philosophy-lift);
+    --subject-theism: var(--subject-theism-lift);
+    --subject-applied-ethics: var(--subject-applied-ethics-lift);
+    --subject-ontology: var(--subject-ontology-lift);
+    --subject-epistemology: var(--subject-epistemology-lift);
+    --subject-logic: var(--subject-logic-lift);
+
     color-scheme: dark;
   }
 }

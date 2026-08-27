@@ -6,14 +6,16 @@ import { useEffect, useId, useMemo, useState } from "react";
 
 import { LogoLockup } from "@/components/Logo";
 import { ThemeToggle } from "@/components/theme";
+import { useDone } from "@/components/finish";
 import {
+  IconCheck,
   IconChevron,
   IconCompass,
   IconGlossary,
   IconMusic,
   IconPaths,
   IconThinkers,
-  SUBJECT_ICONS,
+  SubjectGlyph,
 } from "@/components/icons";
 import type { NavArticle, NavData, NavSubject } from "@/components/nav-data";
 import { useTour } from "@/components/tour";
@@ -49,6 +51,7 @@ export function Sidebar({
 }) {
   const pathname = usePathname();
   const tour = useTour();
+  const done = useDone();
   const [filter, setFilter] = useState<Filter>("all");
   const [expanded, setExpanded] = useState<string[]>([]);
 
@@ -164,6 +167,7 @@ export function Sidebar({
                   key={subject.slug}
                   subject={subject}
                   pathname={pathname}
+                  done={done}
                   visibleTiers={visibleTiers}
                   pinnedTier={
                     subject.slug === activeSubject ? activeTier : null
@@ -190,7 +194,9 @@ export function Sidebar({
                   aria-current={pathname === href ? "page" : undefined}
                   className={rowClass(pathname === href)}
                 >
-                  <Icon className="h-[17px] w-[17px] shrink-0 opacity-90" />
+                  <span className={SLOT}>
+                    <Icon className="h-[17px] w-[17px] opacity-90" />
+                  </span>
                   <span className="truncate">{label}</span>
                 </Link>
               </li>
@@ -208,7 +214,9 @@ export function Sidebar({
                 }}
                 className={`${rowClass(false)} w-full text-left`}
               >
-                <IconCompass className="h-[17px] w-[17px] shrink-0 opacity-90" />
+                <span className={SLOT}>
+                  <IconCompass className="h-[17px] w-[17px] opacity-90" />
+                </span>
                 <span className="truncate">Take the tour</span>
               </button>
             </li>
@@ -231,16 +239,22 @@ export function Sidebar({
 
 function rowClass(active: boolean) {
   return [
-    "flex items-center gap-2.5 rounded-[var(--radius-card)] px-3 py-[7px] text-[13.5px] font-medium transition-colors",
+    "flex items-center gap-2 rounded-[var(--radius-card)] px-2.5 py-[6px] text-[13.5px] font-medium transition-colors",
     active
       ? "bg-[var(--sidebar-active-bg)] text-[var(--sidebar-active-text)]"
       : "hover:bg-[var(--sidebar-wash)]",
   ].join(" ");
 }
 
+/* A Reference icon has no subject and so no colour of its own. It still takes
+   the width of a subject tile, or the two lists would start their labels at
+   different places. */
+const SLOT = "flex h-[25px] w-[25px] shrink-0 items-center justify-center";
+
 function SubjectItem({
   subject,
   pathname,
+  done,
   visibleTiers,
   pinnedTier,
   open,
@@ -249,6 +263,7 @@ function SubjectItem({
 }: {
   subject: NavSubject;
   pathname: string;
+  done: Set<string>;
   visibleTiers: Tier[];
   pinnedTier: Tier | null;
   open: boolean;
@@ -256,8 +271,6 @@ function SubjectItem({
   onNavigate?: () => void;
 }) {
   const instanceId = useId();
-  const Icon =
-    SUBJECT_ICONS[subject.slug as keyof typeof SUBJECT_ICONS] ?? IconGlossary;
 
   const isHub = pathname === subject.href;
   const inSubject = pathname.startsWith(`${subject.href}/`) || isHub;
@@ -295,9 +308,9 @@ function SubjectItem({
           href={subject.href}
           onClick={onNavigate}
           aria-current={isHub ? "page" : undefined}
-          className="flex min-w-0 flex-1 items-center gap-2.5 rounded-sm"
+          className="flex min-w-0 flex-1 items-center gap-2 rounded-sm"
         >
-          <Icon className="h-[17px] w-[17px] shrink-0 opacity-90" />
+          <SubjectGlyph slug={subject.slug} onDark />
           <span className="truncate">{subject.name}</span>
         </Link>
         <button
@@ -340,6 +353,7 @@ function SubjectItem({
                     key={`${article.tier}-${article.slug}`}
                     article={article}
                     active={pathname === article.href}
+                    done={done.has(article.href)}
                     onNavigate={onNavigate}
                   />
                 ))}
@@ -359,10 +373,12 @@ function SubjectItem({
 function ArticleLink({
   article,
   active,
+  done,
   onNavigate,
 }: {
   article: NavArticle;
   active: boolean;
+  done: boolean;
   onNavigate?: () => void;
 }) {
   return (
@@ -376,7 +392,7 @@ function ArticleLink({
         onClick={onNavigate}
         aria-current={active ? "page" : undefined}
         className={[
-          "block truncate rounded-[6px] px-2 py-[5px] text-[12.5px] transition-colors",
+          "flex items-center gap-1.5 rounded-[6px] px-2 py-[5px] text-[12.5px] transition-colors",
           active
             ? "bg-[var(--sidebar-active-bg)] font-medium text-[var(--sidebar-active-text)]"
             : `hover:bg-[var(--sidebar-wash)] hover:opacity-100 ${
@@ -384,12 +400,18 @@ function ArticleLink({
               }`,
         ].join(" ")}
       >
-        {article.title}
+        <span className="truncate">{article.title}</span>
         {/* Not a title attribute: that would replace the link text as the
             accessible name, so every planned rung would announce
             identically. */}
         {!article.written && (
           <span className="sr-only"> (planned, not yet written)</span>
+        )}
+        {done && (
+          <>
+            <IconCheck className="ml-auto h-[13px] w-[13px] shrink-0" />
+            <span className="sr-only"> (read)</span>
+          </>
         )}
       </Link>
     </li>

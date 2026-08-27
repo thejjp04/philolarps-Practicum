@@ -8,7 +8,7 @@ import {
   PageHeader,
   PrerequisiteChips,
 } from "@/components/ui";
-import { IconArrowRight, IconRoute } from "@/components/icons";
+import { IconArrowRight, IconRoute, SubjectGlyph } from "@/components/icons";
 import { getSubjectPath, getTierArticles } from "@/lib/content";
 import { SUBJECTS, getSubject } from "@/lib/subjects";
 import { TIERS, TIER_LABEL } from "@/lib/types";
@@ -46,7 +46,11 @@ export default async function SubjectPage({ params }: Params) {
 
   return (
     <Container>
-      <PageHeader title={subject.name} lead={subject.scope} />
+      <PageHeader
+        title={subject.name}
+        lead={subject.scope}
+        glyph={<SubjectGlyph slug={subject.slug} size="lg" />}
+      />
 
       <aside className="mb-12 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--bg-subtle)] px-5 py-4">
         <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.09em] text-[var(--text-muted)]">

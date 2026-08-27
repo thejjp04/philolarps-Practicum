@@ -309,6 +309,23 @@ export function IconCompass(p: IconProps) {
   );
 }
 
+export function IconCheck(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="m4.5 12.5 5 5 10-11" strokeWidth="2.2" />
+    </Base>
+  );
+}
+
+export function IconSpark(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M12 2.5 14.1 9l6.4 2.2-6.4 2.2L12 20l-2.1-6.6L3.5 11.2 9.9 9Z" />
+      <path d="M19 3.2v3M17.5 4.7h3" />
+    </Base>
+  );
+}
+
 export const SUBJECT_ICONS: Record<
   string,
   ((p: IconProps) => React.ReactElement) | undefined
@@ -323,3 +340,51 @@ export const SUBJECT_ICONS: Record<
   "applied-ethics": IconAppliedEthics,
   theism: IconTheism,
 };
+
+const GLYPH_SIZES = {
+  sm: { tile: 25, icon: 15, radius: 7 },
+  md: { tile: 32, icon: 18, radius: 9 },
+  lg: { tile: 40, icon: 22, radius: 11 },
+} as const;
+
+/**
+ * A subject's icon in that subject's own colour, on a tile tinted the same.
+ *
+ * The hue is --subject-{slug}, which each theme resolves to a value that
+ * clears AA on that theme's ground. The sidebar is dark in both themes, so it
+ * passes `onDark` and takes the lift value directly rather than whichever one
+ * the current theme happens to point at.
+ */
+export function SubjectGlyph({
+  slug,
+  size = "sm",
+  onDark = false,
+  className = "",
+}: {
+  slug: string;
+  size?: keyof typeof GLYPH_SIZES;
+  onDark?: boolean;
+  className?: string;
+}) {
+  const Icon = SUBJECT_ICONS[slug] ?? IconGlossary;
+  const { tile, icon, radius } = GLYPH_SIZES[size];
+
+  // An unlisted slug falls back to the house accent rather than to nothing.
+  const hue = `var(--subject-${slug}${onDark ? "-lift" : ""}, var(--accent))`;
+
+  return (
+    <span
+      aria-hidden="true"
+      className={`inline-flex shrink-0 items-center justify-center ${className}`}
+      style={{
+        width: tile,
+        height: tile,
+        borderRadius: radius,
+        color: hue,
+        background: `color-mix(in srgb, ${hue} ${onDark ? 20 : 13}%, transparent)`,
+      }}
+    >
+      <Icon style={{ width: icon, height: icon }} />
+    </span>
+  );
+}

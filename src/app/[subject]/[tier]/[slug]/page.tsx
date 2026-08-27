@@ -8,7 +8,8 @@ import rehypeSlug from "rehype-slug";
 
 import { TocRail, TocSummary } from "@/components/Toc";
 import { PlannedTag, PrerequisiteChips, TierBadge } from "@/components/ui";
-import { IconArrowLeft, IconArrowRight } from "@/components/icons";
+import { IconArrowLeft, IconArrowRight, SubjectGlyph } from "@/components/icons";
+import { FinishArticle } from "@/components/finish";
 import { mdxComponents } from "@/components/mdx";
 import {
   allLadderParams,
@@ -233,8 +234,9 @@ export default async function ArticlePage({ params }: Params) {
           <div className="mb-3 flex flex-wrap items-center gap-2.5">
             <Link
               href={`/${ref.subject}`}
-              className="text-[12.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
+              className="inline-flex items-center gap-2 text-[12.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
             >
+              <SubjectGlyph slug={ref.subject} />
               {ref.subjectName}
             </Link>
             <TierBadge tier={ref.tier} />
@@ -262,6 +264,15 @@ export default async function ArticlePage({ params }: Params) {
         <TocSummary headings={headings} />
 
         {body}
+
+        {/* Only under prose. A planned rung has nothing to have finished, and
+            the next rung it would offer is the one already in the notice. */}
+        {ref.written && (
+          <FinishArticle
+            href={ref.href}
+            next={next?.written ? { href: next.href, title: next.title } : null}
+          />
+        )}
 
         <nav
           aria-label="Reading path"

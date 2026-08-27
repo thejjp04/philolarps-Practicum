@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Card, Container, SectionHeading, TierChips } from "@/components/ui";
-import { IconArrowRight, SUBJECT_ICONS } from "@/components/icons";
+import { IconArrowRight, SubjectGlyph } from "@/components/icons";
 import { getRecentlyAdded, getTierArticles } from "@/lib/content";
 import { SUBJECTS } from "@/lib/subjects";
 import { TIERS, TIER_LABEL } from "@/lib/types";
@@ -74,32 +74,26 @@ export default function HomePage() {
       <section className="mb-14">
         <SectionHeading>Subjects</SectionHeading>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {subjects.map((subject) => {
-            const Icon = SUBJECT_ICONS[subject.slug];
-
-            return (
-              <div
-                key={subject.slug}
-                className="flex flex-col rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--surface)] p-5"
+          {subjects.map((subject) => (
+            <div
+              key={subject.slug}
+              className="flex flex-col rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)]"
+            >
+              <Link
+                href={`/${subject.slug}`}
+                className="flex items-center gap-3 text-[15.5px] font-semibold leading-snug hover:text-[var(--accent)]"
               >
-                <Link
-                  href={`/${subject.slug}`}
-                  className="flex items-center gap-2.5 text-[15.5px] font-semibold leading-snug hover:text-[var(--accent)]"
-                >
-                  {Icon && (
-                    <Icon className="h-[17px] w-[17px] shrink-0 text-[var(--accent)]" />
-                  )}
-                  {subject.name}
-                </Link>
-                <p className="mt-2 flex-1 font-serif text-[15px] leading-[1.55] text-[var(--text-muted)]">
-                  {subject.oneLine}
-                </p>
-                <div className="mt-4 border-t border-[var(--border)] pt-3">
-                  <TierChips subject={subject.slug} counts={subject.counts} />
-                </div>
+                <SubjectGlyph slug={subject.slug} size="lg" />
+                {subject.name}
+              </Link>
+              <p className="mt-3 flex-1 font-serif text-[15px] leading-[1.55] text-[var(--text-muted)]">
+                {subject.oneLine}
+              </p>
+              <div className="mt-4 border-t border-[var(--border)] pt-3">
+                <TierChips subject={subject.slug} counts={subject.counts} />
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
 

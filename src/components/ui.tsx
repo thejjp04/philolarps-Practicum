@@ -31,10 +31,13 @@ export function PageHeader({
   title,
   lead,
   eyebrow,
+  glyph,
 }: {
   title: string;
   lead?: string;
   eyebrow?: string;
+  /** Sits to the left of the title. A subject hub passes its own glyph. */
+  glyph?: ReactNode;
 }) {
   return (
     <header className="mb-10">
@@ -43,7 +46,8 @@ export function PageHeader({
           {eyebrow}
         </p>
       )}
-      <h1 className="text-[34px] font-bold leading-[1.15] tracking-[-0.025em] lg:text-[40px]">
+      <h1 className="flex items-center gap-3.5 text-[34px] font-bold leading-[1.15] tracking-[-0.025em] lg:text-[40px]">
+        {glyph}
         {title}
       </h1>
       {lead && (
