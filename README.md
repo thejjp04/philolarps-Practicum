@@ -38,7 +38,7 @@ npm run dev
 Then open http://localhost:3000.
 
 ```bash
-npm run build     # 364 pages, all prerendered
+npm run build     # 376 pages, all prerendered
 npx tsc --noEmit  # type check
 npx eslint src    # note: `next lint` is broken in this project
 ```
