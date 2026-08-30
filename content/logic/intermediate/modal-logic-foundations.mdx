@@ -1,0 +1,166 @@
+---
+title: "Modal Logic: Possible Worlds Semantics"
+subject: logic
+tier: intermediate
+order: 21
+est_read_min: 22
+summary: The box and diamond, frames, models, and the accessibility relation
+prerequisites: ["soundness-and-completeness-informally"]
+introduces: ["necessity operator", "possibility operator", "possible world", "frame", "accessibility relation", "Kripke model"]
+requires: ["predicate", "relation", "semantic consequence", "model"]
+added: "2026-08-29"
+---
+
+Two sentences may both be true and differ in a way no apparatus built so far can register. That two and two make four is true. That Paris is the capital of France is true. The first could not have failed to be true and the second could easily have been otherwise, and every system in this subject up to now treats them as interchangeable, since both are assigned the same value and nothing else about them is recorded.
+
+The difference is one of modality: of how a proposition is true rather than whether it is. Philosophy is full of claims that turn on it. An argument is valid when its conclusion cannot be false while its premises are true, which is a modal claim about the argument. Determinism says that the past and the laws together make only one future possible. A moral obligation is not the same as an actual performance. What somebody knows is not the same as what happens to be so.
+
+None of this can be said in a language whose only resources are the connectives and the quantifiers. This article adds two operators that can say it, explains why they cannot be given truth tables, and builds the semantics that replaced the truth table for this purpose. The systems that result are taken up in the next article; this one is about the machinery they are all interpreted in.
+
+## Two new operators
+
+<Definition term="Necessity operator">
+The one-place operator written $\Box$ and read "it is necessary that" or "necessarily", which attaches to a formula to make a longer formula. Where $\varphi$ is a well-formed formula, so is $\Box \varphi$, and the operator may be applied repeatedly and may occur inside the scope of connectives and quantifiers exactly as negation does.
+</Definition>
+
+<Definition term="Possibility operator">
+The one-place operator written $\Diamond$ and read "it is possible that" or "possibly", formed and used under the same syntactic rules as the box. In the standard systems the two operators are interdefinable, so a language containing either one and negation contains the other by abbreviation.
+</Definition>
+
+The interdefinition is worth stating carefully because it carries the whole shape of the subject. To say that $\varphi$ is possible is to say that its negation is not necessary, so $\Diamond \varphi$ abbreviates $\neg \Box \neg \varphi$. To say that $\varphi$ is necessary is to say that its negation is not possible, so $\Box \varphi$ abbreviates $\neg \Diamond \neg \varphi$. Either operator may be taken as primitive and the other introduced as shorthand, and presentations differ over which choice they make with no consequence for the resulting logic.
+
+Anyone who worked through the quantifiers will recognise the pattern. The relation between $\Box$ and $\Diamond$ across a negation is exactly the relation between $\forall$ and $\exists$ across a negation, and the resemblance is not a coincidence. The semantics developed below makes the box a universal quantifier and the diamond an existential one, quantifying over something other than objects, and the shared behaviour under negation falls out of that.
+
+One further remark before the semantics. The symbols do not come with a fixed subject matter. Read as necessity and possibility in the broadest sense, they concern how things could have been. Read as obligation and permission, they give the logic of what ought to be. Read as knowledge and epistemic possibility, they give the logic of what an agent has ruled out. Read as always and sometimes, they give a logic of time. Read as provability and consistency in a formal theory, they give a logic of what a mathematical system can establish about itself. All five readings use the same syntax, and the advanced tier contains an article on each of the last three. What separates the readings is not the notation but which principles governing the notation are accepted, and the machinery in this article is what makes that comparison possible.
+
+## Why truth values are not enough
+
+The obvious first attempt is to give $\Box$ a truth table, as was done for negation. The attempt fails, and it fails for a reason that can be stated in one line.
+
+Take two true sentences. That two and two make four is true, and it is necessary, so putting a box in front of it yields a truth. That Paris is the capital of France is true, and it is not necessary, since the capital could have been elsewhere, so putting a box in front of it yields a falsehood. Both inputs had the value true and the outputs differ. Nothing that behaves that way is a truth function, and no table of any size can be written for it.
+
+The same argument works for the diamond from the other direction. Take two false sentences. That it is snowing here now may be false and is possible, so the diamond in front of it yields a truth. That zero equals one is false and is not possible, so the diamond in front of it yields a falsehood. Two false inputs, two different outputs.
+
+So the box and the diamond are not truth functions, and every method in this subject that rests on truth functionality is unavailable for them. The truth table cannot be extended. The definition of an interpretation for propositional logic, which assigns a value to each atomic formula and computes the rest, has nothing to compute with. Semantic tableaux, whose rules decompose a formula according to what its main connective does to truth values, have no rule to offer.
+
+What has gone wrong is that the value of $\Box \varphi$ depends on more than the value of $\varphi$. It depends on something the assignment of a single truth value throws away, namely how $\varphi$ stands with respect to alternatives to the way things actually are. A semantics for the box therefore has to keep track of the alternatives, and that requirement is what determines the entire shape of what follows.
+
+## Evaluating at a point
+
+<Definition term="Possible world">
+One of the points at which a formula is evaluated in a modal semantics. For the purposes of the logic a world is nothing but an element of a set, carrying no structure of its own; what makes it behave like a way things might have been is that each world assigns truth values to the atomic formulas, and different worlds may assign different ones. Whether worlds are anything more than this, and what they are if so, is a question of metaphysics rather than of logic.
+</Definition>
+
+The single change that unlocks the subject is this. Truth is no longer a property a formula has or lacks outright. It is a relation between a formula and a point, and the fundamental notion becomes truth at a world in a model rather than truth in a model.
+
+Once that relativisation is made, the two operators can be given clauses like any others. A formula $\Box \varphi$ is true at a world when $\varphi$ is true at every world, and $\Diamond \varphi$ is true at a world when $\varphi$ is true at at least one. The connectives keep their old behaviour, applied pointwise: a conjunction is true at a world when both conjuncts are true at that world, a negation when the negated formula is not, and so on down.
+
+The clause for the box quantifies over worlds. That is why it escapes the argument of the previous section: the value assigned to $\varphi$ at the world where the evaluation is happening does not determine the value of $\Box \varphi$ there, because the clause looks elsewhere. It also explains the De Morgan pattern noted above, since a universal quantifier and an existential one over the same domain always relate that way.
+
+A warning about the term is in order, since it invites more than the logic supplies. In this article a world is a point, and the set of worlds is any non-empty set whatever, of any size, with no assumption that its members are complete or consistent or maximal or anything else. Calling the points worlds is a mnemonic that helps in reading the clauses, and it is common to call them states, indices or nodes when the intended reading is temporal or computational rather than metaphysical. The metaphysical question of whether talk of possible worlds commits anyone to their existence, and in what sense, is taken up in the metaphysics subject, and nothing in the technical development depends on how it is answered.
+
+## Why quantifying over all worlds is too crude
+
+The clause just given, on which the box quantifies over every world without exception, produces a workable system. It also produces a system with strong properties, and those properties are wrong for most of the readings listed earlier.
+
+Consider three consequences. First, if $\varphi$ is true at every world then it is in particular true at the world where the evaluation is taking place, so $\Box \varphi \rightarrow \varphi$ comes out true everywhere. Second, if $\varphi$ is true at every world then so is $\Box \varphi$, since the clause for the box makes the same check at every point and gets the same answer, so $\Box \varphi \rightarrow \Box \Box \varphi$ is guaranteed. Third, by a similar argument $\Diamond \varphi \rightarrow \Box \Diamond \varphi$ is guaranteed, so whatever is possible is necessarily possible.
+
+For necessity in the broadest sense these may be acceptable, and the system they characterise is the strongest of the traditional ones. For everything else they are disasters.
+
+Read the box as obligation and the first consequence says that whatever ought to be done is done, which is the one thing a logic of obligation must not say. Read the box as knowledge and the second says that whoever knows something knows that they know it, which is a substantive and much disputed thesis rather than a truth of logic. Read the box as always in the future and the first consequence says that whatever will always hold already holds, which collapses the distinction the temporal reading exists to make.
+
+The difficulty is not that the clause is badly written but that it is unconditional. It treats every world as relevant to every other, so it can draw no distinction between what is possible relative to one situation and what is possible relative to another. Every version of the box that a philosopher actually wants is relative to something: to the laws as they stand, to what an agent has ruled out, to what a code of conduct permits, to what has not yet been settled. That relativity has to be built into the semantics rather than legislated away, and the way to build it in is to add one more piece of structure.
+
+## The accessibility relation
+
+<Definition term="Accessibility relation">
+A two-place relation on the set of worlds, written $R$, where $Rwv$ says that $v$ is accessible from $w$. The clauses for the operators are then relativised to it: $\Box \varphi$ is true at $w$ when $\varphi$ is true at every world accessible from $w$, and $\Diamond \varphi$ is true at $w$ when $\varphi$ is true at at least one world accessible from $w$. Worlds not accessible from $w$ are simply not consulted in evaluating a modal formula at $w$.
+</Definition>
+
+The relation is a relation in the exact sense given in the article on sets, which is to say a set of ordered pairs and nothing else. No property of it is assumed. It need not hold between a world and itself, it need not be symmetric, and it need not be transitive. Whether it has any of those properties is a choice, and the next article is entirely about which choices correspond to which principles about the box.
+
+What the relation means depends on the intended reading, and the readings listed earlier can now be distinguished properly. On an alethic reading, $Rwv$ says that $v$ is a way things could have been given how they are at $w$. On an epistemic reading, it says that $v$ is compatible with everything an agent knows at $w$, so that the worlds accessible from $w$ are the ones the agent has not ruled out. On a deontic reading, it says that $v$ is a world in which everything obligatory at $w$ is done. On a temporal reading, it says that $v$ is later than $w$. In each case the box comes out saying that $\varphi$ holds throughout the relevant range, and the range is what the reading fixes.
+
+Two features of the relativised clauses deserve to be noticed at once, because both are easy to miss and both matter later.
+
+The first is that $\Box \varphi$ no longer implies $\varphi$. If $w$ cannot see itself, the truth of $\varphi$ throughout what $w$ can see says nothing about $\varphi$ at $w$. The deontic reading gets what it needed.
+
+The second is what happens at a world with nothing accessible from it, sometimes called a dead end. There, every universal claim about accessible worlds holds vacuously, exactly as a universal quantifier over an empty range does. So $\Box \varphi$ is true at a dead end for every formula $\varphi$ whatever, including formulas that are contradictions, and correspondingly $\Diamond \varphi$ is false there for every $\varphi$. That is not a defect to be repaired but a consequence of the clauses, and one of the traditional systems is defined precisely by ruling dead ends out.
+
+## Frames and models
+
+The apparatus now has two components with different jobs, and separating them is the single most productive idea in the subject.
+
+<Definition term="Frame">
+A non-empty set of worlds together with an accessibility relation on that set, written $\langle W, R \rangle$. A frame contains no information about which formulas are true anywhere; it is pure structure, specifying only what points there are and which of them can see which.
+</Definition>
+
+<Definition term="Kripke model">
+A frame together with a valuation, which assigns to each atomic formula the set of worlds at which it is true. Written $\langle W, R, V \rangle$, a model contains everything needed to evaluate any formula of the language at any of its worlds, since the valuation settles the atomic cases and the clauses for the connectives and the operators settle the rest.
+</Definition>
+
+The division of labour is between structure and content. A frame says how the space of possibilities is arranged; a valuation says what happens to be so at each point in it. The same frame supports enormously many models, one for each way of distributing truth values for the atomic formulas over its worlds.
+
+That separation makes a stronger notion of validity available, and the stronger notion is what the next article runs on. A formula is true at a world in a model in the sense already defined. It is valid on a model when it is true at every world of that model. It is valid on a frame when it is true at every world under every valuation on that frame, which is a claim about the structure alone, since the valuations have all been quantified away. And it is valid on a class of frames when it is valid on each frame in the class.
+
+Validity on a frame is the notion that connects the semantics to the proof systems. A formula valid on every frame whatever is a truth of the weakest modal logic. A formula valid on exactly those frames whose accessibility relation is reflexive, and not on others, is characteristic of a stronger one, and the correspondence between axioms and conditions on $R$ is what the next article sets out in full.
+
+The word model is being used in its established sense here and is worth checking against the earlier one. An interpretation for first-order logic supplied a domain and assignments to the predicates, and a formula was true or false in it. A Kripke model supplies a set of points, a relation among them, and assignments to the atomic formulas at each point, and a formula is true or false at a point in it. The extra argument place is the whole of the difference, and everything else about how a model is used carries over unchanged.
+
+## A worked evaluation
+
+An example makes the clauses concrete faster than any amount of description. Take a model with three worlds, $w_1$, $w_2$ and $w_3$. Let $w_1$ see $w_2$, let $w_2$ see $w_3$, and let there be no other accessibility at all: nothing sees itself, $w_1$ does not see $w_3$, and $w_3$ sees nothing. Let the atomic formula $P$ be true at $w_2$ and false at the other two.
+
+Everything else is determined. Work through it world by world.
+
+At $w_3$ there are no accessible worlds. So $\Box P$ is vacuously true and $\Diamond P$ is false, regardless of $P$ itself being false there.
+
+At $w_2$ the only accessible world is $w_3$, where $P$ is false. So $\Box P$ is false at $w_2$ and $\Diamond P$ is false as well. But $\Box \Box P$ asks whether $\Box P$ holds at every accessible world, and at $w_3$ it does, vacuously. So $\Box \Box P$ is true at $w_2$ while $\Box P$ is false there.
+
+At $w_1$ the only accessible world is $w_2$, where $P$ is true. So $\Box P$ and $\Diamond P$ are both true at $w_1$, even though $P$ itself is false at $w_1$. And $\Box \Box P$ asks whether $\Box P$ holds at every accessible world, that is, at $w_2$, where it does not. So $\Box \Box P$ is false at $w_1$.
+
+<TruthTable
+  columns={["World", "P", "◇P", "□P", "□□P"]}
+  rows={[
+    ["w1", "F", "T", "T", "F"],
+    ["w2", "T", "F", "F", "T"],
+    ["w3", "F", "F", "T", "T"],
+  ]}
+  caption="Three worlds with w1 seeing w2 and w2 seeing w3. At w1 the box is true and the double box is false."
+/>
+
+Two entries in that table are worth dwelling on, because each one refutes a principle that looks obvious.
+
+At $w_1$, $\Box P$ is true and $P$ is false. So $\Box P \rightarrow P$ is false at $w_1$, and this model is a countermodel to it. The reason is visible in the structure: $w_1$ does not see itself, so its own values are not consulted when the box is evaluated there.
+
+At $w_1$, $\Box P$ is true and $\Box \Box P$ is false. So $\Box P \rightarrow \Box \Box P$ is false at $w_1$ too. The reason is again structural: $w_1$ sees $w_2$ and $w_2$ sees $w_3$, but $w_1$ does not see $w_3$, so the relation is not transitive, and truth throughout what $w_1$ sees gives no guarantee about truth throughout what those worlds see in turn.
+
+Both observations generalise, and their generalisations are the content of the next article. A formula is refuted by exhibiting a model in which it fails at some world, exactly as a first-order formula is refuted by exhibiting an interpretation, and modal countermodels are usually small enough to draw. Semantic consequence carries over unchanged in form: an argument is valid on a class of frames when, at every world of every model on a frame in that class where the premises are all true, the conclusion is true as well.
+
+<Objection>
+The semantics explains nothing. It offers to tell us what necessity is, and what it says is that $\varphi$ is necessary when $\varphi$ holds at all accessible possible worlds. But "possible world" and "accessible" are modal notions themselves, so the analysis moves in a circle: modality has been explained in terms of a set of things whose selection presupposes exactly the modal facts that were to be accounted for. Adding a relation and calling it accessibility does not change the situation, since which worlds are accessible from which is settled by what is possible relative to what.
+</Objection>
+
+<Reply>
+The objection assumes the semantics is offered as a reductive analysis, and as mathematics it is not. A frame is a non-empty set with a two-place relation on it, and neither the set nor the relation is required to be a set of anything in particular or a relation of any antecedently modal kind. The definitions are as free of modal content as the definition of a group is free of geometric content, and the results proved about them, that certain axioms correspond to certain conditions on $R$, that certain systems are complete, that certain ones are decidable, hold whatever anybody thinks worlds are. The philosophical question the objection raises is real and is not answered here: whether possible worlds are concrete alternative universes, or constructions out of sentences or properties, or useful fictions, and whether any of these makes modality intelligible without presupposing it, is a live dispute treated in the metaphysics subject. The point to hold on to is that the dispute is downstream. Somebody who thinks all talk of possible worlds is a fiction can still use every theorem in this part of the subject, because those theorems are about sets and relations, and the fiction, if it is one, is in the name.
+</Reply>
+
+<Aside title="Systems before semantics">
+Modal logic was studied for over four decades before it had this semantics, which is the reverse of the order used here and explains some otherwise puzzling names. C. I. Lewis introduced a strict conditional in 1918 out of dissatisfaction with the material conditional, and in 1932 he and C. H. Langford presented five systems labelled S1 through S5, each stronger than the last. Those were axiom systems with no interpretation attached: one could derive theorems in them and compare them for strength, but there was no answer to the question of what made a formula valid, and so no way to show that a system had left something out. Kripke published a completeness theorem in 1959 and the semantics for the propositional systems in the years following, and the effect was immediate, since every axiom could now be matched against a condition on the accessibility relation. Related ideas had been developing elsewhere at the same time, notably in Hintikka's work on the logic of knowledge and belief, and the resulting framework is sometimes called relational semantics for that reason. The labels S4 and S5 survive from Lewis and Langford's list, which is why two of the standard systems are named after their position in a numbered sequence and the rest are named after letters.
+</Aside>
+
+## Next
+
+The frame is now available as an object of study in its own right, and the question that organises the next article is which conditions on the accessibility relation validate which formulas. Six systems are picked out that way, each by a single axiom and the class of frames that axiom characterises.
+
+<FurtherReading>
+  <li>C. I. Lewis, *A Survey of Symbolic Logic* (University of California Press, 1918).</li>
+  <li>C. I. Lewis and C. H. Langford, *Symbolic Logic* (The Century Company, 1932).</li>
+  <li>Saul A. Kripke, "A Completeness Theorem in Modal Logic", *The Journal of Symbolic Logic* 24, no. 1 (1959), 1 to 14.</li>
+  <li>Saul A. Kripke, "Semantical Considerations on Modal Logic", *Acta Philosophica Fennica* 16 (1963), 83 to 94.</li>
+  <li>Jaakko Hintikka, *Knowledge and Belief: An Introduction to the Logic of the Two Notions* (Cornell University Press, 1962).</li>
+  <li>G. E. Hughes and M. J. Cresswell, *A New Introduction to Modal Logic* (Routledge, 1996).</li>
+  <li>Patrick Blackburn, Maarten de Rijke and Yde Venema, *Modal Logic* (Cambridge University Press, 2001).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Modal Logic"](https://plato.stanford.edu/entries/logic-modal/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Possible Worlds"](https://plato.stanford.edu/entries/possible-worlds/).</li>
+</FurtherReading>
