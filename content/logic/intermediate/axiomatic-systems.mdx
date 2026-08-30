@@ -1,0 +1,166 @@
+---
+title: Axiomatic Systems and the Deduction Theorem
+subject: logic
+tier: intermediate
+order: 15
+est_read_min: 18
+summary: Hilbert-style proof, why it is painful to use, and the theorem that makes it usable
+prerequisites: ["semantic-tableaux"]
+introduces: ["axiom schema", "Hilbert system", "deduction theorem", "derivation"]
+requires: ["proof system", "syntactic consequence", "natural deduction"]
+added: "2026-08-29"
+---
+
+The two systems given so far were built for people. Natural deduction models the shape of ordinary mathematical argument, and the tableau method organises a search that a person can carry out without insight. The system in this article was built for neither purpose. It is awkward to use, and everyone who works with it says so.
+
+It survives because ease of use is not the only virtue a system can have, and because the property it does have turns out to matter more often than convenience.
+
+## The other extreme
+
+<Definition term="Hilbert system">
+A proof system with a small number of rules, often only one, and a stock of axioms carrying the weight the rules do not. The label is retrospective and honours the programme in foundations that Hilbert led rather than any single system he published; systems of this shape were standard well before the name attached to them.
+</Definition>
+
+<Definition term="Derivation">
+A finite sequence of formulas in which each member is an axiom, a premise, or follows from earlier members by a rule of the system. The last member is the formula derived. Nothing may be assumed temporarily and nothing is ever discharged, so every line of a derivation is asserted outright and depends on the premises alone.
+</Definition>
+
+The absence of assumptions is the essential difference from the previous two articles. Natural deduction was organised around supposing and un-supposing; the tableau method was organised around a search for a countermodel. A derivation in a Hilbert system does neither. It is a flat list, every line of which is either given or follows immediately from lines above it, and the structure is as simple as a proof structure can be.
+
+That simplicity is the point, and the price of it is paid at once.
+
+## Schemas rather than axioms
+
+<Definition term="Axiom schema">
+A pattern with metalinguistic variables in place of formulas, every uniform substitution of formulas for which is an axiom. A schema stands for infinitely many axioms, so a system described as having three axioms in fact has infinitely many, arranged in three families. The alternative is to state finitely many axioms and add a rule permitting substitution, which shifts the same work from the axioms to the rules.
+</Definition>
+
+This is the distinction flagged in passing when the object language and metalanguage were separated. A schema is not a formula. It contains $\varphi$ and $\psi$, which no formula contains, and it is a statement in the metalanguage about which formulas count as axioms.
+
+The practical consequence is that checking whether a line is an axiom is a matter of pattern matching rather than of consulting a list. Given a formula, one asks whether it can be read as an instance of one of the schemas, and the question is decidable by inspection.
+
+## The system
+
+The language will be restricted to negation and the conditional. Nothing is lost by this, since that pair was shown adequate four articles ago, and the other connectives can be introduced as abbreviations.
+
+The word "abbreviation" should be taken literally. $\varphi \lor \psi$ is not a new formula of the language; it is a way of writing $\neg \varphi \rightarrow \psi$ more compactly on the page, and any line of a derivation containing it is really a line containing the longer formula. Conjunction is handled the same way, as $\neg(\varphi \rightarrow \neg \psi)$, and the biconditional as a conjunction of two conditionals once conjunction is available. This matters for the metatheory: since the abbreviations introduce nothing new, a proof by induction on formulas still has only two cases to consider rather than five, and that saving is the whole reason for restricting the language in the first place.
+
+There are three axiom schemas.
+
+$\varphi \rightarrow (\psi \rightarrow \varphi)$
+
+$(\varphi \rightarrow (\psi \rightarrow \chi)) \rightarrow ((\varphi \rightarrow \psi) \rightarrow (\varphi \rightarrow \chi))$
+
+$(\neg \varphi \rightarrow \neg \psi) \rightarrow (\psi \rightarrow \varphi)$
+
+And there is one rule, modus ponens: from $\varphi$ and $\varphi \rightarrow \psi$, write $\psi$.
+
+The first schema says that a truth follows from anything. The third is contraposition in the form that gets one from a negative claim to a positive one, and it is the schema that makes the system classical. The second is harder to read aloud and its purpose is not obvious from looking at it. Its shape becomes intelligible only when the deduction theorem is proved, which is a good reason to suspect that the schema was chosen with the theorem in view.
+
+## What it costs
+
+Consider the least demanding thing a logic could be asked to establish: that any formula implies itself.
+
+<Proof
+  system="axiomatic"
+  caption="Deriving P → P. Every line is an instance of a schema or follows by modus ponens."
+  lines={[
+    { n: 1, formula: "(P → ((P → P) → P)) → ((P → (P → P)) → (P → P))", justification: "Second schema" },
+    { n: 2, formula: "P → ((P → P) → P)", justification: "First schema" },
+    { n: 3, formula: "(P → (P → P)) → (P → P)", justification: "Modus ponens, 1 and 2" },
+    { n: 4, formula: "P → (P → P)", justification: "First schema" },
+    { n: 5, formula: "P → P", justification: "Modus ponens, 3 and 4" },
+  ]}
+/>
+
+Five lines, one of them nearly fifty symbols long, for a result that natural deduction produces in two lines and that most people would not think needed producing at all.
+
+Worse than the length is the opacity. There is no procedure that generates this derivation and no obvious sense in which any step is motivated. The first line is an instance of the second schema chosen because it happens to be the instance that works, and the only way to see that it works is to have the finished derivation in front of you. Someone meeting the system for the first time cannot construct this and cannot be told how.
+
+This is not a criticism that admits of a fix. Searching for derivations in a Hilbert system is genuinely hard, and the difficulty is why nobody works in one directly.
+
+## The theorem that rescues it
+
+<Definition term="Deduction theorem">
+The result that if $\varphi$ can be derived from a set of premises together with $\psi$, then $\psi \rightarrow \varphi$ can be derived from that set alone. Written with the turnstile: if $\Gamma, \psi \vdash \varphi$ then $\Gamma \vdash \psi \rightarrow \varphi$. It is a theorem about the system rather than a rule within it, and it holds despite the system having no assumptions and no discharge.
+</Definition>
+
+What the theorem provides is conditional proof, recovered from outside. The system still has no assumptions; the theorem simply guarantees that whenever a derivation of a certain shape exists, another derivation of a related shape also exists. One may therefore reason as if conditional proof were available, knowing that any argument conducted that way could be converted into an official derivation.
+
+The proof is an induction on the length of the derivation of $\varphi$ from $\Gamma$ together with $\psi$, and it has three cases. Suppose the derivation has been carried out, and consider each of its lines in turn, showing that $\psi \rightarrow \chi$ is derivable from $\Gamma$ alone for every line $\chi$.
+
+If the line is an axiom or a member of $\Gamma$, then it is derivable from $\Gamma$ outright, and the first schema converts it: an instance of that schema gives $\chi \rightarrow (\psi \rightarrow \chi)$, and modus ponens yields $\psi \rightarrow \chi$.
+
+If the line is $\psi$ itself, then $\psi \rightarrow \chi$ is $\psi \rightarrow \psi$, which was derived above without any premises at all.
+
+If the line follows by modus ponens from two earlier lines $\theta$ and $\theta \rightarrow \chi$, then by the inductive hypothesis $\psi \rightarrow \theta$ and $\psi \rightarrow (\theta \rightarrow \chi)$ are both derivable from $\Gamma$. An instance of the second schema gives $(\psi \rightarrow (\theta \rightarrow \chi)) \rightarrow ((\psi \rightarrow \theta) \rightarrow (\psi \rightarrow \chi))$, and two applications of modus ponens deliver $\psi \rightarrow \chi$.
+
+Every line is covered, so in particular the last line is, and that is the theorem.
+
+Now the shape of the second schema explains itself. It is precisely what the modus ponens case of this induction requires, and the first schema is precisely what the axiom case requires. The two schemas were not chosen for their intuitive appeal, of which they have very little. They were chosen because they are what the proof needs.
+
+## What it buys
+
+With the theorem available the system becomes workable, and the earlier derivation becomes trivial. To show that $P \rightarrow P$ is a theorem, note that $P$ is derivable from $P$ in one line, and apply the deduction theorem. Five lines have collapsed into one observation.
+
+The same applies throughout. To show that the conditional is transitive, assume $P$ alongside the premises $P \rightarrow Q$ and $Q \rightarrow R$, apply modus ponens twice to reach $R$, and then apply the deduction theorem to discharge $P$ and obtain $P \rightarrow R$. The argument is now the same argument that natural deduction gives, and the difference is only that here the discharge is licensed by a metatheorem rather than by a rule.
+
+The converse holds too, and it is trivial. If $\psi \rightarrow \varphi$ is derivable from $\Gamma$, then adding $\psi$ to the premises and applying modus ponens once gives $\varphi$. So the two statements are equivalent: $\Gamma, \psi \vdash \varphi$ if and only if $\Gamma \vdash \psi \rightarrow \varphi$. The equivalence is worth stating in full because it says something about the object language and the metalanguage at once. The conditional inside the system and the turnstile outside it agree, and the arrow in a formula genuinely does record, within the language, the same relation the turnstile records about it.
+
+There is a cost to remember, and it is easy to forget once the theorem is in hand. An argument conducted with the deduction theorem is not a derivation. It is a proof that a derivation exists, and the derivation it proves to exist may be very long, since each application of the theorem in the induction above replaces a line with several. The distinction rarely matters in practice and matters a great deal when the length of derivations is itself the object of study.
+
+## Building a stock
+
+The deduction theorem is the largest labour-saving device available, and it is not the only one. The second is simply the accumulation of results.
+
+Once $\varphi \rightarrow \varphi$ has been derived for arbitrary $\varphi$, it never needs deriving again. Any later derivation may write down an instance of it and cite the earlier result, and the citation is legitimate because the earlier derivation can be copied in wholesale at that point. The same applies to any theorem once proved and to any pattern of steps that recurs, which is then recorded as a derived rule.
+
+This is how a Hilbert system is actually worked in, and it changes the character of the enterprise considerably. The first dozen theorems are agonising, because there is nothing to draw on but the three schemas. After that the accumulated stock does most of the work, and derivations that would take fifty lines from the axioms take five from the stock. The point is not that the system has become easy. It is that the difficulty is front-loaded, paid once, and then amortised across everything that follows.
+
+## Where the theorem fails
+
+Nothing in the argument above was automatic, and it is a mistake to expect the deduction theorem wherever there is a system with a conditional in it. The proof used the two schemas and the one rule, and a system with different ingredients may not admit it.
+
+The clearest case is modal logic. Standard modal systems add to the axioms a rule saying that whatever has been proved may be prefixed with the necessity operator, which is reasonable enough for theorems, since a theorem holds in every model whatever. But if that rule is allowed to apply to lines resting on premises, the deduction theorem fails at once. From the premise $\varphi$ one derives its necessitation in one step, so $\varphi$ yields the claim that $\varphi$ is necessary; yet the conditional from $\varphi$ to its own necessity is not a theorem of any system worth having, since a truth need not be a necessary truth. The standard response is to restrict the rule so that it applies only to lines depending on no premises, which restores the theorem at the cost of a more delicate definition of derivability.
+
+Other systems fail the theorem for other reasons. Logics that restrict how many times a premise may be used, or that require the premises of an argument to be relevant to its conclusion, are discussed in the advanced tier, and in several of them the deduction theorem holds only in a weakened form or not at all. The lesson is that the theorem is a result about a particular system rather than a general fact about conditionals, and that it must be proved again for every system in which it is wanted.
+
+## Asking whether an axiom is needed
+
+A Hilbert system makes one question easy to pose that is awkward to pose about a set of rules: whether any of the axioms is redundant. An axiom schema is independent of the others when it cannot be derived from them, and a system all of whose axioms are independent contains no waste.
+
+Showing that a schema is derivable is a matter of deriving it. Showing that it is not requires the technique used for non-adequacy proofs, run in a new setting. Assign to every formula a value drawn from some set of three or more values rather than the usual two, fix a table for each connective over those values, and designate some of the values as the ones a good formula should take. Then verify two things: that every instance of every other schema takes a designated value under every assignment, and that modus ponens carries designated values to designated values. It follows by induction that everything derivable from those schemas takes designated values throughout. If the schema under test takes an undesignated value under some assignment, it is not derivable from them, and its independence is established.
+
+The tables involved need not mean anything. They are not an interpretation of the language and no claim is being made that some third value is a genuine truth value; the whole construction is a device for separating the derivable from the underivable. That said, the same tables read as genuine truth values are the subject of the article on many-valued logics in the advanced tier, and the historical connection between the two uses is not accidental.
+
+## Why anyone uses these systems
+
+The case for a Hilbert system is not a case for using it and is entirely a case for proving things about it.
+
+Consider soundness, which is proved by induction on derivations. For the system above, the induction has four cases: verify that each of the three schemas is a tautology, and verify that modus ponens preserves truth. That is the whole proof. The corresponding proof for a natural deduction system has a case for every rule, which means ten or more, and the cases involving discharge require care about what an assumption's presence means for the truth of a line. The same disparity shows up in every metatheoretic argument, and the completeness proof later in this tier is stated for a Hilbert system for exactly this reason.
+
+There is a second use, less obvious and now more common than the first. Modal logic is organised around axiom schemas. The various systems of modal logic differ from one another by which schemas they contain, and the standard names for them are names of axiom sets rather than of rule sets. Anyone who wants to compare two modal logics compares two lists of schemas, and the framework in which that comparison is natural is the one described here. The articles on modal logic later in this tier are conducted in it throughout.
+
+<Objection>
+The defence concedes the case. A system nobody can use, which is defended on the ground that it is easy to reason about, is a piece of equipment for logicians and not an account of proof. If the deduction theorem is needed to make it usable, and the theorem simply reinstates what natural deduction had all along, the honest conclusion is that natural deduction was right and this is a detour.
+</Objection>
+
+<Reply>
+The conclusion would follow if the two systems were competitors for a single job, and they are not. What natural deduction is good at is representing arguments; what a Hilbert system is good at is being the subject of an argument. A proof that a logic is sound, or complete, or that it has some property preserved under extension, is an argument whose difficulty scales with the number of cases in the system, and reducing that number from a dozen to four is not a small saving when the proof is already long. The deduction theorem is better read as evidence for this than against it: the theorem is provable, which means nothing was lost by leaving discharge out of the system, and the loss of convenience was traded for a genuine gain elsewhere. Notice also which direction the reinstatement runs. The convenience of natural deduction can be recovered inside a Hilbert system by proving one theorem. The brevity of a Hilbert system's metatheory cannot be recovered inside natural deduction by any theorem at all, because the rules are simply there and each must be handled.
+</Reply>
+
+<Aside title="Whose axioms">
+The three schemas above are one presentation among many and there is no canonical list. Some systems use four schemas, some use a dozen, some take the language to contain all five connectives and pay for it with rules governing each. Systems also differ in whether they include a rule of substitution, which permits replacing a sentence letter uniformly throughout a theorem; a system with such a rule can state finitely many axioms instead of infinitely many schema instances. What all of them share is the flat structure and the reliance on axioms rather than rules, and results proved for one transfer to the others by routine translation, which is why textbooks feel free to choose whichever list makes their particular proof shortest.
+</Aside>
+
+## Next
+
+Everything so far has treated sentences as unanalysed wholes. The argument from every human being mortal and Socrates being human to Socrates being mortal has come out invalid at every stage, in every system, because the system cannot see inside the sentences. The next article opens them up.
+
+<FurtherReading>
+  <li>David Hilbert and Paul Bernays, *Grundlagen der Mathematik*, 2 vols. (Springer, 1934 and 1939).</li>
+  <li>Jacques Herbrand, *Recherches sur la théorie de la démonstration*, doctoral thesis, University of Paris, 1930.</li>
+  <li>Curtis Franks, "The Deduction Theorem (Before and After Herbrand)", *History and Philosophy of Logic* 42, no. 2 (2021).</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on axiomatic systems and the deduction theorem.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Development of Proof Theory"](https://plato.stanford.edu/entries/proof-theory-development/).</li>
+</FurtherReading>
