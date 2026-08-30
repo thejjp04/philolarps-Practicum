@@ -792,7 +792,7 @@ export const metaphysics: Subject = {
         estReadMin: 22,
         introduces: [
           "relativity of simultaneity",
-          "the Rietdijk–Putnam argument",
+          "the Rietdijk-Putnam argument",
           "privileged foliation",
           "block universe",
         ],

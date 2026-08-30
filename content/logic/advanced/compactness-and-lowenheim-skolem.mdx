@@ -1,0 +1,117 @@
+---
+title: "Compactness and Löwenheim-Skolem"
+subject: logic
+tier: advanced
+order: 2
+est_read_min: 22
+summary: Two corollaries of completeness, and the limits they place on first-order description
+prerequisites: ["soundness-and-completeness-proofs"]
+introduces: ["compactness theorem", "Löwenheim-Skolem theorem", "Skolem's paradox", "elementary equivalence"]
+requires: ["completeness theorem", "cardinality", "countability", "canonical model"]
+added: "2026-08-30"
+---
+
+The last article proved completeness and then noted two consequences in a few lines each, as though they were bookkeeping. They are not. Neither of them mentions a proof system, a derivation or an axiom; both are claims about which collections of structures a first-order language can pick out, and together they establish that a great deal of ordinary mathematical vocabulary cannot be pinned down by any first-order theory whatever, however many axioms it is given.
+
+The results are old enough to predate the completeness theorem they are here derived from, which is worth keeping in mind. They are not really about proofs. They are about the reach of a language.
+
+## Compactness
+
+<Definition term="Compactness theorem">
+The result that a set of first-order sentences has a model if and only if every finite subset of it has a model. One direction is immediate, since a model of the whole set is a model of each part. The other direction is the substantial one: satisfiability, which is a condition on an infinite collection, is settled entirely by conditions on its finite parts.
+</Definition>
+
+The proof was given at the end of the last article and takes four steps. Suppose every finite subset of a set has a model. By the corollary to soundness, every finite subset is consistent. A derivation of a contradiction from the whole set would cite only finitely many of its members, and would therefore be a derivation of a contradiction from one of those finite subsets, so no such derivation exists and the whole set is consistent. By completeness in its strong form, the set has a model.
+
+Look at what the proof passes through. The statement of the theorem is purely semantic, mentioning only sets of sentences and the structures satisfying them, and the argument for it goes through consistency, derivations and a model built out of syntax. That is not a defect, but it is a curiosity, and it prompted the search for proofs that stay on the semantic side throughout. Such proofs exist, the standard one constructing the required model as a product of the models of the finite subsets, and they are the usual route in model theory now. The route taken here has the advantage of costing nothing extra once completeness is in hand.
+
+The theorem's name comes from topology, where a space is compact when every cover by open sets has a finite subcover. The connection is not merely verbal: a topology can be put on the set of complete theories in a language so that compactness in the logical sense is compactness in the topological sense. Nothing below depends on that, and the name can be treated as a label.
+
+What the theorem says, put without the machinery, is that an infinite list of demands can always be met together provided no finite batch of them conflicts. That is a substantial claim about first-order languages rather than a triviality about demands in general, and the way to see that it is substantial is to notice the systems where it fails. Second-order logic under its standard semantics can say outright that a domain is finite. Take that sentence together with the sentences saying there are at least two things, at least three, and so on: every finite selection from the collection is satisfiable, since a large enough finite domain meets it, and the whole collection is satisfiable by nothing at all. Various infinitary languages fail in the same way for the same reason, and once a language can express a condition that finite approximations cannot detect, compactness goes. First-order logic has the property because its sentences are finite and its derivations are finite, and the price of the expressive power that would remove those restrictions is the theorem.
+
+## What compactness forces into existence
+
+The theorem is used almost always in one direction, and almost always by the same trick: describe an object that seems impossible, check that every finite part of the description is satisfiable, and conclude that the whole description is.
+
+Take the first-order theory of arithmetic, meaning the set of all true first-order sentences about the natural numbers with addition and multiplication. Add to the language a single new constant $c$, and add to the theory the infinitely many sentences saying that $c$ is not zero, that $c$ is not one, that $c$ is not two, and so on through every numeral. Any finite subset of this enlarged collection mentions only finitely many numerals, so it can be satisfied in the ordinary natural numbers by interpreting $c$ as some number larger than all of them. Every finite subset has a model. By compactness, the whole collection has a model.
+
+That model satisfies every truth of arithmetic and also contains an element that is not zero, not one, not two, and not any numeral at all. It is a nonstandard model, and its existence is not an artefact of a weak axiom set: the theory here was every true sentence, so no strengthening is available. The later article on such models works out what they look like, and the short answer is that they contain a copy of the ordinary numbers followed by densely many further blocks.
+
+The same trick yields a general result. If a theory has arbitrarily large finite models, it has an infinite one: add sentences saying there are at least two things, at least three things, at least four things, and so on; every finite subset is satisfied by a large enough finite model, so by compactness the whole set has a model, and that model must be infinite. Turn the result around and it says that finiteness is not first-order expressible. No set of first-order sentences whatever has exactly the finite structures as its models, and none has exactly the infinite ones as its non-models. A language with the resources to say "there are at least seventeen things" for every numeral still cannot say "there are finitely many things".
+
+The list of properties this rules out is longer than it first appears, and one more case is worth doing in full because the pattern is the one every such argument follows.
+
+Consider connected graphs, and suppose some set of first-order sentences had exactly the connected graphs as its models. Add two new constants to the language, and add the sentence saying the two constants denote different points, and then, for each numeral, the sentence saying there is no path of that length between them. Each of those is a perfectly ordinary first-order sentence: a path of length three is expressed by saying there exist two intermediate points with the right edges, and similarly for any fixed length. A finite subset of the collection mentions only finitely many lengths, and a long enough cycle is a connected graph with two points further apart than any of them, so every finite subset has a model. By compactness the whole collection has a model, and that model is a graph satisfying all the supposed axioms for connectedness while containing two points joined by no path at all. It is a disconnected graph satisfying the axioms for connectedness, so there were no such axioms.
+
+The shape recurs. In each case a property is defined by the absence of something, the absences of each finite size are individually expressible, and compactness assembles them into a structure where the property fails while everything expressible about it holds. Torsion in a group, having finite characteristic, and being a well-ordering all fall to versions of it.
+
+The trick has a constructive use as well as a destructive one. Take the first-order theory of the real numbers as an ordered field, add a constant $\varepsilon$, and add the sentences saying that $\varepsilon$ is positive and that $\varepsilon$ is less than $1/n$ for each numeral $n$. Every finite subset is satisfied in the ordinary reals, since a small enough real is below any finitely many of those bounds. So there is a model of every first-order truth about the reals containing a positive element smaller than every positive rational. The Archimedean property is therefore not first-order expressible in this language, and the model produced is an ordered field with genuine infinitesimals in it. Robinson's non-standard analysis, published in 1966, takes exactly this route and then rebuilds the differential calculus on infinitesimals in a way that is rigorous rather than merely suggestive, which is a fair return on a theorem whose usual work is to show that things cannot be said.
+
+## Löwenheim-Skolem
+
+<Definition term="Löwenheim-Skolem theorem">
+A pair of results about the sizes of models. The downward direction says that a satisfiable set of sentences in a countable language has a countable model. The upward direction says that a set with an infinite model has models of every infinite cardinality at least as large as the language. Together they say that no first-order theory with an infinite model controls how large its models are.
+</Definition>
+
+The downward result was already proved, though it was not announced as a theorem. The canonical model of the last article had as its domain the constants of an enlarged language, and the enlargement added only countably many constants to a countable language, so the model was countable. Every consistent set therefore has a countable model, and by the equivalence of consistency and satisfiability the same holds of every satisfiable set. The theorem is a by-product of the shape of the construction rather than of anything proved about it.
+
+The upward result is a compactness argument. Take a theory with an infinite model and a cardinal $\kappa$. Add $\kappa$ many new constants to the language, and add the sentences saying, for each pair of distinct new constants, that they denote different things. Any finite subset of the result involves only finitely many of the new constants, and an infinite model has enough elements to interpret finitely many constants as pairwise distinct, so every finite subset is satisfiable. By compactness the whole is satisfiable, and any model of it has at least $\kappa$ elements. Applying the downward result to that model brings the size back down to exactly $\kappa$.
+
+The qualification about the size of the language is not a technicality that a better proof would remove. A language with uncountably many constants, together with sentences saying that they all denote different things, cannot have a countable model, since a model has to supply a distinct object for each constant. So the downward direction has to be stated in the general case as saying that a satisfiable set has a model no larger than the language it is written in, with the countable case as the instance that matters most. The bound is exactly right rather than merely safe, and the two directions between them say that once the unavoidable minimum imposed by the vocabulary is met, every size is available and none is excluded.
+
+The two directions are also proved by quite different means, which is worth noting because their common name suggests otherwise. Downward comes from the construction of the canonical model, and its content is that the construction never produces more objects than the syntax supplies names for. Upward comes from compactness, and its content is that no finite portion of a theory can rule out extra elements. They were proved decades apart by different people for different reasons, and they are grouped together because their conclusions are complementary rather than because their arguments are related.
+
+So a theory with one infinite model has models of every infinite size. Consider what this costs. The first-order theory of the real numbers has a countable model; there is a countable structure satisfying every first-order sentence true of the reals, including the sentences expressing the ordered field axioms and the first-order consequences of completeness. The first-order theory of the complex numbers has models of every infinite cardinality. Any first-order axiomatisation of anything infinite has company it did not ask for.
+
+## Skolem's paradox
+
+<Definition term="Skolem's paradox">
+The apparent contradiction that arises when the downward theorem is applied to set theory itself. The axioms of Zermelo-Fraenkel set theory are countably many first-order sentences, so if they are consistent they have a countable model. But among their consequences is Cantor's theorem, so that model contains a set it takes to be uncountable, and the model as a whole has only countably many elements.
+</Definition>
+
+The situation is genuinely strange and it is not a contradiction, and separating those two facts is the whole of the resolution.
+
+Being uncountable is not an intrinsic property of a set. It is the property of having no bijection with the natural numbers, which is a claim about what functions there are. Inside a model of set theory, "there is no bijection" means "no bijection is an element of this model". The set the model believes uncountable does have a bijection with the natural numbers, since the whole model is countable and so is everything in it; but that bijection is not itself one of the objects the model contains. Seen from outside, the set is countable. Seen from inside, it is not, because the witness to its countability is missing.
+
+It helps to look at one object inside such a model rather than at the model as a whole. Set theory proves that the collection of all sets of natural numbers is uncountable, so a countable model contains an element playing the part of that collection, and the model satisfies the sentence saying it is uncountable. But the model has countably many elements, so the element playing that part has countably many members within the model, and it is missing almost all of the actual sets of natural numbers. Two things are going on at once: the model's version of the collection is much smaller than the real one, and the model's stock of functions is correspondingly thin, so thin that none of them enumerates it. The second failure is what makes the first invisible from inside. A model cannot notice that it is missing sets when the functions that would reveal the omission are missing too.
+
+The point generalises past this one case. A first-order theory can constrain how its models talk about their own elements, but it cannot reach outside those models to fix what the notions mean absolutely. Cardinality, powerset and finiteness are all relative in this way. Skolem drew the conclusion himself, in an address on axiomatised set theory in 1922: if the axiomatic method cannot secure an absolute notion of the uncountable, it cannot serve as a foundation in the sense its advocates wanted. Not everyone accepted the conclusion, and the standard reaction now is more measured, treating the relativity as a discovered feature of first-order axiomatisation rather than as a defect in set theory. What almost nobody disputes is the observation itself.
+
+## Elementary equivalence
+
+<Definition term="Elementary equivalence">
+The relation holding between two structures when exactly the same first-order sentences are true in both. It is implied by isomorphism, since an isomorphism preserves every property expressible in the language, and it does not imply isomorphism, as the results above make plain.
+</Definition>
+
+The gap between these two relations is where the content of this article collects. A nonstandard model of arithmetic is elementarily equivalent to the ordinary natural numbers and is not isomorphic to them, since it has an element with infinitely many predecessors and the ordinary numbers do not. A countable model of set theory is elementarily equivalent to whatever structure the axioms were meant to be about and is a different size. The upward theorem manufactures elementarily equivalent structures of every infinite cardinality on demand, and structures of different cardinalities cannot be isomorphic.
+
+The gap opens only at infinity, and it is worth seeing that it closes below. In a language with finitely many predicates and constants, a finite structure can be described completely by a single sentence: say how many elements there are, name them with variables, and record for each predicate exactly which tuples of those variables satisfy it and which do not. Any structure satisfying that sentence has the same size and the same pattern of relations, so it is isomorphic to the original. For finite structures, then, elementary equivalence and isomorphism coincide, and a first-order theory that has only finite models really does determine them completely. Everything at issue in this article is a consequence of allowing infinite domains, where no single sentence and no set of sentences can perform the same trick.
+
+That gap is what "first-order description has limits" amounts to when it is made precise. A first-order theory determines the elementary equivalence class of its models and nothing finer. If two structures differ in a way no first-order sentence detects, no first-order theory separates them, and the previous sections show that differences of size are always of this kind once the structures are infinite.
+
+The natural next question is how much can be recovered. A theory might at least fix its models up to isomorphism within a single infinite cardinality, and some theories do; that property is categoricity, and the later article on model theory treats it, along with the surprising result that a countable theory categorical in one uncountable cardinality is categorical in all of them.
+
+<Objection>
+Skolem's paradox shows that something has gone wrong. Either set theory is incoherent, or the word "uncountable" fails to mean anything determinate, since a set can be uncountable and countable depending on where one stands. A notion that behaves that way is not a notion of size at all, and Cantor's theorem, which was supposed to establish a hierarchy of infinities, establishes at most a hierarchy internal to whichever model one happens to be inside.
+</Objection>
+
+<Reply>
+No contradiction has been produced, and it is worth being exact about why. The two claims are that the set has no bijection with the natural numbers among the elements of the model, and that it has one among the sets there are. Those are different claims, and both are true. The appearance of paradox comes from dropping the qualifications, which is precisely what the relativity result forbids. What follows is a limitation on the first-order axiomatic method, not on the concept: what the axioms fail to fix is a determinate interpretation, and that failure was established by the same techniques that produced the theorems above. Whether the concept itself is determinate is a further question, and one on which the theorem is silent. Someone convinced that there is a fact about which sets there are will say that the countable model simply omits most of them, and nothing in the mathematics refutes this. Someone unconvinced will say the theorem is evidence for their view, and nothing refutes that either. The theorem constrains what axioms can do and leaves the metaphysics where it found it.
+</Reply>
+
+<Aside title="Before the theorem they follow from">
+Löwenheim proved the downward result in 1915, fifteen years before the completeness theorem it is here derived from, and his argument was conducted in the algebra of relatives inherited from Peirce and Schröder rather than in anything a modern reader would recognise as first-order logic. Skolem gave a cleaner proof in 1920 and extended it to countable sets of sentences, which is why both names are attached. Compactness has a more scattered history: it is implicit in Gödel's completeness proof of 1930 for countable languages, and Mal'cev extended it to languages of arbitrary size in 1936. In each case the semantic result arrived before or alongside the syntactic machinery now used to prove it, which is one reason model theory eventually separated from proof theory and acquired methods of its own.
+</Aside>
+
+## Next
+
+Compactness and the size results say what first-order languages cannot describe. The next article asks a different question about limits: not what can be said, but what can be decided. Validity in propositional logic is settled by a truth table, and the question is whether anything comparable exists for first-order logic. The answer is no, and proving it requires a precise account of what a mechanical procedure is.
+
+<FurtherReading>
+  <li>Leopold Löwenheim, "Über Möglichkeiten im Relativkalkül", *Mathematische Annalen* 76 (1915), 447 to 470.</li>
+  <li>Abraham Robinson, *Non-standard Analysis* (North-Holland, 1966).</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971).</li>
+  <li>Herbert B. Enderton, *A Mathematical Introduction to Logic*, 2nd edition (Academic Press, 2001).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Skolem's Paradox"](https://plato.stanford.edu/entries/paradox-skolem/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["First-order Model Theory"](https://plato.stanford.edu/entries/modeltheory-fo/).</li>
+</FurtherReading>

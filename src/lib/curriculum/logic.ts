@@ -390,13 +390,13 @@ export const logic: Subject = {
       },
       {
         slug: "compactness-and-lowenheim-skolem",
-        title: "Compactness and Löwenheim–Skolem",
+        title: "Compactness and Löwenheim-Skolem",
         summary:
           "Two corollaries of completeness, and the limits they place on first-order description",
         estReadMin: 22,
         introduces: [
           "compactness theorem",
-          "Löwenheim–Skolem theorem",
+          "Löwenheim-Skolem theorem",
           "Skolem's paradox",
           "elementary equivalence",
         ],
@@ -416,7 +416,7 @@ export const logic: Subject = {
         introduces: [
           "recursive function",
           "recursively enumerable set",
-          "Church–Turing thesis",
+          "Church-Turing thesis",
           "halting problem",
           "decidability",
           "Church's theorem",
@@ -544,7 +544,7 @@ export const logic: Subject = {
           "o-minimality",
         ],
         requires: [
-          "Löwenheim–Skolem theorem",
+          "Löwenheim-Skolem theorem",
           "elementary equivalence",
           "cardinality",
           "canonical model",
@@ -566,7 +566,7 @@ export const logic: Subject = {
           "predicate",
           "completeness theorem",
           "compactness theorem",
-          "Löwenheim–Skolem theorem",
+          "Löwenheim-Skolem theorem",
           "categoricity",
         ],
       },
@@ -661,12 +661,12 @@ export const logic: Subject = {
       },
       {
         slug: "curry-howard-correspondence",
-        title: "The Curry–Howard Correspondence",
+        title: "The Curry-Howard Correspondence",
         summary:
           "Proofs as programs: the isomorphism between natural deduction and the typed lambda calculus, and what normalization turns out to be",
         estReadMin: 28,
         introduces: [
-          "Curry–Howard correspondence",
+          "Curry-Howard correspondence",
           "simply typed lambda calculus",
           "propositions as types",
           "proof normalization",
@@ -748,12 +748,12 @@ export const logic: Subject = {
         slug: "conditionals-and-triviality",
         title: "Conditionals and the Triviality Results",
         summary:
-          "Indicative against subjunctive, the Stalnaker–Lewis semantics, Adams' thesis, and why probability cannot be a conditional's meaning",
+          "Indicative against subjunctive, the Stalnaker-Lewis semantics, Adams' thesis, and why probability cannot be a conditional's meaning",
         estReadMin: 28,
         introduces: [
           "indicative conditional",
           "subjunctive conditional",
-          "Stalnaker–Lewis semantics",
+          "Stalnaker-Lewis semantics",
           "Adams' thesis",
           "triviality result",
         ],
