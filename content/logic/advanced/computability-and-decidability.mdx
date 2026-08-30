@@ -1,0 +1,145 @@
+---
+title: "Computability, Decidability, and Church's Theorem"
+subject: logic
+tier: advanced
+order: 3
+est_read_min: 26
+summary: Recursive functions, the halting problem, and the proof that first-order validity has no decision procedure
+prerequisites: ["compactness-and-lowenheim-skolem"]
+introduces: ["recursive function", "recursively enumerable set", "Church-Turing thesis", "halting problem", "decidability", "Church's theorem"]
+requires: ["set", "function", "countability", "recursive definition", "predicate"]
+added: "2026-08-30"
+---
+
+The completeness theorem left a loose end. Derivations are finite strings over a countable alphabet, so they can be listed one after another by a machine, and completeness guarantees that every valid formula eventually appears at the end of one of them. A machine that generates derivations and stops when the target formula turns up will therefore stop on every valid formula. On an invalid one it runs forever, and at no point during the running is there anything to distinguish a formula whose derivation has not yet been reached from a formula that has none.
+
+The obvious question is whether something better exists. Propositional validity is settled by a truth table, which always finishes; is there any comparable procedure for first-order validity, whatever it might look like?
+
+The answer is no, and it is a theorem rather than a report of failure. But to prove that no procedure exists, rather than that none has been found, one has to say what a procedure is, and that turns out to be the substantial part of the work.
+
+## Making the informal notion precise
+
+The intuitive idea has been in use since antiquity. A procedure is a finite list of instructions, mechanical in the sense that following them requires no ingenuity, deterministic, and guaranteed to produce its answer in finitely many steps whenever it produces one at all. Every working mathematician recognises examples, and nobody had needed a definition, because the notion had only ever been used positively: to show that something can be computed, one exhibits the procedure.
+
+Proving that something cannot be computed reverses the burden. The claim quantifies over all possible procedures, so the collection has to be delimited, and delimiting it means replacing the intuitive notion with a mathematical one. Three such replacements were proposed independently within a few years of each other in the 1930s, and the first is the one the ladder names.
+
+<Definition term="Recursive function">
+A function on the natural numbers built from the constant zero, the successor function, and the functions returning one of their arguments, by three operations: composing functions already built, defining a function by recursion on one argument in terms of its value at the predecessor, and searching upward for the least number satisfying a condition already built. The functions obtainable without the search operation are the primitive recursive ones, which are all total; the search operation is what allows a definition to fail to return a value.
+</Definition>
+
+The construction should look familiar. It is a recursive definition in the sense established early in this tier: a base case, a set of clauses generating new items from old, and a closure condition saying nothing else qualifies. What is defined here is a class of functions rather than a class of formulas, but the pattern is the same, and the induction principle it supports is what makes proofs about the class possible.
+
+The third operation deserves comment because it is the only one that introduces any risk. Composition and recursion applied to total functions produce total functions, so everything primitive recursive is defined everywhere. Search need not terminate: if no number satisfies the condition, the function has no value at that argument. That looks like a defect and is the entire point. A class of functions all of which are guaranteed to terminate cannot include a function that simulates arbitrary computations, since the simulation would then have to be guaranteed to terminate too, and the results below all turn on computations that do not.
+
+A small example shows how ordinary arithmetic enters a definition that begins with nothing but zero and successor. Addition is defined by recursion on its second argument: adding zero to a number returns that number, and adding the successor of a number returns the successor of the sum. Multiplication is then defined by recursion using addition: multiplying by zero gives zero, and multiplying by a successor gives the previous product plus the original number. Exponentiation follows from multiplication by the same pattern, and so does every arithmetic operation ordinarily met. Each definition uses only the value at the predecessor and functions already constructed, which is exactly the clause the class permits, and each is a recursive definition in the sense established earlier in this tier: base case, generating clause, closure. That the familiar operations turn up this early is what makes the class plausible as an analysis of computation rather than an arbitrary collection.
+
+Nor is the primitive recursive fragment adequate on its own. Ackermann's function is defined by a double recursion, is total, is computable by anyone willing to follow its clauses, and grows faster than every primitive recursive function, so it is not among them. Adding search closes the gap.
+
+The two other analyses of the 1930s were Church's lambda calculus, a formalism of pure function application with no numbers in it at all until they are coded up, and Turing's machines, an idealisation of a clerk working with a pencil on a paper tape according to a finite table of instructions. The three were shown to define exactly the same class of functions. That is a theorem, proved by explicit translations in each direction, and it is the main evidence for the following.
+
+<Definition term="Church-Turing thesis">
+The claim that the functions computable by any effective procedure whatever are exactly the recursive functions. It is not a theorem and cannot be one, since one side of the identification is an informal notion and no proof can connect an informal notion to a mathematical one. It is supported by the convergence of independently motivated analyses on the same class, by the failure of every attempt to define a procedure falling outside it, and by ninety years of use.
+</Definition>
+
+The thesis is doing specific work below, and it is worth locating that work exactly. Every result in this article has a mathematical statement that mentions only recursive functions and is proved outright, without the thesis. The thesis is needed only for the further step from "no recursive function does this" to "nothing does this", which is the step that makes the results interesting rather than the step that makes them true.
+
+One reading of the thesis should be set aside before it causes trouble, since it is common and is not what the thesis says. The claim is about functions on the natural numbers and about effective procedures, meaning finite, mechanical, ingenuity-free routines of the sort described above. It is not the claim that human thought is mechanical, that minds are machines, or that everything a mathematician does can be automated. Those are further theses, they require arguments of their own, and some of them have been defended by appeal to results in this area and disputed by appeal to the same results. The thesis as stated is compatible with every position in that dispute, because it says nothing about what humans do except when they are following a procedure, and following a procedure is the one activity where the mechanical character is stipulated rather than discovered.
+
+Turing's contribution to the thesis was not another equivalent formalism but an argument. He analysed what a human being computing with paper could do, and argued that the constraints on such a process, finitely many distinguishable symbols, finitely many states of mind, attention to a bounded region at each moment, force the process into the form his machines describe. That is a reason for accepting the thesis rather than another piece of evidence for it, and it is why the machines rather than the recursive functions became the standard informal picture.
+
+## Deciding and listing
+
+Two properties a set of numbers can have need separating, because the whole of what follows lies in the gap between them.
+
+<Definition term="Decidability">
+The property a set has when some procedure determines membership in it: given any object, the procedure halts and answers correctly, yes or no. A property is decidable when the set of things having it is, and a theory is decidable when the set of its theorems is. The requirement that the procedure halt on every input is what distinguishes this from mere search.
+</Definition>
+
+<Definition term="Recursively enumerable set">
+The property a set has when some procedure lists its members, so that everything in the set eventually appears and nothing else does. Equivalently, when some procedure halts exactly on the members and runs forever on everything else. Such a set can be confirmed but not, in general, refuted: waiting is evidence of nothing.
+</Definition>
+
+Every decidable set is recursively enumerable, since a procedure that answers correctly can be used to generate the members in order. The converse is what fails, and the exact relation between the two notions is given by a small theorem that is used constantly.
+
+A set is decidable exactly when both it and its complement are recursively enumerable. One direction is immediate: a decision procedure yields listings of both. For the other, suppose there are listings of the set and of its complement. Given an object, run both listings together, alternating between them so that neither is left waiting on the other, and watch for the object to appear. It belongs to one or the other, so it appears in one of the two listings after finitely many steps, and whichever listing it appears in gives the answer. The procedure halts on every input, so the set is decidable.
+
+The vocabulary here has drifted, and the drift is worth recording because the older terms are the ones the ladder uses and the newer ones are what a reader will meet elsewhere. A recursively enumerable set is now often called computably enumerable, and a decidable set computable, on the ground that the older names suggest a dependence on one particular formalism that the equivalence results removed. The property of being recursively enumerable is also called semi-decidability, which names the situation exactly: half the question is answerable and half is not. Nothing turns on the choice, and the three pairs of terms are interchangeable.
+
+That argument is the reason the results below take the shape they do. To show a set undecidable, it is enough to show that it is recursively enumerable and that its complement is not, and the second half is where the diagonal argument goes.
+
+## The halting problem
+
+<Definition term="Halting problem">
+The problem of determining, given a procedure and an input, whether that procedure eventually halts on that input. The set of such pairs is recursively enumerable, since one can simply run the procedure and wait, and it is not decidable, so its complement is not recursively enumerable.
+</Definition>
+
+Procedures are finite objects. They can be written as finite strings and so, like formulas, can be numbered, which means a procedure can be given another procedure as its input. That is the only preparation the proof needs.
+
+Suppose there were a procedure $H$ that decides halting: given a procedure and an input, $H$ always terminates, answering yes if the given procedure halts on the given input and no if it does not. Using $H$, build a new procedure $D$ that takes a single procedure as its input and does the following. It calls $H$ to ask whether that procedure halts when run on itself. If $H$ says yes, $D$ enters an endless loop. If $H$ says no, $D$ halts immediately.
+
+Now run $D$ on $D$.
+
+If $D$ halts on $D$, then $H$, asked about $D$ and $D$, answered yes, and $D$ was built to loop forever in that case, so $D$ does not halt on $D$. If $D$ does not halt on $D$, then $H$ answered no, and $D$ was built to halt immediately in that case, so $D$ does halt on $D$. Both possibilities are contradictory, and the only assumption made was that $H$ exists.
+
+The argument is Cantor's diagonal argument in another costume, and it is worth seeing the correspondence rather than merely being told about it. Cantor's proof takes a list of reals and builds one differing from the first in the first place, the second in the second, and so on, so that it cannot be on the list. This proof takes the procedures, considers what each does when applied to itself, which is the diagonal of the table whose rows are procedures and whose columns are inputs, and builds a procedure differing from every one of them at exactly that diagonal position. The self-application is the diagonal, and the inversion of the answer is the change of digit.
+
+The halting problem is the first natural example of a set that is recursively enumerable and not decidable, and by the small theorem above, the set of non-halting pairs is not recursively enumerable at all. Nothing lists the computations that run forever.
+
+## The universal machine, and how far the damage spreads
+
+One step in that proof was passed over quickly and carries more than its weight. The procedure $D$ was described as calling $H$ and then running, which presupposes that a procedure can take another procedure as data and act on it. Turing established this outright by constructing a single machine that accepts the table of any machine together with an input and then simulates the behaviour of that machine on that input, step for step. Everything the individual machines do collectively, one machine does. The construction is what licenses the self-application in the diagonal argument, and it also disposes of the suspicion that undecidability comes from some artificial restriction on what a procedure may be handed.
+
+The universal machine has a second life outside logic. A device whose behaviour is fixed by the data it is given, rather than by its wiring, is a general purpose computer, and the description of one appeared in a paper about a problem in the foundations of mathematics nearly a decade before anything of the kind was built.
+
+Undecidability, once it has a foothold, spreads. Rice's theorem says that no non-trivial property of the function a procedure computes is decidable from the procedure's text: whether it ever returns zero, whether it agrees with some fixed function, whether it halts on all inputs, and every other such question is undecidable, with the only exceptions being the two properties held by everything and by nothing. The reason is that any such property can be used to answer halting by the reduction technique described next. The consequence for practice is blunt. No program can examine an arbitrary program and determine what it does, and every tool that appears to do so is either answering a restricted question, answering approximately, or declining to answer in some cases.
+
+## Church's theorem
+
+<Definition term="Church's theorem">
+The result that the set of valid first-order sentences is not decidable: no procedure takes an arbitrary sentence of first-order logic and determines in finitely many steps whether it is valid. The set is recursively enumerable, since completeness allows the derivations to be listed, so the failure is exactly the failure of the complement to be listable.
+</Definition>
+
+The proof is a reduction, which is the standard method for transferring undecidability from one problem to another and is worth stating in general before it is applied. Suppose problem A is known to be undecidable, and suppose there is a procedure that converts each instance of A into an instance of problem B, in such a way that the answer to the converted instance is always the answer to the original. Then a decision procedure for B would yield one for A, by converting and then deciding. Since A has none, B has none either. The direction is easy to reverse by mistake: to show B undecidable one reduces A to B, not B to A.
+
+Here A is halting and B is first-order validity. What is needed is a way of writing, for each procedure and each input, a first-order sentence that is valid exactly when that procedure halts on that input. The construction describes the computation in the language: predicates for the state of the machine, its tape contents and its position at each step, a formula for the initial configuration, formulas expressing each instruction of the machine's table, and a formula saying that a halting configuration is eventually reached. The conjunction of the descriptions, taken as antecedent, and the halting statement, taken as consequent, gives a conditional that is valid exactly when the described computation does halt. Writing the conditional is itself a mechanical business, since it is assembled from the machine's finite table by a fixed recipe.
+
+A decision procedure for validity would therefore decide halting. There is none.
+
+Two qualifications keep the result in proportion. It concerns full first-order logic, and not everything nearby shares the fate. Propositional validity is decidable, since a truth table always terminates, though the number of rows doubles with each additional letter and the question of whether some fundamentally faster method exists is the central open problem of computational complexity. First-order logic with only one-place predicates is decidable. Presburger arithmetic, the first-order theory of the natural numbers with addition and no multiplication, was shown decidable by Presburger in 1929. Tarski found a decision procedure for the first-order theory of the real numbers as an ordered field, a result obtained in the 1930s and published only in 1948 after the war intervened, and it decides the whole of elementary algebra and geometry. Undecidability arrives with the expressive power to describe computation, and a good deal of mathematics sits below that threshold. It should be added that the line drawn in this article is not the only one worth drawing. Among the decidable problems there is a further division between those a procedure settles in a workable number of steps and those where the only known procedures take longer than the age of the universe on modest inputs, and both of the decidable theories named in the previous sentence fall on the wrong side of it. Decidability is a necessary condition for being answerable in practice and nothing like a sufficient one.
+
+The reduction technique also travels far beyond logic, and the range of what it has settled is the best evidence that the notion being reduced to is the right one. The word problem for groups, which asks whether two products of generators denote the same element, is undecidable in general. So is the question whether a given finite set of tiles can cover the plane. Hilbert's tenth problem, which asked for a procedure determining whether a polynomial equation with integer coefficients has a solution in integers, was answered negatively in 1970 by Matiyasevich, completing a line of work by Davis, Putnam and Julia Robinson. In each case the proof shows how to encode a computation into the objects of the problem, so that a decision procedure for the problem would decide halting. These are not results about logic that happen to be stated elsewhere; they are ordinary mathematical questions, asked for ordinary reasons, that turn out to have no general answer.
+
+The second qualification is that the theorem says nothing about any individual sentence. Every valid sentence has a derivation and every invalid one has a countermodel, and both can in principle be exhibited. What fails is the existence of a single method covering all cases. That is the same distinction drawn at the end of the article on completeness, between what exists and what can be found, and it is the distinction this whole article turns on.
+
+## The question that was being answered
+
+Hilbert and Ackermann had posed the decision problem for first-order logic explicitly in their textbook, as one item on a programme of settling metamathematical questions by finitary means. It was posed as a task, in the expectation that a procedure would be found, and the interest in it is a large part of why the analysis of computability was undertaken at all. The negative answer arrived in 1936 from two directions at once. Church published a proof using his lambda calculus, and Turing, working in Cambridge and independently, published one using his machines later the same year, with an appendix sketching the equivalence of the two notions of computability once he learned of Church's work.
+
+The two papers answered the same question and are remembered differently. Church's route reached the answer first. Turing's route supplied the analysis of what a computation is that made the answer convincing, along with the observation that a single machine can simulate any other given its table as input, which is the theoretical description of a general purpose computer.
+
+<Objection>
+Church's theorem is not proved. What is proved is that no recursive function decides validity, and the passage from that to the claim that no procedure whatever decides validity relies on the Church-Turing thesis, which is admitted on all sides not to be a theorem. So the celebrated negative result is a mathematical theorem about one particular class of functions, dressed up with a philosophical conjecture to make it sound like a limitation on human capacity. If someone were to propose a procedure outside the class, nothing in the mathematics would exclude it.
+</Objection>
+
+<Reply>
+The structure is described correctly and the objection draws too strong a conclusion from it. Nothing in the mathematics excludes such a proposal, and this is not a gap that a better proof would close: no proof can connect an informal notion to a formal one, so any result of this kind has the same shape, and the alternative is not a better proof but the abandonment of negative results altogether. What can be said is how the thesis is supported, and the support is unusually strong. Three analyses devised for different purposes by people with different aims picked out the same class. Every subsequent model of computation proposed for other reasons, including register machines, Markov algorithms, and every programming language in use, has picked out the same class again, and the ones designed specifically to escape it do so only by assuming resources, such as unbounded precision in a physical measurement or infinitely many steps in finite time, that were excluded by the notion of an effective procedure at the outset. Turing's argument from the constraints on a human computer gives a reason rather than another data point. And the thesis is refutable in principle by a single counterexample, which is more than can be said for many claims accepted with less scrutiny. What the objection is right about is that the thesis should be stated when it is used, which is why it is stated here.
+</Reply>
+
+<Aside title="Two papers in one year">
+Church's note on the decision problem is two pages long and appeared in the first issue of the journal he had helped found. It relies on a longer paper of his from the same year in which the lambda calculus is used to exhibit an unsolvable problem in number theory. Turing's paper is fifty times longer, spends most of its length constructing the machines and the universal machine, and reaches the decision problem only at the end. Turing had been working in ignorance of Church's result, and the appendix relating the two notions was added after the fact. He went to Princeton shortly afterwards and completed a doctorate under Church, which is the most direct connection between the two analyses that now share a name.
+</Aside>
+
+## Next
+
+The techniques assembled here are the ones the incompleteness theorems need. A set of axioms recognisable by machine is a recursively enumerable set of sentences; a theory that decides every sentence in its language is a complete one; and the diagonal argument that produced the halting problem, applied to arithmetic rather than to procedures, produces a sentence that a theory can neither prove nor refute. The next article carries that out.
+
+<FurtherReading>
+  <li>Alonzo Church, "An Unsolvable Problem of Elementary Number Theory", *American Journal of Mathematics* 58, no. 2 (1936), 345 to 363.</li>
+  <li>Alonzo Church, "A Note on the Entscheidungsproblem", *The Journal of Symbolic Logic* 1, no. 1 (1936), 40 to 41.</li>
+  <li>Alan M. Turing, "On Computable Numbers, with an Application to the Entscheidungsproblem", *Proceedings of the London Mathematical Society*, series 2, volume 42 (1936 to 1937), 230 to 265.</li>
+  <li>Herbert B. Enderton, *A Mathematical Introduction to Logic*, 2nd edition (Academic Press, 2001).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Church-Turing Thesis"](https://plato.stanford.edu/entries/church-turing/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Turing Machines"](https://plato.stanford.edu/entries/turing-machine/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Recursive Functions"](https://plato.stanford.edu/entries/recursive-functions/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Hilbert's Program"](https://plato.stanford.edu/entries/hilbert-program/).</li>
+</FurtherReading>
