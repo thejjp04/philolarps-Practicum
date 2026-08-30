@@ -1,0 +1,134 @@
+---
+title: Truth-Functional Completeness
+subject: logic
+tier: intermediate
+order: 11
+est_read_min: 13
+summary: Showing that a small set of connectives can express every truth function
+prerequisites: ["truth-and-proof"]
+introduces: ["functional completeness", "adequate set", "disjunctive normal form"]
+requires: ["truth function", "truth table", "well-formed formula"]
+added: "2026-08-29"
+---
+
+Five connectives were introduced in the beginner tier and nothing was said about why five. The number is not forced. The biconditional can be rewritten as a conjunction of two conditionals, and the conditional itself as a disjunction with a negated left side, so at least two of the five are already dispensable. This article asks how far the trimming goes and, more importantly, how to establish that whatever is left is still enough.
+
+## How much has to be covered
+
+The target is not the five named connectives but every truth function whatever.
+
+A truth function of $n$ arguments assigns an output value to each of the $2^n$ combinations of input values. Since each of those $2^n$ rows can be filled in two ways independently, the number of $n$-place truth functions is $2$ raised to the power $2^n$.
+
+For one argument that gives four: the identity, negation, and the two constant functions. For two it gives sixteen, which is the subject of the next article. For three it gives 256, and for four it gives 65,536. The named connectives are a handful of entries from an enormous and mostly nameless collection, and a claim to have covered them all is a claim about that whole collection.
+
+The formula also covers the case of no arguments at all. With $n$ equal to zero there is a single row, since there is nothing to vary, and two functions filling it: one always true and one always false. These are the constants, written $\top$ and $\bot$ and read "verum" and "falsum". Some presentations take them as primitive connectives of arity zero rather than deriving them, which is a convenience rather than a change of expressive power, since any adequate set already expresses them by way of a tautology and a contradiction.
+
+<Definition term="Functional completeness">
+The property a set of connectives has when every truth function of every number of arguments can be expressed by some well-formed formula built using only connectives from that set. The property concerns expressive power alone and says nothing about convenience: a complete set may require enormous formulas for functions a richer set expresses briefly.
+</Definition>
+
+<Definition term="Adequate set">
+A set of connectives that is functionally complete. The two terms are used interchangeably, with "adequate set" more common when the set itself is the subject and "functional completeness" more common when the property is.
+</Definition>
+
+## The construction that proves adequacy
+
+One phrase in those definitions needs pinning down before it can be used. A formula expresses a truth function when the column it generates under every interpretation of its letters matches the function's output row for row. Two formulas expressing the same function are logically equivalent, in the beginner tier's sense, so the question of expressive power is a question about equivalence classes of formulas rather than about formulas one at a time. Nothing is being asked about how a formula is written, only about the function it computes.
+
+The standard result is that the set containing negation, conjunction, and disjunction is adequate. What makes the proof satisfying is that it is not an existence claim but a recipe: given any truth function at all, presented as a table, it produces a formula expressing it.
+
+<Definition term="Disjunctive normal form">
+A formula that is a disjunction of one or more disjuncts, each of which is a conjunction of one or more literals, where a literal is a sentence letter or the negation of one. Every truth function is expressed by some formula in this form, and the construction below produces one from a truth table directly.
+</Definition>
+
+Take an arbitrary three-place truth function, say this one.
+
+<TruthTable
+  columns={["P", "Q", "R", "f"]}
+  rows={[
+    ["T", "T", "T", "F"],
+    ["T", "T", "F", "T"],
+    ["T", "F", "T", "F"],
+    ["T", "F", "F", "F"],
+    ["F", "T", "T", "T"],
+    ["F", "T", "F", "F"],
+    ["F", "F", "T", "F"],
+    ["F", "F", "F", "T"],
+  ]}
+  caption="An arbitrary three-place truth function, chosen with no pattern in mind."
+/>
+
+The recipe has three steps.
+
+Look only at the rows where the output is true. Here there are three: the second, the fifth, and the last.
+
+For each such row, write a conjunction of literals that is true on exactly that row and false on every other. This is mechanical: take each letter unnegated if it is true in the row and negated if it is false. The second row gives $P \land Q \land \neg R$. The fifth gives $\neg P \land Q \land R$. The last gives $\neg P \land \neg Q \land \neg R$.
+
+Disjoin them. The result is
+
+$(P \land Q \land \neg R) \lor (\neg P \land Q \land R) \lor (\neg P \land \neg Q \land \neg R)$
+
+and it expresses the function. The reason is immediate: a disjunction is true exactly when some disjunct is, each disjunct is true on exactly one row, and the rows chosen are exactly the rows where the function is true.
+
+Nothing in the argument used any feature of this particular table. The same steps apply to any truth function of any number of arguments, which is what makes this a proof rather than an example.
+
+One case needs separate handling. A function false on every row has no true rows to work from, so the recipe produces an empty disjunction. Such a function is expressed by any contradiction, for instance $P \land \neg P$, and the case is closed.
+
+## What the construction costs
+
+The recipe is guaranteed to work and it is guaranteed to be wasteful.
+
+A function of $n$ arguments has $2^n$ rows, and in the worst case something close to half of them are true, so the formula produced can have on the order of $2^n$ disjuncts, each of them a conjunction of $n$ literals. For four arguments that is a formula with dozens of symbols where a well-chosen equivalent might have five. The construction takes no notice of structure: given the table for $P \leftrightarrow Q$ it returns a disjunction of two three-symbol conjunctions rather than the biconditional itself.
+
+This is worth stating plainly because adequacy is often heard as a stronger claim than it is. That a set of connectives can express every truth function does not mean it can express every truth function briefly. Finding the shortest formula equivalent to a given one is a genuinely hard problem, and an entire field of circuit design exists because of it. What adequacy establishes is that nothing is out of reach, which is exactly what a metatheoretic proof needs and nothing more.
+
+## Trimming further
+
+With adequacy established for three connectives, De Morgan's laws remove one more. A disjunction $\varphi \lor \psi$ has the same truth table as $\neg(\neg \varphi \land \neg \psi)$, so any formula using disjunction can be rewritten without it. Negation and conjunction alone are therefore adequate.
+
+The same move in the other direction shows that negation and disjunction are adequate. And since $\varphi \lor \psi$ has the same table as $\neg \varphi \rightarrow \psi$, negation together with the conditional is adequate as well.
+
+Three two-element sets, then, each suffice. The next article shows that a single connective can suffice on its own, which is the limiting case.
+
+## Showing that a set is not adequate
+
+Positive results are established by construction. Negative results need a different technique, and the technique is the induction on formulas set up two articles ago.
+
+Consider the set containing conjunction, disjunction, the conditional, and the biconditional, with negation removed. The claim is that it cannot express negation.
+
+Look at what these four connectives do when every input is true. Conjunction of two truths is true; disjunction of two truths is true; a conditional with true antecedent and true consequent is true; a biconditional of two truths is true. Every one of them returns true when fed nothing but true.
+
+Now argue by induction on formulas. Take the interpretation assigning true to every sentence letter. Every atomic formula is true on it. And if $\varphi$ and $\psi$ are true on it, then so is any compound formed from them by one of the four connectives, by the observations just made. So every formula built from these connectives alone is true on that interpretation.
+
+But $\neg P$ is false on it. So no formula built from the four connectives has the truth table of $\neg P$, and the set is not adequate.
+
+The shape of that argument is worth extracting, because it is the shape of every non-adequacy proof. Find a property that every connective in the set preserves, verify that the atoms have it, conclude by induction that every expressible function has it, and exhibit a function that lacks it. Preservation of truth is one such property. Others include preservation of falsity, and behaving predictably under swapping every input value at once.
+
+Falsity works as smoothly as truth. Conjunction of two falsehoods is false and disjunction of two falsehoods is false, so on the interpretation assigning false to every letter, every formula built from conjunction and disjunction alone is false. The conditional does not behave this way: a conditional with false antecedent and false consequent is true. So the conditional is not expressible from conjunction and disjunction, and that pair is not adequate either, this time without negation being mentioned anywhere in the argument.
+
+The two results together are a useful check on intuition. Conjunction and disjunction are the two connectives that feel most fundamental, and between them they cannot express the conditional; negation feels like a mere sign flip, and without it nothing at all can be built that ever changes a truth value into a falsehood. Expressive power does not track how basic a connective seems.
+
+Emil Post carried this programme to its conclusion in *The Two-Valued Iterative Systems of Mathematical Logic* of 1941, classifying every set of Boolean connectives closed under composition. The classification settles the adequacy question for every possible set at once: a set is adequate exactly when it fails to fall inside any of the maximal classes his analysis identifies.
+
+<Objection>
+The whole exercise is a curiosity. Nobody writes proofs using only the Sheffer stroke, and rewriting a readable formula into a disjunction of eight conjunctions makes it worse, not better. The five connectives exist because they are the ones people use.
+</Objection>
+
+<Reply>
+Convenience and expressive power are separate questions and the article is about the second. The results earn their place in three ways. They make metatheory shorter: a proof by induction on formulas needs one case per connective, so an argument about a language with two connectives is less than half the length of the same argument about a language with five, and every such proof later in this tier takes advantage of this. They locate the choice of primitives as a matter of convenience rather than necessity, which matters when the article on intuitionistic logic removes a connective's usual definition and the definitional equivalences stop holding. And normal forms turn out to be what decision procedures and circuit minimisation actually operate on, so the construction above is closer to applied than the objection suggests.
+</Reply>
+
+<Aside title="The other normal form">
+Conjunctive normal form is the mirror image: a conjunction of disjunctions of literals. It is obtained by the same recipe run on the false rows with the values flipped, and every truth function has a formula in this form as well. Which form is wanted depends on the use. Satisfiability procedures are almost always defined on conjunctive normal form, since a conjunction is satisfiable only if every clause can be satisfied at once, and that gives the search something to work on clause by clause.
+</Aside>
+
+## Next
+
+Adequacy has been established for sets of two connectives, and the question of the smallest possible set has been left open. The next article settles it by enumerating all sixteen binary truth functions and showing that two of them, neither of which has an ordinary English name, are each adequate on their own.
+
+<FurtherReading>
+  <li>Emil L. Post, *The Two-Valued Iterative Systems of Mathematical Logic*, Annals of Mathematics Studies no. 5 (Princeton University Press, 1941).</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on adequate sets of connectives.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on normal forms.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
