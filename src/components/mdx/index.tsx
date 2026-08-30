@@ -154,6 +154,7 @@ const PROOF_LABEL = {
   ND: "Natural deduction",
   axiomatic: "Axiomatic derivation",
   tableau: "Semantic tableau",
+  sequent: "Sequent derivation",
 } as const;
 
 export function Proof({

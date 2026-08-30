@@ -1,0 +1,195 @@
+---
+title: Sequent Calculus and Cut Elimination
+subject: logic
+tier: advanced
+order: 4
+est_read_min: 28
+summary: "Gentzen's LK and LJ, the structural rules, and the Hauptsatz that makes proof search possible"
+prerequisites: ["computability-and-decidability"]
+introduces: ["sequent", "structural rule", "cut rule", "cut elimination", "subformula property"]
+requires: ["natural deduction", "proof system", "well-formed formula", "syntactic consequence"]
+added: "2026-08-30"
+---
+
+Three proof systems have appeared so far, and each was introduced for a purpose. The Hilbert system is easy to prove things about and unpleasant to prove things in. Natural deduction reverses both properties. Tableaux search systematically for a countermodel and are correspondingly awkward as a record of a positive argument.
+
+Gentzen introduced natural deduction and a fourth system in the same paper of 1935, and he was explicit that the fourth was invented because the third would not support the theorem he wanted. The theorem is about the shape of proofs rather than about what they prove, and its consequences run from the decidability of propositional logic to the consistency of arithmetic.
+
+## Sequents
+
+<Definition term="Sequent">
+An expression with two lists of formulas separated by an arrow, read as saying that if everything on the left holds then at least one thing on the right holds. The left list is the antecedent and the right list the succedent, and either may be empty. A sequent with an empty succedent says that the antecedent is contradictory; a sequent with an empty antecedent asserts the disjunction of the succedent outright.
+</Definition>
+
+The novelty is the list on the right. A natural deduction derivation has one conclusion and a collection of open assumptions, so it corresponds to a sequent whose succedent has exactly one formula. Allowing several is what makes the system classical, and the whole difference between the classical calculus and the intuitionistic one turns out to be whether the restriction to one is imposed. Gentzen named the two systems LK and LJ, and the letters are conventional rather than descriptive.
+
+Everything in the system operates on sequents. An axiom is a sequent with the same formula on both sides, which says only that a thing follows from itself. A rule takes one or two sequents and produces another. A proof is a tree of sequents with axioms at the leaves and the target at the root.
+
+The rules divide into two kinds, and keeping them apart is what the rest of the article depends on.
+
+## The logical rules
+
+Every connective gets exactly two rules, one introducing it on the left and one introducing it on the right. Nothing is ever eliminated. That is the first departure from natural deduction, where each connective has an introduction rule and an elimination rule facing in opposite directions, and it is what gives the system its symmetry.
+
+<TruthTable
+  columns={["Rule", "Premises", "Conclusion"]}
+  rows={[
+    ["Right ∧", "Γ ⇒ φ, Δ   and   Γ ⇒ ψ, Δ", "Γ ⇒ φ ∧ ψ, Δ"],
+    ["Left ∧", "Γ, φ ⇒ Δ", "Γ, φ ∧ ψ ⇒ Δ"],
+    ["Right ∨", "Γ ⇒ φ, Δ", "Γ ⇒ φ ∨ ψ, Δ"],
+    ["Left ∨", "Γ, φ ⇒ Δ   and   Γ, ψ ⇒ Δ", "Γ, φ ∨ ψ ⇒ Δ"],
+    ["Right →", "Γ, φ ⇒ ψ, Δ", "Γ ⇒ φ → ψ, Δ"],
+    ["Left →", "Γ ⇒ φ, Δ   and   Γ, ψ ⇒ Δ", "Γ, φ → ψ ⇒ Δ"],
+    ["Right ¬", "Γ, φ ⇒ Δ", "Γ ⇒ ¬φ, Δ"],
+    ["Left ¬", "Γ ⇒ φ, Δ", "Γ, ¬φ ⇒ Δ"],
+  ]}
+  caption="Eight of the logical rules of LK. Each connective is introduced once on each side, and the introduced formula appears only in the conclusion."
+/>
+
+Read the left rules as the elimination rules in disguise. The left rule for the conditional says that if the antecedent can be established and the consequent can be used, then the conditional itself can be used, which is modus ponens with the direction of use rather than the direction of inference made explicit. The rules for negation are the ones that move a formula across the arrow, and they are the reason the two-sided format buys anything: negation is handled by relocation rather than by a special rule about contradiction.
+
+The table also displays a duality that runs through the whole system. Building a conjunction on the right takes two premises and using one on the left takes one; building a disjunction on the right takes one premise and using one on the left takes two. Reflect a rule in the arrow, swap the connective for its dual, and another rule of the system comes back. That is not decoration. It is a formal statement of the relation between conjunction and disjunction that De Morgan's laws express semantically, recovered here from the shape of the inference rules alone, and it is one reason the calculus is the natural setting for asking what happens when the classical assumptions are weakened.
+
+Each rule has the property that the formula it introduces appears in the conclusion and not in the premises, while everything else is carried along unchanged. That property is what the main theorem is about, and exactly one rule lacks it.
+
+## The quantifier rules
+
+The quantifiers get the same treatment, with one complication that has no propositional counterpart. To prove a universal claim on the right, one proves an instance in a variable about which nothing has been assumed. To use a universal claim on the left, one instantiates it at any term whatever. The existential rules are the mirror image: to prove an existential on the right, exhibit a term; to use one on the left, reason from an instance in a fresh variable.
+
+<TruthTable
+  columns={["Rule", "Premise", "Conclusion"]}
+  rows={[
+    ["Right ∀", "Γ ⇒ φ(a), Δ", "Γ ⇒ ∀x φ(x), Δ"],
+    ["Left ∀", "Γ, φ(t) ⇒ Δ", "Γ, ∀x φ(x) ⇒ Δ"],
+    ["Right ∃", "Γ ⇒ φ(t), Δ", "Γ ⇒ ∃x φ(x), Δ"],
+    ["Left ∃", "Γ, φ(a) ⇒ Δ", "Γ, ∃x φ(x) ⇒ Δ"],
+  ]}
+  caption="The quantifier rules. In the two rules using a, the eigenvariable condition requires that a occur nowhere else in the conclusion; t in the other two may be any term."
+/>
+
+The restriction on the two rules that use a variable is called the eigenvariable condition, and it does the work that the discharge conventions do in natural deduction. Without it the system proves that everything satisfying a predicate satisfies it universally, which is the standard error of reasoning from an unrepresentative case. With it the variable is genuinely arbitrary, because the condition guarantees that no assumption anywhere in the sequent mentions it.
+
+The other two rules are the ones that break the finiteness of proof search. A propositional rule read backwards offers finitely many possibilities, since the premises are built from subformulas of the conclusion. The left rule for the universal quantifier read backwards offers one possibility for every term in the language, and a language with a function symbol has infinitely many terms. A search that gets the choice of term wrong can proceed forever without ever recognising that it has. This is the point at which the syntactic side of the theory meets the semi-decidability established in the previous article, and it is worth noticing that the obstacle is a single rule rather than something diffuse.
+
+## The structural rules
+
+<Definition term="Structural rule">
+A rule that alters the arrangement of a sequent without mentioning any connective. There are three: weakening, which adds a formula to either side; contraction, which replaces two occurrences of the same formula on one side by one; and exchange, which reorders the formulas on a side. They say, respectively, that unused premises are harmless, that repetition carries no information, and that order carries none either.
+</Definition>
+
+These look like bookkeeping and are not. Each records a substantive assumption about what an argument is, and each has been given up in some system for reasons that are not perverse.
+
+Dropping contraction means that a premise used twice is a different resource from a premise used once, which is the setting of linear logic and of accounts of inference where premises are consumed. Dropping weakening means that a conclusion must actually use its premises, which is the demand behind relevance logic and its refusal of the paradoxes of the material conditional. Dropping exchange means that order matters, which suits grammars and certain treatments of natural language syntax. The family of systems obtained by removing structural rules is the subject of a later article; what matters here is that the classical calculus adopts all three, and that having them isolated in their own group is what allows the question to be asked at all. In natural deduction the same assumptions are buried in the treatment of assumption sets and cannot be varied independently.
+
+Exchange can be made to disappear by treating the two sides as multisets rather than lists, and most modern presentations do this. Weakening and contraction cannot be disposed of so cheaply.
+
+## The cut rule
+
+<Definition term="Cut rule">
+The rule permitting a formula proved on the right of one sequent to be discharged on the left of another: from a proof of Δ together with φ, and a proof that φ together with Γ yields Δ, infer that Γ yields Δ with φ gone. The formula cut away appears in both premises and in neither conclusion, which distinguishes cut from every other rule in the system.
+</Definition>
+
+The rule formalises the use of a lemma. One proves an intermediate result, uses it, and then no longer mentions it. Every mathematician argues this way, and a system without the rule would be unrecognisable as a formalisation of mathematical practice, so cut belongs in the calculus on grounds of adequacy. In the Hilbert system the same function is performed by modus ponens, and in natural deduction by the composition of a derivation of a formula with a derivation that uses it as an assumption.
+
+Cut is also the one rule that destroys information. Given the conclusion of any other rule, one can read off what its premises must have contained, because everything in a premise either appears in the conclusion or is a component of something that does. Given the conclusion of a cut, the cut formula could have been anything at all. Searching backwards through a proof is therefore possible everywhere except at cuts, where the search branches over the entire infinite stock of formulas.
+
+That observation is what makes the following theorem worth having.
+
+## Cut elimination
+
+<Definition term="Cut elimination">
+Gentzen's Hauptsatz: every proof in the sequent calculus can be transformed into a proof of the same sequent that uses no cuts. The cut rule is therefore admissible rather than necessary, adding nothing to what the system proves, and the transformation is effective, taking a given proof to a cut-free one by a procedure that terminates.
+</Definition>
+
+The proof is an induction with two measures, and the shape of it can be given without the case analysis, which is long and unilluminating in summary.
+
+Take a proof containing cuts, and consider the topmost one. Two things can be said about it. If either premise of the cut arrives by a rule that does not act on the cut formula, the cut can be moved upward past that rule, which leaves the cut where it was in complexity but reduces the amount of proof lying above it. If both premises arrive by rules that do act on the cut formula, then the cut formula was introduced on the right in one premise and on the left in the other, and the two rules that did so are the matching pair for its main connective. In that case the cut can be replaced by one or two cuts on the immediate subformulas of the cut formula. A cut on a conjunction becomes a cut on one of the conjuncts; a cut on a conditional becomes cuts on its antecedent and consequent.
+
+So each step either reduces the complexity of the cut formula or, at a fixed complexity, reduces the size of the proof above the cut. Order the pairs of measures and the process cannot continue forever. Contraction is what makes the argument delicate, since a cut formula that was contracted must be cut away more than once and the proof can grow while the measure falls, and Gentzen's handling of that case is the technically demanding part of the original paper.
+
+The second case is the informative one, and a single instance shows what the transformation actually does. Suppose a proof cuts on the formula φ ∧ ψ. Since both premises introduce it, the left premise ends with the right rule for conjunction and so was obtained from a proof of Γ ⇒ φ and a proof of Γ ⇒ ψ; the right premise ends with the left rule and so was obtained from a proof of φ, Γ ⇒ Δ. Discard the proof of Γ ⇒ ψ, which the right premise never needed, and cut the proof of Γ ⇒ φ against the proof of φ, Γ ⇒ Δ instead. The same sequent is proved, and the cut formula has fallen from a conjunction to one of its conjuncts.
+
+What that step shows is that the conjunction in the middle was never doing any work. One side of the proof built a conjunction that the other side immediately took apart, and the transformation deletes the detour together with the half of the proof that turned out to be irrelevant. Every case of the reduction has the same character. A cut-free proof is one from which all such detours have been removed, and the theorem says that a proof containing them always contains a direct proof, hidden inside it and extractable by a mechanical procedure. That reading, rather than the bare statement about the admissibility of a rule, is what has made the theorem productive.
+
+The theorem comes with a cost that should be stated alongside it. Removing cuts can enlarge a proof enormously, and not merely by a constant factor or a polynomial: the cut-free proof of a sequent can be larger than the original by an amount not bounded by any tower of exponentials of fixed height. Lemmas are not a convenience. They are the mechanism by which proofs stay short, and a system without them proves the same things at a price that is often unpayable in practice. The theorem is a statement about what is possible in principle, and its uses are all uses of the possibility rather than of the transformation.
+
+## The subformula property
+
+<Definition term="Subformula property">
+The feature a proof has when every formula occurring anywhere in it is a subformula of some formula in the sequent being proved. Cut-free proofs in the sequent calculus have it, since every rule other than cut carries its side formulas downward unchanged and introduces only a formula built from what its premises contain.
+</Definition>
+
+This is where the payoff collects, and there are four distinct consequences worth separating.
+
+The first is consistency, obtained almost for free. The empty sequent, with nothing on either side, asserts a contradiction. Suppose it had a proof; by cut elimination it has a cut-free proof; by the subformula property every formula in that proof is a subformula of something in the empty sequent, and there is nothing in the empty sequent. So the proof contains no formulas, and a proof with no formulas has no axioms at its leaves. There is no such proof, and the system is consistent. Notice that the argument never mentions interpretations, models or truth. It is a proof of consistency conducted entirely by inspecting the shape of proofs, which is exactly what Hilbert's programme had asked for.
+
+The second is decidability for propositional logic. Searching backwards from a sequent, every rule other than cut has premises built from subformulas of the conclusion, and a formula has finitely many subformulas. With contraction handled carefully so that the search does not loop, the space of candidate cut-free proofs of a given propositional sequent is finite, so it can be searched exhaustively. The same search applied to first-order logic terminates on provable sequents and can run forever on unprovable ones, since quantifier rules can introduce new terms without limit, which is exactly the semi-decidability established in the previous article, arrived at from the syntactic side.
+
+The third belongs to the intuitionistic calculus and has no classical analogue. In LJ the succedent holds at most one formula, and a cut-free proof of a disjunction must end with the right rule for disjunction, which takes as its premise a sequent asserting one of the disjuncts. So if a disjunction is provable outright, one of its disjuncts is provable outright. The parallel argument for the existential quantifier shows that a provable existential claim has a provable instance. These are the disjunction property and the existence property, they fail for classical logic, and they are a precise version of the intuitionistic idea that a proof of a disjunction must say which. That two of the most discussed features of intuitionistic logic fall out of an inspection of the last rule of a proof is the best advertisement the method has.
+
+The fourth is that a proof of the interpolation theorem can be extracted from the same analysis. If one formula implies another, there is a third, built only from vocabulary common to both, that the first implies and that implies the second. The result is Craig's, it has proofs by other means, and the cut-free proof of it is the one that shows why it is true rather than merely that it is: walk down a cut-free proof of the implication, and at every step the shared vocabulary is visible in the sequent, because no rule ever introduced anything that was not already there in component form.
+
+Interpolation is worth more than it looks. Beth's definability theorem follows from it, and says that a theory which pins down the extension of a predicate uniquely, without saying in other vocabulary what that extension is, always contains a formula in the remaining vocabulary that says so explicitly. Implicit definition and explicit definition coincide for first-order logic. That is a substantial fact about the expressive resources of the language, and it descends from an observation about which formulas can appear in a proof.
+
+## Back to natural deduction
+
+The Hauptsatz was proved for the sequent calculus because Gentzen could not prove it for natural deduction, but the corresponding theorem for natural deduction is true and was established later, principally by Prawitz. It is called normalisation rather than cut elimination, and its statement is the one suggested by the reduction above: a derivation that introduces a connective and then immediately eliminates it contains a detour, the detour can be removed, and the process terminates in a normal derivation. A derivation that proves a conjunction and then extracts a conjunct from it can be replaced by the part that proved the conjunct.
+
+Normal derivations have their own version of the subformula property, and the consequences match. So the two systems are not merely both adequate; the theorem that makes one useful holds of the other, and the correspondence is close enough that a derivation in either can be translated into the other with the property preserved. The reason for still preferring the sequent calculus is not that the theorem fails elsewhere but that the proof is manageable there and unpleasant here, and that the calculus isolates the structural assumptions in a way natural deduction does not.
+
+The translation runs in both directions but is not an isomorphism, and the mismatch is instructive. Several distinct cut-free sequent proofs correspond to the same normal natural deduction derivation, differing only in the order in which independent rules were applied. The sequent calculus imposes a sequence on steps that have no dependency between them, which is convenient for an induction and misleading as a picture of the argument's structure. Systems designed to remove that redundancy, and the question of when two proofs should count as the same proof, are a continuing line of work in proof theory that starts from exactly this observation.
+
+## The consistency of arithmetic
+
+The consistency proof extracted above is for pure logic, which nobody had doubted. Gentzen's next paper, published in 1936, applied the method to first-order arithmetic, where the question was live.
+
+The obstacle is that arithmetic has an induction rule, and induction does not satisfy the subformula property: the induction formula appears in the premises and vanishes from the conclusion, exactly as a cut formula does. Cuts therefore cannot simply be eliminated, and the argument has to be replaced by something weaker. What Gentzen showed is that a derivation of a contradiction can be assigned an ordinal, that a proof of a contradiction can always be transformed into another proof of a contradiction with a smaller ordinal, and that the ordinals involved are all below a specific limit now written as epsilon zero. If the ordering below that limit is well-founded, there is no infinite descending sequence, so the transformation cannot run forever, so there was no proof of a contradiction to begin with.
+
+The assumption doing the work is the well-foundedness of that ordering, and the second incompleteness theorem of the next article guarantees that arithmetic cannot prove it. So the result does not establish consistency from nothing. What it establishes is an exchange rate: the consistency of arithmetic costs exactly transfinite induction up to epsilon zero, no more and no less, since arithmetic does prove the well-foundedness of every shorter ordering. Attaching an ordinal to a theory in this way, as a measure of the strength required to see that it is consistent, became a research programme in its own right and is the origin of ordinal analysis.
+
+## Where excluded middle comes from
+
+The claim that classical and intuitionistic logic differ only in the shape of sequents is easy to state and easy to disbelieve. The derivation below settles it.
+
+<Proof
+  system="sequent"
+  caption="Excluded middle in LK. The succedent holds two formulas at lines 2 to 4, and line 5 is a contraction."
+  lines={[
+    { n: 1, formula: "P ⇒ P", justification: "Axiom" },
+    { n: 2, formula: "⇒ ¬P, P", justification: "Right ¬, 1" },
+    { n: 3, formula: "⇒ P ∨ ¬P, P", justification: "Right ∨, 2" },
+    { n: 4, formula: "⇒ P ∨ ¬P, P ∨ ¬P", justification: "Right ∨, 3" },
+    { n: 5, formula: "⇒ P ∨ ¬P", justification: "Right contraction, 4" },
+  ]}
+/>
+
+Every line is an instance of a rule that LJ also has, with one exception: lines 2 through 4 have two formulas in the succedent, and LJ permits at most one. The derivation is blocked at line 2 and nowhere else. No rule was added to obtain classical logic and none was removed to obtain intuitionistic logic; the difference is a constraint on the format, and the law of excluded middle is what the extra room on the right buys.
+
+The same point can be made about double negation elimination and about the classical reductio, and it is the cleanest statement available of what separates the two logics. The intuitionistic reading of the succedent as a single conclusion corresponds to the demand that a proof establish a specific claim, and the classical succedent, read as a disjunction, allows a proof to establish that one of several claims holds without establishing which.
+
+<Objection>
+The Hauptsatz proves consistency by inspecting the shape of proofs and using no semantic notions, which is presented as a vindication of finitary methods. But Gentzen's own consistency proof for arithmetic uses transfinite induction up to an ordinal beyond the reach of the theory whose consistency it establishes, and the second incompleteness theorem guarantees that any such proof must reach beyond the theory somewhere. So the method does not deliver what the programme wanted. It relocates the assumption rather than removing it, and calling the result a proof of consistency by finitary means is misleading.
+</Objection>
+
+<Reply>
+The cut elimination theorem for pure logic is not the consistency proof for arithmetic and does not have its difficulties. The argument given above is genuinely elementary, and the consistency it establishes is the consistency of the logical calculus, which was never the contested case. What the objection describes correctly is the arithmetical result, and there the assessment turns on what one takes the programme to have wanted. Hilbert's demand for finitary methods was made before anyone knew it was unsatisfiable, and the second incompleteness theorem showed that no consistency proof for arithmetic can be conducted within arithmetic. Given that, the interesting question is which extension one must make, and Gentzen's answer is informative: not more arithmetic, not a stronger set theory, but induction along a particular well-ordering, whose well-foundedness is the exact extra assumption. That is a measurement of what consistency costs, and the enterprise of measuring theories by the ordinals their consistency requires grew directly out of it. A programme whose original demand was refuted, and which then produced a precise account of the gap between the demand and what is possible, has not failed in any ordinary sense.
+</Reply>
+
+<Aside title="One paper, two systems">
+Both natural deduction and the sequent calculus appear in Gentzen's dissertation, published in two parts in 1935. The stated motivation for natural deduction was that the existing systems did not resemble the way mathematicians actually argue, and the stated motivation for the sequent calculus was that a proof of the Hauptsatz for natural deduction had eluded him. The second system was built to make the theorem provable, and it succeeded, and it then turned out to be the more useful of the two for almost every subsequent purpose. Gentzen went on to give the consistency proof for arithmetic the following year, using transfinite induction along the ordering the objection above refers to. He died in Prague in 1945, at thirty-five.
+</Aside>
+
+## Next
+
+The results of the last three articles converge on a single question, which has been deferred throughout. Completeness says a proof system can capture every consequence of a set of axioms. Decidability says nothing recognises the valid sentences. Cut elimination gives a consistency proof for logic and, with more work, for arithmetic. What none of them settles is whether a set of axioms can capture the truths about the structure it describes. The next article shows that for arithmetic it cannot.
+
+<FurtherReading>
+  <li>Gerhard Gentzen, "Untersuchungen über das logische Schließen", *Mathematische Zeitschrift* 39 (1935), 176 to 210 and 405 to 431.</li>
+  <li>Gerhard Gentzen, "Die Widerspruchsfreiheit der reinen Zahlentheorie", *Mathematische Annalen* 112 (1936), 493 to 565.</li>
+  <li>Dag Prawitz, *Natural Deduction: A Proof-Theoretical Study* (1965).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Development of Proof Theory"](https://plato.stanford.edu/entries/proof-theory-development/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Natural Deduction Systems in Logic"](https://plato.stanford.edu/entries/natural-deduction/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Proof Theory"](https://plato.stanford.edu/entries/proof-theory/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Intuitionistic Logic"](https://plato.stanford.edu/entries/logic-intuitionistic/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Hilbert's Program"](https://plato.stanford.edu/entries/hilbert-program/).</li>
+</FurtherReading>
