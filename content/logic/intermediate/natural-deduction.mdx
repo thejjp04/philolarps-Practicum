@@ -1,0 +1,187 @@
+---
+title: Natural Deduction
+subject: logic
+tier: intermediate
+order: 13
+est_read_min: 18
+summary: Introduction and elimination rules, conditional proof, and reductio
+prerequisites: ["sixteen-connectives"]
+introduces: ["natural deduction", "proof system", "introduction rule", "elimination rule", "conditional proof", "reductio ad absurdum", "discharge", "assumption"]
+requires: ["well-formed formula", "modus ponens", "syntactic consequence"]
+added: "2026-08-29"
+---
+
+Syntactic consequence was defined three articles ago as the existence of a derivation, and the definition referred to the axioms and rules of a system without naming any. That gap has been left open ever since. This article closes it by setting out a system in full, and it starts with the more general question of what a system has to supply.
+
+## What has to be specified
+
+<Definition term="Proof system">
+A specification of three things: the language whose formulas the system operates on, a set of axioms taken as derivable without premises, and a set of rules permitting a formula to be written down given formulas already written. The relation of syntactic consequence is defined relative to such a specification, so that a claim of the form $\Gamma \vdash \varphi$ is incomplete until one is fixed.
+</Definition>
+
+Two constraints govern the choice and neither is severe. The rules must be checkable: whether a given line follows by a given rule has to be settleable by inspecting the shapes of the formulas involved, with no appeal to what they mean. And the system should be sound, since one that licensed a step from truths to a falsehood would be useless. Beyond that a great deal is open, and systems that look nothing alike can prove exactly the same formulas.
+
+The checkability requirement has a consequence worth naming, because it is the source of the asymmetry noted three articles ago. Since every rule is a condition on shapes, verifying that a completed proof is a proof is a mechanical matter: read the lines in order, and for each one confirm that it is a premise, an axiom, or the result of a rule applied to earlier lines. That procedure always terminates. Finding a proof is a different matter entirely, because there is no bound on how long the proof might be, and nothing in the specification of a system suggests a search strategy. A system can therefore be perfectly precise and still leave one with no idea how to use it.
+
+Systems tend to fall along a spectrum according to how they divide labour between axioms and rules. At one end sit the systems with many axioms and almost no rules; at the other, systems with no axioms at all and a rule for every move. The system in this article is at the second extreme, and the article on axiomatic systems takes up the first.
+
+## Reasoning the way people reason
+
+<Definition term="Natural deduction">
+A proof system with no axioms, in which every step is licensed by a rule, and in which formulas may be assumed temporarily for the sake of argument and later set aside. The name records the design goal: the rules were chosen to match the moves that mathematical arguments actually make, rather than to minimise the number of primitives.
+</Definition>
+
+The design was published twice within a year by people who did not know of each other's work. Stanisław Jaśkowski gave a system of suppositions in "On the Rules of Suppositions in Formal Logic" in 1934, and Gerhard Gentzen gave another in the two-part "Untersuchungen über das logische Schließen" in the *Mathematische Zeitschrift* in 1935. Gentzen's paper is the one usually cited, partly because the second part of it introduces the sequent calculus and proves the result that made his name.
+
+What both were reacting against is worth stating, since it explains the shape of what follows. An axiomatic system proves things by producing tautologies and detaching consequences from them, and a derivation in such a system typically opens with two or three long formulas that come out of nowhere and are justified only by turning out to be useful ten lines later. Nothing in an ordinary mathematical proof looks like that. What ordinary proofs do is suppose something, work under the supposition, and then draw a conclusion that no longer depends on it. A system built to model that will need machinery for supposing and for un-supposing, and that machinery is the substance of natural deduction.
+
+## Two rules for each connective
+
+<Definition term="Introduction rule">
+A rule licensing a formula whose main connective is a given one, on the basis of formulas that do not contain it. The rule states what has to be established in order to assert a compound of that kind, and so functions as an account of what the connective means in the system.
+</Definition>
+
+<Definition term="Elimination rule">
+A rule licensing an inference from a formula whose main connective is a given one to a formula in which it no longer appears as the main connective. The rule states what may be drawn from a compound of that kind, and so states what having asserted it commits one to.
+</Definition>
+
+The pairing is the organising principle of the whole system. Each connective gets exactly two rules, one for putting it in and one for taking it out, and the two are meant to fit: whatever the introduction rule demands for asserting a compound is exactly what the elimination rule allows one to recover from it.
+
+Conjunction is the clearest case. To introduce a conjunction, have both conjuncts on separate lines and write their conjunction. To eliminate one, have the conjunction and write either conjunct. Nothing is gained and nothing is lost, which is the fit in its simplest form.
+
+The conditional's elimination rule is already familiar. From a conditional and its antecedent, write its consequent. That is modus ponens under a new name, and the renaming is not pedantry: in this system it is one of a matched pair rather than a rule standing on its own, and its partner is the more interesting of the two.
+
+Disjunction runs the other way round. Introduction is trivial, since from any formula one may write its disjunction with anything whatever. Elimination is the demanding one, because a disjunction says very little: knowing that one of two things holds licenses a conclusion only if the conclusion follows from each of them separately. That rule is proof by cases, and stating it properly requires the machinery of the next section.
+
+The biconditional's rules are the two conditionals taken together, which is why some presentations drop the connective and treat it as an abbreviation. Negation is the awkward one, and it is treated below.
+
+## Supposing and un-supposing
+
+<Definition term="Assumption">
+A formula written down without justification, for the sake of argument, opening a subproof in which it and everything derived from it are available. An assumption differs from a premise in that it carries no commitment: the argument does not claim it is true, only that something follows from it.
+</Definition>
+
+<Definition term="Discharge">
+The act of closing a subproof and drawing a conclusion that no longer depends on the assumption that opened it. The conclusion is written outside the subproof, and from that point on neither the assumption nor any line inside the subproof may be cited. Every rule that makes an assumption also discharges it, so no assumption is ever left standing at the end of a completed proof.
+</Definition>
+
+The bookkeeping is what the vertical bars and indentation in the proofs below are for. A line at indentation depth one is inside a subproof; a line at depth zero is not. The rule governing citation is simple and absolute: a line may be cited only from a depth at or below its own, and only if every subproof it sits inside is still open.
+
+That restriction is the whole safety mechanism, and it is easy to see what happens without it. Assume $P$. Derive $P$ from the assumption, trivially. If the assumption could be discharged while the line derived from it stayed citable, $P$ would have been proved from nothing at all, and every formula would be a theorem. The scoping is not a notational nicety; it is the difference between a system and a disaster.
+
+## Conditional proof
+
+<Definition term="Conditional proof">
+The introduction rule for the conditional. Assume the antecedent, derive the consequent within the subproof, then discharge the assumption and write the conditional at the outer level. The rule is what makes the conditional provable at all, since without it a conditional could only ever be carried down from a premise.
+</Definition>
+
+Here is the rule at work, deriving the transitivity of the conditional.
+
+<Proof
+  caption="Hypothetical syllogism derived. The assumption at line 3 is discharged at line 6."
+  lines={[
+    { n: 1, formula: "P → Q", justification: "Premise" },
+    { n: 2, formula: "Q → R", justification: "Premise" },
+    { n: 3, formula: "P", justification: "Assumption", depth: 1 },
+    { n: 4, formula: "Q", justification: "Conditional elimination, 1 and 3", depth: 1 },
+    { n: 5, formula: "R", justification: "Conditional elimination, 2 and 4", depth: 1 },
+    { n: 6, formula: "P → R", justification: "Conditional introduction, 3 to 5" },
+  ]}
+/>
+
+Read it as an argument in English and it is entirely ordinary. Suppose $P$. Then $Q$, by the first premise. Then $R$, by the second. So if $P$ then $R$, and the supposition has been dropped. That correspondence is the case for calling the system natural.
+
+Two details in the notation repay attention. The justification at line 6 cites a range of lines rather than particular lines, because the rule appeals to the shape of the whole subproof and not to any one formula in it. And the conclusion sits at depth zero, outside the subproof, which is what records that it does not depend on the assumption. Lines 3 through 5 depend on $P$; line 6 does not.
+
+## Reductio
+
+<Definition term="Reductio ad absurdum">
+The pattern of assuming a formula, deriving a contradiction from it, and concluding its negation. In a natural deduction system it is the introduction rule for negation: assume $\varphi$, derive some formula together with its negation, discharge, and write $\neg \varphi$.
+</Definition>
+
+Negation is handled this way because there is nothing simpler available. A conjunction can be built from its conjuncts and a conditional can be built by conditional proof, but a negation cannot be built out of anything positive. The only route to it is to show that the unnegated formula cannot be sustained.
+
+<Proof
+  caption="Modus tollens derived. Line 5 is the contradiction that licenses the discharge."
+  lines={[
+    { n: 1, formula: "P → Q", justification: "Premise" },
+    { n: 2, formula: "¬Q", justification: "Premise" },
+    { n: 3, formula: "P", justification: "Assumption", depth: 1 },
+    { n: 4, formula: "Q", justification: "Conditional elimination, 1 and 3", depth: 1 },
+    { n: 5, formula: "Q ∧ ¬Q", justification: "Conjunction introduction, 4 and 2", depth: 1 },
+    { n: 6, formula: "¬P", justification: "Negation introduction, 3 to 5" },
+  ]}
+/>
+
+The rule of modus tollens, which the beginner tier listed alongside modus ponens as a basic form, turns out not to be basic here. It is a six-line derivation from rules that do not mention it. That is characteristic of the system: a small stock of rules generates the familiar patterns as results, and the familiar patterns can then be used as shorthand once derived.
+
+Line 2 being cited from inside the subproof is worth pausing on. It sits at depth zero, outside, and the citation rule permits looking outward. Premises and anything established at an outer level remain available inside every subproof opened beneath them. What is forbidden is the reverse: looking into a subproof from outside, or into a subproof that has closed.
+
+## Proof by cases
+
+Disjunction elimination can now be stated properly. Given a disjunction, and given a subproof deriving some formula from the first disjunct, and another deriving the same formula from the second, the formula may be written at the outer level.
+
+<Proof
+  caption="Disjunction elimination with two subproofs, one for each disjunct."
+  lines={[
+    { n: 1, formula: "P ∨ Q", justification: "Premise" },
+    { n: 2, formula: "P → R", justification: "Premise" },
+    { n: 3, formula: "Q → R", justification: "Premise" },
+    { n: 4, formula: "P", justification: "Assumption", depth: 1 },
+    { n: 5, formula: "R", justification: "Conditional elimination, 2 and 4", depth: 1 },
+    { n: 6, formula: "Q", justification: "Assumption", depth: 1 },
+    { n: 7, formula: "R", justification: "Conditional elimination, 3 and 6", depth: 1 },
+    { n: 8, formula: "R", justification: "Disjunction elimination, 1, 4 to 5, 6 to 7" },
+  ]}
+/>
+
+Two assumptions are made and both are discharged by the single application at line 8. The rule is the formal counterpart of an argument that says: either way, the same thing follows. Its shape also explains why disjunction is the connective beginners find hardest to use. Introducing one is free and gains nothing; getting anything out of one costs two subproofs.
+
+## Nesting
+
+Subproofs can sit inside subproofs, and the depth is unbounded. Proving a formula of the form of a conditional whose consequent is itself a conditional requires two nested assumptions, the inner one discharged first and the outer one after; the indentation in the display then runs two levels deep, and the citation rule applies at every level in the same way. A line at depth two may cite lines at depth two, one, and zero, provided all the subproofs containing them are still open, and may not be cited from anywhere shallower once its own subproof has closed.
+
+Nothing new has to be said about this case, which is a point in the system's favour. The rules were stated once, in terms of a subproof and the level containing it, and they apply unchanged however deeply the structure is stacked.
+
+## Finding a proof
+
+The rules say what is permitted. They say nothing about what to do, and a beginner facing a blank page with three premises and a conclusion is entitled to feel that something has been withheld.
+
+The gap is real and cannot be closed by any rule of the system, but the shape of the rules does supply a strategy, and it is the same one every textbook teaches. Work backwards from the conclusion rather than forwards from the premises. If the conclusion is a conditional, the last line of the proof will almost certainly be a conditional introduction, so assume its antecedent and set the consequent as the new target. If the conclusion is a conjunction, prove the two conjuncts separately. If it is a negation, assume the unnegated formula and look for a contradiction. If it is an atomic formula, or if nothing else suggests itself, assume its negation and try for a contradiction, since reductio is the rule of last resort and very often works.
+
+Only then look at the premises, and take apart what can be taken apart: break conjunctions into their conjuncts, apply conditional elimination wherever an antecedent is available, and see whether what accumulates meets the target coming the other way. Most proofs at this level are built from both ends and joined in the middle.
+
+None of that is a decision procedure and none of it is guaranteed to terminate. It is a heuristic, and the next article's method is the contrast that shows what a genuine procedure looks like.
+
+## The classical extra
+
+One rule remains and it does not fit the pattern.
+
+Double negation elimination takes $\neg \neg \varphi$ to $\varphi$. In a system of matched pairs it is an oddity: negation already has its introduction rule and an elimination rule of its own, and this is a third. The related rule of classical reductio, which assumes $\neg \varphi$, derives a contradiction, and concludes $\varphi$, is equally awkward for the same reason.
+
+The awkwardness is not an accident of presentation. Removing that rule and keeping everything else yields intuitionistic logic, a system in which the law of excluded middle is not provable and a great deal else changes. That the classical system needs one rule that spoils the symmetry, and that the symmetric fragment is a coherent logic in its own right, is a discovery rather than a design flaw, and the article on intuitionistic logic takes it up in full.
+
+<Objection>
+Calling the system natural oversells it. Nobody reasons in numbered lines with citation columns, the rules were chosen by logicians for logicians' purposes, and the claim to be modelling ordinary thought is decoration on what is in fact an arbitrary set of stipulations.
+</Objection>
+
+<Reply>
+The claim is not psychological and no experiment about how people actually reason would bear on it. It is a claim about the structure of written mathematical arguments, and there the fit is close: mathematicians suppose, work under the supposition, and discharge it, and they argue by cases and by contradiction constantly. What natural deduction contributes is not a discovery about cognition but a formalisation of a practice that already existed. As for arbitrariness, the pairing of introduction and elimination rules is a real constraint and not a stipulation. A rule that let one extract more from a connective than its introduction rule required for asserting it would break the system, and the study of when a pair fits properly is a substantial part of proof theory. The classical rule discussed just above is interesting precisely because it is the one place the constraint is violated.
+</Reply>
+
+<Aside title="Two ways of writing the same proof">
+The indented format used here descends from Jaśkowski by way of Frederic Fitch, whose *Symbolic Logic: An Introduction* of 1952 popularised it, and it is what most textbooks and proof-checking software use. Gentzen wrote his proofs as trees instead, with the conclusion at the root and the premises at the leaves, and with discharged assumptions marked by brackets at the point where they are used up. The tree format is harder to read and easier to prove things about, since the structure of a proof is visible in the shape of the tree, and it is the format used in the literature on normalisation.
+</Aside>
+
+## Next
+
+The system just given is convenient for constructing proofs and inconvenient for a particular purpose: it offers no help at all when an argument is invalid. There is no point at which the search for a proof reports failure rather than simply continuing. The next article gives a method with the opposite character, one that either produces a proof or produces a countermodel, and which terminates either way.
+
+<FurtherReading>
+  <li>Gerhard Gentzen, "Untersuchungen über das logische Schließen", *Mathematische Zeitschrift* 39 (1935), 176 to 210 and 405 to 431.</li>
+  <li>Stanisław Jaśkowski, "On the Rules of Suppositions in Formal Logic", *Studia Logica* 1 (1934), 5 to 32.</li>
+  <li>Frederic B. Fitch, *Symbolic Logic: An Introduction* (Ronald Press, 1952).</li>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on natural deduction in propositional logic.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Natural Deduction Systems in Logic"](https://plato.stanford.edu/entries/natural-deduction/).</li>
+  <li>Internet Encyclopedia of Philosophy, ["Natural Deduction"](https://iep.utm.edu/natural-deduction/).</li>
+</FurtherReading>
