@@ -1,0 +1,145 @@
+---
+title: Semantic Tableaux
+subject: logic
+tier: intermediate
+order: 14
+est_read_min: 14
+summary: A decision procedure that searches for a countermodel and reports failure as proof
+prerequisites: ["natural-deduction"]
+introduces: ["semantic tableau", "branch closure", "countermodel"]
+requires: ["well-formed formula", "semantic consequence", "counterexample", "model"]
+added: "2026-08-29"
+---
+
+Natural deduction has one serious defect, and it is not a defect in the rules. When an argument is valid, a proof exists and diligence will eventually find it. When an argument is invalid, no proof exists, and the search for one simply goes on. Nothing in the system ever announces that the attempt is hopeless.
+
+The method in this article has the opposite character. It always terminates, and when it fails to establish the argument it hands back the reason for the failure in a usable form.
+
+## Testing the negation instead
+
+The trick is to stop trying to prove the conclusion and try to refute it instead.
+
+An argument is valid when there is no interpretation making the premises true and the conclusion false. So take the premises together with the negation of the conclusion, and ask whether that collection has a model. If it does, the interpretation making all of it true is exactly an interpretation making the premises true and the conclusion false, and the argument is invalid. If it does not, the argument is valid.
+
+<Definition term="Countermodel">
+An interpretation on which every premise of an argument is true and its conclusion false. An argument is invalid precisely when it has one, and exhibiting a countermodel is the standard way of establishing invalidity, since it settles the matter outright rather than reporting a failure to find a proof.
+</Definition>
+
+The question of validity has become a question about satisfiability, and satisfiability is something a systematic search can be organised around. The organisation is the tableau.
+
+<Definition term="Semantic tableau">
+A tree of formulas built by decomposing a set of formulas into their components according to fixed rules, undertaken to determine whether the set has a model. The root holds the formulas being tested, each rule replaces a formula with the simpler formulas its truth would require, and branching records the alternatives that a formula leaves open. The method is also called the tree method or the method of analytic tableaux.
+</Definition>
+
+## The two shapes of rule
+
+Every rule takes one formula that has not yet been decomposed and writes down what its truth requires. There are exactly two shapes this can take, according to whether the requirement is a conjunction of demands or a choice between them.
+
+The rules that do not branch cover the cases where truth requires two things at once. A conjunction requires both conjuncts, so both are written on the branch. A negated disjunction requires both disjuncts to be false, so the negation of each is written. A negated conditional requires the antecedent true and the consequent false, so both are written. And a double negation requires the formula inside it, which is written on its own.
+
+The rules that branch cover the cases where truth leaves a choice open. A disjunction is satisfied either way, so the branch splits, with one disjunct written on each side. A negated conjunction requires at least one conjunct false, so the branch splits into the two negations. A conditional splits into the negation of its antecedent and its consequent, which is exactly the truth table of the conditional read as an alternative. The biconditional splits into both parts holding and both parts failing.
+
+Two things about this list matter more than the details. Every rule is fixed by the truth table of the connective it decomposes, so nothing is being stipulated that was not already settled in the beginner tier. And every rule replaces a formula with formulas strictly shorter than it. That second point is the whole reason the method terminates, and it is returned to below.
+
+<Definition term="Branch closure">
+The state of a branch that contains both some formula and its negation. Such a branch describes an impossible interpretation and is marked closed, and no further work is done on it. A tableau all of whose branches are closed is itself closed, and a branch on which every formula has been decomposed and which has not closed is open.
+</Definition>
+
+## A valid argument
+
+Take the premises $P \rightarrow Q$ and $\neg Q$ with the conclusion $\neg P$. The tableau begins with both premises and the negation of the conclusion.
+
+<Proof
+  system="tableau"
+  caption="Lines 5 and 6 are the two branches produced at line 1. Both close, so the set has no model."
+  lines={[
+    { n: 1, formula: "P → Q", justification: "Premise" },
+    { n: 2, formula: "¬Q", justification: "Premise" },
+    { n: 3, formula: "¬¬P", justification: "Negation of the conclusion" },
+    { n: 4, formula: "P", justification: "Double negation, from 3" },
+    { n: 5, formula: "¬P    ×", justification: "Left branch from 1, closed against 4", depth: 1 },
+    { n: 6, formula: "Q    ×", justification: "Right branch from 1, closed against 2", depth: 1 },
+  ]}
+/>
+
+The reasoning behind each line is worth spelling out once. Lines 1 and 2 are given. Line 3 is the negated conclusion, since the search is for a countermodel. Line 4 comes from line 3 by the double negation rule. Line 1 is a conditional and so branches: either its antecedent fails or its consequent holds. On the left branch $\neg P$ sits alongside $P$ at line 4, which is impossible; on the right branch $Q$ sits alongside $\neg Q$ at line 2, equally impossible.
+
+Every branch is closed, so there is no interpretation making all three of lines 1 to 3 true. There is therefore no interpretation making the premises true and the conclusion false, and the argument is valid. Six lines have settled what natural deduction settled in six lines as well, but with a difference: this procedure was not looking for anything clever, and it could not have failed to finish.
+
+## An invalid argument
+
+Now the same treatment applied to a fallacy. The premises are $P \rightarrow Q$ and $Q$, and the conclusion is $P$.
+
+<Proof
+  system="tableau"
+  caption="The left branch closes; the right does not. Line 4 gives the countermodel."
+  lines={[
+    { n: 1, formula: "P → Q", justification: "Premise" },
+    { n: 2, formula: "Q", justification: "Premise" },
+    { n: 3, formula: "¬P", justification: "Negation of the conclusion" },
+    { n: 4, formula: "¬P    open", justification: "Left branch from 1, nothing to close it", depth: 1 },
+    { n: 5, formula: "Q    open", justification: "Right branch from 1, nothing to close it", depth: 1 },
+  ]}
+/>
+
+Nothing remains to decompose and neither branch has closed. The method has failed to refute the set, and the failure is informative.
+
+Read the left branch. It contains $\neg P$ from line 3, $Q$ from line 2, and $\neg P$ again from the branching. Setting $P$ false and $Q$ true satisfies everything on the branch, and that assignment is a countermodel: the first premise is true because its antecedent is false, the second premise is true outright, and the conclusion is false. Affirming the consequent has been shown invalid, and the specific interpretation that shows it has been produced rather than guessed.
+
+This is the property the previous article's system lacked. An open branch is not the absence of a result. It is a result, and it can be read off directly: assign true to every sentence letter appearing unnegated on the branch and false to every one appearing negated, and the assignment satisfies everything on it.
+
+## Why it always finishes
+
+The termination argument is short and it is the one that makes the method a decision procedure rather than a technique.
+
+Every rule takes a formula and writes formulas shorter than it, where length is counted by number of connectives. Nothing a rule produces is ever longer than what it decomposed, and no formula is decomposed twice on the same branch. The formulas that can appear on a tableau for a given set are therefore drawn from a finite stock, namely the subformulas of the starting formulas and their negations, and each can be used once per branch. A branch cannot grow forever, and the branching is finite at each step, so the whole tree is finite.
+
+That gives the result. For any argument in propositional logic, building a tableau is a finite procedure that ends with either every branch closed or at least one branch open, and the two outcomes correspond exactly to validity and invalidity. Semantic consequence was said three articles ago to be decidable; this is a procedure that decides it, and unlike a truth table it does not always pay the full cost of $2^n$ rows.
+
+## The same method for other questions
+
+Validity was the question the tableau was set up to answer, but the machinery answers a family of related questions with no modification at all, since all of them are questions about whether a set has a model.
+
+To test whether a single formula is a tautology, start the tableau with its negation alone. A closed tableau says the negation is unsatisfiable, which is to say the formula is true on every interpretation. An open branch gives an interpretation on which it is false.
+
+To test whether a formula is a contradiction, start with the formula itself. To test whether a set of formulas is satisfiable, start with all of them and see whether any branch stays open. And to test whether two formulas are logically equivalent, start with the negation of their biconditional; a closed tableau says they agree everywhere.
+
+Each of these is the same procedure pointed at a different starting set, which is worth noticing because it makes clear what the method actually decides. It decides satisfiability, and every other question is reduced to that one before the first rule is applied.
+
+## Keeping the tree small
+
+The rules may be applied in any order and the outcome is the same either way, but the size of the tree is not, and one piece of advice does most of the work.
+
+Apply every non-branching rule that is available before applying any branching rule. A non-branching rule adds formulas to one branch; a branching rule duplicates all the remaining work across two. Decomposing a conjunction early costs nothing, while decomposing a disjunction early means every subsequent non-branching step has to be carried out twice.
+
+A second habit helps as much. After each step, check the branch for closure rather than waiting until the tree is finished. A branch that has closed is finished, and any formula on it still awaiting decomposition can be left alone. In favourable cases most of the tree is abandoned this way, and the difference between a tableau built carelessly and one built with these two habits can be a factor of several in the number of lines written.
+
+## What the method is really doing
+
+It is helpful to see that the tableau is not a proof in the sense the previous article used the word. Nothing in it is derived from anything. Every line is a report of what would have to be the case for the line above it to be true, and the tree as a whole is an exhaustive enumeration of the ways the starting set might be satisfied.
+
+Closure then has an obvious reading. A closed branch is a way that has been ruled out. When every way is ruled out, the set is unsatisfiable, and unsatisfiability of the premises with the negated conclusion is validity. The method establishes a syntactic result by conducting a semantic search, which is why the trees are called semantic tableaux and why the notation has always sat slightly awkwardly between the two consequence relations.
+
+<Objection>
+This is a truth table with extra steps. Both procedures enumerate the possible interpretations, both terminate, and both report the same answer. Dressing the enumeration up as a tree adds notation without adding power.
+</Objection>
+
+<Reply>
+The two agree on what they decide and differ on how much work they do. A truth table for six letters has sixty-four rows whether or not the argument is settled by the second one; a tableau closes as soon as each branch has a contradiction on it, and branches that close early are never developed. The saving is not guaranteed and in the worst case there is none, but in practice it is substantial. The more important difference is that the method survives the move to richer languages. Truth tables stop working at predicate logic, since there is no finite set of rows to enumerate over an infinite domain, whereas tableaux extend to it with two additional rules, and extend again to modal logic with the branches carrying labels for possible worlds. The technique is the one that generalises, which is why it is what automated provers are built on.
+</Reply>
+
+<Aside title="Where the method came from">
+Evert Willem Beth published the method in "Semantic Entailment and Formal Derivability" in 1955, and Jaakko Hintikka arrived at something close to it independently at about the same time by way of what he called model sets. The form used today, with the branching trees and the classification of the rules into the two shapes described above, is largely due to Raymond Smullyan's *First-Order Logic* of 1968. Smullyan also made explicit the connection to Gentzen's sequent calculus: a closed tableau, turned upside down, is essentially a cut-free sequent proof, which is why results about one transfer to the other.
+</Aside>
+
+## Next
+
+Two proof systems have now been given, both of them designed for use. The next article gives one designed for the opposite purpose: a system with almost no rules and a short list of axioms, awkward to work in and easy to prove things about, together with the theorem that recovers conditional proof inside it without adding a rule.
+
+<FurtherReading>
+  <li>Raymond M. Smullyan, *First-Order Logic*, Ergebnisse der Mathematik und ihrer Grenzgebiete vol. 43 (Springer, 1968).</li>
+  <li>E. W. Beth, "Semantic Entailment and Formal Derivability", *Mededelingen der Koninklijke Nederlandse Akademie van Wetenschappen*, Afdeling Letterkunde, new series 18, no. 13 (1955), 309 to 342.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on the tree method.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Development of Proof Theory"](https://plato.stanford.edu/entries/proof-theory-development/).</li>
+  <li>Internet Encyclopedia of Philosophy, ["Propositional Logic"](https://iep.utm.edu/propositional-logic-sentential-logic/).</li>
+</FurtherReading>
