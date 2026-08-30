@@ -1,0 +1,92 @@
+---
+title: Soundness and Completeness, Informally
+subject: logic
+tier: intermediate
+order: 20
+est_read_min: 12
+summary: What the two metatheorems claim, before anyone tries to prove them
+prerequisites: ["probability-as-an-extension-of-logic"]
+introduces: ["soundness theorem", "completeness theorem", "consistency"]
+requires: ["semantic consequence", "syntactic consequence", "proof system", "axiom schema"]
+added: "2026-08-29"
+---
+
+Two relations between premises and conclusion were introduced early in this tier and then deliberately kept apart. One says that every interpretation making the premises true makes the conclusion true, and it is written with a double turnstile. The other says that a derivation of the conclusion from the premises exists in some specified proof system, and it is written with a single one.
+
+Nothing so far has connected them. They are defined by different means, one by quantifying over interpretations and one by quantifying over finite arrangements of symbols, and there is no evident reason why the two collections of arguments they pick out should be the same collection.
+
+The claim that they are is the central result of the subject, and it splits into two halves pointing in opposite directions. This article says what each half claims and why one of them is difficult. The proofs come later.
+
+## The two directions
+
+<Definition term="Soundness theorem">
+The claim that everything derivable is a semantic consequence: whenever a conclusion can be derived from a set of premises, every interpretation making those premises true makes the conclusion true. A proof system with this property never licenses an invalid argument, so a derivation is a guarantee and not merely an indication.
+</Definition>
+
+<Definition term="Completeness theorem">
+The claim that every semantic consequence is derivable: whenever every interpretation making a set of premises true makes a conclusion true, a derivation of that conclusion from those premises exists. A proof system with this property leaves no valid argument out, so the failure to find a derivation is evidence that none exists rather than a comment on the searcher.
+</Definition>
+
+The directions are easy to confuse and the confusion is worth eliminating early. Soundness says that the proof system does not overreach. Completeness says that it does not fall short. A system with no rules at all is trivially sound, since it proves nothing and so proves nothing false; a system with a rule permitting any formula to be written at any time is trivially complete, since it proves everything, including everything valid. Neither property is worth anything alone, and having both is what makes a proof system a usable substitute for checking interpretations one by one.
+
+A terminological warning before going further. In the beginner tier a single argument was called sound when it was valid and had true premises, which is a property of one argument on one occasion. The soundness spoken of here is a property of an entire proof system, and it concerns validity alone with nothing said about whether any premises are in fact true. The two uses are standard, they are not related in any deep way, and the only remedy is to notice which sort of object the word is being applied to.
+
+Soundness in the second sense is the property one would abandon a system over. A proof system that proved something invalid would be worthless, and it would be worthless immediately, since a single such derivation could be extended to a derivation of anything at all. It is also, in practice, the easy half. The argument is an induction on the length of the derivation, of exactly the shape sketched for a Hilbert system in the article on axiomatic systems: check that each axiom is valid, check that each rule preserves validity, and conclude that everything derivable is valid. The work is finite and mechanical, and its length is the number of axioms plus the number of rules.
+
+Completeness is the property one would be astonished to have. Its proof is nothing like an induction, and the reason is worth stating in the terms the article on sets supplied.
+
+## Why the second half is hard
+
+There are countably many derivations, since a derivation is a finite string over a countable alphabet. There are uncountably many interpretations, since a single one-place predicate over an infinite domain can be interpreted in as many ways as that domain has subsets.
+
+Completeness asserts that a countable stock of finite objects is adequate to a fact about an uncountable range of structures. Given a valid argument, it promises a derivation, and the promise has to be kept without any assumption about how the validity was established. There is no procedure to appeal to and nothing to induct on: the hypothesis is that no countermodel exists anywhere in an uncountable collection, and the conclusion is a specific finite object.
+
+Stated that way it is not obvious that completeness should be true, and for stronger logics it is not true. What makes the first-order case work is a change of direction, and that change runs through one further notion.
+
+## Consistency
+
+<Definition term="Consistency">
+The property a set of formulas has when no contradiction is derivable from it. This is a syntactic condition, concerning what can be written down, and it is to be distinguished from satisfiability, which is the semantic condition of having a model. A set with a model is consistent in any sound system, since a contradiction derived from it would have to be true on that model.
+</Definition>
+
+The converse of that last remark is not obvious at all. That a set has no derivable contradiction says nothing on its face about whether any structure satisfies it, since the absence of a proof is a fact about a proof system rather than about the world of interpretations.
+
+But the converse is exactly the completeness theorem in disguise. Take the claim that every consistent set of formulas has a model. Suppose it holds, and suppose a conclusion is a semantic consequence of some premises. Then the premises together with the negation of the conclusion have no model, so by the claim they are inconsistent, so a contradiction is derivable from them, and any adequate proof system converts that into a derivation of the conclusion from the premises alone. Completeness follows.
+
+This reformulation is what makes the theorem provable. In the original form the task is to produce a derivation out of the absence of a countermodel, which offers nothing to work with. In the reformulated version the task is to produce a model out of a consistent set of formulas, and a consistent set of formulas is a concrete object with usable properties. One can extend it, add witnesses to its existential claims, and finally build a structure whose objects are drawn from the vocabulary itself. That construction is the subject of the article on the proofs, and the whole of its difficulty lies in the extending and the witnessing rather than in the logic of the reduction just given.
+
+The equivalence also explains why consistency is defined syntactically here rather than as the impossibility of all the formulas being true together. The two definitions pick out the same sets, but only once completeness is proved, so assuming their equivalence at the start would be assuming the result.
+
+## What the theorems do not say
+
+One confusion is common enough to be worth heading off directly, because the same person's name is attached to both sides of it.
+
+The completeness theorem says that the proof system captures every consequence of a set of premises. It does not say that any particular set of premises settles every question in its own subject matter. Those are different claims about different things, and the second is false for arithmetic, which is what the incompleteness theorems establish.
+
+Put side by side: completeness concerns the relation between a proof system and a semantics, and holds. Incompleteness concerns the relation between a set of axioms and the truths about the structure those axioms were meant to describe, and fails for any consistent axiom set rich enough to express arithmetic and simple enough to be recognised mechanically. Both results are Gödel's, published a year apart. They are consistent with each other, and the appearance of tension comes entirely from the word "complete" being used for two different properties.
+
+A second thing the theorems do not say is that either property belongs to a proof system on its own. Both are claims about a pairing of a proof system with a semantics, and a mismatch can be repaired from either end. If a system proves something no model makes valid, either the rule is wrong or the class of models is too narrow. If a system fails to prove something valid, either a rule is missing or the class of models is too generous. The advanced article on second-order logic contains the standard illustration: the same formulas, with the same proof system, are incomplete under one semantics and complete under another, and the difference lies entirely in which structures are allowed to count.
+
+<Objection>
+The results are less informative than they appear, because the metatheory that establishes them is itself conducted in ordinary logical reasoning. Proving that a formal system captures valid inference, by reasoning that already takes valid inference for granted, cannot be evidence that the formal system is right. At best it shows that the system agrees with the reasoning of the person who wrote it.
+</Objection>
+
+<Reply>
+The dependence is real and was conceded in the article on set theory, but the conclusion does not follow, for one decisive reason: the results have content because they can fail. Completeness fails for second-order logic under its standard semantics, and no repair of the proof system recovers it. It fails for various infinitary languages. Soundness fails for proof systems people have actually proposed and then withdrawn. If the metatheory merely reflected the logic back at itself, these failures would be impossible, and the fact that a proof of completeness sometimes cannot be given is what shows that giving one says something. The practical payoff is separate and equally concrete. Once both theorems are available, any question about validity may be settled by whichever method is more convenient, and a result established by constructing a proof transfers to every interpretation without further argument. Very little of the later mathematics of the subject would be possible without that licence.
+</Reply>
+
+<Aside title="Whose theorems">
+Gödel proved completeness for first-order logic in his doctoral dissertation of 1929, published in shortened form the following year, and the result was already expected: Hilbert and Ackermann had posed the question explicitly in their textbook a few years earlier. The proof now standard is not Gödel's. Leon Henkin gave a different and considerably more transparent argument in 1949, building the model directly out of the syntax by adding new constants to serve as witnesses, and Henkin's method is what the article on the proofs follows. It generalises where Gödel's original does not, which is why it displaced it, and versions of it are what establish completeness for modal logic in the next few articles.
+</Aside>
+
+## Next
+
+The remaining articles in this tier leave classical logic behind for a while. The next introduces a language with operators for necessity and possibility, and a semantics in which a formula is evaluated not at an interpretation but at a point within a structure of them.
+
+<FurtherReading>
+  <li>Kurt Gödel, "Die Vollständigkeit der Axiome des logischen Funktionenkalküls", *Monatshefte für Mathematik und Physik* 37 (1930), 349 to 360.</li>
+  <li>Leon Henkin, "The Completeness of the First-Order Functional Calculus", *The Journal of Symbolic Logic* 14, no. 3 (1949), 159 to 166.</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Kurt Gödel"](https://plato.stanford.edu/entries/goedel/).</li>
+</FurtherReading>
