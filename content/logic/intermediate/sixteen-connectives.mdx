@@ -1,0 +1,137 @@
+---
+title: The Sixteen Binary Connectives
+subject: logic
+tier: intermediate
+order: 12
+est_read_min: 15
+summary: Enumerating every binary truth function, and showing that the Sheffer stroke and the Peirce arrow are each complete alone
+prerequisites: ["truth-functional-completeness"]
+introduces: ["Sheffer stroke", "Peirce arrow", "binary truth function"]
+requires: ["functional completeness", "adequate set", "truth table"]
+added: "2026-08-29"
+---
+
+The previous article showed that pairs of connectives suffice and left the obvious next question open. A pair is small. Could one connective do the whole job by itself?
+
+The answer is yes, and there are exactly two that can. Getting to that result means first doing something the beginner tier never did, which is to look at the complete stock of two-place connectives rather than the four the language happens to name.
+
+## Every one of them, listed
+
+<Definition term="Binary truth function">
+A truth function taking two arguments. Since two arguments admit four combinations of truth values and each combination can be sent to either value independently, there are exactly sixteen binary truth functions, and each corresponds to one possible filling of the four-row output column of a truth table.
+</Definition>
+
+Sixteen is small enough to write out in full, which is worth doing once. In the table below the four columns of values give the output on the four rows of the table, taken in the order: both arguments true, first true and second false, first false and second true, both false.
+
+<TruthTable
+  columns={["T T", "T F", "F T", "F F", "Name"]}
+  rows={[
+    ["T", "T", "T", "T", "Constant true"],
+    ["T", "T", "T", "F", "Disjunction"],
+    ["T", "T", "F", "T", "Converse conditional"],
+    ["T", "T", "F", "F", "First argument"],
+    ["T", "F", "T", "T", "Conditional"],
+    ["T", "F", "T", "F", "Second argument"],
+    ["T", "F", "F", "T", "Biconditional"],
+    ["T", "F", "F", "F", "Conjunction"],
+    ["F", "T", "T", "T", "Sheffer stroke"],
+    ["F", "T", "T", "F", "Exclusive disjunction"],
+    ["F", "T", "F", "T", "Negation of the second"],
+    ["F", "T", "F", "F", "Nonimplication"],
+    ["F", "F", "T", "T", "Negation of the first"],
+    ["F", "F", "T", "F", "Converse nonimplication"],
+    ["F", "F", "F", "T", "Peirce arrow"],
+    ["F", "F", "F", "F", "Constant false"],
+  ]}
+  caption="All sixteen binary truth functions, ordered by their output columns."
+/>
+
+Six of the sixteen are degenerate, in the sense that they ignore at least one of their arguments. The two constants ignore both. The two projections return one argument unchanged, and the two negated projections return one argument negated; in each case the other argument makes no difference to the output. That leaves ten that genuinely depend on both.
+
+Of those ten, the beginner tier named four. Exclusive disjunction is the one most often missed by beginners, since the English "or" carries it as readily as it carries inclusive disjunction. The two nonimplications are the negations of the two conditionals, and they show up in English as "but not": the twelfth row is what "P but not Q" says. The remaining two are the subject of the rest of this article.
+
+The list has a structure worth noticing. Each row is paired with the row that is its exact opposite, giving eight complementary pairs: conjunction with the Sheffer stroke, disjunction with the Peirce arrow, the biconditional with exclusive disjunction, each conditional with its nonimplication, each projection with its negation, and the two constants with each other. Since negation is available, every connective in the language is the negation of exactly one other, and half the table is redundant.
+
+That redundancy is general, and it explains why nothing has been lost by ignoring twelve of the sixteen all this time. Every binary truth function whatever is expressible from negation, conjunction, and disjunction, by the construction of the previous article. Adding a symbol for exclusive disjunction to the language would be an abbreviation and not an extension. The choice of which four or five to name is a matter of what English happens to have words for, not of what the system can say.
+
+## The two that suffice alone
+
+<Definition term="Sheffer stroke">
+The binary connective true on every row except the one where both arguments are true, written $P \mid Q$ and read "not both". It is the negation of conjunction and is often called NAND. It is one of only two binary connectives that form an adequate set on their own.
+</Definition>
+
+<Definition term="Peirce arrow">
+The binary connective false on every row except the one where both arguments are false, written $P \downarrow Q$ and read "neither". It is the negation of disjunction and is often called NOR. Like the Sheffer stroke, it is adequate on its own.
+</Definition>
+
+Showing that the stroke is adequate takes three lines, and each of them is checked by a four-row table.
+
+Feeding a formula to itself gives negation: $P \mid P$ is false when $P$ is true and true when $P$ is false, so it has the truth table of $\neg P$.
+
+Negating a stroke gives conjunction: since $P \mid Q$ is the negation of the conjunction, negating it again returns the conjunction, and negation is now available. So $(P \mid Q) \mid (P \mid Q)$ has the table of $P \land Q$.
+
+Negating both arguments first gives disjunction: $(P \mid P) \mid (Q \mid Q)$ says that not both of $\neg P$ and $\neg Q$ hold, which by De Morgan is $P \lor Q$.
+
+Negation, conjunction, and disjunction were shown adequate in the previous article, and all three are now expressible using nothing but the stroke. Adequacy transfers: any truth function at all can be written in the three-connective vocabulary and then rewritten, symbol by symbol, into the stroke. The argument is worth noting as a pattern in its own right. To show a new set adequate, there is no need to redo the construction from truth tables; it is enough to express the members of a set already known to be adequate.
+
+The Peirce arrow works the same way with the roles of conjunction and disjunction swapped. $P \downarrow P$ is $\neg P$. Negating an arrow gives disjunction, so $(P \downarrow Q) \downarrow (P \downarrow Q)$ is $P \lor Q$. And $(P \downarrow P) \downarrow (Q \downarrow Q)$ says that neither $\neg P$ nor $\neg Q$ holds, which is $P \land Q$.
+
+## And no others
+
+Two of the sixteen work. The claim now is that the other fourteen do not, and the argument uses only the two preservation properties from the previous article.
+
+A connective adequate on its own must fail to preserve truth. If it returned true whenever both its arguments were true, then by induction on formulas every formula built from it alone would be true on the interpretation assigning true to every letter, and negation would be inexpressible. So its output on the first row must be false.
+
+By the same reasoning it must fail to preserve falsity. If it returned false whenever both arguments were false, every formula built from it would be false on the all-false interpretation, and again negation would be out of reach. So its output on the last row must be true.
+
+Before applying that to the list, it is worth checking the criterion against two connectives one might have expected to do well. Exclusive disjunction fails the second condition: two falsehoods give a falsehood, so it preserves falsity and cannot be adequate alone. The biconditional fails the first: two truths give a truth, so it preserves truth and cannot be adequate either. Both are perfectly respectable connectives with symmetric tables and neither is degenerate, which is a reminder that the criterion is not tracking anything about how useful or how symmetric a connective looks.
+
+Those two conditions fix two of the four entries in the output column and leave the middle two free, so exactly four of the sixteen survive: the Sheffer stroke, the Peirce arrow, the negation of the first argument, and the negation of the second.
+
+The last two fall to a separate observation. Take the connective that returns the negation of its first argument regardless of the second. Any compound built from it has the form of that connective applied to two formulas, and its value depends only on the first of them; tracing back through the construction, the value of any formula built from this connective alone depends only on the leftmost sentence letter in it. So every expressible function is either that letter or its negation, and conjunction, which depends on two letters, is not among them. The mirror argument disposes of the negation of the second argument.
+
+Four candidates, two eliminated, two verified. The result is exact: of the sixteen binary connectives, precisely two are adequate alone, and nothing weaker than a binary connective could be, since unary and nullary connectives cannot produce a function depending on two arguments at all.
+
+## Why the parentheses cannot be dropped
+
+The three translations above are already heavier than the formulas they replace, and there is a structural reason the heaviness cannot be worked off by the usual conventions.
+
+Conjunction and disjunction are associative, which is why $P \land Q \land R$ is written without internal parentheses and nobody objects. The stroke is not. Take $P$ and $Q$ true and $R$ false. Then $P \mid Q$ is false, and a stroke with two false arguments is true, so $(P \mid Q) \mid R$ is true. But $Q \mid R$ is true, and a stroke with two true arguments is false, so $P \mid (Q \mid R)$ is false. The two groupings give different answers, and the string with the parentheses removed does not name a truth function.
+
+The Peirce arrow behaves the same way. So a language with one connective saves nothing on parentheses and spends a great deal on repetition, since every use of negation costs a doubled subformula. A formula for conjunction in the stroke writes $P \mid Q$ twice, and a formula for a longer function repeats its parts on a scale that grows quickly. This is a genuine cost and it is why nobody works in the stroke by choice.
+
+## Where the two came from
+
+A question left unasked so far is why anyone wanted a single primitive in the first place, given the costs just described.
+
+The answer belongs to a programme that dominated the foundations of logic in the early twentieth century. A primitive notion is one the system does not explain; it is taken as understood and everything else is defined from it. A system with five primitive connectives is therefore leaning on five unexplained notions, and a system with one is leaning on one. The same reasoning applies to axioms, which is why so much effort went into showing that particular axiom sets were independent, meaning that no member could be derived from the rest. Reducing the count was understood as reducing what had to be assumed rather than shown, and the fewer assumptions a foundation rests on, the less there is to doubt. Whether that reasoning is sound is a separate question, and the modern verdict is mixed, but it is the reason the results below were prized when they appeared.
+
+Henry M. Sheffer published the result for the stroke in "A Set of Five Independent Postulates for Boolean Algebras, with Application to Logical Constants" in the *Transactions of the American Mathematical Society* in 1913. The paper's main business was Boolean algebra rather than the connectives of propositional logic, and the application that gave the stroke its name arrives at the end.
+
+Charles Sanders Peirce had reached the same territory more than thirty years earlier. A manuscript of 1880 titled "A Boolian Algebra with One Constant" carries out the reduction to a single operation, and it went unpublished for over half a century, appearing only when his papers were edited in the 1930s. By then the stroke had been named after Sheffer, and the second of the two connectives was named after Peirce instead. The pattern is common enough in the history of logic that it hardly needs comment, though it does explain why two connectives that are exact mirror images of each other carry names from different decades and different countries.
+
+The result was taken up immediately. Jean Nicod, in "A Reduction in the Number of the Primitive Propositions of Logic" in the *Proceedings of the Cambridge Philosophical Society* in 1917, used the stroke to reduce the whole propositional part of *Principia Mathematica* to a single axiom and a single rule. Russell, writing the new introduction for the second edition of *Principia* in 1925, treated the substitution of Sheffer's single connective for the two primitives of the first edition as the most definite improvement the intervening years had produced, and credited Nicod's reduction as its consequence.
+
+<Objection>
+None of this is usable. A formula that says something simple in five connectives becomes unreadable in one, the derivations balloon, and no textbook after the introductory chapter works in the stroke. A result that nobody applies is a curiosity dressed as a theorem.
+</Objection>
+
+<Reply>
+The unreadability is real and is not the point. The value of a one-connective language is that proofs about it are short. An induction on formulas needs one case per connective, so a soundness proof for a language with a single connective has one inductive step rather than five, and the same holds for every metatheoretic argument in the rest of this tier. When the object of study is the system itself rather than what can be said in it, a minimal system is the convenient one, and a proof carried out for the stroke transfers to the full language by the translations given above. The result also has an application outside logic entirely, which the aside below describes.
+</Reply>
+
+<Aside title="One gate type">
+Digital circuits are built from gates implementing truth functions, and the adequacy of the stroke means a circuit for any function whatever can be built from NAND gates alone. The same holds for NOR. This is not a curiosity in that setting but a manufacturing convenience: a fabrication process that produces one gate type reliably can produce anything, and the choice between NAND and NOR is made on grounds of transistor count and switching speed rather than logic. The theorem proved above is the reason the choice is available.
+</Aside>
+
+## Next
+
+The syntax of the language has been fixed, the two consequence relations separated, and the expressive power of the connectives settled. What has not been supplied is a proof system: the definition of syntactic consequence given earlier referred to rules and axioms without specifying any. The next article supplies one, in the form that stays closest to how arguments are actually conducted.
+
+<FurtherReading>
+  <li>Henry M. Sheffer, "A Set of Five Independent Postulates for Boolean Algebras, with Application to Logical Constants", *Transactions of the American Mathematical Society* 14, no. 4 (1913), 481 to 488.</li>
+  <li>Jean Nicod, "A Reduction in the Number of the Primitive Propositions of Logic", *Proceedings of the Cambridge Philosophical Society* 19 (1917), 32 to 41.</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on adequate sets of connectives.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on the connectives and their truth conditions.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
