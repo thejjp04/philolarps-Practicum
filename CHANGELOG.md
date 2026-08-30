@@ -7,8 +7,9 @@ Regenerate with `npm run changelog`.
 
 ## 30 August 2026
 
-5 changes.
+6 changes.
 
+- Add a date-grouped changelog and stop tracking local tool config ([10b7b21](https://github.com/thejjp04/philolarps/commit/10b7b21))
 - Add logic advanced rung 5: Godel incompleteness theorems ([f1c7a3a](https://github.com/thejjp04/philolarps/commit/f1c7a3a))
 - Add logic advanced rung 4: sequent calculus and cut elimination ([5ce5f56](https://github.com/thejjp04/philolarps/commit/5ce5f56))
 - Add logic advanced rung 3: computability, decidability, and Church's theorem ([830bddf](https://github.com/thejjp04/philolarps/commit/830bddf))
