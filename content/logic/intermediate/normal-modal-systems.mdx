@@ -1,0 +1,188 @@
+---
+title: "The Normal Systems K, D, T, B, S4, S5"
+subject: logic
+tier: intermediate
+order: 22
+est_read_min: 24
+summary: Each system's characteristic axiom and the frame condition it corresponds to
+prerequisites: ["modal-logic-foundations"]
+introduces: ["system K", "system D", "system T", "system B", "system S4", "system S5", "normal modal logic"]
+requires: ["necessity operator", "frame", "accessibility relation", "axiom schema"]
+added: "2026-08-29"
+---
+
+The previous article left a frame as a bare structure: a set of points and a relation among them, with no properties assumed of the relation at all. That was deliberate, and this article is what the restraint was for.
+
+Adding a property to the relation makes more formulas come out true at every world under every valuation. Requiring that each world sees itself makes one particular formula valid; requiring transitivity makes a different one valid; and in each case the property and the formula turn out to match exactly, so that the formula is valid on precisely those frames with that property and on no others. That two-way fit is called correspondence, and the six systems named in the title are what it produces when the exercise is carried out for the conditions people actually want.
+
+There is no question here of one system being right. Each has a class of frames it fits, and which class is appropriate depends on what the box is being used to say. The point of the article is the map, not a verdict.
+
+## What every normal system has
+
+<Definition term="Normal modal logic">
+A set of formulas containing every propositional tautology and every instance of the distribution schema, closed under modus ponens, closed under uniform substitution, and closed under the rule of necessitation, which permits inferring $\Box \varphi$ from $\varphi$ whenever $\varphi$ has itself been proved. Every system in this article is normal, and systems failing one of these conditions, which do exist and have uses, are treated in the advanced tier.
+</Definition>
+
+Two of those requirements do the real work and both deserve a look.
+
+The distribution schema, usually called K, is
+
+$\Box (\varphi \rightarrow \psi) \rightarrow (\Box \varphi \rightarrow \Box \psi)$
+
+and it says that necessity distributes across a conditional: if a conditional is necessary and its antecedent is necessary, so is its consequent. In the possible worlds semantics this is not an assumption but a consequence. Suppose the conditional and its antecedent both hold at every accessible world. Then at each such world modus ponens gives the consequent, so the consequent holds at every accessible world too. The schema is therefore valid on every frame whatever, with no condition on the relation, which is why it is the floor rather than a distinguishing feature.
+
+The rule of necessitation says that anything provable is provably necessary. It looks stronger than it is, and the restriction it carries is exactly the one flagged in the article on axiomatic systems. Necessitation applies only to theorems, meaning formulas derived from no premises at all. It does not license inferring $\Box \varphi$ from a $\varphi$ that was merely assumed along the way. If it did, one could argue from a premise to the necessity of that premise, which would make every contingent truth necessary and destroy the system. This is the reason the deduction theorem needs care in modal settings, and it is why derivations in these systems are usually presented as chains of theorems rather than as arguments from assumptions.
+
+## The weakest system
+
+<Definition term="System K">
+The smallest normal modal logic: propositional logic together with the distribution schema and the rule of necessitation, and nothing further. It is sound and complete for the class of all frames, so a formula is a theorem of K exactly when it is valid on every frame whatever, with no condition placed on the accessibility relation.
+</Definition>
+
+K is weak, and the weakness is easy to underestimate. It does not prove that what is necessary is true. It does not prove that what is necessary is necessarily necessary. It does not prove that anything at all is possible. All of these fail in K because a frame can be arbitrary, and the previous article's three-world example, in which one world saw a second and the second a third and nothing else held, already refuted two of them.
+
+What K does supply is the logic of the box as such, independent of any reading. Anything K proves is available on every reading of the operator, which is why systems for provability, for obligation, for knowledge and for time are all built on top of it rather than beside it. The rest of this article consists of adding axioms to K and reporting what each addition costs in frames.
+
+## A derivation in K
+
+Since every system here is an extension of K, it is worth seeing what its two ingredients can do together, and the shortest useful demonstration derives a rule rather than a formula.
+
+Suppose a conditional $\varphi \rightarrow \psi$ has been proved. Then the following four lines are available.
+
+<Proof
+  system="axiomatic"
+  caption="Deriving the rule of monotonicity in K from a proved conditional."
+  lines={[
+    { n: 1, formula: "φ → ψ", justification: "Theorem, by hypothesis" },
+    { n: 2, formula: "□(φ → ψ)", justification: "Necessitation, 1" },
+    { n: 3, formula: "□(φ → ψ) → (□φ → □ψ)", justification: "Distribution schema" },
+    { n: 4, formula: "□φ → □ψ", justification: "Modus ponens, 2 and 3" },
+  ]}
+/>
+
+What has been shown is that whenever a conditional is a theorem, boxing both sides preserves it, and this is usually called monotonicity or the rule of regularity. Neither ingredient alone gives it: necessitation without distribution gets to line 2 and stops, and distribution without necessitation has no way of reaching line 2 in the first place.
+
+The rule earns its keep immediately. Since $(\varphi \land \psi) \rightarrow \varphi$ is a tautology and so a theorem, monotonicity yields $\Box (\varphi \land \psi) \rightarrow \Box \varphi$, and the same with the second conjunct, so a boxed conjunction implies the conjunction of the boxes. The converse also holds in K, by a slightly longer argument through the same schema, and putting the two together gives the equivalence of $\Box (\varphi \land \psi)$ with $\Box \varphi \land \Box \psi$. Nothing similar holds for disjunction: $\Box \varphi \lor \Box \psi$ implies $\Box (\varphi \lor \psi)$, and the reverse fails, which is exactly what one would expect of an operator behaving like a universal quantifier.
+
+Line 1 also shows why the restriction on necessitation is not a technicality. The rule was applied to a theorem, and a theorem is true at every world of every model, so boxing it is safe. Applied instead to something merely assumed, the same step would move from a formula true at one world to a claim about all the worlds that one can see, and no such move is available.
+
+## Correspondence
+
+The general shape of every result below is the same, and stating it once saves stating it six times.
+
+An axiom schema and a condition on the accessibility relation correspond when the schema is valid on a frame exactly when the frame's relation satisfies the condition. This is two claims, and both need proving. One direction says that a frame with the property validates the schema, which is a matter of running the truth clauses. The other says that a frame without the property refutes it, which requires building a valuation that makes the schema fail somewhere, and is where the work is.
+
+Both directions are worth seeing once in full, and the case of reflexivity is the clearest.
+
+Suppose every world sees itself and suppose $\Box \varphi$ is true at some world $w$. Then $\varphi$ holds at every world accessible from $w$, and $w$ is one of them, so $\varphi$ holds at $w$. Hence $\Box \varphi \rightarrow \varphi$ is true at $w$, and since $w$ and the valuation were arbitrary, the schema is valid on the frame.
+
+Now suppose some world $w$ does not see itself, and let an atomic formula $P$ be true at every world except $w$. Every world $w$ can see is a world other than $w$, so $P$ holds throughout, so $\Box P$ is true at $w$. But $P$ is false at $w$. So the schema fails at $w$ under this valuation, and the frame does not validate it.
+
+Putting the two together: the schema is valid on a frame if and only if the frame is reflexive. Notice how the second half worked. The valuation was constructed by taking the set of worlds that make the argument go through and declaring $P$ true on exactly that set, and every correspondence proof below uses the same trick with a different set.
+
+## The five conditions
+
+<Definition term="System D">
+K together with the schema $\Box \varphi \rightarrow \Diamond \varphi$, which corresponds to seriality: every world has at least one world accessible from it, so there are no dead ends. Equivalently, D rules out the worlds at which every formula whatever is necessary.
+</Definition>
+
+The deontic reading is what the system is named for and what it is shaped by. Reading the box as obligation, the schema says that whatever is obligatory is permitted, which is a plausible minimum condition on a code of conduct and a good deal weaker than saying that what is obligatory is done. Seriality is what corresponds to it, because the dead ends identified in the previous article are precisely the worlds where obligations can be inconsistent without complaint: nothing is accessible, so every obligation holds vacuously, including contradictory ones.
+
+<Definition term="System T">
+K together with the schema $\Box \varphi \rightarrow \varphi$, which corresponds to reflexivity: every world is accessible from itself. T contains D, since a reflexive relation is automatically serial, and it is the weakest system in which necessity implies truth.
+</Definition>
+
+This is the schema whose correspondence was proved above. It is right for necessity in any sense on which what could not have been otherwise is at least the case, and it is right for knowledge, where it amounts to the claim that what is known is true. It is wrong for obligation, and it is wrong for belief, which is why the logic of belief is usually built on D rather than on T.
+
+<Definition term="System B">
+T together with the schema $\varphi \rightarrow \Box \Diamond \varphi$, which corresponds to symmetry: whenever one world is accessible from another, the second is accessible from the first. The schema says that whatever is the case is necessarily possible, and the letter is inherited from a traditional association with Brouwer rather than from any doctrine of his about modality.
+</Definition>
+
+The correspondence runs as follows. If the relation is symmetric and $\varphi$ holds at $w$, then take any world $v$ that $w$ can see; symmetry lets $v$ see $w$, where $\varphi$ holds, so $\Diamond \varphi$ is true at $v$; since $v$ was any accessible world, $\Box \Diamond \varphi$ is true at $w$. For the other direction, suppose $w$ sees $v$ but $v$ does not see $w$, and let $P$ be true at $w$ alone. Then $P$ holds at $w$, but no world $v$ can see makes $P$ true, so $\Diamond P$ fails at $v$, so $\Box \Diamond P$ fails at $w$.
+
+<Definition term="System S4">
+T together with the schema $\Box \varphi \rightarrow \Box \Box \varphi$, which corresponds to transitivity: whenever one world sees a second and the second sees a third, the first sees the third. The name is inherited from the fourth of the five systems Lewis and Langford numbered in 1932, which is also why the schema is usually called 4.
+</Definition>
+
+The three-world model at the end of the previous article was a countermodel to this schema, and the reason given there was exactly the failure of transitivity. Running the correspondence in general, if the relation is transitive and $\Box \varphi$ holds at $w$, then anything reachable in two steps from $w$ is reachable in one, so $\varphi$ holds there, so $\Box \varphi$ holds at every world $w$ sees. For the converse, suppose $w$ sees $v$, $v$ sees $u$, and $w$ does not see $u$; let $P$ be true at exactly the worlds $w$ can see. Then $\Box P$ holds at $w$, but $P$ fails at $u$, so $\Box P$ fails at $v$, so $\Box \Box P$ fails at $w$.
+
+<Definition term="System S5">
+T together with the schema $\Diamond \varphi \rightarrow \Box \Diamond \varphi$, which corresponds to the euclidean condition: whenever a world sees two worlds, each of those sees the other. Combined with reflexivity this makes the accessibility relation an equivalence relation, so S5 contains both B and S4, and it is the strongest of the six.
+</Definition>
+
+The euclidean condition is the one unfamiliar item on the list, and the claim that reflexivity plus euclidean gives an equivalence relation is short enough to check. For symmetry, suppose $w$ sees $v$. Reflexivity gives that $w$ sees itself, so $w$ sees two worlds, namely $v$ and $w$, and the euclidean condition applied to that pair yields that $v$ sees $w$. For transitivity, suppose $w$ sees $v$ and $v$ sees $u$. Symmetry, just established, gives that $v$ sees $w$, so $v$ sees both $w$ and $u$, and the euclidean condition yields that $w$ sees $u$. Reflexivity was assumed at the start, so all three properties hold together.
+
+That is why S5 subsumes the two systems below it rather than sitting beside them. The same logic can be presented as T with the 5 schema added, or as T with both 4 and B added, or as K with T, 4 and 5, and every such presentation yields the same set of theorems. Textbooks differ over which axiomatisation to print, and nothing turns on the choice.
+
+S5 is also where the crude semantics rejected at the start of the previous article comes back in a defensible form. If the relation is an equivalence relation then it carves the worlds into groups within which every world sees every other, and inside any one group accessibility is doing no work at all: the box quantifies over the whole group and might as well quantify over everything. So a formula is valid on all S5 frames exactly when it is valid on the frames where every world sees every world, and the semantics that seemed too strong in general is exactly right for this system.
+
+<TruthTable
+  columns={["Axiom", "Schema", "Frame condition", "System"]}
+  rows={[
+    ["D", "□φ → ◇φ", "serial", "D = K + D"],
+    ["T", "□φ → φ", "reflexive", "T = K + T"],
+    ["B", "φ → □◇φ", "symmetric", "B = T + B"],
+    ["4", "□φ → □□φ", "transitive", "S4 = T + 4"],
+    ["5", "◇φ → □◇φ", "euclidean", "S5 = T + 5"],
+  ]}
+  caption="Each schema is valid on exactly the frames satisfying the condition beside it. Every system also contains K and is closed under necessitation."
+/>
+
+The systems are ordered by strength, though not linearly. K is contained in D, which is contained in T, which is contained in both B and S4, both of which are contained in S5. B and S4 are not comparable: symmetry does not give transitivity and transitivity does not give symmetry, and there are formulas provable in each that are not provable in the other.
+
+## Iterated operators
+
+One consequence of the stronger systems is worth isolating, because it is the most visible difference between them and it matters for the applications.
+
+In K, strings of operators do not simplify. $\Box \varphi$, $\Box \Box \varphi$ and $\Box \Box \Box \varphi$ are all distinct, none implies another, and the same holds for every longer string with the operators mixed in any order. There are infinitely many inequivalent things a stack of boxes and diamonds can say.
+
+In S4 the strings begin collapsing. Transitivity gives $\Box \Box \varphi$ the same force as $\Box \varphi$, and the dual gives $\Diamond \Diamond \varphi$ the same force as $\Diamond \varphi$, so repetition of a single operator is always redundant. Alternating strings are not all redundant, and S4 leaves a finite stock of genuinely distinct ones.
+
+In S5 the collapse is total. Every string reduces to its last operator: $\Box \Box \varphi$, $\Box \Diamond \varphi$ and $\Diamond \Diamond \varphi$ reduce respectively to $\Box \varphi$, $\Diamond \varphi$ and $\Diamond \varphi$, and so on for any length. Only three things can be said with the operators, namely that $\varphi$ is necessary, that it is possible, and that it holds, and the whole hierarchy of iterated modality flattens.
+
+Whether that is a virtue depends entirely on the reading. For a broad metaphysical necessity, the flattening is often regarded as correct, on the ground that whether something could have been otherwise is not itself a contingent matter. For knowledge it is a strong and disputed commitment, since the S5 schema read epistemically says that whatever an agent has not ruled out, the agent knows they have not ruled out, and the S4 schema says that whatever an agent knows, they know that they know. Both have been defended and both have been rejected, and the advanced article on epistemic logic is where the dispute is set out. For obligation the flattening is plainly wrong, which is why deontic logic stays close to D.
+
+## What the correspondences are good for
+
+Two payoffs come out of the correspondence results, and they are worth separating.
+
+The first is that every one of these systems is sound and complete for its class of frames. Soundness follows from the correspondence directly, since the axioms are valid on the frames and the rules preserve validity. Completeness does not, and is proved by a construction that builds a single model out of the system's own consistent sets of formulas, one world for each. The advanced article on completeness proofs gives that construction, which is a modal relative of the Henkin method already mentioned.
+
+The second is that questions about a modal system can be converted into questions about a relation. Whether one system is stronger than another becomes whether one class of frames is included in the other. Whether a formula is a theorem becomes whether a countermodel can be found, and countermodels for these systems can usually be drawn with three or four points.
+
+That last point is stronger than it sounds and is worth stating as a result. Each of these six systems has the property that any formula it fails to prove is refuted on a finite model, whose size is bounded by something computed from the formula itself. Since only finitely many models of a given size need be checked, this yields a decision procedure: to test a formula, generate the models small enough to matter and look. So all six systems are decidable, which is a sharp contrast with first-order logic, where no such procedure exists and the article on computability explains why. Modal languages buy decidability by giving up the ability to say certain things, and the trade is the main reason these systems are used so heavily outside philosophy.
+
+## Systems these do not include
+
+The six are the classical list and they are not a complete inventory, which is worth saying so that the map is not mistaken for the territory.
+
+Dropping T while keeping 4 gives the system usually written K4, whose frames are transitive without being reflexive. That is the right base for reading the box as provability in a formal theory, since a theory that proves something has not thereby made it true, and the advanced article on provability logic builds on K4 by adding the Löb schema.
+
+Adding D, 4 and 5 to K without T gives a system often used for belief, on the ground that beliefs are consistent and introspectible but not guaranteed to be true. Its frames are serial, transitive and euclidean, and it differs from S5 exactly by the failure of reflexivity.
+
+Beyond these, adding more than one operator gives the logics of time, in which one box points forwards and another backwards, and the logics of several agents, in which each agent has a box of their own and interesting principles concern how they interact. Dropping the requirement of normality altogether gives systems in which necessitation or distribution fails, which have been proposed for readings on which not every logical truth counts as necessary. Each of these has an article in the advanced tier.
+
+<Objection>
+The correspondence results are relabelling rather than discovery. Somebody stipulates that a certain formula is an axiom, works out which relations make it valid, and announces a correspondence. Of course the two match, since one was reverse-engineered from the other. Nothing has been learned about necessity, and calling reflexivity "the T condition" adds a name to a piece of set theory without adding an insight.
+</Objection>
+
+<Reply>
+If the matching were automatic the objection would land, and the reason it is not automatic is that the fit fails in both directions elsewhere. Some perfectly ordinary conditions on a relation are matched by no modal formula at all: irreflexivity is the standard example, and no schema whatever is valid on exactly the frames in which no world sees itself. So the modal language does not reach every structural property, and finding that a given property is reachable is a result rather than a stipulation. In the other direction, some modal schemas correspond to conditions that no first-order sentence about the relation can express. The best known is the Löb schema, which is valid on exactly the frames that are transitive and admit no infinite ascending chain, and the second half of that condition is not first-order expressible. That schema is the basis of provability logic, treated in the advanced tier, and its existence shows that the modal language is not a notational variant of a first-order language about frames. Neither fact could have been arranged in advance, and both were found by doing the work the objection dismisses.
+</Reply>
+
+<Aside title="Where the letters come from">
+The names are a historical accident and nothing in them is systematic. S4 and S5 are the fourth and fifth of the systems Lewis and Langford presented in 1932, and they survive because those two turned out to be the ones people wanted. K is named in Kripke's honour and dates from after the semantics, not before. T was proposed by Feys in 1937, and von Wright introduced a system M in 1951 which Sobociński showed a couple of years later to be the same logic, so the same system appears under two letters in the older literature. B is called Brouwerian by an association running back through Becker, and the connection is to intuitionism rather than to anything Brouwer said about necessity. D is for deontic. The result is a naming scheme in which two systems are numbered by their place in a list nobody consults any more, one is named after a person who came later, one after a person who worked on something else, and one after an application, which is a fair summary of how the subject actually developed.
+</Aside>
+
+## Next
+
+This is the last article of the intermediate tier. The advanced tier opens by paying the debts this one has run up: the completeness proofs promised for propositional and first-order logic, and then the results that follow from them about the sizes and shapes of the models a theory can have.
+
+<FurtherReading>
+  <li>C. I. Lewis and C. H. Langford, *Symbolic Logic* (The Century Company, 1932).</li>
+  <li>Saul A. Kripke, "Semantical Considerations on Modal Logic", *Acta Philosophica Fennica* 16 (1963), 83 to 94.</li>
+  <li>G. E. Hughes and M. J. Cresswell, *A New Introduction to Modal Logic* (Routledge, 1996).</li>
+  <li>Patrick Blackburn, Maarten de Rijke and Yde Venema, *Modal Logic* (Cambridge University Press, 2001), on correspondence and definability.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Modal Logic"](https://plato.stanford.edu/entries/logic-modal/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Modern Origins of Modal Logic"](https://plato.stanford.edu/entries/logic-modal-origins/).</li>
+</FurtherReading>
