@@ -1,0 +1,202 @@
+---
+title: "Gödel's Incompleteness Theorems"
+subject: logic
+tier: advanced
+order: 5
+est_read_min: 32
+summary: "Arithmetization, the fixed-point lemma, and what the theorems do and do not show"
+prerequisites: ["sequent-calculus-and-cut-elimination"]
+introduces: ["Gödel numbering", "diagonal lemma", "first incompleteness theorem", "second incompleteness theorem", "recursive axiomatizability"]
+requires: ["axiom schema", "consistency", "recursively enumerable set", "decidability", "completeness theorem"]
+added: "2026-08-30"
+---
+
+The completeness theorem says that a proof system can derive every semantic consequence of a set of premises. That result is often reported as showing that first-order logic leaves nothing out, and the report is accurate about logic and misleading about everything else. What completeness delivers is a guarantee about the relation between a set of sentences and what follows from it. It says nothing about whether any set of sentences one can actually write down has, among its consequences, all the truths about the structure one was trying to describe.
+
+That second question is the one this article answers, and the answer is negative in a way that no amount of ingenuity in choosing axioms can repair.
+
+## Two senses of complete
+
+The ambiguity in the word has caused more confusion than any other terminological accident in the subject, so it is worth fixing before anything else.
+
+A proof system is complete when it derives everything that semantically follows. That is a property of the logic, and first-order logic has it.
+
+A theory is complete when, for every sentence in its language, it proves either that sentence or its negation. That is a property of a set of axioms, and it is the property at issue here. A complete theory settles every question expressible in its own vocabulary, leaving nothing open.
+
+The two properties are unrelated in any direct way, and a theory can easily be incomplete in the second sense while the logic behind it is complete in the first. Group theory is incomplete in this sense and nobody minds: some groups are abelian and some are not, so the axioms had better not settle the question. Incompleteness becomes interesting when the theory was meant to describe one structure in particular.
+
+## Why some constraint on the axioms is needed
+
+Consider the set of all true sentences of the language of arithmetic, where truth means truth in the ordinary structure of the natural numbers with addition and multiplication. Call it true arithmetic. This set is complete by construction: for any sentence, either it or its negation is true, and whichever one is true is in the set. It is also consistent, since everything in it is true.
+
+So a complete consistent theory of arithmetic exists. The question is whether one can be given.
+
+<Definition term="Recursive axiomatizability">
+The property a theory has when its axioms form a decidable set, so that some effective procedure can determine of any given sentence whether it is one of the axioms. The condition is what distinguishes a theory that has been specified from a set of sentences that merely exists, and it is satisfied by every axiom system in ordinary use, including those with infinitely many axioms given by an axiom schema.
+</Definition>
+
+The requirement is mild and it is not a technicality. A theory whose axioms cannot be recognised is not something anyone can use: one could not check a proof, since checking a proof means checking that each of its leaves is an axiom. Ordinary theories satisfy the condition comfortably. Peano arithmetic has infinitely many axioms because induction is given by a schema, and one can still tell at a glance whether a given sentence is an instance of that schema.
+
+Notice what the condition does to a theory's theorems. If the axioms are decidable and the rules are effective, then the theorems form a recursively enumerable set: run through all finite proofs in order and list what they prove. A theory can therefore have a listable set of theorems without having a decidable one, and it will turn out that this is exactly the situation arithmetic is in.
+
+The theorem to be proved is that no recursively axiomatizable consistent theory that can do a modest amount of arithmetic is complete. True arithmetic escapes only by not being axiomatizable, which is the same limitation stated from the other side.
+
+## Arithmetization
+
+<Definition term="Gödel numbering">
+An assignment of distinct natural numbers to the symbols, formulas and finite sequences of formulas of a formal language, computable in both directions, so that syntactic operations on expressions correspond to arithmetical operations on their codes. Under such an assignment a sentence about numbers can be read as a sentence about the language it is written in.
+</Definition>
+
+The technique is now unremarkable and was startling in 1931. Assign a number to each symbol, then code a finite sequence of symbols by a number built from the codes of its members in a recoverable way, using exponents of successive primes or any other device that can be decoded. A formula is a sequence of symbols and so gets a number; a proof is a sequence of formulas and so gets a number too.
+
+What matters is not the coding itself but what becomes expressible once it is in place. Syntactic properties turn into arithmetical ones. "Is a well-formed formula" becomes a property of numbers. "Is the negation of" becomes an arithmetical relation between two numbers. Above all, "is a proof in the theory of the formula with code n" becomes an arithmetical relation between two numbers, and the recursive axiomatizability of the theory is exactly what guarantees that this relation is decidable, since deciding it means checking a finite object step by step.
+
+A decidable relation can be represented in arithmetic. That claim needs proof and the proof is a long verification rather than an idea: one shows that the basic recursive functions are represented, that representability survives composition, primitive recursion and minimisation, and hence that every recursive relation is represented by some formula of the language. Representation means that when the relation holds of particular numbers the theory proves the corresponding instance, and when it fails the theory proves the negation. The theory does not merely happen to agree with the facts about decidable relations; it proves them, case by case.
+
+A small example makes the notion concrete. The relation "m is less than n" is decidable, and in the language of arithmetic it is represented by a formula saying that some number added to m gives n, with that number not zero. Representation then means two things at once: for each particular pair where the relation holds, the theory proves the instance, and for each particular pair where it fails, the theory proves the negation of the instance. Both halves are needed. A theory that proved the positive instances and stayed silent on the negative ones would not be pinning the relation down, since it would be compatible with the relation holding more widely than it does. The verification for the proof relation is the same in kind, and long only because the proof relation is built from many layers of simpler ones.
+
+So there is a formula of the language of arithmetic, built from plus and times and quantifiers and nothing else, that says of two numbers that the first codes a proof of the sentence coded by the second. Prefix an existential quantifier and there is a formula saying that the sentence coded by n has some proof. Write it as Prov, and remember that it is an ordinary arithmetical formula whose reading as a statement about provability depends entirely on the coding.
+
+The provability formula is the one place where care is needed later, since the existential quantifier in front of it means it is not decidable. If a sentence is provable, the theory can prove that it is, by exhibiting the number that codes the proof. If a sentence is not provable, there is no such witness and no corresponding guarantee.
+
+## The diagonal lemma
+
+<Definition term="Diagonal lemma">
+The result that for any formula ψ with one free variable, in a theory capable of representing the recursive functions, there is a sentence φ such that the theory proves φ if and only if it proves ψ applied to the code of φ. Every property expressible in the language has a sentence that ascribes that property to itself.
+</Definition>
+
+The construction is short and it repays being followed rather than accepted.
+
+The trouble to be avoided is that a sentence cannot contain its own code as a numeral, since the numeral for the code is longer than the sentence and the demand is circular. The lemma sidesteps this by making the sentence refer to the result of an operation rather than to itself directly.
+
+Consider the syntactic operation that takes a formula with one free variable and substitutes into it the numeral naming that formula's own code. This is a computable operation on codes: given the code of a formula, one can compute the code of the result. So there is an arithmetical formula representing it, and one can write a term, in effect a function symbol, standing for the operation.
+
+Now take the given formula ψ and form a new formula with one free variable that says: ψ holds of the result of applying that substitution operation to the input. Let d be the code of this new formula. Finally, apply the new formula to the numeral for d. The sentence obtained says that ψ holds of the result of substituting the numeral for d into the formula coded by d. But that result is exactly the sentence just constructed. So the sentence says that ψ holds of itself.
+
+Nothing in the argument used any special property of ψ. Any expressible condition whatever has a sentence asserting that it holds of that very sentence, and the sentence is produced by an explicit construction, so it can in principle be written out. Self-reference in arithmetic is not a trick available only for one carefully chosen predicate. It is a general feature of any language rich enough to talk about its own syntax through coding, which is why the same lemma yields several different theorems depending on what is put in for ψ.
+
+## The first theorem
+
+Apply the lemma to the negation of the provability formula. Out comes a sentence, standardly called G, such that the theory proves G if and only if it proves that G is not provable. Informally: G says of itself that it has no proof.
+
+<Definition term="First incompleteness theorem">
+For any consistent, recursively axiomatizable theory that represents enough arithmetic, there is a sentence in its language that the theory neither proves nor refutes. No such theory is complete, and adding the undecided sentence as a new axiom yields a theory to which the theorem applies again.
+</Definition>
+
+Take the two halves in turn.
+
+Suppose the theory proves G. Then there is a proof, so some number codes it, so the theory proves that that number codes a proof of G, so the theory proves that G is provable. But G says the opposite, and the theory proves G. So the theory proves a contradiction. Given consistency, then, the theory does not prove G.
+
+Suppose the theory proves the negation of G. Since the theory does not prove G, no number codes a proof of G, so for each particular number the theory proves that it does not code a proof of G. The theory therefore proves each of infinitely many instances while also proving the existential claim that some number does code such a proof. That is not a contradiction in the ordinary sense, since no finite collection of these is inconsistent, and Gödel's original argument accordingly assumed a stronger property than consistency to rule it out. A theory is omega-consistent when it never proves an existential claim while also refuting every instance of it. Under that assumption the negation of G is not provable either.
+
+Requiring omega-consistency is a real weakness, since it is a stronger hypothesis than one would like and it is not obviously satisfied by every theory of interest. Rosser removed it in 1936 by replacing G with a more elaborate sentence, which says not that it has no proof but that any proof of it is preceded by a shorter proof of its negation. The comparison of proof lengths is decidable, and the extra structure lets both halves of the argument run on plain consistency. The result usually stated today is the Gödel-Rosser version, and the hypothesis is simply that the theory is consistent.
+
+Two consequences follow immediately.
+
+The theory is incomplete, and the incompleteness cannot be patched. Add G as a new axiom. The result is a new theory, still consistent, still recursively axiomatizable, still capable of arithmetic; so the theorem applies again and produces a new undecided sentence. Iterate through the natural numbers and beyond, and at every stage there is something left over. The gap is not a defect of a particular axiom list that a better list would close.
+
+The set of theorems of arithmetic is not decidable. If it were, then for each sentence one could decide whether it or its negation was a theorem, and since one of them always is for a complete theory, the failure of decidability and the failure of completeness are two faces of the same fact. This connects back to the previous article: Church's theorem said there is no decision procedure for logical validity, and the first incompleteness theorem says the corresponding thing for arithmetical truth, with the additional information that no listing of axioms will help.
+
+## Is G true?
+
+The question is asked constantly and the answer requires care about what is being claimed.
+
+The argument above shows that if the theory is consistent then G is not provable in it. G says that G is not provable in the theory. So if the theory is consistent, G says something correct about the standard natural numbers, and in that sense G is true and unprovable.
+
+Three qualifications keep this from meaning what it is often taken to mean.
+
+The truth of G is conditional on the consistency of the theory, and it is established by an argument carried out somewhere, not by direct inspection. The reasoning takes place in a stronger setting, and what that setting proves is the conditional: if the theory is consistent then G. The stronger setting has a Gödel sentence of its own.
+
+Second, G is unprovable in the theory and not unprovable in general. It has a perfectly good proof, given above, in a system that can express the consistency of the theory. Nothing here is beyond the reach of mathematics. What is shown is that no single recursively axiomatizable theory reaches everything.
+
+Third, truth here means truth in the standard model. A consistent theory that does not prove G also does not refute it, so by the completeness theorem it has models satisfying the negation of G. Those models are not the standard natural numbers, and the machinery of the next few articles is largely concerned with what they are like instead.
+
+## The second theorem
+
+The first theorem produces a sentence with no obvious mathematical content. The second turns the same construction on a sentence that everyone cares about.
+
+The consistency of a theory says that it does not prove a contradiction. Under the coding, that is an arithmetical claim: no number codes a proof of a contradiction. Write it as Con, an ordinary sentence of the language of arithmetic.
+
+<Definition term="Second incompleteness theorem">
+No consistent, recursively axiomatizable theory that represents enough arithmetic proves the sentence expressing its own consistency. A theory strong enough to be worth worrying about is therefore not strong enough to settle the worry, and any proof of its consistency must use resources it does not itself contain.
+</Definition>
+
+The proof is a formalisation of the proof of the first theorem. The first half of that argument showed that if the theory is consistent then G is unprovable, which is to say that Con implies G. If the whole of that reasoning can be carried out inside the theory, then the theory proves the implication from Con to G. Suppose the theory also proved Con. Then it would prove G, and the first theorem says it does not. So it does not prove Con.
+
+The delicate part is the antecedent. Carrying the argument out inside the theory requires that the provability formula behave, within the theory, the way provability behaves outside it. Three conditions suffice, and they are usually named after Hilbert, Bernays and Löb. The theory must prove that anything it proves is provable; it must prove that provability is closed under modus ponens; and it must prove that anything provable is provably provable. The first is straightforward, the second requires work, and the third is where the real effort goes, since it demands that the theory verify a general fact about its own proof relation rather than a particular instance.
+
+The conditions can fail, and it matters that they can. A provability formula built in a perverse but still correct way, one that agrees with the ordinary one about which sentences are provable but is written differently, can fail the conditions, and the corresponding consistency sentence can then be provable. What the second theorem constrains is not every sentence that happens to be equivalent to consistency but the sentences that express it in a way tracking the structure of proofs. Gödel stated the theorem in his 1931 paper without a detailed proof, and the first published proof appeared in the second volume of Hilbert and Bernays's *Grundlagen der Mathematik* in 1939.
+
+The three conditions are more productive than they look, because they are the only facts about the provability formula that the proof of the second theorem uses. Anything satisfying them behaves the same way, and that observation is what allows the whole subject to be treated abstractly: replace the formula by a modal operator, take the three conditions as axioms, and one obtains a modal logic in which the second incompleteness theorem is a formal derivation rather than a metatheorem about arithmetic. There is a strengthening in that setting, due to Löb, which says that if a theory proves that a sentence is provable only if true, then the theory proves the sentence outright. The second theorem is the special case obtained by taking the sentence to be a contradiction. A later article develops the modal system and the theorem showing it captures exactly the arithmetically valid principles, which is one of the more satisfying results in the area: an abstract logic turns out to have been the right description of a concrete phenomenon all along.
+
+The theorem is where the previous article's discussion of Gentzen becomes precise. Gentzen proved the consistency of arithmetic using transfinite induction along an ordering that arithmetic cannot prove well-founded. The second incompleteness theorem explains why some such extra resource was unavoidable, and Gentzen's contribution is the identification of exactly which one is needed.
+
+## Where the boundary lies
+
+The hypothesis about representing enough arithmetic has been left vague, and it is worth making precise, because the two sides of the boundary are both surprising.
+
+The amount required is very little. There is a finitely axiomatised theory, usually called Q, with a handful of axioms about the successor function, addition and multiplication and no induction at all. It is weak enough that it fails to prove that addition is commutative. It nonetheless represents every recursive relation, which is all the proof needs, so it is incomplete, and so is every consistent theory containing it. Tarski, Mostowski and Robinson made this the basis of a general method: to show that some theory is undecidable, interpret Q inside it. Since Q is finitely axiomatised, the interpretation can be carried out in theories that have nothing obviously to do with numbers, and undecidability results for group theory, lattice theory and much else were obtained this way.
+
+The other side of the boundary is where the interest lies. The previous article recorded that arithmetic with addition alone, the theory Presburger axiomatised in 1929, is decidable, and a decidable recursively axiomatizable theory can be complete without contradiction. It is. The theory of multiplication alone, without addition, is likewise decidable. Tarski's theory of real closed fields, which is arithmetic on the real numbers with both operations, is decidable too. Each of these is a theory in which one might have expected the construction to run, and in none of them does it.
+
+What the successful cases have in common is that they cannot express the recursive functions, and what makes arithmetic different is the interaction of addition and multiplication together over the integers. Presburger arithmetic can say that a number is a multiple of seven but cannot say that one number is the product of two others. The real closed field theory has both operations, but its domain has no way to pick out the integers within it, and the coding needs the integers. Take away either the two operations or the discrete domain and the machinery collapses. That the whole phenomenon depends on so specific a combination is worth registering, because it shows the theorems are a result about a particular expressive threshold rather than a general truth about formal systems.
+
+## Set theory and independence
+
+The theorem applies to set theory for the same reasons it applies to arithmetic. Zermelo-Fraenkel set theory with choice is recursively axiomatizable, and the natural numbers can be constructed inside it, so it represents the recursive functions and is therefore incomplete if consistent, and does not prove its own consistency.
+
+The famous independence results in set theory are usually cited alongside this, and they should be distinguished from it. That the continuum hypothesis is neither provable nor refutable from the axioms was established by Gödel in 1938 and Cohen in 1963, and neither half was obtained by the construction in this article. Gödel exhibited a model of the axioms in which the hypothesis holds; Cohen developed a method for building models in which it fails. These are semantic arguments about the range of structures the axioms permit, and they say something the incompleteness theorem does not, namely which sentence is undecided and why it matters.
+
+The relation between the two is that incompleteness guarantees undecided sentences exist without saying which, while the independence proofs identify one of mathematical importance and account for it. Someone who knows only the incompleteness theorem knows that set theory leaves questions open. Someone who knows the independence results knows that the size of the continuum is one of them, which is a different and more useful piece of information.
+
+## What Hilbert wanted
+
+Hilbert's programme asked for a proof, by methods nobody could doubt, that the infinitary mathematics of the nineteenth century would never lead to contradiction. The finitary part of mathematics was to be the base, and the base was to certify the rest.
+
+The second theorem removes this. If the finitary methods are formalisable in arithmetic, and they surely are, then they cannot prove even the consistency of arithmetic, let alone of anything stronger. The demand was for a proof in a weak system of a fact about a strong system, and the theorem says that such proofs run in the wrong direction.
+
+What survived is worth stating, because the programme is often described as simply refuted. Relative consistency proofs remain available and remain useful: one can show that if a weaker theory is consistent then so is a stronger one obtained by adding a particular axiom, and much of modern set theory consists of results with exactly that form. The measurement of theories by the strength required to prove their consistency, mentioned in the previous article, is a direct descendant. And the reduction of one theory to another, which was part of what Hilbert wanted, goes through in many cases even though the absolute certification does not.
+
+## What the theorems do not show
+
+They attract more misuse than any other results in logic, and the misuses fall into recognisable groups.
+
+They do not show that there are truths beyond the reach of human knowledge. The sentence produced for a given theory is unprovable in that theory and provable elsewhere, and the argument that establishes its truth is an ordinary mathematical argument that anyone can follow. Nothing in the theorems identifies a sentence that resists all proof.
+
+They do not show that mathematics is uncertain or that its results might collapse. What is unprovable is a particular consistency statement within a particular formal system. The theorems are themselves theorems, proved by the standard methods, and someone who took them to undermine mathematical reasoning would be undermining their own premise.
+
+They do not transfer to domains without the relevant structure. The hypotheses require a formal language, a decidable axiom set and enough arithmetic to represent recursive functions. Arguments that apply the theorems to political systems, ethics, physics or theology generally satisfy none of these and are relying on the word "incompleteness" rather than on the theorem. A reliable test is to ask what plays the part of the coding, since without an effective assignment of numbers to the objects of the domain there is nothing for the diagonal lemma to operate on, and the analogy has no mechanism behind it.
+
+The one nearby argument with a serious literature concerns minds and machines. Lucas argued in 1961 that since a person can see that the Gödel sentence of any given formal system is true, while the system itself cannot prove it, the person is not a formal system; Penrose has developed versions of the argument at greater length. The standard reply has two parts. What a person can see is the conditional, that if the system is consistent then its Gödel sentence holds, and a machine can prove that conditional too. To get the unconditional conclusion one needs to know the system is consistent, and for a system as complicated as a candidate description of a human mind, nobody knows any such thing. The argument therefore requires exactly the premise that the second theorem says is hard to come by. The debate has continued for six decades without either side conceding, but the burden has stayed where the reply put it.
+
+<Objection>
+The Gödel sentence is a contrivance. It was built by a self-referential trick for the express purpose of being unprovable, and it says nothing about numbers that any mathematician would otherwise have wanted to know. So the theorems establish a curiosity about the edges of formal systems rather than a limitation on mathematics. Real arithmetical questions are not the sort of thing the construction produces, and the incompleteness of arithmetic is therefore a phenomenon confined to sentences designed to exhibit it.
+</Objection>
+
+<Reply>
+Two things answer this, one immediate and one that took fifty years.
+
+The immediate answer is the second theorem. The consistency of arithmetic is not a contrivance, it was the central question of foundational research for thirty years, and it is undecided in arithmetic for the same reason the artificial sentence is. Anyone who dismisses the first theorem's sentence has to accept the second theorem's, and the second theorem's is the one people actually wanted.
+
+The longer answer is that sentences of ordinary mathematical character with the same status were eventually found. Paris and Harrington produced in 1977 a strengthening of a standard combinatorial theorem about colourings that is true and unprovable in arithmetic, and Kirby and Paris showed in 1982 that the same holds of a theorem of Goodstein about sequences of numbers built by rewriting them in a shifting base. Neither statement mentions provability, codes or self-reference; each is about numbers and finite objects in the way that ordinary number theory is. Both are unprovable for a reason that turns out to be the same reason in disguise, since each implies the consistency of arithmetic, and that is informative rather than deflationary: it says the phenomenon is not confined to the sentences constructed to display it, and that a mathematician working on combinatorics can walk into it without going looking.
+</Reply>
+
+<Aside title="Königsberg, September 1930">
+Gödel announced the first theorem in a discussion session at a conference in Königsberg, at a meeting whose scheduled business included a survey lecture defending the formalist programme. The remark was brief and almost nobody in the room registered what had been said. Von Neumann did, sought Gödel out afterwards, and within weeks had worked out the second theorem himself, only to learn that Gödel had it already. The paper appeared the following year with a Roman numeral in its title, since Gödel had planned a second part giving the details of the second theorem. He never wrote it, because the result was accepted without one.
+</Aside>
+
+## Next
+
+The construction used here applies to any expressible property, and provability was only one choice. The obvious other candidate is truth, and the next article shows what happens when the same lemma is applied to it: not incompleteness but the impossibility of the predicate altogether, together with the theories of truth that have been built in response.
+
+<FurtherReading>
+  <li>Kurt Gödel, "Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I", *Monatshefte für Mathematik und Physik* 38 (1931), 173 to 198.</li>
+  <li>Barkley Rosser, "Extensions of Some Theorems of Gödel and Church", *The Journal of Symbolic Logic* 1, no. 3 (1936), 87 to 91.</li>
+  <li>Laurence Kirby and Jeff Paris, "Accessible Independence Results for Peano Arithmetic", *Bulletin of the London Mathematical Society* 14 (1982), 285 to 293.</li>
+  <li>J. R. Lucas, "Minds, Machines and Gödel", *Philosophy* 36 (1961), 112 to 127.</li>
+  <li>Peter Smith, *An Introduction to Gödel's Theorems*, 2nd ed. (Cambridge University Press, 2013).</li>
+  <li>Torkel Franzén, *Gödel's Theorem: An Incomplete Guide to Its Use and Abuse* (A K Peters, 2005).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Gödel's Incompleteness Theorems"](https://plato.stanford.edu/entries/goedel-incompleteness/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Self-Reference"](https://plato.stanford.edu/entries/self-reference/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Hilbert's Program"](https://plato.stanford.edu/entries/hilbert-program/).</li>
+</FurtherReading>
