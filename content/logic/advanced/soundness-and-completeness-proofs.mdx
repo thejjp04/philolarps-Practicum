@@ -1,0 +1,199 @@
+---
+title: Soundness and Completeness Proofs
+subject: logic
+tier: advanced
+order: 1
+est_read_min: 30
+summary: Full proofs for propositional logic and the Henkin construction for first-order logic
+prerequisites: []
+introduces: ["Lindenbaum's lemma", "maximal consistent set", "Henkin construction", "canonical model"]
+requires: ["soundness theorem", "completeness theorem", "axiom schema", "set", "consistency"]
+added: "2026-08-30"
+---
+
+The intermediate tier stated two theorems and proved neither. It also supplied the reformulation that makes the harder one tractable: instead of producing a derivation out of the absence of a countermodel, produce a model out of a consistent set of formulas. This article carries out both proofs, and the whole of its interest lies in where the model comes from.
+
+The system proved about is the Hilbert system with three schemas and modus ponens, since a proof by induction on derivations is shortest for a system with the fewest moving parts. The language contains negation and the conditional, with the other connectives treated as abbreviations, so an induction over formulas has two cases rather than five. Nothing depends on these choices, and the results transfer to natural deduction and to tableaux by routine translation.
+
+Soundness comes first because it is short, and because the completeness proof uses it.
+
+## Soundness in full
+
+The claim is that if $\varphi$ is derivable from $\Gamma$ then $\varphi$ is a semantic consequence of $\Gamma$. Written out: whenever there is a derivation of $\varphi$ whose non-axiom lines all come from $\Gamma$, every interpretation making all of $\Gamma$ true makes $\varphi$ true.
+
+Fix an interpretation making every member of $\Gamma$ true, and fix a derivation of $\varphi$ from $\Gamma$. The proof shows that every line of that derivation is true under that interpretation, by induction on position in the derivation, and since $\varphi$ is the last line the result follows. There are three cases, corresponding to the three ways a line can get onto the page.
+
+A line may be a member of $\Gamma$. Then it is true by the choice of interpretation, and there is nothing to check.
+
+A line may be an instance of one of the three axiom schemas. Then it must be shown that every instance of every schema is true under every interpretation whatever, and this is the only part of the proof that touches the specific axioms. Take them in turn.
+
+For the first schema, $\varphi \rightarrow (\psi \rightarrow \varphi)$, suppose it were false under some interpretation. A conditional is false only when its antecedent is true and its consequent false, so $\varphi$ is true and $\psi \rightarrow \varphi$ is false; applying the same fact again, $\psi$ is true and $\varphi$ is false. But $\varphi$ was true. So no interpretation falsifies it.
+
+For the second schema, suppose $(\varphi \rightarrow (\psi \rightarrow \chi)) \rightarrow ((\varphi \rightarrow \psi) \rightarrow (\varphi \rightarrow \chi))$ were false. Then $\varphi \rightarrow (\psi \rightarrow \chi)$ is true and $(\varphi \rightarrow \psi) \rightarrow (\varphi \rightarrow \chi)$ is false, so $\varphi \rightarrow \psi$ is true and $\varphi \rightarrow \chi$ is false, so $\varphi$ is true and $\chi$ is false. From $\varphi$ true and $\varphi \rightarrow \psi$ true, $\psi$ is true. From $\varphi$ true and $\varphi \rightarrow (\psi \rightarrow \chi)$ true, $\psi \rightarrow \chi$ is true, and with $\psi$ true this gives $\chi$ true. But $\chi$ was false.
+
+For the third schema, $(\neg \varphi \rightarrow \neg \psi) \rightarrow (\psi \rightarrow \varphi)$, suppose it were false. Then $\neg \varphi \rightarrow \neg \psi$ is true and $\psi \rightarrow \varphi$ is false, so $\psi$ is true and $\varphi$ is false. Since $\varphi$ is false, $\neg \varphi$ is true, and with the first conditional true this gives $\neg \psi$ true, so $\psi$ is false. But $\psi$ was true.
+
+A line may follow from two earlier lines by modus ponens. By the inductive hypothesis those two lines, $\theta$ and $\theta \rightarrow \chi$, are both true under the interpretation. A true conditional with a true antecedent has a true consequent, so $\chi$ is true.
+
+The three cases exhaust the ways a line can appear, so every line is true, so $\varphi$ is true. The interpretation was any interpretation making $\Gamma$ true, so $\varphi$ is a semantic consequence of $\Gamma$, which was the claim.
+
+Two things about this proof are worth noticing before moving on. The first is how little of it concerns the language: only the middle case does, and it would be the same length for a system with thirty schemas, just thirty times longer. The second is what it immediately yields. If a set of formulas has a model, it is consistent, because a derivation of a contradiction from it would make both a formula and its negation true in that model, which no interpretation permits. That corollary is used at the end of the article and is the easy half of the equivalence the rest of the article establishes.
+
+## What a derivation looks like
+
+Before turning to the harder half, it is worth seeing one derivation in the system, because the completeness proof takes a shape that only makes sense once the alternative has been ruled out.
+
+Take the most trivial valid formula in the language, $\varphi \rightarrow \varphi$. It has no premises, so a derivation of it must come from the three schemas alone.
+
+<Proof
+  system="axiomatic"
+  caption="Deriving the identity conditional from the first two schemas."
+  lines={[
+    { n: 1, formula: "(φ → ((φ → φ) → φ)) → ((φ → (φ → φ)) → (φ → φ))", justification: "Second schema" },
+    { n: 2, formula: "φ → ((φ → φ) → φ)", justification: "First schema" },
+    { n: 3, formula: "(φ → (φ → φ)) → (φ → φ)", justification: "Modus ponens, 1 and 2" },
+    { n: 4, formula: "φ → (φ → φ)", justification: "First schema" },
+    { n: 5, formula: "φ → φ", justification: "Modus ponens, 3 and 4" },
+  ]}
+/>
+
+Five lines, the first of which has to be guessed with the second schema instantiated in exactly the right way, for a formula whose validity is settled by a two-row truth table. Nothing goes wrong here; the derivation is correct and the system is doing what it was built to do. What the example shows is that there is no realistic prospect of proving completeness by describing a method that takes a valid formula and returns its derivation. The connection between the two sides has to be made without ever exhibiting a derivation, and that is why the reduction to models is the only route available.
+
+The example also explains the standing of the deduction theorem, which the intermediate tier proved for this system and which is used twice in what follows. It converts the question of whether a conditional is derivable into the question of whether its consequent follows from its antecedent, and every argument below that reasons about what a set does or does not derive is relying on that conversion. Without it the proofs would be conducted entirely in objects like the one above.
+
+## Sets that behave like interpretations
+
+The completeness proof has to manufacture an interpretation. The only raw material available is a consistent set of formulas, so the strategy has to be to find something in a set of formulas that already behaves the way an interpretation does. The following notion is what does that.
+
+<Definition term="Maximal consistent set">
+A consistent set of formulas that cannot be extended: adding any formula not already in it produces an inconsistent set. Equivalently, a consistent set containing, for every formula of the language, either that formula or its negation. Such a set decides every question the language can pose, and it decides them in a way that turns out to mirror the behaviour of a single interpretation.
+</Definition>
+
+Three properties of such a set do all the work later, and each is short to establish. Write $\Gamma^*$ for a maximal consistent set.
+
+First, $\Gamma^*$ contains everything derivable from it. Suppose $\Gamma^*$ derives $\varphi$ but does not contain it. By maximality, adding $\varphi$ makes the set inconsistent, so a contradiction is derivable from $\Gamma^*$ together with $\varphi$. But $\varphi$ was already derivable from $\Gamma^*$ alone, so the derivation of the contradiction can be rewritten using $\Gamma^*$ alone, making $\Gamma^*$ itself inconsistent. It was not. So $\varphi$ is in it.
+
+Second, exactly one of $\varphi$ and $\neg \varphi$ belongs to $\Gamma^*$. Not both, since a set containing both is inconsistent outright. At least one, and this direction is where the deduction theorem earns its place. Suppose neither belonged. By maximality, adding $\varphi$ produces an inconsistent set, so a contradiction is derivable from $\Gamma^*$ together with $\varphi$; the deduction theorem converts that into a derivation of $\neg \varphi$ from $\Gamma^*$ alone. Adding $\neg \varphi$ likewise produces an inconsistent set, and the same conversion yields a derivation of the negation of $\neg \varphi$ from $\Gamma^*$ alone. So $\Gamma^*$ derives both a formula and its negation, which is inconsistency, and it was consistent. Hence one of the pair is present.
+
+Third, $\varphi \rightarrow \psi$ belongs to $\Gamma^*$ exactly when either $\varphi$ does not belong or $\psi$ does. Suppose the conditional is in the set and $\varphi$ is too; modus ponens gives $\psi$, which is then in the set by the first property. Conversely, if $\varphi$ is absent then $\neg \varphi$ is present by the second property, and the conditional follows from a negated antecedent; and if $\psi$ is present the conditional follows from a true consequent by the first schema and modus ponens. Either way the conditional is derivable, hence present.
+
+Read those three properties again with the truth tables in mind. The second says that membership divides the formulas the way truth and falsity do, with no gaps and no overlaps. The third says that membership treats the conditional exactly as the truth table for the conditional does. A maximal consistent set is not merely consistent with some interpretation; it is an interpretation, written out as a list of the sentences that come out true.
+
+That is the whole idea of the proof. What remains is to show that maximal consistent sets exist in sufficient supply, and then to read an interpretation off one.
+
+## Lindenbaum's lemma
+
+<Definition term="Lindenbaum's lemma">
+The result that every consistent set of formulas is a subset of some maximal consistent set. The extension is not unique and no procedure picks out a canonical one, but at least one exists, which is all the completeness proof requires. The result is attributed to Adolf Lindenbaum, who published very little; it reached print through Tarski, who credited it to him in 1930.
+</Definition>
+
+The proof is a construction, and it uses the countability of the language established in the article on set theory.
+
+Since there are countably many formulas, they can be arranged in a list with a first, a second, and so on, every formula appearing somewhere. Fix such a list. Now build a chain of sets. Start with the given consistent set $\Gamma$. At each stage, look at the next formula on the list and ask whether adding it to the set built so far leaves that set consistent. If it does, add it. If it does not, leave it out and move on. Let $\Gamma^*$ be the union of every set in the chain.
+
+Three things must be checked.
+
+Every set in the chain is consistent. The first is, by hypothesis, and each later one is either identical to its predecessor or was formed by an addition that was checked for consistency before being made. So consistency propagates along the chain by induction.
+
+The union is consistent. This is the step where the argument could fail, since an infinite union of consistent sets is not obviously consistent, and it is saved by a fact about derivations rather than about sets. A derivation is a finite object. If a contradiction were derivable from $\Gamma^*$, its derivation would cite only finitely many members of $\Gamma^*$, and each of those entered the union at some particular stage. Take the latest such stage; every cited formula is already present there, so the contradiction is derivable from that one set in the chain, which was consistent. There is no such derivation.
+
+The union is maximal. Take any formula not in $\Gamma^*$. It appears somewhere on the list, and at the stage where it came up it was passed over, which happened only because adding it to the set built so far produced inconsistency. A derivation of a contradiction from that smaller set together with the formula is equally a derivation from $\Gamma^*$ together with the formula, since the smaller set is included in the union. So adding the formula to $\Gamma^*$ is inconsistent, which is maximality.
+
+The finiteness of derivations, used in the second step, is doing more work in this subject than its modesty suggests. It is the reason completeness survives the passage to infinite sets of premises, and it reappears in the next article as the compactness theorem, which is essentially this observation with the syntax removed.
+
+One limitation should be recorded. The construction enumerates the formulas, so it depends on the language being countable. For an uncountable language the chain cannot be built this way and the result is obtained instead from Zorn's lemma, at the cost of using a fragment of set theory the countable case avoids. Nothing else in the proof changes.
+
+## The canonical model, propositional case
+
+<Definition term="Canonical model">
+An interpretation built directly out of a maximal consistent set, in which the truth values of the atomic formulas are read off membership in the set. The defining property of such a model, established by induction over formulas, is that a formula is true in it exactly when the formula belongs to the set that generated it.
+</Definition>
+
+For propositional logic the construction is one line. Given a maximal consistent set $\Gamma^*$, define an interpretation by declaring each sentence letter true if it belongs to $\Gamma^*$ and false otherwise. That is a perfectly good interpretation, since an interpretation for propositional logic is nothing but an assignment of values to sentence letters, and every letter has been assigned exactly one.
+
+What has to be proved is that the interpretation agrees with membership not just on the letters, where it was stipulated to, but on every formula. This is the truth lemma, and it is an induction on the structure of the formula with three cases, the language having only negation and the conditional as primitives.
+
+If the formula is a sentence letter, the two sides agree by the definition just given.
+
+If the formula is a negation $\neg \varphi$, it is true under the interpretation exactly when $\varphi$ is false, which by the inductive hypothesis is exactly when $\varphi$ is not in $\Gamma^*$, which by the second property of maximal consistent sets is exactly when $\neg \varphi$ is in $\Gamma^*$.
+
+If the formula is a conditional $\varphi \rightarrow \psi$, it is true under the interpretation exactly when $\varphi$ is false or $\psi$ is true, which by the inductive hypothesis is exactly when $\varphi$ is not in $\Gamma^*$ or $\psi$ is, which by the third property is exactly when the conditional is in $\Gamma^*$.
+
+That is the lemma. Now complete the argument. Let $\Gamma$ be any consistent set. Lindenbaum's lemma extends it to a maximal consistent $\Gamma^*$, the construction above turns $\Gamma^*$ into an interpretation, and the truth lemma says that every member of $\Gamma^*$ is true under it. Since $\Gamma$ is included in $\Gamma^*$, every member of $\Gamma$ is true under it. So $\Gamma$ has a model.
+
+Every consistent set has a model, which is the statement the intermediate tier showed equivalent to completeness. Propositional logic is complete.
+
+Notice what the interpretation was made of. It was made of the set of formulas itself, with membership doing the work that truth was supposed to do. Nothing outside the syntax was consulted at any point, and this is the feature that generalises.
+
+## Where the first-order case resists
+
+The same strategy applied to first-order logic runs into an obstruction immediately, and identifying it precisely is most of the work of fixing it.
+
+An interpretation for first-order logic is not an assignment of values to sentence letters. It is a domain of objects, together with an assignment of an object to each constant and a set of tuples to each predicate. So the construction has to produce objects, and the only material available is still the syntax. The obvious move is to let the objects be the constants of the language, so that a name denotes itself, and to put a tuple of constants into the interpretation of a predicate exactly when the corresponding atomic formula belongs to $\Gamma^*$. That handles the atomic case and the connectives exactly as before.
+
+The quantifiers break it. Consider the universal case first, which is the easier one: $\forall x \varphi$ should be true exactly when $\varphi$ holds of every object, and since the objects are the constants, this amounts to requiring that $\varphi$ with each constant substituted for $x$ belongs to $\Gamma^*$. That direction is fine, because a maximal consistent set containing $\forall x \varphi$ does contain every instance, universal instantiation being derivable.
+
+The existential case fails. A maximal consistent set may contain $\exists x \varphi$ without containing $\varphi$ with any constant substituted for $x$. There is nothing incoherent about such a set: it says that something is thus and so while declining, for every name in the language, to say that the thing named is thus and so. A set can perfectly well be consistent and unhelpful in this way, and in the model built from the constants the existential claim would then be true in the set and false in the model, wrecking the truth lemma.
+
+The problem is one of vocabulary rather than of logic. The set makes an existential claim and the language has no name available for anything satisfying it. The repair is to supply the names.
+
+## The Henkin construction
+
+<Definition term="Henkin construction">
+The method of proving completeness by first enriching the language with new constants and adding, for every existential formula, an axiom saying that if something satisfies it then a specified new constant does. A set so extended has a name for a witness to each of its existential claims, and the model built out of its constants then satisfies the truth lemma at the quantifier cases as well as the others.
+</Definition>
+
+The construction proceeds in three movements.
+
+First, enlarge the language. Add a countable supply of new constants, none of which occurs in $\Gamma$ or in the original language. The enlarged language is still countable, since the union of two countable sets is countable, so the enumeration Lindenbaum's lemma needs is still available.
+
+Second, add the witnesses. Enumerate the formulas of the enlarged language with one free variable. For each, take a fresh new constant, chosen so that it does not occur in that formula or in any witness added so far, and add to the set the formula saying that if something satisfies the condition then that constant does. Written with the quantifier, the addition is $\exists x \varphi \rightarrow \varphi(c)$ for the chosen $c$.
+
+Adding these preserves consistency, and the argument for that is the delicate step. Suppose adding one such formula made the set inconsistent. Then a contradiction is derivable from the set together with $\exists x \varphi \rightarrow \varphi(c)$, and by the deduction theorem the negation of that conditional is derivable from the set alone, which means both $\exists x \varphi$ and $\neg \varphi(c)$ are. But $c$ was chosen fresh: it appears nowhere in the set and nowhere in $\varphi$. A constant appearing nowhere in the premises can be replaced throughout a derivation by a variable not otherwise used, and the derivation remains a derivation. Doing so converts a derivation of $\neg \varphi(c)$ into one of $\neg \varphi$ with a free variable, from which generalisation yields that nothing satisfies $\varphi$, contradicting the derivability of $\exists x \varphi$. So consistency survives each addition, and by the same finiteness argument used in Lindenbaum's lemma it survives all of them together.
+
+Third, apply Lindenbaum's lemma in the enlarged language, obtaining a maximal consistent set that contains $\Gamma$, contains all the witness axioms, and decides every formula of the enlarged language.
+
+Now build the model. Let the domain be the set of constants of the enlarged language. Interpret each constant as itself. Interpret each predicate by putting a tuple of constants into it exactly when the corresponding atomic formula belongs to the set. Then prove the truth lemma by induction over formulas, with the connective cases exactly as in the propositional proof and one new case at each quantifier.
+
+The existential case is where the witnesses are spent. If $\exists x \varphi$ belongs to the set, then so does the witness axiom for it, so by closure under derivability $\varphi(c)$ belongs to the set for the witnessing constant $c$; by the inductive hypothesis $\varphi$ is satisfied by the object $c$ denotes, which is $c$ itself, so the existential claim is true in the model. Conversely if the existential claim is true in the model then some constant satisfies $\varphi$, so by the inductive hypothesis the corresponding instance is in the set, and an instance derives the existential claim, which is therefore in the set as well. The universal case follows from this one by the interdefinability of the quantifiers, or can be run directly by the same pattern.
+
+The truth lemma holds, so the maximal consistent set is true in the model, so $\Gamma$ is true in the model. Restricting the model to the original vocabulary, and forgetting the new constants, leaves a model of $\Gamma$ in the original language. Every consistent set of first-order formulas has a model, and first-order logic is complete.
+
+One adjustment is needed if the language contains identity. Distinct constants are distinct objects in the model just built, but the set may contain a formula saying that two of them are identical, and then the model makes it false. The fix uses the machinery from the article on set theory. The relation holding between two constants when their identity is in the set is reflexive, symmetric and transitive, since those three properties of identity are derivable, so it is an equivalence relation. Take the domain to be its groups rather than the constants themselves, and interpret each constant as the group it belongs to. Nothing else in the proof changes, and the truth lemma goes through with the same three cases.
+
+One more distinction should be recorded now that both proofs are done. Completeness is sometimes stated for a single formula, as the claim that every valid formula is a theorem, and sometimes for an arbitrary set of premises, as the claim that every semantic consequence of a set is derivable from it. The first is the weak form and the second the strong. Everything above establishes the strong form, since $\Gamma$ was an arbitrary consistent set and no assumption was made about its size; the weak form is the case where $\Gamma$ is empty. The distinction matters because the two can come apart in other logics, and because the strong form is what carries the load in the applications: the results in the next article are about infinite sets of premises, and the weak form would say nothing about them.
+
+## What falls out of the construction
+
+The completeness theorem was the target, and two further results come free, both because of how the model was built rather than because of what was proved about it.
+
+The model has as many objects as the enlarged language has constants, and the enlarged language is countable. So every consistent set of first-order formulas in a countable language has a countable model. That is the downward result named after Löwenheim and Skolem, and the next article works out what it costs: no first-order theory, however carefully written, can pin down an uncountable structure to the exclusion of countable ones.
+
+The second is compactness. If every finite subset of a set has a model, then by the corollary to soundness every finite subset is consistent, so no contradiction is derivable from any finite subset; since derivations are finite, no contradiction is derivable from the whole set either, so the whole set is consistent, so by completeness it has a model. A set every finite part of which is satisfiable is satisfiable. The proof is four steps and every one of them has already been done above, which is a fair indication of how much of this subject rests on the observation that a proof cannot be infinitely long.
+
+A third consequence is worth stating chiefly to forestall an over-reading of the theorem. Since derivations are finite strings over a countable alphabet, they can be listed mechanically, and completeness guarantees that a valid formula appears somewhere on that list. So a machine that generates derivations one after another and halts when it produces the target formula will eventually halt on every valid formula. What it will not do is halt on the invalid ones; it runs forever, and no stage of the search distinguishes a formula whose derivation has not yet been reached from one that has none. Validity in first-order logic is therefore confirmable but not refutable by this method, and the question of whether some cleverer method decides it is not settled by anything in this article. It is settled negatively, and the article on computability and decidability gives the reason. Completeness is a statement about what exists, not about what can be found.
+
+<Objection>
+The completeness proof is a trick. It was supposed to show that syntactic derivability and semantic consequence coincide, and it does so by manufacturing a model whose objects are the names of the language and whose predicates are defined by which sentences the theory happens to contain. Of course a theory is true in a structure assembled out of its own sentences. Nothing has been shown about the relation between proof and truth, only that a set of sentences can be rearranged into a picture of itself.
+</Objection>
+
+<Reply>
+The complaint identifies the construction correctly and draws the wrong conclusion from it, for two reasons. The first is that the definition of a structure imposes no condition whatever on what its objects are. A domain is a non-empty set, and a set of symbols is a set; ruling out models made of syntax would require an extra clause nobody has ever proposed and that no application of the theory wants. The second and more important is that the result has consequences the objection cannot accommodate. If completeness were an artefact of a self-serving construction, it would be a harmless one, and it is not harmless: it entails that every consistent theory has a countable model, and hence that no first-order theory can force its models to be uncountable. That is a limitation on what can be said, it is felt as a limitation by people who wanted to say more, and it was not put into the proof by anyone. A trick does not generate results its author would have preferred to avoid. What is right in the objection is that the proof does not explain why syntax should suffice; it establishes that it does, by exhibiting a case, and the explanation, if there is one, would have to come from somewhere else.
+</Reply>
+
+<Aside title="Two proofs, forty years apart">
+Gödel proved completeness in his dissertation of 1929, published the following year, and the proof is not the one given here. It works through normal forms and an argument that a formula not refutable in the system is satisfiable, and it is harder to follow and harder to adapt. Henkin's method, published in 1949, replaced it almost entirely within a decade, for a reason visible in the structure of this article: the construction is modular. The Lindenbaum step, the witnessing step and the truth lemma are separable, each can be modified without disturbing the others, and the result is a template rather than a single proof. Completeness for modal systems, for many-valued systems, for intuitionistic logic and for various fragments is proved by substituting different material into the same three slots, and the canonical model of modal logic, in which the worlds are the maximal consistent sets and one sees another when it contains everything the first necessitates, is the same construction with the frame added.
+</Aside>
+
+## Next
+
+Completeness is now available as a tool rather than a promise, and the two corollaries noted above deserve articles of their own. The next takes compactness and the results on the sizes of models, and shows that together they place limits on first-order description that no amount of ingenuity in writing axioms can evade.
+
+<FurtherReading>
+  <li>Kurt Gödel, "Die Vollständigkeit der Axiome des logischen Funktionenkalküls", *Monatshefte für Mathematik und Physik* 37 (1930), 349 to 360.</li>
+  <li>Leon Henkin, "The Completeness of the First-Order Functional Calculus", *The Journal of Symbolic Logic* 14, no. 3 (1949), 159 to 166.</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971).</li>
+  <li>Herbert B. Enderton, *A Mathematical Introduction to Logic*, 2nd edition (Academic Press, 2001).</li>
+  <li>Internet Encyclopedia of Philosophy, ["Adolf Lindenbaum"](https://iep.utm.edu/lindenba/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
