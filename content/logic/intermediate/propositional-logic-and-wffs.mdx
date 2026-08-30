@@ -1,0 +1,115 @@
+---
+title: Propositional Logic and Well-Formed Formulas
+subject: logic
+tier: intermediate
+order: 9
+est_read_min: 12
+summary: The formal grammar of the language, stated recursively, and why recursion is the right tool
+prerequisites: ["translating-english"]
+introduces: ["well-formed formula", "recursive definition", "object language", "metalanguage", "atomic formula"]
+requires: ["proposition", "main connective", "truth function"]
+added: "2026-08-29"
+---
+
+The beginner tier used formulas without ever saying what a formula is. Strings like $\neg(P \land Q) \rightarrow (\neg P \lor \neg Q)$ were treated as legitimate and strings like $P \land \lor Q$ were treated as nonsense, and the difference was left to the eye. That is workable while the examples are short. It stops being workable as soon as we want to prove something about every formula, which is what the rest of this ladder does.
+
+## Why a list will not work
+
+The obvious way to say which strings count is to list them. That fails immediately, because there are infinitely many. Any formula can be negated, and the negation is another formula, and it can be negated in turn.
+
+The next idea is to give a rule that recognises formulas by inspection. That is closer, but a recognition procedure is not a definition, and it gives no purchase on the question we actually need answered: what is true of all formulas, including the ones nobody will ever write down.
+
+The tool that solves this is older than logic and is used throughout mathematics.
+
+<Definition term="Recursive definition">
+A definition of a set given in three parts: a base clause listing the simplest members outright, a recursion clause specifying operations that build new members from members already obtained, and a closure clause stating that nothing else belongs. The closure clause is what makes the definition a definition rather than a partial description, since without it the base and recursion clauses would be satisfied by any larger set as well.
+</Definition>
+
+The familiar example is the natural numbers: zero is one, the successor of a natural number is one, and nothing else is one. The third clause is doing real work. Without it, the set containing every natural number together with the moon satisfies the first two clauses perfectly well.
+
+## The alphabet
+
+Before the grammar, the vocabulary. The language of propositional logic has three kinds of symbol.
+
+There are the sentence letters, conventionally $P$, $Q$, $R$, and so on, with subscripts if more are wanted. Nothing about them is fixed except that each one stands for a whole proposition whose internal structure the system ignores.
+
+There are the connectives: $\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$. Each has a fixed truth function attached to it, established in the beginner tier.
+
+And there are the parentheses, which are not decoration. Their job is explained below.
+
+<Definition term="Atomic formula">
+A sentence letter standing alone. Atomic formulas have no connectives and no proper parts that are themselves formulas, which is what makes them the base case of the grammar. A formula that is not atomic is compound, and every compound formula has exactly one main connective.
+</Definition>
+
+The word "atomic" is relative to the system rather than absolute. A sentence letter may translate an English sentence with a great deal of internal structure, and propositional logic simply declines to look at it. That is why arguments turning on the internal structure of their sentences, such as the inference from every dog being a mammal and Rex being a dog to Rex being a mammal, come out invalid here. Predicate logic, later in this tier, opens the atoms up and recovers those inferences.
+
+## The grammar
+
+<Definition term="Well-formed formula">
+A string of the language of propositional logic built according to the following three clauses. First, every sentence letter is a well-formed formula. Second, if $\varphi$ is a well-formed formula then $\neg \varphi$ is one, and if $\varphi$ and $\psi$ are well-formed formulas then $(\varphi \land \psi)$, $(\varphi \lor \psi)$, $(\varphi \rightarrow \psi)$, and $(\varphi \leftrightarrow \psi)$ are each one. Third, nothing else is a well-formed formula. The abbreviation wff is standard and is pronounced as it looks.
+</Definition>
+
+Applying the clauses is mechanical. Take $\neg(P \land Q) \rightarrow (\neg P \lor \neg Q)$. Its status is established by building it:
+
+$P$ and $Q$ are wffs by the first clause. So $(P \land Q)$ is a wff by the second, and so $\neg(P \land Q)$ is a wff by the second again. Separately, $\neg P$ and $\neg Q$ are wffs, so $(\neg P \lor \neg Q)$ is a wff. Finally the two assembled pieces are joined by the arrow, giving a wff.
+
+Every wff has a construction of this kind, and the construction is a finite sequence of steps each licensed by one of the first two clauses. That is a consequence of the closure clause: if a string had no such construction, the third clause would exclude it.
+
+Now take $P \land \lor Q$. There is no way to build it. The second clause introduces $\land$ only between two wffs, and $\lor Q$ is not a wff, since nothing in the grammar produces a binary connective with nothing on its left. The string is therefore excluded, and it is excluded by the closure clause rather than by any rule specifically forbidding it. The grammar never says what is ungrammatical. It says what is grammatical and then closes the door.
+
+Two more strings are worth checking. $\neg \neg \neg P$ is a wff, obtained by applying the negation rule three times; the grammar sets no limit on iteration. And $(P)$ is not a wff, because no clause ever wraps parentheses around a formula on its own. Parentheses arrive only with a binary connective, and always in the same package with one.
+
+## What the parentheses are for
+
+The grammar as stated puts a pair of parentheses around every binary compound, which is heavier than anything written in practice. There is a reason for the weight.
+
+Consider the string $P \land Q \lor R$ with the parentheses removed. It has two readings. Under one, the conjunction is inside the disjunction; under the other, the disjunction is inside the conjunction. These are not stylistic variants. Take $P$ false, $Q$ false, $R$ true: the first reading comes out true, the second false. Without parentheses the string does not determine a truth function at all, so it does not determine a formula.
+
+The property the grammar secures is called unique readability: every wff has exactly one construction, and therefore exactly one main connective. That property is what licenses everything the beginner tier did with truth tables, since building a column requires knowing which connective applies last.
+
+In practice the outermost parentheses get dropped and precedence conventions handle the rest, with $\neg$ binding most tightly and $\leftrightarrow$ most loosely. These conventions are abbreviations for the official strings, not additions to the grammar. When a proof is being conducted about all wffs, the official form is what the proof is about.
+
+Parentheses are one solution to the ambiguity problem and not the only one. Polish notation, devised by Jan Lukasiewicz, writes the connective before its arguments rather than between them, so that the two readings above become distinct strings without any punctuation: one begins with the disjunction sign and the other with the conjunction sign. Unique readability then follows from the fact that each connective takes a fixed number of arguments, so a left-to-right scan can only assemble the string one way. The notation is hard to read and is rarely used for that reason, but it makes the point that parentheses are a device for securing a property, not a feature the language could not do without.
+
+## Proving things about every formula
+
+Here is the payoff, and it is the reason the recursive form was chosen.
+
+Because every wff has a finite construction from atoms, a property can be shown to hold of all wffs by two steps: show that every atomic formula has it, and show that each building operation passes it on from its inputs to its output. If both hold, no wff can lack the property, since a wff lacking it would have to have appeared at some step, and every step preserves the property.
+
+Take the claim that every wff has equally many left and right parentheses.
+
+Atomic formulas have none of either, so the counts are equal at zero. For the negation rule, $\neg \varphi$ has exactly the parentheses of $\varphi$, and those were equal by assumption. For each binary rule, the output adds one left parenthesis and one right parenthesis to the parentheses of $\varphi$ and $\psi$ combined, and adding one to each of two equal numbers leaves them equal. So every wff has the property.
+
+That argument is short, but it establishes something about infinitely many strings, and nothing shorter than the recursive definition would have supported it. Every major result later in this ladder, including soundness and completeness, is proved this way.
+
+## Talking about the language
+
+The last two sentences of the previous section did something that needs marking. They used the symbols $\varphi$ and $\psi$, which are not part of the language of propositional logic at all. No formula contains a $\varphi$.
+
+<Definition term="Object language">
+The language being studied. In propositional logic it contains exactly the sentence letters, the five connectives, and the parentheses, and nothing else. Its expressions are the wffs.
+</Definition>
+
+<Definition term="Metalanguage">
+The language in which the object language is described. Here it is English supplemented with some notation, including the variables $\varphi$ and $\psi$ that range over formulas of the object language, and the symbols for the consequence relations introduced in the next article. Statements about which strings are wffs, or about what follows from what, are made in the metalanguage; they are not themselves formulas.
+</Definition>
+
+The distinction is easy to state and easy to lose. The string $P \rightarrow Q$ is an object-language formula. The sentence "$P \rightarrow Q$ is a wff" is a metalanguage claim about it, and could not be written in the object language, which has no way to talk about strings. Similarly, "$\varphi \lor \neg \varphi$ is a tautology for every $\varphi$" is a metalanguage generalisation covering infinitely many object-language formulas; the generalisation itself is not one of them.
+
+Keeping the levels apart is not fussiness. Several of the deepest results in this subject, including the incompleteness theorems and the undefinability of truth, are exactly about what happens when an object language becomes rich enough to talk about itself, and they cannot be stated at all by someone who has not drawn the distinction first.
+
+<Aside title="Schemas and formulas">
+An expression like $\varphi \rightarrow (\psi \rightarrow \varphi)$ is often called a formula, but strictly it is a schema: a metalanguage pattern with a formula at every uniform substitution for its variables. Axiom systems are usually presented as a handful of schemas rather than as an infinite list of axioms, which is convenient and occasionally misleading. When a system is described as having three axioms, the count is of schemas, and the axioms themselves number infinitely many.
+</Aside>
+
+## Next
+
+The grammar fixes which strings are formulas. It says nothing about which of them are true, or about what follows from what, and those are two different questions that the beginner tier ran together under the single word "valid". The next article separates them, gives each its own symbol, and shows why the eventual proof that they coincide is a substantial result rather than a definition.
+
+<FurtherReading>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on formal languages and object language against metalanguage.</li>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on the syntax of propositional logic.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on symbolic language.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
