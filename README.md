@@ -28,6 +28,12 @@ introduces, and `validateLadders()` fails the build if that ever stops holding.
 Alongside the ladders: a glossary built from the definition boxes in the prose,
 a thinkers index, and three cross-subject reading paths.
 
+## Progress
+
+[CHANGELOG.md](CHANGELOG.md) lists every change grouped by the day it was made,
+newest first, with a link to each diff. It is generated from the commit history
+by `npm run changelog`.
+
 ## Running it
 
 ```bash
