@@ -1,0 +1,106 @@
+---
+title: Semantic and Syntactic Consequence
+subject: logic
+tier: intermediate
+order: 10
+est_read_min: 12
+summary: Two different relations that beginners run together, and the notation that keeps them apart
+prerequisites: ["propositional-logic-and-wffs"]
+introduces: ["semantic consequence", "syntactic consequence", "interpretation", "model"]
+requires: ["well-formed formula", "validity", "truth table"]
+added: "2026-08-29"
+---
+
+The beginner tier gave one account of a good argument: the premises cannot be true with the conclusion false. It also gave a second, in the article on inference rules: the conclusion can be reached from the premises by applying rules like modus ponens. Both were described as showing an argument valid, and nothing was said about the relation between them.
+
+They are not the same relation. One is about truth values and mentions no rules; the other is about rules and mentions no truth values. That they turn out to agree is the central result of this part of the ladder, and it is a result rather than a stipulation. This article separates them and fixes the notation.
+
+## Assignments and what makes a formula true
+
+<Definition term="Interpretation">
+An assignment of exactly one truth value to each sentence letter of the language. Since the connectives are truth functions, an interpretation fixes a truth value for every well-formed formula, computed from the values of its letters by the rules for the connectives. For a formula containing $n$ distinct letters, there are $2^n$ interpretations that differ on those letters, and these are the rows of its truth table. In propositional logic an interpretation is nothing more than this; in predicate logic, later in the tier, it becomes a considerably richer object.
+</Definition>
+
+<Definition term="Model">
+An interpretation on which a given formula, or every member of a given set of formulas, comes out true. A set of formulas that has at least one model is satisfiable, and one with no model is unsatisfiable. The word carries the same sense in the phrase model theory: the models of a set of sentences are the situations in which those sentences hold.
+</Definition>
+
+The two notions divide the labour. An interpretation is any assignment whatever; a model is an interpretation that happens to make something true. Every formula has $2^n$ interpretations and somewhere between zero and $2^n$ models, with zero exactly for the contradictions and all of them exactly for the tautologies.
+
+## The first relation
+
+<Definition term="Semantic consequence">
+The relation that holds between a set of formulas and a formula when every interpretation that makes all members of the set true also makes the formula true. It is written $\Gamma \vDash \varphi$, with the double turnstile, where $\Gamma$ is the set of premises. Equivalently, there is no interpretation making every premise true and the conclusion false, which is the beginner tier's account of validity stated exactly.
+</Definition>
+
+The definition quantifies over interpretations and mentions nothing else. No rule of inference appears in it, no proof, and no notion of reasoning from one thing to another. Whether $\Gamma \vDash \varphi$ holds is settled entirely by which combinations of truth values are possible.
+
+Take the premises $P \rightarrow Q$ and $\neg Q$, and the conclusion $\neg P$. There are four interpretations of the two letters. The second premise rules out both interpretations on which $Q$ is true. Of the two remaining, the one with $P$ true makes the first premise false. So the only interpretation satisfying both premises has $P$ false and $Q$ false, and on that interpretation $\neg P$ is true. There is no countermodel, so the semantic consequence holds.
+
+Notice what the argument did. It examined interpretations and reported what it found. It did not derive anything.
+
+The same argument has a counterpart that derives and examines nothing. From $P \rightarrow Q$ and $\neg Q$, the rule of modus tollens yields $\neg P$ in a single step, and the sequence consisting of the two premises followed by that conclusion meets the structural conditions on a proof. The two arguments reach the same verdict about the same three formulas by wholly different means, and neither could be converted into the other without going through one of the theorems named below.
+
+## The second relation
+
+<Definition term="Syntactic consequence">
+The relation that holds between a set of formulas and a formula when there is a finite sequence of formulas ending with that formula, each member of which is either a premise from the set, an axiom of the system, or the result of applying one of the system's rules to earlier members. It is written $\Gamma \vdash \varphi$, with the single turnstile. The relation is always relative to a specified proof system, so that strictly the turnstile should carry a subscript naming it, and does whenever more than one system is in play.
+</Definition>
+
+This definition quantifies over nothing and asserts the existence of an object: a proof. A proof is a finite string of symbols meeting purely structural conditions, and whether something is a proof can be checked by inspection without any appeal to what the formulas mean. That last point is what "syntactic" means here. A device that knew nothing about truth could verify a proof.
+
+The relativity to a system matters more than it first appears. Different systems have different rules, and a formula derivable in one may not be derivable in another. The article on natural deduction sets out one such system; the article on axiomatic systems sets out a very different one that reaches the same formulas by a different route.
+
+## Why the distinction is not pedantry
+
+The two relations have different subject matter, and each has features the other lacks.
+
+Semantic consequence is decidable for propositional logic. A truth table for the premises and conclusion has finitely many rows, the rows can be checked mechanically, and the procedure terminates with a definite answer either way. Failure is as informative as success: a row with true premises and a false conclusion is a countermodel, and exhibiting one settles the question.
+
+Syntactic consequence has no such symmetry. Finding a proof establishes that the relation holds. Failing to find one establishes nothing at all, since the proof may simply be longer than the search went. There is no bound built into the definition on how long a derivation may be, and for richer systems there provably cannot be a general procedure that always answers, a result taken up in the article on computability.
+
+The relations also behave differently under change. Adding a rule to a proof system can add syntactic consequences without touching any semantic ones, since the semantics never mentioned rules. Changing the semantics, as the articles on many-valued and intuitionistic logic do, can remove semantic consequences while the proof system sits unchanged.
+
+A third difference shows up as soon as the premise set is allowed to be infinite, which nothing in either definition forbids. A derivation is finite by definition, so if $\Gamma \vdash \varphi$ holds then some finite part of $\Gamma$ already suffices; a proof can only have used the premises it actually cited. The semantic definition carries no such restriction on its face, since it quantifies over interpretations of the whole set at once. That the restriction nonetheless holds on the semantic side as well is the compactness theorem, treated later in this tier, and it is a substantial result precisely because nothing in the definition of $\vDash$ suggests it.
+
+## The empty premise set
+
+Both relations allow the left side to be empty, and the special cases have names already in use.
+
+$\vDash \varphi$ with nothing on the left says that every interpretation makes $\varphi$ true, which is to say $\varphi$ is a tautology. $\vdash \varphi$ with nothing on the left says $\varphi$ is derivable from no premises at all, which is to say it is a theorem of the system.
+
+The parallel is exact and it is the reason the same shape of notation is used for both. A tautology is what the semantics endorses unconditionally; a theorem is what the proof system produces unconditionally.
+
+## The two results that connect them
+
+With the relations separated, the obvious question is how they are related, and the answer comes in two halves that are proved separately and could in principle come apart.
+
+Soundness is the claim that whenever $\Gamma \vdash \varphi$, also $\Gamma \vDash \varphi$. The proof system never licenses a step from truths to a falsehood. A system failing this would be worthless, since its proofs would establish nothing.
+
+Completeness is the claim that whenever $\Gamma \vDash \varphi$, also $\Gamma \vdash \varphi$. Every semantic consequence is reachable by the rules. A system failing this is not worthless, only incomplete: its proofs are trustworthy but it cannot produce all of them.
+
+Both hold for standard propositional and first-order logic, and the two proofs are the subject of later articles in this tier. Together they say the two relations have exactly the same extension, which is why running them together causes so little trouble in practice and why the distinction gets skipped in introductory treatments.
+
+<Objection>
+If the relations coincide, the distinction is bookkeeping. Nothing is true of one and false of the other, so nothing is gained by using two symbols where one would do.
+</Objection>
+
+<Reply>
+That they coincide is exactly what the two theorems assert, and a theorem stated in a vocabulary that cannot distinguish its two sides is not a theorem but a tautology about notation. The distinction has to be available for the result to have content. It also has to be available because the coincidence is not general. Second-order logic on its standard semantics has no complete proof system, so its two relations come apart permanently and demonstrably; the same is true of various modal and infinitary systems. In those settings the question of whether something is a semantic consequence and the question of whether it is provable are simply different questions with different answers, and a notation that ran them together would make the situation unstatable.
+</Reply>
+
+<Aside title="Reading the turnstiles aloud">
+The double turnstile is read "entails" or "semantically implies"; the single turnstile is read "proves" or "yields". A common habit is to read both as "therefore", which defeats the purpose of having two. It also helps to remember that neither symbol belongs to the object language. $P \rightarrow Q$ is a formula and can appear inside another formula; $P \vDash Q$ is a metalanguage claim about two formulas and cannot appear inside anything. Writing something like $(P \vDash Q) \lor R$ is a category error rather than a false statement.
+</Aside>
+
+## Next
+
+The semantics of propositional logic rests on five connectives, and nothing so far has shown that five is the right number. Some of them are visibly redundant: the conditional can be rewritten using negation and disjunction, as the truth tables of the beginner tier already showed. The next article asks how far the redundancy goes, what the smallest sufficient set of connectives is, and how to prove that a set is sufficient for every truth function whatever, including ones nobody has bothered to name.
+
+<FurtherReading>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on the two consequence relations and the metatheorems connecting them.</li>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on natural deduction and semantic methods.</li>
+  <li>Graham Priest, *Logic: A Very Short Introduction*, 2nd edition (2017), on validity and proof.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Logical Consequence"](https://plato.stanford.edu/entries/logical-consequence/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Classical Logic"](https://plato.stanford.edu/entries/logic-classical/).</li>
+</FurtherReading>
