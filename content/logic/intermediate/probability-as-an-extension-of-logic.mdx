@@ -1,0 +1,135 @@
+---
+title: Probability as an Extension of Logic
+subject: logic
+tier: intermediate
+order: 19
+est_read_min: 18
+summary: "The Kolmogorov axioms read as a generalisation of the truth table, with Cox's derivation of them from constraints on plausible reasoning"
+prerequisites: ["set-theory-for-logicians"]
+introduces: ["Kolmogorov axioms", "probability measure", "field of events", "finite additivity", "Cox's theorem", "statistical independence", "principle of indifference", "Bertrand's paradox"]
+requires: ["set", "function", "proposition", "tautology", "disjunction", "truth function", "conditional probability"]
+added: "2026-08-29"
+---
+
+A truth table assigns each proposition one of two values and then computes the value of every compound from the values of its parts. The whole apparatus of the beginner tier rests on there being exactly two values and on the computation being possible.
+
+Probability keeps the first idea and modifies the second. Each proposition receives a value, but the values are drawn from the whole interval between zero and one rather than from a two-element set, and the values one and zero turn out to behave exactly as truth and falsity did. The deductive apparatus is not replaced. It sits inside the probabilistic one as the limiting case where every value has gone to an extreme.
+
+That is the sense in which probability extends logic, and this article works out what the extension costs and what it does not preserve. The interpretive question of what a probability is a probability of, which divides the subject into rival camps, is deliberately left aside; the structure below is common ground between all of them.
+
+## What the numbers attach to
+
+Before values can be assigned, there has to be a settled collection of things to assign them to, and the collection has to be closed under the operations that will be performed on it.
+
+<Definition term="Field of events">
+A collection of subsets of a sample space that contains the whole space and is closed under complement and under finite union. Closure under complement and union guarantees closure under intersection as well, so the collection supports all the Boolean operations. Where the closure requirement is extended to countable unions, the collection is called a sigma-field, and that is the form the measure-theoretic treatment uses.
+</Definition>
+
+The sample space is the set of possible outcomes, written $\Omega$, and an event is a subset of it: the event that a die shows an even number is the subset containing three of the six outcomes. The reason for demanding closure is that a probability assignment must handle whatever the operations produce, and an assignment defined on some events but not on their complements would be unusable.
+
+There is a second reading of the same structure, and it is the one that matters for the connection to logic. Take the objects receiving values to be propositions rather than sets of outcomes, with conjunction in place of intersection, disjunction in place of union, and negation in place of complement. Nothing changes. The Boolean operations behave identically under both readings, and everything below can be stated either way. The set-theoretic version is standard in mathematics and the propositional version is standard in philosophy, and switching between them is a matter of translation rather than of substance.
+
+## The axioms
+
+<Definition term="Probability measure">
+A function assigning to each event in a field a real number between zero and one, subject to the constraints below. It is a function in the sense defined in the previous article, with the field as its domain and the unit interval as its codomain, and the constraints are what distinguish a probability measure from an arbitrary such function.
+</Definition>
+
+<Definition term="Kolmogorov axioms">
+The three conditions defining a probability measure, given by Kolmogorov in 1933. Every event receives a non-negative value; the whole sample space receives the value one; and the value of a union of events that cannot occur together is the sum of their separate values. Everything else in the mathematical theory of probability is derived from these three.
+</Definition>
+
+The first axiom fixes the bottom of the scale, the second fixes the top, and the third does all the work.
+
+<Definition term="Finite additivity">
+The requirement that for any two events that cannot both occur, the probability of their union is the sum of their probabilities, and by repetition the same for any finite collection of pairwise exclusive events. Kolmogorov's own formulation strengthens this to countable additivity, which extends the requirement to infinite sequences of exclusive events, and the two are not equivalent.
+</Definition>
+
+Several familiar facts follow at once. The probability of the complement of an event is one minus the probability of the event, since an event and its complement are exclusive and together exhaust the space. The empty event has probability zero. And for events that are not exclusive, the probability of the union is the sum of the two probabilities minus the probability of their overlap, since simple addition would count the overlap twice.
+
+The gap between finite and countable additivity looks technical and has been a live dispute. Countable additivity is what makes the theory connect to measure theory and to the limit theorems, and mathematical practice assumes it without comment. It also has consequences some have found unwelcome, notably that no countably additive measure spreads probability evenly over a countably infinite set, so there is no such thing as picking a natural number entirely at random. Those who take probability to be a constraint on the beliefs of an agent rather than a piece of mathematics have sometimes declined the stronger axiom for exactly that reason, de Finetti being the best known.
+
+## Reading the axioms as a generalisation
+
+The connection to the earlier articles is not an analogy. It can be stated as a set of theorems, and each one recovers something the deductive apparatus already had.
+
+A tautology receives probability one, since a tautology is true on every interpretation and so corresponds to the whole sample space. A contradiction receives probability zero. If one proposition entails another, the first cannot receive a higher probability than the second, since the set of outcomes where the first holds is included in the set where the second does. And two logically equivalent propositions receive the same probability, since they correspond to the same set.
+
+Deductive validity reappears as a special case. An argument is valid when every interpretation making the premises true makes the conclusion true, and in probabilistic terms this means that assigning probability one to each premise forces probability one on the conclusion. What the probabilistic framework adds is the ability to say something about arguments whose premises fall short of certainty, which the deductive framework cannot do at all, and the results there are less comfortable than one might expect. Uncertainty accumulates: an argument with ten premises each at probability nine tenths can leave its conclusion at little more than a third, even when the argument is deductively valid. The article on uncertain premises in the advanced tier takes that up.
+
+One thing does not carry over, and it is the most important negative result in this article. Probability is not truth-functional. The value of a conjunction is not determined by the values of its conjuncts. If $P(A)$ and $P(B)$ are each one half, $P(A \cap B)$ may be one half, if the two events coincide; it may be zero, if they exclude each other; and it may be a quarter, if they are unrelated in the relevant sense. Nothing about the two separate values settles the matter, and no table of the sort used in the beginner tier can be written down.
+
+This is why probability is a genuine extension rather than a relabelling. The two-valued case is truth-functional because the only way for two propositions each to have value one is for both to hold, and there is nothing further to specify. As soon as intermediate values are admitted, the relation between propositions becomes an additional parameter, and the theory has to carry information the truth table never needed.
+
+## Independence
+
+<Definition term="Statistical independence">
+The relation two events bear when the probability of both occurring is the product of their separate probabilities. It is a definition rather than an intuitive notion made precise, and it is relative to the measure: two events independent under one probability measure may fail to be under another, with no change in the events themselves.
+</Definition>
+
+The definition is the missing parameter from the previous section, pinned to one particular value. When events are independent, the conjunction's probability is fixed by the conjuncts' probabilities after all, which is why independence assumptions are so heavily relied on in practice: they restore something like truth-functionality and make problems tractable.
+
+Two warnings attach to it. The first is that independence is not the same as having no causal connection, though the two often coincide. It is a numerical condition, and events with an evident causal link can satisfy it by coincidence of values while events with no connection at all can fail it through a common cause. The second is that independence for each pair in a collection does not give independence for the collection as a whole. Three events can be pairwise independent while the occurrence of two of them determines the third, and probabilistic arguments that slide from the pairwise condition to the stronger one are making a mistake that is easy to miss.
+
+Independence is also what connects this material to conditional probability, treated elsewhere: two events are independent exactly when conditioning on one leaves the other's probability unchanged, which is the form in which the notion is usually applied.
+
+## Cox's route to the same place
+
+Kolmogorov's axioms are a stipulation. They define a mathematical object, and they can be studied without any claim that they are the right constraints on anything. A different line of argument tries to derive them, and it is the line that most directly supports reading probability as an extension of logic.
+
+<Definition term="Cox's theorem">
+The result that any measure of plausibility satisfying a short list of structural requirements is a rescaling of a probability measure. The requirements are that degrees of plausibility be represented by real numbers, that the plausibility of a conjunction depend in a fixed way on the plausibility of one conjunct and of the other given the first, that the plausibility of a negation depend in a fixed way on the plausibility of what is negated, and that the assignment be consistent, in that two routes to the same value must agree. Cox published the argument in 1946.
+</Definition>
+
+The force of the result is that no separate justification of the axioms is needed. Anyone who wants a graded analogue of the truth values, who wants it to respect the Boolean structure of the propositions it grades, and who wants it to be consistent, has already committed to probability up to a change of scale. There is no third option waiting to be discovered, and alternative uncertainty formalisms have to reject one of the requirements rather than find a gap between them.
+
+The argument has been read as showing that probability theory simply is the logic of plausible inference, extended from the two-valued case to the graded one, and Jaynes made that reading the organising idea of a large book. The reading is attractive and it should be held with some care. Halpern showed in 1999 that Cox's argument, as originally given, does not go through for domains with only finitely many propositions without further assumptions, and that the additional assumptions needed are strong enough to be worth stating rather than passing over. The theorem survives in repaired forms. What does not survive is the claim that it derives probability from requirements nobody could object to.
+
+## Where the numbers come from
+
+The axioms constrain probability values without supplying any. Given that some event has probability one third, they determine a great deal; given nothing, they determine nothing. So there has to be some further principle taking one from a description of a situation to an initial assignment, and the oldest candidate is also the most troubled.
+
+<Definition term="Principle of indifference">
+The rule that when there is no reason to favour any one of several possibilities over the others, each should receive the same probability. It was standard in the classical period of the subject under the name principle of insufficient reason, and Keynes gave it the name now used in his treatise of 1921.
+</Definition>
+
+Applied to a die with no reason to think it loaded, the principle gives each face one sixth, and the answer is the one everybody wants. The difficulty is that the principle is sensitive to how the possibilities are described, and descriptions of the same situation that seem equally natural produce different answers.
+
+<Definition term="Bertrand's paradox">
+A demonstration, due to Joseph Bertrand in 1889, that the principle of indifference gives different answers to a single question depending on which quantity is treated as uniformly distributed. The standard version asks for the probability that a chord drawn at random in a circle is longer than the side of the inscribed equilateral triangle, and three equally natural constructions give three different values.
+</Definition>
+
+The three constructions are worth following, because the paradox is easy to state and easy to underestimate.
+
+Take a circle, and inscribe an equilateral triangle in it. A chord may be selected by fixing one endpoint on the circumference and choosing the other endpoint uniformly around the circumference; the chord is longer than the triangle's side when the second endpoint falls on the arc between the two far vertices, which is one third of the circumference, so the answer is one third. Alternatively a chord may be selected by choosing a radius, choosing a point uniformly along it, and drawing the chord perpendicular to the radius at that point; the chord is longer than the side when the point falls in the inner half of the radius, so the answer is one half. Or a chord may be selected by choosing its midpoint uniformly within the disc; the chord is longer than the side when the midpoint falls inside the circle of half the radius, whose area is a quarter of the whole, so the answer is one quarter.
+
+Each construction picks a different quantity to spread uniformly, and nothing in the phrase "at random" says which. The principle of indifference, applied without a specification of the underlying quantity, is not a rule at all but an invitation to choose one and not say so.
+
+Responses to this fall into three groups. Some hold that the question is ill-posed and that a random chord means nothing until a mechanism is specified, in which case the paradox is a warning against a form of words rather than an objection to the principle. Some seek an additional constraint, invariance under the symmetries of the problem being the most developed candidate, that singles out one construction as correct. And some abandon the principle entirely, taking initial probabilities to be inputs supplied from elsewhere rather than outputs of a rule. Which response is right depends on what probability is taken to be, and that is the interpretive question this article set aside at the start.
+
+<Objection>
+Calling probability an extension of logic confuses two subjects. Logic is about what follows from what, and its results hold whatever the world is like. Probability is about how often things happen, which is a matter of fact and not of form. That the two share some algebra no more makes probability a logic than sharing arithmetic makes accountancy a branch of physics.
+</Objection>
+
+<Reply>
+The objection assumes an interpretation of probability rather than arguing for one, and the assumption is the frequency interpretation. On that reading the objection is largely right and the extension claim is a structural observation with no further significance. But the axioms do not require that reading, and on the interpretations that take a probability to measure the degree to which one proposition supports another, or the degree of belief a body of evidence warrants, the subject matter is precisely what follows from what, with the two-valued case as the special one where the support is total. Cox's argument was constructed to make exactly that point. The honest statement is therefore conditional. If probabilities are frequencies, the relation to logic is formal analogy. If probabilities measure evidential support, the relation is genuine extension, and the deductive apparatus of the earlier articles is the fragment of the theory dealing with support of degree one.
+</Reply>
+
+<Aside title="Three things the axioms leave open">
+The axioms fix the arithmetic and nothing else, and the disputes about probability are all disputes about what the arithmetic is describing. The frequency interpretation takes a probability to be a limiting relative frequency in a sequence of trials. The subjective interpretation takes it to be a degree of belief, constrained by the axioms on pain of accepting a set of bets guaranteed to lose. The logical interpretation, of which Keynes's treatise is the fullest development, takes it to be a relation of partial entailment between propositions, objective but not empirical. Each faces well-known difficulties and each has current defenders, and the mathematics above is neutral between them, which is both its strength and the reason the disputes have proved so durable.
+</Aside>
+
+## Next
+
+The tools are now assembled. The remaining articles in this tier are about the language rather than in it, and they begin with the two results that everything else depends on. The next article states what soundness and completeness claim, and why the second is a great deal harder to believe than the first.
+
+<FurtherReading>
+  <li>A. N. Kolmogorov, *Grundbegriffe der Wahrscheinlichkeitsrechnung* (Springer, 1933), translated as *Foundations of the Theory of Probability*.</li>
+  <li>Richard T. Cox, "Probability, Frequency and Reasonable Expectation", *American Journal of Physics* 14, no. 1 (1946), 1 to 13.</li>
+  <li>Richard T. Cox, *The Algebra of Probable Inference* (Johns Hopkins Press, Baltimore, 1961).</li>
+  <li>Joseph L. F. Bertrand, *Calcul des probabilités* (Gauthier-Villars, Paris, 1889).</li>
+  <li>John Maynard Keynes, *A Treatise on Probability* (Macmillan, London, 1921).</li>
+  <li>Joseph Y. Halpern, "A Counterexample to Theorems of Cox and Fine", *Journal of Artificial Intelligence Research* 10 (1999).</li>
+  <li>E. T. Jaynes, *Probability Theory: The Logic of Science* (Cambridge University Press, 2003).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Interpretations of Probability"](https://plato.stanford.edu/entries/probability-interpret/).</li>
+</FurtherReading>
