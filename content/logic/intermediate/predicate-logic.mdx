@@ -1,0 +1,165 @@
+---
+title: Predicate Logic
+subject: logic
+tier: intermediate
+order: 16
+est_read_min: 20
+summary: Quantifiers, variable binding, scope, and multiply quantified sentences
+prerequisites: ["axiomatic-systems"]
+introduces: ["predicate", "universal quantifier", "existential quantifier", "bound variable", "free variable", "domain of discourse", "quantifier scope"]
+requires: ["well-formed formula", "scope", "translation key"]
+added: "2026-08-29"
+---
+
+Every human being is mortal. Socrates is a human being. Therefore Socrates is mortal.
+
+That argument has been valid since antiquity and it has come out invalid at every stage of this subject so far. Translated into the language of the last seven articles it becomes $P$, $Q$, therefore $R$, and there is an interpretation making the first two true and the third false. Every system given so far agrees on this, and every one of them is wrong.
+
+The fault is not in the systems. It is in the language they operate on, which treats a sentence as an unanalysed whole and can therefore see no connection between three sentences that share their subject matter. The remedy is to open the sentences up.
+
+## Inside the sentence
+
+The first move is to stop treating "Socrates is mortal" as a unit and treat it as the result of saying something about somebody.
+
+<Definition term="Predicate">
+An expression that becomes a sentence when supplied with the right number of names. A predicate taking one name expresses a property, one taking two expresses a relation between two things, and so on, with the number of names required called its arity. Predicates are written with capital letters, and the names they take are written after them, so that $Fa$ says that the object named by $a$ has the property expressed by $F$, and $Rab$ says that $a$ stands in the relation $R$ to $b$.
+</Definition>
+
+Two categories of expression have appeared. There are the predicates, and there are the terms that fill their places, which for the moment are names: lowercase letters standing for particular objects, in the way that sentence letters previously stood for whole sentences. A translation key for this language accordingly has two parts, one assigning English predicates to capital letters and one assigning individuals to lowercase ones.
+
+With that much, "Socrates is mortal" becomes $Ms$, and "Socrates is a human being" becomes $Hs$. The connectives all still work: $Hs \land Ms$, $Hs \rightarrow Ms$, $\neg Ms$ are all well-formed. What is still missing is the first premise, since "every human being is mortal" is not about any particular individual and there is no name in it to write down.
+
+Order matters in a relational predicate and the reader has to keep track of it. If $Lab$ is read as "$a$ loves $b$", then $Lba$ says something quite different, and $Laa$ says that $a$ loves itself. Nothing in the notation prevents a name from filling more than one place, and a great many interesting claims depend on its doing so.
+
+## Saying something about everything
+
+<Definition term="Domain of discourse">
+The collection of objects that an interpretation of a formula is about, over which its quantifiers range. Every interpretation fixes one, and it is required to be non-empty. A claim that everything is thus and so is a claim about the domain and nothing outside it, so the same formula can be true under one interpretation and false under another purely because the domain has changed.
+</Definition>
+
+The domain is what makes general claims say anything definite. "Everything is mortal" is false if the domain is all objects whatever and true if the domain is human beings, and the sentence has not changed in the slightest between those two verdicts.
+
+<Definition term="Universal quantifier">
+The symbol $\forall$, read "for all" or "for every". The formula $\forall x Fx$ is true under an interpretation when every object in the domain satisfies $F$, and false when at least one does not. It is the formal counterpart of "every", "all", "each", and "any" in their general uses.
+</Definition>
+
+<Definition term="Existential quantifier">
+The symbol $\exists$, read "for some" or "there is at least one". The formula $\exists x Fx$ is true under an interpretation when at least one object in the domain satisfies $F$, and false when none does. It renders "some", "there is", "at least one", and "a" in its general use.
+</Definition>
+
+The letter $x$ appearing in these formulas is a variable, and it is doing something different from what a name does. A name picks out an object. A variable picks out nothing; it holds a place open so that the quantifier can say something about how that place can be filled.
+
+"Something is mortal" is therefore $\exists x Mx$, and "everything is mortal" is $\forall x Mx$. The missing premise is neither of these, since it does not say that everything is mortal but that everything of a certain kind is.
+
+## Which connective goes with which quantifier
+
+This is the point at which nearly everyone meeting the notation for the first time writes something false, and the error is worth making deliberately in order to see why it is one.
+
+"Every human being is mortal" is not $\forall x (Hx \land Mx)$. That formula says that every object in the domain is both human and mortal, which is a claim about the whole domain rather than about human beings, and it is false if the domain contains a single stone. The right rendering is
+
+$\forall x (Hx \rightarrow Mx)$
+
+which says of each object in the domain that if it is human then it is mortal. Objects that are not human satisfy the conditional trivially, by having a false antecedent, and so they do not interfere. The conditional is doing exactly the work of restricting attention to the human beings that the domain by itself cannot do.
+
+The existential quantifier pairs the other way. "Some human being is mortal" is $\exists x (Hx \land Mx)$, and not $\exists x (Hx \rightarrow Mx)$. The second formula is true as soon as the domain contains anything at all that fails to be human, since that object satisfies the conditional vacuously, and a formula that a single stone can make true is not a formula saying that some human being is mortal.
+
+The pattern is worth committing to memory, and the reason behind it is worth keeping alongside it. A universal claim about a restricted group has to leave everything outside the group alone, and the conditional is what leaves things alone. An existential claim has to find an object that is in the group and satisfies the further condition, and the conjunction is what demands both at once.
+
+With that in hand the ancient argument can be written down at last: $\forall x (Hx \rightarrow Mx)$ and $Hs$, therefore $Ms$. Whether the system can prove it is a question for the next tier, but at least the premises and conclusion are now connected by shared vocabulary rather than being three unrelated letters.
+
+## Bound and free
+
+The variable in $\forall x Mx$ is attached to the quantifier in front of it, and that attachment has to be made precise, because a formula may contain variables that no quantifier has claimed.
+
+<Definition term="Bound variable">
+An occurrence of a variable that falls within the scope of a quantifier using that same variable. A bound occurrence contributes nothing on its own and could be replaced throughout by any other unused variable without changing what the formula says, so $\forall x Fx$ and $\forall y Fy$ are the same claim differently written.
+</Definition>
+
+<Definition term="Free variable">
+An occurrence of a variable that is not bound by any quantifier. A formula containing one says nothing determinate, since the variable names nothing; it expresses a condition that objects may or may not satisfy rather than a claim that may be true or false. A formula with no free variables is a sentence, and only sentences have truth values.
+</Definition>
+
+The distinction has more weight than it first appears to. In $\forall x (Fx \rightarrow Gy)$ the occurrence of $x$ is bound and the occurrence of $y$ is free, so the whole is not a sentence and asking whether it is true is asking a question with no answer. Supply an object for $y$ and it becomes a claim; leave $y$ open and it is a condition, in the way that "$x$ is greater than seven" is a condition rather than a claim.
+
+The interchangeability of bound variables is not a technicality either. It is why $\exists x Fx$ and $\exists y Fy$ can be treated as the same formula for every purpose, and it is what makes it legitimate to rename variables when two formulas being combined happen to have used the same letter for different purposes. Systems of proof for this language spend a noticeable amount of their machinery making sure that renaming happens when it needs to.
+
+## Scope
+
+<Definition term="Quantifier scope">
+The portion of a formula a quantifier governs, determined by the punctuation exactly as the scope of a connective is. A quantifier binds every occurrence of its variable within its scope and none outside it, and moving a quantifier across a connective can change the claim entirely.
+</Definition>
+
+The cleanest illustration is negation. Compare
+
+$\neg \forall x Fx$
+
+with
+
+$\forall x \neg Fx$
+
+The first says that not everything is $F$, which is satisfied as soon as one thing fails to be. The second says that nothing is $F$, which requires every single thing to fail. Take a domain of three objects, two of which are $F$. The first formula is true and the second is false, so they are not the same claim, and the only difference between them is which symbol is written first.
+
+The corresponding pair for the existential quantifier behaves the same way. $\neg \exists x Fx$ says that nothing is $F$, while $\exists x \neg Fx$ says that something is not $F$. And putting the two observations together gives the relations that let each quantifier be defined from the other: $\forall x Fx$ is equivalent to $\neg \exists x \neg Fx$, and $\exists x Fx$ is equivalent to $\neg \forall x \neg Fx$. Everything is $F$ exactly when nothing fails to be, and something is $F$ exactly when not everything fails to be. These are the quantifier analogues of De Morgan's laws, and they mean the language could get by with one quantifier and negation if brevity were not worth anything.
+
+## Two quantifiers at once
+
+The genuinely new expressive power of this language appears when one quantifier falls within the scope of another, and it is here that the notation earns its awkwardness.
+
+Take the two-place predicate $Lxy$, read "$x$ loves $y$", and compare
+
+$\forall x \exists y Lxy$
+
+with
+
+$\exists y \forall x Lxy$
+
+The first says that for each person there is someone that person loves, and it permits everyone to love a different person. The second says that there is one particular person whom everyone loves. The second implies the first and the first does not imply the second, and the entire difference between them is the order in which the two quantifiers are written.
+
+The reason for the asymmetry is worth seeing rather than memorising. In the first formula, the existential quantifier lies inside the scope of the universal one, so the object it promises may be chosen afresh for each object the universal quantifier considers. In the second, the existential quantifier lies outside, so its object is settled before the universal quantifier begins its work and must serve for everything.
+
+A small domain makes this concrete. Let the domain be three people, and let the first love the second, the second love the third, and the third love the first. Then for each person there is someone they love, so $\forall x \exists y Lxy$ is true. But nobody is loved by all three, so $\exists y \forall x Lxy$ is false. The pattern of the relation is enough to separate the two formulas, and no such separation was expressible at all in the language of the previous articles.
+
+This is not a curiosity confined to examples about love. The difference between a promise that holds for each case separately and a promise that holds for all cases at once is the difference between continuity and uniform continuity in analysis, between a system in which every problem is eventually solvable and one in which a single method solves them all, and between a great many pairs of philosophical claims that sound alike when stated in English. Ordinary language marks the distinction poorly, often not at all, and the fact that the notation marks it unmissably is one of the strongest arguments for using the notation.
+
+## What the quantifiers do not mean
+
+Two features of the standard treatment surprise people, and both are consequences of the definitions above rather than optional extras.
+
+The first is that a universal claim about a kind of thing is true when there are no such things. Since $\forall x (Ux \rightarrow Px)$ is a claim about every object in the domain, and objects that fail to be $U$ satisfy the conditional by having a false antecedent, the formula comes out true when nothing at all is $U$. So "every unicorn is purple" is true, and so is "every unicorn is green", and there is no contradiction because neither claim is about anything. Traditional Aristotelian logic took universal claims to carry existential import, and this is one of the places where the modern treatment departs from it deliberately. The departure is a convenience rather than a discovery about English, and where existential import is wanted it is written in explicitly, by conjoining $\exists x Ux$.
+
+The second is that the existential quantifier does not, on its own, carry the metaphysical weight its name suggests. $\exists x Fx$ says that something in the domain satisfies $F$, and what the domain contains is fixed by the interpretation. A domain of fictional characters makes $\exists x$ claims about Sherlock Holmes come out true without anything having been settled about what exists in a fuller sense. This is why arguments that move from a formalisation to a conclusion about what there is need a further premise about what the domain is, and why the article on ontological commitment in the ontology subject spends its length on exactly that step.
+
+A third feature is a stipulation rather than a consequence. The domain is required to be non-empty, which guarantees that $\forall x Fx$ implies $\exists x Fx$ and keeps a number of proof rules simple. Nothing forces the requirement, and the article on free logic in the advanced tier takes it away and works out what changes.
+
+## What is preserved and what is lost
+
+The definitions of validity and consequence carry over without alteration. An argument is valid when no interpretation makes its premises true and its conclusion false, and the only change is in what an interpretation now is. Instead of an assignment of truth values to sentence letters, an interpretation now specifies a domain, an object for each name, and, for each predicate, which objects or sequences of objects it applies to. That structure is what the later articles on model theory take as their basic object.
+
+The proof methods carry over as well. Natural deduction gains an introduction and an elimination rule for each quantifier, with side conditions preventing the obviously invalid inferences. The tableau method gains rules for quantified formulas and for their negations. The Hilbert system gains an axiom schema or two and a rule. None of these is a fresh start, and each is a straightforward extension of what was already in place.
+
+What is lost is decidability. Truth tables no longer apply, since a domain may be infinite and there is no finite list of cases to check. That much is unsurprising. What is genuinely surprising, and what the article on computability establishes, is that no other procedure works either. There is no mechanical test that determines, of an arbitrary argument in this language, whether it is valid. The tableau method still closes on every valid argument, given enough time, but on an invalid one it may run forever without ever settling the matter. The gain in expressive power was paid for, and the price was the property that made the previous articles' methods so satisfying.
+
+<Objection>
+The regimentation distorts what it claims to clarify. English quantifiers are far richer than these two: "most", "few", "several", and "hardly any" are ordinary and none of them can be written in this notation at all. A framework that handles two quantifiers and silently drops the rest is not an analysis of generality but a fragment mistaken for the whole.
+</Objection>
+
+<Reply>
+The expressive limits are real and the first clause of the objection is correct as a matter of fact rather than opinion. "Most things are $F$" is provably not expressible with these two quantifiers and the connectives, which is why the theory of generalized quantifiers exists and treats "most" as a relation between two sets rather than as anything definable from $\forall$ and $\exists$. What the objection gets wrong is the inference. The fragment was not chosen because nothing else exists but because it is the fragment on which validity behaves well enough to be studied, and results proved about it transfer to richer languages that contain it. A framework earns its keep by what it makes provable, not by how much of English it swallows, and the amount of mathematics that turns out to be writable in this fragment is the evidence that the choice was a good one.
+</Reply>
+
+<Aside title="Two independent inventions">
+Gottlob Frege's *Begriffsschrift* of 1879 introduced quantificational notation as part of a system intended to put arithmetic on a purely logical footing, and it is generally treated as the beginning of the subject in its modern form. Charles Sanders Peirce, working from the algebraic tradition rather than the foundational one, arrived at a notation for the same thing in the 1880s and gave the device its name; his "On the Algebra of Logic: A Contribution to the Philosophy of Notation" of 1885 is the fuller presentation. Neither wrote anything a reader today would recognise on sight. Frege's notation was two-dimensional and arranged on branching lines, and the symbols $\forall$ and $\exists$ in current use came from later hands. The notation settled into its present shape only over the following half century, which is worth remembering when it is presented as though it had been handed down whole.
+</Aside>
+
+## Next
+
+The language now has predicates, names, variables, and two quantifiers, and there is one thing it still cannot say. It cannot say that two names pick out the same object, and without that it cannot count, cannot express "at most one", and cannot handle the definite article. The next article adds a single two-place predicate and finds that a surprising amount follows from it.
+
+<FurtherReading>
+  <li>Gottlob Frege, *Begriffsschrift, eine der arithmetischen nachgebildete Formelsprache des reinen Denkens* (Halle, 1879).</li>
+  <li>Charles S. Peirce, "On the Algebra of Logic: A Contribution to the Philosophy of Notation", *American Journal of Mathematics* 7, no. 2 (1885), 180 to 202.</li>
+  <li>Patrick J. Hurley and Lori Watson, *A Concise Introduction to Logic*, 13th edition (2018), on predicate logic and translation.</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Emergence of First-Order Logic"](https://plato.stanford.edu/entries/logic-firstorder-emergence/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Generalized Quantifiers"](https://plato.stanford.edu/entries/generalized-quantifiers/).</li>
+</FurtherReading>
