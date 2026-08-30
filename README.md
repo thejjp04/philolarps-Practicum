@@ -11,17 +11,17 @@ Nine subjects, each laid out as a prerequisite ladder across three tiers:
 
 | Subject | Beginner | Intermediate | Advanced |
 | --- | --- | --- | --- |
-| Metaphysics | 9 | 13 | 20 |
+| Metaphysics | 9 | 13 | 22 |
 | Epistemology | 6 | 12 | 14 |
-| Logic | 8 | 13 | 24 |
+| Logic | 8 | 14 | 26 |
 | Ethics | 7 | 11 | 15 |
 | Philosophy of Mind | 6 | 14 | 18 |
 | Ontology | 6 | 10 | 12 |
 | Political Philosophy | 6 | 11 | 15 |
 | Applied Ethics | 5 | 10 | 12 |
-| Theism | 5 | 12 | 15 |
+| Theism | 5 | 12 | 21 |
 
-309 rungs in total. Ordering is by what a reader needs first, not by how
+320 rungs in total. Ordering is by what a reader needs first, not by how
 difficult a term sounds: nothing may require a concept that no earlier rung
 introduces, and `validateLadders()` fails the build if that ever stops holding.
 
