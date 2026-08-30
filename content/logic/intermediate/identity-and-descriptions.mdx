@@ -1,0 +1,133 @@
+---
+title: Identity and Definite Descriptions
+subject: logic
+tier: intermediate
+order: 17
+est_read_min: 15
+summary: "Adding the identity predicate, numerical claims, and Russell's analysis of 'the'"
+prerequisites: ["predicate-logic"]
+introduces: ["identity predicate", "definite description", "Russell's theory of descriptions"]
+requires: ["predicate", "universal quantifier", "existential quantifier", "bound variable"]
+added: "2026-08-29"
+---
+
+The language built in the previous article can say that something is $F$, that everything is, that some things stand in a relation to others, and a great deal more besides. It cannot say that there is exactly one $F$. It cannot say that nothing but Socrates is wise. And it cannot say what "the" contributes to a sentence, which turns out to be the largest of the three gaps.
+
+All three are closed by adding a single two-place predicate.
+
+## One more predicate, and not like the others
+
+<Definition term="Identity predicate">
+The two-place predicate written $=$ and read "is identical to", whose interpretation is fixed in advance rather than varying between interpretations. Where an ordinary predicate applies to whatever objects an interpretation assigns to it, $a = b$ is true exactly when $a$ and $b$ name the same object, on every interpretation without exception. It is conventionally written between its terms rather than in front of them.
+</Definition>
+
+That the interpretation is fixed is what distinguishes identity from every other predicate in the language, and it is why identity counts as part of the logic rather than part of the subject matter. An interpretation is free to make $F$ apply to whatever it likes, and no argument turning on the meaning of $F$ can be valid on logical grounds alone. Nothing is free about $=$, so arguments turning on its meaning are valid in the same way that arguments turning on the meaning of negation are.
+
+Three properties follow immediately from the fixed interpretation. Every object is identical to itself, so $\forall x\, x = x$ is valid. If $a$ is identical to $b$ then $b$ is identical to $a$. And if $a$ is identical to $b$ and $b$ to $c$, then $a$ is identical to $c$.
+
+The fourth property is the one that does the work in arguments. If $a$ and $b$ are the same object, then whatever is true of one is true of the other, so any formula containing $a$ remains true when $b$ is written in its place. This licenses substitution, it is what a proof system for identity is built around, and it is usually called the indiscernibility of identicals or Leibniz's Law. Its converse, the claim that objects sharing all their properties are identical, is a separate and much more contested thesis, and the article on identity in the ontology subject is where the difference is worked through.
+
+One consequence deserves stating because it is easily assumed away. Identity cannot be defined from the rest of the language. It is tempting to try defining $a = b$ as the claim that $a$ and $b$ satisfy exactly the same predicates, but a language contains only finitely many predicates, and two distinct objects may be alike with respect to every one of them. What such a definition captures is indiscernibility relative to a particular vocabulary, which is a weaker relation. Identity has to be added, not extracted.
+
+## Counting
+
+With identity in hand the language can count, which is worth seeing done because the pattern is not obvious in advance.
+
+"At least one thing is $F$" needed no identity: $\exists x Fx$. "At least two things are $F$" needs it, and the reason is that two existential quantifiers by themselves do not guarantee two objects. The formula $\exists x \exists y (Fx \land Fy)$ is satisfied by a single object playing both roles. What is wanted is
+
+$\exists x \exists y (Fx \land Fy \land \neg\, x = y)$
+
+with the final conjunct forcing the two to be distinct. "At least three" extends the pattern with a third quantifier and three distinctness clauses, and the number of clauses grows quickly, which is a nuisance rather than a difficulty.
+
+"At most one thing is $F$" is a universal claim rather than an existential one, since it says nothing about anything existing. It says that any two things that are both $F$ are the same thing:
+
+$\forall x \forall y ((Fx \land Fy) \rightarrow x = y)$
+
+If nothing is $F$ this comes out true, which is correct, since at most one is satisfied by none.
+
+"Exactly one thing is $F$" is then the conjunction of the two, and it can be written more compactly by putting the uniqueness clause inside the existential quantifier:
+
+$\exists x (Fx \land \forall y (Fy \rightarrow y = x))$
+
+There is something that is $F$, and anything that is $F$ is that thing. This formula is worth reading until it is comfortable, because the rest of the article is built on it.
+
+## Only, except, and superlatives
+
+The same predicate handles a group of English constructions that quantifiers alone cannot touch.
+
+"Only Socrates is wise" says that Socrates is wise and that nothing else is, which is $Ws \land \forall x (Wx \rightarrow x = s)$. The second conjunct is the uniqueness clause again, now anchored to a name rather than to a variable.
+
+"Every philosopher except Socrates is wise" says that the philosophers other than Socrates are wise and that Socrates is not: $\forall x ((Px \land \neg\, x = s) \rightarrow Wx) \land \neg Ws$. Dropping the second conjunct would leave a formula that says nothing about Socrates at all, and "except" plainly does say something about him.
+
+Superlatives work the same way. "Socrates is the wisest philosopher" becomes a claim that Socrates is a philosopher and that every philosopher other than Socrates is less wise than he is, which requires a two-place predicate for the comparison but no new machinery. What all these have in common is that they are claims about how many things, or which things other than a given one, and that is exactly what identity supplies.
+
+## The definite article
+
+<Definition term="Definite description">
+A phrase of the form "the such-and-such", which purports to pick out exactly one thing by describing it rather than by naming it. Definite descriptions behave like names in a sentence, occupying the same positions and appearing to refer, and the question of whether they really are a kind of name is the question this article turns on.
+</Definition>
+
+Treating a description as a name is the obvious first move, and it produces trouble at once.
+
+Suppose "the present King of France" is a name, and let it be $k$. Then "the present King of France is bald" is $Bk$, and it is true or false according to whether the object named is bald. But there is no present King of France, so $k$ names nothing, and a name that names nothing leaves the sentence with no truth value at all. That is uncomfortable, since the sentence is perfectly meaningful and most people asked would call it false.
+
+It gets worse. If $Bk$ has no truth value then neither does $\neg Bk$, so both "the present King of France is bald" and "the present King of France is not bald" fail to be true, which looks like a violation of excluded middle. And a third difficulty arises with sentences that deny existence outright. "The present King of France does not exist" is true. Read as a claim about the object named by $k$, it says of that object that it does not exist, which is either false or unintelligible depending on how charitable one is feeling.
+
+## Russell's analysis
+
+<Definition term="Russell's theory of descriptions">
+The account, given in "On Denoting" of 1905, on which a sentence containing a definite description is not about any object named by the description but is instead a general claim with three parts: that something answers to the description, that at most one thing does, and that it has whatever the sentence goes on to attribute. On this account "the" is not a device of reference at all, and the description does not survive as a unit in the analysis.
+</Definition>
+
+Written out, "the present King of France is bald" becomes
+
+$\exists x (Kx \land \forall y (Ky \rightarrow y = x) \land Bx)$
+
+which is the "exactly one" formula from above with a further conjunct attached. There is a present King of France; there is at most one; and he is bald.
+
+Every one of the three difficulties dissolves. The sentence has a truth value, and the value is false, because the first conjunct is false. No name in it fails to refer, because there is no name in it: the whole analysis contains one predicate letter for "King of France", one for "bald", two quantifiers, and identity. And "the present King of France does not exist" becomes the straightforward denial that anything uniquely answers to the description, which is true and involves no object doing the strange work of not existing.
+
+The formula also explains why the analysis was thought worth the trouble. A definite description looked like a referring expression and turned out, on analysis, to be a quantifier phrase in disguise. The grammatical form of the English sentence and the logical form of what it says come apart, and the notation is what makes the gap visible.
+
+## Scope, once more
+
+The apparent violation of excluded middle has not been dodged. It has been located.
+
+Once "the" has been analysed as a quantifier, a negation can attach in two places, and the two produce different claims. Putting the negation inside gives
+
+$\exists x (Kx \land \forall y (Ky \rightarrow y = x) \land \neg Bx)$
+
+which says that there is a unique present King of France and he is not bald. That is false, since the first conjunct fails. Putting the negation outside gives
+
+$\neg \exists x (Kx \land \forall y (Ky \rightarrow y = x) \land Bx)$
+
+which denies that there is a unique bald present King of France. That is true.
+
+So "the present King of France is not bald" is ambiguous, and excluded middle is untouched: the false reading is the contradictory of nothing, since the true reading is the actual contradictory of the original sentence. English gives no way of marking which reading is meant, and the notation gives no way of failing to mark it. Russell's terms for the two cases were secondary and primary occurrence of the description, and later writers usually speak instead of the description taking narrow or wide scope, which is the same distinction under the name inherited from the previous article.
+
+The ambiguity is not confined to negation. Any operator the description can sit inside or outside of produces one, which is why scope distinctions involving descriptions recur throughout the philosophy of language and the advanced articles on modal logic.
+
+<Objection>
+The analysis buys its results by ignoring how the sentence is used. Somebody who says that the present King of France is bald has not asserted that France has a king; they have taken it for granted, and their audience takes it for granted with them. What has gone wrong when the presupposition fails is not that a false claim has been made but that no claim has succeeded in getting made at all, and the right verdict is that the sentence is neither true nor false. Turning a presupposition into a conjunct of what is asserted misdescribes the phenomenon in order to keep every sentence bivalent.
+</Objection>
+
+<Reply>
+This is Strawson's objection of 1950 and it has never been decisively answered, which is a fair indication that something in it is right. Two things can be said. The first is that the presuppositional account owes an alternative treatment of the very sentences that motivated the analysis, and denials of existence are the hard case: if "the present King of France does not exist" presupposes that he does, it should suffer the same failure as the affirmative sentence, and it plainly does not. The second is that the dispute may be less sharp than it looks. Russell's target was logical form and the question of what a sentence contributes to inference, while Strawson's was the act of using a sentence on an occasion, and the two questions can have different answers without either side being confused. Donnellan's paper of 1966 pressed the point further by distinguishing two uses of a description, one that picks out whatever fits it and one that picks out a particular thing the speaker has in mind and may fit it only imperfectly, and argued that Russell and Strawson had both missed the distinction. What is not in dispute is that the analysis works as logic. It assigns a truth value, it validates the right inferences, and it makes a scope ambiguity visible that no other treatment had located.
+</Reply>
+
+<Aside title="An operator for 'the'">
+Some presentations keep a term-forming device for descriptions rather than eliminating them, writing an inverted iota in front of a variable and a formula to produce a term meaning "the thing satisfying this". The notation is convenient, and it is compatible with Russell's analysis provided the resulting terms are treated as abbreviations that disappear on unpacking rather than as genuine names. Russell's own way of putting this was that a description is an incomplete symbol: it has no meaning taken alone, and only sentences containing it are assigned meanings. Systems that instead treat description terms as genuine names have to say what happens when nothing satisfies the formula, and the usual answers are to assign an arbitrary default object or to allow terms that fail to denote, which is the route the article on free logic takes.
+</Aside>
+
+## Next
+
+The language is now complete for present purposes, and the subject turns from using it to proving things about it. Those proofs are conducted in a background theory of sets, and the next article supplies as much of that theory as the metatheory needs and no more.
+
+<FurtherReading>
+  <li>Bertrand Russell, "On Denoting", *Mind* 14 (1905), 479 to 493.</li>
+  <li>P. F. Strawson, "On Referring", *Mind*, new series 59, no. 235 (1950), 320 to 344.</li>
+  <li>Keith S. Donnellan, "Reference and Definite Descriptions", *The Philosophical Review* 75, no. 3 (1966), 281 to 304.</li>
+  <li>Irving M. Copi, Carl Cohen and Victor Rodych, *Introduction to Logic*, 15th edition (2018), on predicate logic with identity.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Descriptions"](https://plato.stanford.edu/entries/descriptions/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Identity"](https://plato.stanford.edu/entries/identity/).</li>
+</FurtherReading>
