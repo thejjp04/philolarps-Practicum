@@ -1,0 +1,192 @@
+---
+title: "Bayesian Natural Theology"
+subject: theism
+tier: advanced
+order: 1
+est_read_min: 26
+summary: "Recasting the arguments as claims about how much likelier the evidence is on theism, which moves the whole dispute onto the prior and onto what fixes it"
+prerequisites: []
+introduces: ["Bayes factor", "likelihood ratio", "simplicity as a prior", "problem of the priors", "old evidence problem", "evidential aggregation"]
+requires: ["probabilistic argument", "cumulative case argument", "demonstrative argument", "Bayes's theorem", "prior probability", "posterior probability", "conditional probability", "fine-tuning argument"]
+added: "2026-08-28"
+---
+
+The intermediate tier presented the classical arguments roughly as their authors presented them. Almost none of them survive in that form in the professional literature. What survives is a probabilistic reconstruction, and the reconstruction is not a translation. It changes what each argument claims, what would count as answering it, and where the disagreement actually sits.
+
+This article sets out that machinery and then does something the popular presentations rarely do, which is to be specific about its limits. The framework is genuinely clarifying. It is also, on the central question, close to inert, and the reasons for that are worth understanding in detail rather than taking on report.
+
+## What the move to probability does
+
+A demonstrative argument aims at a conclusion that cannot fail if the premises hold. Nobody working in the field now offers one, for reasons the beginner tier set out. A probabilistic argument aims lower, and if it works it achieves something a failed proof does not.
+
+Swinburne's terminology for the two grades of achievement is standard and worth adopting, since a good deal of confused argument comes from not having it to hand. A C-inductive argument raises the probability of its conclusion without making it more probable than not. A P-inductive argument makes the conclusion more probable than not. The project of *The Existence of God*, published by Clarendon Press in 1979 and substantially revised in 2004, is to assemble a set of individually C-inductive arguments that jointly amount to a P-inductive one.
+
+The formal apparatus is the theorem you already have. For a hypothesis $h$ and evidence $e$, the posterior probability is $P(h|e) = P(e|h)P(h)/P(e)$.
+
+For present purposes a rearrangement is far more useful than that form. Written in odds rather than probabilities, and comparing $h$ against its negation, the theorem says that the posterior odds $P(h|e)/P(\neg h|e)$ equal the prior odds $P(h)/P(\neg h)$ multiplied by the ratio $P(e|h)/P(e|\neg h)$.
+
+Everything in this article follows from that decomposition. Where you end up is the product of two independent things: what you brought to the evidence, and what the evidence does to it. They can be argued about separately, and the shape of the modern dispute comes from the fact that natural theology has a great deal to say about the second factor and very little defensible to say about the first.
+
+## The evidence factor
+
+<Definition term="Likelihood ratio">
+The ratio of how expected a body of evidence is on one hypothesis to how expected the same evidence is on a rival, written $P(e|h_1) / P(e|h_2)$.
+</Definition>
+
+Three features of this quantity account for most of what the framework contributes.
+
+It is comparative and never absolute. There is no such thing as evidence for a hypothesis full stop. There is only evidence for one hypothesis over a specified alternative, and changing the alternative changes the verdict on the very same evidence. Anyone who says that some fact supports theism, without saying what theism is being weighed against, has not yet made a claim that can be assessed.
+
+It is not the probability of the hypothesis. Confusing $P(e|h)$ with $P(h|e)$ is the most common error in this area and both sides commit it. That the evidence would be very likely if God existed tells you nothing on its own about whether God exists, in the same way that a disease which makes a symptom certain tells you nothing about whether a patient with that symptom has the disease until you also know how common the disease and the symptom are.
+
+And computing it requires knowing what each hypothesis predicts. This is where the trouble starts, and it is worth going slowly.
+
+Elliott Sober has pressed the point hardest, in *Evidence and Evolution: The Logic Behind the Science*, Cambridge University Press (2008), and it is the most serious technical objection to the design argument in the literature. To evaluate the probability of the evidence given that God exists, you must know what God would be likely to bring about. Bare theism does not tell you. It has to be supplemented with claims about divine purposes, and those claims are not idle: they do all the work. Supplement theism with the assumption that God would want embodied moral agents and the constants of physics become highly expected. Supplement it differently and they do not. Since the supplement is usually chosen after looking at the evidence, the resulting likelihood is not a finding but a restatement of the evidence in theological vocabulary.
+
+Sober's own preference is to work with likelihood ratios alone and go no further, on the ground that ratios of this kind can sometimes be defended while priors cannot. The position is coherent, and it is also a considerable retreat, because a likelihood ratio by itself never tells you what to believe. It tells you which way the evidence points and how hard, and leaves the destination open.
+
+<Definition term="Bayes factor">
+The factor by which a body of evidence multiplies the prior odds to give the posterior odds. For two hypotheses that each fix a definite probability for the evidence, it is identical to the likelihood ratio.
+</Definition>
+
+Working in odds makes the arithmetic concrete. Suppose you start with odds of 1 to 100 against theism, and suppose some body of evidence carries a Bayes factor of 20 in theism's favour. The posterior odds are 20 to 100, which is a probability of about 0.17. The evidence has done substantial work and the conclusion is still firmly negative. Now change the starting odds to even. The same factor delivers 20 to 1 in favour, a probability of about 0.95. Identical evidence, identical assessment of that evidence, opposite verdicts.
+
+That example is the most important thing in this article, and it is not a criticism of anybody's argument. It is a structural feature of the framework. Any dispute in which the parties differ sharply in their priors and agree about the evidence will not be settled by the evidence.
+
+The qualification in the definition matters more than it looks. Bayes factor and likelihood ratio coincide when each hypothesis fixes a definite probability for the evidence. Theism does not. It is a family of hypotheses rather than a single one, since it leaves open what God creates, which purposes are being served, and what else exists alongside. For a hypothesis of that kind the Bayes factor is an average of the likelihood across the ways the hypothesis might be true, weighted by how probable each of those ways is given the hypothesis. That weighting is a further set of contested assumptions hiding inside a term that looks like one number. The same holds, and is noticed far less often, of the negation. "God does not exist" covers an enormous and badly specified space of alternatives, and the value of $P(e|\neg h)$ depends on how that space gets carved.
+
+An example makes the difficulty concrete. Take the evidence to be that the universe contains conscious moral agents. On theism as usually stated, is that expected? The answer depends on how much of the divine plan you take theism to fix. Read minimally, theism says only that a perfect being exists and created something, in which case it is silent about what was created and the likelihood is anybody's guess. Read maximally, so that it includes the claim that God intended precisely this sort of creature, the likelihood is near one, but the extra content has to be paid for in the prior, because a more specific hypothesis is a less probable one before evidence. Writers on this subject move between the two readings, sometimes within a page, taking the high likelihood of the specific version and the high prior of the general one. Nothing in the mathematics permits that, and the framework's real service here is to make the equivocation checkable.
+
+## A worked case
+
+The fine-tuning argument shows the machinery doing real work, and shows exactly where the pressure falls.
+
+Let $e$ be that the constants of physics fall in the narrow band permitting complex structure. The argument claims that $P(e|\text{theism})$ is much greater than $P(e|\neg\text{theism})$, and so that $e$ multiplies the odds substantially in theism's favour. Notice what the argument does not claim. It does not claim that $e$ is improbable full stop, and it does not claim that theism is thereby shown probable. Both would be errors, and stating the argument this way makes them visible before anyone has to be talked out of them.
+
+Set out in the tier's usual form, the argument is short:
+
+<Argument name="The fine-tuning argument in Bayesian form">
+  <Premise>The constants of physics falling in the life-permitting band is very unlikely on the supposition that there is no God.</Premise>
+  <Premise>It is not nearly so unlikely on the supposition that there is a God who wants embodied conscious beings.</Premise>
+  <Conclusion>The constants multiply the odds substantially in favour of theism.</Conclusion>
+</Argument>
+
+Written this way the argument is valid, so the whole dispute has been pushed into the two premises, and it is worth seeing how differently they behave. The second premise is a claim about divine purposes, and it can be attacked only by arguing about what a perfect being would be likely to do, which is the hardest sort of claim to adjudicate in the whole subject. The first is a claim about a probability distribution over physical constants, and it can be attacked in several ways at once: by denying that the constants are free parameters at all, by denying that a probability distribution over them is even well defined, or by widening the space of non-theistic possibilities.
+
+Notice also what has dropped out. There is no premise saying that unlikely things need explaining, and no premise saying that design is the best explanation. Those were the load-bearing claims of Paley's version, and the reconstruction dispenses with them entirely, which is a real gain in economy and a real change in what the argument is.
+
+The two serious replies attack different terms, which is why they so often talk past each other.
+
+The multiverse reply does not dispute the likelihood on theism at all. It attacks the denominator, by arguing that the negation of theism includes possibilities on which many sets of constants are realised, so that $P(e|\neg h)$ is not small. Whether this succeeds turns on whether there is independent reason to accept such a structure, since a hypothesis introduced only to absorb this evidence is doing the same suspicious work as a theological supplement chosen after the fact.
+
+The observer-selection reply attacks the evidence statement instead. It argues that the right $e$ is not that the constants are life-permitting but that we, who could only exist in a life-permitting region, observe life-permitting constants, and that the second is unsurprising on any hypothesis. That is a dispute about how finely the evidence should be described before it is fed into the theorem, and it connects to a general requirement that you condition on everything you know rather than on a convenient selection from it. The requirement is taken up in its own right later in the tier.
+
+Both replies are substantive and neither is a refutation. What the reconstruction has achieved is to make plain which quantity each disputant is contesting, which in the older literature was frequently unclear even to the disputants.
+
+## Where it stops working
+
+<Definition term="Problem of the priors">
+The difficulty that Bayes's theorem tells you how to revise a probability but not where the initial probability comes from, so that any posterior at all can be reached by choosing a prior to suit it.
+</Definition>
+
+Subjective Bayesianism, the mainstream position, holds that any prior obeying the probability axioms is permissible. On that view a person who starts at 0.999 and a person who starts at one in a billion are both perfectly coherent, and no argument from coherence alone separates them.
+
+The standard consolation is that priors wash out. There are convergence results showing that agents who begin from different priors and update on a shared stream of evidence come to agree. The consolation does not apply here, and it is worth being precise about why. Convergence requires the parties to agree about the likelihoods, which in this dispute they conspicuously do not. It requires a long run of fresh evidence, which natural theology does not have. And it says nothing to anyone whose prior sits at zero or one, which describes a fair number of the actual participants. Two well-informed people can accept every likelihood judgement in a book of natural theology, differ only in where they started, and finish many orders of magnitude apart, with nothing in the mathematics to adjudicate.
+
+The other route out is to deny that priors are a matter of choice at all, and to look for a rule that assigns them objectively. The oldest candidate is the principle of indifference: given a set of possibilities with nothing to distinguish them, spread the probability evenly. Applied here it would give theism and its negation one half each, which is a starting point some apologists have been happy to take.
+
+It does not survive contact with the details. The principle gives different answers depending on how the possibilities are described, and the description is not fixed by anything outside the arguer's choice. Divide the space into theism and atheism, and theism gets one half. Divide it instead into theism, atheism, and the several alternatives treated in the tier's final article, and theism gets an eighth. Both partitions are statable in ordinary language, nothing in the principle selects between them, and the priors they yield differ by an order of magnitude before a single piece of evidence has been considered. The defect shows up in cleaner form in Bertrand's paradox, where one geometrical question about a randomly drawn chord receives several incompatible answers depending on which parameter is treated as uniformly distributed, and where nothing in the problem itself picks a parameter.
+
+So the framework relocates the disagreement rather than resolving it. The obvious response is to find something better than indifference to fix the prior on non-arbitrary grounds, and there is one serious proposal.
+
+<Definition term="Simplicity as a prior">
+The proposal that a hypothesis's probability before any evidence is fixed by how simple the hypothesis is, so that simpler hypotheses start out likelier.
+</Definition>
+
+Swinburne's is the developed version. He argues that theism is an extremely simple hypothesis: it postulates one substance, a person, with no limits on power, knowledge, or freedom. The absence of limits is the load-bearing part. A hypothesis positing a being of some particular large finite power invites the question why that value rather than another, and every such value is a further arbitrary specification. Zero limits requires no such specification, so on this account infinite degrees are simpler than large finite ones. Theism therefore receives a high intrinsic probability, and the evidence has correspondingly less work to do.
+
+The proposal carries enormous weight, and it faces objections at three different levels.
+
+The first concerns what is being measured. Simplicity of a hypothesis can mean brevity of its statement or paucity of what it posits, and the two come apart. "There exists a person who can do anything, knows everything, and is perfectly good" is a short sentence. What it posits is a mind, and every mind we have any acquaintance with is the most internally complicated object in its region of the universe. Whether the shortness of the description or the character of the thing described is the relevant measure is not obvious, and the argument needs the first.
+
+The second concerns whether simplicity tracks truth at all. That simpler theories are preferable is not seriously disputed. Why they are preferable is disputed, and the two available answers do not serve this argument equally. If the preference is pragmatic, reflecting the fact that simpler theories are easier to use and to test, it licenses nothing whatever about intrinsic probability. Only if simplicity is a genuine guide to truth does the argument go through, and establishing that is a substantial project in the philosophy of science rather than a lemma to be assumed in passing.
+
+The third is Herman Philipse's, developed at length in *God in the Age of Science? A Critique of Religious Reason*, Oxford University Press (2012). Philipse takes the Bayesian cumulative strategy to be the most promising defence of religious belief available, which makes his critique unusually direct. He argues that theism cannot be stated meaningfully; that if it could, it would have no predictive power over the evidence, so the likelihoods never get fixed and the argument cannot begin; and that if the strategy did work as advertised, carried out properly it would favour atheism.
+
+Swinburne has replies to all of this and the exchange is technical. The point for a reader of this article is structural rather than partisan. The cumulative case rests on the prior, the prior rests on the simplicity claim, and a reader who declines the simplicity claim can grant every likelihood judgement in the book and still finish nowhere near theism. Anyone assessing this literature should work out what they think about simplicity first, because nothing downstream of it will change their answer.
+
+## Two problems the framework has independently
+
+The difficulties above concern applying the machinery to God. The next two afflict Bayesian confirmation generally and happen to fall on this subject with particular weight.
+
+<Definition term="Old evidence problem">
+The difficulty that evidence already known has probability one, so that conditioning on it cannot change any hypothesis's probability, even when that evidence is what convinced everyone in the first place.
+</Definition>
+
+Clark Glymour set the problem out in *Theory and Evidence*, Princeton University Press (1980), in the chapter titled "Why I Am Not a Bayesian". The mechanics are immediate. If $P(e) = 1$ then $P(e|h)$ is one as well, the ratio in the theorem is one, and the posterior equals the prior. The evidence confirms nothing.
+
+The standard illustration is the anomalous advance of Mercury's perihelion, measured for decades before general relativity accounted for it, and taken by nearly everyone at the time as powerful support for the theory. On the plain Bayesian account it supported nothing at all, because it was already known. Any confirmation theory delivering that verdict has a defect somewhere.
+
+Natural theology is the extreme case rather than an ordinary instance. Every item in the standard cumulative case is old evidence. That there is a universe rather than nothing, that it exhibits order, that the constants permit complexity, that conscious beings exist, that people report encounters with the divine: all of it was known long before anyone stated the hypothesis, and most of it long before anyone stated the theorem. The framework meant to display the evidence supporting theism has, applied literally, no evidence to work with.
+
+The repairs are known and none is free. Counterfactual approaches ask what your credence in $e$ would have been had you not known it, and use that value instead. Ur-prior approaches build a hypothetical distribution assigned before any evidence whatever and update forward from there. Both require constructing a state of ignorance you are not in and cannot fully imagine, and different reasonable constructions yield different numbers. When the whole dispute turns on quantities this sensitive, a repair that introduces a fresh free parameter has not obviously improved matters.
+
+<Definition term="Evidential aggregation">
+The combination of several independent pieces of evidence into a single verdict, by multiplying their individual Bayes factors together.
+</Definition>
+
+This is what a cumulative case argument is, stated exactly. The appeal of Swinburne's strategy lies here: no single argument need be strong, provided there are enough of them pulling the same way, since factors above one multiply upward.
+
+The multiplication has a condition, and it is the same condition that undid the case for miracle testimony in the previous tier. The pieces must be independent. If two arguments both trade on the universe exhibiting order, they are one piece of evidence counted twice, and multiplying their factors overstates the result. Much of the standard cumulative case looks vulnerable at this point. The argument from design, the fine-tuning argument, and the argument from consciousness are usually presented as separate lines of support, and they arguably all rest on a single fact about the universe being hospitable to complex structure. Nobody has shown that they are independent, and the multiplication proceeds as though they were.
+
+A second difficulty runs the other way. Plantinga's principle of dwindling probabilities, in *Warranted Christian Belief*, Oxford University Press (2000), pp. 268-280, observes that when a conclusion depends on a chain of claims each of which is merely probable, the conclusion inherits the product rather than the individual values. Four independent steps at 0.9 apiece leave the conjunction at about 0.66, and a longer chain degrades quickly. Plantinga aimed this primarily at historical arguments for specific Christian doctrines rather than at bare theism, and both Swinburne and Timothy McGrew have replied, so it should not be reported as a settled result. The structural lesson survives the dispute: accumulation helps when the pieces are parallel supports for one conclusion and hurts when they are links in a chain, and telling those two arrangements apart in a real argument is harder than it sounds.
+
+What can be said plainly is that aggregation is the least disciplined part of this literature. Individual likelihoods are argued for at length. The combination step is usually asserted.
+
+<Aside title="What the reconstruction earned">
+It would be easy to read the last several sections as saying that the Bayesian turn was a mistake. That is not the verdict, and the gains are specific enough to set out.
+
+It forces the arguer to name the alternative. An argument that some fact favours theism is now incomplete until it says what theism is being compared against, and a surprising amount of older apologetics turns out to have no answer available.
+
+It makes double counting visible. Once evidence is combined by multiplying factors, presenting one fact twice under two names becomes an identifiable error rather than a rhetorical flourish.
+
+It separates the two ways of disagreeing. Two people who reach different conclusions can now find out whether they disagree about what the evidence does or about where they began, and those call for entirely different conversations.
+
+And it disposes of a family of bad moves on both sides at once. The apologist who observes that some fact is very improbable, without asking how probable it is on the alternative, has said nothing yet. The critic who insists that extraordinary claims require extraordinary evidence has stated a truth about prior odds rather than an objection to any particular argument.
+
+What it did not do is supply the numbers. Nearly every specific figure in this literature is a stipulation presented in the grammar of a measurement, and the honest way to read a published estimate is as a compact statement of how confident its author is.
+</Aside>
+
+<Objection>
+The apparatus is false precision, and the precision is not incidental to how these arguments persuade.
+
+When a writer assigns 0.9 to the proposition that God would want conscious beings to exist, no procedure produced that number. It is an intuition with a decimal point attached. Running several such intuitions through a theorem changes nothing about their epistemic standing, but it changes a great deal about how the result reads, because arithmetic carries an authority that the inputs never earned. The mathematics is not analysing the argument. It is laundering it.
+
+The plain-English versions were at least honest about being judgement calls. The probabilistic versions are the same judgement calls wearing equipment, and the equipment is why people find them impressive.
+</Objection>
+
+<Reply>
+The laundering charge is correct about a good deal of what gets published, and the right response is not to deny it but to separate two things the objection runs together.
+
+The numbers deserve the contempt. A likelihood assignment nobody can defend is not improved by being written to two decimal places, and the field would be healthier if such figures were reported as the confessions of confidence they are. On this the objection needs no concession, because it is simply right.
+
+The constraints are a different matter, and they are where the value actually lies. Naming the alternative, refusing to count one fact twice, keeping the prior distinct from the evidence, distinguishing the probability of the evidence given the hypothesis from the probability of the hypothesis given the evidence: none of these is a numerical claim, and none of them depends on any number being defensible. They are conditions that any argument about evidence has to meet, and the framework's contribution is that it makes failures to meet them visible.
+
+Which is why the retreat to plain English does not deliver what the objection promises. An argument in plain English still has a prior, still has an implied alternative, and still either does or does not double count. It carries all the same commitments and displays none of them, which makes it harder to criticise rather than more honest. The formalism did not introduce the assumptions. It exposed them.
+
+Where the objection lands its strongest blow is on the question of proportion. A framework that reliably disciplines arguments and reliably fails to settle them is a useful thing, and a smaller thing than its prominence in the literature suggests. Several decades of increasingly refined probabilistic natural theology have not visibly moved anyone's considered view about whether God exists, and the reason sits in the odds equation. The prior does most of the work, nothing in the apparatus constrains it, and the participants brought theirs with them.
+</Reply>
+
+## Next
+
+The Bayesian reconstruction leaves the classical arguments standing as arguments while changing what they claim. The next article takes a different route into the same territory. Rather than asking how much a body of evidence raises a probability, it asks whether a certain kind of infinite structure is possible at all, and argues from a paradox that appears to arise wherever one is assumed.
+
+<FurtherReading>
+  <li>Richard Swinburne, *The Existence of God*, 2nd edn, Clarendon Press (2004).</li>
+  <li>Elliott Sober, *Evidence and Evolution: The Logic Behind the Science*, Cambridge University Press (2008).</li>
+  <li>Clark Glymour, *Theory and Evidence*, Princeton University Press (1980).</li>
+  <li>Herman Philipse, *God in the Age of Science? A Critique of Religious Reason*, Oxford University Press (2012).</li>
+  <li>Alvin Plantinga, *Warranted Christian Belief*, Oxford University Press (2000), pp. 268-280.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Bayes' Theorem"](https://plato.stanford.edu/entries/bayes-theorem/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Simplicity"](https://plato.stanford.edu/entries/simplicity/).</li>
+</FurtherReading>
