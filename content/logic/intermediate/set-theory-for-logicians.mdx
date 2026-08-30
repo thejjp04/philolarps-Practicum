@@ -1,0 +1,123 @@
+---
+title: Basic Set Theory for Logicians
+subject: logic
+tier: intermediate
+order: 18
+est_read_min: 16
+summary: "Membership, functions, relations, and cardinality, at the depth metatheory needs"
+prerequisites: ["identity-and-descriptions"]
+introduces: ["set", "relation", "function", "cardinality", "countable set", "power set"]
+requires: ["recursive definition", "domain of discourse"]
+added: "2026-08-29"
+---
+
+Every result in the rest of this subject is a result about a language, and languages are collections of things. A proof of soundness quantifies over the set of derivations. A proof of completeness constructs an interpretation out of a set of formulas. The definition of an interpretation already given assigns to each predicate the collection of objects it applies to, which is a set, and assigns objects from a domain, which is another.
+
+None of this can be done without a working vocabulary for collections, and that vocabulary is what this article supplies. It is a toolkit rather than a survey. Set theory as a subject in its own right, with its axioms and its independence results and its philosophical difficulties, is a large field, and none of it is needed here beyond what the metatheory of first-order logic actually uses.
+
+## Sets
+
+<Definition term="Set">
+A collection considered as a single object, determined entirely by which things belong to it. That an object $a$ belongs to a set $A$ is written $a \in A$. Two sets with the same members are the same set, so a set has no order and no repetition: nothing is a member twice, and there is no first member. The set with no members at all is the empty set, and there is only one of it.
+</Definition>
+
+That last clause is worth pausing on. Since a set is fixed by its members, and two empty collections have exactly the same members, namely none, they are the same collection. The empty set is unique for the same reason that any two sets with identical membership are identical, and that principle, called extensionality, is what makes a set a purely extensional object.
+
+Sets can be described by listing their members or by giving a condition their members satisfy. The set of prime numbers less than ten has four members. The set of even natural numbers has infinitely many. Both descriptions pick out one object each, and the object in each case is the collection rather than any of the things collected.
+
+Two notions are easily confused and the confusion causes trouble later. A set $A$ is a subset of $B$, written $A \subseteq B$, when every member of $A$ is a member of $B$. That is a different relation from membership. The set of prime numbers is a subset of the set of natural numbers, and it is not a member of it. Every set is a subset of itself, and no set is ordinarily a member of itself. Keeping the two apart is a matter of noticing which symbol is written.
+
+The usual operations are defined from membership. The union of two sets has as members whatever belongs to either; the intersection has whatever belongs to both; the difference of $A$ and $B$ has whatever belongs to $A$ and not to $B$. Nothing in what follows requires more than these.
+
+## Relations
+
+<Definition term="Relation">
+A set of ordered pairs. The pair $\langle a, b \rangle$ differs from $\langle b, a \rangle$ unless its two members are the same, which is what distinguishes a pair from a two-membered set. A relation holds between $a$ and $b$ exactly when the pair whose first member is $a$ and whose second is $b$ belongs to it, and the same construction with longer sequences gives relations of any number of places.
+</Definition>
+
+This is the definition that connects the previous two articles to the metatheory. When an interpretation assigns a meaning to the two-place predicate $L$, what it assigns is a relation in this sense: a set of pairs, and $Lab$ is true exactly when the corresponding pair is in that set. Nothing about loving or about any other English relation is involved. The predicate means whatever the set says it means, and the set is an arbitrary collection of pairs.
+
+Three properties of relations recur often enough to have names. A relation on a set is reflexive when it holds between every object and itself, symmetric when its holding between $a$ and $b$ guarantees its holding between $b$ and $a$, and transitive when its holding between $a$ and $b$ and between $b$ and $c$ guarantees its holding between $a$ and $c$. Identity has all three, as the previous article observed. A relation with all three is an equivalence relation, and every equivalence relation carves the set it is defined on into disjoint groups of objects that the relation cannot distinguish. That construction is used directly in the completeness proof later in this tier, where formulas are grouped by provable equivalence and each group is treated as a single object.
+
+## Functions
+
+<Definition term="Function">
+A relation that assigns to each object in one set exactly one object in another. The set the function takes its inputs from is its domain and the set it delivers values into is its codomain, and the value it assigns to $a$ is written $f(a)$. A function is injective when distinct inputs always receive distinct values, surjective when every object in the codomain is the value of something, and bijective when it is both.
+</Definition>
+
+A function is a special sort of relation rather than a new kind of thing, which is worth knowing because it means that nothing new has to be assumed to have functions available. The condition making a relation a function is that no object appears as the first member of two different pairs.
+
+Bijections are the case that matters most here. A bijection between two sets pairs each member of one with exactly one member of the other and leaves nothing over on either side, so it is a way of showing that two sets match up perfectly without counting either of them. That last point becomes essential as soon as the sets are infinite and counting is not available.
+
+## The power set
+
+<Definition term="Power set">
+The set whose members are all the subsets of a given set, written $\mathcal P(A)$. It includes the empty set and the whole of $A$, since both are subsets. If $A$ has $n$ members then $\mathcal P(A)$ has $2^n$, since each member of $A$ may independently be included in a subset or left out.
+</Definition>
+
+The counting argument is the same one that gave the number of $n$-place truth functions several articles ago, and for the same reason: a subset is determined by a yes or no decision about each member, so the number of subsets is the number of ways of making those decisions. A set with three members has eight subsets, a set with ten has 1,024, and a set with a hundred has a number with thirty-one digits.
+
+The power set is small enough to define in a sentence and turns out to be the operation that generates the whole hierarchy of infinite sizes, which the last section of this article explains.
+
+## Size without counting
+
+<Definition term="Cardinality">
+The size of a set, understood so that two sets have the same cardinality exactly when there is a bijection between them. For finite sets this agrees with counting. For infinite sets it is the definition rather than an approximation to one, since there is nothing else available, and it has consequences that finite intuition does not prepare anyone for.
+</Definition>
+
+The consequence to absorb first is that an infinite set can have the same cardinality as a proper subset of itself. Pair each natural number with its double. Every natural number is paired with exactly one even number, every even number is the partner of exactly one natural number, and nothing is left over. So there are exactly as many even numbers as there are natural numbers, even though the even numbers are a proper subset and the odd ones have all been left out.
+
+This looks like a contradiction and is not one. The principle that a whole is greater than its part holds for finite collections, and the pairing above shows that it fails for infinite ones. Something had to give, and what gave was an intuition rather than a theorem.
+
+<Definition term="Countable set">
+A set that is either finite or can be put into a bijection with the natural numbers. A countable infinite set can be arranged in a list with a first member, a second, and so on, such that every member appears somewhere in the list. A set that cannot be so arranged is uncountable.
+</Definition>
+
+More sets are countable than one would guess. The integers are countable, positive and negative alike, by listing them zero, one, minus one, two, minus two, and so on. Pairs of natural numbers are countable, by arranging them in a grid and walking along the diagonals rather than along a row, since walking along a row never finishes the first row. The rational numbers are countable by the same device, since a rational is fixed by a pair of integers. That last result was already surprising when it was proved, since the rationals are densely packed and the natural numbers are spread out.
+
+## The argument that stops it
+
+Not everything is countable, and the argument that shows so is short enough to give in full.
+
+Suppose the real numbers between zero and one could be listed, each written as an infinite decimal expansion. Construct a new number as follows: its first decimal digit differs from the first digit of the first number on the list, its second digit differs from the second digit of the second number, and in general its $n$th digit differs from the $n$th digit of the $n$th number.
+
+The number so constructed is between zero and one, and it is not on the list, since it differs from every entry in at least one place. So the list was not complete after all. Since the argument works against any proposed list, no list is complete, and the reals are uncountable.
+
+The same argument in a more general form gives a stronger result. For any set whatever, no function from that set to its power set is surjective, so the power set is strictly larger. Given any function $f$ from $A$ to $\mathcal P(A)$, consider the subset of $A$ containing exactly those members $a$ for which $a$ is not in $f(a)$. That subset is not the value of $f$ at any argument, since supposing it were the value at $b$ leads to a contradiction either way about whether $b$ belongs to it.
+
+The consequence is that there is no largest infinite size. Take any infinite set, form its power set, and something strictly larger has been produced; take the power set of that, and so on without end. Cantor established both results, the first in a paper of 1874 and the general form by the diagonal method a little under two decades later.
+
+## What logic needs from this
+
+The reason a chapter of set theory sits in the middle of a logic sequence can now be stated precisely, and it comes down to one observation about counting.
+
+The language of first-order logic has countably many formulas. The alphabet is countable, a formula is a finite string of symbols from it, and the set of finite strings over a countable alphabet is countable by the grid argument above. Derivations are finite sequences of formulas, so there are countably many of those as well. Everything on the syntactic side of the subject is countable.
+
+Interpretations are not. A domain may be of any size whatever, and the interpretations of a single one-place predicate over a given domain are as numerous as the subsets of that domain, which the diagonal argument has just shown to outrun it. So the semantic side of the subject is uncountably large while the syntactic side is countable, and any theorem connecting the two is connecting objects of very different orders of abundance.
+
+That mismatch is what makes the completeness theorem surprising rather than routine, and it is the source of the results on countable models that the article on compactness takes up. It is also why the syntactic and semantic consequence relations, distinguished informally several articles ago, needed distinguishing: they are relations between the same formulas, but the arguments establishing facts about them run through populations that are not the same size.
+
+<Objection>
+Using set theory to study logic is circular. Set theory is itself a theory stated in first-order logic, with its own axioms and its own proof system. Establishing that first-order logic is complete, by reasoning about sets, presupposes that reasoning about sets is in good order, and that is precisely what a foundational investigation was supposed to establish rather than assume.
+</Objection>
+
+<Reply>
+The circle is real and it is not vicious, provided the two roles are kept apart. The logic being studied is the object theory; the reasoning used to study it is the metatheory, and the metatheory is ordinary informal mathematics rather than a formal system. No claim is being made that the metatheory has been justified from nothing, because no such justification is available for any mathematics whatever, and demanding one of logic in particular sets a standard nothing meets. What can be done, and what is done, is to keep track of how much of the metatheory a given result actually uses. Some results need very little; others need substantial set-theoretic strength, and knowing which is which is informative. The programme that measures exactly this is reverse mathematics, treated in the advanced tier, and its existence is the honest answer to the objection: the dependence is not denied, it is measured.
+</Reply>
+
+<Aside title="Why the axioms exist">
+The account above is the naive one, on which any condition whatever determines the set of things satisfying it. That principle is inconsistent. Consider the condition of not being a member of oneself, and ask whether the set of things satisfying it satisfies it; either answer yields the other. Russell communicated the contradiction to Frege in a letter of June 1902, while the second volume of Frege's foundational work was in press, and Zermelo discovered it independently. The response was to abandon unrestricted comprehension and replace it with axioms permitting only more cautious constructions, the first such system being Zermelo's of 1908. Nothing in this article touches the difficulty, because everything used here is a construction the axioms permit, but it is worth knowing that the naive picture is a convenience rather than the truth.
+</Aside>
+
+## Next
+
+The subject has now been given a language, three proof systems, and the mathematical vocabulary its metatheory requires. Before the metatheory begins, one further generalisation is worth having. The next article treats probability not as a separate discipline but as what the truth table becomes when the two values are replaced by a continuum.
+
+<FurtherReading>
+  <li>Georg Cantor, "Über eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen", *Journal für die reine und angewandte Mathematik* 77 (1874), 258 to 262.</li>
+  <li>Georg Cantor, "Über eine elementare Frage der Mannigfaltigkeitslehre", *Jahresbericht der Deutschen Mathematiker-Vereinigung* 1 (1892), 75 to 78.</li>
+  <li>Ernst Zermelo, "Untersuchungen über die Grundlagen der Mengenlehre", *Mathematische Annalen* 65 (1908), 261 to 281.</li>
+  <li>Geoffrey Hunter, *Metalogic: An Introduction to the Metatheory of Standard First Order Logic* (University of California Press, 1971), on the set-theoretic preliminaries.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Early Development of Set Theory"](https://plato.stanford.edu/entries/settheory-early/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Set Theory"](https://plato.stanford.edu/entries/set-theory/).</li>
+</FurtherReading>
