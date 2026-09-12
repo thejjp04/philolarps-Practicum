@@ -1,0 +1,114 @@
+---
+title: "Provability Logic and Löb's Theorem"
+subject: logic
+tier: advanced
+order: 7
+est_read_min: 30
+summary: Reading the box as "is provable in PA", and the modal system that turns out to be exactly right
+prerequisites: ["tarski-undefinability-and-theories-of-truth"]
+introduces: ["provability logic", "system GL", "Löb's theorem", "arithmetical interpretation", "arithmetical completeness"]
+requires: ["second incompleteness theorem", "normal modal logic", "frame", "system S4"]
+added: "2026-09-12"
+---
+
+Truth is not definable in arithmetic. Provability is, and the incompleteness proof leaned on the fact throughout. That leaves a predicate of the language of arithmetic, holding of exactly the codes of the theorems of Peano arithmetic, sitting inside the theory it describes, and the question of this article is what that predicate obeys.
+
+The answer is not a loose analogy with necessity. It is a particular modal system, identified exactly, and the theorem saying it is the right one is one of the more satisfying results in the subject.
+
+## The predicate behaves like an operator
+
+Write $\Box A$ for the arithmetical sentence saying that $A$ is provable in Peano arithmetic. The abbreviation is doing real work and hiding none: behind it is a formula with a free variable applied to a numeral coding $A$, and everything below could be written out in the language of arithmetic at the cost of legibility.
+
+Three facts about this predicate were isolated by Hilbert and Bernays and sharpened by Löb, and they are what the second incompleteness theorem needs.
+
+<Argument name="The derivability conditions">
+<Premise>If Peano arithmetic proves $A$, then Peano arithmetic proves $\Box A$.</Premise>
+<Premise>Peano arithmetic proves $\Box(A \rightarrow B) \rightarrow (\Box A \rightarrow \Box B)$.</Premise>
+<Premise>Peano arithmetic proves $\Box A \rightarrow \Box \Box A$.</Premise>
+</Argument>
+
+The first says the theory recognises its own proofs: when a derivation exists, the arithmetised statement that it exists is itself derivable, because the verification that a particular finite object is a derivation is a computation the theory can carry out. The second says the theory knows that its own derivations close under modus ponens. The third is the first condition internalised, and it is by a distance the most laborious to establish, since it requires formalising inside arithmetic the argument that any provable sentence has a provable provability statement.
+
+Anyone who has seen a modal system will recognise the shape. The first condition is the rule of necessitation, the second is the distribution axiom $\mathsf{K}$, and the third is the axiom $\mathsf{4}$. So the logic of this predicate contains the normal modal logic $\mathsf{K4}$, and the question becomes what else it contains.
+
+<Definition term="Provability logic">
+The study of the principles governing the formalised provability predicate of a theory of arithmetic, conducted in a modal language whose box is read as "is provable in the theory". The field is distinguished from modal logic generally by the fact that its intended reading is a single fixed predicate rather than a family of informal notions, so that the question of which principles are correct has a determinate answer.
+</Definition>
+
+## The axiom that is missing
+
+The obvious candidate for a further axiom is the one every system of necessity has: $\Box A \rightarrow A$, provable things are true. It is the characteristic axiom of system T and it is in system S4 alongside the $\mathsf{4}$ axiom already present, so if provability behaved like necessity in the familiar way, S4 would be the answer.
+
+It is true that everything Peano arithmetic proves is true. What fails is that Peano arithmetic can prove this about itself, and the failure is total rather than partial.
+
+<Definition term="Löb's theorem">
+The result that if Peano arithmetic proves $\Box A \rightarrow A$, then Peano arithmetic proves $A$. A theory can establish a reflection principle for a particular sentence only in the case where the sentence was available anyway, so the reflection principle is never a route to anything new.
+</Definition>
+
+The theorem answers a question Henkin raised in 1952. Gödel's sentence says of itself that it is unprovable and turns out to be unprovable and true. Henkin asked about the opposite construction: a sentence saying of itself that it *is* provable. Is it provable, or not? The diagonal lemma delivers such a sentence and gives no obvious verdict, since both answers look consistent at first inspection. Löb settled it in 1955, and the sentence is provable, as a special case of a general theorem far more useful than the question that prompted it.
+
+The proof is a diagonal argument with one moving part. Suppose Peano arithmetic proves $\Box A \rightarrow A$. Apply the diagonal lemma to obtain a sentence $\psi$ for which the theory proves $\psi \leftrightarrow (\Box \psi \rightarrow A)$. From $\psi$ and the derivability conditions, the theory can derive $\Box \psi \rightarrow \Box(\Box \psi \rightarrow A)$, hence $\Box \psi \rightarrow (\Box \Box \psi \rightarrow \Box A)$, and since $\Box \psi \rightarrow \Box \Box \psi$ is the third condition, $\Box \psi \rightarrow \Box A$. Chaining with the assumed reflection gives $\Box \psi \rightarrow A$, which is $\psi$. So $\psi$ is proved outright, so $\Box \psi$ is proved, and $A$ follows.
+
+Set $A$ to a contradiction and the second incompleteness theorem falls out in a line. The consistency statement is $\neg \Box \bot$, which is $\Box \bot \rightarrow \bot$, an instance of reflection. If the theory proved it, Löb's theorem would hand over $\bot$. A consistent theory therefore does not prove its own consistency, and the usual construction of a Gödel sentence is not needed to see it.
+
+## The system
+
+Löb's theorem is a fact about Peano arithmetic. Formalised inside it, the theorem becomes an axiom.
+
+<Definition term="System GL">
+The normal modal logic obtained by adding to $\mathsf{K}$ the single axiom schema $\Box(\Box A \rightarrow A) \rightarrow \Box A$, known as the Löb axiom. Named for Gödel and Löb, it is also found in the literature as $\mathsf{G}$, $\mathsf{L}$, $\mathsf{KW}$ and $\mathsf{PrL}$.
+</Definition>
+
+The axiom is the internalised form of Löb's theorem, with the outer assertion of provability replacing the metatheoretic claim that the theory proves something. A first surprise is that the $\mathsf{4}$ axiom, which the third derivability condition supplied and which looked indispensable, is derivable from the Löb axiom in $\mathsf{K}$ and need not be assumed.
+
+A second is what happens on frames.
+
+<Definition term="Frame validity for GL">
+A modal formula is valid on a frame when it holds at every world under every assignment. The Löb axiom is valid on exactly the frames that are transitive and contain no infinite ascending chain of accessible worlds, a condition equivalent, for finite frames, to being transitive and irreflexive.
+</Definition>
+
+Irreflexivity is the striking part. In every familiar modal system the accessibility relation is reflexive, because that is what makes necessity entail truth. Here no world sees itself, which is the frame-level image of the fact that a theory does not have access to its own soundness. The absence of infinite ascending chains is well-foundedness in the other direction, and it is what makes the Löb axiom valid: if there were an endless chain of worlds each accessible from the last, one could falsify the axiom along it.
+
+That condition is not expressible by any first-order condition on frames, which has a consequence worth recording: $\mathsf{GL}$ is not canonical, and the standard completeness proof by canonical models does not apply to it. Completeness holds anyway, by way of finite models. Segerberg proved in 1971 that $\mathsf{GL}$ is exactly the logic of finite transitive irreflexive frames, and since the system has the finite model property and is finitely axiomatised, it is decidable. Whether a modal principle about provability holds can be settled by a machine.
+
+## Arithmetical completeness
+
+The system matches the derivability conditions and the Löb axiom, which is encouraging but not conclusive. Some further principle about provability might hold in arithmetic and not be derivable in $\mathsf{GL}$. Ruling that out requires making the question precise.
+
+<Definition term="Arithmetical interpretation">
+An assignment of a sentence of arithmetic to each propositional variable of the modal language, extended to all formulas by commuting with the connectives and by sending $\Box A$ to the arithmetised statement that the sentence assigned to $A$ is provable in Peano arithmetic. Every modal formula thereby becomes a sentence of arithmetic, one for each choice of assignment.
+</Definition>
+
+<Definition term="Arithmetical completeness">
+The property a modal system has when it derives exactly those formulas all of whose arithmetical interpretations are provable in Peano arithmetic. Solovay proved in 1976 that $\mathsf{GL}$ has it.
+</Definition>
+
+One direction is the work already done: each axiom of $\mathsf{GL}$ interprets into something Peano arithmetic proves. The other direction is Solovay's, and it is the substantial half. Given a modal formula not derivable in $\mathsf{GL}$, there is a finite frame falsifying it, and Solovay's technique embeds that frame into arithmetic by constructing a sentence that describes a computation walking through the frame's worlds. The construction yields an assignment under which the formula's interpretation is not provable.
+
+The result deserves to be read slowly, because it says more than that the system is adequate. Every principle of provability expressible in the modal language, whether or not anyone has thought of it, is a consequence of the Löb axiom and the rules of $\mathsf{K}$. The self-referential apparatus of the incompleteness theorems, which looks open-ended and full of scope for ingenuity, is captured completely by one schema. And since $\mathsf{GL}$ is decidable, so is the question of which such principles hold.
+
+Solovay proved a companion result in the same paper. Ask not which modal formulas interpret into theorems of arithmetic but which interpret into truths, and the answer is a different and slightly larger system, the closure of $\mathsf{GL}$ under a reflection rule. The distinction between what arithmetic proves about its own provability and what is true about it is itself exactly axiomatisable.
+
+<Objection>
+The modal notation invites a confusion it then trades on. The box of provability logic is a predicate of sentences applied to numerals, and the box of ordinary modal logic is an operator applied to formulas. Calling both necessity and observing that both satisfy $\mathsf{K}$ and $\mathsf{4}$ is a pun on the notation. The formal work would be unaffected if the box were written as an ordinary predicate throughout, and what would be lost is only the suggestion, which is not supported, that anything about metaphysical or logical necessity has been illuminated.
+</Objection>
+
+<Reply>
+The objection is right about the reading and wrong about the value of the notation. Nothing in this article claims that provability is a species of necessity, and the differences are being insisted on rather than glossed over: the axiom that makes necessity what it is fails here, and its failure is the subject matter. What the arithmetical completeness theorem establishes is a great deal stronger than an analogy. It is an exact correspondence between derivability in a decidable propositional system and provability of an infinite family of arithmetical sentences, and it is a theorem rather than an interpretive suggestion. The notation earns its place by making the frame conditions available, and those conditions are what make the system decidable. As for the difference between operator and predicate, it is genuine and consequential: Montague showed that treating necessity as a predicate of sentences in a theory with enough arithmetic runs into obstacles of exactly the kind this article describes, which is a reason the operator reading is standard elsewhere. That is a further result about self-reference, not an argument that the box here is a pun.
+</Reply>
+
+<Aside title="A question and a better answer">
+Henkin's problem appeared as a note in the Journal of Symbolic Logic in 1952 and asked only whether a sentence asserting its own provability is provable. Löb's answer, published in the same journal in 1955, proves the general reflection result and settles the question as an afterthought: the Henkin sentence is provable, because it is of the form $\Box A \rightarrow A$ with $A$ the sentence itself. The pattern of a narrow question answered by a much more general theorem recurs in the area, and the resulting theorem has outlived the question by a wide margin.
+</Aside>
+
+## Next
+
+The last three articles have taken the internal perspective, asking what arithmetic can say about itself. The next takes the external one. Compactness forces models of arithmetic other than the intended one, and the first incompleteness theorem forces models satisfying sentences the natural numbers falsify. The question is what these structures look like, and the answer is more definite than one might expect, right up to the point where a theorem says no such model can ever be exhibited.
+
+<FurtherReading>
+  <li>Martin Hugo Löb, "Solution of a Problem of Leon Henkin", *Journal of Symbolic Logic* 20 (1955), 115 to 118.</li>
+  <li>Robert M. Solovay, "Provability Interpretations of Modal Logic", *Israel Journal of Mathematics* 25 (1976), 287 to 304.</li>
+  <li>George Boolos, *The Logic of Provability* (Cambridge University Press, 1993).</li>
+  <li>Craig Smoryński, *Self-Reference and Modal Logic* (Springer, 1985).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Provability Logic"](https://plato.stanford.edu/entries/logic-provability/).</li>
+</FurtherReading>
