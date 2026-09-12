@@ -1,0 +1,84 @@
+---
+title: "What Makes a Constant Logical?"
+subject: logic
+tier: advanced
+order: 26
+est_read_min: 26
+summary: "Tarski's analysis of consequence, the permutation invariance criterion, and the case for logical pluralism"
+prerequisites: ["temporal-deontic-epistemic"]
+introduces: ["logical constant", "permutation invariance", "model-theoretic consequence", "logical pluralism"]
+requires: ["semantic consequence", "model", "second-order logic", "relevance logic"]
+added: "2026-09-12"
+---
+
+Every definition of validity in this subject has the same shape. An argument is valid when no reinterpretation of its non-logical vocabulary makes the premises true and the conclusion false. The definition presupposes a division of the vocabulary into the part held fixed and the part varied, and nothing in the definition supplies it.
+
+That is the last question of this tier, and it is prior to the others. Which expressions are logical determines what follows from what, and hence which of the many systems surveyed here are rivals and which are answers to different questions.
+
+## Tarski's analysis
+
+<Definition term="Model-theoretic consequence">
+The relation holding between a set of sentences and a sentence when every model of the set is a model of the sentence. Tarski's 1936 paper proposed this as the analysis of following from, replacing the proof-theoretic conception on which consequence is derivability in a system.
+</Definition>
+
+The analysis has two merits Tarski emphasised. It is not relative to a choice of deductive apparatus, so it explains why an incomplete system fails to capture consequence rather than redefining consequence to fit. And it validates the intuitive requirement that a valid argument cannot have true premises and a false conclusion, which a purely syntactic account secures only indirectly.
+
+<Definition term="Logical constant">
+An expression held fixed in the definition of consequence, as against the non-logical vocabulary reinterpreted from model to model. The truth functional connectives, the quantifiers and identity are standardly counted logical; predicates, names and function symbols are not.
+</Definition>
+
+Tarski conceded in the same paper that he knew no principled basis for the division, and that shifting the line shifts what counts as valid. Treat a particular predicate as logical and arguments turning on its meaning become valid; treat the quantifiers as non-logical and almost nothing is. The concession is the starting point of the subsequent literature.
+
+The shape of the problem can be seen in two directions. Counting too few expressions as logical leaves valid arguments unaccounted for. Counting too many trivialises the notion, since if every expression is logical then every true sentence is a logical truth. A criterion must fall between, and it must do so for a reason.
+
+## Permutation invariance
+
+<Definition term="Permutation invariance">
+The criterion on which an expression is logical when its semantic value is unchanged by every permutation of the domain of a model. Suggested by Tarski in a 1966 lecture published posthumously in 1986 and developed by Gila Sher, it derives from Felix Klein's Erlangen programme, which characterised geometries by the transformations their notions are invariant under.
+</Definition>
+
+The idea is that logic is what does not depend on which objects are which. Permuting the domain shuffles the individuals while preserving their number, so an invariant notion is one insensitive to the identity of objects and sensitive at most to cardinality.
+
+The criterion delivers verdicts and they are largely the expected ones. Identity is invariant, since a permutation maps a pair of identical objects to a pair of identical objects. The universal quantifier is invariant, since it holds of the whole domain and the permutation image of the whole domain is the whole domain. An ordinary predicate is not, since permuting the domain can move an object into or out of its extension. So the standard constants pass and the standard non-constants fail.
+
+The difficulty is at the upper end. The quantifier meaning "there are uncountably many" is permutation invariant, since permutations preserve cardinality, and so is every cardinality quantifier. So is the full second-order quantifier. The criterion therefore counts as logical a great deal that most would not, and the consequence relation it licenses settles the continuum hypothesis, as the second-order article noted.
+
+Sher accepts this and argues that logic is more extensive than the first-order tradition assumed. Feferman rejects it, objecting that a criterion should not make the truths of logic depend on set-theoretic questions, and proposes instead an invariance under homomorphism which cuts the notion down to roughly the first-order constants. The disagreement is about what one wants from the criterion rather than about the mathematics, and it has not been resolved.
+
+Other criteria have been proposed and each captures something. A proof-theoretic criterion, descending from Gentzen's remark that the introduction rules define the constants, counts an expression logical when its introduction and elimination rules are in harmony, which is to say that eliminating yields no more than introducing put in. The criterion has the virtue of explaining why Prior's connective tonk, with the introduction rule of disjunction and the elimination rule of conjunction, is not a logical constant despite having rules: its rules are not in harmony, and adding it makes everything derivable. Belnap's reply to Prior is the origin of the conservative extension requirement that the criterion imposes.
+
+## Pluralism
+
+<Definition term="Logical pluralism">
+The position that there is more than one correct consequence relation. In the version defended by JC Beall and Greg Restall, the generalised definition of validity, that the conclusion holds in every case in which the premises hold, admits several equally admissible specifications of a case, yielding classical, constructive and relevant consequence together.
+</Definition>
+
+The Beall-Restall argument runs from a schema they call Generalised Tarski's Thesis. Take a case to be a possible world and consequence comes out classical. Take it to be a constructive stage and consequence comes out intuitionistic. Take it to be a possibly inconsistent or incomplete situation and consequence comes out relevant. Each specification satisfies the schema, each yields a consequence relation with the formal properties one expects, and nothing in the schema selects among them.
+
+If the view is right, several disputes in this tier are not disputes. The classical logician and the intuitionist are answering different questions rather than disagreeing about one, and the relevance logician's rejection of explosion is correct for situations and irrelevant to worlds.
+
+The main objection is Priest's: a pluralism this liberal cannot say what to do. Faced with an actual argument one must decide whether the conclusion follows, and a theory delivering several incompatible verdicts has not answered the question that prompted the inquiry. Beall and Restall reply that the verdicts are not incompatible, being about different relations, and that which relation is relevant depends on the application, in the way that which geometry applies depends on the space. Whether this is a satisfying answer is the live question.
+
+Quine's older objection reaches both pluralism and the deviant logics it accommodates. If the intuitionist rejects excluded middle, then the connective they call negation is not the one the classical logician means, since the meaning of a connective is given by the laws governing it, and so the two are not disagreeing but talking past one another. The charge of change of subject has been answered in several ways, most effectively by pointing out that the two parties agree on a great deal about negation and conduct the dispute in terms both understand, which is not what talking past one another looks like.
+
+<Objection>
+The question is badly posed. Which expressions count as logical is settled by what one wants the logic for, and the varying answers in the literature reflect varying purposes rather than competing attempts at a single truth. There is no fact about logicality waiting to be discovered, and the search for a criterion is the search for something the notion never had.
+</Objection>
+
+<Reply>
+That deflation is close to pluralism and it concedes less than it appears to. Even a purpose-relative account must explain why some divisions serve their purposes and others do not, and the criteria surveyed here are attempts at exactly that: invariance explains why identity behaves differently from an arbitrary predicate, and harmony explains why tonk cannot be added to anything. Both explanations survive the deflation. Nor is the question idle in practice. Whether second-order quantification is logical determines whether categoricity results secure reference or merely relocate the problem into set theory, whether the completeness theorem marks a boundary of logic or a limitation of one system, and whether the incompleteness theorems constrain logic or only a fragment. Those consequences follow from the answer, and a position that declines to give one inherits them undischarged.
+</Reply>
+
+## Where this leaves the tier
+
+The systems in this tier were presented one at a time and they do not form a single sequence. The classical metatheory established what first-order logic can and cannot do, and its limits are sharp: complete but undecidable, categorical in no interesting case, unable to describe arithmetic fully. The non-classical systems each identify one assumption in that setting and remove it, and the removals are largely independent, which is why the systems combine.
+
+What the tier does not supply is a verdict about which logic is correct, and the reason is that the question is the one this article has just shown to be open. A reader who has followed the arguments is in a position to see what each choice costs, which is the most a survey can deliver and is a good deal more than a verdict would be worth.
+
+<FurtherReading>
+  <li>Alfred Tarski, "On the Concept of Logical Consequence", in *Logic, Semantics, Metamathematics*, second edition (Hackett, 1983), 409 to 420.</li>
+  <li>Gila Sher, *The Bounds of Logic* (MIT Press, 1991).</li>
+  <li>JC Beall and Greg Restall, *Logical Pluralism* (Oxford University Press, 2006).</li>
+  <li>Solomon Feferman, "Logic, Logics, and Logicism", *Notre Dame Journal of Formal Logic* 40 (1999), 31 to 54.</li>
+  <li>Arthur Prior, "The Runabout Inference-Ticket", *Analysis* 21 (1960), 38 to 39.</li>
+</FurtherReading>
