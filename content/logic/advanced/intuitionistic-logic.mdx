@@ -1,0 +1,80 @@
+---
+title: "Intuitionistic Logic and Kripke Semantics"
+subject: logic
+tier: advanced
+order: 15
+est_read_min: 24
+summary: Dropping excluded middle, the BHK reading of the connectives, and monotone Kripke models
+prerequisites: ["non-normal-modal-logics"]
+introduces: ["intuitionistic logic", "excluded middle", "BHK interpretation", "constructive proof", "monotonicity"]
+requires: ["Kripke model", "natural deduction", "reductio ad absurdum", "accessibility relation"]
+added: "2026-09-12"
+---
+
+A standard proof that there exist irrational $a$ and $b$ with $a^b$ rational goes as follows. Consider $\sqrt{2}^{\sqrt{2}}$. If it is rational, take $a = b = \sqrt{2}$. If it is irrational, take $a = \sqrt{2}^{\sqrt{2}}$ and $b = \sqrt{2}$, since then $a^b = 2$. Either way the pair exists.
+
+The proof is valid and it does not tell one which pair works. It establishes an existence claim by case analysis on a disjunction neither disjunct of which has been settled, and the disjunction is an instance of excluded middle. The tradition this article describes holds that such a proof does not establish what it claims to establish, and rebuilds logic accordingly.
+
+## The interpretation
+
+<Definition term="Intuitionistic logic">
+The logic obtained from classical logic by rejecting the law of excluded middle and the equivalent principles of double negation elimination and classical reductio, while retaining every other rule of natural deduction. It was formalised by Arend Heyting in 1930, following L. E. J. Brouwer's earlier informal criticism of classical reasoning about infinite totalities.
+</Definition>
+
+<Definition term="Excluded middle">
+The schema $\varphi \lor \neg \varphi$. Classically valid because every sentence has one of two truth values, it is rejected by intuitionists on the ground that asserting a disjunction requires a method of determining which disjunct holds, and no such method is available in general.
+</Definition>
+
+The rejection is not the claim that some sentence is neither true nor false. Intuitionistic logic proves $\neg \neg (\varphi \lor \neg \varphi)$, so no instance of excluded middle can be refuted. What is denied is the assertion, not the instance, and the difference tracks a change in what assertion requires.
+
+<Definition term="BHK interpretation">
+The Brouwer-Heyting-Kolmogorov reading of the connectives in terms of proofs rather than truth: a proof of $\varphi \land \psi$ is a pair of proofs; a proof of $\varphi \lor \psi$ is a proof of one disjunct together with an indication of which; a proof of $\varphi \rightarrow \psi$ is a construction transforming any proof of $\varphi$ into one of $\psi$; a proof of $\exists x\, \varphi$ is an object together with a proof that it satisfies $\varphi$; and $\neg \varphi$ abbreviates $\varphi \rightarrow \bot$.
+</Definition>
+
+Read this way the failure of excluded middle is immediate. A proof of $\varphi \lor \neg \varphi$ would be a proof of $\varphi$ or a refutation of it, together with an indication of which, and for an arbitrary $\varphi$ there is no such thing. The reading also explains what does survive: double negation introduction holds, since a proof of $\varphi$ yields a transformation of refutations of $\varphi$ into contradictions, while the converse fails, since a demonstration that no refutation exists is not itself a construction.
+
+<Definition term="Constructive proof">
+A proof that exhibits what it asserts to exist. A constructive proof of a disjunction specifies a true disjunct and a constructive proof of an existential specifies a witness, so the proofs are algorithms in a sense that can be made exact.
+</Definition>
+
+Exactness comes from two metatheorems about intuitionistic arithmetic. The disjunction property says that if the theory proves $\varphi \lor \psi$ then it proves one of them. The existence property says that if it proves $\exists x\, \varphi$ then it proves $\varphi[\bar{n}/x]$ for some numeral. Classical arithmetic has neither, which is the precise sense in which the opening example is not constructive. The properties are not axioms but theorems about the system, proved by Kleene's realisability interpretation in 1945 and also obtainable from cut elimination.
+
+## Kripke semantics
+
+Heyting's system had no semantics for over twenty years. Kripke supplied one in 1965, and it is the relational semantics of the modal articles with a different reading and an extra condition.
+
+A model is a partially ordered set of stages together with, at each stage, a set of atoms treated as established. The order is read as the growth of information over time or the extension of a body of evidence, and the interpretation of the connectives is by what will have been established.
+
+<Definition term="Monotonicity">
+The requirement that a formula true at a stage remains true at every later stage. Imposed on atoms as a condition on models, it is provable for all formulas, and it encodes the thought that what has been established is not later lost.
+</Definition>
+
+The clauses that matter are the ones where monotonicity forces a departure from the classical case. Conjunction and disjunction are evaluated at the stage. Implication is not: $\varphi \rightarrow \psi$ holds at a stage when at every later stage at which $\varphi$ holds, $\psi$ holds too. Negation follows, since $\neg \varphi$ holds at a stage when $\varphi$ holds at no later stage. Both look ahead, because a conditional asserted now must survive whatever is established later.
+
+Excluded middle now fails visibly. Take two stages, one below the other, with an atom $p$ established only at the later one. At the earlier stage $p$ does not hold, and $\neg p$ does not hold either since $p$ holds later. So $p \lor \neg p$ fails at the earlier stage, and the model refutes the schema. Double negation elimination fails in the same model, since $\neg \neg p$ holds at the earlier stage while $p$ does not.
+
+The relation to modal logic is exact rather than analogical. Gödel observed in 1933 that translating intuitionistic formulas by prefixing boxes at the right places embeds intuitionistic propositional logic faithfully into S4, so that a formula is intuitionistically provable exactly when its translation is an S4 theorem. The Kripke models of the two systems are the same objects, a partial order being a reflexive transitive relation that is also antisymmetric, and the embedding was found before either semantics existed.
+
+<Aside title="Two ways of reading the stages">
+The information reading, on which a stage is a state of knowledge, is intuitive and was not Brouwer's. His view located the mathematical object in the activity of an idealised mathematician constructing it, and the objection he pressed against classical reasoning was that it treats infinite totalities as completed. Dummett later recast the dispute as one about meaning, arguing that understanding a sentence consists in a capacity to recognise what would establish it, and that a realist semantics attributes to speakers a grasp of conditions they could not manifest. The three motivations support the same formal system and are not the same position, and a reader encountering intuitionism should ask which one is in play.
+</Aside>
+
+<Objection>
+Intuitionistic logic is classical logic with the useful parts removed. Large tracts of mathematics depend on excluded middle, proof by contradiction is indispensable in analysis, and the practical effect of the restriction is that the intuitionist must abandon results that are not in doubt. A revision of logic motivated by a philosophical position about meaning is a very large tail wagging a very large dog.
+</Objection>
+
+<Reply>
+The premise that constructive mathematics is crippled has been tested and did not survive. Bishop's *Foundations of Constructive Analysis* in 1967 developed real analysis constructively without adopting any of Brouwer's distinctive anti-classical principles, reaching the standard theorems in forms that specify what they assert to exist, and the tradition has since covered functional analysis, algebra and measure theory. The reformulations are often stronger than the classical statements rather than weaker, since a constructive existence theorem contains an algorithm. There is a genuine loss, in that certain classical theorems have no constructive proof and provably so, and the intermediate value theorem in its usual form is the standard example. But the accounting cuts both ways: the intuitionist proves things the classical mathematician does not, since classical and intuitionistic mathematics are incomparable rather than nested once Brouwer's continuity principles are added. The tail-and-dog argument also underrates the practical payoff, which is the subject of the next article.
+</Reply>
+
+## Next
+
+The BHK reading treats a proof of a conditional as a construction turning proofs into proofs, which is to say a function. That is not a metaphor, and the next article establishes the correspondence exactly: proofs are programs, formulas are types, and proof normalisation is computation.
+
+<FurtherReading>
+  <li>Michael Dummett, *Elements of Intuitionism*, second edition (Oxford University Press, 2000).</li>
+  <li>Errett Bishop, *Foundations of Constructive Analysis* (McGraw-Hill, 1967).</li>
+  <li>Anne Sjerp Troelstra and Dirk van Dalen, *Constructivism in Mathematics: An Introduction*, two volumes (North-Holland, 1988).</li>
+  <li>Saul Kripke, "Semantical Analysis of Intuitionistic Logic I", in *Formal Systems and Recursive Functions* (North-Holland, 1965), 92 to 130.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Intuitionistic Logic"](https://plato.stanford.edu/entries/logic-intuitionistic/).</li>
+</FurtherReading>
