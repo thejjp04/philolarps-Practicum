@@ -1,0 +1,96 @@
+---
+title: "Model Theory: Types, Quantifier Elimination, Categoricity"
+subject: logic
+tier: advanced
+order: 9
+est_read_min: 30
+summary: How the models of a theory can be counted, classified, and in rare cases pinned down
+prerequisites: ["nonstandard-models-of-arithmetic"]
+introduces: ["complete type", "saturation", "quantifier elimination", "categoricity", "Morley's theorem", "o-minimality"]
+requires: ["Löwenheim-Skolem theorem", "elementary equivalence", "cardinality", "canonical model"]
+added: "2026-09-12"
+---
+
+A theory has models, and the previous article showed that it generally has more of them than intended. The natural next question is how many, and whether the excess is disorder or has a shape to it. Model theory is the answer to that question, and its central results are surprisingly strong: for a large class of theories the models can be classified, and the classification is governed by a single cardinal-sized invariant.
+
+The route to those results runs through a shift in what one takes the basic objects to be. Not sentences, which are true or false in a model, but formulas with free variables, which are satisfied or not by tuples of elements.
+
+## Types
+
+Fix a structure and a tuple of its elements. The tuple satisfies some formulas and not others, and the collection of formulas it satisfies is a complete description of it in the language available.
+
+<Definition term="Complete type">
+A maximal consistent set of formulas in a fixed finite number of free variables, consistent with a given theory. A type is realised in a model when some tuple of elements satisfies every formula in it, and omitted when no tuple does.
+</Definition>
+
+Maximality means that for every formula, either it or its negation belongs. Consistency, here, means that every finite subset is satisfiable in some model of the theory, which by compactness means the whole type is satisfiable in some model. So every type is realised somewhere, and the question is whether it is realised in the model at hand.
+
+An example fixes the idea. In the theory of dense linear orders without endpoints, take the rationals and consider the set of formulas $x > q$ for every rational $q$ less than $\sqrt{2}$ together with $x < q$ for every rational above it. Each finite subset is satisfied by some rational, so the set extends to a complete type. No rational realises the whole of it, so the rationals omit this type; the reals realise it. The type is a description of a gap, written entirely in the language of the order.
+
+Types recover nonstandard elements as a special case. The set of formulas $x > \bar{n}$, for every numeral, is finitely satisfiable in the natural numbers and extends to a complete type. Realising it is exactly what a nonstandard model does, and the compactness construction of the previous article is the general fact that types can always be realised in some elementary extension.
+
+<Definition term="Saturation">
+The property a model has when it realises every type over every parameter set of size less than the model's own cardinality. A saturated model realises as many types as its size permits, and is correspondingly homogeneous: any two tuples satisfying the same formulas can be mapped to one another by an automorphism.
+</Definition>
+
+Saturated models are the useful ones, because a question about types can be answered by inspecting a single structure. Their existence is not guaranteed at every cardinality without set-theoretic hypotheses, which is why the literature often works with special or recursively saturated models instead.
+
+## Quantifier elimination
+
+Some theories admit a drastic simplification: every formula is equivalent to one with no quantifiers at all.
+
+<Definition term="Quantifier elimination">
+The property a theory has when every formula is equivalent, modulo the theory, to a quantifier-free formula in the same free variables. Since quantifier-free formulas are boolean combinations of atomic ones, the definable sets of such a theory are exactly the boolean combinations of the sets defined by atomic formulas.
+</Definition>
+
+The theory of dense linear orders without endpoints has it, and the verification is short: a formula $\exists x\,(a_1 < x \wedge \dots \wedge x < b_1 \wedge \dots)$ says only that each lower bound is below each upper bound, which is quantifier-free. The theory of algebraically closed fields has it, by an argument of Tarski, and so does the theory of real closed fields, which is Tarski's celebrated result that elementary geometry is decidable.
+
+The consequences are large out of proportion to the statement. A theory with quantifier elimination and a decidable set of atomic sentences is decidable, because checking a sentence reduces to evaluating a quantifier-free one. The definable sets are transparent, since one can see them directly rather than through an unbounded search. And the geometry of the models is legible: in real closed fields the definable subsets of the line are finite unions of points and intervals, which is exactly Tarski's theorem read as a statement about shape.
+
+## Categoricity
+
+The Löwenheim-Skolem theorem kills the hope that a first-order theory with an infinite model has exactly one model. It has models of every infinite cardinality, so uniqueness has to be asked cardinality by cardinality.
+
+<Definition term="Categoricity">
+The property a theory has, relative to a cardinal, when all of its models of that cardinality are isomorphic. A theory categorical in some infinite cardinal and having no finite models is complete, since two models of a sentence-disputing pair could be brought down or up to that cardinality and would then have to be isomorphic.
+</Definition>
+
+Dense linear orders without endpoints are categorical in the countable cardinality, by Cantor's back-and-forth argument, and not in any larger one, since the reals and the reals with an extra copy of the rationals inserted are both of the same size and not isomorphic. Algebraically closed fields of a fixed characteristic are categorical in every uncountable cardinality, because such a field is determined by its transcendence degree over the prime field, which equals the cardinality once that is uncountable, and not in the countable one, since the transcendence degree can be any finite number or countably infinite.
+
+Both examples show categoricity at some cardinals and not others, and in each case the pattern is all-uncountable-or-just-countable. Łoś and Vaught conjectured in the 1950s that this exhausts the possibilities.
+
+<Definition term="Morley's theorem">
+The result that a countable first-order theory categorical in one uncountable cardinality is categorical in every uncountable cardinality. Proved by Michael Morley in 1965, it establishes that uncountable categoricity is a single property rather than a family of properties indexed by cardinals.
+</Definition>
+
+The theorem is the origin of modern model theory, less for the statement than for the machinery. Morley's proof introduced a rank on formulas measuring how far a definable set can be split, and the theories where the rank is defined everywhere, later called totally transcendental and then, in wider generality, stable, turned out to be the ones whose models admit a structure theory. Shelah's classification programme, developed through the 1970s and 1980s, established a dividing line: on one side, theories whose models are classifiable by cardinal invariants; on the other, theories with the maximum possible number of models in every cardinality and no classification at all. Peano arithmetic is firmly on the wrong side.
+
+## O-minimality
+
+Stability is not the only fruitful condition, and for structures carrying an order it is the wrong one, since a linear order is unstable. The alternative condition is a direct generalisation of what Tarski proved about the reals.
+
+<Definition term="O-minimality">
+The property a structure with a linear order has when every definable subset of its universe is a finite union of points and open intervals with endpoints in the structure. Definable sets in one variable are as simple as the order permits, and by a theorem of Pillay and Steinhorn the property transfers to every structure elementarily equivalent to the given one.
+</Definition>
+
+The real field is o-minimal by Tarski's theorem. So is the real field with exponentiation, proved by Wilkie in 1996, and the real field with restricted analytic functions, proved by Denef and van den Dries. In each case the pay-off is a tameness theorem: definable sets in any number of variables decompose into finitely many cells, each homeomorphic to an open box, so definable families cannot exhibit pathological behaviour. Van den Dries proposed o-minimality as a precise rendering of Grothendieck's idea of a tame topology, and the subject has since produced results in number theory, notably in the Pila-Wilkie counting theorem and its use in the André-Oort conjecture.
+
+<Objection>
+Categoricity was supposed to be the property that secures reference. If a theory has exactly one model up to isomorphism, its terms have determinate reference; that was the hope behind the categoricity results for second-order arithmetic. Morley's theorem shows that first-order categoricity is a technical property of certain algebraic theories, holding for algebraically closed fields and failing for arithmetic. So the model-theoretic apparatus refines a notion that turned out not to do the philosophical work it was introduced for.
+</Objection>
+
+<Reply>
+The historical premise is right and the conclusion misreads the situation. Dedekind and Veblen did introduce categoricity as an adequacy condition on axiomatisations, and first-order categoricity does not meet that ambition. But the classification programme replaced the question rather than failing it. The useful question is not whether a theory has one model but whether its models can be described, and Shelah's dividing lines give a precise answer, together with a proof that for unstable theories no answer exists. That a theory has the maximum number of models in every uncountable cardinality is informative in the way an impossibility result is informative. The reference question has meanwhile moved on, to Putnam's model-theoretic argument and the responses to it, and those debates turn on what constrains interpretation rather than on how many models a theory has, which was the point at which counting models stopped being the relevant measure.
+</Reply>
+
+## Next
+
+Categoricity for arithmetic is available, as Dedekind showed, provided quantification over arbitrary sets of numbers is permitted. That is a different logic, with different properties, and the next article examines what the change costs. The short answer is that categoricity and completeness cannot both be had, and the choice between them is more contested than it looks.
+
+<FurtherReading>
+  <li>David Marker, *Model Theory: An Introduction* (Springer, 2002).</li>
+  <li>Wilfrid Hodges, *A Shorter Model Theory* (Cambridge University Press, 1997).</li>
+  <li>Michael Morley, "Categoricity in Power", *Transactions of the American Mathematical Society* 114 (1965), 514 to 538.</li>
+  <li>Lou van den Dries, *Tame Topology and O-minimal Structures* (Cambridge University Press, 1998).</li>
+  <li>Tim Button and Sean Walsh, *Philosophy and Model Theory* (Oxford University Press, 2018).</li>
+</FurtherReading>
