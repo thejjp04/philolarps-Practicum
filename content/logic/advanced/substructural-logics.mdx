@@ -1,0 +1,80 @@
+---
+title: "Substructural Logics"
+subject: logic
+tier: advanced
+order: 17
+est_read_min: 26
+summary: "Dropping weakening, contraction, or exchange, and what linear logic and the Lambek calculus buy by doing it"
+prerequisites: ["curry-howard-correspondence"]
+introduces: ["substructural logic", "weakening", "contraction", "exchange", "linear logic", "Lambek calculus"]
+requires: ["structural rule", "cut elimination", "sequent"]
+added: "2026-09-12"
+---
+
+A sequent has a list of formulas on each side, and three rules govern the lists rather than the formulas in them. They permit adding a formula that is not used, using a formula twice where it appears once, and reordering. They look like bookkeeping, and Gentzen presented them as such.
+
+They are not bookkeeping. Each one encodes an assumption about what a premise is, and dropping any of them produces a logic with different theorems and a different subject matter.
+
+<Definition term="Substructural logic">
+A logic obtained by restricting or removing one or more of the structural rules of the sequent calculus. Since the structural rules govern the treatment of premises as a collection rather than the behaviour of any connective, their removal changes what a premise is taken to be.
+</Definition>
+
+## The three rules
+
+<Definition term="Weakening">
+The structural rule permitting a sequent to be extended with an additional formula that plays no part in the derivation: from $\Gamma \vdash \varphi$ infer $\Gamma, \psi \vdash \varphi$. It expresses the assumption that unused premises are harmless, and with it comes the theorem $\varphi \rightarrow (\psi \rightarrow \varphi)$ and the derivation of a conclusion from an irrelevant premise.
+</Definition>
+
+<Definition term="Contraction">
+The structural rule permitting two occurrences of the same formula to be identified: from $\Gamma, \varphi, \varphi \vdash \psi$ infer $\Gamma, \varphi \vdash \psi$. It expresses the assumption that having a premise once is having it as many times as needed, and it is the rule that makes the Curry paradox derivable in a theory with naive comprehension.
+</Definition>
+
+<Definition term="Exchange">
+The structural rule permitting the formulas in a sequent to be reordered. It expresses the assumption that premises form a set or multiset rather than a sequence, and dropping it leaves order significant, which is what a grammar needs.
+</Definition>
+
+Each rule corresponds to something on the computational side of the previous article. Weakening is discarding a value; contraction is copying one; exchange is reordering arguments. A calculus without weakening and contraction is one in which every value is used exactly once, which is the discipline a language for memory or for physical resources would need, and the connection is exact rather than suggestive.
+
+## Linear logic
+
+<Definition term="Linear logic">
+The logic obtained by dropping weakening and contraction while retaining exchange, introduced by Jean-Yves Girard in 1987. Its formulas are read as resources consumed by use, and each classical connective splits into two: a multiplicative form combining separate resources and an additive form offering a choice between them.
+</Definition>
+
+The splitting is the substance of the system. Classically, conjunction introduction from $\Gamma \vdash \varphi$ and $\Gamma \vdash \psi$ requires the two premises to share a context, which is contraction, while combining disjoint contexts gives a different rule. With contraction available the two rules are interderivable and define one connective. Without it they define two: the multiplicative conjunction, written with a tensor, means having both resources, and the additive conjunction means being able to choose either one but not both.
+
+Girard's illustration is a vending machine. One unit of currency and the multiplicative conjunction of a drink and a snack means both are dispensed, which is false of the machine. One unit and the additive conjunction means the buyer chooses, which is true. Classical logic cannot state the difference because it identifies the connectives.
+
+The expressive power that was lost returns in a controlled form through the exponentials, modal operators marking a formula as reusable. A formula under the exponential may be weakened and contracted, so classical and intuitionistic logic embed into linear logic by placing exponentials at the right positions. Nothing is given up; the structural rules become explicit rather than implicit, which is the point. Linear logic has cut elimination, and its proof nets give a representation of proofs that quotients away the irrelevant ordering of rule applications, a problem natural deduction has and does not solve.
+
+The applications followed quickly and are concrete. Session types for communication protocols, where a channel is used according to a schedule and reuse is a bug; the ownership discipline of the Rust programming language, in which a value has one owner and copying must be requested; quantum computation, where the no-cloning theorem is the failure of contraction stated in physics.
+
+## The Lambek calculus
+
+<Definition term="Lambek calculus">
+The substructural system obtained by dropping exchange as well as weakening and contraction, introduced by Joachim Lambek in 1958 for the analysis of syntax. Without exchange the antecedent is a sequence, and implication splits into a leftward and a rightward form according to which side the argument is sought on.
+</Definition>
+
+The application is grammar, and it is the earliest substructural logic by three decades. A category is assigned to each word: a name gets the basic category for noun phrases, an intransitive verb gets the category that combines with a noun phrase on its left to make a sentence, a transitive verb gets one seeking a noun phrase on its right and then on its left. A string is grammatical when its sequence of categories derives the sentence category. Word order is carried by the directionality of the implications, which is exactly what the absence of exchange makes available.
+
+The framework is the origin of categorial grammar as practised now, and the connection to the previous article is direct: a derivation in the calculus is a term, so the syntactic analysis of a sentence delivers a semantic composition for free. Montague's programme of compositional semantics has this as its natural proof theory, and the pairing of a categorial derivation with a lambda term is how the two are usually presented together.
+
+<Objection>
+These systems are not logics but algebras of something else. A logic states which arguments preserve truth, and once a premise is a resource that can be used up, truth preservation has been abandoned for a different subject matter. Calling resource accounting a logic extends the word until it covers any formal system with a turnstile.
+</Objection>
+
+<Reply>
+The complaint would apply to modal logic and was made about it. It is better answered by looking at what the systems do than by disputing the label. Substructural systems have cut elimination, a subformula property, an algebraic semantics in residuated lattices, and a proof theory continuous with Gentzen's, so they are logics by every structural criterion available. The resource reading is one interpretation, and the same formalism carries others: relevance logic drops weakening because an irrelevant premise should not license a conclusion, which is a claim about entailment and not about resources, and the contraction-free systems are studied for their treatment of paradox, which is a claim about truth. The deeper reply is that the structural rules were never neutral. Presenting them as bookkeeping concealed three substantive assumptions about premises, and making them explicit is what a proof-theoretic analysis is supposed to do.
+</Reply>
+
+## Next
+
+Dropping weakening is what relevance logic does, and its motivation is not resources but the demand that a premise bear on its conclusion. That demand collides with one of the most familiar arguments in classical logic, and the collision has been the subject of a long dispute.
+
+<FurtherReading>
+  <li>Greg Restall, *An Introduction to Substructural Logics* (Routledge, 2000).</li>
+  <li>Jean-Yves Girard, "Linear Logic", *Theoretical Computer Science* 50 (1987), 1 to 101.</li>
+  <li>Joachim Lambek, "The Mathematics of Sentence Structure", *American Mathematical Monthly* 65 (1958), 154 to 170.</li>
+  <li>Francesco Paoli, *Substructural Logics: A Primer* (Kluwer, 2002).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Substructural Logics"](https://plato.stanford.edu/entries/logic-substructural/).</li>
+</FurtherReading>
