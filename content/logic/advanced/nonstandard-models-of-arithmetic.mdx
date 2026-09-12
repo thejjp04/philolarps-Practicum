@@ -1,0 +1,90 @@
+---
+title: "Nonstandard Models of Arithmetic"
+subject: logic
+tier: advanced
+order: 8
+est_read_min: 26
+summary: Structures that satisfy every truth of arithmetic and contain numbers larger than every number
+prerequisites: ["provability-logic"]
+introduces: ["nonstandard model", "nonstandard element", "overspill", "Tennenbaum's theorem"]
+requires: ["compactness theorem", "elementary equivalence", "first incompleteness theorem"]
+added: "2026-09-12"
+---
+
+Two results already established have a consequence that neither states. The compactness theorem says a set of sentences every finite part of which has a model has a model. The first incompleteness theorem says arithmetic has true sentences it does not prove. Put together with the completeness theorem they force the existence of structures that are not the natural numbers and cannot be told apart from the natural numbers by any sentence of the language.
+
+This article is about those structures. They are strange in a way that can be made precise, and the precision runs out at an exact point, marked by a theorem saying that no such structure can ever be written down.
+
+## The construction
+
+Take the language of arithmetic, add a single new constant symbol $c$, and consider the theory consisting of all sentences true in the natural numbers, together with the infinitely many sentences $c > 0$, $c > 1$, $c > 2$, and so on through every numeral.
+
+Any finite subset of this theory mentions only finitely many of the new axioms, so it contains a largest numeral $n$ among them. The natural numbers themselves satisfy that finite subset once $c$ is interpreted as $n + 1$. Every finite subset therefore has a model, so by compactness the whole theory has one.
+
+<Definition term="Nonstandard model">
+A model of the first-order theory of the natural numbers that is not isomorphic to the natural numbers. Every such model satisfies exactly the same first-order sentences as the standard one, so no sentence of the language distinguishes it, and it is nonetheless a different structure.
+</Definition>
+
+<Definition term="Nonstandard element">
+An element of a nonstandard model larger than the interpretation of every numeral. Such an element is not the value of any closed term of the language, and the model also contains the images of all the numerals, called its standard part.
+</Definition>
+
+The construction used only compactness, which means nonstandard models are not a symptom of incompleteness. They arise for complete theories just as readily as for incomplete ones, and the theory used above, true arithmetic, is complete by construction. What incompleteness adds is a second and different source of nonstandard models: since Peano arithmetic does not prove its own consistency statement, the theory obtained by adding the negation of that statement is consistent and has a model, and that model satisfies a sentence saying a proof of a contradiction exists. Its witness is a nonstandard element, and the model believes itself to be describing an inconsistent theory while being a model of a consistent one.
+
+<Aside title="Two ways for a model to be wrong">
+The distinction matters when reading claims about what nonstandard models show. A model obtained by compactness from true arithmetic gets every arithmetical sentence right, and is peculiar only in its structure. A model of Peano arithmetic plus the negation of consistency gets an arithmetical sentence wrong, in the sense that the sentence is false of the natural numbers, and its wrongness is invisible from inside because the false sentence is witnessed by an element the model cannot see is nonstandard.
+</Aside>
+
+## The shape of such a model
+
+The order type of a countable nonstandard model can be described exactly, and the description is the same for all of them.
+
+The standard part sits at the bottom, an initial segment order-isomorphic to the natural numbers. Every nonstandard element $a$ has a predecessor, since the model proves that every nonzero number does, and that predecessor is nonstandard too, since a standard element has only standard elements below it. Iterating gives a chain descending from $a$ that never reaches the standard part, and adding gives one ascending. So each nonstandard element sits inside a block order-isomorphic to the integers.
+
+These blocks are themselves ordered, and the ordering is dense: between any two blocks there is a third, obtained by halving the difference between representatives, since the model proves that every number is either twice another or one more than twice another. There is no least block, because the block containing $a$ is above the block containing the half of $a$. There is no greatest, because of the block containing $2a$. A countable dense linear order without endpoints is order-isomorphic to the rationals, by Cantor's theorem, so the order type of any countable nonstandard model is the natural numbers followed by the rationals-many copies of the integers.
+
+The description is complete and it is also cheap, in the sense that it tells one nothing about addition and multiplication. Two countable nonstandard models can share this order type and fail to be isomorphic, and the classification of countable models of Peano arithmetic up to isomorphism is a deep subject rather than a corollary.
+
+## Overspill
+
+The most used technical fact about these models follows from the fact that the standard part is not definable.
+
+<Definition term="Overspill">
+The principle that a formula holding of every standard element of a nonstandard model holds of some nonstandard element. It follows because the set of elements satisfying the formula, if it contained exactly the standard elements, would give a definable set with no least element among the elements failing the formula, contradicting the least number principle that the model satisfies.
+</Definition>
+
+The argument deserves restating because the move is characteristic. Suppose a formula $\varphi$ holds of all standard elements and of no nonstandard one. The model satisfies induction for $\varphi$, and hence satisfies the least number principle for $\neg \varphi$, so if anything fails $\varphi$ there is a least such element. That least element is nonstandard, so its predecessor is nonstandard, so its predecessor fails $\varphi$ by assumption, contradicting leastness. Hence $\varphi$ holds of a nonstandard element.
+
+The consequence is that the standard part is not the extension of any formula. A nonstandard model cannot define, in its own language, which of its elements are the real numbers, and so it cannot notice that it has extra ones. Overspill is used constantly in the model theory of arithmetic, and it is also the cleanest statement of why a nonstandard model is undetectable from within.
+
+## Tennenbaum's theorem
+
+Everything so far is an existence claim. The models come from compactness, which delivers a structure without exhibiting one, and the question is whether any of them can be described concretely enough to compute with.
+
+<Definition term="Tennenbaum's theorem">
+The result that no countable nonstandard model of Peano arithmetic is recursive. There is no nonstandard model whose domain is the natural numbers and whose addition and multiplication are both computable functions, and indeed addition alone cannot be computable.
+</Definition>
+
+Tennenbaum announced the theorem in 1959. The proof turns on separating a pair of recursively inseparable recursively enumerable sets. Given a recursive presentation of a nonstandard model, one takes a nonstandard element and reads off the digits of its binary expansion, in the model's own sense of binary expansion, which the model can define. Overspill supplies a nonstandard element whose expansion agrees, at every standard position, with the membership pattern of one of the two sets. If the operations were recursive, the digits would be computable, which would yield a recursive separation of a pair that has none.
+
+The theorem sets a boundary on what nonstandard models can be. They exist, every sentence of arithmetic is true in them exactly when true in the standard model, their order type is known precisely, and no one will ever specify the addition table of one. They are objects of proof rather than of construction, and the argument that they exist is entirely nonconstructive by necessity rather than by choice of method.
+
+<Objection>
+If no nonstandard model can be exhibited, the claim that such models exist is doing no work. A structure that cannot be presented, whose operations cannot be computed, and whose only warrant is an application of compactness to an infinite axiom set is a fiction generated by the formalism. The honest conclusion is that first-order logic is too weak to pin down the natural numbers, not that additional structures are out there.
+</Objection>
+
+<Reply>
+The first half of that conclusion is correct and is the standard reading. First-order logic does not pin down the natural numbers up to isomorphism, and this is precisely what the existence of nonstandard models states. The inference to fiction is the part that fails. Nonstandard models are used to prove theorems about the standard model that have no known proof otherwise, which is difficult to square with their being artefacts: the transfer arguments of nonstandard analysis, which apply the same construction to the reals, yield results about ordinary real analysis, and those results are about the ordinary reals. More to the point, the inexhibitability is itself a theorem, which means it is a fact about these structures rather than a symptom of ignorance. An object about which one can prove that it has no recursive presentation is being described with some precision. The right lesson is that existence proofs in logic are frequently nonconstructive and that this restricts what can be done with the objects, not what can be said about them.
+</Reply>
+
+## Next
+
+The technique that produced these models is the compactness theorem, and the study of what models a theory has, and how many, is a subject of its own. The next article takes it up directly, asking when a theory has exactly one model of a given size, when the models of a theory can be classified, and what structural conditions on a theory make its models tractable.
+
+<FurtherReading>
+  <li>Richard Kaye, *Models of Peano Arithmetic* (Oxford University Press, 1991).</li>
+  <li>Roman Kossak and James H. Schmerl, *The Structure of Models of Peano Arithmetic* (Oxford University Press, 2006).</li>
+  <li>Stanley Tennenbaum, "Non-Archimedean Models for Arithmetic", *Notices of the American Mathematical Society* 6 (1959), 270.</li>
+  <li>Tim Button and Sean Walsh, *Philosophy and Model Theory* (Oxford University Press, 2018), chapters on the modelist tradition.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Skolem's Paradox"](https://plato.stanford.edu/entries/paradox-skolem/).</li>
+</FurtherReading>
