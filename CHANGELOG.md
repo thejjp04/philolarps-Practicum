@@ -7,8 +7,11 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-3 changes.
+6 changes.
 
+- Add logic advanced rung 9: types, quantifier elimination, categoricity ([4557835](https://github.com/thejjp04/philolarps/commit/4557835))
+- Add logic advanced rung 8: nonstandard models of arithmetic ([17f7842](https://github.com/thejjp04/philolarps/commit/17f7842))
+- Regenerate changelog ([25094f1](https://github.com/thejjp04/philolarps/commit/25094f1))
 - Add logic advanced rung 7: provability logic and Löb's theorem ([ddbfb31](https://github.com/thejjp04/philolarps/commit/ddbfb31))
 - Update changelog ([b2d73fb](https://github.com/thejjp04/philolarps/commit/b2d73fb))
 - Add logic advanced rung 6: undefinability and the theories of truth ([14efbbe](https://github.com/thejjp04/philolarps/commit/14efbbe))
