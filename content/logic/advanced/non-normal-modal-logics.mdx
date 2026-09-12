@@ -1,0 +1,74 @@
+---
+title: "Non-Normal Modal Logics"
+subject: logic
+tier: advanced
+order: 14
+est_read_min: 24
+summary: The Lewis systems below K, neighbourhood semantics, and impossible worlds
+prerequisites: ["quantified-modal-logic"]
+introduces: ["neighbourhood semantics", "non-normal world", "impossible world", "Lewis systems"]
+requires: ["normal modal logic", "Kripke model", "frame validity"]
+added: "2026-09-12"
+---
+
+Every system treated so far contains K and is closed under necessitation. The two conditions define normality and they are not innocent. Necessitation says every theorem is necessary, distribution says necessity is closed under implication, and together they make it impossible for a modal operator to distinguish between logically equivalent sentences or to fail to deliver every logical truth.
+
+For necessity that is arguably correct. For most of the other things people want to box, it is not. An agent who believes something does not believe all its consequences, an obligation to do one thing does not carry obligations to everything it entails, and a proposition can be knowable without every theorem of logic being known. Systems abandoning normality were the first modal logics to be developed and they remain the tool of choice where the closure conditions fail.
+
+## The Lewis systems
+
+<Definition term="Lewis systems">
+The five systems S1 to S5 developed by C. I. Lewis and C. H. Langford, axiomatising strict implication, defined as the necessity of the material conditional. S4 and S5 are normal and are the ones in wide use; S1, S2 and S3 are not, and S2 and S3 fail the rule of necessitation in the form normal systems require.
+</Definition>
+
+Lewis's motivation, set out in 1912 and developed in the 1932 book with Langford, was the paradoxes of material implication: that a false antecedent makes a conditional true, and that a necessary consequent does likewise. Strict implication, requiring that the antecedent could not be true with the consequent false, was intended to be a conditional answering to the ordinary sense of "implies". It has paradoxes of its own, since any necessary truth is strictly implied by everything and any impossibility strictly implies everything, and the attempt to avoid these leads directly to the relevance logics of a later article.
+
+The historical order matters for reading the literature. Lewis's systems came first, Kripke semantics came thirty years later and fitted S4 and S5 exactly, and the three weaker systems were left without a semantics until the machinery below was devised. Their reputation as curiosities is an artefact of that gap.
+
+## Neighbourhood semantics
+
+<Definition term="Neighbourhood semantics">
+An interpretation assigning to each world a collection of sets of worlds, its neighbourhoods, with $\Box \varphi$ true at a world when the set of worlds satisfying $\varphi$ is one of that world's neighbourhoods. Introduced independently by Dana Scott and Richard Montague in 1970, it is also called Scott-Montague semantics.
+</Definition>
+
+The definition is a generalisation rather than a replacement. A relational model is the special case in which the neighbourhoods of a world are exactly the supersets of the set of worlds it accesses, and every normal system is complete with respect to a class of neighbourhood models. What the generalisation buys is failure: without conditions on the neighbourhood collections, none of the closure principles holds.
+
+Closure of neighbourhoods under supersets validates monotonicity, the rule taking $\varphi \rightarrow \psi$ to $\Box \varphi \rightarrow \Box \psi$. Closure under intersection validates the conjunction principle. Containing the set of all worlds validates necessitation. Each closure condition corresponds to one principle, so the systems form a lattice and one may take exactly the principles the application requires. The weakest system in the family, usually called E, has only the rule permitting replacement of provable equivalents, which is the minimum any operator on propositions must satisfy.
+
+The applications are where the subject earns its place. Deontic logic uses the failure of the conjunction principle to handle conflicting obligations, since in a normal system an obligation to do $\varphi$ and an obligation to do $\neg \varphi$ jointly entail an obligation to do everything. Epistemic logic uses the failure of necessitation to model agents who do not know every theorem, the problem of logical omniscience. Game theory uses neighbourhood structures directly, in the coalitional logic of Pauly, where a neighbourhood is the collection of outcomes a coalition can force.
+
+## Non-normal and impossible worlds
+
+The other route to the same failures keeps the relational picture and adds worlds that behave differently.
+
+<Definition term="Non-normal world">
+A world of a relational model at which $\Box \varphi$ is stipulated false for every $\varphi$, and correspondingly $\Diamond \varphi$ true for every $\varphi$, regardless of the accessibility relation. Validity is defined as truth at every normal world of every model, so a formula can fail to be valid by failing at a normal world that accesses a non-normal one.
+</Definition>
+
+Kripke devised these in 1965 precisely to give semantics to S2 and S3. The device is minimal: everything about the model is ordinary except that certain worlds refuse to necessitate anything. A normal world accessing a non-normal one will then falsify $\Box \varphi$ even for a theorem $\varphi$, which is exactly the failure of necessitation those systems exhibit.
+
+<Definition term="Impossible world">
+A world at which the truth conditions for the connectives do not hold, so that a contradiction may be true, or a classical tautology false. Impossible worlds are used to individuate propositions more finely than sets of possible worlds permit, since any two necessary truths hold at exactly the same possible worlds and are therefore the same proposition on the standard account.
+</Definition>
+
+The motivation is the hyperintensionality problem. If a proposition is a set of possible worlds, then all mathematical truths are the same proposition, so believing one is believing all, and the counterfactual supposition that a mathematical falsehood held has no content to work with. Adding worlds where the falsehood holds gives such suppositions a subject matter. The price is that the semantics must say what holds at an impossible world, and the two available answers are unsatisfying in different ways: let an arbitrary set of sentences be true there, which makes the worlds unstructured, or use a paraconsistent evaluation, which imports the commitments of the next article but one.
+
+<Objection>
+A logic that fails necessitation is not a logic of necessity, and a logic without distribution is not a logic of an operator that respects consequence. These are analyses of belief, obligation and the like, which are psychological or normative phenomena, and calling their formal treatment modal logic conflates the study of validity with the modelling of attitudes. The weak systems are model theory for propositional attitudes wearing the notation of logic.
+</Objection>
+
+<Reply>
+The objection assumes that the subject matter of modal logic was fixed as metaphysical necessity, and the history runs the other way. Lewis's systems were about implication, deontic logic predates the relational semantics, and the identification of the box with necessity is one interpretation among several that the formalism supports. What unifies the field is not a subject matter but a question, which is which principles govern an operator on propositions, and the answer varies with the operator. That variation is the finding rather than a confusion, and the correspondence between individual closure conditions and individual principles makes it precise. The charge does register against careless practice, since it is easy to prove a theorem in a normal system and apply it to belief, where the relevant closure fails. The remedy is the one this article describes, which is to choose the system by the application rather than by familiarity.
+</Reply>
+
+## Next
+
+Weakening the modal operator leaves classical propositional logic untouched underneath. The next articles weaken that instead, starting with the tradition that rejects excluded middle for reasons about proof rather than about truth, and that turns out to have a relational semantics of its own.
+
+<FurtherReading>
+  <li>Eric Pacuit, *Neighborhood Semantics for Modal Logic* (Springer, 2017).</li>
+  <li>Brian F. Chellas, *Modal Logic: An Introduction* (Cambridge University Press, 1980).</li>
+  <li>C. I. Lewis and C. H. Langford, *Symbolic Logic* (Century, 1932).</li>
+  <li>Francesco Berto and Mark Jago, *Impossible Worlds* (Oxford University Press, 2019).</li>
+  <li>Saul Kripke, "Semantical Analysis of Modal Logic II: Non-Normal Modal Propositional Calculi", in *The Theory of Models* (North-Holland, 1965), 206 to 220.</li>
+</FurtherReading>
