@@ -1,0 +1,90 @@
+---
+title: "Probability Logic and Uncertain Premises"
+subject: logic
+tier: advanced
+order: 22
+est_read_min: 26
+summary: "Validity fails to preserve certainty you never had, so the real question is how much uncertainty a valid inference can accumulate"
+prerequisites: ["conditionals-and-triviality"]
+introduces: ["probabilistic validity", "uncertainty accumulation", "probabilistic entailment interval", "Popper function", "primitive conditional probability", "regularity", "imprecise probability"]
+requires: ["Kolmogorov axioms", "probability measure", "finite additivity", "Adams' thesis", "semantic consequence", "validity", "conditional probability"]
+added: "2026-09-12"
+---
+
+A valid argument preserves truth: if the premises are true the conclusion is. Almost no argument anyone makes has premises known to be true, so the guarantee applies to a case that rarely arises, and the question of what validity delivers when premises are merely probable is not answered by the definition.
+
+It has an exact answer, and the answer is less reassuring than one might hope.
+
+## Uncertainty accumulates
+
+<Definition term="Uncertainty accumulation">
+The growth of uncertainty in the conclusion of a valid argument as a function of the uncertainty in its premises. Since the uncertainty of a conjunction can be as large as the sum of the uncertainties of its conjuncts, the conclusion of a valid argument from $n$ premises each of probability $1 - \varepsilon$ can have probability as low as $1 - n\varepsilon$.
+</Definition>
+
+The bound is tight and it is easy to see why. The conclusion of a valid argument is at least as probable as the conjunction of the premises, and the probability of a conjunction is at least one minus the sum of the probabilities of the negated conjuncts, by finite additivity. Nothing further is available without information about how the premises depend on one another.
+
+The consequence is that a long valid argument from highly probable premises may have an improbable conclusion. Twenty premises each at probability $0.99$ leave the conclusion with a guaranteed lower bound of $0.8$, and forty leave a guaranteed bound of $0.6$. The lottery and preface paradoxes are the familiar instances: each ticket probably loses, some ticket wins; each sentence of the book is probably true, some sentence is probably false. Neither paradox involves an invalid step, and neither involves a false premise. They exhibit accumulation.
+
+<Definition term="Probabilistic validity">
+The property an argument has when the uncertainty of its conclusion cannot exceed the sum of the uncertainties of its premises, under every probability assignment. Adams proved that for arguments in the language of conditionals interpreted by his thesis, probabilistic validity coincides with classical validity for arguments without nested conditionals, which is a substantial vindication of classical logic in a probabilistic setting.
+</Definition>
+
+The coincidence result is worth stating carefully because it is often overstated. It says that the classically valid arguments are exactly the ones whose conclusions cannot be less probable than the accumulation bound permits. It does not say that a valid argument transmits high probability, since the bound itself may be low. Validity constrains the accumulation; it does not prevent it.
+
+<Definition term="Probabilistic entailment interval">
+The interval of values the conclusion's probability may take, given the probabilities of the premises. Computing it is a linear programming problem, since the constraints are linear in the probabilities of the state descriptions, and the interval is generally wide.
+</Definition>
+
+The framework goes back to Boole, who posed the problem of determining a conclusion's probability from its premises' probabilities and recognised that the answer is an interval. Modern treatments by Hailperin and by Nilsson set it up as linear programming and it is the basis of probabilistic logic in artificial intelligence, where the width of the interval is the practical obstacle: without independence assumptions the bounds are usually too wide to act on, and with them they are usually unjustified.
+
+## Conditional probability as primitive
+
+The accumulation problem is about unconditional probabilities. A second difficulty concerns conditioning, and it forces a revision of the axioms.
+
+The Kolmogorov definition of conditional probability as a ratio is undefined when the condition has probability zero. That is not a rare case. Conditioning on a measure zero event is routine in continuous settings, and conditioning on a counterfactual supposition one regards as impossible is routine in argument.
+
+<Definition term="Popper function">
+A probability function taking conditional probability as primitive, axiomatised directly rather than defined as a ratio, and permitting conditional probabilities on conditions of probability zero to be well defined and non-trivial. Introduced by Karl Popper in 1955 and studied further by Rényi and by Alan Hájek.
+</Definition>
+
+<Definition term="Primitive conditional probability">
+The treatment on which the two-place function is the basic notion and the one-place function is recovered by conditioning on a tautology. On this approach the ratio formula holds whenever the denominator is positive and is silent, rather than undefined, when it is not.
+</Definition>
+
+Hájek's argument for the approach, in a 2003 paper whose title asks what conditional probability could not be, is that the ratio analysis fails in four separate ways and that each failure is fixed by the primitive treatment. The most pressing is the measure zero case, since in a continuous space every point has probability zero and conditioning on a point is something statistics does constantly.
+
+<Definition term="Regularity">
+The condition that no possible proposition receives probability zero. It secures that the ratio formula is always applicable and is unattainable in any space with uncountably many mutually exclusive possibilities, since only countably many can have positive probability.
+</Definition>
+
+Regularity is attractive as a norm, since assigning probability zero to something possible looks like ruling out what one cannot rule out, and it is provably unavailable in the continuous case. Primitive conditional probability is the standard response, and infinitesimal probabilities are the other, at the cost of a nonstandard value space.
+
+## Imprecise probability
+
+<Definition term="Imprecise probability">
+The representation of an epistemic state by a set of probability functions rather than a single one, so that a proposition receives an interval of values rather than a point. Developed systematically by Peter Walley in 1991, it is also known as the theory of lower and upper previsions.
+</Definition>
+
+The motivation is that a sharp number is often unwarranted. Asked for the probability that a coin of unknown bias lands heads, a point value of one half represents symmetric ignorance and a point value of one half also represents the knowledge that the coin is fair, and the two states differ in how they respond to evidence. A set of functions distinguishes them, and the interval width measures how much is not known.
+
+The theory has costs that are still under discussion. Updating a set of functions pointwise can cause the interval to widen on evidence, which is dilation and is counterintuitive. Decision making with an interval requires a rule for choosing among options that are not ranked, and several incompatible rules are on offer. The relation to the accumulation problem is direct, since the entailment interval of a valid argument is exactly an imprecise probability derived from precise premises, so imprecision arises within the theory even when one starts with sharp values.
+
+<Objection>
+This is not logic. Logic concerns validity, which is a relation between sentences fixed by their form, and probability concerns degrees of belief, which vary with the agent. Combining them produces a theory of rational credence, which is epistemology, and calling the accumulation bound a result in logic conflates a normative account of belief with an account of consequence.
+</Objection>
+
+<Reply>
+The boundary is not where the objection places it. The accumulation bound is a theorem about the classical consequence relation and every probability measure over its models, proved from the additivity axioms and nothing about agents. Adams's coincidence result is likewise a characterisation of classical validity, arrived at from a probabilistic starting point, and characterisations of a consequence relation are logic by any standard. What is true is that the interpretation of the numbers is a separate question and that this article has not settled it: the results hold whether the measures are credences, frequencies, or chances. The more useful observation is that the traditional conception of validity was always doing less work than it appeared to. Truth preservation is a guarantee about a case that almost never obtains, and asking what a valid argument secures in the case that does obtain is a question about consequence, not about psychology.
+</Reply>
+
+## Next
+
+If probability can measure how much a valid argument preserves, the question arises whether it can measure how much an invalid one supports. That was the ambition of the most sustained attempt to build a logic of induction, and the next article follows it to the result that ended it.
+
+<FurtherReading>
+  <li>Ernest W. Adams, *A Primer of Probability Logic* (CSLI Publications, 1998).</li>
+  <li>Peter Walley, *Statistical Reasoning with Imprecise Probabilities* (Chapman and Hall, 1991).</li>
+  <li>Alan Hájek, "What Conditional Probability Could Not Be", *Synthese* 137 (2003), 273 to 323.</li>
+  <li>Theodore Hailperin, *Sentential Probability Logic* (Lehigh University Press, 1996).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Imprecise Probabilities"](https://plato.stanford.edu/entries/imprecise-probabilities/).</li>
+</FurtherReading>
