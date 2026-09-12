@@ -5,10 +5,17 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 12 September 2026
+
+1 change.
+
+- Add logic advanced rung 6: undefinability and the theories of truth ([14efbbe](https://github.com/thejjp04/philolarps/commit/14efbbe))
+
 ## 30 August 2026
 
-6 changes.
+7 changes.
 
+- Update changelog ([7ac8237](https://github.com/thejjp04/philolarps/commit/7ac8237))
 - Add a date-grouped changelog and stop tracking local tool config ([10b7b21](https://github.com/thejjp04/philolarps/commit/10b7b21))
 - Add logic advanced rung 5: Godel incompleteness theorems ([f1c7a3a](https://github.com/thejjp04/philolarps/commit/f1c7a3a))
 - Add logic advanced rung 4: sequent calculus and cut elimination ([5ce5f56](https://github.com/thejjp04/philolarps/commit/5ce5f56))
