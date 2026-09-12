@@ -7,8 +7,11 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-19 changes.
+22 changes.
 
+- Add logic advanced rung 21: conditionals and the triviality results ([62106d8](https://github.com/thejjp04/philolarps/commit/62106d8))
+- Add logic advanced rung 20: vagueness and the sorites ([9d8c652](https://github.com/thejjp04/philolarps/commit/9d8c652))
+- Regenerate changelog ([b69b0d4](https://github.com/thejjp04/philolarps/commit/b69b0d4))
 - Add logic advanced rung 19: many-valued logics ([cc434ad](https://github.com/thejjp04/philolarps/commit/cc434ad))
 - Add logic advanced rung 18: relevance logic and paraconsistency ([43ef50c](https://github.com/thejjp04/philolarps/commit/43ef50c))
 - Add logic advanced rung 17: substructural logics ([1637ccc](https://github.com/thejjp04/philolarps/commit/1637ccc))
