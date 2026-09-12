@@ -7,8 +7,10 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-1 change.
+3 changes.
 
+- Add logic advanced rung 7: provability logic and Löb's theorem ([ddbfb31](https://github.com/thejjp04/philolarps/commit/ddbfb31))
+- Update changelog ([b2d73fb](https://github.com/thejjp04/philolarps/commit/b2d73fb))
 - Add logic advanced rung 6: undefinability and the theories of truth ([14efbbe](https://github.com/thejjp04/philolarps/commit/14efbbe))
 
 ## 30 August 2026
