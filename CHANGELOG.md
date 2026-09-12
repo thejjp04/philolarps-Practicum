@@ -7,8 +7,12 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-25 changes.
+29 changes.
 
+- Add logic advanced rung 26: what makes a constant logical ([e1e1dd1](https://github.com/thejjp04/philolarps/commit/e1e1dd1))
+- Add logic advanced rung 25: temporal, deontic, and epistemic logic ([11a67da](https://github.com/thejjp04/philolarps/commit/11a67da))
+- Add logic advanced rung 24: free logic ([a8dd167](https://github.com/thejjp04/philolarps/commit/a8dd167))
+- Regenerate changelog ([77563e3](https://github.com/thejjp04/philolarps/commit/77563e3))
 - Add logic advanced rung 23: inductive logic and the Carnap programme ([c44cd33](https://github.com/thejjp04/philolarps/commit/c44cd33))
 - Add logic advanced rung 22: probability logic and uncertain premises ([6fdb7db](https://github.com/thejjp04/philolarps/commit/6fdb7db))
 - Regenerate changelog ([66d4e96](https://github.com/thejjp04/philolarps/commit/66d4e96))
