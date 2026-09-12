@@ -1,0 +1,90 @@
+---
+title: "Inductive Logic and the Carnap Programme"
+subject: logic
+tier: advanced
+order: 23
+est_read_min: 28
+summary: "The attempt to make confirmation a matter of logical form alone, the parameter it needed, and the result that universal laws end up confirmed to degree zero"
+prerequisites: ["probability-logic-and-uncertain-premises"]
+introduces: ["logical probability", "inductive logic", "continuum of inductive methods", "exchangeability", "zero confirmation of universal laws", "Hintikka systems"]
+requires: ["probability measure", "principle of indifference", "probabilistic validity", "induction", "enumerative induction", "new riddle of induction"]
+added: "2026-09-12"
+---
+
+Deductive logic settles whether a conclusion follows from premises by their form alone, with no appeal to what the sentences are about. The programme this article describes was an attempt to do the same for support: to define a function taking any evidence sentence and any hypothesis to a number measuring how far the first confirms the second, determined by syntax and nothing else.
+
+It was pursued with more rigour than any comparable project in twentieth-century philosophy, and it failed in a way that taught more than a success would have.
+
+## Logical probability
+
+<Definition term="Logical probability">
+A degree of confirmation holding between an evidence sentence and a hypothesis in virtue of their logical forms alone, conceived as the inductive analogue of entailment. Rudolf Carnap developed the notion systematically from the 1940s, following earlier work by Keynes and by W. E. Johnson.
+</Definition>
+
+<Definition term="Inductive logic">
+The study of the confirmation relation as a formal relation between sentences, with degree of confirmation playing the role that truth preservation plays in deductive logic. Its central task on Carnap's conception is to select the correct confirmation function from among the infinitely many probability measures that meet the formal constraints.
+</Definition>
+
+The setting is a first-order language with finitely many predicates and countably many individual constants. A state description says, for every predicate and every individual, whether it applies. A structure description is an equivalence class of state descriptions under permutation of individuals, collecting those that agree on how many individuals have each combination of properties while differing on which.
+
+Assigning probabilities to state descriptions fixes everything else, and the choice is where the content lies. Carnap's first candidate divided the probability equally among state descriptions, and he rejected it because the resulting function learns nothing from experience: observing a thousand ravens leaves the probability that the next is black exactly where it started. Equal weighting of possibilities is the principle of indifference applied at the wrong level, and it makes induction impossible rather than justified.
+
+His second candidate, the function he called $c^{*}$, divides the probability equally among structure descriptions and then equally within each. Since a structure description with many individuals sharing a property contains fewer state descriptions than one with the properties spread out, this weighting favours uniformity, and the resulting function learns. The move is the essential one, and it is an admission: some inductive assumption must be built in, since no purely formal constraint delivers learning from experience.
+
+## The continuum
+
+<Definition term="Continuum of inductive methods">
+The one-parameter family of confirmation functions introduced by Carnap in 1952, in which the probability that the next individual has a property observed in $n_{i}$ of $n$ cases, with $k$ properties in the language, is $(n_{i} + \lambda / k) / (n + \lambda)$. The parameter $\lambda$ measures how much weight is given to the language's structure as against the observed frequency.
+</Definition>
+
+At $\lambda = 0$ the function is the straight rule, predicting the observed frequency exactly and learning as fast as possible. As $\lambda$ tends to infinity the function ignores the evidence entirely. Carnap's $c^{*}$ is the case $\lambda = k$. Every member of the family is a legitimate confirmation function by the formal criteria, and nothing in logic selects one.
+
+That is the programme's central difficulty, stated in its own terms. The parameter is a free choice representing how cautious an inductive policy one adopts, and a logic whose central notion depends on a free parameter has not made confirmation a matter of form.
+
+<Definition term="Exchangeability">
+The property a probability assignment has when the probability of a sequence of outcomes depends only on how many of each kind occur, not on their order. De Finetti's representation theorem of 1937 shows that an exchangeable assignment is a mixture of independent identically distributed ones, so that a subjectivist who treats individuals symmetrically behaves as though estimating an unknown objective chance.
+</Definition>
+
+Exchangeability is the assumption underlying the whole continuum, and de Finetti's theorem is the reason the programme connects to Bayesian statistics rather than standing apart from it. Johnson had proved in the 1920s that exchangeability together with a sufficiency condition forces the continuum's formula, a result Carnap rediscovered. So the family is not arbitrary; it is the unique family satisfying two intelligible conditions. What remains arbitrary is the parameter.
+
+## Universal laws
+
+The decisive difficulty is not the parameter.
+
+<Definition term="Zero confirmation of universal laws">
+The result that on every member of Carnap's continuum, in a language with infinitely many individuals, the probability of a universal generalisation is zero and remains zero after any finite body of confirming evidence. The generalisation is the conjunction of infinitely many instances each with probability less than one, and the product tends to zero.
+</Definition>
+
+The consequence is fatal to the programme as a theory of scientific confirmation. Newton's laws, conservation principles and every universal claim in science receive confirmation zero from any finite evidence and continue to do so forever. A theory of confirmation on which no amount of evidence raises the probability of a law above zero is not a theory of what scientists do.
+
+Carnap's response was to redirect the programme toward instance confirmation, the probability that the next observed case will conform, which is well behaved and which he argued is what matters in practice. The move is defensible for prediction and it abandons the original target, since a scientific theory is asserted as a universal claim and not merely used to predict the next case.
+
+<Definition term="Hintikka systems">
+The family of confirmation functions introduced by Jaakko Hintikka in 1966, which assign positive prior probability to the constituents describing which combinations of properties are instantiated, and thereby give universal generalisations positive probability that rises with evidence. They show that the zero result is a consequence of Carnap's particular priors rather than of the probabilistic framework.
+</Definition>
+
+Hintikka's systems are the constructive answer, and they cost something. They require a prior distributed over constituents, which are descriptions of the world's qualitative structure, and the distribution is a further free choice on top of the continuum's parameter. The problem of selecting a function on formal grounds is not solved but made larger, which is the honest summary of where the programme stands.
+
+<Aside title="Goodman's objection is prior to all of this">
+Every function discussed here is defined relative to a language, and its values change when the predicates change. Goodman's new riddle exhibits a predicate applying to things examined before a time and green, or not examined and blue, under which the same evidence confirms incompatible hypotheses. Since the machinery is sensitive to the choice of primitives, and no formal criterion distinguishes the natural predicates from the artificial, the programme's claim to rest on logical form alone was compromised before the technical difficulties arose. Carnap acknowledged the point and did not resolve it.
+</Aside>
+
+<Objection>
+The programme failed and the field moved on to Bayesian confirmation theory, which has no such difficulties. On the Bayesian account priors are subjective, learning is by conditionalisation, and convergence theorems show that agents with different priors approach agreement given enough evidence. The Carnapian insistence on a uniquely correct function was the error, and abandoning it costs nothing.
+</Objection>
+
+<Reply>
+The successor theory inherits the problem rather than escaping it. Convergence results require that the agents' priors agree on which propositions have probability zero, and an agent assigning a law probability zero never learns it however much evidence arrives, so the choice of prior is doing the same work Carnap's parameter did while being less visible for being called subjective. The problem of the priors is a standing difficulty in Bayesian epistemology and objective Bayesianism, which attempts to constrain priors by symmetry and entropy considerations, is the Carnapian programme pursued with different tools. What the programme established is durable: that inductive learning requires a substantive assumption, that the assumption can be isolated and parameterised, and that what one takes to be the natural predicates cannot be extracted from the formalism. Those are conclusions about induction rather than about Carnap's version of it.
+</Reply>
+
+## Next
+
+The remaining articles return to the core. The first takes up a presupposition present in every quantified system so far, namely that the terms of the language denote, and examines what happens when they do not.
+
+<FurtherReading>
+  <li>Rudolf Carnap, *Logical Foundations of Probability*, second edition (University of Chicago Press, 1962).</li>
+  <li>Rudolf Carnap, *The Continuum of Inductive Methods* (University of Chicago Press, 1952).</li>
+  <li>Jaakko Hintikka, "A Two-Dimensional Continuum of Inductive Methods", in *Aspects of Inductive Logic* (North-Holland, 1966), 113 to 132.</li>
+  <li>Nelson Goodman, *Fact, Fiction, and Forecast*, fourth edition (Harvard University Press, 1983).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Inductive Logic"](https://plato.stanford.edu/entries/logic-inductive/).</li>
+</FurtherReading>
