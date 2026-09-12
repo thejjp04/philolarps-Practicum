@@ -1,0 +1,146 @@
+---
+title: "Undefinability and the Theories of Truth"
+subject: logic
+tier: advanced
+order: 6
+est_read_min: 28
+summary: Tarski's theorem, the hierarchy it forces, and Kripke's fixed-point alternative
+prerequisites: ["godel-incompleteness"]
+introduces: ["undefinability theorem", "T-schema", "semantic closure", "fixed-point theory of truth", "groundedness", "strengthened liar"]
+requires: ["diagonal lemma", "Gödel numbering", "metalanguage", "object language"]
+added: "2026-09-12"
+---
+
+The incompleteness proof did something that deserves to be looked at again on its own. It took a property of sentences, being provable in Peano arithmetic, and produced a formula of arithmetic holding of exactly the numbers that code sentences with that property. Provability is a matter of the existence of a finite object with a checkable structure, and once sentences and derivations have numbers, the existence of such an object is an arithmetical condition. Nothing about the technique looks specific to provability.
+
+So ask the same question about truth. Is there a formula of the language of arithmetic holding of exactly the numbers coding true sentences of arithmetic? The answer is no, the proof is four lines once the diagonal lemma is available, and the consequences run further than the proof's length suggests.
+
+## What would count as a definition of truth
+
+Tarski's first question was not whether truth is definable but what a definition of it would have to deliver, and he answered that before proving anything.
+
+<Definition term="T-schema">
+The schema whose instances take the form: the sentence "p" is true if and only if p, with one instance for each sentence of the language under description. Tarski treated the schema as a condition of adequacy rather than as a definition: any account of truth for a language must entail every instance, and an account that does is materially adequate whatever else it says.
+</Definition>
+
+The schema is worth slowing down over, because its appearance of triviality is what makes it useful. On the left of the biconditional a sentence is named and something is said about it. On the right that same sentence is used, and nothing is said about it at all. The instance for a particular sentence of arithmetic reads: the sentence "two plus two is four" is true if and only if two plus two is four. Nobody disputes an instance. That is the point of choosing them as the test.
+
+What the schema is not is a definition. It has infinitely many instances and states no general condition, so it cannot be written down as a finite account of anything, and a list of instances tells you nothing about a sentence you have not yet listed. Tarski's demand was for a formula, in some language, that entails every instance. The adequacy condition and the definition are separate items, and the theorem below concerns the second.
+
+## Semantic closure
+
+The liar sentence is old enough that its interest is no longer in the puzzle but in the diagnosis, and Tarski's diagnosis locates the trouble in a property a language may or may not have.
+
+<Definition term="Semantic closure">
+The condition a language meets when it contains names for its own expressions, a predicate applying to those names to say that the sentence named is true, and the resources to assert every instance of the T-schema for its own sentences. Tarski's diagnosis of the liar is that semantic closure, together with ordinary logic, is inconsistent.
+</Definition>
+
+Take a semantically closed language and a sentence $L$ which says that $L$ is not true. The T-schema supplies the instance saying that $L$ is true if and only if $L$, and what $L$ says is that $L$ is not true, so $L$ is true if and only if $L$ is not true. Both sides of a biconditional cannot differ in truth value, and here they must, so something in the setup fails.
+
+Tarski's inventory of what could be blamed is short. The logic could be blamed, and some have blamed it. The T-schema could be blamed, and some have blamed that. Or the language could be blamed for being semantically closed, which was Tarski's own choice, and it is the choice that the theorem below turns from a preference into a result.
+
+The one escape that does not work is the suspicion that self-reference is a trick, available only to sentences constructed for the purpose and excludable by fiat. Arithmetic contains no sentence mentioning itself, no quotation marks, and no demonstratives, and the diagonal lemma still produces, for any condition expressible in the language, a sentence provably equivalent to the claim that it itself satisfies that condition. Self-reference is not smuggled in. It is a consequence of a language having enough arithmetic to talk about its own syntax, and no restriction on the vocabulary removes it.
+
+## The theorem
+
+<Definition term="Undefinability theorem">
+Tarski's result that the set of Gödel numbers of true sentences of arithmetic is not definable by any formula of the language of arithmetic. In the form applying to theories: no consistent theory interpreting enough arithmetic contains a predicate it proves to satisfy the T-schema for its own sentences.
+</Definition>
+
+Suppose some formula $T(x)$ of the language of arithmetic held of exactly the Gödel numbers of the true sentences. Apply the diagonal lemma to the formula that is the negation of $T(x)$. It yields a sentence $\lambda$ with the property that $\lambda$ is true if and only if $T(\ulcorner \lambda \urcorner)$ is false. But $T$ was supposed to hold of exactly the codes of truths, so $T(\ulcorner \lambda \urcorner)$ is true if and only if $\lambda$ is true. Put the two together and $\lambda$ is true if and only if $\lambda$ is not true. There is no such $T$.
+
+The argument is the liar with the informal self-reference replaced by the diagonal lemma, and that replacement is the whole of the work. Everything else was already available.
+
+Two things about the statement repay attention. The first is that it is a claim about definability in a language, not about a theory's strength, so no addition of axioms touches it. The second is that it does not say truth is undefinable. It says arithmetical truth is not definable in the language of arithmetic. A richer language defines it easily: set theory proves the existence of a satisfaction relation for the language of arithmetic, and truth for arithmetic is definable there without any difficulty. What fails is a language defining truth for itself.
+
+## Incompleteness, seen from above
+
+The undefinability theorem and the incompleteness theorem are close relatives, and the relation is worth stating because it makes the shape of both results visible at once.
+
+Provability in Peano arithmetic is definable in the language of arithmetic. Truth in arithmetic is not. Two sets, one definable and one not, are different sets. So the sentences provable in Peano arithmetic are not the sentences true in arithmetic, and since everything provable is true, some truth goes unproved.
+
+That is the first incompleteness theorem, obtained without constructing anything. The price of the brevity is that the argument is silent on which sentence is unprovable, where Gödel's construction hands over a specific one and shows it to be true. The difference is the usual difference between an existence proof and a construction, and it is also a difference in what the two results need. The version above appeals to arithmetical truth, which is a semantic notion; Gödel's original argument is finitary and syntactic throughout, which mattered a great deal in 1931 and mattered to Gödel in particular.
+
+Read the other way, the same observation explains why arithmetic cannot be complete in a way that feels more like an explanation than the fixed point does. A recursively axiomatised theory has a listable set of theorems. Truth is not listable, not even close, and the failure is not one of ingenuity in the choice of axioms but of the enormous gap between what a listing can reach and what the structure settles.
+
+## The hierarchy
+
+Tarski's positive contribution was a definition of truth, and the theorem fixes the shape it has to take: the definition of truth for a language must be given in some other language.
+
+<Aside title="Satisfaction, and why truth needs it">
+A definition of truth by recursion on the structure of sentences runs aground immediately at the quantifiers. The truth of a conjunction depends on the truth of its conjuncts, which are sentences, and so a recursion clause is available. The truth of "every number has a successor" depends on the instances, which are not subformulas of it: the subformula is an open formula with a free variable, and open formulas are not true or false at all. Tarski's solution was to define a relation of satisfaction between formulas and assignments of objects to variables, give the recursion for that, and then define a sentence as true when every assignment satisfies it. The detour through assignments is the technical heart of the 1933 monograph, and it is why the paper is long.
+</Aside>
+
+The requirements Tarski set out are three. The metalanguage must contain the object language, or a translation of it, so that the right-hand sides of the T-sentences can be stated. It must contain the syntax of the object language, so that the left-hand sides can name sentences. And it must be essentially richer than the object language, which for languages of finite order means having variables of higher order. The third condition is not a convenience. It is the theorem restated as a design constraint: a metalanguage no richer than its object language would be defining truth for itself, and there is no such definition.
+
+What follows is a hierarchy. Truth for the language of arithmetic is defined in a stronger language, truth for that language in a stronger one again, and no level contains its own truth predicate. Every level is consistent and every level is incomplete in its expressive resources, and the incompleteness at each level is exactly what the next level repairs.
+
+Applied to natural languages, this is awkward, and Tarski said so rather than concealing it. English has one word "true" and applies it to English sentences, which is semantic closure exactly. Tarski's response was that everyday language is universal in precisely the way that generates the contradiction, that the notion of truth as used in it is therefore not consistent, and that the semantic notions can be made rigorous only for formalised languages where the levels can be kept apart. This was a conclusion he accepted rather than one he welcomed, and it has been the main pressure point on the account ever since. A theory of truth that declines to apply to the language people use is a theory of something, but it is not obviously a theory of truth.
+
+## Fixed points
+
+Kripke's 1975 paper is the best-known attempt to give a language its own truth predicate without contradiction, and it works by refusing to assign every sentence a truth value.
+
+<Definition term="Fixed-point theory of truth">
+Kripke's account, on which the truth predicate is interpreted by a pair of sets, its extension and its anti-extension, and the interpretation is grown in stages from the empty pair until it reaches a fixed point, a stage at which adding the sentences now settled adds nothing further. Sentences in neither set at the fixed point receive no truth value.
+</Definition>
+
+Start with the truth predicate interpreted by nothing at all: no sentence is in its extension, none in its anti-extension. Evaluate the language on the three-valued scheme in which a compound gets a value whenever the values of its parts suffice to determine one, so that a disjunction with one true disjunct is true whatever the other disjunct does. At the first stage the sentences with no truth predicate in them settle, since their values never depended on it. Put the true ones into the extension and the false ones into the anti-extension, and evaluate again. Now sentences saying that some settled sentence is true settle in their turn, and the process repeats.
+
+The construction has the property everything depends on: it never retracts. A sentence placed in the extension at one stage stays there at every later stage, because the information available only ever grows. A process on sets that only adds is guaranteed a fixed point if it is run far enough, and running it through the transfinite reaches one. At that fixed point the truth predicate applies to exactly the sentences the construction has certified, and the language contains its own truth predicate with no contradiction anywhere.
+
+The liar never enters. At every stage it is waiting on its own value, which never arrives, and at the fixed point it sits outside both sets.
+
+<Definition term="Groundedness">
+The property a sentence has when the fixed-point construction settles it at some stage, which happens when its value can be traced back through applications of the truth predicate to sentences not containing that predicate at all. "Snow is white is true" is grounded. The liar is not, and neither is the truth-teller, the sentence saying of itself that it is true.
+</Definition>
+
+The truth-teller is the case that shows what groundedness is measuring. Assigning it truth is consistent, and so is assigning it falsity; nothing whatever goes wrong either way. What it lacks is not consistency but any reason for one assignment over the other, and the construction, which only ever adds what it has grounds for, never gives it one. The distinction between it and the liar shows up in the structure of the theory rather than the least fixed point alone: the minimal fixed point is not the only one, and while no fixed point makes the liar true, some make the truth-teller true and others make it false.
+
+The gain over Tarski is real. The object language is its own metalanguage; the T-sentences are respected in the sense that at a fixed point a sentence and the claim that it is true always have the same value; and the treatment of the liar falls out of the construction instead of being imposed by a rule against self-reference. The cost is that the biconditional expressing the T-schema is not itself true in the object language when the sentence is ungrounded, since a biconditional between two valueless sentences has no value on the scheme being used. The equivalence holds at the level of semantic value and not at the level of what the language asserts.
+
+## The strengthened liar
+
+<Definition term="Strengthened liar">
+The sentence saying of itself that it is not true, considered in a setting that has assigned it no truth value. The setting's own verdict, that the sentence is not true, is precisely what the sentence says, so the theory appears committed to the sentence's truth at the same time as it denies the sentence a value.
+</Definition>
+
+The construction leaves the liar ungrounded and valueless. Now say what has just been established: the liar is not true. It is not true, because it is in neither the extension nor the anti-extension, and being true means being in the extension. But that is exactly what the liar says about itself, so the liar is true, which contradicts the verdict just delivered.
+
+The escape is available but instructive. The sentence asserting that the liar is not true is a sentence of the metalanguage, in which the fixed point was described and in which "grounded" and "has no value" are available. Those notions are not expressible in the object language; if they were, the construction would break. So the object language contains its own truth predicate and does not contain its own account of what its truth predicate is doing, and the semantic notions needed to state the theory have climbed one level up. Kripke saw this clearly and said so in the paper: the ghost of the Tarski hierarchy is still with us.
+
+The pattern has a name now, revenge, and the general shape is that a theory which handles the liar by introducing a new semantic status finds that status expressible in some language, whereupon a new liar is built from it. Getting out of the hierarchy at one point puts you back in it at another.
+
+## What the alternatives trade
+
+Every theory in the area gives something up, and comparing them is mostly a matter of seeing what each one decided to lose.
+
+Tarski keeps classical logic and the T-schema in full, and loses a language's ability to talk about its own truth. Kripke keeps self-application and loses bivalence, then finds the semantic vocabulary of his own theory sitting outside the language it describes. The revision theory, developed by Herzberger, Gupta and Belnap, takes the T-schema as giving a rule for revising a hypothesis about truth rather than a definition, and iterates it: sentences whose value stabilises under repeated revision count as true, and the liar oscillates forever without settling. That treats truth as a circular concept and accepts that circular concepts behave this way, which is a real cost only if one thought otherwise.
+
+Field's approach keeps the full T-schema and gives up excluded middle for a conditional constructed for the purpose. Dialetheism, argued most persistently by Priest, keeps everything and accepts that the liar is both true and false, which requires a logic in which a contradiction does not entail every sentence, and the article on paraconsistency takes that up. The positions look further apart than they are. Each concedes one of the four items in Tarski's inventory, and each then has to say why its concession is the tolerable one.
+
+<Objection>
+The undefinability theorem is a result about formal languages that have a fixed interpretation, a precise syntax and a settled stock of sentences. English is none of those things. Its rules are not fixed, its sentences are not a determinate set, and its predicates have borderline cases that no formal treatment models. Applying a theorem about arithmetic to the word "true" in English is a category error, and the conclusion that English is inconsistent is not a discovery about English but an artefact of describing it with the wrong instrument.
+</Objection>
+
+<Reply>
+The theorem's premises are much weaker than a full formalisation, which is what gives the argument its reach. What the derivation of the contradiction needs is that the language can name its own sentences, that it has a truth predicate applying to those names, that it validates the T-schema, and that it has enough structure for a sentence to say of itself that it is not true. English has the first three plainly. It has the fourth by ordinary means, since a demonstrative or a name does what the diagonal lemma does. So a contradiction is derivable from features English visibly possesses, and the response has to identify which feature it lacks rather than objecting that the theorem was proved elsewhere. There is a further point that blocks the obvious repair. Kripke's example is a pair of speakers each commenting on the other's remarks about Watergate, where whether a paradox arises depends on what Nixon in fact said. If paradox can be triggered by contingent facts about who said what, no syntactic restriction can screen out the dangerous sentences in advance, because they are not syntactically distinctive. The objection is right that English is not a formal language, and the trouble does not come from the formality.
+</Reply>
+
+<Aside title="Publication and reception">
+Tarski's monograph appeared in Polish in 1933 and reached a wide readership through the German translation of 1935, by which time the results had circulated for several years. The 1944 paper in Philosophy and Phenomenological Research was written for philosophers rather than logicians and is the source of most of the discussion of the account in philosophy, including the disputes about whether the definition captures a notion of correspondence or deliberately avoids one. Kripke's paper appeared in the Journal of Philosophy in 1975; Martin and Woodruff arrived at the fixed-point construction independently at about the same time, though Kripke's treatment is the one the literature grew from.
+</Aside>
+
+## Next
+
+Truth cannot be internalised. Provability can, and the incompleteness proof did it. That leaves a question the next article takes up: since arithmetic contains a predicate saying that a sentence is provable, and since that predicate obeys principles resembling the rules for a modal operator, what is the logic of the predicate? The answer is a specific modal system, the answer is exact rather than approximate, and it has Löb's theorem in it.
+
+<FurtherReading>
+  <li>Alfred Tarski, "The Concept of Truth in Formalized Languages", in *Logic, Semantics, Metamathematics*, translated by J. H. Woodger (Oxford University Press, 1956).</li>
+  <li>Alfred Tarski, "The Semantic Conception of Truth and the Foundations of Semantics", *Philosophy and Phenomenological Research* 4 (1944), 341 to 376.</li>
+  <li>Saul Kripke, "Outline of a Theory of Truth", *Journal of Philosophy* 72 (1975), 690 to 716.</li>
+  <li>Anil Gupta and Nuel Belnap, *The Revision Theory of Truth* (MIT Press, 1993).</li>
+  <li>Hartry Field, *Saving Truth from Paradox* (Oxford University Press, 2008).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Tarski's Truth Definitions"](https://plato.stanford.edu/entries/tarski-truth/).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Liar Paradox"](https://plato.stanford.edu/entries/liar-paradox/).</li>
+</FurtherReading>
