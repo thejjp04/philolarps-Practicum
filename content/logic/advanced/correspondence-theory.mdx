@@ -1,0 +1,84 @@
+---
+title: "Correspondence Theory"
+subject: logic
+tier: advanced
+order: 12
+est_read_min: 20
+summary: Proving that a modal formula is valid on exactly the frames with a given property
+prerequisites: ["reverse-mathematics"]
+introduces: ["frame validity", "correspondence", "canonicity"]
+requires: ["frame", "accessibility relation", "normal modal logic", "system S4"]
+added: "2026-09-12"
+---
+
+The modal systems introduced earlier were presented with their frame conditions attached: system T goes with reflexivity, S4 adds transitivity, S5 adds symmetry. The pairings were stated and used, and the question of why those conditions and not others was left standing. It has a systematic answer, and the answer is the subject of this article.
+
+## What validity on a frame means
+
+A Kripke model has three parts: a set of worlds, a relation on them, and an assignment of truth values to atoms at worlds. Dropping the third leaves a frame, and a formula can be evaluated against a frame by quantifying over the assignments that might have been made.
+
+<Definition term="Frame validity">
+A formula is valid on a frame when it is true at every world of every model built on that frame, that is, under every assignment of truth values to the atoms. Validity on a frame is therefore a second-order condition, since it quantifies over all subsets of the set of worlds.
+</Definition>
+
+The second-order character is what makes the theory possible. Truth at a world in a model is a local matter, whereas validity on a frame says something about the relation itself, and the something can often be stated in first-order terms without any mention of modality.
+
+## Correspondence
+
+<Definition term="Correspondence">
+A modal formula and a condition on the accessibility relation correspond when the formula is valid on exactly the frames satisfying the condition. The correspondence is a biconditional between a modal fact and a relational one, proved in both directions.
+</Definition>
+
+The standard examples can be verified directly, and the proofs are short enough to give.
+
+Take $\Box \varphi \rightarrow \varphi$, the axiom of system T. Suppose the frame is reflexive and $\Box \varphi$ holds at a world $w$. Every world accessible from $w$ satisfies $\varphi$, and $w$ is accessible from itself, so $\varphi$ holds at $w$. For the other direction, suppose the frame is not reflexive, so some $w$ does not access itself. Assign $\varphi$ to be true at every world except $w$. Then every world accessible from $w$ satisfies $\varphi$, so $\Box \varphi$ holds at $w$, while $\varphi$ does not. The axiom fails, so validity of the axiom forces reflexivity.
+
+The second half is the pattern of every such proof. Given a frame violating the condition, one constructs an assignment falsifying the formula, and the assignment is almost always the obvious one: make the atom true exactly where the condition would have required it. For $\Box \varphi \rightarrow \Box \Box \varphi$ and transitivity, let $\varphi$ be true at exactly the worlds accessible from $w$; if the relation is not transitive there is a world two steps out but not one step out, so $\Box \varphi$ holds and $\Box \Box \varphi$ fails.
+
+<TruthTable
+  columns={["Axiom", "Formula", "Frame condition"]}
+  rows={[
+    ["D", "□φ → ◇φ", "seriality"],
+    ["T", "□φ → φ", "reflexivity"],
+    ["4", "□φ → □□φ", "transitivity"],
+    ["B", "φ → □◇φ", "symmetry"],
+    ["5", "◇φ → □◇φ", "euclideanness"],
+    ["Löb", "□(□φ → φ) → □φ", "transitive, no infinite ascent"]
+  ]}
+  caption="Standard correspondences. The first five conditions are first-order; the last is not."
+/>
+
+The final row is the one that breaks the pattern, and it was met in the article on provability logic. No first-order condition on frames is equivalent to the absence of infinite ascending chains, by an application of compactness: a first-order theory asserting the condition would have, by compactness, a model with such a chain. So correspondence does not always land in first-order territory, and the question of when it does has an answer.
+
+Sahlqvist identified in 1975 a syntactic class of modal formulas, generous enough to include every axiom in the table above except the last, each member of which corresponds to a first-order condition computable from the formula. The proof is an algorithm: it substitutes the minimal assignment making the antecedent true and reads off the resulting condition. So for a wide class the frame condition need not be guessed, and for formulas outside the class no guarantee is offered, correctly, since the Löb axiom is outside it.
+
+## Canonicity
+
+Correspondence says which frames validate an axiom. Completeness is a different question: whether every formula valid on all such frames is derivable in the system. The usual route is the canonical model.
+
+<Definition term="Canonicity">
+A modal logic is canonical when its canonical frame, whose worlds are the maximal consistent sets of formulas of the logic and whose accessibility relation holds between two sets when everything necessitated in the first belongs to the second, validates all the logic's axioms. A canonical logic is complete with respect to the class of frames its axioms define.
+</Definition>
+
+The pay-off is that completeness proofs become uniform. Establish canonicity and the completeness theorem for the system follows without further construction, which is why the standard completeness results for K, T, S4, B and S5 are all corollaries of a single theorem. Sahlqvist's result again does the work, since every Sahlqvist formula is canonical as well as first-order definable.
+
+Canonicity and first-order definability are nonetheless independent properties, a fact settled by Goldblatt and Thomason, whose theorem characterises exactly which first-order definable classes of frames are modally definable. There are canonical logics not defined by any first-order condition and first-order conditions defining no canonical logic. And the Löb axiom shows the sharp case: system GL is complete with respect to its frames, proved by Segerberg through finite models, and it is not canonical, so its completeness proof cannot take the standard route.
+
+<Objection>
+Correspondence results explain nothing. They translate a modal formula into a relational condition, and since frame validity is defined by quantifying over assignments, the translation is a computation within a definition rather than a discovery. One learns that transitivity is what the axiom 4 says, which is what the semantics was set up to make true.
+</Objection>
+
+<Reply>
+That the translation is entailed by the definitions is true of every theorem, and does not distinguish these results from any other. What the theory supplies beyond the individual translations is the general theorems, and those are not computations within a definition: that a syntactically specified class of formulas always yields a first-order condition, that a condition may be modally definable and not first-order, and that modal definability is characterised by closure under four operations on frames, are facts about the relationship between two languages that could have gone otherwise and had to be proved. The explanatory value is also practical. When a new modal system is proposed for a new application, correspondence theory determines what its axioms commit one to about the underlying structure, and that is information the axiom list does not display.
+</Reply>
+
+## Next
+
+Correspondence has been conducted throughout for propositional modal logic. Adding quantifiers introduces difficulties that are not technical refinements but genuine disputes, since the interaction between a quantifier and a modal operator raises the question of what exists at other worlds, and the answer is contested.
+
+<FurtherReading>
+  <li>Patrick Blackburn, Maarten de Rijke and Yde Venema, *Modal Logic* (Cambridge University Press, 2001).</li>
+  <li>Johan van Benthem, *Modal Logic and Classical Logic* (Bibliopolis, 1983).</li>
+  <li>Henrik Sahlqvist, "Completeness and Correspondence in the First and Second Order Semantics for Modal Logic", in Stig Kanger (ed.), *Proceedings of the Third Scandinavian Logic Symposium* (North-Holland, 1975), 110 to 143.</li>
+  <li>Robert Goldblatt and Steven Thomason, "Axiomatic Classes in Propositional Modal Logic", in John Crossley (ed.), *Algebra and Logic* (Springer, 1975), 163 to 173.</li>
+</FurtherReading>
