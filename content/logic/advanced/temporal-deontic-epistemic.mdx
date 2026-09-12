@@ -1,0 +1,80 @@
+---
+title: "Temporal, Deontic, and Epistemic Logic"
+subject: logic
+tier: advanced
+order: 25
+est_read_min: 26
+summary: "Three applied modal families, their characteristic axioms, and their characteristic paradoxes"
+prerequisites: ["free-logic"]
+introduces: ["temporal logic", "deontic logic", "epistemic logic", "logical omniscience", "contrary-to-duty paradox"]
+requires: ["normal modal logic", "system S4", "system S5", "accessibility relation", "impossible world"]
+added: "2026-09-12"
+---
+
+The relational semantics was presented for necessity and possibility, and nothing in it mentions either. A frame is a set with a relation, and reading the relation as temporal order, as normative preference or as epistemic indistinguishability gives three subjects with their own axioms, their own applications and their own well-known failures.
+
+Each of the three has a characteristic difficulty, and in each case the difficulty is the same kind of thing: a principle that looks obviously right in the intended reading turns out to be too strong.
+
+## Temporal logic
+
+<Definition term="Temporal logic">
+The modal treatment of tense, with operators for what will always be the case, what was always the case, and their duals. Developed by Arthur Prior from 1957, its accessibility relation is the earlier-than ordering on times.
+</Definition>
+
+Prior's tense logic has four basic operators, two future and two past, and the interaction axioms fix how they relate: what will be the case will always have been going to be the case. Assumptions about time appear as modal axioms in the expected correspondence. Transitivity of the order validates the $\mathsf{4}$ axiom; density validates a further schema; linearity of the past validates the principle distinguishing branching from linear time.
+
+Branching time is where the philosophical interest concentrates. On a branching frame each moment has a unique past and several futures, and this is the setting for Aristotle's sea battle: the statement that there will be a sea battle tomorrow is true on some branches and false on others. Prior's Ockhamist and Peircean readings answer differently, the first evaluating a future-tensed sentence relative to a selected branch and the second requiring truth on all of them, and the choice determines whether excluded middle holds for future contingents. The three-valued treatment of the many-valued article is a third option, and the branching frame makes clear what the three options are choices among.
+
+The applied descendant is larger than the philosophical one. Amir Pnueli proposed in 1977 that temporal logic be used to specify programs, and the resulting systems, linear temporal logic and computation tree logic, are the basis of model checking, which verifies that a finite state system satisfies a specification by exhaustive search. The technique is used on processor designs and protocols, and the branching that Prior introduced for the sea battle is the branching of a program's possible executions.
+
+## Deontic logic
+
+<Definition term="Deontic logic">
+The modal treatment of obligation and permission, with the box read as what ought to be the case and the accessibility relation running to the deontically ideal alternatives. The standard system, usually called SDL, is the normal modal logic D, whose characteristic axiom says that what is obligatory is permitted.
+</Definition>
+
+Seriality of the relation gives that axiom, and the reading is that some deontically acceptable alternative always exists, which is to say that the obligations are jointly satisfiable. Reflexivity is deliberately absent, since what ought to be the case need not be.
+
+The system's difficulties are old and well documented. Ross's paradox notes that from an obligation to post the letter, the normal logic derives an obligation to post the letter or burn it, which sounds like a permission to burn. The good Samaritan paradox derives, from the obligation to help the robbed man, an obligation that a man be robbed. Both stem from the closure of the box under logical consequence, and both are treated by the neighbourhood semantics of the earlier article, which is one of the main reasons non-normal systems are studied.
+
+<Definition term="Contrary-to-duty paradox">
+The difficulty of representing an obligation conditional on the violation of another obligation. Chisholm's 1963 example, that one ought to go to the neighbours' assistance, that if one goes one ought to tell them one is coming, that if one does not go one ought not to tell them, and that one does not go, is consistent and intuitively independent, and every natural formalisation in the standard system is either inconsistent or renders one premise redundant.
+</Definition>
+
+The failure is structural. Formalising the second conditional with the obligation outside the conditional and the third with it inside, or the reverse, produces one of the two defects, and no assignment of scopes avoids both. Since contrary-to-duty obligations are the normal case in law and in ethics, where the interesting question is usually what to do after something has gone wrong, this is a serious limitation rather than a puzzle case. The responses have been dyadic deontic logic, taking conditional obligation as primitive rather than defining it, and the preference semantics of Hansson and Lewis, ordering worlds by betterness and reading an obligation as holding at the best antecedent worlds. The parallel with the counterfactual semantics is exact and was noticed at the time.
+
+## Epistemic logic
+
+<Definition term="Epistemic logic">
+The modal treatment of knowledge and belief, with the box read as knowing and the accessibility relation running to the worlds an agent cannot distinguish from the actual one. Hintikka's *Knowledge and Belief* of 1962 is the founding work; knowledge is usually modelled by S4 or S5 and belief by KD45.
+</Definition>
+
+The axioms carry epistemological commitments and the correspondence makes them explicit. Reflexivity gives factivity, that what is known is true, and is uncontroversial. Transitivity gives positive introspection, that knowing implies knowing that one knows, and is disputed. The euclidean condition gives negative introspection, that not knowing implies knowing that one does not, and is rejected by most epistemologists, which is why S5 is used for idealised agents and information-theoretic applications rather than as an account of human knowledge. Williamson's anti-luminosity argument targets the introspective principles directly and is the main contemporary case against them.
+
+<Definition term="Logical omniscience">
+The consequence of normality that an agent knows every logical truth and every consequence of what they know. It follows from necessitation and distribution together, and it is false of every actual agent.
+</Definition>
+
+The problem is the deepest of the three, because it is not a matter of choosing the right axiom. Necessitation and distribution are what make a system normal, and any relational semantics validates both. Every proposed remedy therefore changes the semantics: impossible worlds, where an agent's epistemic alternatives include logically incoherent ones, as the non-normal article described; neighbourhood models, where the closure conditions are imposed selectively; awareness structures, due to Fagin and Halpern in 1988, which add a syntactic filter so that an agent knows only what they are aware of; and syntactic or algorithmic treatments of knowledge, which model it as derivability within a resource bound.
+
+The multi-agent setting is where the subject has been most productive and where the omniscience problem is least pressing, since the questions concern the relations between agents' knowledge rather than the closure of any one agent's. Common knowledge, defined as the infinite conjunction of everyone knows that everyone knows, is the notion that the muddy children puzzle and the coordinated attack problem turn on, and it has a clean modal characterisation as knowledge along the transitive closure of the agents' relations. Dynamic epistemic logic adds operators for announcements, and delivers the result that some true sentences become false when announced, the Moore sentences being the standard example. The applications in distributed computing and game theory are substantial and are what the field is mostly about now.
+
+<Objection>
+Applying modal logic to knowledge, obligation and time formalises ordinary notions with a tool built for necessity, and in each case the characteristic paradox shows the tool does not fit. Logical omniscience is false of every agent, contrary-to-duty obligations cannot be represented, and the future contingents problem is unresolved. These are not incidental defects but signs that the relational semantics encodes closure conditions the subject matter lacks.
+</Objection>
+
+<Reply>
+The diagnosis is right and the conclusion does not follow from it. The relational semantics does encode closure conditions, the closure conditions are wrong for these applications, and this was established by applying the semantics carefully enough to see where it fails. That is what a formal treatment is for. The response in each case has been to weaken the semantics in a specific way: neighbourhood models for the deontic closure failures, awareness and impossible worlds for omniscience, dyadic conditionals for contrary-to-duty cases. Each response was motivated by a diagnosed failure rather than invented freely, and each is now standard. The practical test is what the field produces, and model checking verifies real hardware, epistemic logic supplies the foundations of game-theoretic reasoning about information, and deontic logic is used in the specification of normative systems for automated agents. A framework whose failures are precisely locatable and separately repairable is in better condition than one whose failures are diffuse.
+</Reply>
+
+## Next
+
+This tier has surveyed a great many logics: classical, intuitionistic, modal in several readings, substructural, many-valued, free. The final article asks the question that survey raises, which is what makes any of them logic, and whether the plurality is a disagreement or a division of labour.
+
+<FurtherReading>
+  <li>Jaakko Hintikka, *Knowledge and Belief: An Introduction to the Logic of the Two Notions* (Cornell University Press, 1962).</li>
+  <li>Arthur Prior, *Past, Present and Future* (Oxford University Press, 1967).</li>
+  <li>Ronald Fagin, Joseph Halpern, Yoram Moses and Moshe Vardi, *Reasoning About Knowledge* (MIT Press, 1995).</li>
+  <li>Roderick Chisholm, "Contrary-to-Duty Imperatives and Deontic Logic", *Analysis* 24 (1963), 33 to 36.</li>
+  <li>Dov Gabbay, John Horty, Xavier Parent, Ron van der Meyden and Leendert van der Torre (eds), *Handbook of Deontic Logic and Normative Systems* (College Publications, 2013).</li>
+</FurtherReading>
