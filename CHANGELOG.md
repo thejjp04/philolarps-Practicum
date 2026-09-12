@@ -7,8 +7,11 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-6 changes.
+9 changes.
 
+- Add logic advanced rung 11: reverse mathematics ([b5f600c](https://github.com/thejjp04/philolarps/commit/b5f600c))
+- Add logic advanced rung 10: second-order and higher-order logic ([b21ffec](https://github.com/thejjp04/philolarps/commit/b21ffec))
+- Regenerate changelog ([6038c28](https://github.com/thejjp04/philolarps/commit/6038c28))
 - Add logic advanced rung 9: types, quantifier elimination, categoricity ([4557835](https://github.com/thejjp04/philolarps/commit/4557835))
 - Add logic advanced rung 8: nonstandard models of arithmetic ([17f7842](https://github.com/thejjp04/philolarps/commit/17f7842))
 - Regenerate changelog ([25094f1](https://github.com/thejjp04/philolarps/commit/25094f1))
