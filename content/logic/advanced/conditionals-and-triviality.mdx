@@ -1,0 +1,95 @@
+---
+title: "Conditionals and the Triviality Results"
+subject: logic
+tier: advanced
+order: 21
+est_read_min: 28
+summary: "Indicative against subjunctive, the Stalnaker-Lewis semantics, Adams' thesis, and why probability cannot be a conditional's meaning"
+prerequisites: ["vagueness-and-the-sorites"]
+introduces: ["indicative conditional", "subjunctive conditional", "Stalnaker-Lewis semantics", "Adams' thesis", "triviality result"]
+requires: ["material conditional", "possible world", "possibility operator", "semantic consequence", "conditional probability"]
+added: "2026-09-12"
+---
+
+The material conditional is false only when the antecedent is true and the consequent false, which makes every conditional with a false antecedent true. That result is tolerable in mathematics and absurd in ordinary speech, where the claim that if the moon is cheese then arithmetic is inconsistent is not something anyone would accept.
+
+Two hundred years of attempts to do better have produced a clear picture of the difficulty and no agreed solution. What they have produced, unusually for a topic in philosophy, is a proof that the most attractive proposal cannot be right.
+
+## Two conditionals
+
+<Definition term="Indicative conditional">
+A conditional in the indicative mood, whose antecedent is entertained as a live possibility. "If Oswald did not shoot Kennedy, someone else did" is indicative, and it is true, since someone shot him.
+</Definition>
+
+<Definition term="Subjunctive conditional">
+A conditional whose antecedent is entertained counterfactually, typically marked in English by the subjunctive or by a past-tense construction. "If Oswald had not shot Kennedy, someone else would have" is subjunctive, and it is false unless one holds an unusual view about the assassination.
+</Definition>
+
+The pair is Adams's, from 1970, and it is the standard demonstration that the two constructions are not variants of one another. The sentences differ only in mood, they are about the same event, and they differ in truth value. No account assigning them the same content can be correct.
+
+The material conditional fails for both. For the indicative it validates inferences that fail, notably from $\neg \varphi$ to $\varphi \rightarrow \psi$; for the subjunctive it is hopeless, since every counterfactual would be true. The two require separate treatment, and the subjunctive has the better-developed one.
+
+## The Stalnaker-Lewis semantics
+
+<Definition term="Stalnaker-Lewis semantics">
+The treatment of the counterfactual on which it is true when the consequent holds at the antecedent worlds most similar to the actual world. Stalnaker's version, from 1968, assumes a unique closest antecedent world; Lewis's, from 1973, quantifies over a sphere of sufficiently close ones and does not assume uniqueness.
+</Definition>
+
+The apparatus explains the pattern of failures that makes counterfactuals distinctive, and the explanations are structural rather than stipulated.
+
+<TruthTable
+  columns={["Inference", "Material conditional", "Counterfactual"]}
+  rows={[
+    ["Strengthening the antecedent", "valid", "fails"],
+    ["Contraposition", "valid", "fails"],
+    ["Transitivity", "valid", "fails"],
+    ["Modus ponens", "valid", "valid"]
+  ]}
+  caption="Three classical inferences fail for counterfactuals, and all three fail for the same reason."
+/>
+
+Strengthening the antecedent is the clearest case. If this match had been struck it would have lit; if it had been struck under water it would not. Adding to the antecedent shifts which worlds are closest, and the shift can take one from worlds where the consequent holds to worlds where it does not. Contraposition and transitivity fail by the same mechanism, since each involves an implicit change of antecedent.
+
+The remaining difficulty is similarity. Lewis's own example shows it: if Nixon had pressed the button there would have been a nuclear war, which is true, although a world where the button is pressed and a wire fails is in many respects more like ours than one where the missiles fly. Fine's objection in 1975 forced a response, and Lewis's was a weighting of respects of similarity, prioritising the avoidance of large miracles over the preservation of exact match of matters of particular fact. Critics find this tailored to the cases. The alternative developed since, chiefly by Pearl, replaces similarity with intervention on a causal model, and the structural equations approach is now standard in the sciences that use counterfactuals seriously.
+
+## Adams's thesis
+
+The indicative took a different route, away from truth conditions altogether.
+
+<Definition term="Adams' thesis">
+The claim that the assertibility of an indicative conditional goes by the conditional probability of the consequent given the antecedent, rather than by the probability of any proposition the conditional expresses. Proposed by Ernest Adams in 1965 and 1975.
+</Definition>
+
+The thesis matches the data very well. It explains why one hesitates over a conditional with an improbable consequent even when the antecedent is false, which the material account cannot. It explains the felt oddity of asserting a conditional one believes only because the antecedent is false. It delivers a usable account of which arguments with conditionals are good, in terms of uncertainty rather than truth preservation. Among proposals about the indicative it is the one with the best fit.
+
+The natural next step is to read it as a semantics: let the conditional express a proposition whose probability is the conditional probability. That step is blocked by a theorem.
+
+<Definition term="Triviality result">
+A theorem showing that no proposition can have, as its probability, the conditional probability of consequent given antecedent across all probability functions in any sufficiently rich class. Proved by David Lewis in 1976, with numerous strengthenings since.
+</Definition>
+
+Lewis's argument is short. Suppose a connective for which the probability of $\varphi > \psi$ equals the probability of $\psi$ given $\varphi$, and suppose this holds for every probability function in a class closed under conditionalising. Compute the probability of the conditional by the law of total probability, conditionalising on $\psi$ and on its negation. Each term can be evaluated using the supposition applied to the conditionalised function, and the computation yields that the probability of $\psi$ given $\varphi$ equals the probability of $\psi$ outright. Since $\varphi$ and $\psi$ were arbitrary, every pair of propositions is probabilistically independent, which holds only in a space with at most a few atoms. The class is trivial.
+
+The result is robust. Later versions weaken the closure assumption, drop the requirement that the equality hold for every function, and replace equality by approximation, and the conclusion survives. Whatever the indicative conditional is, it is not a proposition whose probability is a conditional probability.
+
+Three responses divide the field. Adams and Edgington accept the theorem and hold that indicatives lack truth conditions, expressing conditional beliefs rather than propositions, with assertibility replacing truth throughout. Grice and Jackson keep the material conditional as the semantics and explain the divergence pragmatically, with Jackson's conventional implicature of robustness accounting for why a material conditional believed only through a false antecedent is not assertible. Stalnaker keeps truth conditions of the possible worlds kind and accepts that the thesis holds only approximately, over a restricted class of cases.
+
+<Objection>
+The triviality results are artefacts of the closure assumption. They require that the probability function obtained by conditionalising still satisfies the thesis, which is a substantial requirement about what happens to the conditional's content when new information arrives. A theory that treats the conditional's content as depending on the epistemic state is not committed to it, and such theories are available.
+</Objection>
+
+<Reply>
+The diagnosis is correct as far as it goes and the escape is narrower than it appears. Van Fraassen constructed models satisfying the thesis in 1976 precisely by letting the conditional's content shift with the state, so the consistency point is established. What the theorem then shows is that this shifting is not optional: any adequate theory must make the conditional's content depend on the probability function, which means the conditional does not express a fixed proposition and the compositional semantics must be rebuilt to accommodate it. That is a substantive constraint discovered by proof, and the subsequent literature, including Kaufmann's work on conditional propositions relative to a background and the dynamic treatments that followed, is the working out of it. The results did not close the question; they determined the shape of every acceptable answer, which is more than most arguments in this area achieve.
+</Reply>
+
+## Next
+
+Adams's thesis replaced truth preservation with a constraint on uncertainty, which raises a question about validity itself. A valid argument preserves truth, and premises are rarely certain, so what does validity guarantee when the premises are merely probable?
+
+<FurtherReading>
+  <li>David Lewis, *Counterfactuals* (Blackwell, 1973).</li>
+  <li>Robert Stalnaker, "A Theory of Conditionals", in *Studies in Logical Theory* (Blackwell, 1968), 98 to 112.</li>
+  <li>David Lewis, "Probabilities of Conditionals and Conditional Probabilities", *Philosophical Review* 85 (1976), 297 to 315.</li>
+  <li>Dorothy Edgington, "On Conditionals", *Mind* 104 (1995), 235 to 329.</li>
+  <li>Jonathan Bennett, *A Philosophical Guide to Conditionals* (Oxford University Press, 2003).</li>
+</FurtherReading>
