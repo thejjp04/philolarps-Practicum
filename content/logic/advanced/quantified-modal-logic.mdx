@@ -1,0 +1,82 @@
+---
+title: "Quantified Modal Logic and the Barcan Formulas"
+subject: logic
+tier: advanced
+order: 13
+est_read_min: 26
+summary: "What happens when quantifiers meet the box: constant versus variable domains, and the necessity of identity"
+prerequisites: ["correspondence-theory"]
+introduces: ["Barcan formula", "converse Barcan formula", "constant domain semantics", "variable domain semantics", "necessity of identity"]
+requires: ["universal quantifier", "necessity operator", "Kripke model", "identity predicate", "counterpart theory"]
+added: "2026-09-12"
+---
+
+Propositional modal logic asks what follows from what when sentences can be necessary. Adding quantifiers asks a harder question, because a quantifier ranges over a domain and a modal operator shifts the world, and nothing in either apparatus settles whether the domain shifts too.
+
+The formal choice is small and the consequences are metaphysical. This article sets out the choice, the formulas that track it, and the one result in the area that almost everyone accepts and few find comfortable.
+
+## The two semantics
+
+<Definition term="Constant domain semantics">
+The interpretation on which every world of a model shares a single domain of quantification, so that the same objects exist at every world. Quantifiers are evaluated against that fixed domain regardless of which world is under consideration.
+</Definition>
+
+<Definition term="Variable domain semantics">
+The interpretation on which each world carries its own domain, so that an object may exist at one world and not another. Quantifiers at a world range over that world's domain, and the domains may overlap, nest or be disjoint.
+</Definition>
+
+Variable domains are the natural formalisation of the thought that things might not have existed. There are no talking donkeys, there might have been, so some world contains an object no world of ours does. Constant domains say instead that the objects are fixed and what varies is which of them are concrete, or instantiated, or actual, so that the possible talking donkey exists at our world too and simply is not a donkey here.
+
+Each choice validates a formula the other does not, and the formulas were identified before the semantics that explains them.
+
+## The Barcan formulas
+
+<Definition term="Barcan formula">
+The schema $\Diamond \exists x\, \varphi \rightarrow \exists x\, \Diamond \varphi$, equivalently $\forall x\, \Box \varphi \rightarrow \Box \forall x\, \varphi$. It says that if there might have been something satisfying a condition, then something actually existing might have satisfied it, and it is valid on exactly the models whose domains do not grow along the accessibility relation.
+</Definition>
+
+<Definition term="Converse Barcan formula">
+The schema $\exists x\, \Diamond \varphi \rightarrow \Diamond \exists x\, \varphi$, equivalently $\Box \forall x\, \varphi \rightarrow \forall x\, \Box \varphi$. It is valid on exactly the models whose domains do not shrink along the accessibility relation, and it follows from the ordinary quantifier axioms together with necessitation in any system with the distribution schema.
+</Definition>
+
+Ruth Barcan Marcus introduced the first as an axiom in 1946, in the earliest axiomatisation of quantified modal logic, before Kripke semantics existed to explain what it meant. The semantic characterisation came later and is exact: constant domain models validate both, and validating both forces the domains accessible from any world to be identical to it.
+
+The converse formula is the awkward one, because it is very nearly forced. From $\forall x\, \varphi \rightarrow \varphi[t/x]$ and necessitation one obtains $\Box(\forall x\, \varphi \rightarrow \varphi)$, and distribution gives $\Box \forall x\, \varphi \rightarrow \Box \varphi$, and generalising yields the converse Barcan formula. Every step is standard. Rejecting the conclusion therefore requires rejecting one of them, and the usual casualty is the quantifier axiom, replaced by a version carrying an existence assumption. That move is free logic, and the fact that variable domain semantics needs it is the clearest case of a metaphysical position forcing a change to the underlying logic rather than merely to the axioms added on top.
+
+<Aside title="Reading the formula in the other direction">
+Williamson has defended the Barcan formula and its converse, and hence constant domains, by arguing that the alternative has worse consequences than the one it avoids. If domains vary, then the claim that there could have been something distinct from everything that actually exists is true, and the objects it quantifies over at other worlds are ones our quantifiers cannot reach, so ordinary modal reasoning about what there could have been fails to be expressible. His necessitism accepts that everything necessarily exists, with contingency located in whether a thing is concrete. The position is a minority one and it is not obviously worse off than its rivals, which is the argument's point.
+</Aside>
+
+## The necessity of identity
+
+One result in this area is a theorem rather than a stipulation, and it constrains any position in the debate.
+
+<Definition term="Necessity of identity">
+The thesis that if $a$ and $b$ are identical, then necessarily they are identical: $a = b \rightarrow \Box\, a = b$. It follows from the reflexivity of identity, Leibniz's law and necessitation, and is therefore available in any quantified modal system retaining all three.
+</Definition>
+
+The derivation is three lines. Identity is reflexive, so $a = a$, and by necessitation $\Box\, a = a$. Suppose $a = b$. By Leibniz's law, whatever holds of $a$ holds of $b$, and what holds of $a$ is the property of being necessarily identical to $a$. Hence $\Box\, a = b$.
+
+The conclusion is not a claim about names. Barcan Marcus drew the distinction in 1961 and Kripke pressed it in 1970: the theorem says that the objects, however designated, are necessarily identical, and it is compatible with a competent speaker's not knowing that Hesperus is Phosphorus. Epistemic possibility is not metaphysical possibility, and the sentence "Hesperus might not have been Phosphorus" is true only on the epistemic reading. The framework that makes this available is the theory of rigid designation, on which a name picks out the same object at every world at which it picks out anything, and the contingency of a discovery attaches to the descriptions used rather than to the identity discovered.
+
+The necessity of distinctness follows by a similar argument, and the necessity of self-identity is what starts it. What does not follow is the necessity of any other kind of identification, and in particular the theorem tells one nothing about whether a statue is identical to its clay.
+
+<Objection>
+The whole apparatus presupposes transworld identity, the idea that one and the same object exists at several worlds, and no account of what makes an object at one world identical to an object at another has ever been given. Lewis proposed instead that each object exists at exactly one world and is represented at others by its counterparts, related by similarity. On that account the Barcan formulas and the necessity of identity lose their standing, since counterparthood is neither transitive nor one-to-one, and an object can have two counterparts at a world or none.
+</Objection>
+
+<Reply>
+Kripke's reply is that the demand for a criterion of transworld identity misconstrues the practice. Worlds are stipulated rather than discovered, and in stipulating a situation in which Nixon lost the election one does not identify a Nixon-like individual by inspecting the world and matching qualities; one specifies that the situation concerns Nixon. There is no epistemic problem of recognition because there is no act of recognition. Counterpart theory is a coherent alternative and its costs are real: since counterparthood is a similarity relation, the theory makes it possible for an object to be distinct from itself in the relevant sense, and the necessity of identity fails in a way Lewis accepted and most subsequent writers have not. The disagreement is genuine and unresolved, and it is worth noticing that the formal systems come apart at exactly the predicted places, which is a point in favour of the framework whichever side one takes.
+</Reply>
+
+## Next
+
+Every system so far has been normal: closed under necessitation and validating distribution. Both closure conditions can be questioned, and the systems that drop them were the first modal logics to be studied. Their semantics is not the relational one.
+
+<FurtherReading>
+  <li>Ruth Barcan Marcus, "A Functional Calculus of First Order Based on Strict Implication", *Journal of Symbolic Logic* 11 (1946), 1 to 16.</li>
+  <li>Saul Kripke, *Naming and Necessity* (Harvard University Press, 1980).</li>
+  <li>Timothy Williamson, *Modal Logic as Metaphysics* (Oxford University Press, 2013).</li>
+  <li>David Lewis, *On the Plurality of Worlds* (Blackwell, 1986).</li>
+  <li>James Garson, *Modal Logic for Philosophers*, second edition (Cambridge University Press, 2013).</li>
+</FurtherReading>
