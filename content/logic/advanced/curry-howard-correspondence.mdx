@@ -1,0 +1,80 @@
+---
+title: "The Curry-Howard Correspondence"
+subject: logic
+tier: advanced
+order: 16
+est_read_min: 28
+summary: "Proofs as programs: the isomorphism between natural deduction and the typed lambda calculus, and what normalization turns out to be"
+prerequisites: ["intuitionistic-logic"]
+introduces: ["Curry-Howard correspondence", "simply typed lambda calculus", "propositions as types", "proof normalization"]
+requires: ["BHK interpretation", "constructive proof", "cut elimination", "natural deduction"]
+added: "2026-09-12"
+---
+
+The BHK reading says that a proof of $\varphi \rightarrow \psi$ is a construction taking any proof of $\varphi$ to a proof of $\psi$. Read casually that is an explanation. Read exactly it is a definition of a function, and the observation that turns it into a theorem is that the rules of natural deduction for implication are, symbol for symbol, the rules of the typed lambda calculus.
+
+The correspondence is not an analogy between two subjects. It is the same structure described twice.
+
+## The calculus
+
+<Definition term="Simply typed lambda calculus">
+A formal language of terms built from variables, abstraction and application, in which every term carries a type. Types are generated from base types by the arrow constructor, an abstraction $\lambda x^{A}.\, t$ has type $A \rightarrow B$ when $t$ has type $B$ under the assumption that $x$ has type $A$, and an application $t\,u$ has type $B$ when $t$ has type $A \rightarrow B$ and $u$ has type $A$.
+</Definition>
+
+Set beside the implication rules of natural deduction, the two typing rules are the same rule. Introduction discharges an assumption of $\varphi$ to conclude $\varphi \rightarrow \psi$; abstraction binds a variable of type $A$ to build a term of type $A \rightarrow B$. Elimination applies a proof of $\varphi \rightarrow \psi$ to a proof of $\varphi$; application applies a term of type $A \rightarrow B$ to a term of type $A$. Discharging an assumption is binding a variable. An undischarged assumption is a free variable.
+
+<Definition term="Curry-Howard correspondence">
+The identification of proofs with terms and propositions with types, under which a proof of a formula is a term whose type is that formula, and reduction of terms corresponds exactly to the simplification of proofs. Observed by Haskell Curry for the implicational fragment in the 1930s and extended by William Howard in a 1969 manuscript circulated for a decade before its 1980 publication.
+</Definition>
+
+<Definition term="Propositions as types">
+The reading of a formula as the type of its proofs, so that provability is inhabitation: a formula is provable exactly when some closed term has it as a type. Under the reading, conjunction is the product type, disjunction is the sum type, the false constant is the empty type, and the universal quantifier is the dependent function type.
+</Definition>
+
+The correspondence covers the whole of intuitionistic propositional logic once the types are enriched. A proof of a conjunction is a pair, matching the BHK clause exactly. A proof of a disjunction is a tagged value, and the tag is the BHK requirement that the disjunct be indicated. The empty type has no closed terms, which is the statement that a contradiction has no proof. Negation is the function type into the empty type, matching the definition of $\neg \varphi$ as $\varphi \rightarrow \bot$.
+
+Excluded middle is where the reading pays its way. A term of type $A + (A \rightarrow \bot)$, for a variable $A$, would be a uniform procedure returning either a value of an arbitrary type or a function refuting it, and no such procedure exists. The intuitionistic rejection is recovered as a fact about programs rather than as a philosophical stipulation.
+
+## Normalisation
+
+The correspondence would be a curiosity if it stopped at syntax. Its substance is that the dynamics match.
+
+<Definition term="Proof normalization">
+The process of removing detours from a natural deduction proof, where a detour is an introduction rule immediately followed by the corresponding elimination. Under the correspondence it is exactly beta reduction of the associated term, so simplifying a proof and running a program are the same operation.
+</Definition>
+
+The case of implication shows the whole pattern. A proof that introduces $\varphi \rightarrow \psi$ by discharging an assumption, and then immediately eliminates it against a proof of $\varphi$, contains a detour: the proof of $\psi$ was already there, with $\varphi$ assumed, and the proof of $\varphi$ can be substituted for the assumption. The corresponding term is $(\lambda x.\, t)\,u$, and the corresponding operation is substituting $u$ for $x$ in $t$, which is the beta rule.
+
+Prawitz proved in 1965 that every natural deduction proof normalises, and the same statement in the other vocabulary is that every typed term reduces to a normal form. Strong normalisation, that every reduction sequence terminates, holds too, and the significance is worth pausing on: a typed lambda calculus cannot express a non-terminating computation, so the price of the correspondence is that the programs are not all the programs. Adding a fixed point operator makes the language Turing complete and makes the logic inconsistent, since the fixed point operator inhabits every type, and these are the same fact.
+
+The relation to cut elimination is the expected one. Natural deduction normalisation and sequent calculus cut elimination correspond to one another, so the result proved in the article on sequent calculus is a theorem about the termination of a computation. The subformula property becomes the statement that a normal term's subterms have types occurring in its own, which is why type checking is decidable.
+
+## What the correspondence became
+
+The scope has widened three times since Howard's manuscript, and each widening was a discovery rather than a generalisation for its own sake.
+
+Girard and Reynolds independently found the second-order case in 1972 and 1974, the polymorphic lambda calculus, where quantification over types matches second-order propositional quantification. Martin-Löf's dependent type theory, developed through the 1970s, extended it to predicate logic, with the dependent function type matching the universal quantifier and the dependent pair type matching the existential. That system is the basis of the proof assistants now in use, Coq and Agda and Lean, in which a formal proof is literally a program and checking it is type checking. Griffin observed in 1990 that control operators such as call with current continuation can be typed by classical principles, so that Peirce's law and double negation elimination correspond to non-local control flow, which extended the correspondence past the intuitionistic boundary that had seemed constitutive of it.
+
+<Aside title="A third column">
+Lambek showed in 1968 that cartesian closed categories are a third presentation of the same structure, with objects as formulas, morphisms as proofs, and the exponential object as implication. The resulting triangle of proof theory, computation and category theory is usually called the Curry-Howard-Lambek correspondence, and each vertex has supplied results to the others. The category-theoretic vertex is where the semantics of programming languages was rebuilt.
+</Aside>
+
+<Objection>
+The correspondence holds for a restricted fragment and is being sold as a general truth. Real programs loop, recurse without an obvious bound, allocate, fail and interact with the world, and none of that fits a calculus whose defining property is that every computation terminates. Meanwhile real mathematical proofs are classical and informal. The identification of proofs with programs works because both sides have been trimmed to fit.
+</Objection>
+
+<Reply>
+The restriction is real and is the source of the content rather than an embarrassment. That strong normalisation and consistency are the same theorem is informative precisely because a language with unrestricted recursion loses both together, and the correspondence predicts that in advance. As for scope, the boundary has moved repeatedly and in the direction the objection says it cannot: Griffin typed control operators classically, linear logic gave a proof-theoretic account of resource use and state, and monadic typing brought effects and input-output inside. The fragment is also less small than it sounds, since every proof assistant in serious use is an implementation of it, and the formalisation of the four colour theorem, the odd order theorem and the Kepler conjecture were carried out in such systems. The correspondence is a working tool with a known domain, and the honest statement is that the domain has been enlarged four times in fifty years.
+</Reply>
+
+## Next
+
+The structural rules of the sequent calculus have been in the background of both this article and the one on cut elimination, treated as bookkeeping. They are not. Dropping them yields logics in which a premise is a resource that is consumed, and the next article takes up what that buys.
+
+<FurtherReading>
+  <li>Morten Heine Sørensen and Paweł Urzyczyn, *Lectures on the Curry-Howard Isomorphism* (Elsevier, 2006).</li>
+  <li>William A. Howard, "The Formulae-as-Types Notion of Construction", in *To H. B. Curry: Essays on Combinatory Logic, Lambda Calculus and Formalism* (Academic Press, 1980), 479 to 490.</li>
+  <li>Jean-Yves Girard, Yves Lafont and Paul Taylor, *Proofs and Types* (Cambridge University Press, 1989).</li>
+  <li>Per Martin-Löf, *Intuitionistic Type Theory* (Bibliopolis, 1984).</li>
+  <li>Dag Prawitz, *Natural Deduction: A Proof-Theoretical Study* (Almqvist and Wiksell, 1965).</li>
+</FurtherReading>
