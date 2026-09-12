@@ -1,0 +1,87 @@
+---
+title: "Many-Valued Logics"
+subject: logic
+tier: advanced
+order: 19
+est_read_min: 22
+summary: "Łukasiewicz three-valued logic, the Kleene schemes, and the logic of paradox"
+prerequisites: ["relevance-and-paraconsistency"]
+introduces: ["truth value gap", "truth value glut", "designated value", "Kleene logic", "logic of paradox"]
+requires: ["truth function", "truth table", "paraconsistent logic"]
+added: "2026-09-12"
+---
+
+Bivalence is an assumption, not a discovery. Nothing in the notion of a truth function requires exactly two arguments, and once a third value is admitted the tables can be completed in several ways, each answering to a different reason for having admitted it.
+
+The reasons are what distinguish the systems. A third value may mark a sentence that is neither true nor false, or one that is both, or one whose truth is undetermined. The tables come out nearly identical and the logics come out very different, because what separates them is which values count as good.
+
+## Designation
+
+<Definition term="Designated value">
+A truth value counted as success for the purposes of defining validity. An argument is valid when every assignment giving all premises a designated value gives the conclusion one, so the choice of designated values fixes the consequence relation independently of the truth tables.
+</Definition>
+
+This is the hinge of the whole subject. Two systems can share every truth table and differ on which arguments are valid, purely through the designation. The point recurs below and is the reason the article treats designation before the systems.
+
+<Definition term="Truth value gap">
+The status of a sentence assigned neither truth nor falsity, used for presupposition failure, reference failure, future contingents and the borderline cases of vague predicates. The third value in a gap logic is undesignated, so a gappy premise supports nothing.
+</Definition>
+
+<Definition term="Truth value glut">
+The status of a sentence assigned both truth and falsity, used for the paradoxes by those prepared to accept them. The third value in a glut logic is designated, since a glutty sentence is true, among other things.
+</Definition>
+
+## The systems
+
+Łukasiewicz introduced a third value in 1920, motivated by Aristotle's sea battle: the statement that there will be a sea battle tomorrow is, he held, not yet true and not yet false. His tables treat the third value as a genuine indeterminacy, and the distinctive choice is the conditional, which takes the value true when antecedent and consequent are both indeterminate. That choice keeps $\varphi \rightarrow \varphi$ valid, and keeping it is why the system has a conditional worth the name.
+
+<Definition term="Kleene logic">
+The three-valued scheme introduced by Stephen Kleene in 1938 for partial recursive predicates, in which the third value represents undefinedness. In the strong scheme a compound is defined whenever its value is settled by the defined parts, so a disjunction with a true disjunct is true even if the other is undefined; in the weak scheme any undefined part makes the whole undefined.
+</Definition>
+
+Kleene's motivation was computational rather than metaphysical. A partial recursive predicate may fail to return on some input, and the strong tables say what can be concluded before knowing whether it returns: a search that has already succeeded on one branch need not wait for the other. This is short-circuit evaluation, and the tables are those a programming language implements.
+
+The strong scheme with only truth designated is the system usually called K3, and it has no tautologies at all, since assigning every atom the third value makes every formula take it. Excluded middle fails, the liar being the intended application: it is gappy, so neither it nor its negation is true.
+
+<Definition term="Logic of paradox">
+The system LP, introduced by Graham Priest in 1979, sharing the strong Kleene tables but designating the third value as well as truth. It is paraconsistent, since a sentence and its negation can both be designated, and it has exactly the classical tautologies.
+</Definition>
+
+The pair K3 and LP is the clearest illustration of the designation point. Identical tables; opposite properties. K3 has no valid formulas and is explosive, since a contradiction cannot have both conjuncts designated. LP validates every classical tautology and is not explosive, since the third value makes $\varphi$ and $\neg \varphi$ both designated while $\psi$ is false. What LP loses is modus ponens, which fails when $\varphi$ is glutty and $\psi$ is false, and the loss is serious enough that the system is usually supplemented with a further conditional.
+
+<TruthTable
+  columns={["System", "Third value designated", "Tautologies", "Explosive", "Modus ponens"]}
+  rows={[
+    ["K3", "no", "none", "yes", "valid"],
+    ["LP", "yes", "all classical ones", "no", "fails"],
+    ["Łukasiewicz three-valued", "no", "some", "yes", "valid"],
+    ["FDE", "yes, both middle values", "none", "no", "fails"]
+  ]}
+  caption="The same tables under different designations give different logics."
+/>
+
+The last row is Belnap's four-valued system, which separates the gap from the glut instead of using one value for both. Its four values are the subsets of the classical pair, ordered by information, and Belnap's 1977 presentation motivated it by a computer receiving reports from several sources: a proposition may be reported true by one and false by another, or by neither. The system is the algebraic heart of first-degree entailment, so the route through many-valued semantics arrives at the relevance logic of the previous article from a different direction.
+
+<Aside title="Infinitely many values">
+Łukasiewicz extended his system to any finite number of values and then to the real unit interval, with the conditional taking the value $\min(1, 1 - v(\varphi) + v(\psi))$. The infinite-valued system is the basis of Hájek's basic fuzzy logic and of the family of t-norm logics, and it is complete and decidable. Its use for vagueness is taken up in the next article, where the question is whether degrees of truth are the right treatment of a borderline case at all.
+</Aside>
+
+<Objection>
+Adding truth values does not explain anything. Assigning the liar a third value invites the question whether that value is a way of being true, and the strengthened liar reappears as the sentence saying of itself that it is not designated. If the answer is that the sentence takes the third value again, the theory has stopped tracking the intuitive notion it was introduced to capture; if the answer is anything else, the hierarchy restarts.
+</Objection>
+
+<Reply>
+The revenge problem is real and is acknowledged by the principal defenders of these systems rather than evaded. Two replies have substance. The first is that revenge is not peculiar to many-valued treatments: every proposal about the liar faces a strengthened version, as the article on Tarski set out, so the objection does not favour any competitor. The second is that these systems have applications where no paradox arises and where the third value has an independent and unproblematic meaning. Kleene's scheme is a correct account of partial computation, Belnap's is a usable account of conflicting sources, and the many-valued treatment of quantum propositions and of database nulls stands or falls on its own merits. The narrower claim, that a many-valued semantics dissolves the liar, is the one the objection damages, and the appropriate response is to treat the paradox as an open problem rather than a solved one.
+</Reply>
+
+## Next
+
+Degrees of truth were offered above as a treatment of vagueness, and vagueness has a paradox of its own that is older and more resistant than the liar. The next article takes it up, along with the three main responses and the reason none of them is comfortable.
+
+<FurtherReading>
+  <li>Graham Priest, "The Logic of Paradox", *Journal of Philosophical Logic* 8 (1979), 219 to 241.</li>
+  <li>Nuel D. Belnap, "A Useful Four-Valued Logic", in *Modern Uses of Multiple-Valued Logic* (Reidel, 1977), 5 to 37.</li>
+  <li>Stephen Cole Kleene, *Introduction to Metamathematics* (North-Holland, 1952).</li>
+  <li>Siegfried Gottwald, *A Treatise on Many-Valued Logics* (Research Studies Press, 2001).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Many-Valued Logic"](https://plato.stanford.edu/entries/logic-manyvalued/).</li>
+</FurtherReading>
