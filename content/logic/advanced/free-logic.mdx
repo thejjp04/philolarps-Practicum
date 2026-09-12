@@ -1,0 +1,79 @@
+---
+title: "Free Logic"
+subject: logic
+tier: advanced
+order: 24
+est_read_min: 18
+summary: "Quantifying without existence assumptions, and the positive, negative, and neutral variants"
+prerequisites: ["inductive-logic-and-the-carnap-programme"]
+introduces: ["free logic", "outer domain", "empty domain"]
+requires: ["universal quantifier", "existential quantifier", "definite description", "truth value gap", "existence predicate"]
+added: "2026-09-12"
+---
+
+Classical predicate logic proves that something exists. The sentence $\exists x\, (x = x)$ is a theorem, derivable from the reflexivity of identity and the rule taking a formula with a term to its existential generalisation, and it is true in every model because models are required to have non-empty domains.
+
+A logical truth that rules out the possibility of nothing existing is doing more than logic should. That is one motivation for the systems in this article. The other is that the same rule produces falsehoods from true premises whenever a term fails to denote.
+
+<Definition term="Free logic">
+A predicate logic free of existence assumptions with respect to its singular terms, in which a term may fail to denote and quantifiers range only over what exists. The rule of universal instantiation is restricted, requiring an additional premise asserting that the instantiated term denotes.
+</Definition>
+
+The restriction is the whole of the formal change. From $\forall x\, \varphi$ one may infer $\varphi[t/x]$ only given $\exists y\, (y = t)$, usually abbreviated by an existence predicate. Everything that goes wrong in the classical treatment goes wrong at that step, and everything free logic does follows from repairing it.
+
+The motivating cases are ordinary. Fictional and mythological names appear in true sentences: Pegasus is a winged horse, Vulcan was posited to explain Mercury's perihelion. Improper definite descriptions denote nothing: the greatest prime, the present king of France. Partial functions produce undefined terms: division by zero, the limit of a divergent sequence. Variable domain modal semantics requires terms that denote at one world and not another, which is where the previous modal article left the matter. In each case classical logic either assigns an arbitrary denotation or forbids the sentence, and neither is satisfactory.
+
+## Three variants
+
+The systems differ over what to say about an atomic sentence containing a non-denoting term, and the three answers exhaust the options.
+
+<TruthTable
+  columns={["Variant", "Atomic sentence with an empty term", "Example verdict"]}
+  rows={[
+    ["Positive", "may be true", "Pegasus is a winged horse: true"],
+    ["Negative", "always false", "Pegasus is a winged horse: false"],
+    ["Neutral", "neither true nor false", "Pegasus is a winged horse: gappy"]
+  ]}
+  caption="The three free logics and their treatment of the atomic case."
+/>
+
+Positive free logic is the most permissive and the most used, since it takes at face value the truth of claims about fictional and theoretical objects. It needs a semantics that supplies something for the term to be about.
+
+<Definition term="Outer domain">
+A second domain of a model, disjoint from or containing the domain of quantification, providing denotations for terms that do not denote anything existing. Quantifiers range over the inner domain only, while a predicate may hold of an object in the outer one, which is how a positive free logic makes a sentence about Pegasus true.
+</Definition>
+
+The construction is straightforward and the interpretation is contested. On a Meinongian reading the outer domain contains non-existent objects, which many find unacceptable. On a deflationary reading it is a technical device with no ontological commitment, the outer objects being surrogates rather than things, and this is how most working uses treat it.
+
+Negative free logic avoids the outer domain by stipulating falsity, which handles identity smoothly, since $t = t$ comes out false for an empty $t$ and no object is needed. The cost is that the truths about fiction and theory are all false, and the theory must explain their apparent truth by paraphrase or by a story-operator.
+
+Neutral free logic assigns a gap and inherits the machinery of the many-valued article, including the question of how compounds behave. It aligns with the view that a sentence with a non-denoting subject fails to express a proposition, which is Strawson's position on presupposition failure, and its supervaluational version is the standard formalisation of that position.
+
+## The empty domain
+
+<Definition term="Empty domain">
+A model with no objects at all, excluded by the classical definition of a model and permitted in free logic. In such a model every universally quantified sentence is true and every existentially quantified one is false, and the logic that results is called universally free or inclusive.
+</Definition>
+
+Admitting it costs one theorem, $\exists x\, (x = x)$, and gains the ability to reason about a domain one does not know to be occupied. The practical case is the one Quine noted: a theory of a hypothesised kind of particle should not have its existence as a theorem of logic, and the natural regimentation of "there are no unicorns" should not be logically false in a language containing a name for one.
+
+The relation to definite descriptions is where free logic and Russell's theory diverge. Russell eliminated descriptions by paraphrase, so that a sentence about the present king of France is false rather than truth-valueless, and no term fails to denote because no term is a term. Free logic keeps the description as a singular term and adjusts the logic instead. The outcomes differ for negation: Russell's theory makes the negation of the false sentence true on the wide scope reading, while a neutral free logic makes both gappy, and this is the standard test case between the approaches.
+
+<Objection>
+Nothing here requires a new logic. Russell showed how to handle descriptions, Quine showed how to convert any name into a description, and the result is a language in which every singular term denotes and classical logic applies unchanged. Free logic is a solution to a problem that the theory of descriptions had already solved.
+</Objection>
+
+<Reply>
+The Russell-Quine treatment works and it has a price that its defenders do not always count. Eliminating names requires that every name be replaced by a description, which means supplying a uniquely identifying condition for each, and for ordinary proper names no such condition is available, a point pressed at length in the literature on reference. It also imposes scope distinctions on sentences that show no sign of being ambiguous. Beyond that, several applications need free logic for reasons unconnected with descriptions: variable domain modal logic requires terms denoting at some worlds and not others, and no paraphrase removes the need; partial functions in computer science are handled by free logics directly, and the logics of definedness used in program verification are free logics; theories of positive and negative facts in the semantics of attitude reports use the outer domain machinery. The choice is between adjusting one rule of inference and rewriting the language, and the first has turned out to be the less disruptive.
+</Reply>
+
+## Next
+
+Modal logic has appeared in this tier as a formal subject with several semantics. It is also an applied one, and three of its applications have distinctive axioms, distinctive paradoxes and enough independent development to be treated together.
+
+<FurtherReading>
+  <li>Karel Lambert (ed.), *Philosophical Applications of Free Logic* (Oxford University Press, 1991).</li>
+  <li>Ermanno Bencivenga, "Free Logics", in *Handbook of Philosophical Logic*, volume 3 (Reidel, 1986), 373 to 426.</li>
+  <li>John Nolt, "Free Logic", *Stanford Encyclopedia of Philosophy*, available at [plato.stanford.edu](https://plato.stanford.edu/entries/logic-free/).</li>
+  <li>Bertrand Russell, "On Denoting", *Mind* 14 (1905), 479 to 493.</li>
+</FurtherReading>
