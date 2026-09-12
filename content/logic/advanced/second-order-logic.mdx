@@ -1,0 +1,89 @@
+---
+title: "Second-Order and Higher-Order Logic"
+subject: logic
+tier: advanced
+order: 10
+est_read_min: 24
+summary: Quantifying over properties, the categoricity it buys, and the metatheory it destroys
+prerequisites: ["model-theory-and-categoricity"]
+introduces: ["second-order logic", "standard semantics", "Henkin semantics", "comprehension schema"]
+requires: ["predicate", "completeness theorem", "compactness theorem", "Löwenheim-Skolem theorem", "categoricity"]
+added: "2026-09-12"
+---
+
+First-order logic quantifies over the objects a structure contains. It does not quantify over the properties those objects have, which is why induction has to be stated as a schema with one instance per formula rather than as the single axiom Dedekind wrote: every property holding of zero and closed under successor holds of every number.
+
+Removing that restriction is a small change to the syntax and an enormous change to everything else. This article sets out what is gained, what is lost, and why the question of whether the result is logic at all has never been settled.
+
+## The system
+
+<Definition term="Second-order logic">
+The extension of first-order logic with variables for relations and functions on the domain, and quantifiers binding them. A sentence may say that every property with a given closure condition holds universally, or that some relation with a stated feature exists, without the property or relation being named by a formula.
+</Definition>
+
+The induction axiom becomes $\forall X\,((X0 \wedge \forall n\,(Xn \rightarrow Xsn)) \rightarrow \forall n\,Xn)$, a single sentence. The least upper bound axiom for the reals becomes a single sentence saying every bounded nonempty set of reals has a least upper bound. Both were schemas in the first-order treatment, and the difference is not cosmetic: a schema has one instance per formula, and there are only countably many formulas, so a schema constrains only the countably many definable sets, while the second-order axiom constrains all of them.
+
+Higher-order logic continues the ascent, adding variables for properties of properties and so on up the finite types. Each further order adds expressive power in principle, though in practice second order is where the interesting results are, since the pattern established there repeats.
+
+## Two semantics
+
+The syntax is unambiguous and the semantics is not. When a sentence says every property, which properties does the quantifier range over?
+
+<Definition term="Standard semantics">
+The interpretation on which a second-order relation variable ranges over the full power set of the relevant product of the domain, so that every set of elements, definable or not, is in range. Under it, the second-order quantifier means what it appears to mean.
+</Definition>
+
+<Definition term="Henkin semantics">
+The interpretation on which a model specifies, alongside its domain, a collection of relations for the second-order variables to range over, required to be closed under the operations definable in the language. Second-order logic so interpreted is a two-sorted first-order logic in disguise.
+</Definition>
+
+Under standard semantics the promised results arrive. Second-order Peano arithmetic is categorical: all its models are isomorphic to the natural numbers, by Dedekind's argument, since the induction axiom applied to the set of standard elements forces every element to be standard. Second-order real analysis is categorical, all models being isomorphic to the real field. The ambiguity that nonstandard models exploited is closed off, because the induction axiom now speaks of the set of standard elements whether or not a formula defines it.
+
+The cost is stated by a theorem.
+
+<Argument name="Why categoricity and completeness cannot coexist">
+<Premise>Second-order arithmetic under standard semantics is categorical, so for every arithmetical sentence, either it or its negation is a semantic consequence of the axioms.</Premise>
+<Premise>A complete proof system would therefore decide every arithmetical sentence from a finite axiom set, since the second-order axioms are finitely many.</Premise>
+<Premise>The first incompleteness theorem forbids any effective complete axiomatisation of arithmetical truth.</Premise>
+<Conclusion>Second-order logic under standard semantics has no complete proof system, and the set of its validities is not recursively enumerable.</Conclusion>
+</Argument>
+
+The failures do not stop at completeness. Compactness fails, since the sentence set consisting of second-order arithmetic together with $c > \bar{n}$ for every numeral is finitely satisfiable and unsatisfiable. The Löwenheim-Skolem theorem fails, since second-order real analysis has only models of the cardinality of the continuum. And the consequence relation is entangled with set theory: the continuum hypothesis is equivalent to a sentence of pure second-order logic, so which second-order sentences are valid depends on questions independent of the axioms of set theory. Nothing about the validity of that sentence can be settled by reasoning in the logic, since the logic has no proof system in which to reason.
+
+Henkin semantics restores everything. Completeness, compactness and Löwenheim-Skolem all hold, because a Henkin model is a first-order structure of a two-sorted signature. What is lost is exactly the categoricity, since a Henkin model of arithmetic whose second-order domain omits the set of standard elements is a nonstandard model satisfying the induction axiom. The two semantics are not variants of a single logic with a shared metatheory; they are different logics that share a syntax.
+
+## Comprehension
+
+The bridge between them is an axiom schema.
+
+<Definition term="Comprehension schema">
+The schema asserting, for each formula $\varphi$ of the language, that there exists a relation holding of exactly the tuples satisfying it: $\exists X\,\forall \bar{x}\,(X\bar{x} \leftrightarrow \varphi(\bar{x}))$. Full comprehension permits $\varphi$ to contain second-order quantifiers, in which case the schema is impredicative, since the relation asserted to exist is in the range of quantifiers occurring in the condition defining it.
+</Definition>
+
+A Henkin model satisfies the comprehension schema exactly when its second-order domain contains every set definable by a formula with parameters from the model. Standard models satisfy it trivially, having every set. So comprehension is the axiom that forces a Henkin model partway toward a standard one, and how far it gets depends on which formulas are allowed.
+
+That dependence is what makes the schema interesting. Restricting $\varphi$ to formulas without second-order quantifiers gives arithmetical comprehension, a predicative principle that Weyl argued was all analysis needs. Allowing arbitrary $\varphi$ gives the impredicative full schema, the target of Poincaré's and Russell's objections and of the vicious circle principle. Between them lies a graded family of systems, and comparing what each one proves is the subject of the next article.
+
+<Objection>
+Quine's charge is that second-order logic is "set theory in sheep's clothing". A second-order quantifier ranging over the full power set carries the ontological commitments of set theory while dressing them as logic, and the evidence is that its consequence relation settles the continuum hypothesis. Logic ought to be topic-neutral and its validities ought to be knowable; a logic whose validity question is not even arithmetically definable has given up both.
+</Objection>
+
+<Reply>
+Boolos replied that the commitment is less than it appears, since the plural reading of second-order quantifiers takes "there are some things such that" as committing one to the things, not to a further object collecting them. On that reading second-order logic quantifies over no sets at all, and the sentence about the continuum is not about a set of sets but about how many things there are. Shapiro adds that the demand for an effective proof system assumes what is at issue: if the point of a logic is to codify consequence, and consequence for a categorical theory is not effectively codifiable, then the incompleteness is a fact about the subject matter rather than a defect of the logic. Quine's charge survives the exchange in a modified form, which is that the plural reading works smoothly for monadic second-order quantification and less smoothly for polyadic, and that the boundary between logic and mathematics drawn by topic-neutrality was never sharp enough to bear this weight. The dispute is live, and this article takes no side beyond recording that the formal facts are agreed by everyone and the classification is not.
+</Reply>
+
+<Aside title="Where the categoricity argument actually lives">
+Dedekind's proof that the second-order axioms are categorical is itself carried out in a background theory, usually set theory. Read from inside that theory, the argument shows that any two models are isomorphic. Read from outside, the argument is available in any model of set theory, including nonstandard ones, and a nonstandard model of set theory will call some of its own nonstandard structures the natural numbers. Categoricity is therefore relative to the background, a point made by Skolem and pressed by Putnam. It does not make the result empty, but it does mean that second-order categoricity secures reference only for someone whose set theory was already determinate.
+</Aside>
+
+## Next
+
+Comprehension comes in strengths, and a natural experiment presents itself: take the theorems of ordinary mathematics one at a time and find the weakest comprehension principle each requires. The answer, remarkably, is that almost every theorem is equivalent to one of a very small number of systems.
+
+<FurtherReading>
+  <li>Stewart Shapiro, *Foundations without Foundationalism: A Case for Second-Order Logic* (Oxford University Press, 1991).</li>
+  <li>George Boolos, "To Be Is to Be a Value of a Variable (or to Be Some Values of Some Variables)", *Journal of Philosophy* 81 (1984), 430 to 449.</li>
+  <li>Leon Henkin, "Completeness in the Theory of Types", *Journal of Symbolic Logic* 15 (1950), 81 to 91.</li>
+  <li>Willard Van Orman Quine, *Philosophy of Logic*, second edition (Harvard University Press, 1986).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Second-order and Higher-order Logic"](https://plato.stanford.edu/entries/logic-higher-order/).</li>
+</FurtherReading>
