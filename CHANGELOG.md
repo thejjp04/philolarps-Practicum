@@ -7,8 +7,13 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-14 changes.
+19 changes.
 
+- Add logic advanced rung 19: many-valued logics ([cc434ad](https://github.com/thejjp04/philolarps/commit/cc434ad))
+- Add logic advanced rung 18: relevance logic and paraconsistency ([43ef50c](https://github.com/thejjp04/philolarps/commit/43ef50c))
+- Add logic advanced rung 17: substructural logics ([1637ccc](https://github.com/thejjp04/philolarps/commit/1637ccc))
+- Add logic advanced rung 16: the Curry-Howard correspondence ([6bbc78a](https://github.com/thejjp04/philolarps/commit/6bbc78a))
+- Regenerate changelog ([79a477c](https://github.com/thejjp04/philolarps/commit/79a477c))
 - Add logic advanced rung 15: intuitionistic logic and Kripke semantics ([c89e2ef](https://github.com/thejjp04/philolarps/commit/c89e2ef))
 - Add logic advanced rung 14: non-normal modal logics ([1c037a6](https://github.com/thejjp04/philolarps/commit/1c037a6))
 - Add logic advanced rung 13: quantified modal logic and the Barcan formulas ([7236c79](https://github.com/thejjp04/philolarps/commit/7236c79))
