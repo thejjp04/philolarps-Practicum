@@ -1,0 +1,83 @@
+---
+title: "Relevance Logic and Paraconsistency"
+subject: logic
+tier: advanced
+order: 18
+est_read_min: 22
+summary: "Rejecting explosion, the variable sharing constraint, and dialetheism"
+prerequisites: ["substructural-logics"]
+introduces: ["explosion", "relevance logic", "paraconsistent logic", "dialetheism", "variable sharing"]
+requires: ["disjunctive syllogism", "semantic consequence", "substructural logic", "intuitionistic logic"]
+added: "2026-09-12"
+---
+
+Classical logic holds that a contradiction entails everything. The principle is not an oddity at the edge of the system; it follows from rules nobody proposes to give up, and it means that any theory containing a single inconsistency contains every sentence of its language.
+
+<Definition term="Explosion">
+The principle that from $\varphi$ and $\neg \varphi$ any sentence whatever follows, known also by the medieval name ex contradictione quodlibet. It holds in classical and intuitionistic logic alike.
+</Definition>
+
+The standard derivation, usually attributed to the twelfth-century logician William of Soissons and rediscovered by Lewis, is three steps.
+
+<Argument name="Explosion from disjunction introduction and disjunctive syllogism">
+<Premise>Assume $\varphi$ and $\neg \varphi$.</Premise>
+<Premise>From $\varphi$, by disjunction introduction, $\varphi \lor \psi$ for arbitrary $\psi$.</Premise>
+<Premise>From $\varphi \lor \psi$ and $\neg \varphi$, by disjunctive syllogism, $\psi$.</Premise>
+<Conclusion>Any $\psi$ whatever follows from a contradiction.</Conclusion>
+</Argument>
+
+Both rules are individually compelling and the conclusion is not. Every response to explosion is a decision about which of the two to restrict, and the decision is forced.
+
+## Relevance
+
+<Definition term="Relevance logic">
+A family of systems requiring that the premises of a valid argument bear on its conclusion, developed principally by Alan Ross Anderson and Nuel Belnap from the 1950s and formalised in the systems E, R and their relatives. Relevance logics are substructural, obtained by dropping weakening, which is the rule licensing the introduction of premises that play no part.
+</Definition>
+
+<Definition term="Variable sharing">
+The necessary condition these systems impose: if $\varphi \rightarrow \psi$ is a theorem, then $\varphi$ and $\psi$ share a propositional variable. The condition rules out the paradoxes of material and strict implication, since $\varphi \rightarrow (\psi \rightarrow \psi)$ and $(\varphi \land \neg \varphi) \rightarrow \psi$ both fail it.
+</Definition>
+
+Variable sharing is a test rather than an analysis, since sharing a variable is clearly not sufficient for relevance. What the systems provide beyond the test is a semantics, and its central device is due to Richard Routley and Robert Meyer in 1973: a ternary accessibility relation, with the conditional evaluated by quantifying over pairs of worlds related to the world of evaluation. Alongside it sits the Routley star, an operation taking each world to a mate at which negation is evaluated, so that $\neg \varphi$ holds at a world when $\varphi$ fails at its star. Worlds distinct from their own star are where a contradiction can hold without collapse.
+
+The semantics has been criticised as unmotivated, the ternary relation and the star having been introduced to make the axioms come out valid rather than for an independent reason. Later work has answered with informational readings, on which a world is a body of information and the ternary relation records that one body applied to another yields a third, and with the connection to substructural proof theory, where the same structures arise from the residuation that dropping weakening produces.
+
+## Paraconsistency
+
+<Definition term="Paraconsistent logic">
+A logic whose consequence relation is not explosive, so that a theory may contain a contradiction without containing every sentence. Relevance logics are paraconsistent, and so are systems reached by other routes, including da Costa's C systems, Priest's logic of paradox and the discussive logic of Jaśkowski.
+</Definition>
+
+Paraconsistency is the weaker and more widely accepted commitment. It requires only that inconsistency be contained, and that requirement has uses no one need find revisionary: a database receiving conflicting reports should support queries rather than return every answer; a theory under development may contain a known inconsistency while remaining worth reasoning in, as the early calculus did for a century and a half; belief revision needs a stage at which contradictory beliefs are held and worked on.
+
+The restriction paraconsistent systems impose is on disjunctive syllogism, and this is the cost. That rule is used constantly and correctly, and a logic rejecting it outright has given up an inference that works. The usual reply distinguishes the rule's validity from its reliability: it fails only in inconsistent situations, and in a consistent theory it can be recovered, either as an admissible rule or through a nonmonotonic mechanism permitting its use until a contradiction appears. Relevance logics have a result of this kind, the Anderson-Belnap admissibility theorem, which says that adding disjunctive syllogism to the system R yields no new theorems.
+
+## Dialetheism
+
+<Definition term="Dialetheism">
+The thesis that some contradictions are true, so that certain sentences are both true and false. Defended principally by Graham Priest, it is a metaphysical position, distinct from the logical thesis of paraconsistency, which concerns only the consequence relation and carries no commitment to any contradiction being true.
+</Definition>
+
+The distinction matters and is often missed. Paraconsistency is a claim about which arguments are valid; dialetheism is a claim about which sentences are true. One can be paraconsistent for any of the practical reasons above and hold that every contradiction is false.
+
+The case for dialetheism rests chiefly on the paradoxes, and the liar is the leading example. Every consistent solution, on Priest's argument, faces a strengthened version, as the article on Tarski described: declare the liar neither true nor false and the sentence saying of itself that it is not true returns the problem. The dialetheist accepts that the liar is both true and false, stops the regress at the first step, and pays by needing a logic in which that does not trivialise. Priest offers further cases, including Russell's paradox with naive comprehension retained, and the boundary cases of vague predicates.
+
+<Objection>
+The dialetheist cannot express disagreement. To deny a claim is to assert its negation, and on this view asserting the negation is compatible with the original claim being true, so the denial fails to exclude anything. If no assertion rules anything out, assertion has lost its content, and the position is self-undermining not because it is inconsistent, which it accepts, but because it cannot say so.
+</Objection>
+
+<Reply>
+Priest's response is to take rejection as a speech act distinct from the assertion of a negation, so that disagreeing is refusing to accept rather than accepting the negation. On that account denial is expressible after all and does exclude something, namely acceptance. Critics reply that this relocates the difficulty rather than solving it, since the dialetheist must then hold that acceptance and rejection of the same claim are jointly incoherent, and that incoherence is a consistency constraint at the level of attitudes which was supposed to have been abandoned. Some dialetheists accept the consequence and hold that rational agents may be in such a state. The exchange has not converged, and it is worth separating the two questions it runs together: whether paraconsistent logics are worth having is now settled affirmatively on practical grounds, and whether any contradiction is true remains a minority position with a serious argument behind it.
+</Reply>
+
+## Next
+
+Rejecting explosion invites a semantics with more than two values, since a sentence both true and false is naturally assigned a value other than either. That machinery is the subject of the next article, along with the gap that the opposite response to the liar requires.
+
+<FurtherReading>
+  <li>Alan Ross Anderson and Nuel D. Belnap, *Entailment: The Logic of Relevance and Necessity*, volume 1 (Princeton University Press, 1975).</li>
+  <li>Graham Priest, *In Contradiction*, second edition (Oxford University Press, 2006).</li>
+  <li>Graham Priest, *An Introduction to Non-Classical Logic*, second edition (Cambridge University Press, 2008).</li>
+  <li>Richard Routley and Robert K. Meyer, "The Semantics of Entailment", in *Truth, Syntax and Modality* (North-Holland, 1973), 199 to 243.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Paraconsistent Logic"](https://plato.stanford.edu/entries/logic-paraconsistent/).</li>
+</FurtherReading>
