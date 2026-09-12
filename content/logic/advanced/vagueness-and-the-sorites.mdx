@@ -1,0 +1,84 @@
+---
+title: "Vagueness and the Sorites"
+subject: logic
+tier: advanced
+order: 20
+est_read_min: 26
+summary: "Supervaluationism, degree theories, epistemicism, and the problem of higher-order vagueness"
+prerequisites: ["many-valued-logics"]
+introduces: ["sorites paradox", "supervaluationism", "penumbral connection", "epistemicism about vagueness", "higher-order vagueness"]
+requires: ["truth value gap", "excluded middle", "designated value"]
+added: "2026-09-12"
+---
+
+A man with no hairs is bald. Adding one hair to a bald man leaves him bald. Therefore a man with a hundred thousand hairs is bald.
+
+<Definition term="Sorites paradox">
+An argument from an evidently true base case and an evidently true tolerance premise, by a long chain of apparently valid steps, to an evidently false conclusion. Attributed to Eubulides of Miletus in the fourth century BC, its name comes from the Greek for heap, the original version concerning how many grains make one.
+</Definition>
+
+The paradox is harder than it looks because all three components are compelling. The base case is not in dispute. The reasoning is nothing more than repeated modus ponens. The tolerance premise, that one hair cannot make the difference, is what vagueness appears to consist in: a predicate is vague when no single grain, hair or shade separates its cases. Denying tolerance means holding that some exact number of hairs is the last bald one, which seems to deny that the predicate is vague at all.
+
+## Supervaluationism
+
+The first systematic response keeps classical logic and gives up classical semantics.
+
+<Definition term="Supervaluationism">
+The theory on which a vague sentence is true when it comes out true on every admissible way of making the language precise, false when it comes out false on every such precisification, and neither when precisifications disagree. Developed by Kit Fine in 1975, following van Fraassen's treatment of presupposition failure.
+</Definition>
+
+A borderline man is bald on some precisifications and not on others, so the sentence saying he is bald is neither true nor false. That is the gap of the previous article. The distinctive move is what happens to compounds: excluded middle survives, because on every precisification either the man is bald or he is not, so the disjunction is true on all of them even though no disjunct is. Truth is not, on this view, truth on every precisification of the parts, and a disjunction can be supertrue with both disjuncts gappy.
+
+<Definition term="Penumbral connection">
+A logical relation holding among borderline cases regardless of how the vagueness is resolved. If one man has strictly less hair than another, the sentence saying that the first is bald if the second is comes out true even when both are borderline, because every admissible precisification respects the ordering.
+</Definition>
+
+Penumbral connections are the theory's best argument, since they are data that a straightforward gap theory gets wrong. Assigning both antecedent and consequent the third value makes the conditional gappy on the Kleene tables, and it should be true. Supervaluationism gets it right because admissibility constrains precisifications jointly rather than sentence by sentence.
+
+Applied to the sorites, the theory denies the tolerance premise, since on every precisification there is a last bald man, and so the universally quantified tolerance claim is false on every precisification and hence false. What it also says is that no particular instance of the negated premise is true, because different precisifications locate the cutoff differently. The existential is supertrue and no witness is. That is the theory's characteristic prediction and the point at which most objections are aimed.
+
+## Degrees
+
+The many-valued route assigns a sentence a degree of truth in the unit interval, and baldness declines continuously as hairs are added. The tolerance premise is then very nearly true, each conditional in the chain losing a negligible amount, and the accumulated loss over a hundred thousand steps takes the conclusion to zero. The paradox is diagnosed as the accumulation of small errors, which is a recognisable and unmysterious phenomenon.
+
+Two difficulties are usually pressed. The first is artificial precision: the theory requires that a borderline man is bald to exactly degree $0.6$ rather than $0.61$, and no fact appears to settle that. The second is that the standard degree-theoretic truth functions get penumbral connections wrong, since on the usual treatment a conditional between two sentences of equal degree comes out fully true only if the min rule is used, and other cases misbehave. The first difficulty is the more serious and generalises, as the next section shows.
+
+## Epistemicism
+
+<Definition term="Epistemicism about vagueness">
+The theory that vague predicates have sharp boundaries and that vagueness is ignorance of where they lie. Defended by Timothy Williamson in 1994 and by Roy Sorensen, it retains classical logic and bivalence in full and locates the phenomenon in an epistemic principle rather than in semantics.
+</Definition>
+
+On this view there is a last bald man, some exact hair count marks the boundary, and no one can know which. The tolerance premise is simply false. The position is widely regarded as counterintuitive and it has advantages that have kept it in play: no revision of logic, no revision of semantics, and a straightforward diagnosis of the paradox.
+
+The burden is to explain why the boundary is unknowable. Williamson's answer is a margin for error principle: knowledge requires that one would not easily have been wrong, so a belief about a case near the boundary fails to be knowledge because a slightly different case would have been misclassified. Meaning is determined by patterns of use, use does not settle the boundary in any way a speaker can survey, and the boundary nonetheless falls somewhere because the totality of use fixes it. The account has the merit of explaining ignorance rather than postulating it, and the standing objection is that a fact determined by nothing anyone could survey is not obviously a fact at all.
+
+## Higher-order vagueness
+
+<Definition term="Higher-order vagueness">
+The vagueness of the boundary between the clear cases and the borderline cases. If there is no sharp line between the bald and the borderline bald, the classification into three categories is itself vague, and the difficulty reappears one level up without limit.
+</Definition>
+
+This is the problem every theory must face and none handles cleanly. A gap theory posits a sharp boundary between the true and the gappy, which is precisely the kind of boundary it denied. A degree theory posits an exact degree at each point, and the exactness is the artificial precision noted above. Supervaluationism must say which precisifications are admissible, and admissibility is vague, so the theory needs precisifications of its own notion of admissibility, and the regress is not obviously benign.
+
+Epistemicism is the one theory for which higher-order vagueness is not an embarrassment, since it predicts sharp boundaries everywhere and explains the appearance of their absence by the same ignorance at every level. That this is the position's strongest structural argument, while being the hardest to accept, is a fair summary of the state of the debate.
+
+<Objection>
+The whole literature is a response to a feature of natural language that carries no theoretical weight. Vague predicates are tools for rough classification and work perfectly well for that; the paradox arises only when they are pressed into a regimented argument that no speaker would make. Scientific and mathematical language is made precise when precision matters, and the correct response to the sorites is to decline the question rather than to revise logic.
+</Objection>
+
+<Reply>
+The deflationary reading underestimates how far the phenomenon reaches. Nearly every predicate outside pure mathematics is vague, including those of the special sciences, so the proposal to regiment when precision matters does not describe a possible practice for most of what is said. It also misidentifies what the paradox is. The argument is not a piece of ordinary speech but a demonstration that three commitments are jointly inconsistent, and one of them must be given up whether or not anyone argues this way in conversation. Deciding which is a question about the semantics of ordinary predicates, and the answers have consequences elsewhere: Williamson's margin for error principle is a general epistemology, supervaluation is the standard treatment of partial denotation across several areas, and degree semantics is the basis of fuzzy control systems in use. The debate has earned its length by producing tools with employment beyond it.
+</Reply>
+
+## Next
+
+Conditionals have appeared throughout this article without being examined, and the tolerance premise in particular was read as a universally quantified conditional without comment. The conditional turns out to be the most contested construction in the subject, and the next article shows that its most natural semantics is provably unavailable.
+
+<FurtherReading>
+  <li>Timothy Williamson, *Vagueness* (Routledge, 1994).</li>
+  <li>Kit Fine, "Vagueness, Truth and Logic", *Synthese* 30 (1975), 265 to 300.</li>
+  <li>Rosanna Keefe, *Theories of Vagueness* (Cambridge University Press, 2000).</li>
+  <li>Rosanna Keefe and Peter Smith (eds), *Vagueness: A Reader* (MIT Press, 1997).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Vagueness"](https://plato.stanford.edu/entries/vagueness/).</li>
+</FurtherReading>
