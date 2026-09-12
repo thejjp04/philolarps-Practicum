@@ -1,0 +1,96 @@
+---
+title: "Reverse Mathematics"
+subject: logic
+tier: advanced
+order: 11
+est_read_min: 28
+summary: Finding the weakest axioms that prove a theorem, by proving the axioms from the theorem
+prerequisites: ["second-order-logic"]
+introduces: ["reverse mathematics", "subsystem of second-order arithmetic", "RCA-zero", "weak König's lemma", "arithmetical comprehension"]
+requires: ["second-order logic", "comprehension schema", "recursively enumerable set", "compactness theorem"]
+added: "2026-09-12"
+---
+
+Ordinary mathematics is proved from axioms that were never chosen for economy. Set theory suffices for essentially all of it, and it suffices with room to spare, which means that the question of how much strength a particular theorem actually consumes is left open by the standard practice of proving it.
+
+There is a way to close the question, and it is exact rather than approximate. Fix a weak base theory. To show that a theorem needs a given axiom, prove the axiom from the theorem.
+
+<Definition term="Reverse mathematics">
+The programme of determining, for each theorem of ordinary mathematics, the weakest set-existence axioms sufficient to prove it, by establishing an equivalence between the theorem and those axioms over a fixed weak base theory. Initiated by Harvey Friedman in the 1970s and developed principally by Stephen Simpson and his collaborators.
+</Definition>
+
+The name comes from the direction of the second implication. Proving the theorem from the axioms is mathematics. Proving the axioms from the theorem is the reversal, and it is what upgrades a sufficiency claim into an identification.
+
+## The setting
+
+The framework is second-order arithmetic: a two-sorted language with number variables and set-of-numbers variables, with the basic arithmetical axioms, induction, and a comprehension principle whose strength is the variable under study. The choice is deliberate. Most of ordinary mathematics can be coded into it, since a real number is a Cauchy sequence of rationals, a continuous function is coded by a countable set of rational approximations, and a separable Banach space by a countable dense subset. What is not codable, notably arbitrary sets of reals, is outside the programme's reach.
+
+<Definition term="Subsystem of second-order arithmetic">
+An axiomatic theory in the two-sorted language of second-order arithmetic obtained by restricting the comprehension schema, and correspondingly the induction schema, to a limited class of formulas. Five such subsystems account for the overwhelming majority of the equivalences found.
+</Definition>
+
+The five are known by acronyms and form a linear hierarchy. This article treats the lowest three, which carry most of the traffic.
+
+<Definition term="RCA-zero">
+The recursive comprehension axiom, the base theory of reverse mathematics. It asserts the existence of sets definable by a condition expressible both with a bounded existential arithmetical formula and with a bounded universal one, which by Post's theorem means the recursive sets, together with induction for existential arithmetical formulas.
+</Definition>
+
+The intended model of this theory has the natural numbers with exactly the recursive sets as its second-order part, which is why it is a formalisation of computable mathematics. It proves a fair amount: the intermediate value theorem, the existence of the algebraic closure of a countable field, basic facts about continuous functions on closed intervals. It does not prove that every bounded increasing sequence of rationals converges, because the limit of a recursive such sequence need not be recursive.
+
+## Weak König's lemma
+
+The first step up is not a comprehension axiom in form, but a combinatorial statement.
+
+<Definition term="Weak König's lemma">
+The statement that every infinite subtree of the binary tree has an infinite path. The full lemma, for finitely branching trees, is stronger; the restriction to binary branching is what yields the system called WKL-zero when the statement is added to the base theory.
+</Definition>
+
+The lemma is false when sets are required to be recursive, by a result of Kleene: there is an infinite recursive binary tree with no recursive infinite path. So the system genuinely exceeds the base theory. It is nonetheless weak in a precise sense established by Harrington, namely that it proves no arithmetical sentence the base theory does not prove, which means that adding it is conservative for the purposes of ordinary arithmetical statements.
+
+What is equivalent to it, over the base theory, is a list that reads like an inventory of compactness.
+
+<Argument name="Statements equivalent to weak König's lemma">
+<Premise>The Heine-Borel theorem for the closed unit interval.</Premise>
+<Premise>Every continuous real function on a closed bounded interval is uniformly continuous, and attains a maximum.</Premise>
+<Premise>The Hahn-Banach theorem for separable Banach spaces.</Premise>
+<Premise>Gödel's completeness theorem for countable languages.</Premise>
+<Premise>Every countable commutative ring has a prime ideal.</Premise>
+</Argument>
+
+The presence of the completeness theorem on that list is the connection to the rest of this tier. Completeness is proved by a Henkin construction that builds a maximal consistent extension, and the choices made at each step form a path through a binary tree. The strength of the completeness theorem is precisely the strength of asserting that such a path exists, and the compactness theorem sits at the same level for the same reason. A result that looked foundational turns out to consume a specific and modest amount of set existence.
+
+The system also has an interpretation Hilbert would have recognised. Simpson observed that its conservativity over primitive recursive arithmetic for a suitable class of sentences means that the mathematics it proves is finitistically reducible, so a substantial portion of analysis is available on terms the Hilbert programme would have accepted, the incompleteness theorems notwithstanding.
+
+## Arithmetical comprehension
+
+The next system is the one Weyl's predicativism singled out.
+
+<Definition term="Arithmetical comprehension">
+The principle asserting the existence of every set definable by a formula containing no set quantifiers, though possibly containing set parameters. Added to the base theory it gives the system ACA-zero, whose first-order consequences are exactly those of Peano arithmetic.
+</Definition>
+
+Its intended model has the arithmetical sets as the second-order part. It proves the existence of the Turing jump, and it is in fact equivalent to the existence of the range of any injection, which is the abstract form of the same fact.
+
+The equivalences over the base theory again form a natural family: the Bolzano-Weierstrass theorem, the statement that every bounded increasing sequence of reals converges, the existence of the least upper bound of a bounded set of reals, König's lemma in full, the Ascoli-Arzelà theorem, and the existence of a maximal ideal in a countable commutative ring. The contrast with the previous list is instructive. Prime ideals need only compactness; maximal ideals need arithmetical comprehension. Two theorems that appear alongside one another in an algebra course are separated by a genuine difference in strength.
+
+Above these sit two further systems, for arithmetical transfinite recursion and for a comprehension principle allowing one set quantifier, and the pattern continues. Ramsey's theorem for pairs is the well-known exception that resisted classification for decades and turned out not to be equivalent to any of the five, which prompted a substantial literature of its own.
+
+<Objection>
+The base theory is not neutral. It embodies a computability-minded conception of what sets there are, and every equivalence proved over it is an equivalence relative to that choice. Shift the base and the classification shifts, so the programme measures theorems against a stipulation rather than discovering something about them. Beyond that, the coding restricts attention to countable and separable objects, and the claim that this captures ordinary mathematics is a claim about a fragment.
+</Objection>
+
+<Reply>
+Both points are correct and neither undermines the results. The base theory must be weak enough not to prove the axioms under test, and any theory meeting that condition will embody some conception; the recursive one is chosen because it is the weakest natural theory in which ordinary mathematical practice can be conducted at all, and the equivalences established over it have been checked to be robust under the variations of base that have been proposed. The coding restriction is a real limitation and is acknowledged in the literature rather than hidden. What remains after both concessions is not small: the observation that hundreds of theorems from analysis, algebra and combinatorics fall into five levels, that the levels are linearly ordered, and that theorems adjacent in mathematical practice can sit at different levels, is a discovery about mathematics that no stipulation could produce on its own. The programme's results are conditional on its framework in the way every formal result is conditional on its framework.
+</Reply>
+
+## Next
+
+This is the last article on classical metatheory. What follows changes the object of study from theories to modalities and from truth-preservation to other constraints on inference. The immediate next question is one left open in the modal material: the frame conditions used there were introduced by fiat, and there is a systematic theory of which modal axioms correspond to which conditions on frames.
+
+<FurtherReading>
+  <li>Stephen G. Simpson, *Subsystems of Second Order Arithmetic*, second edition (Cambridge University Press, 2009).</li>
+  <li>John Stillwell, *Reverse Mathematics: Proofs from the Inside Out* (Princeton University Press, 2018).</li>
+  <li>Denis R. Hirschfeldt, *Slicing the Truth* (World Scientific, 2015).</li>
+  <li>Harvey Friedman, "Some Systems of Second Order Arithmetic and Their Use", *Proceedings of the International Congress of Mathematicians, Vancouver 1974*, volume 1, 235 to 242.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Reverse Mathematics"](https://plato.stanford.edu/entries/reverse-mathematics/).</li>
+</FurtherReading>
