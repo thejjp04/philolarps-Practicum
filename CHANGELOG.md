@@ -7,8 +7,13 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-9 changes.
+14 changes.
 
+- Add logic advanced rung 15: intuitionistic logic and Kripke semantics ([c89e2ef](https://github.com/thejjp04/philolarps/commit/c89e2ef))
+- Add logic advanced rung 14: non-normal modal logics ([1c037a6](https://github.com/thejjp04/philolarps/commit/1c037a6))
+- Add logic advanced rung 13: quantified modal logic and the Barcan formulas ([7236c79](https://github.com/thejjp04/philolarps/commit/7236c79))
+- Add logic advanced rung 12: correspondence theory ([3d784e1](https://github.com/thejjp04/philolarps/commit/3d784e1))
+- Regenerate changelog ([e996694](https://github.com/thejjp04/philolarps/commit/e996694))
 - Add logic advanced rung 11: reverse mathematics ([b5f600c](https://github.com/thejjp04/philolarps/commit/b5f600c))
 - Add logic advanced rung 10: second-order and higher-order logic ([b21ffec](https://github.com/thejjp04/philolarps/commit/b21ffec))
 - Regenerate changelog ([6038c28](https://github.com/thejjp04/philolarps/commit/6038c28))
