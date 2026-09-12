@@ -7,8 +7,11 @@ Regenerate with `npm run changelog`.
 
 ## 12 September 2026
 
-22 changes.
+25 changes.
 
+- Add logic advanced rung 23: inductive logic and the Carnap programme ([c44cd33](https://github.com/thejjp04/philolarps/commit/c44cd33))
+- Add logic advanced rung 22: probability logic and uncertain premises ([6fdb7db](https://github.com/thejjp04/philolarps/commit/6fdb7db))
+- Regenerate changelog ([66d4e96](https://github.com/thejjp04/philolarps/commit/66d4e96))
 - Add logic advanced rung 21: conditionals and the triviality results ([62106d8](https://github.com/thejjp04/philolarps/commit/62106d8))
 - Add logic advanced rung 20: vagueness and the sorites ([9d8c652](https://github.com/thejjp04/philolarps/commit/9d8c652))
 - Regenerate changelog ([b69b0d4](https://github.com/thejjp04/philolarps/commit/b69b0d4))
