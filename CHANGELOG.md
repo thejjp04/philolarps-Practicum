@@ -5,10 +5,17 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 16 September 2026
+
+1 change.
+
+- Add Vercel Web Analytics ([a32d29c](https://github.com/thejjp04/philolarps/commit/a32d29c))
+
 ## 12 September 2026
 
-29 changes.
+30 changes.
 
+- Regenerate changelog ([636d626](https://github.com/thejjp04/philolarps/commit/636d626))
 - Add logic advanced rung 26: what makes a constant logical ([e1e1dd1](https://github.com/thejjp04/philolarps/commit/e1e1dd1))
 - Add logic advanced rung 25: temporal, deontic, and epistemic logic ([11a67da](https://github.com/thejjp04/philolarps/commit/11a67da))
 - Add logic advanced rung 24: free logic ([a8dd167](https://github.com/thejjp04/philolarps/commit/a8dd167))
