@@ -1,0 +1,123 @@
+---
+title: Bayesian Confidence and Credence, Introduced
+subject: epistemology
+tier: intermediate
+order: 16
+est_read_min: 18
+summary: "Belief as a matter of degree, and updating those degrees on new evidence"
+prerequisites: ["problem-of-induction"]
+introduces: ["credence", "degree of belief", "conditional probability", "prior probability", "posterior probability", "Bayes's theorem"]
+requires: ["belief", "induction", "justification"]
+added: "2026-09-19"
+---
+
+Everything so far has treated belief as something a person either has or lacks. That treatment is a simplification, and an obvious one. You believe it will rain this afternoon, and you believe the sun will rise, and you do not hold these with the same grip. The first is a leaning and the second is not, and a theory that assigns both the single label believes has thrown away the difference.
+
+This article introduces the framework that keeps it. The shift is not a refinement of what came before. It changes what the objects of epistemic evaluation are, what the norms governing them look like, and what the problem of induction turns into.
+
+## Belief by degrees
+
+<Definition term="Degree of belief">
+The strength with which a person holds a proposition, understood as admitting of gradations rather than being all or nothing.
+</Definition>
+
+<Definition term="Credence">
+A degree of belief represented numerically on a scale from 0 to 1, where 0 is certainty that the proposition is false and 1 is certainty that it is true.
+</Definition>
+
+The numerical representation needs defending, since nobody experiences their confidence as a decimal. The standard defence is behavioural and runs through betting. If you are willing to pay up to seventy pence for a ticket that pays one pound if it rains, and unwilling to pay more, your betting behaviour reveals a threshold, and that threshold is what the number records. The claim is not that you consciously entertain the figure but that your dispositions determine one.
+
+Frank Ramsey made this argument in 1926 and Bruno de Finetti independently in 1931, and both drew the same striking conclusion from it: the laws of probability are not an optional extra imposed on degrees of belief but a consequence of not being exploitable.
+
+<Argument name="The Dutch book argument">
+  <Premise>A person's degrees of belief determine the odds at which they will accept bets.</Premise>
+  <Premise>If those degrees violate the axioms of probability, there is a set of bets each of which they will accept and which together guarantee a loss whatever happens.</Premise>
+  <Premise>Accepting a set of bets that guarantees a loss regardless of the outcome is irrational.</Premise>
+  <Conclusion>Degrees of belief ought to satisfy the axioms of probability.</Conclusion>
+</Argument>
+
+The requirement the argument establishes is called probabilism. Credences must be non-negative, certainty in a logical truth must be 1, and the credence in a disjunction of incompatible propositions must be the sum of the credences in each. The advanced tier examines whether the argument really establishes this, since the betting interpretation has well-known weaknesses and there are non-pragmatic arguments that reach the same conclusion by considering accuracy instead.
+
+## Conditioning
+
+<Definition term="Conditional probability">
+The probability of one proposition on the supposition that another holds, written $P(h \mid e)$ and defined as $P(h \wedge e) / P(e)$ whenever $P(e) > 0$.
+</Definition>
+
+Conditional probability is what lets the framework represent learning. Your unconditional confidence that a patient has a disease is one thing; your confidence on the supposition that their test came back positive is another, and the second is what you want when the result arrives.
+
+<Definition term="Prior probability">
+The credence assigned to a proposition before the evidence in question is taken into account.
+</Definition>
+
+<Definition term="Posterior probability">
+The credence assigned to a proposition after the evidence has been taken into account.
+</Definition>
+
+The rule connecting them is conditionalisation: on learning $e$ and nothing stronger, your new credence in $h$ should equal your old conditional credence in $h$ given $e$. The posterior is the old conditional probability, promoted.
+
+## The theorem
+
+<Definition term="Bayes's theorem">
+The result that $P(h \mid e) = P(e \mid h) \cdot P(h) / P(e)$, which expresses the probability of a hypothesis given evidence in terms of the probability of that evidence given the hypothesis, the prior probability of the hypothesis, and the overall probability of the evidence.
+</Definition>
+
+The theorem is a trivial consequence of the definition of conditional probability, and its importance is entirely in what it makes visible. It says that how much a piece of evidence should move you depends on three things, and one of them is routinely forgotten.
+
+The likelihood $P(e \mid h)$ measures how expected the evidence is if the hypothesis is true. The prior $P(h)$ measures how plausible the hypothesis was beforehand. And the marginal $P(e)$ measures how expected the evidence was overall, whether or not the hypothesis holds. Evidence confirms a hypothesis to the extent that it is more expected under that hypothesis than it is in general.
+
+The standard illustration is a medical test. A disease affects one person in a thousand. The test detects it in ninety-nine per cent of those who have it and returns a false positive for five per cent of those who do not. Your test is positive. What is the probability that you have the disease?
+
+Work it through with a population of a hundred thousand. A hundred people have the disease, and ninety-nine of them test positive. Of the remaining 99,900, five per cent test positive, which is 4,995 people. So 5,094 positive results, of which 99 are genuine. The probability that a positive result is a true one is about 1.9 per cent.
+
+The answer is famously counterintuitive, and what generates the intuition of near-certainty is neglect of the prior. The test is accurate. It is just that a rare condition starts so far behind that even strong evidence leaves it improbable.
+
+<Aside title="What the theorem is not">
+Two misreadings are common enough to be worth heading off.
+
+The theorem is not a method for generating hypotheses. It tells you how to redistribute confidence over hypotheses you have already formulated, and says nothing about where they come from or what to do about a hypothesis nobody has thought of. The problem of the catch-all, the possibility that the truth is not in the set under consideration, is a live one and the framework has no clean answer.
+
+The theorem is also not in dispute. It is a theorem, provable in two lines. What is in dispute is the epistemology built around it: that degrees of belief should obey the probability axioms, that learning should proceed by conditionalisation, and that this exhausts what rational belief revision amounts to. Someone can accept the mathematics entirely and reject all three.
+</Aside>
+
+## What the framework does to the old questions
+
+The shift to credences changes the shape of nearly everything in the preceding articles.
+
+Justification becomes coherence plus a rule. There is no regress, because credences are not supported by other credences in a chain; they are constrained all at once by the probability axioms, and revised by a rule. The trilemma has no purchase, which is either an elegant dissolution or an evasion depending on where the priors come from.
+
+Induction becomes a question about priors. Given a prior distribution, the theorem determines exactly how observed cases should raise confidence in a generalisation, and the calculation is uncontroversial. What the framework cannot do is tell you which priors to start with, and Hume's problem reappears precisely there: a prior that assigns high probability to a grue-like hypothesis is coherent, updates correctly, and predicts differently. The convergence theorems establish that agents with different priors eventually agree given enough evidence, which is a real result and not a solution, since eventually can be arbitrarily long and the theorems assume the evidence keeps coming.
+
+The relationship between credence and ordinary belief becomes a problem in its own right. The natural thought is that believing something is having a credence above some threshold, and the lottery paradox blocks it. With a million tickets, rationality permits high confidence that each particular ticket will lose, so any threshold below one licenses belief that ticket one loses, and that ticket two loses, and so on for all million. If belief is closed under conjunction, you believe no ticket wins, which you know to be false. Either belief is not a credence threshold, or belief is not closed under conjunction, and neither option is comfortable.
+
+## The scope of the programme
+
+Bayesian epistemology is now the dominant framework in formal epistemology, in statistics, and in the philosophy of science, and it is not a general replacement for the epistemology of the preceding articles. It says nothing about knowledge. Gettier cases are not addressed, because the framework has no account of when a high credence amounts to knowing. Safety and sensitivity are not probabilistic conditions, though they have probabilistic cousins.
+
+What it supplies is a theory of rational confidence and its revision, stated precisely enough to prove things about. The two projects are not competitors, and the interesting question, which the advanced tier takes up, is how they fit together.
+
+<Objection>
+Real people do not have credences. Ask anyone for their confidence that it will rain and you get a shrug, or a number pulled out of the air that changes if you ask again an hour later. The framework requires a sharp value for every proposition in an infinite algebra, requires logical omniscience since all logical truths get credence 1, and requires perfect memory of conditional commitments made before the evidence arrived. No human satisfies any of these conditions. A theory of rationality that no possible agent could instantiate is not a theory of human rationality.
+</Objection>
+
+<Reply>
+The descriptive claim is right and the inference from it is the disputed step.
+
+Bayesians standardly present the framework as normative, a standard against which actual reasoning is measured rather than a description of it. That deontic response has a limit, captured in the principle that ought implies can, and logical omniscience is where it bites hardest. Requiring credence 1 in every logical truth demands that a reasoner already know every theorem of mathematics, and no amount of effort gets a finite agent there. This is not a shortfall from an ideal; it is an ideal no agent could approach.
+
+The framework has responses of two kinds. Some are internal: imprecise credences replace single numbers with sets of them, which handles the shrug, and there is substantial work on logical uncertainty for agents who cannot see all consequences. Others are external: the framework is offered as an idealisation in the sense that frictionless planes are, useful because tractable and known to be false in detail.
+
+What the objection correctly establishes is that the framework's norms cannot be action-guiding for us in any direct way, which matters because guidance was one of the things the internalist wanted from a theory of justification. A norm you cannot apply is in the same position as the externalist justification the internalist objected to, and it is a nice irony that the most formally precise part of epistemology ends up owing the same debt as the least.
+</Reply>
+
+## Next
+
+Two social sources of belief that the framework so far has treated as though they were ordinary evidence: what other people tell us, and what to do when someone just as careful disagrees.
+
+<FurtherReading>
+  <li>Frank P. Ramsey, "Truth and Probability", in *The Foundations of Mathematics and Other Logical Essays* (Kegan Paul, 1931), pages 156 to 198.</li>
+  <li>Bruno de Finetti, "Foresight: Its Logical Laws, Its Subjective Sources" (1937), translated in *Studies in Subjective Probability* (Wiley, 1964).</li>
+  <li>Michael G. Titelbaum, *Fundamentals of Bayesian Epistemology*, two volumes (Oxford University Press, 2022).</li>
+  <li>Henry E. Kyburg Jr., *Probability and the Logic of Rational Belief* (Wesleyan University Press, 1961), for the lottery paradox.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Bayesian Epistemology"](https://plato.stanford.edu/entries/epistemology-bayesian/), by William Talbott.</li>
+</FurtherReading>
