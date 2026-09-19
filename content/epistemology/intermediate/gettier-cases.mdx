@@ -1,0 +1,107 @@
+---
+title: Gettier Cases and Post-Gettier Repairs
+subject: epistemology
+tier: intermediate
+order: 7
+est_read_min: 14
+summary: "Justified true belief that falls short, and the patches that were tried"
+prerequisites: ["the-regress-problem"]
+introduces: ["Gettier case", "epistemic luck", "no false lemmas", "defeasibility analysis"]
+requires: ["JTB analysis", "justification", "belief", "truth"]
+added: "2026-09-19"
+---
+
+In 1963 Edmund Gettier published three pages in *Analysis* and ended a consensus that had held, in one form or another, since Plato. The paper contains no new theory. It contains two counterexamples, and they were enough.
+
+The beginner tier assembled the analysis those counterexamples target. Knowledge is justified true belief: three conditions, each necessary, and together sufficient. Gettier showed that the third claim is false. A belief can satisfy all three conditions and still fail to be knowledge, and it can fail for a reason that has nothing to do with how the conditions are stated.
+
+## The shape of the problem
+
+<Definition term="Gettier case">
+A case in which a person holds a belief that is true and justified but that intuitively fails to count as knowledge, because the feature that makes the belief justified is disconnected from the feature that makes it true.
+</Definition>
+
+The recipe behind every such case is simpler than the cases themselves. Take a belief that is justified but false. Derive something from it that is also justified, since justification transmits across competent inference. Then arrange the world so that what you derived happens to be true for a reason unrelated to the false belief you started from.
+
+Gettier's own first case runs like this. Smith and Jones have applied for the same job. The company president has told Smith that Jones will get it, and Smith has counted the coins in Jones's pocket and found ten. Smith concludes that the man who will get the job has ten coins in his pocket. As it turns out Smith gets the job himself, and unknown to him he has ten coins in his own pocket. His belief is true. It is justified, since it follows from things he had excellent reason to accept. And nobody wants to say he knew.
+
+The second case is structurally identical and does not need the details. What matters is that the recipe generalises, and that it does not depend on any particular account of what justification is. Whatever makes Smith's evidence good, that goodness is compatible with the belief being false, and a condition compatible with falsity can be satisfied while truth arrives from somewhere else entirely.
+
+<Definition term="Epistemic luck">
+The condition of holding a true belief where the truth is not attributable to the believer's evidence, faculties, or competence. Knowledge is standardly taken to exclude it, though not every kind of luck in the neighbourhood is excluded.
+</Definition>
+
+Not all luck is hostile to knowledge. It is lucky that you were in the room when the announcement was made, and lucky that you were not looking away. That kind of luck affects whether you get evidence at all, and knowledge survives it. What knowledge does not survive is luck sitting between the evidence and the truth, so that the belief would have been just as well supported had the world been otherwise.
+
+## The first repair
+
+<Definition term="No false lemmas">
+The proposal that knowledge is justified true belief whose justification does not essentially depend on any false proposition. Smith fails the condition because his reasoning passes through the falsehood that Jones will get the job.
+</Definition>
+
+The condition was suggested almost immediately, and it handles Gettier's two cases cleanly, since both are built by inference from a falsehood. Its appeal is that it identifies the defect rather than merely legislating against the outcome. Something did go wrong in Smith's reasoning, and the something is locatable.
+
+<Argument name="The no-false-lemmas analysis">
+  <Premise>In each of Gettier's cases the subject reaches the true belief by inferring it from a proposition that is false.</Premise>
+  <Premise>Inference from a falsehood is defective even when it happens to terminate in a truth.</Premise>
+  <Premise>Adding a fourth condition excluding such inference therefore removes exactly the cases that were the problem.</Premise>
+  <Conclusion>Knowledge is justified true belief not inferred from any falsehood.</Conclusion>
+</Argument>
+
+The repair lasted about as long as it took to build a case with no falsehood in it. Alvin Goldman's fake barn case is the standard one. Henry is driving through the countryside and sees a barn. He believes there is a barn in front of him, and there is. What he does not know is that the district is full of barn facades, erected to look like barns from the road, and that he has happened to look at the one real barn among them. Henry infers nothing from any falsehood. He looks, and he believes what he sees. His belief is true and his perceptual faculties are working normally, and still he does not know, because he would have believed the same thing had he been looking at any of the fakes.
+
+Carl Ginet is generally credited with the case in conversation, and Goldman published it in 1976. Its importance is that it separates the diagnosis from the recipe. Gettier built his cases out of inference because that was a convenient way to build them, not because inference is where the defect lies.
+
+## The second repair
+
+<Definition term="Defeasibility analysis">
+The proposal that knowledge is justified true belief for which there exists no true proposition that, had the believer been aware of it, would have destroyed the justification. Such a proposition is a defeater.
+</Definition>
+
+The defeasibility approach, developed by Keith Lehrer and Thomas Paxson and refined by Peter Klein, works from a different angle. It does not ask how the belief was formed. It asks whether there is something true in the vicinity that the believer has missed and that would have changed everything.
+
+Smith has missed that he himself will get the job. Henry has missed that the district is full of facades. In each case the truth is out there and would have dismantled the subject's confidence had it reached them. The condition is attractive because it explains the cases with one mechanism and does not care about the route to the belief.
+
+The difficulty is that the condition as stated is too strong. Consider a case due to Lehrer and Paxson themselves. You see Tom Grabit steal a book from the library. Unknown to you, Tom's mother has told the police that Tom was a thousand miles away and that his twin brother John was in town. Also unknown to you, and this is the part that matters, Tom's mother is a compulsive liar and there is no twin. The proposition that Tom's mother said these things is true, and had you learned it your justification would have collapsed. So the defeasibility condition as stated says you do not know. But you saw him do it, and the mother's testimony is worthless. The condition must somehow distinguish defeaters that reveal a genuine defect from defeaters that are themselves defeated by further truths, and every attempt to draw that line has generated a new round of cases.
+
+<Aside title="Why three pages were enough">
+Gettier's paper is short because it does not argue for anything. It states two conditions that the JTB analysis must satisfy if it is to be refuted by counterexample, notes that both are widely granted, and then supplies the counterexamples.
+
+The two conditions are that justification does not entail truth, and that justification is closed under known entailment. Both were held by Chisholm and by Ayer, whose formulations Gettier quotes. Neither is optional for a theory of justification that allows fallible evidence to justify.
+
+This is what makes the paper hard to escape. It does not attack a formulation; it attacks any analysis on which the justification condition can be met by a believer whose belief is false. That is nearly all of them.
+</Aside>
+
+## What the failures have in common
+
+Sixty years of proposals have produced a pattern rather than an answer. Each repair identifies a real defect in the cases it was built for, and each is met by a case exhibiting the same intuitive failure without the defect.
+
+The pattern suggests that the target is not a missing fourth ingredient but a relation. In a Gettier case the belief is true and the belief is justified and the two facts have separate explanations. Knowledge seems to require that they share one: that the belief is true because of whatever makes it justified, or that the believer's competence is what accounts for the truth rather than merely accompanying it.
+
+That thought points in two directions, and the next several articles follow both. One asks what the justification condition should be replaced with, and produces reliabilism and virtue epistemology. The other asks what modal condition a true belief must satisfy to escape luck, and produces safety and sensitivity.
+
+<Objection>
+The cases are artificial and the intuitions they elicit are not data. Nobody encounters a district full of barn facades. If the analysis of knowledge is being tested against scenarios contrived precisely to break it, the exercise says more about the ingenuity of philosophers than about the concept, and the correct response is to say that Smith and Henry do know, in the perfectly good sense in which anyone knows anything.
+</Objection>
+
+<Reply>
+The artificiality is real and the conclusion does not follow.
+
+Two things are worth separating. Whether the intuitions are reliable is a fair question, and experimental work since 2001 has examined it directly. The results are mixed in an instructive way: the judgement that Gettier subjects lack knowledge has replicated across a range of cultures and populations, while intuitions about fake barn cases specifically have proved less stable. So the objection has better traction against Henry than against Smith.
+
+Whether contrived cases are legitimate is a different question, and here the objection proves too much. Contrived cases are how necessary conditions are tested everywhere. A single artificial counterexample is enough to refute a universal claim, and the JTB analysis is a universal claim. If the response is that Smith knows after all, that is not a defence of the analysis but a revision of the concept, and it has to be argued rather than asserted.
+
+What the objection does establish is that a theory should not be built to accommodate every intuition about every case. The fake barn intuition in particular is weak enough that some theories reasonably decline to preserve it.
+</Reply>
+
+## Next
+
+The three structural theories of justification, each taking one horn of the regress trilemma, and the question of whether the structure of justification is a chain, a web, or an endless line.
+
+<FurtherReading>
+  <li>Edmund L. Gettier, "Is Justified True Belief Knowledge?", *Analysis*, volume 23, number 6 (1963), pages 121 to 123.</li>
+  <li>Alvin I. Goldman, "Discrimination and Perceptual Knowledge", *The Journal of Philosophy*, volume 73, number 20 (1976), pages 771 to 791.</li>
+  <li>Keith Lehrer and Thomas Paxson Jr., "Knowledge: Undefeated Justified True Belief", *The Journal of Philosophy*, volume 66, number 8 (1969), pages 225 to 237.</li>
+  <li>Linda Zagzebski, "The Inescapability of Gettier Problems", *The Philosophical Quarterly*, volume 44, number 174 (1994), pages 65 to 73.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["The Analysis of Knowledge"](https://plato.stanford.edu/entries/knowledge-analysis/), by Jonathan Jenkins Ichikawa and Matthias Steup.</li>
+</FurtherReading>
