@@ -5,10 +5,26 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 19 September 2026
+
+10 changes.
+
+- Add epistemology intermediate rung 16: Bayesian confidence and credence ([7c2d35c](https://github.com/thejjp04/philolarps/commit/7c2d35c))
+- Add epistemology intermediate rung 15: the problem of induction ([ec8abfb](https://github.com/thejjp04/philolarps/commit/ec8abfb))
+- Add epistemology intermediate rung 14: the analytic/synthetic distinction and Quine's attack ([de4e538](https://github.com/thejjp04/philolarps/commit/de4e538))
+- Add epistemology intermediate rung 13: a priori and a posteriori ([8d55081](https://github.com/thejjp04/philolarps/commit/8d55081))
+- Add epistemology intermediate rung 12: epistemic closure and its denial ([8857bb1](https://github.com/thejjp04/philolarps/commit/8857bb1))
+- Add epistemology intermediate rung 11: safety and sensitivity conditions ([55918af](https://github.com/thejjp04/philolarps/commit/55918af))
+- Add epistemology intermediate rung 10: reliabilism and virtue epistemology ([765173b](https://github.com/thejjp04/philolarps/commit/765173b))
+- Add epistemology intermediate rung 9: internalism versus externalism ([ce08733](https://github.com/thejjp04/philolarps/commit/ce08733))
+- Add epistemology intermediate rung 8: foundationalism, coherentism, infinitism ([8d9c1f2](https://github.com/thejjp04/philolarps/commit/8d9c1f2))
+- Add epistemology intermediate rung 7: Gettier cases and post-Gettier repairs ([d903a36](https://github.com/thejjp04/philolarps/commit/d903a36))
+
 ## 16 September 2026
 
-1 change.
+2 changes.
 
+- Regenerate changelog ([cd05c30](https://github.com/thejjp04/philolarps/commit/cd05c30))
 - Add Vercel Web Analytics ([a32d29c](https://github.com/thejjp04/philolarps/commit/a32d29c))
 
 ## 12 September 2026
