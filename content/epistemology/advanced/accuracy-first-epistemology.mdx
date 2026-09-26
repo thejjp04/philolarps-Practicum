@@ -1,0 +1,143 @@
+---
+title: Accuracy-First Epistemology
+subject: epistemology
+tier: advanced
+order: 6
+est_read_min: 27
+summary: "Deriving the probability axioms from accuracy alone, with no bets and no bookie in sight"
+prerequisites: ["formal-epistemology"]
+introduces: ["accuracy-first epistemology", "gradational accuracy", "scoring rule", "accuracy dominance", "epistemic utility"]
+requires: ["probabilism", "credence", "conditionalization", "epistemic value"]
+added: "2026-09-26"
+---
+
+The Dutch book argument has a strange shape for an argument in epistemology. It says your credences are irrational because a bookie could exploit them. But credences are supposed to aim at the truth, not at protecting your wallet. If probabilism is a norm of good thinking, one would like an argument for it that mentions only what thinking is for.
+
+In 1998, James Joyce gave one. He showed that if your credences violate the probability axioms, there is another credence function that is closer to the truth than yours however the world turns out. Incoherent credences are not merely exploitable. They are guaranteed to be less accurate than they could have been.
+
+Joyce's argument started a research programme. Over the following two decades, Hilary Greaves, David Wallace, Hannes Leitgeb, Richard Pettigrew and others extended it to justify conditionalization, the principal principle, and principles about priors, all from considerations of accuracy alone.
+
+## The programme
+
+<Definition term="Accuracy-first epistemology">
+The programme of deriving norms for credences from a single underlying value: accuracy, or closeness to the truth. It holds that the only fundamental epistemic good is having credences close to the truth values of the propositions they concern, and that all other norms of credence are justified by showing that obeying them promotes accuracy.
+</Definition>
+
+<Definition term="Epistemic utility">
+The value of a credal state from a purely epistemic point of view. Epistemic utility theory treats the choice of credences as analogous to a practical decision, with epistemic utility in place of practical utility, and applies the principles of decision theory to determine which credences are rational. In accuracy-first epistemology, epistemic utility is accuracy.
+</Definition>
+
+This is veritism, from the article on epistemic value, stated with mathematical precision. The one thing that matters is truth. The difference is that accuracy-first epistemology is about credences rather than beliefs, so it needs a notion of closeness to the truth that comes in degrees.
+
+## Measuring accuracy
+
+<Definition term="Gradational accuracy">
+The idea that credences can be more or less accurate, depending on how close they are to the truth values of the propositions they concern. A credence of 0.9 in a truth is more accurate than a credence of 0.6, and a credence of 0.1 in a falsehood is more accurate than a credence of 0.4.
+</Definition>
+
+Treat truth values as numbers: a true proposition has value 1, a false one 0. Then accuracy is closeness between your credence and this number. A credence of 0.9 in a truth is off by 0.1. A credence of 0.9 in a falsehood is off by 0.9.
+
+<Definition term="Scoring rule">
+A function that measures the inaccuracy of a credence, or a whole credence function, at a given possible world. The most widely used is the Brier score, which sums the squared differences between each credence and the corresponding truth value.
+</Definition>
+
+The Brier score, introduced by the meteorologist Glenn Brier in 1950 for grading weather forecasts, measures the inaccuracy of a credence function $c$ at a world $w$ as:
+
+$$I(c, w) = \sum_{A} \big(v_w(A) - c(A)\big)^2$$
+
+where $v_w(A)$ is 1 if $A$ is true at $w$ and 0 if it is false. Lower is better. A credence function that assigns 1 to every truth and 0 to every falsehood scores zero, which is perfect.
+
+Other scoring rules are possible. The logarithmic score measures inaccuracy by $-\ln c(A)$ for the true propositions. There is a family of rules, and part of the programme's work has been to identify which properties an acceptable rule must have. The most important is strict propriety: a scoring rule is strictly proper if every coherent credence function expects itself, by its own lights, to be more accurate than any alternative. A rule that fails propriety would recommend that you adopt credences other than your own simply to improve your expected score, which would reward dishonesty in a forecaster and incoherence in a thinker.
+
+## The dominance argument
+
+<Definition term="Accuracy dominance">
+One credence function accuracy-dominates another if it is at least as accurate at every possible world and strictly more accurate at some. It strictly dominates if it is strictly more accurate at every world.
+</Definition>
+
+Joyce's theorem, in the form refined by Pettigrew, says: if a credence function violates the probability axioms, then there is a probabilistic credence function that strictly accuracy-dominates it, and no probabilistic credence function is dominated in this way. The result holds for the Brier score and for every other strictly proper scoring rule satisfying some mild continuity conditions.
+
+<Argument name="The accuracy-dominance argument for probabilism">
+  <Premise>The sole fundamental epistemic value of a credence function is its accuracy, measured by a strictly proper scoring rule.</Premise>
+  <Premise>If one option is guaranteed to have more of the only relevant value than another, whatever the world is like, then choosing the other is irrational.</Premise>
+  <Premise>Every credence function that violates the probability axioms is strictly accuracy-dominated by some credence function that satisfies them, which is not itself dominated.</Premise>
+  <Conclusion>It is irrational to have credences that violate the probability axioms.</Conclusion>
+</Argument>
+
+### A worked case
+
+The simplest case has one proposition, $A$, and its negation. Your credence function assigns $x$ to $A$ and $y$ to $\neg A$. Coherence requires $x + y = 1$.
+
+Suppose you are incoherent, with $x = 0.6$ and $y = 0.6$. There are two possible worlds. If $A$ is true, the truth values are 1 for $A$ and 0 for $\neg A$, so your Brier inaccuracy is $(1 - 0.6)^2 + (0 - 0.6)^2 = 0.16 + 0.36 = 0.52$. If $A$ is false, your inaccuracy is $(0 - 0.6)^2 + (1 - 0.6)^2 = 0.52$ again.
+
+Now take the coherent credence function $x = 0.5$, $y = 0.5$. If $A$ is true, its inaccuracy is $0.25 + 0.25 = 0.5$. If $A$ is false, the same. So the coherent function is more accurate than yours in both possible worlds. You do not need to know whether $A$ is true to know that switching would make you more accurate.
+
+The geometry makes the general case clear. Picture credence functions as points in a plane, with $x$ on one axis and $y$ on the other. The two possible worlds correspond to the points $(1, 0)$ and $(0, 1)$. The coherent credence functions lie on the line segment between them, where $x + y = 1$. The Brier score is squared Euclidean distance. For any point off the segment, its orthogonal projection onto the segment is closer to both endpoints than the original point is. That projection is the dominating coherent credence function.
+
+The result extends to any finite set of propositions. The possible worlds become the vertices of a higher-dimensional shape, the coherent credence functions form its convex hull, and projection onto the hull gives the dominating function.
+
+## Beyond probabilism
+
+The same method has been applied to other norms.
+
+Hilary Greaves and David Wallace showed in 2006 that, if you know you will learn exactly one proposition from a partition and want to plan how to update, conditionalization is the updating plan that maximises expected accuracy by the lights of your current credences. This gives an accuracy-based justification of conditionalization that makes no use of a diachronic Dutch book.
+
+Pettigrew's *Accuracy and the Laws of Credence*, from 2016, extends the programme further. It gives accuracy-based arguments for the principal principle, which connects credences to known chances, and for a principle of indifference about priors, the latter using the decision rule of minimising maximum possible inaccuracy.
+
+The programme's appeal is its unity. The Dutch book tradition justified different norms by different kinds of bet, with different assumptions each time. The accuracy tradition justifies each norm by the same value and different decision rules: dominance for probabilism, expected accuracy for conditionalization, and so on.
+
+## Objections
+
+### Why dominance?
+
+The dominance principle says it is irrational to choose an option that another option beats in every state. In practical decision theory, this principle has a known limitation: it applies only when the choice of option does not affect which state occurs. If your choice affects the world, dominance reasoning can go wrong.
+
+Credences can affect the world. If your credence that you will succeed at a task affects whether you do, the propositions you have credences about are not independent of the credences you adopt. Hilary Greaves examined cases of this kind in 2013 and found that epistemic decision theory, applied straightforwardly, gives unacceptable results in some of them. The standard response is to restrict the programme to cases where credences do not influence their own truth, but that restriction needs its own justification.
+
+### Trade-offs
+
+A deeper objection, pressed by Selim Berker in 2013, concerns the structure of accuracy as a value. Accuracy is summed across propositions. So the theory will, in principle, approve of a credal change that makes you less accurate about one proposition if it makes you more accurate about others. Berker compares this to the objection to utilitarianism that it ignores the separateness of persons. It sanctions sacrificing one proposition for the greater good of the others.
+
+<Aside title="An epistemic bribe">
+The trade-off worry can be made concrete. Suppose a benefactor will give you a large amount of true information about many subjects, on condition that you adopt credence 1 in some proposition you have excellent evidence is false. A veritist who counts only total accuracy should seem to take the offer, since many true credences outweigh one false one.
+
+Most people think the offer should be refused, or rather that accepting it would not make your credence in the false proposition rational. What is rational to believe about one proposition seems to depend on your evidence about it, not on the consequences of believing it for your overall accuracy.
+
+Defenders of the programme reply that the dominance argument does not involve any such trade-off, since the dominating function is better on every world, and that expected accuracy arguments hold the propositions fixed rather than trading between them. Critics reply that the underlying value still permits trade-offs, even if the particular arguments do not exploit them, and that a theory of epistemic rationality should rule them out at its foundation.
+
+This is the swamping problem's cousin. Both arise because veritism makes truth the only value and makes everything else instrumental to it. Where the swamping problem asks why the source of a true belief matters, the trade-off problem asks why the evidence for a particular belief matters, beyond its contribution to overall accuracy.
+</Aside>
+
+### The choice of scoring rule
+
+The theorem depends on the scoring rule being strictly proper. Why should accuracy be measured in this way? Propriety has an intuitive motivation, since a measure that would lead you to prefer other credences than your own seems defective. But some argue that assuming propriety is close to assuming what the argument wants to prove, since strict propriety already builds in a connection between credences and expectations that looks like probabilism.
+
+Pettigrew's reply is that propriety can be motivated independently of probabilism, and that the class of proper rules is wide enough that the argument does not depend on any particular choice. Whether the independence claim holds is disputed.
+
+## Assessment
+
+Accuracy-first epistemology is the most sophisticated form of veritism available. It shows that a single epistemic value, closeness to truth, can underwrite the core norms of Bayesian epistemology, with precise theorems in place of informal intuitions. For those who think truth is the only thing epistemology should care about, it is the natural framework.
+
+The objections to it are, in the end, objections to veritism. If there are epistemic goods other than accuracy, such as evidential support, understanding or knowledge, then deriving norms from accuracy alone will miss something. The trade-off problem suggests that this is so.
+
+<Objection>
+The accuracy argument tells you that some coherent credence function dominates yours. It does not tell you which one to adopt, and the dominating function might be one your evidence gives you no reason to hold. A demand to become coherent without guidance as to how is not a useful norm.
+</Objection>
+
+<Reply>
+The objection is correct that the theorem says only that a dominating function exists, and that there are usually many. But the argument's aim was never to tell you which credences to have. It was to establish a constraint on rational credences: whatever they are, they must be coherent. Deductive logic does the same thing: it tells you that an inconsistent set of beliefs contains a falsehood, but not which one to give up.
+
+Which coherent credences you should have is a further question, one that depends on your evidence and priors. The accuracy programme addresses it separately, with arguments for conditionalization and the principal principle. The dominance argument is only the first step of a larger case.
+</Reply>
+
+## Next
+
+How evidence confirms hypotheses, and why a white shoe and the predicate "grue" both make trouble for the obvious accounts of confirmation.
+
+<FurtherReading>
+  <li>James M. Joyce, "A Nonpragmatic Vindication of Probabilism", *Philosophy of Science*, volume 65, number 4 (1998), pages 575 to 603.</li>
+  <li>Hilary Greaves and David Wallace, "Justifying Conditionalization: Conditionalization Maximizes Expected Epistemic Utility", *Mind*, volume 115, number 459 (2006), pages 607 to 632.</li>
+  <li>Richard Pettigrew, *Accuracy and the Laws of Credence* (Oxford University Press, 2016).</li>
+  <li>Selim Berker, "Epistemic Teleology and the Separateness of Propositions", *Philosophical Review*, volume 122, number 3 (2013), pages 337 to 393.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Epistemic Utility Arguments for Probabilism"](https://plato.stanford.edu/entries/epistemic-utility/), by Richard Pettigrew.</li>
+</FurtherReading>
