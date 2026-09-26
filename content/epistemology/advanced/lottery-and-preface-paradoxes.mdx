@@ -1,0 +1,138 @@
+---
+title: Lottery, Preface, and the Threshold View of Belief
+subject: epistemology
+tier: advanced
+order: 8
+est_read_min: 22
+summary: "If believing is having a high enough credence, rational belief is not closed under conjunction. Something has to give"
+prerequisites: ["confirmation-theory-and-paradoxes"]
+introduces: ["lottery paradox", "preface paradox", "Lockean thesis", "threshold view", "conjunction closure"]
+requires: ["credence", "degree of belief", "epistemic closure", "belief"]
+added: "2026-09-26"
+---
+
+Epistemology has two ways of talking about belief. One is binary: you believe that it will rain, or you disbelieve it, or you suspend judgement. The other is graded: you have credence 0.7 that it will rain. The traditional theory of knowledge, from Plato to Gettier, used the binary vocabulary. The Bayesian framework of the last three articles uses the graded one.
+
+Both vocabularies seem to describe something real, and it is natural to think they are connected. The most obvious connection is that believing something is being confident enough in it. This article follows that idea into two paradoxes that show it cannot be combined with another obvious principle, that rational beliefs can be put together.
+
+## The threshold view
+
+<Definition term="Lockean thesis">
+The principle, so named by Richard Foley after a remark of John Locke's, that it is rational to believe a proposition if and only if it is rational to have a sufficiently high credence in it.
+</Definition>
+
+<Definition term="Threshold view">
+The view that binary belief just is credence above some threshold $t$, where $0.5 < t < 1$. On this view, to believe $p$ is to have credence in $p$ of at least $t$, and there is no further state of belief over and above the credence.
+</Definition>
+
+The threshold view is an account of what belief is. The Lockean thesis is a norm about when belief is rational. They fit together naturally: if belief is high credence, rational belief is rationally high credence.
+
+The attractions are clear. Belief and credence are unified, with belief as a coarse-grained summary of credence. We do not need two separate theories of rationality, one for each. And the view explains why belief is responsive to evidence in the way credence is, since it is credence.
+
+Why should the threshold be less than 1? If believing required certainty, we would believe almost nothing, since we are rarely certain of anything contingent. We believe that the train will be on time, that our friends are who they appear to be, that the bridge will hold, without being certain of any of it.
+
+## Conjunction closure
+
+<Definition term="Conjunction closure">
+The principle that if it is rational to believe $p$ and rational to believe $q$, it is rational to believe $p \land q$. A system of rational belief closed under conjunction permits one to combine any beliefs into a single belief.
+</Definition>
+
+Conjunction closure is the binary counterpart of the epistemic closure principle from the intermediate tier, restricted to conjunction. It seems close to a principle of logic. If you believe the shop is open and believe it sells bread, you are thereby committed to believing it is open and sells bread. Refusing to draw the conjunction looks irrational.
+
+Closure is also what makes belief useful in reasoning. Much reasoning combines premises; an argument with ten premises depends on accepting their conjunction. If one may rationally believe each premise without believing their conjunction, it is unclear how any multi-premise argument can make a conclusion rational to believe.
+
+## The lottery paradox
+
+<Definition term="Lottery paradox">
+The paradox, due to Henry Kyburg in 1961, that in a large fair lottery with one winner, it is rational to believe of each ticket that it will lose, yet it is irrational to believe that every ticket will lose, which is known to be false. Given the Lockean thesis and conjunction closure, rational belief must include a known falsehood.
+</Definition>
+
+Take a fair lottery with $n$ tickets and exactly one winner. For each ticket $i$, the probability it loses is $1 - 1/n$. Choose any threshold $t < 1$. For large enough $n$, specifically any $n > 1/(1 - t)$, the probability each ticket loses exceeds $t$.
+
+<Argument name="The lottery paradox">
+  <Premise>For each ticket $i$, the credence that ticket $i$ loses is $1 - 1/n$, which exceeds the threshold $t$. So by the Lockean thesis, it is rational to believe that ticket $i$ loses.</Premise>
+  <Premise>By conjunction closure, it is rational to believe that ticket 1 loses and ticket 2 loses and so on for every ticket: that is, that every ticket loses.</Premise>
+  <Premise>It is known that some ticket wins, so it is rational to believe that some ticket wins.</Premise>
+  <Conclusion>By conjunction closure again, it is rational to believe the contradiction that every ticket loses and some ticket wins.</Conclusion>
+</Argument>
+
+The paradox does not need a lottery. Any situation with many individually probable but jointly impossible claims has the same structure. The intermediate article on credence mentioned the lottery paradox as a difficulty for the threshold view; this article states it precisely and looks at the responses.
+
+## The preface paradox
+
+<Definition term="Preface paradox">
+The paradox, due to D. C. Makinson in 1965, that an author can rationally believe each claim in their book while also rationally believing, as they say in the preface, that the book contains at least one error.
+</Definition>
+
+An author has written a careful book containing, say, 300 claims. She has checked each one and believes each one rationally. But she also knows that books of this length always contain errors, and she says so in her preface: "Any errors that remain are my own." She rationally believes that at least one claim in the book is false.
+
+If her beliefs are closed under conjunction, she believes the conjunction of all 300 claims, which says there is no error. She also believes there is an error. Her beliefs are inconsistent, and each is rational.
+
+The numbers make the tension vivid. If she has credence 0.99 in each claim and the claims are independent, her credence in their conjunction is $0.99^{300} \approx 0.049$. She should be about 95 per cent confident that something in the book is wrong, while believing each individual claim with 99 per cent confidence.
+
+The preface paradox differs from the lottery in an important way. In the lottery, many philosophers doubt that one should believe of each ticket that it will lose. The belief feels unwarranted, whatever the numbers say. In the preface case, the author clearly should believe each claim; she has checked each one, and refusing to believe any of them would be absurd scepticism about her own research. So responses to the lottery that deny the individual beliefs do not transfer to the preface.
+
+## Responses
+
+The paradoxes show that three things cannot all hold: the Lockean thesis, conjunction closure, and the requirement that rational beliefs be consistent. Each has been rejected.
+
+### Abandon conjunction closure
+
+Kyburg himself took this route. Rational belief is not closed under conjunction. One can rationally believe each of a set of propositions without believing their conjunction. Richard Foley and David Christensen have defended versions of this view. Christensen argued in 2004 that deductive cogency, the requirement that one's beliefs be consistent and closed, is not a genuine norm of rationality. The graded norms of probability are the real ones, and binary belief is a rough approximation that inherits the failures of approximation.
+
+This is the natural view for a Bayesian, but it has a cost. As noted above, it makes it hard to see how multi-premise reasoning works. If believing each premise does not commit one to believing the conjunction, it is unclear why believing the premises of a valid argument commits one to believing its conclusion.
+
+### Abandon the Lockean thesis
+
+Many philosophers think the lottery shows that high credence is not sufficient for rational belief. There is something about lottery propositions that makes it inappropriate to believe them, however probable they are.
+
+What is it? Several answers have been proposed. Dana Nelkin argued in 2000 that believing a lottery proposition would involve believing something one's evidence is purely statistical about, and such evidence cannot ground belief. Martin Smith has argued that justified belief requires normic support: evidence on which the falsity of the belief would call for special explanation. If your ticket wins, no explanation is needed, since someone had to win. If your friend lied to you about where they were, some explanation is needed. That difference, not the probability, is what matters.
+
+The knowledge-first view offers another answer. You do not know your ticket will lose, as the article on knowledge-first epistemology discussed. If rational belief is belief that aims at knowledge, then you should not believe your ticket will lose, however probable it is.
+
+These views say nothing directly about the preface paradox, since the author's individual beliefs are not statistical. Supporters of such views usually abandon closure for the preface case as well, or argue that the author's belief in the preface should be downgraded.
+
+### Stability
+
+Hannes Leitgeb proposed in 2017 a theory that keeps a version of the Lockean thesis and full conjunction closure by making the threshold depend on context. On his stability theory, one believes a proposition if one's credence in it is stably high: it stays above the threshold when one conditionalizes on any proposition consistent with it. The set of beliefs so defined is always consistent and closed under conjunction. The cost is that what one believes depends on how the space of possibilities is partitioned, which some find too high a price.
+
+<Aside title="Statistical evidence in court">
+The lottery paradox has an analogue in the law, with practical consequences. Consider L. Jonathan Cohen's gatecrasher case from 1977. A thousand people attended a concert, but only 499 bought tickets. The organisers sue a randomly chosen attendee for not paying. The probability that this person did not pay is 0.501, which meets the civil standard of proof on the balance of probabilities. Yet courts would not find for the organisers on this evidence alone, and most people agree they should not.
+
+The case has the structure of the lottery paradox. Each individual defendant is more likely than not to be liable, yet finding against every attendee would impose liability on 499 innocent people. The law's reluctance to rely on bare statistics suggests that legal proof, like belief, requires something other than high probability: individualised evidence that bears on this defendant rather than on the class.
+
+Epistemologists including Sarah Moss, Georgi Gardiner and Enoch, Spectre and Fisher have used such cases to argue about which non-probabilistic condition is missing, and whether it is epistemic, moral, or both.
+</Aside>
+
+## What the paradoxes show about belief
+
+A more radical option is to deny that binary belief is anything over and above credence, and to regard the paradoxes as showing that talk of belief is loose. This is the eliminativist or reductive response associated with Richard Jeffrey. There are only credences, and the question "does she believe p?" is a question about whether her credence is high enough for present purposes, with no fact about it independent of those purposes.
+
+The opposite view, defended by Jacob Ross and Mark Schroeder and others, is that belief is a distinct attitude with its own function. To believe $p$ is to be disposed to treat $p$ as true in reasoning, taking it for granted rather than weighing it probabilistically. On this view, belief and credence can come apart, and the Lockean thesis fails because belief is not a matter of how confident one is. It is a matter of what one is prepared to rely on.
+
+Neither the lottery nor the preface paradox settles this dispute. What they establish is that the simplest connection between the two vocabularies cannot be right, and that any theory of belief has to say which of three attractive principles it gives up.
+
+<Objection>
+The preface paradox is not a paradox at all. The author does not believe the conjunction of her claims; nobody forms a single belief with three hundred conjuncts. Conjunction closure is a principle about what one is committed to, not about what one actually believes, and commitments can be inconsistent without irrationality when the inconsistency is acknowledged.
+</Objection>
+
+<Reply>
+The distinction between belief and commitment is a real one, and the reply that the author never forms the long conjunctive belief is correct as psychology.
+
+But the paradox survives the distinction. If conjunction closure is a principle about commitments, then the author is committed to the conjunction, and also to its negation. The question becomes whether one can be rationally committed to an inconsistent set, and saying that the inconsistency is acknowledged does not answer it. It restates the view that rational commitments need not be consistent, which is the abandonment of consistency that the paradox forces on us. The distinction relocates the paradox from belief to commitment without resolving it.
+
+What the reply does show is that the costs of abandoning consistency may be smaller than they first appear. If what goes inconsistent is an abstract set of commitments rather than a set of beliefs one actually uses in reasoning, then one can reason from the beliefs one holds, taking care not to combine too many at once. That is roughly how careful authors actually behave.
+</Reply>
+
+## Next
+
+What conditionalization says when the evidence concerns not what the world is like but where and when one is within it, and the Sleeping Beauty problem.
+
+<FurtherReading>
+  <li>Henry E. Kyburg Jr., *Probability and the Logic of Rational Belief* (Wesleyan University Press, 1961).</li>
+  <li>D. C. Makinson, "The Paradox of the Preface", *Analysis*, volume 25, number 6 (1965), pages 205 to 207.</li>
+  <li>David Christensen, *Putting Logic in Its Place: Formal Constraints on Rational Belief* (Oxford University Press, 2004).</li>
+  <li>Hannes Leitgeb, *The Stability of Belief: How Rational Belief Coheres with Probability* (Oxford University Press, 2017).</li>
+  <li>Martin Smith, *Between Probability and Certainty: What Justifies Belief* (Oxford University Press, 2016).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Formal Representations of Belief"](https://plato.stanford.edu/entries/formal-belief/), by Franz Huber.</li>
+</FurtherReading>
