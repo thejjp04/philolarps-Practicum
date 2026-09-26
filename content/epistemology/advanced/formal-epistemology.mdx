@@ -1,0 +1,142 @@
+---
+title: "Formal Epistemology: Probabilism and Updating"
+subject: epistemology
+tier: advanced
+order: 5
+est_read_min: 28
+summary: "Probability axioms as coherence constraints, and the rules for revising credences"
+prerequisites: ["epistemic-value-and-swamping"]
+introduces: ["probabilism", "Dutch book", "probability axiom", "conditionalization", "Jeffrey updating"]
+requires: ["credence", "conditional probability", "prior probability", "posterior probability"]
+added: "2026-09-26"
+---
+
+The intermediate article on credence introduced the Bayesian picture informally: belief comes in degrees, degrees can be represented as numbers between 0 and 1, and evidence changes them in a way Bayes's theorem describes. It gave the Dutch book argument in outline and promised a closer look. This article supplies it, and then turns to the other half of the Bayesian framework, the rules for changing one's mind.
+
+Formal epistemology is the part of the subject that uses mathematical tools, mainly probability theory and logic, to state epistemic norms precisely enough to prove things about them. Its core is two norms. A synchronic norm says what one's credences must be like at any one time. A diachronic norm says how they must change over time.
+
+## The synchronic norm
+
+<Definition term="Probability axiom">
+One of the basic conditions defining a probability function. In the standard formulation due to Andrey Kolmogorov, a function $P$ from propositions to real numbers is a probability function if it satisfies non-negativity, normalisation and finite additivity.
+</Definition>
+
+Take a set of propositions closed under negation and disjunction. A credence function $c$ assigns each proposition a number. The three axioms are:
+
+1. Non-negativity: $c(A) \geq 0$ for every proposition $A$.
+2. Normalisation: $c(T) = 1$ for any tautology $T$.
+3. Finite additivity: if $A$ and $B$ are incompatible, $c(A \lor B) = c(A) + c(B)$.
+
+Everything else in elementary probability theory follows. For example, since $A$ and $\neg A$ are incompatible and their disjunction is a tautology, $c(A) + c(\neg A) = 1$. And if $A$ entails $B$, then $c(A) \leq c(B)$.
+
+<Definition term="Probabilism">
+The norm that a rational agent's credences at any time must satisfy the probability axioms. An agent whose credences violate the axioms is said to be incoherent.
+</Definition>
+
+Probabilism is a coherence constraint. It does not say what your credences should be in any particular proposition. It says only how your credences must fit together. You may have credence 0.9 or 0.1 that it will rain tomorrow, but whatever it is, your credence that it will not rain must be the complement.
+
+The constraints look mild, but they are demanding. Normalisation says you must be certain of every logical truth, however complicated. Additivity says you must see every logical incompatibility. Taken literally, probabilism requires logical omniscience, which no human has. Most formal epistemologists treat it as an ideal to be approximated, much as deductive logic sets an ideal for reasoning that no one fully meets.
+
+## The Dutch book argument in detail
+
+<Definition term="Dutch book">
+A set of bets, each of which an agent regards as fair given their credences, that together guarantee the agent a net loss however the world turns out.
+</Definition>
+
+The argument needs a bridge between credences and betting behaviour. The standard bridge says that if your credence in $A$ is $c(A)$, you regard as fair a bet that costs $c(A) \times S$ and pays $S$ if $A$ is true, for any stake $S$. You are willing to take either side of such a bet: to buy it or to sell it.
+
+Now suppose your credences violate the complement rule. You have credence 0.6 that it will rain tomorrow and credence 0.6 that it will not. A bookie offers to sell you a bet paying one pound if it rains, for sixty pence, and a bet paying one pound if it does not rain, also for sixty pence. By your lights both are fair. You buy both and pay one pound twenty. Exactly one bet pays out, so you get back one pound. You have lost twenty pence whatever the weather.
+
+If instead your credences summed to less than 1, say 0.3 and 0.3, the bookie reverses the transaction: buys both bets from you for sixty pence in total and collects one pound from you, whichever way it goes.
+
+The Dutch book theorem generalises this. If your credences violate any of the axioms, there is a finite set of bets you consider fair that guarantees a loss. The converse Dutch book theorem, proved by John Kemeny and R. Sherman Lehman in 1955, shows the other direction: if your credences satisfy the axioms, no such set exists. Together these show that probabilistic coherence is exactly the condition of being immune to sure loss.
+
+### Objections
+
+The argument has been criticised at nearly every step.
+
+The bridge from credence to betting is the most vulnerable. People who dislike gambling, or who value money nonlinearly, will not bet at their credences. Someone who would not stake their house at even odds on a coin toss need not have credence other than one half. The standard reply is to treat the betting interpretation as an idealisation or a measurement device, but then it is unclear what the conclusion is about.
+
+The second worry is about what kind of defect vulnerability to a Dutch book is. Losing money is a practical failing. Probabilism is supposed to be an epistemic norm. Why should a pragmatic flaw show that one's credences are epistemically irrational? No one is actually going to offer you these bets, and if they did you could decline.
+
+David Christensen responded in 1996 by depragmatising the argument. The point, he said, is not that you will lose money. It is that your credences lead you to evaluate the same set of bets as both fair and a sure loss. That is an inconsistency in your evaluations, and inconsistency is an epistemic defect. The bookie is a dramatic device for revealing it.
+
+The accuracy-first programme, treated in the next article, offers a different route to probabilism that avoids betting entirely.
+
+## The diachronic norm
+
+Probabilism constrains credences at a time. The Bayesian also needs a rule for how credences should change when you learn something.
+
+<Definition term="Conditionalization">
+The rule that when an agent learns a proposition $E$ with certainty and learns nothing stronger, their new credence in any proposition $H$ should equal their old conditional credence in $H$ given $E$. In symbols, $c_{\text{new}}(H) = c_{\text{old}}(H \mid E)$.
+</Definition>
+
+Conditional credence was defined in the intermediate tier as $c(H \mid E) = c(H \land E) / c(E)$, where $c(E) > 0$. Conditionalization says that after learning $E$, you should adopt as your unconditional credence what was previously your conditional credence given $E$.
+
+The rule has two important features. First, it makes learning cumulative. If you learn $E_1$ and then $E_2$, the result is the same as learning $E_1 \land E_2$ at once. The order in which evidence arrives does not matter. Second, anything you learn by conditionalization gets credence 1, and stays at 1 forever. After conditionalizing on $E$, your new $c(E) = c(E \mid E) = 1$, and no further conditionalization can move it.
+
+That second feature is a problem. Do we ever learn anything with certainty? The glance at the thermometer, the testimony of a friend, and the look of a cloth by candlelight all leave some room for doubt. If conditionalization only applies to certain evidence, it may apply to nothing.
+
+### The diachronic Dutch book
+
+David Lewis showed, in an argument first reported by Paul Teller in 1973, that an agent who plans to update by any rule other than conditionalization is vulnerable to a Dutch book spread over time. The bookie offers bets before the evidence arrives, and different bets afterwards, and the combination guarantees a loss.
+
+The argument has been challenged on the grounds that it is unclear why an agent should be bound by a plan they made earlier. If at the later time you reject your earlier plan, the bookie has only exposed a change of mind, which is not obviously irrational. Bas van Fraassen's reflection principle and discussions of it made this concern precise, and whether the diachronic argument works is still disputed.
+
+## Jeffrey updating
+
+<Definition term="Jeffrey updating">
+A generalisation of conditionalization, due to Richard Jeffrey, for cases in which experience changes one's credence in a proposition without making it certain. If experience shifts one's credence in $E$ to a new value, the new credence in $H$ is the old conditional credences in $H$ weighted by the new credences in $E$ and its negation. Also called Jeffrey conditionalization or probability kinematics.
+</Definition>
+
+Jeffrey's example, from *The Logic of Decision* in 1965, is a cloth inspected by candlelight. You look at it and it seems green, but in that light you cannot be sure it is not blue. Your credence that it is green rises from 0.3 to 0.7, but you learn no proposition with certainty.
+
+Jeffrey's rule handles this. Let $c_{\text{new}}(E)$ be the credence the experience directly produces. Then:
+
+$$c_{\text{new}}(H) = c_{\text{old}}(H \mid E) \cdot c_{\text{new}}(E) + c_{\text{old}}(H \mid \neg E) \cdot c_{\text{new}}(\neg E)$$
+
+Ordinary conditionalization is the special case in which $c_{\text{new}}(E) = 1$.
+
+The rule is justified under a condition called rigidity. Your conditional credences given $E$ and given $\neg E$ must not change as a result of the experience; only your credence in $E$ itself does. In the candlelight case, the experience makes you more confident the cloth is green, but it does not change what you think follows if the cloth is green. Where rigidity holds, Jeffrey updating is the rule that preserves probabilistic coherence with minimum disturbance.
+
+Jeffrey's rule has one feature many find unwelcome: it is not commutative. If two experiences shift your credences in a different order, you can end up in a different place. Whether this is a flaw in the rule or a correct representation of how different orders of experience can differ is a live question. Hartry Field and others have proposed variants that restore commutativity by describing the input differently.
+
+<Aside title="The problem of the priors">
+Conditionalization tells you how to move from one credence function to the next. It does not tell you where to start. Two agents who begin with different priors and conditionalize on the same evidence can end with different posteriors, and nothing in the Bayesian framework says which of them was right to begin with.
+
+Subjective Bayesians accept this. Any coherent prior is rationally permissible, and the only constraint is to update properly. They point to convergence theorems, which show that under certain conditions agents with different priors will converge on the same posterior as evidence accumulates, provided none assigns zero probability to the truth.
+
+Objective Bayesians think this is too permissive. They propose additional constraints on priors, such as the principle of indifference, which assigns equal probability to each of a set of possibilities when there is no reason to favour one. The trouble is that the principle gives inconsistent answers depending on how the possibilities are described. Bas van Fraassen's cube factory is the standard illustration: a factory produces cubes with sides between 0 and 1 metre. Indifference over side length gives probability one half that the side is under half a metre. Indifference over face area gives probability one quarter. Indifference over volume gives one eighth. The same ignorance, described three ways, yields three probabilities.
+
+The problem of the priors is to Bayesian epistemology what the problem of the criterion was to classical epistemology: a demand for a starting point that the framework itself cannot supply.
+</Aside>
+
+## Where formal epistemology stands
+
+The Bayesian framework has become the default in much of epistemology and in the philosophy of science. It gives a precise account of how evidence confirms hypotheses, which the confirmation article two rungs on puts to work. It explains why surprising predictions are especially confirmatory, why varied evidence is better than repetitive evidence, and why independent witnesses count for more than dependent ones.
+
+Its central norms are still disputed. Probabilism is well supported, but the Dutch book argument for it is weaker than it was once thought. Conditionalization is widely accepted as correct for certain evidence, but the case for it depends on a diachronic argument whose force is contested, and the rule applies directly only to a type of evidence we may never have.
+
+<Objection>
+Formal epistemology models agents that do not exist. Real people have no precise credences, are not logically omniscient, and do not update by any rule. A theory of ideal rationality for impossible agents tells us nothing about how actual people should think.
+</Objection>
+
+<Reply>
+The same objection could be made to deductive logic, and the response is similar. A logic describes what follows from what. It does not describe how people actually reason, and it sets a standard no one fully meets. It is still useful, since it tells us when reasoning has gone wrong and in what direction to correct it.
+
+Bayesian norms work the same way. No one has precise credences, but people do have comparative confidence, and they can notice when their confidences conflict. No one updates perfectly, but they can recognise when they have ignored evidence or given it too much weight. The norms are not a description of anyone's mind. They are a standard against which minds can be evaluated, and the fact that everyone falls short of a standard does not make it idle.
+
+There is a live research programme on bounded rationality that asks how the norms should be adjusted for finite agents: imprecise credences represented by sets of probability functions, norms for agents who are not logically omniscient, and models of limited attention. That programme presupposes the ideal model rather than replacing it.
+</Reply>
+
+## Next
+
+Accuracy-first epistemology, which argues for probabilism without mentioning bets, by showing that incoherent credences are guaranteed to be less accurate than some coherent alternative.
+
+<FurtherReading>
+  <li>Frank Ramsey, "Truth and Probability" (1926), in *The Foundations of Mathematics and Other Logical Essays* (Routledge, 1931).</li>
+  <li>Richard Jeffrey, *The Logic of Decision* (McGraw-Hill, 1965; second edition University of Chicago Press, 1983).</li>
+  <li>David Christensen, "Dutch-Book Arguments Depragmatized", *Journal of Philosophy*, volume 93, number 9 (1996), pages 450 to 479.</li>
+  <li>Michael G. Titelbaum, *Fundamentals of Bayesian Epistemology*, two volumes (Oxford University Press, 2022).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Bayesian Epistemology"](https://plato.stanford.edu/entries/epistemology-bayesian/), by Hanti Lin.</li>
+</FurtherReading>
