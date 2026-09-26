@@ -1,0 +1,151 @@
+---
+title: Confirmation Theory, Ravens, and Grue
+subject: epistemology
+tier: advanced
+order: 7
+est_read_min: 24
+summary: "Why a white shoe appears to confirm that all ravens are black, and what grue breaks"
+prerequisites: ["accuracy-first-epistemology"]
+introduces: ["confirmation", "hypothetico-deductive method", "raven paradox", "grue", "new riddle of induction", "projectibility"]
+requires: ["induction", "enumerative induction", "conditionalization", "confirmation holism"]
+added: "2026-09-26"
+---
+
+The problem of induction, as Hume posed it, asks whether any inference from observed to unobserved cases is justified. The intermediate tier followed several attempts to answer that question and found none fully satisfying. Confirmation theory sets the justificatory question aside and asks a different one. Granting that some evidence supports some hypotheses, what is the relation between them? When does an observation count in favour of a general claim, and how much?
+
+This looks like a more modest project. It turned out to generate paradoxes of its own, two of which have become standard test cases for any theory of evidence.
+
+## Confirmation
+
+<Definition term="Confirmation">
+The relation that holds between a piece of evidence and a hypothesis when the evidence supports the hypothesis, making it more credible than it would otherwise be. Confirmation can be qualitative (whether E supports H at all) or quantitative (how much E supports H).
+</Definition>
+
+Confirmation in this sense is incremental. It is about whether evidence raises the credibility of a hypothesis, not whether the hypothesis ends up credible overall. A single positive test result may confirm a diagnosis while leaving it unlikely, if the condition is rare. The intermediate article on Bayesian confidence discussed this under base rates.
+
+Two families of theory dominated the twentieth century. One is qualitative and logical, deriving from the hypothetico-deductive method and from Carl Hempel's work. The other is probabilistic, and in its Bayesian form has become standard.
+
+## The hypothetico-deductive method
+
+<Definition term="Hypothetico-deductive method">
+The account of scientific reasoning on which a hypothesis is tested by deducing observable consequences from it, together with auxiliary assumptions, and checking whether they obtain. Evidence confirms a hypothesis if it is a deductive consequence of the hypothesis and the auxiliaries, and disconfirms it if the hypothesis and auxiliaries entail its negation.
+</Definition>
+
+The method is simple and corresponds well to much scientific practice. Eddington's 1919 eclipse observations tested general relativity by checking a predicted deflection of starlight; the observation matched the prediction and was counted as confirmation.
+
+It has two well-known problems. The first is the problem of auxiliaries, which the intermediate tier met as confirmation holism. A hypothesis alone rarely entails anything observable. It needs auxiliary assumptions about instruments, initial conditions and background theory. When a prediction fails, logic alone does not say whether to blame the hypothesis or an auxiliary. Duhem and Quine concluded that hypotheses face the tribunal of experience together, not singly.
+
+The second is the problem of irrelevant conjunction. If $H$ entails $E$, then so does $H \land X$ for any $X$ whatever. So if $E$ confirms $H$ on the hypothetico-deductive account, it also confirms $H \land X$, where $X$ might be the claim that the moon is made of cheese. Observing starlight deflection confirms the conjunction of general relativity with any absurdity one likes to attach.
+
+## The raven paradox
+
+<Definition term="Raven paradox">
+The paradox, formulated by Carl Hempel in 1945, that on apparently innocent principles of confirmation, the observation of a non-black non-raven, such as a white shoe, confirms the hypothesis that all ravens are black.
+</Definition>
+
+Hempel's paradox follows from two principles that look impossible to deny.
+
+The first is Nicod's criterion, after the French philosopher Jean Nicod. A universal generalisation of the form "all Fs are G" is confirmed by any object that is both F and G. A black raven confirms "all ravens are black".
+
+The second is the equivalence condition. If two hypotheses are logically equivalent, whatever confirms one confirms the other. This seems obligatory: if two hypotheses say the same thing, evidence cannot bear on them differently.
+
+<Argument name="The raven paradox">
+  <Premise>"All ravens are black" is logically equivalent to "all non-black things are non-ravens", its contrapositive.</Premise>
+  <Premise>By Nicod's criterion, a non-black non-raven, such as a white shoe, confirms "all non-black things are non-ravens".</Premise>
+  <Premise>By the equivalence condition, whatever confirms a hypothesis confirms every hypothesis logically equivalent to it.</Premise>
+  <Conclusion>A white shoe confirms that all ravens are black.</Conclusion>
+</Argument>
+
+The conclusion suggests a research programme in ornithology that can be conducted without leaving one's room.
+
+### Hempel's response
+
+Hempel accepted the conclusion. He argued that the sense of paradox is a psychological illusion. We think of the hypothesis as being about ravens, and so think only ravens are relevant. But logically it is about everything: it says of every object that it is either not a raven or black. A white shoe is an instance of that claim, and there is nothing strange about instances confirming generalisations.
+
+Hempel also pointed to the role of background knowledge. If you already know an object is a shoe, then finding it is white teaches you nothing about ravens, since you already knew it was not a raven. The illusion arises because we tacitly use this background knowledge while assessing the case as if we did not have it.
+
+### The Bayesian response
+
+The Bayesian account of confirmation says that $E$ confirms $H$ if and only if $P(H \mid E) > P(H)$. Evidence confirms a hypothesis when learning it would raise the hypothesis's probability.
+
+On this account, the paradox is defused by degree. Both a black raven and a white shoe can confirm "all ravens are black", but the black raven confirms it much more. The reason is proportion. There are vastly more non-black things than ravens. If you sample a random raven and find it black, you have checked a significant fraction of the population that could have falsified the hypothesis. If you sample a random non-black thing and find it is not a raven, you have checked an infinitesimal fraction. Both observations raise the probability of the hypothesis, but by amounts that differ by many orders of magnitude.
+
+This explains why the white shoe seems irrelevant: its confirmatory effect is real but so tiny that it rounds to nothing. It also shows that how evidence is gathered matters. Sampling ravens and checking their colour is a better test than sampling non-black things and checking whether they are ravens.
+
+<Aside title="Good's red herring">
+I. J. Good pointed out in 1967 that Nicod's criterion is false, at least on a Bayesian account. A black raven can disconfirm "all ravens are black".
+
+Suppose you know that you are in one of two worlds. In the first there are 100 ravens, all black, and a million other birds. In the second there are 1,000 black ravens, 1 white raven, and a million other birds. You pick a bird at random and it is a black raven.
+
+This is much more likely in the second world than in the first, since the second has ten times as many black ravens. So the observation raises your credence that you are in the second world, where not all ravens are black. The black raven has disconfirmed the generalisation.
+
+The lesson is that whether an observation confirms a hypothesis depends on background information about how the world might be and how the observation was obtained. There is no purely logical relation of confirmation between an instance and a generalisation. Hempel's hope for a logic of confirmation, analogous to deductive logic, runs aground on this result.
+</Aside>
+
+## Grue
+
+The intermediate article on induction introduced Goodman's new riddle in an aside. This section develops it, since its consequences for confirmation theory are more radical than for the justification of induction.
+
+<Definition term="Grue">
+A predicate defined by Nelson Goodman in 1955: an object is grue if it is examined before a certain future time $t$ and is green, or is not examined before $t$ and is blue.
+</Definition>
+
+<Definition term="New riddle of induction">
+Goodman's problem of explaining why some predicates, such as green, support inductive generalisation from observed instances while others, such as grue, do not, when the observed instances fit both equally well.
+</Definition>
+
+<Definition term="Projectibility">
+The property a predicate has when its observed instances confirm generalisations involving it, so that it is legitimate to project it from observed to unobserved cases. Green is projectible; grue is not. Goodman's challenge was to say what projectibility consists in.
+</Definition>
+
+All emeralds examined so far are green. By Nicod's criterion, each confirms "all emeralds are green". But each examined emerald is also grue, since it was examined before $t$ and is green. So each also confirms "all emeralds are grue". The two hypotheses make incompatible predictions about emeralds first examined after $t$: one says they will be green, the other blue.
+
+Hempel's qualitative theory of confirmation had tried to define confirmation syntactically, by the logical form of hypothesis and evidence. Grue shows that no such definition can work. "All emeralds are green" and "all emeralds are grue" have exactly the same logical form. Any syntactic account of confirmation that lets green be confirmed will let grue be confirmed too.
+
+### Goodman's answer
+
+Goodman proposed that projectibility depends on entrenchment: a predicate is projectible if it, or predicates with the same extension, have been used in successful projections in the past. Green is well entrenched; grue is not. This explains the difference, but it does so by reference to the history of our linguistic practice. Critics point out that entrenchment describes which predicates we project, not why we are right to project them.
+
+### Does Bayesianism help?
+
+On a Bayesian account, the evidence confirms both hypotheses. What distinguishes them is the prior. If a reasoner assigns a much higher prior to "all emeralds are green" than to "all emeralds are grue", then after seeing green emeralds the green hypothesis will remain far more probable. Bayesianism therefore handles grue by relocating it: the question is no longer which predicates are confirmable, but which hypotheses deserve higher priors.
+
+That is a real clarification, since it shows that the new riddle is not a problem for the logic of updating. But it does not answer the riddle. It tells us that a reasoner who favours grue in their priors will reason coherently to the conclusion that the next emerald will be blue, and nothing in the Bayesian framework says they are wrong. The problem of the priors from the formal epistemology article and the new riddle of induction are the same problem.
+
+### Natural kinds
+
+Quine proposed in 1969 that projectible predicates are those that pick out natural kinds, and that our sense of similarity, shaped by natural selection, tends to track them. We see green things as similar and grue things as not, and creatures with badly calibrated similarity judgements tended to die before reproducing.
+
+David Lewis's notion of natural properties, the elite properties that carve nature at its joints, offers a metaphysical version: green is more natural than grue, and inductive inference should favour hypotheses stated in natural terms. The difficulty is the one Goodman already anticipated. From the point of view of someone who speaks a grue language, grue is the basic predicate and green is defined in terms of grue, bleen, and a time. The asymmetry has to be in the world, not in the language, and saying where it is in the world is a substantial metaphysical commitment.
+
+## Assessment
+
+The paradoxes of confirmation have taught three lessons.
+
+First, confirmation is not a purely logical relation between statements. Good's example and grue both show that whether evidence supports a hypothesis depends on background information and on which hypotheses are taken seriously.
+
+Second, the Bayesian framework handles the paradoxes by making their dependence on priors explicit. This is progress, but the problem of priors itself remains.
+
+Third, the new riddle of induction is not a problem only for enumerative induction. It applies to every method of inference from evidence, since every method must decide which patterns in the data to extend. That makes it one of the deepest problems in the theory of knowledge.
+
+<Objection>
+Grue is a philosopher's invention with no bearing on actual inquiry. No scientist has ever been tempted to project grue, and a problem that arises only for gerrymandered predicates is not a real problem.
+</Objection>
+
+<Reply>
+The objection is right that no scientist projects grue. The question is why not, and "because grue is gerrymandered" is not an answer, since whether a predicate is gerrymandered depends on which predicates are taken as basic.
+
+Versions of the problem arise in real inquiry. In statistics and machine learning, it appears as the problem of choosing among the many models that fit a given data set equally well: a curve through a set of points can be continued in infinitely many ways, and the data do not choose among them. The choice depends on inductive bias, built into the method, and the question of which biases are appropriate is Goodman's question in another vocabulary. The no-free-lunch theorems in learning theory make a related point formally: no learning method outperforms every other across all possible data-generating processes. What makes a method succeed in our world is a match between its biases and the world's structure, and grue is the simplest way to see that such a match cannot be taken for granted.
+</Reply>
+
+## Next
+
+Two paradoxes that arise when rational belief is identified with high credence, and what they suggest about the relation between belief and degrees of confidence.
+
+<FurtherReading>
+  <li>Carl G. Hempel, "Studies in the Logic of Confirmation", *Mind*, volume 54, numbers 213 and 214 (1945), pages 1 to 26 and 97 to 121.</li>
+  <li>Nelson Goodman, *Fact, Fiction, and Forecast* (Harvard University Press, 1955), chapter 3.</li>
+  <li>I. J. Good, "The White Shoe Is a Red Herring", *British Journal for the Philosophy of Science*, volume 17, number 4 (1967), page 322.</li>
+  <li>W. V. O. Quine, "Natural Kinds", in *Ontological Relativity and Other Essays* (Columbia University Press, 1969).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Confirmation"](https://plato.stanford.edu/entries/confirmation/), by Vincenzo Crupi.</li>
+</FurtherReading>
