@@ -5,10 +5,26 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
-## 19 September 2026
+## 26 September 2026
 
 10 changes.
 
+- Add epistemology advanced rung 8: lottery and preface paradoxes ([8d68b1b](https://github.com/thejjp04/philolarps/commit/8d68b1b))
+- Add epistemology advanced rung 7: confirmation theory, ravens, and grue ([75eb378](https://github.com/thejjp04/philolarps/commit/75eb378))
+- Add epistemology advanced rung 6: accuracy-first epistemology ([41aeec2](https://github.com/thejjp04/philolarps/commit/41aeec2))
+- Add epistemology advanced rung 5: formal epistemology ([e108109](https://github.com/thejjp04/philolarps/commit/e108109))
+- Add epistemology advanced rung 4: epistemic value and swamping ([3fe38ff](https://github.com/thejjp04/philolarps/commit/3fe38ff))
+- Add epistemology advanced rung 3: disjunctivism and the new evil demon ([5478fdb](https://github.com/thejjp04/philolarps/commit/5478fdb))
+- Add epistemology advanced rung 2: knowledge-first epistemology ([aeda981](https://github.com/thejjp04/philolarps/commit/aeda981))
+- Add epistemology advanced rung 1: contextualism and invariantism ([32b3808](https://github.com/thejjp04/philolarps/commit/32b3808))
+- Add epistemology intermediate rung 18: epistemic injustice ([c108cd2](https://github.com/thejjp04/philolarps/commit/c108cd2))
+- Add epistemology intermediate rung 17: testimony and disagreement ([5301e94](https://github.com/thejjp04/philolarps/commit/5301e94))
+
+## 19 September 2026
+
+11 changes.
+
+- Regenerate changelog ([383a5df](https://github.com/thejjp04/philolarps/commit/383a5df))
 - Add epistemology intermediate rung 16: Bayesian confidence and credence ([7c2d35c](https://github.com/thejjp04/philolarps/commit/7c2d35c))
 - Add epistemology intermediate rung 15: the problem of induction ([ec8abfb](https://github.com/thejjp04/philolarps/commit/ec8abfb))
 - Add epistemology intermediate rung 14: the analytic/synthetic distinction and Quine's attack ([de4e538](https://github.com/thejjp04/philolarps/commit/de4e538))
