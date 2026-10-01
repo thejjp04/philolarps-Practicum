@@ -340,9 +340,9 @@ export const ethics: Subject = {
           "Cornell realism",
           "synthetic ethical naturalism",
           "moral twin earth",
-          "causal theory of reference",
         ],
         requires: [
+          "causal theory of reference",
           "ethical naturalism",
           "moral realism",
           "moral property",

@@ -10,15 +10,21 @@ import { ontology } from "@/lib/curriculum/ontology";
 import { politicalPhilosophy } from "@/lib/curriculum/political-philosophy";
 import { appliedEthics } from "@/lib/curriculum/applied-ethics";
 import { theism } from "@/lib/curriculum/theism";
+import { philosophyOfLanguage } from "@/lib/curriculum/philosophy-of-language";
+import { metalogic } from "@/lib/curriculum/metalogic";
+import { metaontology } from "@/lib/curriculum/metaontology";
 
 /** Nav order is fixed by hand. It is a curriculum, not an alphabetised list. */
 export const SUBJECTS: Subject[] = [
   metaphysics,
   epistemology,
   logic,
+  philosophyOfLanguage,
+  metalogic,
   ethics,
   philosophyOfMind,
   ontology,
+  metaontology,
   politicalPhilosophy,
   appliedEthics,
   theism,

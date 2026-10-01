@@ -283,12 +283,12 @@ export const ontology: Subject = {
           "Whether ontological disputes are genuine disagreements or artifacts of how the parties speak",
         estReadMin: 22,
         introduces: [
-          "metaontology",
           "deflationism",
           "substantive dispute",
           "verbal dispute",
         ],
         requires: [
+          "metaontology",
           "ontology",
           "ontological commitment",
           "Quine's criterion",
