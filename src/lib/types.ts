@@ -50,6 +50,7 @@ export type ArticleFrontmatter = {
   introduces?: string[];
   requires?: string[];
   summary?: string;
+  added?: string;
 };
 
 export type ArticleRef = {

@@ -1,15 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 import { Container, PageHeader } from "@/components/ui";
 import { IconArrowRight } from "@/components/icons";
 import { getResolvedPaths } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Reading Paths",
+export const metadata: Metadata = pageMetadata({
+  title: "Philosophy Reading Paths",
   description:
-    "Three curated sequences through the curriculum, each crossing several subjects.",
-};
+    "Curated philosophy reading lists that cross several subjects, including a six-week route for complete beginners.",
+  path: "/reading-paths",
+});
 
 export default function ReadingPathsPage() {
   const paths = getResolvedPaths();

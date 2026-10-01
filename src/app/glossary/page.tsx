@@ -1,15 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 import { Container, PageHeader } from "@/components/ui";
 import { getGlossary } from "@/lib/content";
 import { TIER_LABEL } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: "Glossary",
+export const metadata: Metadata = pageMetadata({
+  title: "Philosophy Glossary",
   description:
-    "Every term defined anywhere on the site, with a link back to the article that defines it.",
-};
+    "A glossary of philosophy terms, from validity to supervenience, each linked to the article that defines it in full.",
+  path: "/glossary",
+});
 
 export default function GlossaryPage() {
   const entries = getGlossary();

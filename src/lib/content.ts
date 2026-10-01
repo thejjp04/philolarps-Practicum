@@ -157,6 +157,11 @@ export function getRecentlyAdded(limit = 5): ArticleRef[] {
     .map((x) => x.article);
 }
 
+export function getAddedDate(ref: ArticleRef): string | undefined {
+  const added = findFile(ref.subject, ref.tier, ref.slug)?.data.added;
+  return typeof added === "string" ? added : undefined;
+}
+
 export type LoadedArticle = {
   source: string;
   frontmatter: ArticleFrontmatter;

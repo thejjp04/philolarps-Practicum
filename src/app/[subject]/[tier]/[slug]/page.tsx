@@ -11,8 +11,10 @@ import { PlannedTag, PrerequisiteChips, TierBadge } from "@/components/ui";
 import { IconArrowLeft, IconArrowRight, SubjectGlyph } from "@/components/icons";
 import { FinishArticle } from "@/components/finish";
 import { mdxComponents } from "@/components/mdx";
+import { JsonLd } from "@/components/JsonLd";
 import {
   allLadderParams,
+  getAddedDate,
   getArticleRef,
   getLadderEntry,
   getNeighbours,
@@ -21,6 +23,7 @@ import {
 } from "@/lib/content";
 import { getSubject } from "@/lib/subjects";
 import { TIERS, TIER_LABEL, type ArticleRef, type Tier } from "@/lib/types";
+import { PUBLISHER, absoluteUrl, breadcrumbs, pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ subject: string; tier: string; slug: string }> };
 
@@ -37,10 +40,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!isTier(tier)) return {};
   const ref = getArticleRef(subject, tier, slug);
   if (!ref) return {};
-  return {
+  return pageMetadata({
     title: ref.written ? ref.title : `${ref.title} (planned)`,
-    description: ref.summary,
-  };
+    description: `${ref.summary}. ${TIER_LABEL[tier]} ${ref.subjectName}, ${ref.estReadMin} minute read.`,
+    path: ref.href,
+    type: ref.written ? "article" : "website",
+    noindex: !ref.written,
+  });
 }
 
 function relatedArticles(
@@ -178,6 +184,41 @@ export default async function ArticlePage({ params }: Params) {
   const { previous, next } = getNeighbours(subjectSlug, tier, slug);
   const related = relatedArticles(subjectSlug, tier, slug, path);
 
+  const added = getAddedDate(ref);
+  const trail = breadcrumbs([
+    { name: "Home", path: "/" },
+    { name: ref.subjectName, path: `/${ref.subject}` },
+    { name: TIER_LABEL[tier], path: `/${ref.subject}/${tier}` },
+    { name: ref.title, path: ref.href },
+  ]);
+  const structuredData = ref.written
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": ["Article", "LearningResource"],
+          headline: ref.title,
+          description: ref.summary,
+          url: absoluteUrl(ref.href),
+          mainEntityOfPage: absoluteUrl(ref.href),
+          ...(added ? { datePublished: added } : {}),
+          author: PUBLISHER,
+          publisher: PUBLISHER,
+          inLanguage: "en-GB",
+          isAccessibleForFree: true,
+          educationalLevel: TIER_LABEL[tier],
+          learningResourceType: "Article",
+          timeRequired: `PT${ref.estReadMin}M`,
+          about: ref.subjectName,
+          isPartOf: {
+            "@type": "Course",
+            name: ref.subjectName,
+            url: absoluteUrl(`/${ref.subject}`),
+          },
+        },
+        trail,
+      ]
+    : [trail];
+
   let body;
   if (article) {
     const { content } = await compileMDX({
@@ -213,6 +254,7 @@ export default async function ArticlePage({ params }: Params) {
   return (
     <div className="mx-auto flex w-full max-w-[1180px] gap-10 px-6 py-10 lg:px-10 lg:py-14">
       <article className="min-w-0 max-w-[760px] flex-1">
+        <JsonLd data={structuredData} />
         <header className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2.5">
             <Link

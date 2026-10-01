@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 import { StationPicker } from "@/components/StationPicker";
 import { Container, PageHeader, SectionHeading } from "@/components/ui";
 import { STATIONS } from "@/lib/stations";
 
-export const metadata: Metadata = {
-  title: "Music",
+export const metadata: Metadata = pageMetadata({
+  title: "Music to Study Philosophy To",
   description:
     "Background music to read to, playing from YouTube while you move around the site.",
-};
+  path: "/music",
+});
 
 export default function MusicPage() {
   return (

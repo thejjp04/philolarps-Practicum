@@ -8,6 +8,7 @@ import "./globals.css";
 import { AppShell } from "@/components/AppShell";
 import { themeScript } from "@/components/theme";
 import { buildNavData } from "@/lib/nav";
+import { SITE_KEYWORDS, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,26 +29,28 @@ const jetbrains = JetBrains_Mono({
 });
 
 const DESCRIPTION =
-  "Structured philosophy curricula, from absolute beginner to graduate level. Free, no account needed.";
+  "Learn philosophy for free with step-by-step courses in logic, ethics, metaphysics and more, from beginner to graduate level. For self-learners and teachers.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://philolarps.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Philolarps",
-    template: "%s · Philolarps",
+    default: `${SITE_NAME}: Learn Philosophy Online, Free`,
+    template: `%s · ${SITE_NAME}`,
   },
   description: DESCRIPTION,
-  alternates: { canonical: "/" },
+  applicationName: SITE_NAME,
+  keywords: SITE_KEYWORDS,
+  category: "education",
   openGraph: {
     type: "website",
-    siteName: "Philolarps",
-    title: "Philolarps",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
     description: DESCRIPTION,
-    url: "/",
+    locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Philolarps",
+    title: SITE_NAME,
     description: DESCRIPTION,
   },
 };

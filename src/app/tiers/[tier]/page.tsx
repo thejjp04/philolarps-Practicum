@@ -7,6 +7,13 @@ import { SUBJECT_ICONS } from "@/components/icons";
 import { getTierArticles } from "@/lib/content";
 import { SUBJECTS } from "@/lib/subjects";
 import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+const TIER_TITLE: Record<Tier, string> = {
+  beginner: "Philosophy for Beginners",
+  intermediate: "Intermediate Philosophy",
+  advanced: "Advanced Philosophy",
+};
 
 type Params = { params: Promise<{ tier: string }> };
 
@@ -22,7 +29,7 @@ const TIER_LEAD: Record<Tier, string> = {
   beginner:
     "Everything on the site that assumes no prior reading, grouped by subject. Each subject's list is in ladder order, so start at the top of whichever one you want.",
   intermediate:
-    "Undergraduate level across all nine subjects. These assume the beginner tier of the same subject, or an equivalent course.",
+    "Undergraduate level across every subject. These assume the beginner tier of the same subject, or an equivalent course.",
   advanced:
     "Graduate level. Metatheory, technical variants, and open disputes. Each subject's advanced tier assumes its intermediate tier.",
 };
@@ -30,7 +37,11 @@ const TIER_LEAD: Record<Tier, string> = {
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { tier } = await params;
   if (!isTier(tier)) return {};
-  return { title: `${TIER_LABEL[tier]} index`, description: TIER_LEAD[tier] };
+  return pageMetadata({
+    title: TIER_TITLE[tier],
+    description: TIER_LEAD[tier],
+    path: `/tiers/${tier}`,
+  });
 }
 
 export default async function TierIndexPage({ params }: Params) {

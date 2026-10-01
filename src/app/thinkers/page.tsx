@@ -1,15 +1,17 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 import { Container, PageHeader } from "@/components/ui";
 import { getThinkerRecords } from "@/lib/content";
 import { TIER_LABEL } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: "Thinkers Index",
+export const metadata: Metadata = pageMetadata({
+  title: "Thinkers Index: Philosophers and What They Held",
   description:
     "Every philosopher the curriculum engages with, their dates, what they held, and where the site covers them.",
-};
+  path: "/thinkers",
+});
 
 export default function ThinkersPage() {
   const thinkers = getThinkerRecords();

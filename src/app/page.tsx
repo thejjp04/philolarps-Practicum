@@ -1,10 +1,46 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import { Card, Container, SectionHeading, TierChips } from "@/components/ui";
 import { IconArrowRight, SubjectGlyph } from "@/components/icons";
-import { getRecentlyAdded, getTierArticles } from "@/lib/content";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  getRecentlyAdded,
+  getTierArticles,
+  getWrittenArticles,
+} from "@/lib/content";
 import { SUBJECTS } from "@/lib/subjects";
 import { TIERS, TIER_LABEL } from "@/lib/types";
+import { PUBLISHER, SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/seo";
+
+const HOME_TITLE = "Learn Philosophy Online, Free";
+const HOME_DESCRIPTION =
+  "Learn philosophy for free with step-by-step courses in logic, ethics, metaphysics and more, from beginner to graduate level. For self-learners and teachers.";
+
+export const metadata: Metadata = {
+  title: { absolute: `${HOME_TITLE} · ${SITE_NAME}` },
+  description: HOME_DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: `${HOME_TITLE} · ${SITE_NAME}`,
+    description: HOME_DESCRIPTION,
+    url: "/",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${HOME_TITLE} · ${SITE_NAME}`,
+    description: HOME_DESCRIPTION,
+  },
+};
+
+const TEACHING_LINKS = [
+  { href: "/tiers", label: "Tiers and what each assumes" },
+  { href: "/reading-paths", label: "Cross-subject reading paths" },
+  { href: "/glossary", label: "Glossary of every defined term" },
+];
 
 const STARTING_POINTS = [
   {
@@ -31,6 +67,30 @@ const STARTING_POINTS = [
 
 export default function HomePage() {
   const recent = getRecentlyAdded(5);
+  const writtenCount = getWrittenArticles().length;
+
+  const structuredData = [
+    { "@context": "https://schema.org", ...PUBLISHER },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: HOME_DESCRIPTION,
+      inLanguage: "en-GB",
+      publisher: { "@id": PUBLISHER["@id"] },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: SUBJECTS.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: absoluteUrl(`/${s.slug}`),
+      })),
+    },
+  ];
 
   const subjects = SUBJECTS.map((subject) => ({
     ...subject,
@@ -41,13 +101,18 @@ export default function HomePage() {
 
   return (
     <Container wide>
+      <JsonLd data={structuredData} />
       <header className="mb-12">
-        <h1 className="text-[40px] font-bold leading-[1.1] tracking-[-0.03em] lg:text-[52px]">
-          Philolarps
+        <p className="mb-3 font-mono text-[12px] font-semibold uppercase tracking-[0.11em] text-[var(--text-muted)]">
+          {SITE_NAME}
+        </p>
+        <h1 className="max-w-[20ch] text-[40px] font-bold leading-[1.1] tracking-[-0.03em] lg:text-[52px]">
+          Learn philosophy, from your first argument to graduate level
         </h1>
         <p className="mt-4 max-w-[62ch] font-serif text-[19px] leading-[1.6] text-[var(--text-muted)]">
-          Philosophy curricula arranged as prerequisite ladders, from no prior
-          exposure through to graduate level, free to read without an account.
+          Free philosophy courses arranged as prerequisite ladders. Every
+          article uses only terms an earlier one has defined, so you can start
+          with no background and keep climbing. No account needed.
         </p>
       </header>
       <section className="mb-14">
@@ -92,6 +157,32 @@ export default function HomePage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="mb-14">
+        <SectionHeading>For philosophy teachers</SectionHeading>
+        <div className="mt-4 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--bg-subtle)] px-5 py-5 sm:px-6">
+          <p className="max-w-[68ch] font-serif text-[16.5px] leading-[1.6]">
+            Every article lists the articles it assumes and defines each new
+            term in exactly one place, so you can set a single reading without
+            first checking what your students already know. Each subject page
+            is a numbered reading order that works as a ready-made syllabus,
+            and with {writtenCount} articles free to read and no sign-up, a
+            link is all a class needs.
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+            {TEACHING_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
+                >
+                  {link.label}
+                  <IconArrowRight className="h-[15px] w-[15px]" />
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
       <section>

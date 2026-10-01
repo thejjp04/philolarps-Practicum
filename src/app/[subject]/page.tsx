@@ -12,6 +12,8 @@ import { IconArrowRight, IconRoute, SubjectGlyph } from "@/components/icons";
 import { getSubjectPath, getTierArticles } from "@/lib/content";
 import { SUBJECTS, getSubject } from "@/lib/subjects";
 import { TIERS, TIER_LABEL } from "@/lib/types";
+import { JsonLd } from "@/components/JsonLd";
+import { PUBLISHER, absoluteUrl, breadcrumbs, pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ subject: string }> };
 
@@ -23,7 +25,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { subject: slug } = await params;
   const subject = getSubject(slug);
   if (!subject) return {};
-  return { title: subject.name, description: subject.oneLine };
+  return pageMetadata({
+    title: `Learn ${subject.name}: Free Philosophy Course`,
+    description: `${subject.oneLine} A free ${subject.name.toLowerCase()} course in ordered steps, from beginner to graduate level.`,
+    path: `/${subject.slug}`,
+  });
 }
 
 const TIER_NOTE: Record<(typeof TIERS)[number], string> = {
@@ -42,10 +48,48 @@ export default async function SubjectPage({ params }: Params) {
   const written = path.filter((a) => a.written).length;
   const firstReadable = path.find((a) => a.written);
 
-  let counter = 0;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      name: subject.name,
+      description: subject.oneLine,
+      url: absoluteUrl(`/${subject.slug}`),
+      provider: PUBLISHER,
+      inLanguage: "en-GB",
+      isAccessibleForFree: true,
+      educationalLevel: "Beginner to advanced",
+      about: subject.name,
+      teaches: subject.scope,
+      offers: {
+        "@type": "Offer",
+        category: "Free",
+        price: 0,
+        priceCurrency: "USD",
+      },
+      hasCourseInstance: {
+        "@type": "CourseInstance",
+        courseMode: "Online",
+        courseWorkload: `PT${Math.max(1, Math.round(totalMinutes / 60))}H`,
+      },
+      hasPart: path
+        .filter((a) => a.written)
+        .map((a) => ({
+          "@type": "LearningResource",
+          name: a.title,
+          url: absoluteUrl(a.href),
+        })),
+    },
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: subject.name, path: `/${subject.slug}` },
+    ]),
+  ];
+
 
   return (
     <Container>
+      <JsonLd data={structuredData} />
       <PageHeader
         title={subject.name}
         lead={subject.scope}
@@ -88,12 +132,12 @@ export default async function SubjectPage({ params }: Params) {
               </p>
               <ul className="mt-6 space-y-7">
                 {articles.map((article) => {
-                  counter += 1;
+                  const index = path.findIndex((a) => a.href === article.href) + 1;
                   return (
                     <ArticleRow
                       key={article.href}
                       article={article}
-                      index={counter}
+                      index={index}
                       footer={
                         <PrerequisiteChips
                           subject={subject.slug}

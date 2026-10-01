@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
 import { Card, Container, PageHeader } from "@/components/ui";
 import { IconArrowRight } from "@/components/icons";
@@ -6,11 +7,12 @@ import { getTierArticles } from "@/lib/content";
 import { SUBJECTS } from "@/lib/subjects";
 import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
 
-export const metadata: Metadata = {
-  title: "Tiers",
+export const metadata: Metadata = pageMetadata({
+  title: "Philosophy by Level: Beginner, Intermediate, Advanced",
   description:
-    "The three levels the curriculum is divided into, and what each one assumes.",
-};
+    "The three levels the philosophy curriculum is divided into, and what each one assumes a reader already knows.",
+  path: "/tiers",
+});
 
 const TIER_NOTE: Record<Tier, string> = {
   beginner:

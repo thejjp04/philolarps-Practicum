@@ -10,6 +10,14 @@ import {
 import { getSubjectPath, getTierArticles } from "@/lib/content";
 import { SUBJECTS, getSubject } from "@/lib/subjects";
 import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbs, pageMetadata } from "@/lib/seo";
+
+const TIER_TITLE: Record<Tier, (name: string) => string> = {
+  beginner: (name) => `${name} for Beginners`,
+  intermediate: (name) => `Intermediate ${name}`,
+  advanced: (name) => `Advanced ${name}`,
+};
 
 type Params = { params: Promise<{ subject: string; tier: string }> };
 
@@ -21,10 +29,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { subject: slug, tier } = await params;
   const subject = getSubject(slug);
   if (!subject || !isTier(tier)) return {};
-  return {
-    title: `${subject.name}: ${TIER_LABEL[tier]}`,
-    description: subject.oneLine,
-  };
+  return pageMetadata({
+    title: TIER_TITLE[tier](subject.name),
+    description: `${subject.oneLine} ${TIER_LEAD[tier]}`,
+    path: `/${subject.slug}/${tier}`,
+  });
 }
 
 function isTier(value: string): value is Tier {
@@ -50,6 +59,13 @@ export default async function SubjectTierPage({ params }: Params) {
 
   return (
     <Container>
+      <JsonLd
+        data={breadcrumbs([
+          { name: "Home", path: "/" },
+          { name: subject.name, path: `/${subject.slug}` },
+          { name: TIER_LABEL[tier], path: `/${subject.slug}/${tier}` },
+        ])}
+      />
       <PageHeader
         eyebrow={subject.name}
         title={TIER_LABEL[tier]}

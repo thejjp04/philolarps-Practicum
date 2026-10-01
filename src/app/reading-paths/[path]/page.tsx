@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ArticleRow, Container, PageHeader } from "@/components/ui";
 import { getResolvedPath } from "@/lib/content";
 import { READING_PATHS } from "@/lib/reading-paths";
+import { pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ path: string }> };
 
@@ -15,7 +16,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { path: slug } = await params;
   const path = getResolvedPath(slug);
   if (!path) return {};
-  return { title: path.name, description: path.blurb };
+  return pageMetadata({
+    title: path.name,
+    description: path.blurb,
+    path: `/reading-paths/${path.slug}`,
+  });
 }
 
 export default async function ReadingPathPage({ params }: Params) {
