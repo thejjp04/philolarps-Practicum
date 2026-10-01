@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { IconMoon, IconSun } from "@/components/icons";
 
 export const THEME_STORAGE_KEY = "philolarps-theme";
@@ -12,20 +12,28 @@ export const themeScript = `(function(){try{var s=localStorage.getItem(${JSON.st
 type Theme = "light" | "dark";
 
 function readTheme(): Theme {
-  if (typeof document === "undefined") return "light";
   return document.documentElement.getAttribute("data-theme") === "dark"
     ? "dark"
     : "light";
 }
 
-export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [ready, setReady] = useState(false);
+function subscribeTheme(onChange: () => void) {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+  return () => observer.disconnect();
+}
 
-  useEffect(() => {
-    setTheme(readTheme());
-    setReady(true);
-  }, []);
+export function ThemeToggle() {
+  const current = useSyncExternalStore<Theme | null>(
+    subscribeTheme,
+    readTheme,
+    () => null,
+  );
+  const ready = current !== null;
+  const theme: Theme = current ?? "light";
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
@@ -33,7 +41,6 @@ export function ThemeToggle() {
       if (localStorage.getItem(THEME_STORAGE_KEY)) return;
       const next: Theme = media.matches ? "dark" : "light";
       document.documentElement.setAttribute("data-theme", next);
-      setTheme(next);
     };
     media.addEventListener("change", onChange);
     return () => media.removeEventListener("change", onChange);
@@ -46,7 +53,6 @@ export function ThemeToggle() {
       localStorage.setItem(THEME_STORAGE_KEY, next);
     } catch {
     }
-    setTheme(next);
   }
 
   const isDark = theme === "dark";

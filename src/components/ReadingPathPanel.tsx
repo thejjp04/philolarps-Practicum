@@ -10,19 +10,19 @@ import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
 
 export function ReadingPathPanel({ nav }: { nav: NavData }) {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
+  const [openAt, setOpenAt] = useState<string | null>(null);
+  const open = openAt === pathname;
+  const setOpen = (next: boolean) => setOpenAt(next ? pathname : null);
 
   const segment = pathname.split("/")[1] ?? "";
   const subject: NavSubject | undefined = nav.groups
     .flatMap((g) => g.subjects)
     .find((s) => s.slug === segment);
 
-  useEffect(() => setOpen(false), [pathname]);
-
   useEffect(() => {
     if (!open) return;
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") setOpenAt(null);
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);

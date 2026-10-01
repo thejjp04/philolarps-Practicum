@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useId, useMemo, useState } from "react";
+import { useId, useMemo, useState, useSyncExternalStore } from "react";
 
 import { LogoLockup } from "@/components/Logo";
 import { ThemeToggle } from "@/components/theme";
@@ -31,6 +31,26 @@ const FILTERS: { key: Filter; label: string }[] = [
 ];
 
 const FILTER_STORAGE_KEY = "philolarps-tier";
+const FILTER_EVENT = "philolarps-tier-change";
+
+function readFilter(): Filter {
+  try {
+    const stored = localStorage.getItem(FILTER_STORAGE_KEY);
+    const match = FILTERS.find((f) => f.key === stored);
+    if (match) return match.key;
+  } catch {
+  }
+  return "all";
+}
+
+function subscribeFilter(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(FILTER_EVENT, onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(FILTER_EVENT, onChange);
+  };
+}
 
 const REFERENCE = [
   { href: "/glossary", label: "Glossary", Icon: IconGlossary },
@@ -51,16 +71,13 @@ export function Sidebar({
   const pathname = usePathname();
   const tour = useTour();
   const done = useDone();
-  const [filter, setFilter] = useState<Filter>("all");
+  const filter = useSyncExternalStore<Filter>(
+    subscribeFilter,
+    readFilter,
+    () => "all",
+  );
   const [expanded, setExpanded] = useState<string[]>([]);
-
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(FILTER_STORAGE_KEY) as Filter | null;
-      if (stored && FILTERS.some((f) => f.key === stored)) setFilter(stored);
-    } catch {
-    }
-  }, []);
+  const [seenSubject, setSeenSubject] = useState<string | null>(null);
 
   const activeSubject = useMemo(() => {
     const segment = pathname.split("/")[1] ?? "";
@@ -74,20 +91,19 @@ export function Sidebar({
     return TIERS.find((t) => t === segment) ?? null;
   }, [pathname]);
 
-  useEffect(() => {
-    if (activeSubject) {
-      setExpanded((prev) =>
-        prev.includes(activeSubject) ? prev : [...prev, activeSubject],
-      );
+  if (activeSubject !== seenSubject) {
+    setSeenSubject(activeSubject);
+    if (activeSubject && !expanded.includes(activeSubject)) {
+      setExpanded([...expanded, activeSubject]);
     }
-  }, [activeSubject]);
+  }
 
   function chooseFilter(next: Filter) {
-    setFilter(next);
     try {
       localStorage.setItem(FILTER_STORAGE_KEY, next);
     } catch {
     }
+    window.dispatchEvent(new Event(FILTER_EVENT));
   }
 
   function toggle(slug: string) {

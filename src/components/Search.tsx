@@ -66,12 +66,9 @@ export function Search() {
   }, [load]);
 
   useEffect(() => {
-    if (open) {
-      inputRef.current?.focus();
-      inputRef.current?.select();
-    } else {
-      setCursor(0);
-    }
+    if (!open) return;
+    inputRef.current?.focus();
+    inputRef.current?.select();
   }, [open]);
 
   const q = query.trim().toLowerCase();
@@ -85,11 +82,14 @@ export function Search() {
           .slice(0, 20)
           .map((r) => r.doc);
 
-  useEffect(() => setCursor(0), [query]);
+  function changeQuery(next: string) {
+    setQuery(next);
+    setCursor(0);
+  }
 
   function go(doc: SearchDoc) {
     setOpen(false);
-    setQuery("");
+    changeQuery("");
     router.push(doc.href);
   }
 
@@ -154,7 +154,7 @@ export function Search() {
               <input
                 ref={inputRef}
                 value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => changeQuery(e.target.value)}
                 onKeyDown={onInputKey}
                 placeholder="Search concepts, thinkers, arguments…"
                 aria-label="Search"
