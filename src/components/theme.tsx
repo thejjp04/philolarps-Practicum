@@ -5,10 +5,6 @@ import { IconMoon, IconSun } from "@/components/icons";
 
 export const THEME_STORAGE_KEY = "philolarps-theme";
 
-/**
- * Runs before first paint, so the page never flashes the wrong theme.
- * A stored choice wins; otherwise the OS preference decides.
- */
 export const themeScript = `(function(){try{var s=localStorage.getItem(${JSON.stringify(
   THEME_STORAGE_KEY,
 )});var d=window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.setAttribute("data-theme",s==="dark"||s==="light"?s:(d?"dark":"light"));}catch(e){}})();`;
@@ -31,7 +27,6 @@ export function ThemeToggle() {
     setReady(true);
   }, []);
 
-  // Follow the OS while the visitor has not made an explicit choice.
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     const onChange = () => {
@@ -50,7 +45,6 @@ export function ThemeToggle() {
     try {
       localStorage.setItem(THEME_STORAGE_KEY, next);
     } catch {
-      // Private browsing. The choice simply will not persist.
     }
     setTheme(next);
   }
@@ -75,8 +69,6 @@ export function ThemeToggle() {
       <span className="flex-1 text-[13px] font-medium">
         {ready ? (isDark ? "Dark" : "Light") : "Theme"}
       </span>
-
-      {/* Sliding pill */}
       <span
         aria-hidden="true"
         className="relative h-[20px] w-[36px] shrink-0 rounded-[var(--radius-pill)] border border-[color-mix(in_srgb,currentColor_35%,transparent)] bg-[color-mix(in_srgb,currentColor_16%,transparent)]"

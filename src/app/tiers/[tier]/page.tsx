@@ -51,7 +51,6 @@ export default async function TierIndexPage({ params }: Params) {
         title={`${TIER_LABEL[tier]} index`}
         lead={TIER_LEAD[tier]}
       />
-
       <div className="space-y-14">
         {sections.map(({ subject, articles }) => {
           const Icon = SUBJECT_ICONS[subject.slug];
@@ -69,7 +68,6 @@ export default async function TierIndexPage({ params }: Params) {
                   {subject.name}
                 </Link>
               </h2>
-
               <ul className="mt-5 space-y-6">
                 {articles.map((article, i) => (
                   <ArticleRow key={article.href} article={article} index={i + 1} />

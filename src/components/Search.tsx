@@ -52,7 +52,6 @@ export function Search() {
     }
   }, [docs]);
 
-  // Cmd+K / Ctrl+K anywhere, Escape to close.
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -115,9 +114,6 @@ export function Search() {
 
   return (
     <>
-      {/* Narrow screens get the same control as a single icon. Hiding search
-          outright below the breakpoint left phone readers with no way to look
-          anything up, since the shortcut needs a keyboard. */}
       <button
         type="button"
         aria-label="Search"
@@ -149,7 +145,6 @@ export function Search() {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-[var(--scrim)] backdrop-blur-[2px]"
           />
-
           <div
             className="relative w-full max-w-[600px] overflow-hidden rounded-[12px] border border-[var(--border)] bg-[var(--surface)]"
             style={{ boxShadow: "var(--shadow-panel)" }}
@@ -169,7 +164,6 @@ export function Search() {
                 Esc
               </kbd>
             </div>
-
             <ul
               ref={listRef}
               className="scrollbar-slim max-h-[52vh] overflow-y-auto p-2"

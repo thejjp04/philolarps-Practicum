@@ -45,7 +45,6 @@ export default function GlossaryPage() {
               </a>
             ))}
           </nav>
-
           <div className="space-y-10">
             {letters.map((letter) => (
               <section

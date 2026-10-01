@@ -1,7 +1,3 @@
-/**
- * Regenerates CHANGELOG.md from the commit history, grouped by the day the
- * work was done. Run `npm run changelog` before pushing.
- */
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
 
@@ -27,7 +23,6 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December",
 ];
 
-/** 2026-08-30 -> 30 August 2026 */
 function readableDate(iso) {
   const [y, m, d] = iso.split("-");
   return `${Number(d)} ${MONTHS[Number(m) - 1]} ${y}`;

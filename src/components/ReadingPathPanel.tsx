@@ -8,11 +8,6 @@ import { IconClose, IconRoute } from "@/components/icons";
 import type { NavData, NavSubject } from "@/components/nav-data";
 import { TIERS, TIER_LABEL, type Tier } from "@/lib/types";
 
-/**
- * Slide-over showing the recommended order through the subject the visitor is
- * currently in. Falls back to the cross-subject paths page when they are not
- * inside a subject.
- */
 export function ReadingPathPanel({ nav }: { nav: NavData }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -37,8 +32,6 @@ export function ReadingPathPanel({ nav }: { nav: NavData }) {
     return (
       <Link
         href="/reading-paths"
-        /* The label is display:none below sm, which would otherwise leave the
-           control with no accessible name on a phone. */
         aria-label="Reading path"
         className="flex h-9 shrink-0 items-center gap-2 rounded-[var(--radius-pill)] border border-[var(--border)] px-3.5 text-[13px] font-medium transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
       >
@@ -69,7 +62,6 @@ export function ReadingPathPanel({ nav }: { nav: NavData }) {
             onClick={() => setOpen(false)}
             className="absolute inset-0 bg-[var(--scrim)]"
           />
-
           <aside
             className="absolute right-0 top-0 flex h-full w-full max-w-[420px] flex-col border-l border-[var(--border)] bg-[var(--bg-page)]"
             style={{ boxShadow: "var(--shadow-panel)" }}
@@ -96,7 +88,6 @@ export function ReadingPathPanel({ nav }: { nav: NavData }) {
                 <IconClose className="h-[18px] w-[18px]" />
               </button>
             </header>
-
             <div className="scrollbar-slim min-h-0 flex-1 overflow-y-auto px-6 py-5">
               {TIERS.map((tier: Tier) => {
                 const items = subject.articles.filter((a) => a.tier === tier);
@@ -166,7 +157,6 @@ export function ReadingPathPanel({ nav }: { nav: NavData }) {
                 );
               })}
             </div>
-
             <footer className="shrink-0 border-t border-[var(--border)] px-6 py-4">
               <Link
                 href="/reading-paths"

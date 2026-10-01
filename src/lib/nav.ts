@@ -6,7 +6,6 @@ import { getSubjectPath, getTierArticles } from "@/lib/content";
 import { TIERS, TIER_LABEL } from "@/lib/types";
 import { READING_PATHS } from "@/lib/reading-paths";
 
-/** Builds the serializable nav payload the client shell needs. */
 export function buildNavData(): NavData {
   const titles: Record<string, string> = {
     "/glossary": "Glossary",

@@ -15,14 +15,6 @@ import {
 } from "@/components/icons";
 import { clock, useMusic } from "@/components/player";
 
-/**
- * The bar along the bottom of the content column, in the shape everyone
- * already knows from a music app: artwork, what is playing, transport
- * controls, and a scrubber with the two timestamps.
- *
- * It starts after the sidebar rather than spanning the window, so the
- * sidebar's own bottom row stays reachable.
- */
 export function PlayerBar() {
   const music = useMusic();
   const [scrub, setScrub] = useState<number | null>(null);
@@ -31,8 +23,6 @@ export function PlayerBar() {
   const total = music.duration || 0;
   const fraction = total > 0 ? Math.min(1, position / total) : 0;
 
-  /* Idle: no bar, but the graft point still exists, so the moment a station
-     is picked the embed has somewhere to land. */
   if (!music.station) return <Mount className="sr-only" />;
 
   return (
@@ -42,8 +32,6 @@ export function PlayerBar() {
       aria-label="Music player"
       role="region"
     >
-      {/* Progress as a hairline across the top, for widths where the real
-          scrubber is hidden. */}
       <div
         aria-hidden="true"
         className="h-[2px] w-full bg-[var(--border)] md:hidden"
@@ -53,16 +41,9 @@ export function PlayerBar() {
           style={{ width: `${fraction * 100}%` }}
         />
       </div>
-
-      {/* 65px against a 1px rule, which is what the sidebar's bottom slot
-          measures. The two meet in the corner, so they have to agree. */}
       <div className="flex h-[65px] items-center gap-3 px-3 sm:px-4">
-        {/* Now playing */}
         <div className="flex min-w-0 flex-1 items-center gap-3 md:flex-none md:basis-[28%]">
           <div className="pointer-events-none relative h-[38px] w-[68px] shrink-0 overflow-hidden rounded-[6px] border border-[var(--border)] bg-[var(--bg-subtle)]">
-            {/* The embed lands here. It has to stay on screen to keep
-                playing, but at 68px across its own play button and logo are
-                most of the tile, so the video's thumbnail covers it. */}
             <Mount className="absolute inset-0 [&>iframe]:h-full [&>iframe]:w-full" />
             <span className="absolute inset-0 block bg-[var(--bg-subtle)]">
               {music.videoId && (
@@ -99,13 +80,9 @@ export function PlayerBar() {
             </p>
           </div>
         </div>
-
-        {/* Transport */}
         <div className="flex flex-col items-center gap-1 md:flex-1">
           <div className="flex items-center gap-1">
             {music.isMix ? (
-              /* One long recording has no tracks to shuffle. The slot is kept
-                 so the play button stays centred. */
               <span className="hidden h-8 w-8 sm:inline-flex" aria-hidden="true" />
             ) : (
               <ControlButton
@@ -124,7 +101,6 @@ export function PlayerBar() {
             >
               <IconPrev className="h-[17px] w-[17px]" />
             </ControlButton>
-
             <button
               type="button"
               onClick={music.toggle}
@@ -138,19 +114,14 @@ export function PlayerBar() {
                 <IconPlay className="ml-[1px] h-[16px] w-[16px]" />
               )}
             </button>
-
             <ControlButton
               label={music.isMix ? "Forward 30 seconds" : "Next track"}
               onClick={music.next}
             >
               <IconNext className="h-[17px] w-[17px]" />
             </ControlButton>
-
             <span className="w-[30px] sm:hidden" aria-hidden="true" />
           </div>
-
-          {/* Scrubber. A real range input, so it is keyboard operable and
-              announces its own value without any extra wiring. */}
           <div className="hidden w-full max-w-[420px] items-center gap-2.5 md:flex">
             <Time value={position} />
             <input
@@ -177,8 +148,6 @@ export function PlayerBar() {
             <Time value={total} />
           </div>
         </div>
-
-        {/* Volume and dismiss */}
         <div className="flex items-center justify-end gap-1 md:flex-none md:basis-[28%]">
           <div className="hidden items-center gap-1.5 lg:flex">
             <ControlButton
@@ -205,7 +174,6 @@ export function PlayerBar() {
               onChange={(e) => music.changeVolume(Number(e.target.value))}
             />
           </div>
-
           <ControlButton label="Close the player" onClick={music.stop}>
             <IconClose className="h-[16px] w-[16px]" />
           </ControlButton>
@@ -215,12 +183,6 @@ export function PlayerBar() {
   );
 }
 
-/**
- * The element the YouTube embed is grafted into. It lives in its own
- * component because handing a callback out of the music context straight
- * into a `ref` attribute makes the hooks rule treat every other field on
- * that context as a ref too.
- */
 function Mount({ className }: { className?: string }) {
   const { attachMount } = useMusic();
   return <div ref={attachMount} className={className} />;

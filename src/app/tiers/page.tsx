@@ -28,7 +28,6 @@ export default function TiersPage() {
         title="Tiers"
         lead="Every subject is split three ways. The split is about what a reader is assumed to already know, not about how hard the material is: an advanced article can be easier reading than a beginner one, once you have the vocabulary."
       />
-
       <div className="grid gap-4 sm:grid-cols-3">
         {TIERS.map((tier) => {
           const count = SUBJECTS.reduce(

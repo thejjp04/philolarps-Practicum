@@ -2,10 +2,6 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { definitionAnchor, slugifyHeading } from "@/lib/content";
 
-/* ------------------------------------------------------------------ *
- * Definition
- * ------------------------------------------------------------------ */
-
 export function Definition({
   term,
   children,
@@ -15,9 +11,6 @@ export function Definition({
 }) {
   return (
     <div
-      /* Prefixed because a heading often carries the same wording as the term
-         it defines, and rehype-slug would then mint the same id twice. The
-         glossary links here, so it builds the anchor the same way. */
       id={definitionAnchor(term)}
       className="my-7 scroll-mt-24 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--surface)] px-5 py-4"
     >
@@ -33,10 +26,6 @@ export function Definition({
     </div>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Argument: numbered premises with a rule above the conclusion
- * ------------------------------------------------------------------ */
 
 export function Argument({
   name,
@@ -57,10 +46,6 @@ export function Argument({
   );
 }
 
-/**
- * Premises number themselves with a CSS counter. MDX cannot easily thread an
- * index through to each child, and the counter never drifts out of step.
- */
 export function Premise({ children }: { children: ReactNode }) {
   return (
     <li className="premise-row flex gap-3 text-[16.5px] leading-snug">
@@ -82,10 +67,6 @@ export function Conclusion({ children }: { children: ReactNode }) {
     </li>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * TruthTable
- * ------------------------------------------------------------------ */
 
 export function TruthTable({
   columns,
@@ -145,10 +126,6 @@ export function TruthTable({
     </figure>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Proof
- * ------------------------------------------------------------------ */
 
 const PROOF_LABEL = {
   ND: "Natural deduction",
@@ -220,10 +197,6 @@ export function Proof({
   );
 }
 
-/* ------------------------------------------------------------------ *
- * Aside, Objection, Reply
- * ------------------------------------------------------------------ */
-
 export function Aside({
   title,
   children,
@@ -270,20 +243,11 @@ export function Reply({ children }: { children: ReactNode }) {
   return <Boxed label="Reply">{children}</Boxed>;
 }
 
-/* ------------------------------------------------------------------ *
- * Symbol: inline notation. `$...$` in MDX also works via remark-math;
- * this wrapper exists for the cases where escaping gets awkward.
- * ------------------------------------------------------------------ */
-
 export function Symbol({ children }: { children: ReactNode }) {
   return (
     <span className="whitespace-nowrap font-mono text-[0.9em]">{children}</span>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Further reading
- * ------------------------------------------------------------------ */
 
 export function FurtherReading({ children }: { children: ReactNode }) {
   return (
@@ -295,10 +259,6 @@ export function FurtherReading({ children }: { children: ReactNode }) {
     </section>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Heading overrides so the TOC rail has anchors to target
- * ------------------------------------------------------------------ */
 
 function headingId(children: ReactNode): string {
   return slugifyHeading(textOf(children));

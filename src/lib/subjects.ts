@@ -14,7 +14,6 @@ import { philosophyOfLanguage } from "@/lib/curriculum/philosophy-of-language";
 import { metalogic } from "@/lib/curriculum/metalogic";
 import { metaontology } from "@/lib/curriculum/metaontology";
 
-/** Nav order is fixed by hand. It is a curriculum, not an alphabetised list. */
 export const SUBJECTS: Subject[] = [
   metaphysics,
   epistemology,
@@ -50,7 +49,6 @@ export function subjectName(slug: string): string {
   return getSubject(slug)?.name ?? slug;
 }
 
-/** Count of ladder entries in a tier, written or not. */
 export function tierCount(subject: Subject, tier: Tier): number {
   return subject.ladder[tier].length;
 }
@@ -65,25 +63,6 @@ const TIER_RANK: Record<Tier, number> = {
   advanced: 2,
 };
 
-/**
- * Ladder integrity check, run across the whole site rather than one subject at
- * a time. Returns a list of violations; an empty list means the ladder is
- * sound. Called at build time from `src/lib/content.ts`.
- *
- * Three rules:
- *
- * 1. A term is defined once, site-wide. When two subjects both claim to
- *    introduce "universal", a reader has no answer to where it is explained,
- *    and the two treatments drift apart as the articles get written.
- * 2. Every required term is defined somewhere.
- * 3. A rung may only lean on terms a reader already has. Within a subject that
- *    means earlier in the ladder. Across subjects it means the same tier or an
- *    easier one, since tiers are the site's difficulty promise: nothing filed
- *    under beginner may rest on something only an advanced article explains.
- *
- * The earlier version scoped rule 1 to a single subject, so it could not see a
- * term introduced twice in two different subjects, and had no form of rule 3.
- */
 export function validateLadders(): string[] {
   const problems: string[] = [];
 

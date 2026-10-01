@@ -6,13 +6,8 @@ import { IconPause, IconPlay } from "@/components/icons";
 import { useMusic } from "@/components/player";
 import type { Station } from "@/lib/stations";
 
-/** Rows shown before the list asks you to open the rest of it. */
 const PREVIEW_ROWS = 8;
 
-/**
- * The station list on the music page. Picking one starts it in the bar at
- * the bottom, which then survives every move you make around the site.
- */
 export function StationPicker({ stations }: { stations: Station[] }) {
   const music = useMusic();
 
@@ -51,7 +46,6 @@ export function StationPicker({ stations }: { stations: Station[] }) {
                   <IconPlay className="ml-[2px] h-[18px] w-[18px]" />
                 )}
               </button>
-
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
                   <h2 className="text-[19px] font-bold tracking-[-0.02em]">
@@ -68,7 +62,6 @@ export function StationPicker({ stations }: { stations: Station[] }) {
                     </span>
                   )}
                 </div>
-
                 <p className="mt-1 font-serif text-[16px] leading-[1.55] text-[var(--text-muted)]">
                   {station.blurb}
                 </p>
@@ -88,7 +81,6 @@ export function StationPicker({ stations }: { stations: Station[] }) {
   );
 }
 
-/** The songs in a station that was built one at a time. */
 function TrackList({
   station,
   current,
@@ -106,13 +98,8 @@ function TrackList({
       <p className="text-[11px] font-medium uppercase tracking-[0.07em] text-[var(--text-muted)]">
         {station.tracks.length} songs
       </p>
-
       <ol className="mt-2 divide-y divide-[var(--border)] border-y border-[var(--border)]">
         {shown.map((track, at) => {
-          /* Matched on the id rather than the position, because shuffling
-             reorders the list underneath and the position stops meaning what
-             the row on screen says. Falls back to the position for the
-             moment before YouTube has reported which video it opened. */
           const here =
             current &&
             (music.videoId ? music.videoId === track.id : music.index === at);

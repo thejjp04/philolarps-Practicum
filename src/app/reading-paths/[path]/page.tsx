@@ -35,7 +35,6 @@ export default async function ReadingPathPage({ params }: Params) {
         title={path.name}
         lead={path.blurb}
       />
-
       <ol className="space-y-7">
         {path.articles.map((article, i) => (
           <ArticleRow

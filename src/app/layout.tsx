@@ -31,8 +31,6 @@ const DESCRIPTION =
   "Structured philosophy curricula, from absolute beginner to graduate level. Free, no account needed.";
 
 export const metadata: Metadata = {
-  /* Without this, the generated og:image and canonical tags stay relative and
-     every scraper that reads them resolves against its own host. */
   metadataBase: new URL("https://philolarps.com"),
   title: {
     default: "Philolarps",

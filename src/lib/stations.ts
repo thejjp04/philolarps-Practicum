@@ -4,36 +4,16 @@ import { MINECRAFT_TRACKS } from "@/lib/minecraft-tracks";
 
 export type StationSlug = "minecraft" | "classical" | "anime";
 
-/* ------------------------------------------------------------------ *
- * Paste links here. This is the only place they live.
- *
- * Anything YouTube hands you works: a playlist address, a single video
- * address, a youtu.be short link, or the bare id on its own.
- *
- *   https://www.youtube.com/playlist?list=OLAK5uy_...   a playlist
- *   https://www.youtube.com/watch?v=dQw4w9WgXcQ         one video, looped
- *   https://youtu.be/dQw4w9WgXcQ                        the same thing
- *
- * A watch address that carries a `list=` is read as the playlist.
- *
- * A station left empty still appears on the music page. It says it has
- * not been pointed at anything yet and its play button is disabled, so
- * the page never claims more than it can do.
- * ------------------------------------------------------------------ */
-
 export const STATION_LINKS: Record<StationSlug, string> = {
   minecraft: "",
   classical: "",
   anime: "",
 };
 
-/** One song in a station built by hand rather than pointed at a playlist. */
 export type Track = {
-  /** The eleven-character YouTube id. */
   id: string;
   title: string;
   artist: string;
-  /** The series it comes from, or an empty string if it is not from one. */
   from: string;
 };
 
@@ -42,8 +22,6 @@ export type StationSource =
   | { kind: "video"; id: string }
   | { kind: "queue"; ids: string[] };
 
-/* A station built song by song. A link in STATION_LINKS beats this, so
-   pasting one in is always enough to take a station over. */
 const STATION_TRACKS: Partial<Record<StationSlug, Track[]>> = {
   minecraft: MINECRAFT_TRACKS,
   classical: CLASSICAL_TRACKS,
@@ -53,24 +31,18 @@ const STATION_TRACKS: Partial<Record<StationSlug, Track[]>> = {
 export type Station = {
   slug: StationSlug;
   name: string;
-  /** One line under the station name. Sentence case, no trailing period. */
   blurb: string;
-  /** Two or three sentences on what it does to a work session. */
   note: string;
-  /** Null means the station has nothing behind it yet. */
   source: StationSource | null;
-  /** Empty unless the station was built song by song. */
   tracks: Track[];
 };
 
-/** An id that is exactly eleven of YouTube's id characters is a video. */
 const VIDEO_ID = /^[A-Za-z0-9_-]{11}$/;
 
 export function parseSource(input: string): StationSource | null {
   const raw = input.trim();
   if (!raw) return null;
 
-  // A bare id, pasted without the address around it.
   if (!raw.includes("/") && !raw.includes("?") && !raw.includes("=")) {
     return VIDEO_ID.test(raw)
       ? { kind: "video", id: raw }
@@ -90,7 +62,6 @@ export function parseSource(input: string): StationSource | null {
   const video = url.searchParams.get("v");
   if (video) return { kind: "video", id: video };
 
-  // youtu.be/ID, /embed/ID, /live/ID all end in the id.
   const last = url.pathname.split("/").filter(Boolean).pop();
   return last ? { kind: "video", id: last } : null;
 }

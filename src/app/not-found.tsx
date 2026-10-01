@@ -2,10 +2,6 @@ import Link from "next/link";
 
 import { Container, PageHeader } from "@/components/ui";
 
-/* Without this file a mistyped URL falls back to the framework default: no
-   sidebar, no theme, no way back except the browser button. Placed at the app
-   root so it renders inside the shell like every other page. */
-
 const ROUTES = [
   { href: "/", label: "Home", note: "The three entry points and every subject." },
   {
@@ -33,7 +29,6 @@ export default function NotFound() {
         title="No page at that address"
         lead="Either the address is mistyped or nothing was ever published there. Nothing on the site has been removed, so an old link should still work."
       />
-
       <ul className="space-y-3">
         {ROUTES.map(({ href, label, note }) => (
           <li key={href}>

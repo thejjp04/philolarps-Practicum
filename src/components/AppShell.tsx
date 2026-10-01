@@ -10,13 +10,6 @@ import type { NavData } from "@/components/nav-data";
 import { MusicProvider } from "@/components/player";
 import { Tour } from "@/components/tour";
 
-/**
- * Three-region shell: fixed sidebar, top bar over the main region only, and
- * the content column. Below 1024px the sidebar becomes a drawer.
- *
- * The music provider wraps the whole shell rather than the music page, so a
- * station keeps playing while you move between articles.
- */
 export function AppShell({
   nav,
   children,
@@ -26,8 +19,6 @@ export function AppShell({
 }) {
   const [drawer, setDrawer] = useState(false);
 
-  /* Handed to the tour, which needs the drawer open to point at anything in
-     the sidebar below 1024px. Stable, so it can sit in the tour's effects. */
   const openMenu = useCallback(() => setDrawer(true), []);
   const closeMenu = useCallback(() => setDrawer(false), []);
 
@@ -56,13 +47,10 @@ export function AppShell({
           >
             Skip to content
           </a>
-
-          {/* Persistent sidebar */}
           <aside className="fixed inset-y-0 left-0 z-40 hidden w-[240px] lg:block">
             <Sidebar nav={nav} />
           </aside>
 
-          {/* Drawer */}
           {drawer && (
             <div
               role="dialog"
@@ -93,11 +81,8 @@ export function AppShell({
             </div>
           )}
 
-          {/* Main region */}
           <div className="flex min-w-0 flex-1 flex-col lg:ml-[240px]">
             <TopBar nav={nav} onOpenMenu={openMenu} />
-            {/* The player bar is fixed, so the column has to end above it.
-                --player-height is unset until a station is playing. */}
             <main
               id="content"
               className="min-w-0 flex-1"
@@ -106,7 +91,6 @@ export function AppShell({
               {children}
             </main>
           </div>
-
           <PlayerBar />
         </div>
       </Tour>

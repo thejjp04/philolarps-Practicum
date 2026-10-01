@@ -15,35 +15,18 @@ import { IconGlossary, SUBJECT_ICONS } from "@/components/icons";
 import type { NavData } from "@/components/nav-data";
 import type { NavGroup } from "@/lib/types";
 
-/**
- * The first-visit walk around the shell.
- *
- * A step names an element by its `data-tour` attribute. The overlay finds
- * that element, cuts a hole in the scrim around it and puts a card beside
- * it. The hole is a real hole: the four scrim panels stop at its edges, so
- * the control being pointed at can still be pressed while the tour is up.
- *
- * Runs once, then remembers. The sidebar keeps a button to start it again.
- */
-
 const STORAGE_KEY = "philolarps-tour";
 
-/** Space between the highlighted element and the card. */
 const GAP = 14;
-/** Smallest distance any of this is allowed to sit from the window edge. */
 const EDGE = 12;
 const CARD_WIDTH = 344;
-/** How far the hole is cut outside the element itself. */
 const PAD = 6;
 
 type Step = {
-  /** The `data-tour` value to point at. Null puts the card in the middle. */
   anchor: string | null;
-  /** Sidebar anchors need the drawer open below 1024px. */
   inSidebar?: boolean;
   title: string;
   body: string;
-  /** Lists this group's subjects in the card, each with its own line. */
   group?: NavGroup;
 };
 
@@ -137,33 +120,20 @@ function clamp(value: number, low: number, high: number): number {
   return Math.max(low, Math.min(value, high));
 }
 
-/**
- * Both sidebars carry the same `data-tour` values, since the drawer holds a
- * second copy below 1024px. Only one of the two is ever on screen, so the
- * one with a box is the one meant.
- */
 function findAnchor(name: string): HTMLElement | null {
   const all = document.querySelectorAll<HTMLElement>(`[data-tour="${name}"]`);
   return Array.from(all).find((el) => el.getClientRects().length > 0) ?? null;
 }
 
-/** Below this, nothing fits beside anything and the card becomes a sheet. */
 const NARROW = 640;
 
-/** A sheet never gives back more room than this, however tight the fit. */
 const MIN_SHEET = 190;
 
-/** Beside the element where there is room for the card, under it otherwise. */
 function place(target: Box, height: number): Placed {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const width = Math.min(CARD_WIDTH, vw - EDGE * 2);
 
-  /* On a phone the sidebar is a drawer that covers most of the width, so a
-     card set beside what it points at has nowhere to go. It runs the full
-     width and sits against the top or bottom edge instead, whichever side of
-     the highlight has more room. Below MIN it stops giving room back and
-     scrolls its own contents. */
   if (vw < NARROW) {
     const below = vh - (target.top + target.height) - GAP - EDGE;
     const above = target.top - GAP - EDGE;
@@ -223,8 +193,6 @@ function centre(height: number): Placed {
   };
 }
 
-/* A phone leaves the card less than half the screen, so the anchor above it
-   stays in view. Anywhere else it can run the height of the window. */
 function cap(vw: number, vh: number): number {
   return vw < NARROW ? Math.round(vh * 0.44) : vh - EDGE * 2;
 }
@@ -244,13 +212,11 @@ export function Tour({
 
   const api = useMemo<TourApi>(() => ({ start: () => setAt(0) }), []);
 
-  // First visit only. A visitor who has been through it already gets nothing.
   useEffect(() => {
     let stored: string | null = null;
     try {
       stored = localStorage.getItem(STORAGE_KEY);
     } catch {
-      // Private browsing. Treat it as a first visit.
     }
     if (stored) return;
     const timer = setTimeout(() => setAt(0), 600);
@@ -263,7 +229,6 @@ export function Tour({
     try {
       localStorage.setItem(STORAGE_KEY, "done");
     } catch {
-      // The tour will offer itself again next time. Harmless.
     }
   }, [closeMenu]);
 
@@ -306,17 +271,12 @@ function Overlay({
 
   const last = at === STEPS.length - 1;
 
-  // Below 1024px the sidebar is a drawer, so a sidebar step has to open it
-  // before there is anything to point at.
   useEffect(() => {
     if (window.innerWidth >= 1024) return;
     if (step.inSidebar) openMenu();
     else closeMenu();
   }, [step.inSidebar, openMenu, closeMenu]);
 
-  /* The drawer above opens on the same commit as this one runs, so on a phone
-     the thing being scrolled to does not exist yet the first time through.
-     Keep asking until it does, then stop. */
   useEffect(() => {
     const name = step.anchor;
     if (!name) return;
@@ -348,9 +308,6 @@ function Overlay({
       const card = cardRef.current;
       if (!card) return;
 
-      /* The height the card wants, not the height it currently has. Placement
-         hands back a max-height of its own, and measuring the constrained card
-         would feed that cap into the next placement and settle short. */
       const height =
         card.scrollHeight + (card.offsetHeight - card.clientHeight);
       const el = step.anchor ? findAnchor(step.anchor) : null;
@@ -372,16 +329,11 @@ function Overlay({
       setPos(place(box, height));
     }
 
-    /* The card has to be in the document before it can be measured, and a
-       sidebar step may still be waiting on the drawer to mount its copy of
-       the anchor, so this looks again a couple of times. */
     const frame = requestAnimationFrame(measure);
     const soon = setTimeout(measure, 90);
     const later = setTimeout(measure, 260);
 
     window.addEventListener("resize", measure);
-    /* Capture, because the nav tree is its own scroll container and its
-       scroll events do not reach the window otherwise. */
     window.addEventListener("scroll", measure, true);
 
     return () => {
@@ -445,10 +397,6 @@ function Overlay({
           width: pos?.width ?? CARD_WIDTH,
           top: pos?.top ?? 0,
           left: pos?.left ?? 0,
-          /* A sheet along the bottom of a phone has to leave the highlight
-             above it room to be seen, so the card scrolls instead of growing.
-             Unset until the measurement lands, or the first measurement is
-             taken against a cap that has not been worked out yet. */
           maxHeight: pos?.maxHeight,
           visibility: pos ? "visible" : "hidden",
         }}
@@ -456,11 +404,9 @@ function Overlay({
         <p className="font-mono text-[10.5px] uppercase tracking-[0.1em] text-[var(--text-muted)]">
           Step {at + 1} of {STEPS.length}
         </p>
-
         <h2 className="mt-1.5 text-[17px] font-bold tracking-[-0.015em]">
           {step.title}
         </h2>
-
         <p className="mt-2 font-serif text-[14.5px] leading-[1.55]">
           {step.body}
         </p>
@@ -504,7 +450,6 @@ function Overlay({
           >
             {last ? "Close" : "Skip the tour"}
           </button>
-
           <div className="flex items-center gap-2">
             {at > 0 && (
               <button
@@ -531,11 +476,6 @@ function Overlay({
   );
 }
 
-/**
- * The dark ground, in four panels around the hole rather than one sheet with
- * a cut-out, so that the element being pointed at is genuinely uncovered and
- * still takes a click.
- */
 function Scrim({ hole }: { hole: Box | null }) {
   if (!hole) {
     return (

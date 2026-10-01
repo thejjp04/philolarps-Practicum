@@ -19,8 +19,6 @@ function Base({ children, ...props }: IconProps & { children: React.ReactNode })
   );
 }
 
-/* ---- Subject icons ---- */
-
 export function IconMetaphysics(p: IconProps) {
   return (
     <Base {...p}>
@@ -80,6 +78,35 @@ export function IconOntology(p: IconProps) {
   );
 }
 
+export function IconLanguage(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M5 4.5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-7l-4.5 3.5v-3.5H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" />
+      <path d="M7.5 9h9M7.5 12.5h6" />
+    </Base>
+  );
+}
+
+export function IconMetalogic(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M6 4H3.5v16H6M18 4h2.5v16H18" />
+      <circle cx="9.8" cy="12" r="3.6" />
+      <circle cx="14.2" cy="12" r="3.6" />
+    </Base>
+  );
+}
+
+export function IconMetaontology(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M3 7V3h4M17 3h4v4M21 17v4h-4M7 21H3v-4" />
+      <path d="M12 6.5 17 9.4v5.2L12 17.5 7 14.6V9.4Z" />
+      <path d="M12 17.5V12M12 12 7 9.4M12 12l5-2.6" />
+    </Base>
+  );
+}
+
 export function IconPolitics(p: IconProps) {
   return (
     <Base {...p}>
@@ -110,8 +137,6 @@ export function IconTheism(p: IconProps) {
     </Base>
   );
 }
-
-/* ---- Reference icons ---- */
 
 export function IconGlossary(p: IconProps) {
   return (
@@ -145,8 +170,6 @@ export function IconPaths(p: IconProps) {
     </Base>
   );
 }
-
-/* ---- UI icons ---- */
 
 export function IconSearch(p: IconProps) {
   return (
@@ -213,8 +236,6 @@ export function IconClose(p: IconProps) {
     </Base>
   );
 }
-
-/* ---- Player icons ---- */
 
 export function IconMusic(p: IconProps) {
   return (
@@ -333,9 +354,12 @@ export const SUBJECT_ICONS: Record<
   metaphysics: IconMetaphysics,
   epistemology: IconEpistemology,
   logic: IconLogic,
+  "philosophy-of-language": IconLanguage,
+  metalogic: IconMetalogic,
   ethics: IconEthics,
   "philosophy-of-mind": IconMind,
   ontology: IconOntology,
+  metaontology: IconMetaontology,
   "political-philosophy": IconPolitics,
   "applied-ethics": IconAppliedEthics,
   theism: IconTheism,
@@ -347,14 +371,6 @@ const GLYPH_SIZES = {
   lg: { tile: 40, icon: 22, radius: 11 },
 } as const;
 
-/**
- * A subject's icon in that subject's own colour, on a tile tinted the same.
- *
- * The hue is --subject-{slug}, which each theme resolves to a value that
- * clears AA on that theme's ground. The sidebar is dark in both themes, so it
- * passes `onDark` and takes the lift value directly rather than whichever one
- * the current theme happens to point at.
- */
 export function SubjectGlyph({
   slug,
   size = "sm",
@@ -369,7 +385,6 @@ export function SubjectGlyph({
   const Icon = SUBJECT_ICONS[slug] ?? IconGlossary;
   const { tile, icon, radius } = GLYPH_SIZES[size];
 
-  // An unlisted slug falls back to the house accent rather than to nothing.
   const hue = `var(--subject-${slug}${onDark ? "-lift" : ""}, var(--accent))`;
 
   return (

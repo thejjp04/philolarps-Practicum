@@ -39,7 +39,6 @@ export function TopBar({
       >
         <IconMenu className="h-5 w-5" />
       </button>
-
       <nav aria-label="Breadcrumb" className="min-w-0 flex-1">
         <ol className="flex items-center gap-1.5 overflow-hidden text-[13px] text-[var(--text-muted)]">
           {crumbs.length === 0 ? (
@@ -80,7 +79,6 @@ export function TopBar({
           )}
         </ol>
       </nav>
-
       <div className="flex shrink-0 items-center gap-3">
         <div data-tour="search" className="w-auto md:w-[300px] xl:w-[380px]">
           <Search />

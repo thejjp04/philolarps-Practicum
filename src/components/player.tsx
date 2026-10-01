@@ -12,15 +12,6 @@ import {
 
 import type { Station, Track } from "@/lib/stations";
 
-/* ------------------------------------------------------------------ *
- * The YouTube IFrame API, typed down to the parts used here.
- *
- * Nothing is hosted on this site. The audio comes from YouTube, played
- * through its own embed, so the artists and labels keep whatever
- * arrangement they already have with it. The embed stays visible in the
- * bar as the artwork tile, which is also what YouTube's terms expect.
- * ------------------------------------------------------------------ */
-
 type YTPlayer = {
   playVideo(): void;
   pauseVideo(): void;
@@ -66,12 +57,10 @@ const PLAYING = 1;
 const PAUSED = 2;
 const BUFFERING = 3;
 
-/** How many unplayable songs in a row before the station gives up. */
 const MAX_SKIPS = 8;
 
 let apiPromise: Promise<YTNamespace> | null = null;
 
-/** Loads the IFrame API once per page, however many callers ask for it. */
 function loadApi(): Promise<YTNamespace> {
   if (apiPromise) return apiPromise;
 
@@ -82,8 +71,6 @@ function loadApi(): Promise<YTNamespace> {
       return;
     }
 
-    // The API calls this global when it finishes parsing. Anything already
-    // hooked on it keeps working.
     const previous = w.onYouTubeIframeAPIReady;
     w.onYouTubeIframeAPIReady = () => {
       previous?.();
@@ -101,11 +88,6 @@ function loadApi(): Promise<YTNamespace> {
   return apiPromise;
 }
 
-/* `new YT.Player()` hands back an object straight away, but none of its
-   methods exist until the embed behind it has loaded. Switching stations
-   leaves a window where the old station is still marked as playing and the
-   new player is that half-built object, so everything that reaches for it
-   checks first. */
 function usable(player: YTPlayer | null): player is YTPlayer {
   return typeof player?.getCurrentTime === "function";
 }
@@ -113,16 +95,12 @@ function usable(player: YTPlayer | null): player is YTPlayer {
 const VOLUME_STORAGE_KEY = "philolarps-volume";
 const DEFAULT_VOLUME = 60;
 
-/* Read at first render rather than in an effect, so the level never starts
-   at one value and jumps to another. On the server there is no storage to
-   read and no bar on screen yet, so the default is all that is needed. */
 function storedVolume(): number {
   if (typeof window === "undefined") return DEFAULT_VOLUME;
   try {
     const stored = Number(localStorage.getItem(VOLUME_STORAGE_KEY));
     if (Number.isFinite(stored) && stored >= 0 && stored <= 100) return stored;
   } catch {
-    // Storage is unavailable. The default stands.
   }
   return DEFAULT_VOLUME;
 }
@@ -132,9 +110,7 @@ type Music = {
   ready: boolean;
   playing: boolean;
   buffering: boolean;
-  /** What to call the thing playing: our own name for it where we have one. */
   title: string;
-  /** The row of the station's list that is playing, if it is on the list. */
   track: Track | null;
   elapsed: number;
   duration: number;
@@ -142,18 +118,11 @@ type Music = {
   volume: number;
   muted: boolean;
   error: string | null;
-  /** True when the station is one long recording rather than a playlist. */
   isMix: boolean;
-  /** The index of the track playing, for a station built from a track list. */
   index: number;
-  /* What the list on the page marks as playing. An index goes stale the
-     moment the list is shuffled; the id of the video itself does not. */
   videoId: string;
-  /* A callback rather than a ref object: a ref read during render is exactly
-     what the hooks rule forbids, and the bar needs this at render time. */
   attachMount: (node: HTMLDivElement | null) => void;
   select: (station: Station) => void;
-  /** Start a station at one particular song in its list. */
   playAt: (station: Station, index: number) => void;
   toggle: () => void;
   next: () => void;
@@ -188,20 +157,14 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   const [index, setIndex] = useState(0);
   const [videoId, setVideoId] = useState("");
 
-  /* State, not a ref: the build effect has to run again once the bar has
-     mounted and handed over its host element. */
   const [host, setHost] = useState<HTMLDivElement | null>(null);
   const attachMount = useCallback((node: HTMLDivElement | null) => {
     setHost(node);
   }, []);
 
   const playerRef = useRef<YTPlayer | null>(null);
-  /** Where a freshly built station should start. Read once, in onReady. */
   const startIndexRef = useRef(0);
 
-  /* The bar is fixed, so the content column has to be told to end above it.
-     A custom property beats threading a height through the shell, and it
-     costs nothing while no station is playing. */
   useEffect(() => {
     const root = document.documentElement;
     if (station) root.style.setProperty("--player-height", "66px");
@@ -211,16 +174,10 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     };
   }, [station]);
 
-  /* Building the player. The embed replaces the node it is given, so the
-     node is created by hand instead of being rendered: React never learns
-     about it and so never tries to reconcile a element that is gone. */
   useEffect(() => {
     const source = station?.source;
     if (!source || !host) return;
 
-    /* Switching stations tears the embed down and builds a new one. The API
-       does have load methods, but they behave differently for a playlist and
-       for a looping single video, and a rebuild is right in both cases. */
     if (usable(playerRef.current)) playerRef.current.destroy();
     playerRef.current = null;
     host.replaceChildren();
@@ -230,12 +187,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     const target = document.createElement("div");
     host.appendChild(target);
 
-    /* Three shapes go in here. A playlist YouTube already holds is named by
-       id. One long recording is queued behind itself, which is the trick that
-       makes `loop` apply to a single video. A hand-built track list is loaded
-       in onReady instead: passing the ids as a startup parameter would leave
-       the first song outside the playlist proper, and every position YouTube
-       then reported would be one off from the list drawn on the page. */
     const sourceVars: Record<string, string | number> =
       source.kind === "playlist"
         ? { listType: "playlist", list: source.id }
@@ -301,10 +252,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
               }
               if (event.data === ENDED) setElapsed(0);
             },
-            /* Some owners turn embedding off, and in a list of a hundred
-               songs a few always have. Rather than stopping the station on
-               one of them, step over it. The cap is there so a station that
-               is entirely unplayable stops instead of spinning. */
             onError: () => {
               if (cancelled) return;
               if (source.kind !== "video" && skips < MAX_SKIPS) {
@@ -329,13 +276,9 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-    // Shuffle and volume are read at creation time only; their own handlers
-    // push later changes straight into the player.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [station, host]);
 
-  /* Elapsed time. The API has no progress event, so it gets polled, and
-     only while something is actually moving. */
   useEffect(() => {
     if (!playing) return;
     const id = window.setInterval(() => {
@@ -377,10 +320,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
       setError(null);
       const player = playerRef.current;
       if (station?.slug === next.slug && usable(player)) {
-        /* Reloading the list rather than seeking within it. A shuffled list
-           no longer runs in the order shown on the page, so counting into it
-           would land on the wrong song. Reloading puts the order back, and
-           the shuffle button turns off to say as much. */
         if (source.kind === "queue") {
           player.loadPlaylist(source.ids, at);
           setShuffle(false);
@@ -408,9 +347,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     else player.playVideo();
   }, [playing]);
 
-  /* On a playlist these move a track. On a single long mix there is no next
-     track, so they jump half a minute instead, which is what the buttons are
-     good for on a three-hour recording. */
   const isMix = station?.source?.kind === "video";
 
   const next = useCallback(() => {
@@ -442,7 +378,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     try {
       localStorage.setItem(VOLUME_STORAGE_KEY, String(clamped));
     } catch {
-      // The level will not persist. Harmless.
     }
   }, []);
 
@@ -478,10 +413,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
     setError(null);
   }, [host]);
 
-  /* Uploads are titled however their uploader felt that day, and a bar
-     reading "C418 - Subwoofer Lullaby - Minecraft Volume Alpha" says the same
-     thing three times. Where the station has its own name for the song, use
-     that, and keep YouTube's for anything played from a real playlist. */
   const track =
     station?.tracks.find((candidate) => candidate.id === videoId) ?? null;
 
@@ -517,7 +448,6 @@ export function MusicProvider({ children }: { children: ReactNode }) {
   return <MusicContext.Provider value={value}>{children}</MusicContext.Provider>;
 }
 
-/** `3:07`, or `1:14:15` once a recording runs past the hour. */
 export function clock(seconds: number): string {
   const safe = Number.isFinite(seconds) && seconds > 0 ? Math.floor(seconds) : 0;
   const hours = Math.floor(safe / 3600);

@@ -21,7 +21,6 @@ export default function ThinkersPage() {
         title="Thinkers Index"
         lead="Who the curriculum engages with, roughly chronological. The line under each name says what the person held, not what they are best known for. Dates are printed only where they are settled; a 'c.' means the scholarship is not agreed."
       />
-
       <ol className="space-y-9">
         {thinkers.map((thinker) => (
           <li
@@ -37,7 +36,6 @@ export default function ThinkersPage() {
                 {thinker.dates}
               </span>
             </div>
-
             <p className="mt-1.5 max-w-[64ch] font-serif text-[16px] leading-[1.6]">
               {thinker.position}
             </p>

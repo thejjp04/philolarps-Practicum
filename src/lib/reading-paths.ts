@@ -1,10 +1,5 @@
 import type { ReadingPath } from "@/lib/types";
 
-/**
- * Curated cross-subject sequences. Steps are `subject/tier/slug` and are
- * resolved against the ladder at build time, so a typo here shows up as a
- * missing step rather than a broken link.
- */
 export const READING_PATHS: ReadingPath[] = [
   {
     slug: "total-beginner-six-weeks",
@@ -12,31 +7,25 @@ export const READING_PATHS: ReadingPath[] = [
     blurb:
       "Four articles a week for six weeks. Starts with how arguments work, because every other subject leans on that, then moves through the four questions philosophy keeps returning to: what exists, what we can know, what we owe each other, and what a mind is. Nothing here assumes prior reading.",
     steps: [
-      // Week 1: the tools
       "logic/beginner/what-is-an-argument",
       "logic/beginner/validity-and-soundness",
       "logic/intermediate/truth-and-proof",
       "logic/beginner/formal-fallacies",
-      // Week 2: what there is
       "metaphysics/beginner/what-metaphysics-asks",
       "metaphysics/beginner/existence-and-non-existence",
       "metaphysics/beginner/objects-and-properties",
       "metaphysics/beginner/change-and-identity-over-time",
-      // Week 3: what we know
       "epistemology/beginner/knowledge-belief-opinion",
       "epistemology/beginner/what-justification-is",
       "epistemology/beginner/sources-of-knowledge",
       "epistemology/beginner/skepticism-first-encounter",
-      // Week 4: what we owe
       "ethics/beginner/descriptive-and-normative-claims",
       "ethics/beginner/what-a-moral-theory-is",
       "ethics/beginner/consequences-rules-and-character",
       "ethics/beginner/the-trolley-problem",
-      // Week 5: minds
       "philosophy-of-mind/beginner/the-mind-body-problem",
       "philosophy-of-mind/beginner/consciousness-and-cognition",
       "philosophy-of-mind/beginner/what-a-mental-state-is",
-      // Week 6: politics and religion, the two places the rest gets applied
       "political-philosophy/beginner/authority-and-legitimacy",
       "political-philosophy/beginner/what-a-state-is-for",
       "theism/beginner/what-god-is-claimed-to-be",

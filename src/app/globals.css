@@ -1,31 +1,13 @@
 @import "tailwindcss";
 
-/* ------------------------------------------------------------------ *
- * Color system.
- * Every color in the app comes from one of these custom properties.
- * Components must never hardcode a hex value.
- *
- * The palette is sampled from the logo art: body #8543d2, bevel #a563ea,
- * blade highlight #c494f3, outline #2b0264. The neutrals are biased toward
- * that violet rather than being taken off a grey ramp.
- *
- * In dark mode the palette's roles flip: the pale violets become text and
- * accent, and the mid violet becomes an active-state surface.
- * ------------------------------------------------------------------ */
-
 :root {
   --bg-page: #ffffff;
   --bg-subtle: #eee6fb;
-  /* One step deeper than the logo's own outline (#2b0264), so the artwork's
-     outline still reads as an edge instead of dissolving into the ground. */
   --bg-sidebar: #1c0546;
   --surface: #ffffff;
   --border: #d5c4ef;
   --text-primary: #1b0a33;
-  /* Muted has to clear AA on both --bg-page and --bg-subtle.
-     #5f4a80 scores 7.56:1 on white and 6.24:1 on #eee6fb. */
   --text-muted: #5f4a80;
-  /* The logo body colour, unchanged: 5.63:1 on white. */
   --accent: #8543d2;
   --accent-hover: #6d2fb4;
   --on-accent: #ffffff;
@@ -33,29 +15,14 @@
   --sidebar-active-bg: #ffffff;
   --sidebar-active-text: #4a1499;
 
-  /* Derived, still token-driven.
-
-     Both sidebars are dark now, so both washes mix toward the pale text.
-     The old rule (mix toward black in light mode) applied when --bg-sidebar
-     was a mid slate; against #2b0264 there is nothing left to darken. */
   --accent-wash: color-mix(in srgb, var(--accent) 10%, transparent);
   --sidebar-wash: color-mix(in srgb, var(--sidebar-text) 12%, var(--bg-sidebar));
   --sidebar-track: color-mix(in srgb, var(--sidebar-text) 20%, var(--bg-sidebar));
   --sidebar-rule: color-mix(in srgb, var(--sidebar-text) 22%, transparent);
   --shadow-panel: 0 16px 48px -12px rgb(27 10 51 / 0.28);
 
-  /* Behind modals. This has to be a token of its own rather than a mix of
-     --text-primary: that token inverts between themes, so reusing it veiled the
-     dark page in 45% near-white instead of dimming it. Each theme names a
-     colour that is dark in that theme. */
   --scrim: color-mix(in srgb, var(--text-primary) 45%, transparent);
 
-  /* ---- Subject hues ----
-     One per subject, spread around the wheel so nine icons in a column are
-     told apart at a glance. Each has two values: the deep one clears AA on
-     white, and the lift one clears it on a dark ground. The sidebar is dark
-     in both themes, so it always takes the lift; page surfaces take
-     --subject-x, which the dark blocks below point at the lift instead. */
   --subject-metaphysics-lift: #c39cf7;
   --subject-philosophy-of-mind-lift: #f79bc6;
   --subject-ethics-lift: #f4a09a;
@@ -65,6 +32,9 @@
   --subject-ontology-lift: #6fd8ae;
   --subject-epistemology-lift: #77cfe8;
   --subject-logic-lift: #9db4f8;
+  --subject-philosophy-of-language-lift: #e7a3f3;
+  --subject-metalogic-lift: #a7bcd6;
+  --subject-metaontology-lift: #d5cc72;
 
   --subject-metaphysics: #7134cf;
   --subject-philosophy-of-mind: #b52a72;
@@ -75,6 +45,9 @@
   --subject-ontology: #0b7355;
   --subject-epistemology: #0d6f8c;
   --subject-logic: #2f56c9;
+  --subject-philosophy-of-language: #9b2fae;
+  --subject-metalogic: #46607d;
+  --subject-metaontology: #6b6417;
 
   color-scheme: light;
 }
@@ -97,8 +70,6 @@
   --shadow-panel: 0 16px 48px -12px rgb(0 0 0 / 0.6);
   --scrim: color-mix(in srgb, var(--bg-page) 78%, transparent);
 
-  /* The deep set is for white. On this ground the lift set is the readable
-     one, so the page tokens point at it. */
   --subject-metaphysics: var(--subject-metaphysics-lift);
   --subject-philosophy-of-mind: var(--subject-philosophy-of-mind-lift);
   --subject-ethics: var(--subject-ethics-lift);
@@ -108,12 +79,13 @@
   --subject-ontology: var(--subject-ontology-lift);
   --subject-epistemology: var(--subject-epistemology-lift);
   --subject-logic: var(--subject-logic-lift);
+  --subject-philosophy-of-language: var(--subject-philosophy-of-language-lift);
+  --subject-metalogic: var(--subject-metalogic-lift);
+  --subject-metaontology: var(--subject-metaontology-lift);
 
   color-scheme: dark;
 }
 
-/* No-JS fallback. The inline theme script normally resolves this before
-   first paint, so this only matters when scripting is unavailable. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg-page: #100a1a;
@@ -141,6 +113,9 @@
     --subject-ontology: var(--subject-ontology-lift);
     --subject-epistemology: var(--subject-epistemology-lift);
     --subject-logic: var(--subject-logic-lift);
+    --subject-philosophy-of-language: var(--subject-philosophy-of-language-lift);
+    --subject-metalogic: var(--subject-metalogic-lift);
+    --subject-metaontology: var(--subject-metaontology-lift);
 
     color-scheme: dark;
   }
@@ -169,10 +144,6 @@
   --radius-card: 8px;
   --radius-pill: 999px;
 }
-
-/* ------------------------------------------------------------------ *
- * Base
- * ------------------------------------------------------------------ */
 
 html {
   scroll-behavior: smooth;
@@ -209,10 +180,6 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
-
-/* ------------------------------------------------------------------ *
- * Article prose
- * ------------------------------------------------------------------ */
 
 .prose-article {
   font-family: var(--font-source-serif), Charter, Georgia, serif;
@@ -331,7 +298,6 @@ body {
   margin-block: 2.5em;
 }
 
-/* Premise numbering inside <Argument>. */
 .argument-list {
   counter-reset: premise;
   list-style: none;
@@ -350,7 +316,6 @@ body {
   margin-top: 0;
 }
 
-/* KaTeX inherits the token palette rather than its own defaults. */
 .katex {
   color: var(--text-primary);
   font-size: 1.02em;
@@ -362,13 +327,6 @@ body {
   padding-block: 0.35rem;
 }
 
-/* ------------------------------------------------------------------ *
- * Utilities
- * ------------------------------------------------------------------ */
-
-/* Seek and volume sliders. A native range input keeps the keyboard and
-   screen-reader behaviour; only the paint is replaced. The filled portion
-   comes from --played, set inline by the player bar. */
 .scrubber {
   -webkit-appearance: none;
   appearance: none;

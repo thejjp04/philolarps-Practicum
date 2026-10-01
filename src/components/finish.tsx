@@ -8,12 +8,7 @@ import { IconArrowRight, IconCheck, IconSpark } from "@/components/icons";
 const DONE_KEY = "philolarps-done";
 const SOUND_KEY = "philolarps-sound";
 
-/** Fired on this window whenever the finished list changes. */
 const CHANGED = "philolarps-done-change";
-
-/* ------------------------------------------------------------------ *
- * The finished list
- * ------------------------------------------------------------------ */
 
 export function readDone(): string[] {
   try {
@@ -21,7 +16,6 @@ export function readDone(): string[] {
     const parsed: unknown = raw ? JSON.parse(raw) : [];
     return Array.isArray(parsed) ? parsed.filter((h) => typeof h === "string") : [];
   } catch {
-    // No storage, or somebody put something else under the key.
     return [];
   }
 }
@@ -30,18 +24,10 @@ function writeDone(hrefs: string[]) {
   try {
     localStorage.setItem(DONE_KEY, JSON.stringify(hrefs));
   } catch {
-    // Progress will not survive the tab. The mark still shows until then.
   }
   window.dispatchEvent(new Event(CHANGED));
 }
 
-/**
- * The set of articles marked read, kept level with storage.
- *
- * Empty on the first render so the server and the client agree; the real list
- * arrives a frame later. Reading storage during render would mismatch, and
- * setting state straight from an effect body is an error in this repo.
- */
 export function useDone(): Set<string> {
   const [done, setDone] = useState<Set<string>>(() => new Set());
 
@@ -52,7 +38,6 @@ export function useDone(): Set<string> {
 
     const frame = requestAnimationFrame(sync);
     window.addEventListener(CHANGED, sync);
-    // Another tab of the same site, which fires storage rather than CHANGED.
     window.addEventListener("storage", sync);
 
     return () => {
@@ -65,10 +50,6 @@ export function useDone(): Set<string> {
   return done;
 }
 
-/* ------------------------------------------------------------------ *
- * Sound
- * ------------------------------------------------------------------ */
-
 function soundOn(): boolean {
   try {
     return localStorage.getItem(SOUND_KEY) !== "off";
@@ -77,11 +58,6 @@ function soundOn(): boolean {
   }
 }
 
-/**
- * A four-note rise, synthesised on the spot rather than sampled from anything.
- * Triangle waves with a fast attack and a short exponential tail, which is the
- * shape a chime has and what keeps it from clicking at either end.
- */
 function chime() {
   const Ctor =
     window.AudioContext ??
@@ -92,8 +68,6 @@ function chime() {
   const ctx = new Ctor();
   const start = ctx.currentTime + 0.01;
 
-  // C5 E5 G5 C6: an arpeggio up, which reads as "that went well" in a way a
-  // single tone does not.
   const notes = [523.25, 659.25, 783.99, 1046.5];
 
   notes.forEach((hz, i) => {
@@ -104,7 +78,6 @@ function chime() {
     osc.type = "triangle";
     osc.frequency.setValueAtTime(hz, at);
 
-    // The last note rings longer, so the run lands rather than stopping.
     const tail = i === notes.length - 1 ? 0.55 : 0.3;
     gain.gain.setValueAtTime(0.0001, at);
     gain.gain.exponentialRampToValueAtTime(0.16, at + 0.012);
@@ -115,14 +88,8 @@ function chime() {
     osc.stop(at + tail + 0.02);
   });
 
-  // Nothing else uses this context, and a page that opens one per article
-  // eventually runs into the per-tab limit.
   window.setTimeout(() => void ctx.close(), 1400);
 }
-
-/* ------------------------------------------------------------------ *
- * Confetti
- * ------------------------------------------------------------------ */
 
 type Bit = {
   x: number;
@@ -135,7 +102,6 @@ type Bit = {
   colour: string;
 };
 
-/** The nine subject hues, whichever way the current theme resolves them. */
 function palette(): string[] {
   const style = getComputedStyle(document.documentElement);
   const names = [
@@ -148,6 +114,9 @@ function palette(): string[] {
     "--subject-ontology",
     "--subject-epistemology",
     "--subject-logic",
+    "--subject-philosophy-of-language",
+    "--subject-metalogic",
+    "--subject-metaontology",
     "--accent",
   ];
 
@@ -158,10 +127,6 @@ function palette(): string[] {
   return found.length > 0 ? found : ["currentColor"];
 }
 
-/**
- * Paper thrown up from a point, under gravity and a little drag. Its own
- * canvas, over everything, deaf to the pointer, gone when the last bit lands.
- */
 function confetti(origin: { x: number; y: number }) {
   const canvas = document.createElement("canvas");
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -186,8 +151,6 @@ function confetti(origin: { x: number; y: number }) {
 
   const colours = palette();
   const bits: Bit[] = Array.from({ length: 110 }, () => {
-    // Up and outwards, wider than it is tall, so the spray reads as a burst
-    // rather than a fountain.
     const angle = -Math.PI / 2 + (Math.random() - 0.5) * 2.1;
     const speed = 7 + Math.random() * 9;
     return {
@@ -226,8 +189,6 @@ function confetti(origin: { x: number; y: number }) {
       ctx.translate(b.x, b.y);
       ctx.rotate(b.angle);
       ctx.fillStyle = b.colour;
-      // Scaled on one axis by the spin, which is what makes a flat rectangle
-      // look like a tumbling piece of paper.
       ctx.fillRect(
         -b.size / 2,
         -b.size / 4,
@@ -246,10 +207,6 @@ function confetti(origin: { x: number; y: number }) {
 
   requestAnimationFrame(step);
 }
-
-/* ------------------------------------------------------------------ *
- * The control
- * ------------------------------------------------------------------ */
 
 export function FinishArticle({
   href,
@@ -273,7 +230,6 @@ export function FinishArticle({
       try {
         localStorage.setItem(SOUND_KEY, nextOn ? "on" : "off");
       } catch {
-        // Preference will not persist. It still applies to this page.
       }
       return nextOn;
     });
@@ -322,7 +278,6 @@ export function FinishArticle({
             </p>
           </div>
         </div>
-
         <div className="flex items-center gap-2">
           <button
             type="button"

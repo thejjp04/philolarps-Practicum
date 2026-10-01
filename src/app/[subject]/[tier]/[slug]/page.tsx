@@ -43,11 +43,6 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-/**
- * Articles in the same subject whose vocabulary overlaps this one's, in either
- * direction. Nearest neighbours in the path are excluded because they already
- * have their own row below the prose.
- */
 function relatedArticles(
   subjectSlug: string,
   tier: Tier,
@@ -82,7 +77,6 @@ function relatedArticles(
     .slice(0, 4);
 }
 
-/** The written article closest to `index` in the subject's own order. */
 function nearestWritten(path: ArticleRef[], index: number): ArticleRef | null {
   let best: ArticleRef | null = null;
   let bestGap = Infinity;
@@ -119,11 +113,6 @@ function TermList({ label, terms }: { label: string; terms: string[] }) {
   );
 }
 
-/**
- * What a planned rung shows instead of prose. Everything here comes from the
- * ladder declaration: the entry's own summary, the terms it is responsible for,
- * and where it sits in the order. Nothing about the argument is invented.
- */
 function PlannedNotice({
   article,
   entryTerms,
@@ -133,15 +122,11 @@ function PlannedNotice({
   entryTerms: { introduces: string[]; requires: string[] };
   fallback: ArticleRef | null;
 }) {
-  // Deliberately outside .prose-article: that scope styles every descendant
-  // anchor as an underlined accent link, which would repaint the buttons below
-  // in accent-on-accent.
   return (
     <div>
       <p className="font-serif text-[18px] leading-[1.7] text-[var(--text-muted)]">
         {article.summary}
       </p>
-
       <div className="mt-8 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--bg-subtle)] p-5">
         <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.11em] text-[var(--text-muted)]">
           Planned, not yet written
@@ -152,7 +137,6 @@ function PlannedNotice({
           out of sequence would break the guarantee that nothing here uses a term
           before an earlier article defines it.
         </p>
-
         <div className="mt-4 flex flex-wrap gap-2.5">
           <Link
             href={`/${article.subject}/${article.tier}`}
@@ -185,8 +169,6 @@ export default async function ArticlePage({ params }: Params) {
   const { subject: subjectSlug, tier, slug } = await params;
   if (!isTier(tier)) notFound();
 
-  // A ref exists for every rung of the ladder, written or not. Only a slug that
-  // is on no ladder at all is a 404.
   const ref = getArticleRef(subjectSlug, tier, slug);
   if (!ref) notFound();
 
@@ -203,11 +185,6 @@ export default async function ArticlePage({ params }: Params) {
       components: mdxComponents,
       options: {
         parseFrontmatter: true,
-        // next-mdx-remote v6 strips every JSX attribute expression by default,
-        // which is right for remote MDX and wrong here: the source is our own
-        // files in /content, and components like TruthTable take their data as
-        // arrays. Turning blockJS off leaves blockDangerousJS on, so eval,
-        // require, process and the constructor escapes are still refused.
         blockJS: false,
         mdxOptions: {
           remarkPlugins: [remarkMath],
@@ -255,24 +232,19 @@ export default async function ArticlePage({ params }: Params) {
               </span>
             )}
           </div>
-
           <h1 className="text-[34px] font-bold leading-[1.15] tracking-[-0.025em] lg:text-[38px]">
             {ref.title}
           </h1>
-
           <PrerequisiteChips
             subject={ref.subject}
             slugs={ref.prerequisites}
             articles={path}
           />
         </header>
-
         <TocSummary headings={headings} />
 
         {body}
 
-        {/* Only under prose. A planned rung has nothing to have finished, and
-            the next rung it would offer is the one already in the notice. */}
         {ref.written && (
           <FinishArticle
             href={ref.href}
@@ -340,7 +312,6 @@ export default async function ArticlePage({ params }: Params) {
           </section>
         )}
       </article>
-
       <TocRail headings={headings} />
     </div>
   );

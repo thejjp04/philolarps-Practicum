@@ -7,11 +7,6 @@ import { TIERS } from "@/lib/types";
 
 const SITE = "https://philolarps.com";
 
-/**
- * Only pages with real content. The ladder renders a page for every planned
- * rung too, but those are near-identical stubs, and 300 of them in a sitemap
- * teaches a crawler that the site is mostly filler.
- */
 export default function sitemap(): MetadataRoute.Sitemap {
   const at = (path: string, priority: number) => ({
     url: `${SITE}${path}`,

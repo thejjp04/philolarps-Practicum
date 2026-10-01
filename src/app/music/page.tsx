@@ -17,9 +17,7 @@ export default function MusicPage() {
         title="Music"
         lead="Three stations to read to. Whichever you pick keeps playing while you move around the site, and the controls stay at the bottom of the page."
       />
-
       <StationPicker stations={STATIONS} />
-
       <div className="mt-12 border-t border-[var(--border)] pt-8">
         <SectionHeading>How this works</SectionHeading>
         <div className="mt-3 max-w-[62ch] space-y-3 font-serif text-[15.5px] leading-[1.65] text-[var(--text-muted)]">

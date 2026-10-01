@@ -51,7 +51,6 @@ export default async function SubjectPage({ params }: Params) {
         lead={subject.scope}
         glyph={<SubjectGlyph slug={subject.slug} size="lg" />}
       />
-
       <aside className="mb-12 rounded-[var(--radius-card)] border border-[var(--border)] bg-[var(--bg-subtle)] px-5 py-4">
         <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.09em] text-[var(--text-muted)]">
           <IconRoute className="h-[15px] w-[15px]" />
@@ -74,7 +73,6 @@ export default async function SubjectPage({ params }: Params) {
           </Link>
         )}
       </aside>
-
       <div className="space-y-14">
         {TIERS.map((tier) => {
           const articles = getTierArticles(subject.slug, tier);
@@ -88,7 +86,6 @@ export default async function SubjectPage({ params }: Params) {
               <p className="mt-1.5 max-w-[60ch] font-serif text-[15.5px] leading-[1.55] text-[var(--text-muted)]">
                 {TIER_NOTE[tier]}
               </p>
-
               <ul className="mt-6 space-y-7">
                 {articles.map((article) => {
                   counter += 1;

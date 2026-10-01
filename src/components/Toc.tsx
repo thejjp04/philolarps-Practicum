@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import type { Heading } from "@/lib/types";
 
-/** Highlights the section currently nearest the top of the viewport. */
 function useActiveHeading(headings: Heading[]) {
   const [active, setActive] = useState<string | null>(
     headings[0]?.id ?? null,
@@ -29,7 +28,6 @@ function useActiveHeading(headings: Heading[]) {
           return;
         }
 
-        // Nothing in the band: fall back to the last heading scrolled past.
         const passed = elements.filter(
           (el) => el.getBoundingClientRect().top < 120,
         );
@@ -80,7 +78,6 @@ export function TocRail({ headings }: { headings: Heading[] }) {
   );
 }
 
-/** Below the rail breakpoint the same list collapses above the article. */
 export function TocSummary({ headings }: { headings: Heading[] }) {
   if (headings.length === 0) return null;
 

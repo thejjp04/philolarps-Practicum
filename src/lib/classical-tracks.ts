@@ -1,19 +1,5 @@
 import type { Track } from "@/lib/stations";
 
-/* ------------------------------------------------------------------ *
- * The classical station.
- *
- * Every id here was resolved against YouTube and confirmed through its
- * oEmbed endpoint, so each one is a recording that exists and is titled
- * the way it is listed. The performer is named only where the recording
- * itself names one.
- *
- * The selection rule is narrow on purpose. Nothing with words in it,
- * nothing that changes volume sharply, and nothing so familiar that it
- * starts narrating itself while you read. Slow keyboard music and small
- * string ensembles do most of the work.
- * ------------------------------------------------------------------ */
-
 export const CLASSICAL_TRACKS: Track[] = [
   {
     id: "TL0xzp4zzBE",

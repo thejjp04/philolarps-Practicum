@@ -39,7 +39,6 @@ const REFERENCE = [
   { href: "/music", label: "Music", Icon: IconMusic },
 ];
 
-/** The one Reference row the tour stops at. */
 const TOUR_REFERENCE = "/music";
 
 export function Sidebar({
@@ -60,11 +59,9 @@ export function Sidebar({
       const stored = localStorage.getItem(FILTER_STORAGE_KEY) as Filter | null;
       if (stored && FILTERS.some((f) => f.key === stored)) setFilter(stored);
     } catch {
-      // Nothing to restore.
     }
   }, []);
 
-  // Open the subject the visitor is currently reading.
   const activeSubject = useMemo(() => {
     const segment = pathname.split("/")[1] ?? "";
     return nav.groups.some((g) => g.subjects.some((s) => s.slug === segment))
@@ -72,7 +69,6 @@ export function Sidebar({
       : null;
   }, [pathname, nav.groups]);
 
-  // The tier of the page being read, when the URL names one.
   const activeTier = useMemo<Tier | null>(() => {
     const segment = pathname.split("/")[2] ?? "";
     return TIERS.find((t) => t === segment) ?? null;
@@ -91,7 +87,6 @@ export function Sidebar({
     try {
       localStorage.setItem(FILTER_STORAGE_KEY, next);
     } catch {
-      // Choice will not persist. Harmless.
     }
   }
 
@@ -105,7 +100,6 @@ export function Sidebar({
 
   return (
     <div className="flex h-full flex-col bg-[var(--bg-sidebar)] text-[var(--sidebar-text)]">
-      {/* Wordmark */}
       <div className="shrink-0 px-5 pb-1 pt-5">
         <Link
           href="/"
@@ -116,8 +110,6 @@ export function Sidebar({
           <LogoLockup />
         </Link>
       </div>
-
-      {/* Tier switcher */}
       <div data-tour="tier-switcher" className="shrink-0 px-4 pb-4 pt-3">
         <div
           role="radiogroup"
@@ -148,8 +140,6 @@ export function Sidebar({
           })}
         </div>
       </div>
-
-      {/* Nav tree */}
       <nav
         data-tour="nav-tree"
         aria-label="Subjects"
@@ -160,7 +150,6 @@ export function Sidebar({
             <h2 className="px-3 pb-2 text-[10.5px] font-semibold uppercase tracking-[0.09em]">
               {group.label}
             </h2>
-
             <ul className="space-y-[2px]">
               {group.subjects.map((subject) => (
                 <SubjectItem
@@ -202,9 +191,6 @@ export function Sidebar({
               </li>
             ))}
 
-            {/* Not a page, so it sits at the end of the list rather than in
-                the bottom slot, which has to stay one row tall to line up
-                with the player bar across the fold. */}
             <li>
               <button
                 type="button"
@@ -223,10 +209,6 @@ export function Sidebar({
           </ul>
         </div>
       </nav>
-
-      {/* Bottom slot. The theme toggle lives where an account block usually
-          would. The height is fixed rather than left to the contents, because
-          the player bar starts where this rule does and the two have to meet. */}
       <div
         data-tour="theme-toggle"
         className="flex h-[65px] shrink-0 items-center border-t border-[var(--sidebar-rule)] px-3"
@@ -246,9 +228,6 @@ function rowClass(active: boolean) {
   ].join(" ");
 }
 
-/* A Reference icon has no subject and so no colour of its own. It still takes
-   the width of a subject tile, or the two lists would start their labels at
-   different places. */
 const SLOT = "flex h-[25px] w-[25px] shrink-0 items-center justify-center";
 
 function SubjectItem({
@@ -275,10 +254,6 @@ function SubjectItem({
   const isHub = pathname === subject.href;
   const inSubject = pathname.startsWith(`${subject.href}/`) || isHub;
 
-  // The pill is a browsing preference, not a claim about where you are. If it
-  // filters out the tier you are actually reading, the current article drops
-  // out of the tree and nothing in the sidebar marks your position, so the
-  // tier under the cursor is added back for this subject alone.
   const tiers: Tier[] =
     pinnedTier && !visibleTiers.includes(pinnedTier)
       ? TIERS.filter((t) => visibleTiers.includes(t) || t === pinnedTier)
@@ -286,24 +261,16 @@ function SubjectItem({
 
   const articles = subject.articles.filter((a) => tiers.includes(a.tier));
 
-  // On a single tier the list is already homogeneous, so a heading would say
-  // nothing the pill switcher has not already said. On "All" the three tiers
-  // run together, and without a break the jump from the last beginner rung to
-  // the first intermediate one is invisible.
   const grouped = tiers
     .map((tier) => ({ tier, items: articles.filter((a) => a.tier === tier) }))
     .filter((g) => g.items.length > 0);
   const showTierHeadings = tiers.length > 1;
 
-  /* The drawer and the fixed sidebar are both mounted below 1024px, so a slug
-     alone would put the same id on two elements. */
   const panelId = `nav-${instanceId}-${subject.slug}`;
 
   return (
     <li>
       <div className={rowClass(isHub)}>
-        {/* The icon sits inside the link. Outside it, a third of the row was
-            a dead target that looked identical to the live part. */}
         <Link
           href={subject.href}
           onClick={onNavigate}
@@ -340,9 +307,6 @@ function SubjectItem({
           {grouped.map(({ tier, items }) => (
             <div key={tier} className={showTierHeadings ? "pt-2 first:pt-0" : ""}>
               {showTierHeadings && (
-                /* Full --sidebar-text, not a dimmed variant: at 9.5px this is
-                   already the smallest type in the shell, and the group
-                   headings above it are set the same way. */
                 <h3 className="px-2 pb-[2px] text-[9.5px] font-semibold uppercase tracking-[0.12em]">
                   {TIER_LABEL[tier]}
                 </h3>
@@ -383,10 +347,6 @@ function ArticleLink({
 }) {
   return (
     <li>
-      {/* Planned rungs link too. Their page explains the rung rather than
-          faking prose, so the ladder is browsable end to end. --sidebar-text
-          scores 12.1:1 on the violet sidebar, so dimming to 70% still
-          composites past AA. */}
       <Link
         href={article.href}
         onClick={onNavigate}
@@ -401,9 +361,6 @@ function ArticleLink({
         ].join(" ")}
       >
         <span className="truncate">{article.title}</span>
-        {/* Not a title attribute: that would replace the link text as the
-            accessible name, so every planned rung would announce
-            identically. */}
         {!article.written && (
           <span className="sr-only"> (planned, not yet written)</span>
         )}

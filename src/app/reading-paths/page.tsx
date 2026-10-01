@@ -20,7 +20,6 @@ export default function ReadingPathsPage() {
         title="Reading Paths"
         lead="Each subject already has its own order. These three sequences cut across subjects instead, for readers who want a route through the whole site rather than a route through one part of it."
       />
-
       <div className="space-y-8">
         {paths.map((path) => {
           const minutes = path.articles.reduce((sum, a) => sum + a.estReadMin, 0);

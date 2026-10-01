@@ -1,27 +1,6 @@
 import type { Track } from "@/lib/stations";
 
-/* ------------------------------------------------------------------ *
- * The anime station.
- *
- * The first block is the list Josh sent, in the order he sent it. The
- * second is the additions: openings that turn up on most lists of this
- * kind and were not already in the first block.
- *
- * Every id was resolved against YouTube search and then confirmed
- * through YouTube's oEmbed endpoint, so each one is a real video whose
- * title and channel are what they are listed as here. Fan re-uploads,
- * lyric videos, covers, and live cuts were dropped rather than guessed
- * at. A handful of the original list had no clean official upload and
- * is not here: Ochame Kinou, BIRDBRAIN, Judgement, Aa-ssu!, Sinking
- * Town, the Samuel Kim Jolyne arrangement, Oddloop, Kura Kura, and
- * Aishite Aishite Aishite.
- *
- * The series in the third field is only filled in where it is settled.
- * Songs that were never an opening or an ending leave it empty.
- * ------------------------------------------------------------------ */
-
 export const ANIME_TRACKS: Track[] = [
-  // The list as sent.
   { id: "BC4zaaiXNMI", title: "Love Dramatic", artist: "Masayuki Suzuki", from: "Kaguya-sama: Love Is War" },
   { id: "LFoyXEFaz2Q", title: "Absolute Zero", artist: "natori", from: "" },
   { id: "H08YWE4CIFQ", title: "Overdose", artist: "natori", from: "" },
@@ -73,7 +52,6 @@ export const ANIME_TRACKS: Track[] = [
   { id: "hQ4-H-nNNz4", title: "TEST ME", artist: "CHANMINA", from: "" },
   { id: "c7E-tgmFuzw", title: "POP IN 2", artist: "B Komachi", from: "Oshi no Ko" },
 
-  // Added on.
   { id: "KpsJWFuVTdI", title: "Blue Bird", artist: "Ikimonogakari", from: "Naruto Shippuden" },
   { id: "P1yJ51DH-18", title: "DIVER", artist: "NICO Touches the Walls", from: "Naruto Shippuden" },
   { id: "qpi9YXaChHI", title: "Sign", artist: "FLOW", from: "Naruto Shippuden" },

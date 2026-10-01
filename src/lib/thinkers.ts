@@ -1,18 +1,6 @@
 import type { Thinker } from "@/lib/types";
 
-/**
- * The Thinkers Index.
- *
- * Rule for this file: no invented dates and no invented attributions. A figure
- * whose dates are genuinely uncertain gets a `c.` or is left out. The position
- * line says what the person held, not what they are famous for.
- *
- * `keyArticles` are curriculum entries where the figure is central. The index
- * page also picks up any article whose prose names them, so this list is a
- * floor rather than the whole answer.
- */
 export const THINKERS: Thinker[] = [
-  /* ---------------- Ancient ---------------- */
   {
     name: "Plato",
     dates: "c. 428–348 BCE",
@@ -52,7 +40,6 @@ export const THINKERS: Thinker[] = [
     keyArticles: ["theism/advanced/foreknowledge-and-freedom"],
   },
 
-  /* ---------------- Medieval ---------------- */
   {
     name: "Avicenna (Ibn Sina)",
     dates: "c. 980–1037",
@@ -113,7 +100,6 @@ export const THINKERS: Thinker[] = [
     keyArticles: ["ontology/intermediate/platonism-and-nominalism"],
   },
 
-  /* ---------------- Early modern ---------------- */
   {
     name: "Thomas Hobbes",
     dates: "1588–1679",
@@ -221,7 +207,6 @@ export const THINKERS: Thinker[] = [
     keyArticles: ["ethics/intermediate/utilitarianism"],
   },
 
-  /* ---------------- Nineteenth century ---------------- */
   {
     name: "Georg Wilhelm Friedrich Hegel",
     dates: "1770–1831",
@@ -327,7 +312,6 @@ export const THINKERS: Thinker[] = [
     keyArticles: ["political-philosophy/intermediate/democracy-and-its-justifications"],
   },
 
-  /* ---------------- Twentieth century ---------------- */
   {
     name: "Bertrand Russell",
     dates: "1872–1970",

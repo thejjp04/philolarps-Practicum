@@ -50,7 +50,6 @@ export default function HomePage() {
           exposure through to graduate level, free to read without an account.
         </p>
       </header>
-
       <section className="mb-14">
         <SectionHeading>Start here</SectionHeading>
         <div className="mt-4 grid gap-4 sm:grid-cols-3">
@@ -70,7 +69,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
       <section className="mb-14">
         <SectionHeading>Subjects</SectionHeading>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -96,7 +94,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
       <section>
         <SectionHeading>Recently added</SectionHeading>
         {recent.length === 0 ? (

@@ -21,10 +21,6 @@ import { THINKERS } from "@/lib/thinkers";
 
 export const CONTENT_DIR = path.join(process.cwd(), "content");
 
-/* ------------------------------------------------------------------ *
- * Filesystem layer
- * ------------------------------------------------------------------ */
-
 type RawFile = {
   subject: string;
   tier: Tier;
@@ -35,11 +31,6 @@ type RawFile = {
   mtimeMs: number;
 };
 
-/**
- * Caching is production-only. In dev the corpus has to be re-read on every
- * request, or editing an MDX file would leave the page showing the version
- * that was on disk when the server started.
- */
 const CACHE = process.env.NODE_ENV === "production";
 
 let rawCache: RawFile[] | null = null;
@@ -78,7 +69,6 @@ function readAllFiles(): RawFile[] {
     }
   }
 
-  // The ladder check runs once, on the first content read of a build.
   const problems = validateLadders();
   if (problems.length > 0) {
     const report = problems.map((p) => `  - ${p}`).join("\n");
@@ -96,10 +86,6 @@ function findFile(subject: string, tier: Tier, slug: string) {
     (f) => f.subject === subject && f.tier === tier && f.slug === slug,
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Article refs: the ladder merged with what has actually been written
- * ------------------------------------------------------------------ */
 
 function toRef(subject: Subject, tier: Tier, index: number): ArticleRef {
   const entry = subject.ladder[tier][index];
@@ -125,7 +111,6 @@ export function getTierArticles(subjectSlug: string, tier: Tier): ArticleRef[] {
   return subject.ladder[tier].map((_, i) => toRef(subject, tier, i));
 }
 
-/** Every article in a subject, in ladder order across all three tiers. */
 export function getSubjectPath(subjectSlug: string): ArticleRef[] {
   return TIERS.flatMap((tier) => getTierArticles(subjectSlug, tier));
 }
@@ -148,7 +133,6 @@ export function getArticleRef(
   );
 }
 
-/** Previous and next written-or-planned steps in the subject's reading path. */
 export function getNeighbours(subject: string, tier: Tier, slug: string) {
   const path_ = getSubjectPath(subject);
   const i = path_.findIndex((a) => a.tier === tier && a.slug === slug);
@@ -172,10 +156,6 @@ export function getRecentlyAdded(limit = 5): ArticleRef[] {
     .slice(0, limit)
     .map((x) => x.article);
 }
-
-/* ------------------------------------------------------------------ *
- * A single article
- * ------------------------------------------------------------------ */
 
 export type LoadedArticle = {
   source: string;
@@ -201,7 +181,6 @@ export function loadArticle(
   };
 }
 
-/** Static params for every written article, for `generateStaticParams`. */
 export function allWrittenParams() {
   return readAllFiles().map((f) => ({
     subject: f.subject,
@@ -210,11 +189,6 @@ export function allWrittenParams() {
   }));
 }
 
-/**
- * Static params for every rung of every ladder, written or not. A planned rung
- * still has a page: it says what the entry is for and where it sits in the
- * order, so the nav can link to all of them.
- */
 export function allLadderParams() {
   return SUBJECTS.flatMap((subject) =>
     TIERS.flatMap((tier) =>
@@ -227,14 +201,9 @@ export function allLadderParams() {
   );
 }
 
-/** The raw ladder rung, which carries the term vocabulary a ref does not. */
 export function getLadderEntry(subjectSlug: string, tier: Tier, slug: string) {
   return getSubject(subjectSlug)?.ladder[tier].find((e) => e.slug === slug);
 }
-
-/* ------------------------------------------------------------------ *
- * Headings, for the table-of-contents rail
- * ------------------------------------------------------------------ */
 
 export function slugifyHeading(text: string): string {
   return text
@@ -244,12 +213,6 @@ export function slugifyHeading(text: string): string {
     .replace(/\s+/g, "-");
 }
 
-/**
- * Anchor for a definition box. Kept out of the heading namespace: an article
- * that defines "Inference" usually also has a heading called "Inference", and
- * two elements sharing an id makes the fragment link land on whichever comes
- * first in the document.
- */
 export function definitionAnchor(term: string): string {
   return `def-${slugifyHeading(term)}`;
 }
@@ -268,7 +231,6 @@ function extractHeadings(source: string): Heading[] {
     const match = /^(#{2,3})\s+(.+?)\s*$/.exec(line);
     if (!match) continue;
 
-    // Strip inline markdown so the rail shows plain text.
     const text = match[2]
       .replace(/`([^`]+)`/g, "$1")
       .replace(/\*\*([^*]+)\*\*/g, "$1")
@@ -284,10 +246,6 @@ function extractHeadings(source: string): Heading[] {
 
   return headings;
 }
-
-/* ------------------------------------------------------------------ *
- * Glossary, built from every <Definition> in the corpus
- * ------------------------------------------------------------------ */
 
 let glossaryCache: GlossaryEntry[] | null = null;
 
@@ -330,10 +288,6 @@ function cleanInline(text: string): string {
     .replace(/\s+/g, " ")
     .trim();
 }
-
-/* ------------------------------------------------------------------ *
- * Search index, served to the client as JSON
- * ------------------------------------------------------------------ */
 
 export type SearchDoc = {
   kind: "article" | "heading" | "term";
@@ -383,15 +337,6 @@ export function buildSearchIndex(): SearchDoc[] {
   return docs;
 }
 
-/* ------------------------------------------------------------------ *
- * Reading paths and thinkers, resolved against the ladder
- * ------------------------------------------------------------------ */
-
-/**
- * Resolves a path's `subject/tier/slug` steps to real articles. A step that
- * matches nothing is dropped and reported, so a typo shows up in the build log
- * rather than as a dead link.
- */
 export function resolvePathSteps(steps: string[]): ArticleRef[] {
   const resolved: ArticleRef[] = [];
 
@@ -419,11 +364,6 @@ export function getResolvedPath(slug: string): ResolvedPath | undefined {
   return getResolvedPaths().find((p) => p.slug === slug);
 }
 
-/**
- * Thinker records with their curriculum links resolved. Curated `keyArticles`
- * are the floor; any written article whose prose names the thinker is added on
- * top, so the index keeps up with the corpus without hand maintenance.
- */
 export function getThinkerRecords(): ThinkerRecord[] {
   const files = readAllFiles();
 
@@ -448,7 +388,6 @@ export function getThinkerRecords(): ThinkerRecord[] {
       add(ref);
     }
 
-    // Match on surname, which is how prose refers to people after first mention.
     const surname = thinker.name.replace(/\s*\([^)]*\)/, "").split(" ").pop() ?? "";
     if (surname.length > 3) {
       const pattern = new RegExp(`\\b${escapeRegExp(surname)}\\b`);
@@ -465,10 +404,6 @@ export function getThinkerRecords(): ThinkerRecord[] {
 function escapeRegExp(text: string): string {
   return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
-
-/* ------------------------------------------------------------------ *
- * Counts
- * ------------------------------------------------------------------ */
 
 export function corpusStats() {
   const all = getAllArticles();

@@ -1,23 +1,5 @@
 import type { Track } from "@/lib/stations";
 
-/* ------------------------------------------------------------------ *
- * The Minecraft station.
- *
- * The tracklist Josh sent, in his order. Every id was resolved against
- * YouTube search and then confirmed through oEmbed, so each one is a
- * real video titled the way it is listed here.
- *
- * Where the recording sits on an official artist channel the composer
- * is taken from that channel. Daniel Rosenfeld and C418 are the same
- * person, and the C418 name is used throughout because that is what the
- * albums are credited to. Volume Alpha and Volume Beta are only named
- * where the upload itself names them.
- *
- * Two of the requested tracks had no upload that was a single song
- * rather than an hours-long compilation, so they are not here:
- * Minecraft, and O's Piano.
- * ------------------------------------------------------------------ */
-
 export const MINECRAFT_TRACKS: Track[] = [
   { id: "Gpd85y_iTxY", title: "Subwoofer Lullaby", artist: "C418", from: "Volume Alpha" },
   { id: "WmYTrtu-25A", title: "Shuniji", artist: "C418", from: "" },

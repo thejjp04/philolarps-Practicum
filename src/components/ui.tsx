@@ -4,11 +4,6 @@ import type { ReactNode } from "react";
 import type { ArticleRef, Tier } from "@/lib/types";
 import { TIERS, TIER_INITIAL, TIER_LABEL } from "@/lib/types";
 
-/* ------------------------------------------------------------------ *
- * Layout
- * ------------------------------------------------------------------ */
-
-/** The main content column: prose capped at 760px, centred in what is left. */
 export function Container({
   children,
   wide = false,
@@ -36,7 +31,6 @@ export function PageHeader({
   title: string;
   lead?: string;
   eyebrow?: string;
-  /** Sits to the left of the title. A subject hub passes its own glyph. */
   glyph?: ReactNode;
 }) {
   return (
@@ -67,10 +61,6 @@ export function SectionHeading({ children }: { children: ReactNode }) {
   );
 }
 
-/* ------------------------------------------------------------------ *
- * Tier furniture
- * ------------------------------------------------------------------ */
-
 export function TierBadge({ tier }: { tier: Tier }) {
   return (
     <span className="inline-flex items-center rounded-[var(--radius-pill)] border border-[var(--border)] bg-[var(--bg-subtle)] px-2.5 py-[3px] text-[11px] font-semibold uppercase tracking-[0.07em] text-[var(--text-muted)]">
@@ -79,7 +69,6 @@ export function TierBadge({ tier }: { tier: Tier }) {
   );
 }
 
-/** `B 8 · I 11 · A 14`, each chip a link into that tier. */
 export function TierChips({
   subject,
   counts,
@@ -113,10 +102,6 @@ export function TierChips({
   );
 }
 
-/**
- * Marks a link whose article is on the ladder but not yet written. The target
- * is a real page: it explains the rung and points somewhere readable.
- */
 export function PlannedTag() {
   return (
     <span className="ml-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.06em] text-[var(--text-muted)]">
@@ -125,14 +110,6 @@ export function PlannedTag() {
   );
 }
 
-/* ------------------------------------------------------------------ *
- * Article rows
- * ------------------------------------------------------------------ */
-
-/**
- * One rung of a ladder. Every rung links to its own page, written or not; a
- * planned one lands on a page that says so and offers somewhere to go instead.
- */
 export function ArticleRow({
   article,
   index,
@@ -142,7 +119,6 @@ export function ArticleRow({
   article: ArticleRef;
   index?: number;
   showTier?: boolean;
-  /** Rendered inside the row, below the link. Used for prerequisite chips. */
   footer?: ReactNode;
 }) {
   const body = (
@@ -186,9 +162,6 @@ export function ArticleRow({
         </span>
       )}
       <div className="min-w-0 flex-1">
-        {/* No opacity on the planned variant. The muted title and the Planned
-            badge already separate it from a written row, and dimming on top of
-            --text-muted would put the row below AA. */}
         <Link
           href={article.href}
           className="block rounded-[var(--radius-card)] outline-offset-4 transition-opacity hover:opacity-80"
@@ -221,7 +194,6 @@ export function PrerequisiteChips({
         const ref = articles.find((a) => a.slug === slug && a.subject === subject);
         const label = ref?.title ?? slug.replace(/-/g, " ");
 
-        // A slug with no matching rung is a frontmatter typo, so it stays inert.
         return ref ? (
           <Link
             key={slug}
@@ -245,10 +217,6 @@ export function PrerequisiteChips({
     </div>
   );
 }
-
-/* ------------------------------------------------------------------ *
- * Cards
- * ------------------------------------------------------------------ */
 
 export function Card({
   href,
