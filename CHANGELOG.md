@@ -5,10 +5,20 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 30 September 2026
+
+4 changes.
+
+- Improve SEO metadata, canonicals and structured data ([383bd9c](https://github.com/thejjp04/philolarps/commit/383bd9c))
+- Fix React lint errors in search, theme, sidebar and reading path panel ([2b8bfff](https://github.com/thejjp04/philolarps/commit/2b8bfff))
+- Remove code comments and add colours and icons for the new subjects ([55022d4](https://github.com/thejjp04/philolarps/commit/55022d4))
+- Plan Philosophy of Language, Metalogic, and Metaontology ladders ([37e0b99](https://github.com/thejjp04/philolarps/commit/37e0b99))
+
 ## 26 September 2026
 
-10 changes.
+11 changes.
 
+- Regenerate changelog ([6a860b5](https://github.com/thejjp04/philolarps/commit/6a860b5))
 - Add epistemology advanced rung 8: lottery and preface paradoxes ([8d68b1b](https://github.com/thejjp04/philolarps/commit/8d68b1b))
 - Add epistemology advanced rung 7: confirmation theory, ravens, and grue ([75eb378](https://github.com/thejjp04/philolarps/commit/75eb378))
 - Add epistemology advanced rung 6: accuracy-first epistemology ([41aeec2](https://github.com/thejjp04/philolarps/commit/41aeec2))
