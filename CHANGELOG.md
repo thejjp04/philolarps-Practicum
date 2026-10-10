@@ -5,10 +5,18 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 9 October 2026
+
+2 changes.
+
+- Add quiz questions and in-article checks for all articles ([4e0fb89](https://github.com/thejjp04/philolarps/commit/4e0fb89))
+- Add quiz engine, in-article checks and quiz page ([b2fa36c](https://github.com/thejjp04/philolarps/commit/b2fa36c))
+
 ## 30 September 2026
 
-4 changes.
+5 changes.
 
+- Regenerate changelog ([13baaaa](https://github.com/thejjp04/philolarps/commit/13baaaa))
 - Improve SEO metadata, canonicals and structured data ([383bd9c](https://github.com/thejjp04/philolarps/commit/383bd9c))
 - Fix React lint errors in search, theme, sidebar and reading path panel ([2b8bfff](https://github.com/thejjp04/philolarps/commit/2b8bfff))
 - Remove code comments and add colours and icons for the new subjects ([55022d4](https://github.com/thejjp04/philolarps/commit/55022d4))
