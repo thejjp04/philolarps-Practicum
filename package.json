@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/check-quiz.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "changelog": "node scripts/changelog.mjs"
+    "changelog": "node scripts/changelog.mjs",
+    "test": "node --no-warnings scripts/test-quiz.mjs",
+    "check:quiz": "node scripts/check-quiz.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

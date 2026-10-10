@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { IconArrowRight, IconCheck, IconSpark } from "@/components/icons";
+import { chime, confetti, useSound } from "@/components/fx";
 
 const DONE_KEY = "philolarps-done";
-const SOUND_KEY = "philolarps-sound";
 
 const CHANGED = "philolarps-done-change";
 
@@ -50,164 +50,6 @@ export function useDone(): Set<string> {
   return done;
 }
 
-function soundOn(): boolean {
-  try {
-    return localStorage.getItem(SOUND_KEY) !== "off";
-  } catch {
-    return true;
-  }
-}
-
-function chime() {
-  const Ctor =
-    window.AudioContext ??
-    (window as unknown as { webkitAudioContext?: typeof AudioContext })
-      .webkitAudioContext;
-  if (!Ctor) return;
-
-  const ctx = new Ctor();
-  const start = ctx.currentTime + 0.01;
-
-  const notes = [523.25, 659.25, 783.99, 1046.5];
-
-  notes.forEach((hz, i) => {
-    const at = start + i * 0.085;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    osc.type = "triangle";
-    osc.frequency.setValueAtTime(hz, at);
-
-    const tail = i === notes.length - 1 ? 0.55 : 0.3;
-    gain.gain.setValueAtTime(0.0001, at);
-    gain.gain.exponentialRampToValueAtTime(0.16, at + 0.012);
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + tail);
-
-    osc.connect(gain).connect(ctx.destination);
-    osc.start(at);
-    osc.stop(at + tail + 0.02);
-  });
-
-  window.setTimeout(() => void ctx.close(), 1400);
-}
-
-type Bit = {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  spin: number;
-  angle: number;
-  colour: string;
-};
-
-function palette(): string[] {
-  const style = getComputedStyle(document.documentElement);
-  const names = [
-    "--subject-metaphysics",
-    "--subject-philosophy-of-mind",
-    "--subject-ethics",
-    "--subject-political-philosophy",
-    "--subject-theism",
-    "--subject-applied-ethics",
-    "--subject-ontology",
-    "--subject-epistemology",
-    "--subject-logic",
-    "--subject-philosophy-of-language",
-    "--subject-metalogic",
-    "--subject-metaontology",
-    "--accent",
-  ];
-
-  const found = names
-    .map((n) => style.getPropertyValue(n).trim())
-    .filter((v) => v.length > 0);
-
-  return found.length > 0 ? found : ["currentColor"];
-}
-
-function confetti(origin: { x: number; y: number }) {
-  const canvas = document.createElement("canvas");
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const w = window.innerWidth;
-  const h = window.innerHeight;
-
-  canvas.width = w * dpr;
-  canvas.height = h * dpr;
-  canvas.setAttribute(
-    "style",
-    `position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:80`,
-  );
-  canvas.setAttribute("aria-hidden", "true");
-  document.body.appendChild(canvas);
-
-  const ctx = canvas.getContext("2d");
-  if (!ctx) {
-    canvas.remove();
-    return;
-  }
-  ctx.scale(dpr, dpr);
-
-  const colours = palette();
-  const bits: Bit[] = Array.from({ length: 110 }, () => {
-    const angle = -Math.PI / 2 + (Math.random() - 0.5) * 2.1;
-    const speed = 7 + Math.random() * 9;
-    return {
-      x: origin.x + (Math.random() - 0.5) * 40,
-      y: origin.y,
-      vx: Math.cos(angle) * speed * 1.25,
-      vy: Math.sin(angle) * speed,
-      size: 5 + Math.random() * 6,
-      spin: (Math.random() - 0.5) * 0.34,
-      angle: Math.random() * Math.PI,
-      colour: colours[Math.floor(Math.random() * colours.length)],
-    };
-  });
-
-  let frame = 0;
-  const MAX = 240;
-
-  function step() {
-    if (!ctx) return;
-    frame += 1;
-    ctx.clearRect(0, 0, w, h);
-
-    let alive = false;
-    for (const b of bits) {
-      b.vy += 0.32;
-      b.vx *= 0.99;
-      b.vy *= 0.99;
-      b.x += b.vx;
-      b.y += b.vy;
-      b.angle += b.spin;
-
-      if (b.y - b.size > h) continue;
-      alive = true;
-
-      ctx.save();
-      ctx.translate(b.x, b.y);
-      ctx.rotate(b.angle);
-      ctx.fillStyle = b.colour;
-      ctx.fillRect(
-        -b.size / 2,
-        -b.size / 4,
-        b.size,
-        (b.size / 2) * Math.abs(Math.cos(b.angle)),
-      );
-      ctx.restore();
-    }
-
-    if (alive && frame < MAX) {
-      requestAnimationFrame(step);
-    } else {
-      canvas.remove();
-    }
-  }
-
-  requestAnimationFrame(step);
-}
-
 export function FinishArticle({
   href,
   next,
@@ -217,23 +59,7 @@ export function FinishArticle({
 }) {
   const done = useDone();
   const isDone = done.has(href);
-  const [sound, setSound] = useState(true);
-
-  useEffect(() => {
-    const frame = requestAnimationFrame(() => setSound(soundOn()));
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
-  const toggleSound = useCallback(() => {
-    setSound((on) => {
-      const nextOn = !on;
-      try {
-        localStorage.setItem(SOUND_KEY, nextOn ? "on" : "off");
-      } catch {
-      }
-      return nextOn;
-    });
-  }, []);
+  const [sound, setSound] = useSound();
 
   function mark(event: React.MouseEvent<HTMLButtonElement>) {
     const list = readDone();
@@ -245,12 +71,9 @@ export function FinishArticle({
 
     writeDone(list.includes(href) ? list : [...list, href]);
 
-    const quiet = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!quiet) {
-      const box = event.currentTarget.getBoundingClientRect();
-      confetti({ x: box.left + box.width / 2, y: box.top + box.height / 2 });
-    }
-    if (sound) chime();
+    const box = event.currentTarget.getBoundingClientRect();
+    confetti({ x: box.left + box.width / 2, y: box.top + box.height / 2 });
+    chime();
   }
 
   return (
@@ -281,7 +104,7 @@ export function FinishArticle({
         <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={toggleSound}
+            onClick={() => setSound(!sound)}
             aria-pressed={!sound}
             className="rounded-[var(--radius-pill)] border border-[var(--border)] px-2.5 py-[6px] text-[12px] font-medium text-[var(--text-muted)] transition-colors hover:bg-[var(--accent-wash)] hover:text-[var(--accent)]"
           >

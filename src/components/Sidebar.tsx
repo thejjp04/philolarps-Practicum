@@ -14,6 +14,7 @@ import {
   IconGlossary,
   IconMusic,
   IconPaths,
+  IconQuiz,
   IconThinkers,
   SubjectGlyph,
 } from "@/components/icons";
@@ -56,6 +57,7 @@ const REFERENCE = [
   { href: "/glossary", label: "Glossary", Icon: IconGlossary },
   { href: "/thinkers", label: "Thinkers Index", Icon: IconThinkers },
   { href: "/reading-paths", label: "Reading Paths", Icon: IconPaths },
+  { href: "/quiz", label: "Quiz", Icon: IconQuiz },
   { href: "/music", label: "Music", Icon: IconMusic },
 ];
 

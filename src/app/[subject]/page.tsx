@@ -8,7 +8,7 @@ import {
   PageHeader,
   PrerequisiteChips,
 } from "@/components/ui";
-import { IconArrowRight, IconRoute, SubjectGlyph } from "@/components/icons";
+import { IconArrowRight, IconQuiz, IconRoute, SubjectGlyph } from "@/components/icons";
 import { getSubjectPath, getTierArticles } from "@/lib/content";
 import { SUBJECTS, getSubject } from "@/lib/subjects";
 import { TIERS, TIER_LABEL } from "@/lib/types";
@@ -108,13 +108,22 @@ export default async function SubjectPage({ params }: Params) {
           {path.length} are written so far.
         </p>
         {firstReadable && (
-          <Link
-            href={firstReadable.href}
-            className="mt-3 inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
-          >
-            Start with {firstReadable.title}
-            <IconArrowRight className="h-[15px] w-[15px]" />
-          </Link>
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+            <Link
+              href={firstReadable.href}
+              className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
+            >
+              Start with {firstReadable.title}
+              <IconArrowRight className="h-[15px] w-[15px]" />
+            </Link>
+            <Link
+              href={`/quiz?s=${subject.slug}`}
+              className="inline-flex items-center gap-1.5 text-[13.5px] font-medium text-[var(--accent)] hover:text-[var(--accent-hover)]"
+            >
+              <IconQuiz className="h-[15px] w-[15px]" />
+              Quiz yourself on {subject.name}
+            </Link>
+          </div>
         )}
       </aside>
       <div className="space-y-14">

@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     at("/", 1),
     at("/reading-paths", 0.8),
+    at("/quiz", 0.7),
     at("/glossary", 0.6),
     at("/thinkers", 0.6),
     at("/tiers", 0.5),

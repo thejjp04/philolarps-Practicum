@@ -99,3 +99,36 @@ export type ReadingPath = {
   blurb: string;
   steps: string[];
 };
+
+export type QuizQuestion = {
+  id: string;
+  section?: string;
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+};
+
+export type QuizItem = {
+  key: string;
+  article: string;
+  question: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+  source?: string;
+};
+
+export type QuizArticle = {
+  key: string;
+  title: string;
+  tier: Tier;
+  href: string;
+  count: number;
+};
+
+export type QuizSubject = {
+  slug: string;
+  name: string;
+  articles: QuizArticle[];
+};

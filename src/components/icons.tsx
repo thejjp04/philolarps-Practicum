@@ -338,6 +338,34 @@ export function IconCheck(p: IconProps) {
   );
 }
 
+export function IconQuiz(p: IconProps) {
+  return (
+    <Base {...p}>
+      <rect x="4" y="3.5" width="16" height="17" rx="3.5" />
+      <path d="M9.7 9.4a2.4 2.4 0 1 1 3.2 2.2c-.6.3-.9.8-.9 1.4v.5" />
+      <path d="M12 16.4v.01" />
+    </Base>
+  );
+}
+
+export function IconFlame(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.6-5.3 3.6-8.3.4 1.9 1.4 3 2.5 3.4C11.6 6.6 13 4.4 15.2 3c-.4 2.9.9 4.8 2.1 6.5 1 1.4 1.2 2.6 1.2 4.3 0 4.1-2.6 7.2-6.5 7.2Z" />
+      <path d="M12 21c-1.7 0-2.8-1.2-2.8-2.8 0-1.8 1.4-2.6 2-4.2 1.6 1 3.6 2.2 3.6 4.4 0 1.5-1.1 2.6-2.8 2.6Z" />
+    </Base>
+  );
+}
+
+export function IconRetry(p: IconProps) {
+  return (
+    <Base {...p}>
+      <path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3" />
+      <path d="M4.5 4.5v3.8h3.8" />
+    </Base>
+  );
+}
+
 export function IconSpark(p: IconProps) {
   return (
     <Base {...p}>

@@ -12,6 +12,9 @@ import { IconArrowLeft, IconArrowRight, SubjectGlyph } from "@/components/icons"
 import { FinishArticle } from "@/components/finish";
 import { mdxComponents } from "@/components/mdx";
 import { JsonLd } from "@/components/JsonLd";
+import { Check } from "@/components/quiz/Check";
+import { QuizPrompt } from "@/components/quiz/QuizPrompt";
+import { getArticleQuiz } from "@/lib/quiz";
 import {
   allLadderParams,
   getAddedDate,
@@ -219,11 +222,21 @@ export default async function ArticlePage({ params }: Params) {
       ]
     : [trail];
 
+  const quiz = article ? getArticleQuiz(subjectSlug, tier, slug) : [];
+
   let body;
   if (article) {
+    const quizKey = `${subjectSlug}/${tier}/${slug}`;
     const { content } = await compileMDX({
       source: article.source,
-      components: mdxComponents,
+      components: {
+        ...mdxComponents,
+        Check: ({ id }: { id: string }) => {
+          const item = quiz.find((q) => q.key === `${quizKey}#${id}`);
+          if (!item) throw new Error(`${quizKey}: <Check id="${id}" /> has no question`);
+          return <Check item={item} />;
+        },
+      },
       options: {
         parseFrontmatter: true,
         blockJS: false,
@@ -286,6 +299,13 @@ export default async function ArticlePage({ params }: Params) {
         <TocSummary headings={headings} />
 
         {body}
+
+        {quiz.length > 0 && (
+          <QuizPrompt
+            articleKey={`${ref.subject}/${tier}/${slug}`}
+            count={quiz.length}
+          />
+        )}
 
         {ref.written && (
           <FinishArticle
