@@ -1,0 +1,127 @@
+[
+  {
+    "id": "stuck-fuel-gauge",
+    "section": "sensitivity",
+    "question": "A fuel gauge has stuck at \"half full\". Today the tank happens to be half full, and the driver believes so from reading the gauge. Is her belief sensitive?",
+    "options": [
+      "Yes, because the belief is true and was formed by reading an instrument",
+      "Yes, because fuel gauges are in general reliable, so the method she used is a good one",
+      "No, because had the tank not been half full, she would still have believed it was",
+      "No, because she had no way of knowing that the gauge had stuck"
+    ],
+    "answer": 2,
+    "explanation": "Sensitivity asks what she would believe if the proposition were false, and the stuck gauge would have told her the same thing. The general reliability of gauges is beside the point; like a smoke alarm that sounds continuously, this one is not detecting anything."
+  },
+  {
+    "id": "grandmother-method",
+    "section": "sensitivity",
+    "question": "A grandmother sees that her grandson is well. Had he been ill, the family would have kept him away and told her he was fine. How does Nozick secure her knowledge?",
+    "options": [
+      "By adding adherence, so that her belief stays put across small variations",
+      "By holding fixed her method, seeing him, under which she would have noticed illness",
+      "By counting the family's reassurance as a second reliable route to the same belief",
+      "By denying that worlds in which he falls ill are close enough to matter at all"
+    ],
+    "answer": 1,
+    "explanation": "Sensitivity is evaluated relative to the method actually used, and had he been ill and she had looked, she would have seen it. Adherence is a separate condition about stability where the proposition stays true, so it does nothing for this case."
+  },
+  {
+    "id": "chair-insensitive",
+    "section": "what-sensitivity-costs",
+    "question": "You believe your chair will hold you. Why does the sensitivity condition threaten this ordinary belief?",
+    "options": [
+      "Had it been about to collapse, you would still have believed it would hold",
+      "Chairs collapse in many close worlds, so the belief could easily have been false",
+      "It rests on induction, and Hume showed that induction cannot be justified",
+      "It concerns the future, and sensitivity applies only to present facts"
+    ],
+    "answer": 0,
+    "explanation": "Nothing in your evidence would differ if the chair were about to give way, so the belief does not vary with the truth. The second option describes a safety failure, and a false one: chairs in close worlds do not collapse, which is why safety keeps this knowledge."
+  },
+  {
+    "id": "what-safety-asks",
+    "section": "safety",
+    "question": "Which question does the safety condition ask about a belief that $p$?",
+    "options": [
+      "In the nearest worlds where $p$ is false, does the believer fail to believe $p$?",
+      "In every possible world where the believer believes $p$, is $p$ true?",
+      "In the nearest worlds where $p$ is true, does the believer still believe $p$?",
+      "In the nearest worlds where the believer believes $p$ the same way, is $p$ true?"
+    ],
+    "answer": 3,
+    "explanation": "Safety starts from the belief and asks about truth in close worlds. The first option is sensitivity, which starts from falsity and asks about belief; the third is Nozick's adherence; and the second demands infallibility across all worlds, not just close ones."
+  },
+  {
+    "id": "contrapositive-trap",
+    "section": "safety",
+    "question": "Safety and sensitivity are logically equivalent, since each conditional is the contrapositive of the other.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Counterfactual conditionals do not contrapose, so \"if not-p, then not-believe-p\" is not equivalent to \"if believe-p, then p\". Every divergence between the two conditions traces back to this failure."
+  },
+  {
+    "id": "vat-belief-modal",
+    "section": "safety",
+    "question": "Consider your belief that you are not a brain in a vat. Which modal conditions does it meet?",
+    "options": [
+      "Both safety and sensitivity",
+      "Sensitivity but not safety",
+      "Safety but not sensitivity",
+      "Neither safety nor sensitivity"
+    ],
+    "answer": 2,
+    "explanation": "Envatment worlds are remote, so in close worlds where you hold the belief it is true, and the belief is safe. It is insensitive because, had you been envatted, you would still have believed you were not, which is exactly what the hypothesis specifies."
+  },
+  {
+    "id": "clock-shop",
+    "section": "safety",
+    "question": "In a shop where every clock but one has stopped at a wrong time, Ella picks a clock at random, happens to choose the working one, and believes the time it shows. Is her belief safe?",
+    "options": [
+      "Unsafe, because in close worlds she reads a stopped clock and believes falsely",
+      "Safe, because the clock she actually read is working properly",
+      "Safe, because her belief is true and was formed by an ordinary, usually reliable method",
+      "Unsafe, because had the time been different she would still have believed it"
+    ],
+    "answer": 0,
+    "explanation": "This is the fake barn structure: worlds where she picks a different clock and forms a false belief the same way are as close as worlds get. The last option uses sensitivity reasoning, and wrongly, since the working clock she actually read would have shown a different time."
+  },
+  {
+    "id": "eight-ball-theorem",
+    "section": "where-safety-struggles",
+    "question": "Someone believes a true mathematical theorem because a magic eight ball said so. What verdict does safety, applied without restriction, deliver?",
+    "options": [
+      "Unsafe, since the eight ball could easily have answered differently and misled her",
+      "Unsafe, since any belief that is insensitive must also be unsafe",
+      "No verdict, since safety is undefined for propositions about numbers",
+      "Safe, since the theorem is true in every world, however bad her method"
+    ],
+    "answer": 3,
+    "explanation": "A necessary truth is true in every world, so every belief in it is trivially safe, which is why safety issues no useful verdict exactly where one is needed. The first option is tempting, but safety asks whether the belief she forms is true in close worlds, and a belief in this theorem cannot be false."
+  },
+  {
+    "id": "williamson-necessary",
+    "section": "where-safety-struggles",
+    "question": "Why does a case where safety gives the wrong verdict as a sufficient condition leave Williamson's view untouched?",
+    "options": [
+      "Because he holds that safety suffices only for animal knowledge, not for knowledge in general",
+      "Because he restricts safety to contingent propositions, where it gives the right verdicts",
+      "Because for him safety is a necessary condition flowing from knowledge, not part of an analysis",
+      "Because he accepts sensitivity as the extra condition that makes safety sufficient"
+    ],
+    "answer": 2,
+    "explanation": "Williamson treats knowledge as unanalysable, so he never offers safety as a sufficient condition and a counterexample to sufficiency misses him. Restricting safety to contingent propositions is one of the repairs for necessary truths, which the article calls ad hoc, and it is not his move."
+  },
+  {
+    "id": "closeness-fixed-by",
+    "section": "the-scoreboard",
+    "question": "According to the reply to the circularity objection, what fixes whether a world counts as close in most cases?",
+    "options": [
+      "Overall similarity of fact, judged without consulting intuitions about knowledge",
+      "Whatever ordering delivers the intuitively right verdicts about who knows",
+      "The probability of the world, so that likely worlds are close and unlikely ones far",
+      "The number of individual facts in which the world differs from the actual one"
+    ],
+    "answer": 0,
+    "explanation": "That a coin landing the other way is close and a change in the laws of nature is not are judgements nobody reaches by consulting intuitions about knowledge. The second option is the objection's charge, which the reply grants only for hard cases such as the lottery."
+  }
+]

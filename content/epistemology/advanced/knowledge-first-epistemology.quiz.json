@@ -1,0 +1,127 @@
+[
+  {
+    "id": "inductive-case-against-analysis",
+    "section": "why-stop-analysing",
+    "question": "What does Williamson's inductive argument against analysing knowledge claim?",
+    "options": [
+      "Decades of failed fourth conditions are evidence that there is no analysis to be found",
+      "Gettier cases show that justification is irrelevant to knowledge and should be dropped",
+      "Every proposed fourth condition turns out to presuppose knowledge, so analysis is circular",
+      "Knowledge is a hybrid of inner and outer parts, so it cannot be analysed as a mental state"
+    ],
+    "answer": 0,
+    "explanation": "The pattern of each condition fixing some cases and breaking others, repeated across causation, meaning and personhood, is offered as evidence that most interesting concepts lack reductive analyses. The hybrid view in the last option is what Williamson's second argument denies: on his view knowing is as much a mental state as believing."
+  },
+  {
+    "id": "spot-the-factive-attitude",
+    "section": "factive-mental-states",
+    "question": "Which of these ascribes a factive mental state?",
+    "options": [
+      "Ravi is utterly convinced that he sold the shares",
+      "Ravi hopes, on good grounds, that he sold the shares",
+      "Ravi regrets that he sold the shares",
+      "Ravi seems to remember that he sold the shares"
+    ],
+    "answer": 2,
+    "explanation": "One cannot regret that he sold the shares unless he did, and on Williamson's view regretting that p entails knowing that p. Seeming to remember is the trap: it is how things are from the inside when one remembers, but it can occur when the proposition is false, just as seeming to see can."
+  },
+  {
+    "id": "rumour-and-evidence",
+    "section": "evidence-is-knowledge",
+    "question": "A juror believes, truly but only on the strength of a rumour, that the defendant owned a red car. On E = K, is that proposition part of the juror's evidence?",
+    "options": [
+      "Yes, since evidence need only be propositional, true and believed",
+      "No, since a true belief held on bad grounds is not knowledge",
+      "Yes, since evidence includes every true proposition relevant to the case",
+      "No, since evidence consists of experiences rather than of propositions"
+    ],
+    "answer": 1,
+    "explanation": "E = K says your evidence is exactly what you know, and a lucky true belief from rumour falls short of knowledge, so it is not something you may treat as settled. Being propositional and true is necessary on Williamson's view but not sufficient: the question is which true propositions you are in contact with, and knowledge is the contact required."
+  },
+  {
+    "id": "e-equals-k-consequence",
+    "section": "evidence-is-knowledge",
+    "question": "Which consequence of E = K do internalists reject?",
+    "options": [
+      "That evidence must be propositional to play its role in probabilistic reasoning",
+      "That a false proposition one believes cannot be part of one's evidence",
+      "That one is always in a position to know exactly what one's evidence is",
+      "That two subjects alike in every internal respect can differ in their evidence"
+    ],
+    "answer": 3,
+    "explanation": "The perceiver who knows there is a table and the envatted brain who does not are internally alike, yet on E = K they have different evidence, which internalists deny. The third option gets the thesis backwards: since one can fail to know what one knows, E = K implies one can fail to know what one's evidence is."
+  },
+  {
+    "id": "moorean-absurdity",
+    "section": "the-knowledge-norm-of-assertion",
+    "question": "On the knowledge norm, why is it absurd to assert \"The shop is shut, but I don't know that it is\"?",
+    "options": [
+      "Asserting the first conjunct represents you as knowing it, which the second conjunct denies",
+      "The sentence is a contradiction, since its two conjuncts can never be true together in any situation",
+      "Asserting the second conjunct shows that you do not really believe the first",
+      "It breaks a truth norm, since one of the two conjuncts is bound to be false"
+    ],
+    "answer": 0,
+    "explanation": "The norm makes asserting that the shop is shut a representation of yourself as knowing it, and the second conjunct withdraws exactly that. The sentence is not a contradiction: the shop can be shut while you fail to know it, which is why the absurdity needs a norm on assertion to explain it."
+  },
+  {
+    "id": "lottery-assertion-lesson",
+    "section": "the-knowledge-norm-of-assertion",
+    "question": "Why do lottery assertions favour the knowledge norm over a norm requiring only high probability?",
+    "options": [
+      "Lottery assertions are usually false, so any norm of truth already forbids them",
+      "A speaker cannot know the exact odds, so the probability never counts as high",
+      "Asserting \"your ticket lost\" seems improper however high the probability, yet you do not know it",
+      "Lottery propositions cannot be believed at all, so no norm governing belief or assertion applies to them"
+    ],
+    "answer": 2,
+    "explanation": "The chance that the ticket lost can be made as close to 1 as you like without the assertion becoming proper, which a probability or justified-belief norm cannot explain; the knowledge norm can, since you do not know it lost. The first option is wrong on the facts: such assertions are almost always true, which is what makes their impropriety telling."
+  },
+  {
+    "id": "what-anti-luminosity-shows",
+    "section": "the-anti-luminosity-argument",
+    "question": "What does the anti-luminosity argument establish?",
+    "options": [
+      "That we never really know our own mental states, such as whether we feel cold",
+      "That every non-trivial condition has borderline cases where it obtains but cannot be known to",
+      "That feeling cold is not a mental state, since it can obtain without being known",
+      "That knowledge of phenomenal states requires certainty, which gradual change of this kind rules out"
+    ],
+    "answer": 1,
+    "explanation": "The argument shows only that near the boundary of a gradually fading condition there are cases where it obtains and one is not in a position to know it, so no non-trivial condition is luminous. It does not show that we never know our own states; at dawn, well away from the boundary, you know perfectly well that you feel cold."
+  },
+  {
+    "id": "constitution-reply-target",
+    "section": "what-it-costs-internalism",
+    "question": "An internalist replies that a belief that one feels cold is constituted by the feeling itself, so it cannot be formed unsafely. Which premise of the anti-luminosity argument is she rejecting?",
+    "options": [
+      "The supposition that feeling cold is luminous, which the argument sets up only to refute",
+      "The premise that at $t_0$ you feel cold, at the start of the gradual series",
+      "The stipulation that at $t_n$ you no longer feel cold, at the end of the series",
+      "The margin-for-error premise, that knowing at $t_i$ requires still feeling cold at $t_{i+1}$"
+    ],
+    "answer": 3,
+    "explanation": "The margin-for-error premise is the safety condition, and the reply claims that for phenomenal states the belief cannot be unsafe, so knowledge needs no margin. Rejecting the luminosity supposition would simply be accepting the argument's conclusion, not replying to it."
+  },
+  {
+    "id": "kk-fails",
+    "section": "what-it-costs-internalism",
+    "question": "On Williamson's view, whenever you know that p, you are in a position to know that you know that p.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "That is the KK principle, and the anti-luminosity argument implies that it fails, since knowing is itself a condition that can obtain near a boundary without one's being in a position to know it obtains. Restoring KK is a live project, but it is a challenge to Williamson's view rather than part of it."
+  },
+  {
+    "id": "victim-blameless-not-justified",
+    "section": "objections-to-knowledge-first",
+    "question": "How does Williamson classify the beliefs of a demon victim who believes there is a table on the basis of a table-like experience?",
+    "options": [
+      "Blameless, even excusable, but not justified, since they are not suitably related to knowledge",
+      "Justified, since the victim responds to experience exactly as an ordinary perceiver does",
+      "Neither justified nor blameless, since the victim reasons from falsehoods",
+      "Justified, since on E = K the victim's evidence is the same as an ordinary perceiver's"
+    ],
+    "answer": 0,
+    "explanation": "Williamson separates justification, which depends on a relation to knowledge, from blamelessness, which the victim has in full. The last option misreads E = K, which gives the victim less evidence than the ordinary perceiver; critics complain precisely that blamelessness concedes too little to the victim."
+  }
+]

@@ -95,6 +95,8 @@ Cut is also the one rule that destroys information. Given the conclusion of any 
 
 That observation is what makes the following theorem worth having.
 
+<Check id="why-cut-blocks-search" />
+
 ## Cut elimination
 
 <Definition term="Cut elimination">
@@ -130,6 +132,8 @@ The third belongs to the intuitionistic calculus and has no classical analogue. 
 The fourth is that a proof of the interpolation theorem can be extracted from the same analysis. If one formula implies another, there is a third, built only from vocabulary common to both, that the first implies and that implies the second. The result is Craig's, it has proofs by other means, and the cut-free proof of it is the one that shows why it is true rather than merely that it is: walk down a cut-free proof of the implication, and at every step the shared vocabulary is visible in the sequent, because no rule ever introduced anything that was not already there in component form.
 
 Interpolation is worth more than it looks. Beth's definability theorem follows from it, and says that a theory which pins down the extension of a predicate uniquely, without saying in other vocabulary what that extension is, always contains a formula in the remaining vocabulary that says so explicitly. Implicit definition and explicit definition coincide for first-order logic. That is a substantial fact about the expressive resources of the language, and it descends from an observation about which formulas can appear in a proof.
+
+<Check id="consistency-by-shape" />
 
 ## Back to natural deduction
 
@@ -178,6 +182,8 @@ The cut elimination theorem for pure logic is not the consistency proof for arit
 <Aside title="One paper, two systems">
 Both natural deduction and the sequent calculus appear in Gentzen's dissertation, published in two parts in 1935. The stated motivation for natural deduction was that the existing systems did not resemble the way mathematicians actually argue, and the stated motivation for the sequent calculus was that a proof of the Hauptsatz for natural deduction had eluded him. The second system was built to make the theorem provable, and it succeeded, and it then turned out to be the more useful of the two for almost every subsequent purpose. Gentzen went on to give the consistency proof for arithmetic the following year, using transfinite induction along the ordering the objection above refers to. He died in Prague in 1945, at thirty-five.
 </Aside>
+
+<Check id="where-lj-stops" />
 
 ## Next
 

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "pragmatic-not-evidence",
+    "section": "what-kind-of-argument-this-is",
+    "question": "A completely successful pragmatic argument for theism would be evidence that God exists.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "A pragmatic argument appeals to the consequences of holding a belief, not to its truth, so even its best form leaves the question of God's existence exactly where it was. Treating a wager as evidence misunderstands what kind of argument it is."
+  },
+  {
+    "id": "third-version-immunity",
+    "section": "pascals-wager",
+    "question": "Why is the third version of Pascal's wager immune to the objection that theism is improbable?",
+    "options": [
+      "Because it assumes the probability of theism is even, so improbability is ruled out from the start",
+      "Because it relies on dominance, so that no probability judgement of any kind is ever required",
+      "Because any non-zero probability times an infinite payoff is infinite, however small it is",
+      "Because it shows that the evidence for theism is much stronger than its critics allow"
+    ],
+    "answer": 2,
+    "explanation": "Weak evidence still leaves a non-zero probability, which is all the third version needs. The even-probability assumption belongs to the second version and dominance to the first; the third is the one that generalises and matters."
+  },
+  {
+    "id": "improbable-rivals-tie",
+    "section": "the-rivals",
+    "question": "Why does the reply that perverse deities are far less probable than the traditional God fail?",
+    "options": [
+      "Any non-zero probability gives infinite expected value, so the improbable rivals tie with it",
+      "Perverse deities turn out, on examination, to be just as probable as the traditional God",
+      "Probabilities cannot be assigned to religious hypotheses at all, whether high or low",
+      "The traditional God is itself so improbable that the comparison favours the perverse deities"
+    ],
+    "answer": 0,
+    "explanation": "Infinite expectations do not compare the way finite ones do, so low probability does not lower a rival below the traditional option. The feature that protected the wager from low probability is the same one that stops it preferring the probable to the absurd."
+  },
+  {
+    "id": "cargile-structural",
+    "section": "the-rivals",
+    "question": "What does Cargile's device, a deity who rewards contemplation of a given number, show?",
+    "options": [
+      "That the many-gods objection depends on how many religions happen to exist in the world at a given time",
+      "That invented deities are too improbable to rival any actual religion in the wager",
+      "That the wager works only for those whose culture already makes theism a live option",
+      "That the objection is a structural feature of the reasoning, not a fact about world religions"
+    ],
+    "answer": 3,
+    "explanation": "Infinitely many invented rivals with identical structure can be generated, so the problem does not depend on the accidental plurality of actual religions. The first option states exactly the view Cargile's device was built to refute."
+  },
+  {
+    "id": "mixed-strategies",
+    "section": "the-machinery-breaks",
+    "question": "What does Hájek's point about mixed strategies show about the wager?",
+    "options": [
+      "That a coin-toss policy has only half the expected value of wagering, so wagering outright still wins",
+      "That almost any action has infinite expected value, so the wager recommends nothing in particular",
+      "That the wager recommends the wrong religion, since mixed strategies favour rival gods",
+      "That expected-value reasoning works perfectly well with infinite utilities once mixed in"
+    ],
+    "answer": 1,
+    "explanation": "Half of infinity is still infinity, and almost any action leaves some chance of eventually believing, so every option ties. The first option applies finite arithmetic to an infinite payoff, which is the very move that breaks down."
+  },
+  {
+    "id": "williams-conceptual",
+    "section": "can-you-decide-to-believe",
+    "question": "Why does Williams hold that believing at will is impossible as a matter of concept, not just psychology?",
+    "options": [
+      "The will is too weak to overcome the passions that stand in the way of believing",
+      "Belief needs evidence, and no decision can supply evidence for what one has decided",
+      "A state known to come from a decision rather than any sign of truth would not be holding it true",
+      "Believing something at will would first require imagining it vividly, which is a quite different mental act"
+    ],
+    "answer": 2,
+    "explanation": "Believing is holding something true and is answerable to how things are, so a state its holder knows was installed by choice does not qualify. Blaming the passions is Pascal's diagnosis of why people fail to believe, not Williams's argument."
+  },
+  {
+    "id": "pascal-acts-not-beliefs",
+    "section": "can-you-decide-to-believe",
+    "question": "How does Pascal answer the objection that belief cannot be chosen?",
+    "options": [
+      "The wager governs actions, like following the practices, and belief follows from them in time",
+      "He argues that belief can be chosen directly, since the will governs every state of the mind",
+      "He concedes the point and says the wagerer need only act as if God exists, never believe it",
+      "He argues that the infinite reward is so great that the mind is compelled to believe at once"
+    ],
+    "answer": 0,
+    "explanation": "Pascal grants that you cannot believe by deciding to, and routes the wager through voluntary actions that quiet the passions until belief arrives. He does aim at belief, not mere outward conduct, which is why Williams presses the charge of self-deception."
+  },
+  {
+    "id": "evidentialism-restated",
+    "section": "can-you-decide-to-believe",
+    "question": "If belief is not directly voluntary, what follows for evidentialism on the article's account?",
+    "options": [
+      "It is refuted outright, since no norm can govern anything that lies outside a person's direct control",
+      "It is unaffected, since it was only ever a norm about evidence and not about the will",
+      "It applies to actions only, so that religious belief falls entirely outside its scope",
+      "It must govern the practices that shape belief instead, which makes it harder to use against believers"
+    ],
+    "answer": 3,
+    "explanation": "A norm presupposes control, so evidentialism has to be restated as a norm about habits and practices, and in that form it loses much of its force against the believer. It is reshaped rather than refuted, which is where the first option overstates."
+  },
+  {
+    "id": "forcedness-does-the-work",
+    "section": "jamess-version",
+    "question": "Which of James's three conditions does the work against Clifford's rule?",
+    "options": [
+      "Liveness, since a hypothesis that is not a real possibility for someone cannot be chosen",
+      "Forcedness, since if declining to choose amounts to choosing, suspending judgement is no safe course",
+      "Momentousness, since stakes that high justify believing without waiting for evidence that may never come",
+      "None of them, since James accepts that suspending judgement is always the cautious option"
+    ],
+    "answer": 1,
+    "explanation": "Clifford assumes suspension is always safe; if the option is forced, the agnostic loses whatever the committed gain just as thoroughly as a denier would. High stakes alone do not license belief on James's account, which is why momentousness is not the condition doing the work."
+  },
+  {
+    "id": "agnostic-objection-lands",
+    "section": "jamess-version",
+    "question": "Where, according to the article, do critics press James hardest, with the least satisfactory answer?",
+    "options": [
+      "On whether his essay licenses believing against the evidence, which critics say it plainly does",
+      "On whether self-fulfilling beliefs, like trusting a stranger, are real cases at all",
+      "On whether religion is a forced option, since agnosticism may be a stable third position",
+      "On whether religious hypotheses are live options for anyone in a modern culture"
+    ],
+    "answer": 2,
+    "explanation": "If suspended judgement is a genuine third option, forcedness fails for religion and the argument does not apply to the case it was written for. The essay does not permit belief against the evidence, only where evidence is genuinely inconclusive, so the first option misdescribes it."
+  }
+]

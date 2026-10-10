@@ -1,0 +1,127 @@
+[
+  {
+    "id": "treaty-pen",
+    "section": "kinds-of-value",
+    "question": "A collector pays far more for the pen used to sign a famous treaty than for an otherwise identical pen. What kind of value is she attributing to it?",
+    "options": [
+      "Final value grounded in a relational property, its role in the signing",
+      "Instrumental value, since the pen can still be used to write",
+      "Intrinsic value, grounded in the pen's physical make-up rather than its history",
+      "Epistemic value, since the pen is evidence of a historical event"
+    ],
+    "answer": 0,
+    "explanation": "She values the pen for its own sake, but because of its relation to an event, which is exactly the case where final value and intrinsic value come apart. Intrinsic value is the tempting label, yet the pen's make-up is identical to the cheaper one's, so nothing intrinsic can explain the difference."
+  },
+  {
+    "id": "veritist-justification",
+    "section": "veritism",
+    "question": "On veritism, why is justification epistemically valuable?",
+    "options": [
+      "For its own sake, as a second fundamental epistemic good alongside truth",
+      "Because a justified belief is an achievement creditable to the believer",
+      "Only as a means to true belief and the avoidance of false belief",
+      "Because justified beliefs are more stable in the face of misleading evidence"
+    ],
+    "answer": 2,
+    "explanation": "Veritism makes truth the one fundamental epistemic good, so justification, reliability and rationality matter only as routes to it. Treating justification as a good in its own right is pluralism, the view the article presents as veritism's main rival."
+  },
+  {
+    "id": "timetable-versus-guess",
+    "section": "the-swamping-problem",
+    "question": "Two students believe truly that the exam is on Tuesday: one read the official timetable, the other guessed. If knowledge is reliably formed true belief and reliability is valuable only as a means to truth, how do the two beliefs compare in epistemic value?",
+    "options": [
+      "The timetable reader's is more valuable, since reliable processes tend to produce more true beliefs",
+      "Equal, since reliability adds value only by delivering truth, which both already have",
+      "The guesser's is less valuable, since a lucky belief is closer to being false",
+      "Neither has epistemic value of its own, since such value belongs only to processes"
+    ],
+    "answer": 1,
+    "explanation": "This is the swamping argument's conclusion: once the belief is true, the instrumental value of its reliable source is used up, just as a good espresso is no better for coming from a reliable machine. The first option is the trap: reliable processes are indeed valuable because they produce more truths, but that does not make this particular true belief any better."
+  },
+  {
+    "id": "scope-of-swamping",
+    "section": "the-swamping-problem",
+    "question": "According to the article, which accounts of knowledge does the swamping argument threaten?",
+    "options": [
+      "Only process reliabilism, since the argument's first premise defines knowledge that way",
+      "Any account on which knowledge requires justification, since justification is valued for truth",
+      "Any account on which knowledge is creditable true belief",
+      "Any account on which knowledge is true belief plus a property valued only as a means to truth"
+    ],
+    "answer": 3,
+    "explanation": "The argument works whenever the extra ingredient's value is wholly instrumental to truth, which is why it is often treated as a problem for veritism rather than for reliabilism alone. Accounts on which knowledge is creditable true belief are the escape route, not a target, since achievement is held to carry final value."
+  },
+  {
+    "id": "conditional-probability-gap",
+    "section": "the-conditional-probability-solution",
+    "question": "Critics grant that Goldman and Olsson's conditional probability solution shows something. What do they say it fails to show?",
+    "options": [
+      "Why a given item of knowledge is better than the matching true belief considered on its own",
+      "Why it is useful to have reliable cognitive faculties",
+      "Why a history of reliably formed beliefs is good to have",
+      "Why a reliably formed belief makes later beliefs of the same kind more likely to be true too"
+    ],
+    "answer": 0,
+    "explanation": "The solution locates the extra value in what a reliably formed belief signals about future beliefs, which explains the usefulness of reliable faculties but not the superiority of this item of knowledge in itself. The other options are things the critics concede the solution does explain."
+  },
+  {
+    "id": "credit-from-testimony",
+    "section": "credit-and-achievement",
+    "question": "A tourist asks a passer-by the way to the museum and believes the answer, which is correct. Why is this a problem for the credit view?",
+    "options": [
+      "Testimony is an unreliable source, so the tourist does not really know",
+      "Her belief is true only by luck, so it cannot count as knowledge",
+      "She seems to know, yet the credit for getting it right belongs mostly to the passer-by",
+      "She deserves full credit for choosing whom to ask, which shows credit is too easily earned"
+    ],
+    "answer": 2,
+    "explanation": "If knowledge is true belief creditable to the believer's own virtue, testimonial knowledge looks like a counterexample, since the success is mainly the informant's; this is Lackey's objection. The view's defenders respond by weakening the requirement to shared or partial credit, not by denying that the tourist knows."
+  },
+  {
+    "id": "kvanvig-relocates-value",
+    "section": "abandoning-the-premise",
+    "question": "On Kvanvig's response to the swamping problem, what follows about knowledge?",
+    "options": [
+      "It is more valuable than true belief because it is a cognitive achievement",
+      "It is not distinctively more valuable than justified true belief; what we really prize is understanding",
+      "It is more valuable because it raises the probability of future true beliefs",
+      "It reduces to understanding, which is just knowledge of a suitably large and connected set of propositions"
+    ],
+    "answer": 1,
+    "explanation": "Kvanvig accepts the argument's conclusion and relocates the special value to understanding, grasping how truths hang together. The last option gets understanding wrong: on his view it cannot be reduced to knowledge of a set of propositions, which is why it can have a value knowledge lacks."
+  },
+  {
+    "id": "accuracy-first-not-pluralist",
+    "section": "abandoning-the-premise",
+    "question": "On the article's account, the accuracy-first programme escapes the swamping problem, because it treats several epistemic goods as fundamental.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The accuracy-first programme is a return to veritism in formal dress, with accuracy as the single fundamental value, so it inherits veritism's exposure to swamping. Pluralism is the view that escapes, at the cost of veritism's unified account of why evidence and justification matter."
+  },
+  {
+    "id": "robustness-escapes-swamping",
+    "section": "the-meno-question-again",
+    "question": "Why does Williamson's answer, that knowledge is more robust than true belief, not face the swamping problem?",
+    "options": [
+      "Robustness is a kind of achievement, and achievements have final value",
+      "Robustness raises the probability that future beliefs of the same type will also be true ones",
+      "Robustness belongs to the belief-forming process, which is valued for its own sake",
+      "It is a feature the knower has and the lucky believer lacks, not a feature of the source"
+    ],
+    "answer": 3,
+    "explanation": "Swamping bites on properties whose value is used up once the belief is true; robustness makes a difference afterwards, since the knower is less likely to lose the belief to misleading evidence. It is a practical, instrumental advantage, so the first option, which belongs to the credit view, misdescribes it."
+  },
+  {
+    "id": "rembrandt-reply",
+    "section": "the-meno-question-again",
+    "question": "An objector says reliable provenance can add value to a belief, just as Rembrandt's authorship adds value to a painting. Why, according to the reply, can the reliabilist not use this point?",
+    "options": [
+      "Rembrandt's authorship matters as an expression of skill, an achievement, whereas a reliable process is a mechanism valued only for its output",
+      "Provenance never adds value, as a perfect forgery of a Rembrandt shows",
+      "Beliefs, unlike paintings, are separate objects from the processes that produce them",
+      "Reliable processes produce too few true beliefs for their provenance to matter"
+    ],
+    "answer": 0,
+    "explanation": "The reply grants that provenance can confer value, but only because of the achievement it expresses; for a reliabilist to say reliable provenance confers final value would be to give up veritism and drift into the credit view. The second option inverts the reply, which accepts that a genuine Rembrandt is worth more than a perfect forgery."
+  }
+]

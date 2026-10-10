@@ -1,0 +1,132 @@
+[
+  {
+    "id": "coherent-story-not-enough",
+    "section": "a-different-kind-of-argument",
+    "question": "On the article's account, why does a coherent story on which God and the observed evils coexist answer the logical problem but not an evidential argument?",
+    "options": [
+      "An evidential argument claims the evils are incompatible with God, so a story must also be shown to be true rather than merely coherent",
+      "A coherent story covers only moral evil, because the free will defence says nothing about natural evils such as disease",
+      "A hypothesis is not supported by data it merely tolerates, so the story must give theism reason to expect the evils",
+      "An evidential argument already grants consistency, so the story must go further and show that every single evil is justified"
+    ],
+    "answer": 2,
+    "explanation": "Against a claim of incompatibility, any coherent model refutes the claim; against a claim about evidence, what matters is which hypothesis led one to expect the data, and a story theism merely tolerates leaves that gap untouched. The trap is thinking the theist must justify every evil, which Draper does not even ask for, since he concedes that every evil might have an unseen justification."
+  },
+  {
+    "id": "why-indifference-not-naturalism",
+    "section": "the-rival-hypothesis",
+    "question": "Why does Draper set theism against the hypothesis of indifference rather than against naturalism?",
+    "options": [
+      "As a much weaker claim, it avoids naturalism's costs and is no less probable in advance than theism",
+      "As a stronger claim than naturalism, it makes the biological facts more probable than naturalism does",
+      "It entails naturalism, so favouring it over theism also establishes naturalism",
+      "It denies that supernatural beings act, which naturalism leaves open"
+    ],
+    "answer": 0,
+    "explanation": "Indifference denies only that what happens to sentient creatures here results from anyone's benevolent or malevolent action, so it allows that gods exist and act and incurs almost none of the costs a theist could list against naturalism. The trap is reading it as naturalism in disguise: it is weaker than naturalism and does not entail it."
+  },
+  {
+    "id": "role-of-the-prior-premise",
+    "section": "the-rival-hypothesis",
+    "question": "Grant that the observations O are far more probable on indifference than on theism. Why does the argument still need the premise that indifference is not less probable in advance than theism?",
+    "options": [
+      "Without it the argument would show only that O is consistent with indifference, not that O favours it",
+      "A likelihood ratio cannot be calculated at all unless both prior probabilities are known exactly",
+      "It is the premise that turns the conclusion from a defeasible one into a conclusive one",
+      "A large enough prior advantage for theism could absorb even a large likelihood gap"
+    ],
+    "answer": 3,
+    "explanation": "The likelihood ratio says how far the evidence moves you; whether theism is left behind depends on where the two hypotheses started, and a big enough head start could swamp the gap. The premise rules that out, but it does not make the conclusion conclusive, which stays defeasible throughout."
+  },
+  {
+    "id": "non-moral-agents-group",
+    "section": "what-is-being-explained",
+    "question": "On the article's account, which body of evidence leaves theodicies of moral development and free choice with nothing to work with?",
+    "options": [
+      "Biologically useful pain and pleasure in moral agents",
+      "Biologically useful pain and pleasure in sentient beings that are not moral agents",
+      "Pain and pleasure that we do not know to be biologically useful",
+      "Pain whose intensity exceeds anything a warning function needs"
+    ],
+    "answer": 1,
+    "explanation": "A creature that is not a moral agent is not being formed by its suffering, exercises no will, and cannot consent, so soul-making and free-will appeals have no purchase on it. The first group is the tempting answer, but there a theist can at least say that a moral agent's pain serves some purpose, even if the purpose turns out to be biological."
+  },
+  {
+    "id": "more-pleasure-does-not-help",
+    "section": "the-other-half-of-the-title",
+    "question": "A critic objects that Draper ignores the vast amount of pleasure in the world, which should be weighed against the pain. Why, on the article's account, does this miss the argument?",
+    "options": [
+      "Pleasure has no moral value of its own, so it cannot be set against pain in any weighing",
+      "Draper concedes from the outset that pleasure outweighs pain, so the objection changes nothing",
+      "Pleasure follows the same fitness-tracking principle as pain, and the principle is the point",
+      "Pleasure is less intense than pain on average, so it adds little to the overall totals"
+    ],
+    "answer": 2,
+    "explanation": "Draper compares how well two hypotheses predict a pattern, not how the totals of good and bad come out. More pleasure distributed by biological usefulness is simply more of the same evidence, so an objection that treats the argument as a weighing of quantities misreads its structure."
+  },
+  {
+    "id": "virtue-corruption-reply",
+    "section": "the-other-half-of-the-title",
+    "question": "A theist replies that if virtue were reliably pleasant, people would act well for the reward and virtue would be corrupted. What does the article say this reply leaves unexplained?",
+    "options": [
+      "Why moral agents should experience any pleasure at all",
+      "Why pleasure fails to line up with how people deserve to fare",
+      "Why the development of virtue should require any suffering",
+      "Why pleasure tracks reproductive fitness rather than being random"
+    ],
+    "answer": 3,
+    "explanation": "The reply does explain why pleasure should not follow desert, which makes that option tempting, but a random distribution would protect virtue just as well. What it leaves untouched is the positive fact that pleasure is calibrated to biological function, which is exactly what indifference predicts."
+  },
+  {
+    "id": "cost-of-no-expectations",
+    "section": "what-theism-leads-one-to-expect",
+    "question": "A theist answers Draper by denying that theism generates any expectation about how pain and pleasure should be distributed. On the article's account, what does this cost?",
+    "options": [
+      "Theism can then no longer be confirmed by how the world looks either",
+      "It commits the theist to holding that some actual suffering is gratuitous after all",
+      "It concedes that indifference is more probable in advance than theism is",
+      "It makes theism logically inconsistent with the biological facts it set out to absorb"
+    ],
+    "answer": 0,
+    "explanation": "A hypothesis that predicts nothing in a domain can be neither disconfirmed nor confirmed by what is found there, so the escape from Draper also closes the door on evidence in theism's favour. The reply makes theism inconsistent with nothing: its cost is evidential, not logical."
+  },
+  {
+    "id": "conjoined-theodicy",
+    "section": "conjoining-a-theodicy-and-what-it-costs",
+    "question": "A theist conjoins theism with a theodicy T designed so that the observations O become highly probable. On the article's account, when does the conjunction actually improve theism's position?",
+    "options": [
+      "Always, because the conjunction makes O more probable than theism alone, and that is all evidence is",
+      "Only when T is independently plausible, because adding T lowers the conjunction's prior",
+      "Only when T was formulated after O became known, because then it was built to fit the data",
+      "Never, because adding detail to a hypothesis can lower its prior but cannot raise its likelihood"
+    ],
+    "answer": 1,
+    "explanation": "The conjunction is false if theism is false and also if T is not the actual reason, so what it gains in likelihood it pays for in prior, and the trade is worth it only if T is plausible on its own. The tempting thought that a better fit is always a gain ignores the prior side of the same calculation; and a T built after the data is accommodation, the cheap case, not prediction."
+  },
+  {
+    "id": "skeptical-theism-redeployed",
+    "section": "whether-skeptical-theism-helps-here",
+    "question": "Skeptical theism cannot simply be reused against Draper as it was against Rowe. Which part of Draper's argument does its redeployed version attack?",
+    "options": [
+      "The inference from suffering whose purpose we cannot see to suffering that has none",
+      "The premise that indifference is not less probable in advance than theism",
+      "The judgement that O is much less probable on theism than on indifference",
+      "The claim that pain and pleasure are integrated into goal-directed biological systems"
+    ],
+    "answer": 2,
+    "explanation": "Judging that O is much less probable on theism requires an estimate of what a perfect being would be likely to arrange, and the skeptical thesis says we cannot make such estimates. The inference from inscrutable to gratuitous suffering is what skeptical theism attacks in Rowe, but Draper never makes that inference."
+  },
+  {
+    "id": "what-accepting-commits-you-to",
+    "section": "what-the-argument-does-not-establish",
+    "question": "Someone accepts every premise of Draper's argument. Which of the following are they thereby committed to?",
+    "options": [
+      "That the facts about pain and pleasure count against theism, other things equal",
+      "That theism is more probably false than true, once the total evidence is taken into account",
+      "That a naturalist account of everything is better supported than theism is",
+      "That some actual suffering serves no justifying good at all, seen or unseen"
+    ],
+    "answer": 0,
+    "explanation": "The argument fixes a direction and rough size of evidential force, not where the balance settles, so a theist who finds other arguments strong can accept it and remain a theist. It also favours indifference rather than naturalism, and never asserts that any suffering is gratuitous, which is why it survived the skeptical theist turn better than Rowe's version."
+  }
+]

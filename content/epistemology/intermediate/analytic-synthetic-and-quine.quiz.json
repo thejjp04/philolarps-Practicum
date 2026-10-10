@@ -1,0 +1,127 @@
+[
+  {
+    "id": "frege-vixen",
+    "section": "the-distinction-under-attack",
+    "question": "On Frege's account of analyticity, the version Quine attacks, what makes \"every vixen is a female fox\" analytic?",
+    "options": [
+      "It becomes a logical truth once \"vixen\" is replaced by its synonym \"female fox\"",
+      "The predicate concept \"female fox\" is already contained in the subject concept \"vixen\", as Kant required",
+      "Every competent English speaker would assent to it on hearing it, without checking any foxes",
+      "No observation of foxes could lead anyone to revise it"
+    ],
+    "answer": 0,
+    "explanation": "Frege's test is substitution of synonyms for synonyms until a logical truth results, which is why everything turns on whether the synonymy claim makes sense. Containment of predicate in subject is Kant's narrower definition, not the one Quine targets."
+  },
+  {
+    "id": "definition-presupposes",
+    "section": "the-circle",
+    "question": "A dictionary defines \"bachelor\" as \"unmarried man\". Why, according to Quine, can this not explain the synonymy that analyticity needs?",
+    "options": [
+      "Because dictionaries disagree with one another, so no single entry can fix what a word means",
+      "Because a definition is an empirical report, which cannot support a truth known a priori",
+      "Because it reports a synonymy that already existed, and so presupposes it",
+      "Because only deliberate abbreviations are definitions"
+    ],
+    "answer": 2,
+    "explanation": "Outside deliberate abbreviation, a definition records a synonymy that existed before it, so it cannot be what that synonymy consists in. The abbreviation option misreads Quine: abbreviation is the one case he allows where definition creates synonymy rather than presupposing it, not the only genuine kind of definition."
+  },
+  {
+    "id": "heart-and-kidney",
+    "section": "the-circle",
+    "question": "\"Creature with a heart\" and \"creature with a kidney\" can be swapped in any extensional sentence without changing its truth value. What does Quine take this to show?",
+    "options": [
+      "That the two phrases are synonymous after all, since they can be swapped in every extensional sentence",
+      "That fixing interchangeability needs \"necessarily\", which leads back to analyticity",
+      "That synonymy is an empirical relation, best left to linguists rather than philosophers",
+      "That necessity can be explained without meaning"
+    ],
+    "answer": 1,
+    "explanation": "The two phrases share an extension only as a matter of fact, so extensional interchangeability counts too many pairs as synonyms. Adding \"necessarily\" fixes this, but necessity was itself explained as truth in virtue of meaning, so the circle closes."
+  },
+  {
+    "id": "carnap-list",
+    "section": "the-circle",
+    "question": "Carnap stipulates, for an artificial language L, which sentences count as analytic. What is Quine's complaint?",
+    "options": [
+      "Artificial languages cannot contain logical truths, so the list will always be incomplete",
+      "The stipulation is arbitrary, so sentences listed as analytic might turn out to be false",
+      "The rules presuppose synonymy, as definitions do",
+      "A list says which sentences get the label, not what property earns it"
+    ],
+    "answer": 3,
+    "explanation": "A list for a chosen language tells you which sentences get the label, not what property earns it, so the question has only been relocated. The synonymy option borrows the objection to definition; Quine's charge against semantical rules is that a list is not an explanation."
+  },
+  {
+    "id": "holism-failed-prediction",
+    "section": "the-positive-replacement",
+    "question": "A theory predicts an observation, and the observation does not occur. According to confirmation holism, what follows?",
+    "options": [
+      "The hypothesis behind the prediction has been refuted, since it alone made the prediction",
+      "Logic and mathematics are safe, so the revision must fall on some empirical statement",
+      "Something must be revised, but the evidence alone does not dictate what",
+      "Nothing need be revised, since evidence never bears on beliefs"
+    ],
+    "answer": 2,
+    "explanation": "Evidence bears on beliefs as a whole, so the conflict can be resolved by redistributing truth values in many places. The tempting first option assumes the individual hypothesis has its own disconfirming observations, which is exactly the reductionist assumption holism rejects."
+  },
+  {
+    "id": "centre-of-the-web",
+    "section": "the-positive-replacement",
+    "question": "Why, on Quine's picture, do logic and mathematics sit at the centre of the web of belief?",
+    "options": [
+      "Because revising them would disturb everything else, though they are not immune",
+      "Because they are true in virtue of meaning alone, and so can never conflict with experience",
+      "Because they are known by rational intuition rather than experience, as the rationalists held",
+      "Because no observation bears on them at all"
+    ],
+    "answer": 0,
+    "explanation": "Centrality is a matter of how much else depends on them, which makes them the last things we would give up. Saying they are true by meaning reinstates the very distinction Quine is arguing against."
+  },
+  {
+    "id": "excluded-middle-point",
+    "section": "the-positive-replacement",
+    "question": "Quine's use of the proposal to revise the law of excluded middle in response to quantum mechanics depends on that proposal being a good one.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "His point is only that the proposal is intelligible, which it would not be if the law were true by meaning alone. Whether physicists should adopt it is beside the point, so the example survives even if the proposal is a bad idea."
+  },
+  {
+    "id": "grice-strawson-target",
+    "section": "the-positive-replacement",
+    "question": "Grice and Strawson argue that demanding a non-circular reduction of a family of concepts would eliminate most concepts anyone uses, Quine's included. Which premise of Quine's argument does this target?",
+    "options": [
+      "That definition presupposes synonymy",
+      "That interchangeability needs restricting by necessity",
+      "That semantical rules supply only a list",
+      "That an explanation of analyticity must not presuppose any notion in its own family"
+    ],
+    "answer": 3,
+    "explanation": "Grice and Strawson do not try to break the circle; they accept that each candidate leads back into the family and reject the demand that it should not. Attacking the claim about definition or interchangeability would be trying to break the circle, which they explicitly decline to do."
+  },
+  {
+    "id": "quine-graded-reply",
+    "section": "the-positive-replacement",
+    "question": "Competent speakers sort new sentences into analytic and synthetic with striking agreement. How does Quine's later reply interpret this?",
+    "options": [
+      "As proof that the distinction is theoretically respectable",
+      "As a graded difference in how firmly sentences are held, reported in binary terms",
+      "As agreement about which words have explicit dictionary definitions",
+      "As an artefact of experimental design"
+    ],
+    "answer": 1,
+    "explanation": "Quine grants the behavioural regularity but says it tracks entrenchment, the graded notion his holism predicts. Treating the agreement as proof of a respectable distinction is Grice and Strawson's reading, which is the one Quine is resisting."
+  },
+  {
+    "id": "surviving-worry",
+    "section": "where-the-argument-stands",
+    "question": "According to the reply to the self-refutation objection, what is the sharper worry about Quine's position that survives?",
+    "options": [
+      "That his argument is invalid, because it uses logic while calling logic revisable",
+      "That logic is in fact immune from revision",
+      "That the rational force of evidence rests only on a preference for simplicity",
+      "That holism cannot be stated without relying on the analytic and synthetic distinction"
+    ],
+    "answer": 2,
+    "explanation": "Since any body of evidence is compatible with retaining any statement, what disciplines revision is only a practical preference for minimal mutilation and simplicity. The invalidity charge is the original objection, which the reply answers with the bridge analogy: using something while allowing it might need replacing is not incoherent."
+  }
+]

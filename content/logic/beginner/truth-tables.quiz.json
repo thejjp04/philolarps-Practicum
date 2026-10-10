@@ -1,0 +1,101 @@
+[
+  {
+    "id": "count-the-rows",
+    "section": "the-construction",
+    "question": "How many rows does the truth table for $(P \\land Q) \\rightarrow (R \\lor P)$ need?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "16"
+    ],
+    "answer": 2,
+    "explanation": "The count depends on the distinct letters, and there are three ($P$, $Q$ and $R$), so $2^3 = 8$. Counting the four letter occurrences gives 16, but a repeated $P$ adds no new combinations of values."
+  },
+  {
+    "id": "main-connective-last",
+    "section": "building-a-column",
+    "question": "Building the column for $\\neg P \\lor (Q \\rightarrow P)$ from the inside out, which connective do you apply last?",
+    "options": [
+      "$\\neg$, since it is the first symbol in the formula",
+      "$\\lor$, since everything else sits inside one of its sides",
+      "$\\rightarrow$, since it is the only connective in brackets",
+      "Any of them, since the order of working makes no difference"
+    ],
+    "answer": 1,
+    "explanation": "The last connective is the one that applies to the whole formula, and here the negation sits inside the left side of the disjunction and the arrow inside its right side. Being written first does not make $\\neg$ the main connective; it governs only $P$."
+  },
+  {
+    "id": "matching-columns",
+    "section": "building-a-column",
+    "question": "The columns for $\\neg(P \\land Q)$ and $\\neg P \\lor \\neg Q$ match in every row. What does that show?",
+    "options": [
+      "Any situation that makes one of them true makes the other true",
+      "Both formulas are tautologies",
+      "Both formulas are true in exactly one row",
+      "The two formulas use the same connectives"
+    ],
+    "answer": 0,
+    "explanation": "Matching columns mean the two formulas cannot come apart, whatever $P$ and $Q$ are about. That is different from being true in every row: each column has a false row (where both letters are true), so neither formula is a tautology."
+  },
+  {
+    "id": "spot-the-contingency",
+    "section": "three-kinds-of-formula",
+    "question": "Which of these formulas is a contingency?",
+    "options": [
+      "$P \\lor \\neg P$",
+      "$\\neg(P \\land \\neg P)$",
+      "$P \\rightarrow (Q \\lor P)$",
+      "$P \\rightarrow \\neg P$"
+    ],
+    "answer": 3,
+    "explanation": "$P \\rightarrow \\neg P$ is false when $P$ is true (true antecedent, false consequent) and true when $P$ is false, so its column has one of each. It looks self-defeating, but a contradiction must be false in every row; the other three options are tautologies."
+  },
+  {
+    "id": "negated-contingency",
+    "section": "three-kinds-of-formula",
+    "question": "The negation of a contingency is always a contingency.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "A contingency has at least one true row and at least one false row, and negation swaps every value, so its negation also has at least one of each. The tempting thought that negating a contingency gives a contradiction confuses it with negating a tautology."
+  },
+  {
+    "id": "find-the-row",
+    "section": "testing-an-argument",
+    "question": "An argument has premises $P \\lor Q$ and $Q \\rightarrow P$, and conclusion $Q$. Which row of its truth table is a counterexample?",
+    "options": [
+      "$P$ true and $Q$ true",
+      "$P$ true and $Q$ false",
+      "$P$ false and $Q$ true",
+      "None, so the argument is valid"
+    ],
+    "answer": 1,
+    "explanation": "With $P$ true and $Q$ false, $P \\lor Q$ is true and $Q \\rightarrow P$ is true (its antecedent is false), while the conclusion $Q$ is false. The row with $P$ false and $Q$ true is not a counterexample, because it makes $Q \\rightarrow P$ false and its conclusion is true anyway."
+  },
+  {
+    "id": "shortcut-collapses",
+    "section": "assuming-the-worst",
+    "question": "Using the shortcut, you suppose some row makes every premise true and the conclusion false. Every step is forced, and you end up with one of the premises false after all. What follows?",
+    "options": [
+      "The argument is invalid, since one of its premises turned out false",
+      "The argument is unsound, since one of its premises is false",
+      "The argument is valid, since no such row can exist",
+      "Nothing yet, since only the full table can settle validity"
+    ],
+    "answer": 2,
+    "explanation": "The supposition was of a counterexample row, and it collapsed, so there is no counterexample and the argument is valid. The premise came out false only under that supposition, not in the actual world, so nothing has been shown about soundness."
+  },
+  {
+    "id": "tables-cannot-see-inside",
+    "section": "where-this-runs-out",
+    "question": "A truth table reports \"Every cat is a mammal. Tibbles is a cat. So Tibbles is a mammal\" as invalid. Why?",
+    "options": [
+      "The argument really is invalid, as the table's counterexample row shows",
+      "The table would need more rows than anyone could fill in",
+      "One of the premises is false, so the table rejects the argument",
+      "The table reads only connectives, and this argument's validity lies inside its sentences"
+    ],
+    "answer": 3,
+    "explanation": "With no connectives present, the table treats the three sentences as unrelated letters and finds a row with the first two true and the third false. The argument is valid, but its validity rests on \"every\" and \"is\", which this machinery cannot see; the row count is a separate limit and is tiny here."
+  }
+]

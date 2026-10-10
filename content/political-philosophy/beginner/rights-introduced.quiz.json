@@ -1,0 +1,101 @@
+[
+  {
+    "id": "liberty-right-no-duty",
+    "section": "two-things-the-word-covers",
+    "question": "Two shoppers reach for the last coat on a sale rail, and each has a liberty right to buy it. On Hohfeld's analysis, what follows?",
+    "options": [
+      "Each has a duty to let the other buy it, since both of them have rights",
+      "Only whoever touches it first has a right, since rights cannot overlap",
+      "Neither must let the other take it, so either may get there first",
+      "Each has a claim right that the other not reach for the coat at all"
+    ],
+    "answer": 2,
+    "explanation": "A liberty right is only the absence of a duty not to do something, and it imposes no duty on anyone else, including no duty to let you. The last option turns a liberty right into a claim right, which would require a correlative duty on the other shopper."
+  },
+  {
+    "id": "claim-duty-one-relation",
+    "section": "two-things-the-word-covers",
+    "question": "A tenant has a claim right that her landlord return her deposit. On Hohfeld's analysis, how does that right relate to the landlord's duty to return it?",
+    "options": [
+      "They are one fact, seen from either end of the same relation",
+      "The duty is a further fact, which must be established separately",
+      "The right gives the landlord a liberty to return it or to keep it",
+      "The right is an immunity she holds against the landlord's power"
+    ],
+    "answer": 0,
+    "explanation": "Claim rights and duties are two descriptions of one relation, so nothing is added by asserting the right once the duty is established. Treating the duty as a separate fact is the mistake Hohfeld's analysis removes."
+  },
+  {
+    "id": "will-is-a-power",
+    "section": "two-things-the-word-covers",
+    "question": "Someone makes a will, changing who will be entitled to her house. Which of Hohfeld's positions is she exercising?",
+    "options": [
+      "A claim right, since others have a duty to respect her wishes",
+      "A liberty right, since she has no duty not to make such a will",
+      "An immunity, since nobody else is able to override her choice",
+      "A power, since she is changing other people's rights and duties"
+    ],
+    "answer": 3,
+    "explanation": "A power is the ability to change someone's rights and duties, which is what making a will or a promise does. She does have a liberty to make a will, but that describes only the absence of a duty, not the change she brings about."
+  },
+  {
+    "id": "natural-right-violated",
+    "section": "where-rights-come-from",
+    "question": "A regime passes a law denying a group any right to a fair hearing. If there is a natural right to a fair hearing, what has the law done to it?",
+    "options": [
+      "Cancelled it, since the law on the matter has now been changed",
+      "Violated it, since a law can deny but cannot cancel such a right",
+      "Nothing, since natural rights bind only regimes that recognise them",
+      "Replaced it with a legal right, which then takes priority over it"
+    ],
+    "answer": 1,
+    "explanation": "A natural right exists before the law and provides the standard laws are assessed by, so a law denying it violates it rather than cancelling it. Cancellation is what happens to an institutional right, such as a right to vote in a particular election."
+  },
+  {
+    "id": "who-owes-housing",
+    "section": "what-a-right-demands",
+    "question": "Someone argues that a right to housing is not a genuine claim right. Which step in her argument does Hohfeld's analysis supply?",
+    "options": [
+      "Housing costs money, and nothing that costs money can be a right",
+      "Only rights that a legal system recognises are genuine rights",
+      "A claim right with no identifiable correlative duty is not one",
+      "Positive rights conflict with negative ones, and must give way"
+    ],
+    "answer": 2,
+    "explanation": "A duty of provision falls on someone, and the right does not say whom, so it may lack a correlative duty; by Hohfeld's analysis a claim right without one is not a claim right. The point about cost is a different premise, and the aside goes on to argue that negative rights cost money too."
+  },
+  {
+    "id": "human-versus-natural",
+    "section": "human-rights",
+    "question": "Someone holds that human rights are institutional creations that ought to exist everywhere. On the article's account, can she accept the doctrine of human rights?",
+    "options": [
+      "Yes, since the doctrine is a claim about scope rather than source",
+      "No, since human rights must exist prior to any institution at all",
+      "No, since human rights are simply natural rights by another name",
+      "Only if every state has ratified both of the covenants of 1966"
+    ],
+    "answer": 0,
+    "explanation": "Natural rights is a claim about the source of rights, while human rights as the doctrine operates is a claim about scope and universality. The third option runs the two together, which the article says is a mistake, though whether the doctrine needs a natural-rights foundation remains open."
+  },
+  {
+    "id": "cost-of-rights-removes",
+    "section": "human-rights",
+    "question": "What does the article say Holmes and Sunstein's argument removes?",
+    "options": [
+      "Any moral difference between duties of restraint and of provision",
+      "The claim that negative rights are cost-free and so unproblematic",
+      "The case for positive rights, which turn out to cost far too much",
+      "The distinction between claim rights and liberty rights altogether"
+    ],
+    "answer": 1,
+    "explanation": "Even the most negative-looking rights require courts, police and registries, so negative rights are not free. The first option overstates the result: someone can accept every word of it and still hold that there is a moral difference between restraint and support."
+  },
+  {
+    "id": "rights-not-absolute",
+    "section": "human-rights",
+    "question": "On the reply's account, rights are by their nature absolute and cannot be outweighed.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Almost no serious theory of rights has held them absolute: most hold that rights can be outweighed, conflict, and are constrained by feasibility. The absolutism the objection complains of is in the rhetoric, not in the concept."
+  }
+]

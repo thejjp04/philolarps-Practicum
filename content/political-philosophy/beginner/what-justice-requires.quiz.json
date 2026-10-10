@@ -1,0 +1,119 @@
+[
+  {
+    "id": "merit-versus-desert",
+    "section": "three-bases-for-a-share",
+    "question": "A naturally gifted pianist practises little. A less gifted one practises for years and plays slightly worse. For a seat in an orchestra, how do merit and desert line up?",
+    "options": [
+      "The first has more of both, since talent is a form of earned effort",
+      "The second has more merit, since merit tracks how hard one has worked",
+      "Both have equal merit, since merit is simply desert for a given role",
+      "The first has more merit, and the second arguably has more desert"
+    ],
+    "answer": 3,
+    "explanation": "Merit is forward-looking and role-relative, asking who will do the job well, while desert looks back at what the person has done. A person with natural aptitude can have merit without deserving anything, which is why the second option confuses the two."
+  },
+  {
+    "id": "merit-fair-and-unfair",
+    "section": "three-bases-for-a-share",
+    "question": "Appointment on merit is defended as fair and attacked as unfair. What is the article's diagnosis of this dispute?",
+    "options": [
+      "Both can be true, since merit was never a claim about earning",
+      "The defence fails, since merit always turns out to be a form of desert",
+      "The attack fails, since qualifications are always earned through effort",
+      "Neither side is right, since need ought to allocate every role there is"
+    ],
+    "answer": 0,
+    "explanation": "Merit is the right criterion for a role whose performance matters to third parties, and it was never a claim about what anyone had earned. So the attack, that qualifications track unearned advantages, can be true without defeating the defence."
+  },
+  {
+    "id": "which-allocation-is-need",
+    "section": "three-bases-for-a-share",
+    "question": "In a flood shelter, blankets go first to the elderly and the injured, whatever they contributed to the town. Which basis for a share is in use?",
+    "options": [
+      "Desert, since the elderly have contributed most over their lives",
+      "Merit, since they are the people best fitted to make use of the blankets",
+      "Need, since it looks at condition rather than at a person's record",
+      "Corrective justice, since the flood was a wrong done to them"
+    ],
+    "answer": 2,
+    "explanation": "Need looks at a person's condition rather than their record, and it is the basis behind triage and disaster relief. The stem rules out desert, since the allocation ignores what anyone contributed."
+  },
+  {
+    "id": "imperfect-procedural",
+    "section": "fair-procedures-and-fair-outcomes",
+    "question": "Diving judges aim to give the best dive the highest score, but they sometimes misjudge. On Rawls's classification, which kind of procedural justice is this?",
+    "options": [
+      "Perfect, since the judges follow a fixed and agreed scoring rule",
+      "Imperfect, since there is a standard no procedure always meets",
+      "Pure, since the right result is whatever the judges happen to say",
+      "Corrective, since a misjudged dive can be appealed and rescored"
+    ],
+    "answer": 1,
+    "explanation": "There is an independent standard, the best dive, and no procedure guaranteed to reach it, which is the shape of a criminal trial. It is not pure, since in pure procedural justice there is no right result apart from the procedure, as in a lottery."
+  },
+  {
+    "id": "pure-or-imperfect-income",
+    "section": "fair-procedures-and-fair-outcomes",
+    "question": "Someone claims that market incomes cannot be criticised so long as every transaction was fair. Which category is she treating the distribution of income as?",
+    "options": [
+      "Perfect procedural justice, since markets reliably deliver the right result",
+      "Imperfect procedural justice, since markets sometimes miss a standard",
+      "Pure procedural justice, since there is no standard beyond the procedure",
+      "Corrective justice, since it concerns transactions between two parties"
+    ],
+    "answer": 2,
+    "explanation": "If whatever emerges from fair transactions is just, there is no independent standard for the outcome to fail. Treating income as imperfect procedural justice would leave market results open to criticism however the transactions were conducted, which is what she denies."
+  },
+  {
+    "id": "corrective-ignores-wealth",
+    "section": "fair-procedures-and-fair-outcomes",
+    "question": "A wealthy person defrauds another wealthy person of a sum of money. On corrective justice, what is owed?",
+    "options": [
+      "Less than to a poor victim, since the loss matters less to a rich one",
+      "Whatever transfer would bring the two parties to equal wealth",
+      "Nothing, since the overall distribution of wealth is barely changed",
+      "Exactly what would be owed to a poor victim of the same fraud"
+    ],
+    "answer": 3,
+    "explanation": "Corrective justice is bilateral and takes no interest in how well off either party is: the measure is the wrong, not the resulting distribution. The first option imports a distributive concern that corrective justice sets aside."
+  },
+  {
+    "id": "same-exam-formal",
+    "section": "formal-and-substantive",
+    "question": "Every applicant sits the same examination, and the results track years of unequal preparation. On the article's terms, what does the rule satisfy?",
+    "options": [
+      "Formal equality, without delivering substantive equality",
+      "Substantive equality, since everyone faces the same test",
+      "Neither, since an examination cannot be applied consistently",
+      "Both, since a consistent rule secures an equal condition"
+    ],
+    "answer": 0,
+    "explanation": "The rule is the same for everyone, which is all formal equality asks, and consistency is compatible with almost any outcome. Substantive equality concerns people's actual condition, which this rule leaves unequal."
+  },
+  {
+    "id": "proves-too-much-desert",
+    "section": "formal-and-substantive",
+    "question": "A critic says the argument against desert would also abolish praise, blame, gratitude and the criminal law. Which of the three responses in the aside is this?",
+    "options": [
+      "Accepting the argument and keeping only merit and need",
+      "Seeking a form of desert that needs no ultimate authorship of capacities",
+      "Treating the argument as a reductio, since it proves too much",
+      "Denying that effort depends on upbringing or on neurology"
+    ],
+    "answer": 2,
+    "explanation": "The second response holds that the same reasoning would abolish responsibility altogether, and treats so extreme a conclusion as a reductio of the premise. Seeking a desert without ultimate authorship is the third response, which accepts the premise and looks for desert elsewhere."
+  },
+  {
+    "id": "rules-not-natural-facts",
+    "section": "formal-and-substantive",
+    "question": "How does the first reply answer the objection that goods arrive already attached to people?",
+    "options": [
+      "Most present holdings descend from conquest, enslavement and fraud",
+      "What people take home depends on rules that could have been different",
+      "Thought experiments show that a fixed pile of goods must still be divided",
+      "Voluntary transfers can never produce a just distribution of goods"
+    ],
+    "answer": 1,
+    "explanation": "Almost nothing is produced alone, and what a person takes home is the output of a system of rules that could have been drawn differently. The appeal to conquest and fraud is the second reply, which attacks the starting point rather than the picture of goods as pre-attached."
+  }
+]

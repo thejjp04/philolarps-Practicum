@@ -1,0 +1,132 @@
+[
+  {
+    "id": "method-never-checks",
+    "section": "where-the-list-comes-from",
+    "question": "Which weakness of perfect being theology is the starting point for this article?",
+    "options": [
+      "It picks each property on its own merits without asking whether the whole set can be held together",
+      "It relies on scripture for its list, so it cannot be used by someone outside a particular tradition",
+      "It assumes God exists before determining God's attributes, and so it begs the question at the outset",
+      "It can only generate negative attributes, such as being unlimited, and never any positive ones"
+    ],
+    "answer": 0,
+    "explanation": "Each attribute is selected by asking whether having it is greater than lacking it, and joint consistency is a separate question the method never asks. The method is a priori and works by describing a greatest possible being, which does not presuppose that one exists."
+  },
+  {
+    "id": "incompatibility-strength",
+    "section": "where-the-list-comes-from",
+    "question": "Why would a successful attribute-incompatibility argument establish more than any argument from evidence could?",
+    "options": [
+      "Because it would rest on facts about the world that every party to the debate already accepts",
+      "Because it would show that nothing could satisfy the description, not just that nothing happens to",
+      "Because it would make the existence of God improbable to a degree that no evidence could ever offset",
+      "Because it would refute every conception of a god, not merely the God of classical theism alone"
+    ],
+    "answer": 1,
+    "explanation": "An inconsistent description is satisfied by nothing in any possible world, so the conclusion is impossibility rather than mere non-existence. The argument needs no claim about the world at all, which is why the first option misdescribes its advantage."
+  },
+  {
+    "id": "revision-a-concession",
+    "section": "where-the-list-comes-from",
+    "question": "On the article's account, what is true of revising or dropping an attribute in reply to an incompatibility argument?",
+    "options": [
+      "It is an outright defeat, since the attributes were fixed by the tradition and cannot be altered",
+      "It is costless, since the attributes were only ever a working hypothesis about the divine nature",
+      "It is a concession, though not automatically a defeat, and its size depends on which property goes",
+      "It is never needed, since every apparent incompatibility can be dissolved by a better reading"
+    ],
+    "answer": 2,
+    "explanation": "The tradition's formulations were not handed down complete, so revision is not automatically defeat, but it does concede something. Calling it costless ignores that some revisions give up doctrines the tradition treated as settled."
+  },
+  {
+    "id": "stone-not-a-task",
+    "section": "omnipotence-and-what-a-puzzle-is-worth",
+    "question": "On the Aquinas and Mavrodes reply, why is failing to make a stone too heavy for an omnipotent being to lift no limit on its power?",
+    "options": [
+      "Because God could make such a stone but chooses not to, and declining to act is not a lack of power",
+      "Because God could make the stone and then lift it anyway, so neither horn identifies an inability",
+      "Because the stone would have to be infinitely heavy, and no finite universe could contain one",
+      "Because the description is self-contradictory, so there is no task there to fail at"
+    ],
+    "answer": 3,
+    "explanation": "Omnipotence is power over what is possible, and \"a stone too heavy for an omnipotent being to lift\" describes nothing, like a square circle. Saying God could make it and lift it too simply accepts a contradiction, which is Descartes's minority position rather than the standard reply."
+  },
+  {
+    "id": "descartes-says-nothing",
+    "section": "omnipotence-and-what-a-puzzle-is-worth",
+    "question": "Why does almost no one follow Descartes in holding that God's power extends over necessary truths?",
+    "options": [
+      "If contradictions can be made true, saying God can make them so rules nothing out and asserts nothing",
+      "Because it would make God's power depend on logic, which is the opposite of what Descartes intended",
+      "Because it was condemned by the church, and later philosophers followed that ruling without question",
+      "Because it contradicts the principle that a perfect being could change only for the worse, never better"
+    ],
+    "answer": 0,
+    "explanation": "An assertion that excludes nothing says nothing, so the position cannot even be stated coherently. Making power depend on logic is the view Descartes rejected, so the second option reverses his position."
+  },
+  {
+    "id": "sinning-liability",
+    "section": "omnipotence-and-what-a-puzzle-is-worth",
+    "question": "The usual reply to \"can God sin?\" treats the ability to act wrongly as a liability rather than a power. Why does the article call this reasonable but not obviously complete?",
+    "options": [
+      "Because Aquinas himself rejected the reply, holding that sin is a power that God simply chooses not to use",
+      "Because the ability to do otherwise is just what the divine freedom section turns out to need",
+      "Because it makes God's goodness contingent, so God might have been evil after all",
+      "Because it applies only to necessary omnipotence and not to a being that happens to be omnipotent"
+    ],
+    "answer": 1,
+    "explanation": "If being unable to do wrong is no lack, the divine freedom problem returns, since freedom is often thought to require the ability to do otherwise. The reply depends on God being essentially good, so it makes goodness necessary, not contingent."
+  },
+  {
+    "id": "kretzmann-change",
+    "section": "immutability",
+    "question": "How does Kretzmann's first argument derive mutability from omniscience?",
+    "options": [
+      "An omniscient being must know its own future choices, which fixes them and so removes its freedom",
+      "An omniscient being must know what pain is like, which requires having a body that changes over time",
+      "Some truths change over time, so a being knowing all truths knows different things at different times",
+      "An omniscient being must learn from experience, and learning is a kind of change in the learner"
+    ],
+    "answer": 2,
+    "explanation": "What is true today, that an event is happening, differs from what is true tomorrow, that it has happened, so complete knowledge must itself differ across times. The pain example belongs to Kretzmann's second, perspectival argument, which concerns positional knowledge, not change."
+  },
+  {
+    "id": "omnipresence-collapse",
+    "section": "omnipresence",
+    "question": "What is the main difficulty the article raises for omnipresence?",
+    "options": [
+      "It flatly contradicts immateriality, since only a body can be located in many places at once",
+      "It entails that God has parts, one in each place, which conflicts with divine simplicity outright",
+      "It implies that God is identical with the universe, so that classical theism collapses into pantheism",
+      "It may be omniscience and omnipotence restated in spatial terms rather than a further attribute"
+    ],
+    "answer": 3,
+    "explanation": "If presence just means knowing and acting everywhere, the list is shorter than advertised; Aquinas's presence by essence is what is meant to stop the collapse. The article says the difficulty is a suspicion rather than an inconsistency, so the first option overstates it."
+  },
+  {
+    "id": "freedom-best-action",
+    "section": "divine-freedom",
+    "question": "Why does essential perfect goodness seem to threaten divine freedom?",
+    "options": [
+      "A being that cannot do worse than best must do the best act, and so could not have done otherwise",
+      "A perfectly good being would be constrained by external moral facts that lie outside its control",
+      "A perfectly good being could not create anything at all, since every creation would fall short of it",
+      "A perfectly good being has no reasons for acting, so whatever it does turns out to be arbitrary"
+    ],
+    "answer": 0,
+    "explanation": "If one act is best, an essentially good being does it and could not have done otherwise, which on the most familiar account is unfreedom. Arbitrariness arises only on the other horn about creation, where God has no reason, not from goodness itself."
+  },
+  {
+    "id": "adams-good-enough",
+    "section": "divine-freedom",
+    "question": "How does Adams's response restore alternatives for God?",
+    "options": [
+      "By arguing that freedom needs only the absence of external constraint, so alternatives are not required",
+      "By holding that God may permissibly create a good enough world, denying a perfect being must maximise",
+      "By holding that there is no best world, so every world God creates could have been bettered by another",
+      "By arguing that God is outside time, so the choice among worlds is not a choice made at any moment"
+    ],
+    "answer": 1,
+    "explanation": "If choosing less than the best is permissible, several options are open, at the cost of denying that perfection requires maximising. Treating freedom as mere absence of external constraint is the other line of response, which gives up the demand for alternatives rather than restoring them."
+  }
+]

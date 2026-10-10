@@ -1,0 +1,130 @@
+[
+  {
+    "id": "creating-afresh-replaces-persistence",
+    "section": "keeping-things-in-being",
+    "question": "Why do most defenders of conservation resist the strongest version of continuous creation, on which God creates the world afresh at every moment?",
+    "options": [
+      "Because it would make annihilation, rather than continuation, require a positive divine act",
+      "Because it amounts to the existential inertia thesis under another name",
+      "Because a numerically new thing each moment replaces persistence with mere resemblance",
+      "Because it conflicts with the act and potency machinery that motivates conservation"
+    ],
+    "answer": 2,
+    "explanation": "Creating afresh produces a new object each instant, so what looked like one enduring thing is a succession of similar ones, and persistence is replaced rather than explained. Hence the distinction between creating and conserving, on which one divine act continues in being what is already there."
+  },
+  {
+    "id": "conservation-is-not-withheld-destruction",
+    "section": "keeping-things-in-being",
+    "question": "On the classical doctrine, things continue to exist because God keeps choosing not to annihilate them.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "That picture makes annihilation the act and continuation the absence of one, which is close to the inertia thesis rather than an alternative to it. The classical claim is the reverse: continuation is the effect of a positive act, and annihilation would need no act at all."
+  },
+  {
+    "id": "what-inertia-says-needs-a-cause",
+    "section": "the-rival-thesis",
+    "question": "On the existential inertia thesis, which of these calls for a cause?",
+    "options": [
+      "A rock's continuing to exist for another million years",
+      "A rock's existing at noon, given that it existed at eleven",
+      "Nothing about the rock, since persistence is the default",
+      "A rock's being ground to dust by a passing glacier"
+    ],
+    "answer": 3,
+    "explanation": "The thesis requires a cause for a thing's coming into existence and for its destruction, but not for its mere continuation. The third option overreaches: making persistence the default does not make every change uncaused, since on this view change is exactly what calls for explanation."
+  },
+  {
+    "id": "every-fact-has-an-account",
+    "section": "the-rival-thesis",
+    "question": "Against Schmid and Linford's four-dimensionalist point, the classical theist replies that the demand for a sustaining cause applies just as much to a whole four-dimensional object. Which premise does the reply depend on, a premise the defender of inertia is free to reject?",
+    "options": [
+      "Every fact has an account",
+      "A thing's essence does not include its existence",
+      "Relativistic accounts of objects are false",
+      "The past has a beginning"
+    ],
+    "answer": 0,
+    "explanation": "The worm's essence leaves its existence unsettled just as a momentary stage's does, but that generates a demand for a cause only if every fact has an account. The essence premise is the tempting answer, yet the inertia defender can grant it and still deny that the leftover fact requires anything to account for it."
+  },
+  {
+    "id": "inertia-removes-the-series",
+    "section": "what-the-first-cause-arguments-were-relying-on",
+    "question": "Why does the existential inertia thesis threaten the argument from a causal series per se, on the article's account?",
+    "options": [
+      "It implies that the past is infinite, which the argument from a series per se cannot allow",
+      "If things persist unaided, nothing is now sustaining them, so there is no series to trace",
+      "It supplies a different first member for the series, namely the persisting thing itself",
+      "It denies the principle of proportionate causality on which the series argument rests"
+    ],
+    "answer": 1,
+    "explanation": "The argument needs members that borrow their causal power from further up, and inertia denies that existence is being borrowed from anything at this moment, so the argument has nothing to run on. The infinite-past option is the trap: this version of the argument is untouched by an infinite past."
+  },
+  {
+    "id": "proportionate-causality-not-triggered",
+    "section": "what-the-first-cause-arguments-were-relying-on",
+    "question": "The principle of proportionate causality helps rule out an endless chain of sustainers. What must the defender of existential inertia deny to escape it?",
+    "options": [
+      "The principle itself, that nothing can give what it does not have",
+      "The essence-existence distinction",
+      "That God is a necessary being",
+      "Only that any conferring of existence is going on at each moment"
+    ],
+    "answer": 3,
+    "explanation": "The principle constrains a cause that confers existence, so a thesis on which nothing is being conferred never triggers it. Rejecting the principle itself is the natural assumption, but the article stresses that the inertia defender can accept it and still escape."
+  },
+  {
+    "id": "classify-mere-conservationism",
+    "section": "how-much-is-left-for-creatures",
+    "question": "A theologian holds that God keeps a fire in existence with its powers intact, and that the fire then heats the water with no further divine contribution. Which position is this?",
+    "options": [
+      "Mere conservationism",
+      "Concurrentism",
+      "Occasionalism",
+      "The existential inertia thesis"
+    ],
+    "answer": 0,
+    "explanation": "Sustaining the creature and its powers, then leaving the act to the creature, is the position associated with Durandus. The inertia thesis is the tempting confusion, but it denies that the fire needs sustaining at all, while concurrentism adds an immediate divine contribution to every act."
+  },
+  {
+    "id": "hume-keeps-the-negative-half",
+    "section": "the-case-for-occasionalism",
+    "question": "How does Hume's account of causation relate to Malebranche's occasionalism?",
+    "options": [
+      "He accepts both halves: we never observe necessary connection, and God supplies it",
+      "He rejects both halves, holding that we do perceive necessary connection in nature",
+      "He keeps \"we never observe necessary connection\" and drops \"God supplies it\"",
+      "He keeps the claim that only an omnipotent will is a true cause, and drops the occasions"
+    ],
+    "answer": 2,
+    "explanation": "Remove the theological half and what remains is causation as constant conjunction plus a habit of expectation. That is why occasionalism counts as the road by which the modern problem of causation arrived, rather than a historical dead end."
+  },
+  {
+    "id": "concurrentism-needs-privation",
+    "section": "what-concurrentism-was-built-to-do",
+    "question": "The concurrentist says God causes the act of sin while the creature, as a deficient instrument, causes its wrongness. What does this account stand or fall with?",
+    "options": [
+      "Mere conservationism, since God must stand back from the wrongness of the act",
+      "Existential inertia, since the wrongness must persist without any sustaining cause",
+      "Occasionalism about bad acts alone, with concurrence reserved for good acts",
+      "The privation account of evil, on which wrongness is an absence needing no cause"
+    ],
+    "answer": 3,
+    "explanation": "The limp illustration works only if the defect is a lack rather than a positive item; if some evils are positive states of affairs, the defect needs a cause after all, so the concurrentist account of sin and the privation theodicy rise and fall together. The mere conservationist option is tempting, but on that view God causes no acts at all, good or bad, which leaves providence with nothing to work with."
+  },
+  {
+    "id": "different-levels-likelihood-of-one",
+    "section": "where-the-laws-of-nature-fit",
+    "question": "The concurrentist says God and natural causes operate at different levels, so a complete physics leaves divine activity untouched. What does the article say this costs a Bayesian natural theology?",
+    "options": [
+      "Observations then come out the same either way, so their likelihood ratio is one",
+      "It forces a prior of zero on theism, since God then makes no difference to anything",
+      "It turns all evidence for theism into old evidence, which confirms nothing",
+      "It requires the god-of-the-gaps assumption that God and natural causes compete"
+    ],
+    "answer": 0,
+    "explanation": "A doctrine on which no scientific result could count against divine activity is one on which none can count for it, so such evidence cannot favour theism over its denial. The last option is the very assumption concurrentism denies from the outset; the cost is evidential, not a return to the gaps."
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "who-is-an-anti-theist",
+    "section": "the-two-positions",
+    "question": "Which of these people is an anti-theist in the article's sense?",
+    "options": [
+      "Someone who holds that God does not exist, because the evidence of evil outweighs the rest",
+      "Someone who holds that God exists but is not perfectly good, since such a God permits horrendous evils",
+      "Someone who grants that God is perfectly good but holds that God's existence makes some things worse",
+      "Someone who holds that it would be better if God existed, while believing that God does not"
+    ],
+    "answer": 2,
+    "explanation": "Anti-theism is a claim about value, not existence: God's existence would make things worse in some way, which is compatible with God being perfectly good, since certain goods available in a godless world may be unavailable in a world with God. The atheist in the first option has answered the existential question only, and the last person is a pro-theist who happens to be an atheist."
+  },
+  {
+    "id": "what-the-meaningful-life-argument-claims",
+    "section": "the-case-for-pro-theism",
+    "question": "Which claim is the meaningful life argument committed to?",
+    "options": [
+      "That a godless life is meaningless, since nothing in it is intended by anyone or finally preserved",
+      "That certain goods, such as suffering not being finally wasted, are available only if God exists",
+      "That God's existence can be inferred from the fact that human lives have meaning",
+      "That every person's life is better with God in every respect that matters to them"
+    ],
+    "answer": 1,
+    "explanation": "The argument is that particular goods bearing on life's significance (being intended, suffering not wasted, wrongs addressed, death not the end, being fully known and loved) depend on God, and that their absence is a large loss. It explicitly does not claim that a godless life is meaningless, and as an axiological argument it says nothing about whether God exists."
+  },
+  {
+    "id": "impersonal-and-personal-scope",
+    "section": "the-case-for-pro-theism",
+    "question": "Someone who accepts the impersonal version of pro-theism, on which a world containing a being of unsurpassable value contains more value, can consistently be an anti-theist on the personal scope.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "The impersonal version settles nothing about whether any creature is better off, and it is compatible with the human situation being worse. That is its weakness as well as the reason it survives objections that damage the personal version: the two claims do not compete."
+  },
+  {
+    "id": "intimacy-reply-to-privacy",
+    "section": "the-case-for-anti-theism",
+    "question": "The theist replies to the privacy objection that being fully known by one who loves you completely is intimacy, not surveillance. What does the article say this reply leaves standing?",
+    "options": [
+      "God's knowledge of our thoughts is indifferent rather than loving, so it remains a kind of surveillance",
+      "Privacy is valuable only for its practical benefits, and God's knowledge removes those benefits",
+      "Being fully known is something people do not value, even from those who love them most",
+      "Valued intimacy is chosen and mutual, whereas being fully known by God cannot be declined"
+    ],
+    "answer": 3,
+    "explanation": "The reply disposes of cruder versions of the complaint, but the intimacy people value is granted rather than unavoidable, and it holds between parties of roughly equal knowledge and power, which God and a creature are not. The reply's own premise is that God's knowledge is loving, so the first option attacks something the article does not dispute."
+  },
+  {
+    "id": "necessity-and-comparison",
+    "section": "whether-the-preference-is-even-coherent",
+    "question": "Why does the claim that God, if God exists, exists necessarily threaten the axiological question?",
+    "options": [
+      "God's existence then becomes better by definition, so pro-theism wins without any argument",
+      "Exactly one of the two scenarios being compared is impossible, so it is unclear what the comparison does",
+      "Preferring one impossible state to another is always incoherent, just as it is with mathematical impossibilities",
+      "A necessary being cannot be good or bad for anyone, so the personal scope of the question vanishes"
+    ],
+    "answer": 1,
+    "explanation": "Either there is no possible world without God or none with God, and comparative evaluation normally holds some things fixed while varying others, which a variable that cannot vary does not allow. The article denies that preferences over impossibilities are obviously incoherent, since people hold attitudes towards counterlogical suppositions all the time."
+  },
+  {
+    "id": "which-better",
+    "section": "what-better-is-being-asked",
+    "question": "On which reading of \"better\" do the anti-theistic considerations have the most force?",
+    "options": [
+      "Containing a greater total quantity of value",
+      "Being what most informed and careful people would prefer",
+      "Being a better kind of situation to be in",
+      "Being better from God's point of view than from ours"
+    ],
+    "answer": 2,
+    "explanation": "The anti-theistic considerations are claims about the character of a position, and character does not aggregate. On the quantity reading the pro-theist has the easy case, since a being of unlimited value plus everything else outweighs everything else on its own."
+  },
+  {
+    "id": "axiology-and-the-wager",
+    "section": "what-it-does-to-the-earlier-arguments",
+    "question": "How does the axiological question bear on the pragmatic argument for belief of the beginner tier?",
+    "options": [
+      "It assumes that, if God exists, believing is far better for the believer, which an anti-theist can deny",
+      "It assumes that God exists necessarily, which the axiological question cannot coherently accept",
+      "It assumes anti-theism, since it treats belief in God as a cost that has to be weighed",
+      "It is unaffected, since it concerns the value of belief rather than the value of God's existence"
+    ],
+    "answer": 0,
+    "explanation": "The wager's premise that believing is enormously better for the believer if God exists is a strong, undefended pro-theistic claim on the personal scope, so an anti-theist can accept every other step and decline at that one. The last option is tempting, but the value of believing in the God case depends on what God's existence would be like for the believer."
+  },
+  {
+    "id": "nagels-admission",
+    "section": "what-it-does-to-the-earlier-arguments",
+    "question": "What does Nagel's admission that he does not want there to be a God contribute, on the article's account?",
+    "options": [
+      "Proof that atheism is in general held from motives rather than from any weighing of evidence",
+      "An argument that God does not exist, drawn from the cosmic authority problem",
+      "Evidence that most philosophers are pro-theists who conceal their preference",
+      "Evidence that motivated reasoning can run against theism, so debunking cuts both ways"
+    ],
+    "answer": 3,
+    "explanation": "Debunking arguments explained religious belief by biases that do not track truth; Nagel's admission shows that strong motives to find that there is no God are real too, so neither side has clean hands. It is a report of a preference, which Nagel himself called a fear rather than a conclusion from evidence, not an argument about whether God exists."
+  },
+  {
+    "id": "institution-analogy",
+    "section": "complications-worth-keeping",
+    "question": "A person holds that a world with God is better overall, yet wishes they personally were not in the position a creature occupies. On the article's account, this is:",
+    "options": [
+      "Inconsistent, since whatever is better overall must be better for each person within it",
+      "Consistent, since the personal and impersonal answers to the question can come apart",
+      "Consistent only for an atheist, since any theist must be a pro-theist on every scope",
+      "Inconsistent, since wishing not to be a creature amounts to wishing that God not exist"
+    ],
+    "answer": 1,
+    "explanation": "The divergence between personal and impersonal answers is not a mark of confusion, much as someone may think a well-run institution a good thing and still not want to work inside one. Theists, too, can accept anti-theistic conclusions on some scope, holding that real losses are outweighed."
+  },
+  {
+    "id": "standing-versus-outcome",
+    "section": "where-it-stands",
+    "question": "Why are the anti-theistic arguments about standing harder to answer than those about outcome?",
+    "options": [
+      "A God can supply goods as well as remove them, but cannot make some positions available to a creature",
+      "Arguments about standing do not depend on whether God is good, while those about outcome do",
+      "Arguments about standing concern the afterlife, which cannot be observed or independently checked",
+      "Arguments about outcome require God to exist necessarily, while those about standing do not"
+    ],
+    "answer": 0,
+    "explanation": "An argument that a theistic world contains less of some good can be met by noting that God could supply more of it. An argument that certain positions, such as being unobserved or subordinate to no one, are unavailable to any creature whatever concerns the structure of the relation rather than its consequences, so how well things go cannot answer it."
+  }
+]

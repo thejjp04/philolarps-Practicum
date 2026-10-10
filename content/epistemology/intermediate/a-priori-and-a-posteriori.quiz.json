@@ -1,0 +1,127 @@
+[
+  {
+    "id": "dreamed-theorem",
+    "section": "the-distinction",
+    "question": "A mathematician first comes to believe a theorem because a dream suggested it, and later proves it. On the article's account, what is the status of her justification once she has the proof?",
+    "options": [
+      "A priori, because the proof, not the dream, is what justifies it",
+      "A posteriori, because the dream was an experience and it caused the belief",
+      "Mixed, because part of the belief's history is empirical and part of it is not",
+      "Unjustified, because a belief that began by chance cannot later become justified"
+    ],
+    "answer": 0,
+    "explanation": "The proof is what supports the theorem, and it consults no experience, so the justification is a priori. Calling it a posteriori because of the dream confuses the psychological question of origin with the epistemological question of warrant."
+  },
+  {
+    "id": "concepts-need-experience",
+    "section": "the-distinction",
+    "question": "\"You had to hear the word 'bachelor' to learn it, so 'bachelors are unmarried' cannot be known a priori.\" How does the article answer this?",
+    "options": [
+      "It concedes the point and switches to mathematical examples, where no words are needed",
+      "Experience is needed to acquire the concepts, not to support the claim",
+      "The concept of a bachelor is innate, so no experience was needed even to acquire it",
+      "The claim is necessary, and every necessary truth is a priori"
+    ],
+    "answer": 1,
+    "explanation": "The definition of the a priori already allows experience a role in concept acquisition; what it denies is that experience does any supporting work afterwards. Appealing to innate concepts is unnecessary, and the article never rests the distinction on innateness."
+  },
+  {
+    "id": "necessary-implies-a-priori",
+    "section": "the-distinction",
+    "question": "On the article's account, any proposition that is necessarily true can be known only a priori.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Kripke's case of water being H2O is necessary and known a posteriori, so the two distinctions come apart. Treating necessary and a priori as the same thing is exactly the conflation the article's third clarification warns against."
+  },
+  {
+    "id": "red-and-green",
+    "section": "what-is-supposed-to-do-the-justifying",
+    "question": "You consider whether anything could be red and green all over at once, and grasp that nothing could. How would a rationalist such as BonJour describe what justifies your belief?",
+    "options": [
+      "An inductive generalisation from never having observed any object that is red and green all over",
+      "A hunch that further observation could confirm or overturn",
+      "A rational intuition: the proposition strikes you as true on the basis of understanding it",
+      "A recollection of what the soul knew before birth"
+    ],
+    "answer": 2,
+    "explanation": "Rational intuition is a non-sensory state in which a proposition seems true because it is understood, and the article stresses that it is neither a hunch nor an inference from observed cases. The inductive option is the empiricist's redescription, which is what the rationalist denies."
+  },
+  {
+    "id": "euclid-objection",
+    "section": "what-is-supposed-to-do-the-justifying",
+    "question": "Euclidean geometry seemed rationally evident to competent thinkers for two thousand years and is not true of physical space. Which worry about rational intuition does this most directly support?",
+    "options": [
+      "That defining it as the grasping of a truth makes any appeal to it explain nothing",
+      "That it depends on concepts acquired through experience",
+      "That it can only deliver knowledge of contingent truths",
+      "That its deliverances have often been wrong, so its reliability is in doubt"
+    ],
+    "answer": 3,
+    "explanation": "The Euclid case is evidence about track record: something seemed evident to reason and turned out false. The circularity complaint is a separate objection about the definition of rational intuition, and the geometry example does nothing to establish it."
+  },
+  {
+    "id": "leibniz-against-locke",
+    "section": "the-innateness-question",
+    "question": "Locke argues that if any principles were innate, children would assent to them, and they do not. Leibniz's reply works by rejecting which assumption?",
+    "options": [
+      "That innate knowledge would have to be occurrent, so that having it would show up as assent",
+      "That children in fact fail to assent to the principles in question",
+      "That knowledge requires justification as well as true belief",
+      "That some principles are assented to by every adult"
+    ],
+    "answer": 0,
+    "explanation": "For Leibniz innate knowledge is dispositional, like veins in marble that experience brings out, so its presence need not show up as present assent. He does not dispute Locke's observation about children; he disputes what follows from it."
+  },
+  {
+    "id": "draining-the-conclusion",
+    "section": "the-innateness-question",
+    "question": "An empiricist responds to the argument from necessity by holding that necessary truths are true by meaning, so knowing them requires only knowing the language. What is this empiricist doing?",
+    "options": [
+      "Denying the first premise, that some propositions are known to be necessary",
+      "Denying the second premise, that experience shows only how things actually are",
+      "Granting the conclusion but draining it of interest",
+      "Showing that the argument is invalid"
+    ],
+    "answer": 2,
+    "explanation": "This empiricist accepts that knowledge of necessity is a priori but makes it cheap, since knowing a convention requires no insight into the world. Denying the first premise is the other route, Quine's, which treats apparent necessities as entrenched empirical generalisations."
+  },
+  {
+    "id": "kant-synthetic-a-priori",
+    "section": "the-innateness-question",
+    "question": "How does Kant explain our a priori knowledge of synthetic propositions such as \"every event has a cause\"?",
+    "options": [
+      "By a faculty of rational insight into a realm of abstract objects",
+      "By treating them as deeply entrenched empirical generalisations",
+      "By holding that they are true by convention, so knowing them requires only knowing the language",
+      "By holding that they describe the structure the mind contributes to any possible experience"
+    ],
+    "answer": 3,
+    "explanation": "Kant relocates the necessity into the conditions of experience, which is why his view is neither rationalism nor empiricism as either side had stated it. The rational-insight option is precisely the rationalist picture the article says he does not defend."
+  },
+  {
+    "id": "grounds-not-causes",
+    "section": "the-state-of-play",
+    "question": "The objection says every judgement is made by a brain shaped by experience, so the a priori is incoherent. What is the reply's central point?",
+    "options": [
+      "Some judgements, such as those of logic, have no causal history at all",
+      "A claim about what grounds a belief is not refuted by facts about what caused it",
+      "The brain is not shaped by experience where mathematics is concerned",
+      "Perceptual judgements escape the objection, so a priori ones must too"
+    ],
+    "answer": 1,
+    "explanation": "The rationalist never claimed that a priori judgements lack a causal history, only that experience is not among their grounds. The reply in fact turns the perception case against the objection: the genetic story would dissolve all justification if it worked, so it proves too much."
+  },
+  {
+    "id": "modest-a-priori",
+    "section": "the-state-of-play",
+    "question": "Which of these belongs to the \"modest a priori\" on which, according to the article, the field has largely settled?",
+    "options": [
+      "Substantive truths about the world can be known by pure reason",
+      "Logic and mathematics are well-confirmed empirical generalisations",
+      "A priori justification is defeasible rather than certain",
+      "The workings of a priori justification are now well understood"
+    ],
+    "answer": 2,
+    "explanation": "The modest view says there is justification independent of experience, covering logic, mathematics and conceptual truths, and that it can be defeated. It explicitly leaves the epistemology unclear, so the claim that its workings are understood gets the view backwards."
+  }
+]

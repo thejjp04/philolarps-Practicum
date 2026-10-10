@@ -1,0 +1,132 @@
+[
+  {
+    "id": "what-the-programme-adds",
+    "section": "the-programme",
+    "question": "What does accuracy-first epistemology offer that the Dutch book argument for probabilism does not?",
+    "options": [
+      "A proof that incoherent credences lose money however the world turns out",
+      "A justification that appeals only to closeness to the truth, the thing credences aim at",
+      "A way of deriving probabilism from all-or-nothing beliefs rather than credences",
+      "A justification that weighs accuracy against evidential support, treating both as basic values"
+    ],
+    "answer": 1,
+    "explanation": "The programme derives credal norms from accuracy alone, so incoherence is faulted for falling short of the truth rather than for being exploitable by a bookie. Weighing accuracy against evidential support is exactly what it refuses to do: accuracy is the only fundamental epistemic value, and every other norm has to earn its place by promoting it."
+  },
+  {
+    "id": "improper-rule-diagnosis",
+    "section": "measuring-accuracy",
+    "question": "A forecaster's credence in rain is 0.7, but under a certain scoring rule she expects, by her own lights, a better score if she announces 0.9. What does this show about the rule?",
+    "options": [
+      "It is strictly proper, because it rewards credences nearer the truth value",
+      "It shows that her credence of 0.7 is incoherent",
+      "Nothing is wrong with it: bolder credences score better whenever they turn out true",
+      "It is not strictly proper, so it rewards adopting credences other than one's own"
+    ],
+    "answer": 3,
+    "explanation": "A strictly proper rule makes every coherent credence function expect itself to do best, so a rule that tempts her towards 0.9 fails propriety. The thought that bolder is better ignores that she expects, by her own credence, to be wrong three times in ten; a rule that still favours 0.9 rewards dishonesty in a forecaster and incoherence in a thinker."
+  },
+  {
+    "id": "what-the-theorem-guarantees",
+    "section": "the-dominance-argument",
+    "question": "Your credences violate the probability axioms. What, exactly, does Joyce's theorem (as refined by Pettigrew) guarantee?",
+    "options": [
+      "Some coherent credence function is strictly more accurate than yours at every possible world",
+      "Every coherent credence function is more accurate than yours at the actual world",
+      "Some coherent credence function has lower expected inaccuracy than yours by your own lights",
+      "Some coherent credence function is more accurate than yours at the actual world, if not at others"
+    ],
+    "answer": 0,
+    "explanation": "The theorem is a dominance result: some coherent function beats yours however the world turns out, so you need not know which world is actual to know you could do better. It does not say every coherent function beats yours; most do not, which is why the argument needs a particular dominating function, such as the projection onto the coherent credences."
+  },
+  {
+    "id": "find-the-dominating-function",
+    "section": "a-worked-case",
+    "question": "You assign 0.8 to $A$ and 0.4 to $\\neg A$. Using the Brier score, which coherent credence function accuracy-dominates yours?",
+    "options": [
+      "$\\tfrac{2}{3}$ to $A$ and $\\tfrac{1}{3}$ to $\\neg A$, rescaling so the two sum to 1",
+      "0.8 to $A$ and 0.2 to $\\neg A$, keeping your credence in $A$ fixed",
+      "0.7 to $A$ and 0.3 to $\\neg A$, removing the excess equally from each",
+      "0.6 to $A$ and 0.4 to $\\neg A$, keeping your credence in $\\neg A$ fixed"
+    ],
+    "answer": 2,
+    "explanation": "The orthogonal projection onto the line $x + y = 1$ removes the excess of 0.2 equally, giving inaccuracy 0.18 against your 0.20 if $A$ is true and 0.98 against your 1.00 if $A$ is false. Rescaling to $\\tfrac{2}{3}$ and $\\tfrac{1}{3}$ looks like the natural repair, but if $A$ is true it scores about 0.22, worse than your 0.20, so it does not dominate."
+  },
+  {
+    "id": "source-of-unity",
+    "section": "beyond-probabilism",
+    "question": "According to the article, what gives the accuracy programme a unity that the Dutch book tradition lacked?",
+    "options": [
+      "Every norm is derived from the same decision rule, dominance, applied to different scoring rules",
+      "Every norm comes from the same value, accuracy, with a different decision rule for each",
+      "Every norm is derived from diachronic bets whose losses are counted in accuracy rather than money",
+      "Every norm is derived from a principle of indifference about priors"
+    ],
+    "answer": 1,
+    "explanation": "Probabilism comes from dominance, conditionalization from maximising expected accuracy, and indifference from minimising maximum inaccuracy, but the value is accuracy throughout. The first option inverts the picture: it is the decision rule that varies while the value stays fixed, whereas the Dutch book tradition needed a different kind of bet, with different assumptions, for each norm."
+  },
+  {
+    "id": "self-fulfilling-credence",
+    "section": "why-dominance",
+    "question": "Your credence that you will finish a marathon affects whether you finish. Which premise of the accuracy-dominance argument does a case like this put under pressure?",
+    "options": [
+      "The dominance principle, that it is irrational to choose an option beaten in every state",
+      "The value premise, that accuracy is the sole fundamental epistemic good of a credence function",
+      "The measurement premise, that accuracy is scored by a strictly proper rule",
+      "The mathematical premise, that incoherent credences are always dominated"
+    ],
+    "answer": 0,
+    "explanation": "Dominance reasoning is safe only when the choice leaves the state of the world fixed; if adopting a credence changes whether its proposition is true, comparing options world by world can mislead. The theorem itself is untouched, since it is pure mathematics, which is why the standard response restricts the programme's scope rather than revising the result."
+  },
+  {
+    "id": "separateness-of-propositions",
+    "section": "trade-offs",
+    "question": "Berker likens accuracy-first epistemology to a utilitarianism that ignores the separateness of persons. What feature of accuracy as a value makes the comparison apt?",
+    "options": [
+      "It is assessed only in expectation, so the actual truth values of propositions never matter",
+      "It squares errors, so it penalises large mistakes more than small ones",
+      "It applies only to credences, so individual beliefs drop out of view",
+      "It is summed across propositions, so a loss on one can be outweighed by gains on others"
+    ],
+    "answer": 3,
+    "explanation": "Because inaccuracy is totalled over propositions, the value in principle approves a credal change that worsens one credence if it improves enough others, just as summing welfare can approve sacrificing one person for many. Squaring errors is a feature of the Brier score in particular, and the worry would remain on any additive measure."
+  },
+  {
+    "id": "cousin-of-swamping",
+    "section": "trade-offs",
+    "question": "The article calls the trade-off problem a cousin of the swamping problem. What do the two problems have in common?",
+    "options": [
+      "Both show that strict propriety cannot be motivated independently of probabilism",
+      "Both arise only for reliabilist theories of justified belief",
+      "Both stem from veritism, on which truth is the only final epistemic value",
+      "Both show that a credence in a falsehood can never be rational"
+    ],
+    "answer": 2,
+    "explanation": "Swamping asks why a true belief's source matters if only truth has final value; the trade-off problem asks why the evidence for a particular belief matters beyond its contribution to total accuracy. Swamping is often pressed against reliabilism, but the article traces both problems to veritism itself, which is why accuracy-first epistemology inherits them."
+  },
+  {
+    "id": "propriety-circularity",
+    "section": "the-choice-of-scoring-rule",
+    "question": "What is the circularity worry about assuming that accuracy is measured by a strictly proper scoring rule?",
+    "options": [
+      "Strict propriety already builds in a tie between credences and expectations that looks like probabilism",
+      "Strict propriety can be motivated only by a Dutch book argument, the very thing it was meant to replace",
+      "Strict propriety holds only for the Brier score, so the argument rests on one arbitrary choice",
+      "Strict propriety presupposes conditionalization, which the programme justifies only later"
+    ],
+    "answer": 0,
+    "explanation": "A strictly proper rule makes coherent credences expect themselves to do best, and critics say assuming this comes close to assuming the probabilistic structure the argument set out to establish. The worry is not that the Brier score is singled out: the theorem holds for every strictly proper rule meeting mild continuity conditions."
+  },
+  {
+    "id": "coherence-as-constraint",
+    "section": "assessment",
+    "question": "Critics object that the dominance argument does not say which coherent credence function to adopt. How does the reply in the article defend the argument?",
+    "options": [
+      "By showing that the orthogonal projection is the uniquely rational function to adopt",
+      "By treating coherence as a constraint, like consistency, that leaves the choice to evidence",
+      "By arguing that any dominating coherent function is as rational as any other, whatever the evidence",
+      "By restricting the argument to a single proposition and its negation, where the dominating function is unique"
+    ],
+    "answer": 1,
+    "explanation": "Deductive logic tells you an inconsistent set contains a falsehood without saying which; the dominance argument likewise establishes only that rational credences must be coherent, leaving conditionalization and the principal principle to do the further work. The projection is one dominating function, not the one you must adopt, since your evidence may point elsewhere."
+  }
+]

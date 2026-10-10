@@ -1,0 +1,129 @@
+[
+  {
+    "id": "point-of-the-reversal",
+    "question": "Over the base theory, a theorem $T$ is proved from an axiom $A$, and $A$ is then proved from $T$. What does the second proof add?",
+    "options": [
+      "It shows that $T$ is true, which the first proof left open since $A$ might be false",
+      "It shows $A$ is needed, not just sufficient, so $T$ and $A$ have the same strength",
+      "It shows that $A$ is the strongest axiom from which $T$ can be proved",
+      "It shows that $T$ can be proved in the base theory alone, without $A$"
+    ],
+    "answer": 1,
+    "explanation": "Proving $T$ from $A$ only shows $A$ suffices; the reversal shows that any system proving $T$ over the base already has $A$, so $A$ is exactly what $T$ consumes. If $T$ were provable in the base theory, so would $A$ be, which is precisely what the choice of a weak base rules out."
+  },
+  {
+    "id": "rca-and-limits",
+    "section": "the-setting",
+    "question": "Why does the base theory RCA-zero fail to prove that every bounded increasing sequence of rationals converges?",
+    "options": [
+      "Because RCA-zero has no induction at all, and convergence proofs need induction",
+      "Because real numbers cannot be coded in second-order arithmetic, so the statement is unexpressed",
+      "Because such a sequence might be unbounded in some models of RCA-zero",
+      "A recursive such sequence can have a non-recursive limit"
+    ],
+    "answer": 3,
+    "explanation": "The intended model of RCA-zero has only the recursive sets, so a limit that is not recursive is simply missing there, and the statement fails in that model. RCA-zero does have induction for existential arithmetical formulas, and reals are coded as Cauchy sequences of rationals."
+  },
+  {
+    "id": "outside-the-coding",
+    "section": "the-setting",
+    "question": "Which of these lies outside the reach of reverse mathematics as described in the article?",
+    "options": [
+      "Arbitrary sets of reals",
+      "Continuous functions on closed intervals, coded by countable sets of rational approximations",
+      "Separable Banach spaces, which are coded by a countable dense subset of the space",
+      "Real numbers themselves, which would need uncountably many codes to represent"
+    ],
+    "answer": 0,
+    "explanation": "Everything in the framework must be coded by sets of natural numbers, and countable or separable objects can be, while an arbitrary set of reals cannot. Each real is coded by a single Cauchy sequence of rationals, so the reals are within reach even though there are uncountably many of them."
+  },
+  {
+    "id": "kleene-tree",
+    "section": "weak-königs-lemma",
+    "question": "How does Kleene's result show that weak König's lemma goes beyond RCA-zero?",
+    "options": [
+      "It shows that weak König's lemma is false in the standard natural numbers with all sets",
+      "It shows that weak König's lemma proves arithmetical sentences RCA-zero cannot prove",
+      "A recursive infinite binary tree with no recursive path defeats the lemma among recursive sets",
+      "It shows that weak König's lemma implies the existence of the Turing jump of every set"
+    ],
+    "answer": 2,
+    "explanation": "The natural numbers with exactly the recursive sets form a model of RCA-zero, and Kleene's tree has no path in it, so RCA-zero cannot prove the lemma. The lemma is true when all sets are present, and Harrington showed it adds no arithmetical theorems; the Turing jump belongs to the next level up."
+  },
+  {
+    "id": "wkl-conservative",
+    "section": "weak-königs-lemma",
+    "question": "Since WKL-zero is strictly stronger than RCA-zero, it proves some arithmetical sentences that RCA-zero does not.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Harrington showed WKL-zero is conservative over RCA-zero for arithmetical sentences: its extra strength is in set existence, not in what it says about numbers. Strength in one respect need not show up as new theorems in another."
+  },
+  {
+    "id": "completeness-as-a-path",
+    "section": "weak-königs-lemma",
+    "question": "Why is Gödel's completeness theorem for countable languages equivalent to weak König's lemma?",
+    "options": [
+      "The Henkin construction's choices of a formula or its negation trace a path through a binary tree",
+      "Because the completeness theorem needs the Turing jump to decide which formulas are consistent",
+      "Because completeness concerns uncountable models, which only weak König's lemma is able to provide",
+      "Because completeness is finitistically provable, and so is everything weak König's lemma proves"
+    ],
+    "answer": 0,
+    "explanation": "Building a maximal consistent extension means choosing, formula by formula, which of a pair to keep, and asserting that a consistent infinite sequence of such choices exists is asserting a path through a binary tree. The countable language matters: the models obtained are countable, and deciding consistency outright would need more than the lemma provides."
+  },
+  {
+    "id": "prime-versus-maximal",
+    "section": "arithmetical-comprehension",
+    "question": "Over RCA-zero, how do the existence of prime ideals and of maximal ideals in countable commutative rings compare?",
+    "options": [
+      "Both are equivalent to weak König's lemma, since each is a statement of the same compactness kind",
+      "Both are equivalent to arithmetical comprehension, since each asserts that an ideal exists",
+      "Prime ideals need arithmetical comprehension, and maximal ideals only weak König's lemma",
+      "Prime ideals need only weak König's lemma, while maximal ideals need arithmetical comprehension"
+    ],
+    "answer": 3,
+    "explanation": "Prime ideals sit on the list of compactness statements equivalent to weak König's lemma, while maximal ideals are equivalent to arithmetical comprehension. Two theorems taught side by side in algebra are separated by a genuine difference in strength."
+  },
+  {
+    "id": "what-bolzano-weierstrass-gives",
+    "section": "arithmetical-comprehension",
+    "question": "The Bolzano-Weierstrass theorem is equivalent to ACA-zero over the base theory. Which of these can then be proved from it over RCA-zero?",
+    "options": [
+      "Arithmetical transfinite recursion, the next system in the hierarchy",
+      "Comprehension for formulas containing one set quantifier",
+      "The existence of the Turing jump of any set",
+      "Only the statements equivalent to weak König's lemma, since that is all it needs"
+    ],
+    "answer": 2,
+    "explanation": "Equivalence means Bolzano-Weierstrass delivers arithmetical comprehension, and that proves the Turing jump exists. It delivers weak König's lemma too, so \"only\" is wrong, and the two systems above ACA-zero are strictly stronger, so it cannot reach them."
+  },
+  {
+    "id": "what-survives-the-objection",
+    "section": "arithmetical-comprehension",
+    "question": "The objection says the base theory is a stipulation and the coding covers only a fragment. On the reply, what survives both concessions?",
+    "options": [
+      "Hundreds of theorems fall into five linearly ordered levels, which no stipulation produces",
+      "The base theory turns out to be neutral after all, embodying no conception of what sets exist",
+      "The coding turns out to capture all of mathematics, including arbitrary sets of reals",
+      "The classification turns out to be exactly the same over every possible base theory whatever"
+    ],
+    "answer": 0,
+    "explanation": "The reply grants that the base embodies a conception and that coding is a real limit, then points to the pattern itself as a discovery about mathematics. It claims robustness only under the variations of base actually proposed, not over every possible base."
+  },
+  {
+    "id": "wkl-and-hilbert",
+    "section": "weak-königs-lemma",
+    "question": "What did Simpson's observation about WKL-zero suggest for Hilbert's programme?",
+    "options": [
+      "That the incompleteness theorems do not apply to WKL-zero, which is too weak to code its own proofs",
+      "That much of analysis is finitistically reducible, by conservativity over primitive recursive arithmetic",
+      "That WKL-zero proves its own consistency, and so meets Hilbert's demand directly",
+      "That the completeness theorem is unprovable by finitistic means, since it needs WKL"
+    ],
+    "answer": 1,
+    "explanation": "Conservativity over primitive recursive arithmetic for a suitable class of sentences means what WKL-zero proves there is finitistically reducible, so a large part of analysis is available on Hilbert's terms. The incompleteness theorems still apply, so WKL-zero does not prove its own consistency."
+  }
+]

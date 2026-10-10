@@ -1,0 +1,127 @@
+[
+  {
+    "id": "teleological-vs-cosmological",
+    "section": "the-family",
+    "question": "Which of these is true of teleological arguments but not of the cosmological arguments of the previous article?",
+    "options": [
+      "They can be defeated by a better explanation of the feature they start from",
+      "They aim at something less specific than a first cause, such as an ordering force",
+      "They start from the bare existence of the universe",
+      "They argue by demonstration from concepts rather than by probability"
+    ],
+    "answer": 0,
+    "explanation": "Starting from a particular feature, such as order or suitability for life, exposes them to a rival explanation of that feature, which a cosmological argument does not face. They aim at something more specific than a first cause, an intelligence with purposes, so the second option reverses the contrast."
+  },
+  {
+    "id": "darwin-removed-the-premise",
+    "section": "the-argument-from-contrivance",
+    "question": "Hume had criticised the argument from design before Paley wrote. Why, on the article's account, did Darwin's work do what Hume's objections had not?",
+    "options": [
+      "Darwin showed that organisms are unlike machines, since they grow, repair themselves and reproduce",
+      "Darwin showed that we have no sample of universes and their origins from which to generalise",
+      "Hume weakened the inference; Darwin gave a working alternative explanation, removing its premise",
+      "Darwin explained why there are laws under which variation and selection produce anything at all"
+    ],
+    "answer": 2,
+    "explanation": "A mechanism that produces the appearance of contrivance without contrivance, in the very cases the argument used, takes away its starting point. Darwin did not explain why there are such laws at all, and that untouched question is exactly where the modern version of the argument moved."
+  },
+  {
+    "id": "fine-tuned-term-of-art",
+    "section": "the-argument-from-the-constants",
+    "question": "When physicists call a parameter fine-tuned, they mean that something set its value on purpose.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "In physics the phrase means only that outcomes are highly sensitive to small changes in the parameter. The design argument has to earn the conclusion that anyone tuned it, and cannot borrow it from the word."
+  },
+  {
+    "id": "observation-selection-objection",
+    "section": "observers-and-what-they-can-observe",
+    "question": "What does the observation-selection objection, as pressed by Sober, claim about the fine-tuning evidence?",
+    "options": [
+      "Life-permitting values are improbable on the design hypothesis, but not on the chance hypothesis",
+      "Fine-tuning is not taken seriously within physics, so the theological argument has no premise",
+      "The values are better explained by a multiverse, in which every combination of values turns up somewhere or other",
+      "We could only observe life-permitting values, so the observation is guaranteed whichever hypothesis is true"
+    ],
+    "answer": 3,
+    "explanation": "If both likelihoods go to one once selection is accounted for, the evidence cannot favour design over chance. The multiverse is a separate reply; this objection works without positing any other universes at all."
+  },
+  {
+    "id": "firing-squad-counter",
+    "section": "observers-and-what-they-can-observe",
+    "question": "Leslie's firing squad suggests that surviving fifty marksmen calls for explanation even though you could only observe your survival. What is the counter to this reply?",
+    "options": [
+      "That surviving a firing squad calls for no explanation, since you could not have observed otherwise",
+      "That it relies on background knowledge about marksmen and misses, which the cosmic case lacks",
+      "That observation selection neutralises every surprising observation whatever its background",
+      "That the firing-squad reasoning itself commits the inverse gambler's fallacy"
+    ],
+    "answer": 1,
+    "explanation": "We know marksmen exist, rarely miss, and are sometimes arranged to miss, and that background supports suspecting a deliberate miss. The first option is the conclusion the firing squad was built to make look obtuse; the counter grants the squad case and disputes its transfer to universes."
+  },
+  {
+    "id": "weak-anthropic-not-explanation",
+    "section": "observers-and-what-they-can-observe",
+    "question": "On the article's account, what does the weak anthropic principle explain?",
+    "options": [
+      "Why our observation came out as it did, given the values, not why the values are so",
+      "Why the values of the constants are what they are, rather than some other values",
+      "Why the universe must be such as to admit the creation of observers somewhere within it",
+      "Nothing at all, because on reflection the weak principle turns out to be false"
+    ],
+    "answer": 0,
+    "explanation": "The principle is true and accounts for the selection in our observations, but it does not touch the question of why the constants have life-permitting values. That the universe must admit observers is the strong version, which Carter himself read as another observational bias rather than a cosmic requirement."
+  },
+  {
+    "id": "two-disputes-are-one",
+    "section": "many-universes",
+    "question": "Why does the article call it unstable to accept the multiverse reply to the inverse gambler's fallacy while rejecting Sober's objection to the design argument?",
+    "options": [
+      "Because the inverse gambler's fallacy applies only to casinos and not to universes",
+      "Because the multiverse was invented to escape the design argument, so it begs the question",
+      "Because the multiverse reply uses the very observation-selection reasoning Sober's objection uses",
+      "Because the measure problem makes both positions incoherent, whatever one says about observation selection"
+    ],
+    "answer": 2,
+    "explanation": "The reply says we are not a random draw, since we could only find ourselves in a life-permitting universe, which is exactly Sober's premise. Whoever accepts that reasoning for one purpose cannot reject it for the other; the ad hoc charge is one the article explicitly says is not available, since multiverse proposals come from independent physics."
+  },
+  {
+    "id": "no-distribution-for-either-side",
+    "section": "the-problem-of-assigning-the-probability",
+    "question": "The objection that no probability distribution can be defined over unbounded ranges is usually pressed against the theist. Why is it equally awkward for the confident atheist?",
+    "options": [
+      "Because the atheist must then assume that the multiverse exists",
+      "Because restricting the ranges on physical grounds always favours the design hypothesis",
+      "Because the weak anthropic principle itself requires a probability distribution",
+      "Because saying the values are unremarkable also requires a distribution that nobody has"
+    ],
+    "answer": 3,
+    "explanation": "A claim that the values are unsurprising is as much a probability claim as the claim that they are surprising, so it inherits the same problem. The defensible verdict for both sides is that the probabilities are not well defined, which calls for less confidence all round rather than handing anyone a victory."
+  },
+  {
+    "id": "not-a-classic-gap",
+    "section": "the-problem-of-assigning-the-probability",
+    "question": "According to the aside, what distinguishes the fine-tuning case from earlier arguments that pointed at what was then unexplained?",
+    "options": [
+      "It appeals to phenomena that current physics cannot explain",
+      "It points at the known parameters of current theory and the worked-out consequences of varying them",
+      "It has been confirmed by the failure of deeper theories to fix the constants",
+      "It claims no improbability at all, only a pattern"
+    ],
+    "answer": 1,
+    "explanation": "This is an appeal to a feature of what is known, not to ignorance about a phenomenon. The article treats the hope for a deeper theory as open, sometimes vindicated and sometimes not, so the absence of one so far does not confirm the argument."
+  },
+  {
+    "id": "painted-target-reply",
+    "section": "the-problem-of-assigning-the-probability",
+    "question": "The objection says the target was painted after the shot: any values would have yielded some observers who found their own window narrow. How does the reply answer it?",
+    "options": [
+      "By denying that any other values could produce observers, at least of our own biological kind",
+      "By granting that the window is defined by pointing at ourselves, but calling that harmless",
+      "By arguing that many variations yield no stable complex structure at all, so the window is not set by us",
+      "By noting that most of the universe is empty and hostile to life, which no designer aiming at life would allow"
+    ],
+    "answer": 2,
+    "explanation": "Without stable nuclei, stars, or condensed structure there is nothing complex to notice anything, so the narrowness is not an artefact of where we stand. Focusing on observers of our biological kind would concede the objection's point; the reply then qualifies its own answer as physics not established with full confidence."
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "id": "denying-numbers",
+    "section": "the-answer-nobody-disputes",
+    "question": "A philosopher says that numbers do not exist. What exactly is she denying?",
+    "options": [
+      "That everything exists, which is the one general answer that nobody else disputes",
+      "That numbers are among the everything, the things there are",
+      "That mathematicians can talk meaningfully about numbers at all",
+      "That numbers can be detected by observation, as wolves and buses can"
+    ],
+    "answer": 1,
+    "explanation": "Both sides accept that everything exists; the disagreement is over whether numbers are among the everything, which is why the general question never does the work. The last option confuses the question with a question about observation, though the article says ontology is not decided by looking."
+  },
+  {
+    "id": "not-a-real-vermeer",
+    "section": "existing-being-real-and-being-talked-about",
+    "question": "An art dealer says, \"This is not a real Vermeer.\" What is she most likely denying?",
+    "options": [
+      "That the painting is by Vermeer, real as against forged, while granting the painting exists",
+      "That the painting exists at all, since what is not real is not among the things there are",
+      "That Vermeer himself existed, since a real Vermeer needs a real painter",
+      "That the painting can be talked about, since only real things can be described"
+    ],
+    "answer": 0,
+    "explanation": "\"Real\" takes its meaning from a contrast, here genuine as against counterfeit, and the forgery hanging on the wall plainly exists. Reading \"not real\" as \"does not exist\" is the confusion the article warns about: arguments in the vocabulary of realness often turn on which contrast is in play."
+  },
+  {
+    "id": "holmes-scholarship",
+    "section": "existing-being-real-and-being-talked-about",
+    "question": "\"Critics have written whole books on Sherlock Holmes's methods, so Holmes must be among the things there are.\" What is wrong with this reasoning?",
+    "options": [
+      "It confuses being real, as against counterfeit, with merely being genuine",
+      "Nothing: whatever can be described and argued over must be among the things there are",
+      "It moves from Holmes being available to talk about to Holmes existing",
+      "It treats a denial of existence as though it were an existence claim"
+    ],
+    "answer": 2,
+    "explanation": "Holmes can be described, argued over and distinguished from Poirot without being among the things there are, and the slide from \"we can talk about it\" to \"it exists\" is the most common error in the area. The second option endorses exactly that slide, which is what produces the tangle of Plato's beard."
+  },
+  {
+    "id": "denials-are-existence-claims",
+    "section": "existence-claims",
+    "question": "\"There is no largest prime\" is a denial, so it is not an existence claim.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Denials are existence claims too: this one says what the world of numbers does not contain. Existence claims are identified by what they assert about whether there is anything of a kind, not by whether the verdict is positive."
+  },
+  {
+    "id": "average-family-move",
+    "section": "existence-claims",
+    "question": "\"The average British family has 1.8 children\" seems to commit its speaker to an average family. What does the article take to be the right response?",
+    "options": [
+      "Accept average families onto the list, since the sentence is true and appears to mention one",
+      "Reject the sentence as false, since no family anywhere has a fractional child",
+      "Treat the sentence as meaningless, since it seems to describe an impossible object",
+      "Rewrite it as a claim about the ratio of children to families, which removes the commitment"
+    ],
+    "answer": 3,
+    "explanation": "The sentence is a compressed report about a ratio, and rewriting it removes the appearance of commitment without changing what is said. Rejecting it as false is the tempting mistake: the sentence is true, and the point of the rewriting is to show that its truth never required an average family."
+  },
+  {
+    "id": "meinong-golden-mountain",
+    "section": "being",
+    "question": "On Meinong's view, what is true of the golden mountain?",
+    "options": [
+      "It has being and properties, being golden and a mountain, but it lacks existence",
+      "It exists, since anything that has properties must be among the things there are",
+      "It has neither being nor properties, since it is simply nothing at all",
+      "It is a property, being a golden mountain, which nothing happens to have"
+    ],
+    "answer": 0,
+    "explanation": "Meinong keeps being and existence apart, so there are objects, like the golden mountain, that have properties and simply fail to exist. The last option is the rival, standard modern answer, on which talk of the golden mountain is talk of a property that nothing has, with no non-existent object required."
+  },
+  {
+    "id": "burden-on-existence-claims",
+    "section": "what-ontology-is-not",
+    "question": "An objector says that if the parties to a dispute agree on every observation, the dispute is only about how to talk. What does the reply in the article concede to the objector?",
+    "options": [
+      "That ontological disputes are verbal whenever no observation could settle them",
+      "That mathematicians who agree on every calculation cannot really disagree about numbers",
+      "That anyone defending an existence claim owes an account of what turns on it",
+      "That Carnap was right to treat questions about numbers as a choice of language"
+    ],
+    "answer": 2,
+    "explanation": "The reply denies that agreement on observations makes a question empty, but grants that it imposes a burden: the defender of an existence claim must show what turns on it. The second option reverses the reply, which uses mathematicians' disagreement about discovery and construction as evidence that such disputes are substantive."
+  }
+]

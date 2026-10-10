@@ -35,6 +35,8 @@ Anyone who has seen a modal system will recognise the shape. The first condition
 The study of the principles governing the formalised provability predicate of a theory of arithmetic, conducted in a modal language whose box is read as "is provable in the theory". The field is distinguished from modal logic generally by the fact that its intended reading is a single fixed predicate rather than a family of informal notions, so that the question of which principles are correct has a determinate answer.
 </Definition>
 
+<Check id="rule-not-axiom" />
+
 ## The axiom that is missing
 
 The obvious candidate for a further axiom is the one every system of necessity has: $\Box A \rightarrow A$, provable things are true. It is the characteristic axiom of system T and it is in system S4 alongside the $\mathsf{4}$ axiom already present, so if provability behaved like necessity in the familiar way, S4 would be the answer.
@@ -50,6 +52,8 @@ The theorem answers a question Henkin raised in 1952. Gödel's sentence says of 
 The proof is a diagonal argument with one moving part. Suppose Peano arithmetic proves $\Box A \rightarrow A$. Apply the diagonal lemma to obtain a sentence $\psi$ for which the theory proves $\psi \leftrightarrow (\Box \psi \rightarrow A)$. From $\psi$ and the derivability conditions, the theory can derive $\Box \psi \rightarrow \Box(\Box \psi \rightarrow A)$, hence $\Box \psi \rightarrow (\Box \Box \psi \rightarrow \Box A)$, and since $\Box \psi \rightarrow \Box \Box \psi$ is the third condition, $\Box \psi \rightarrow \Box A$. Chaining with the assumed reflection gives $\Box \psi \rightarrow A$, which is $\psi$. So $\psi$ is proved outright, so $\Box \psi$ is proved, and $A$ follows.
 
 Set $A$ to a contradiction and the second incompleteness theorem falls out in a line. The consistency statement is $\neg \Box \bot$, which is $\Box \bot \rightarrow \bot$, an instance of reflection. If the theory proved it, Löb's theorem would hand over $\bot$. A consistent theory therefore does not prove its own consistency, and the usual construction of a Gödel sentence is not needed to see it.
+
+<Check id="reflection-for-the-unprovable" />
 
 ## The system
 
@@ -100,6 +104,8 @@ The objection is right about the reading and wrong about the value of the notati
 <Aside title="A question and a better answer">
 Henkin's problem appeared as a note in the Journal of Symbolic Logic in 1952 and asked only whether a sentence asserting its own provability is provable. Löb's answer, published in the same journal in 1955, proves the general reflection result and settles the question as an afterthought: the Henkin sentence is provable, because it is of the form $\Box A \rightarrow A$ with $A$ the sentence itself. The pattern of a narrow question answered by a much more general theorem recurs in the area, and the resulting theorem has outlived the question by a wide margin.
 </Aside>
+
+<Check id="what-solovay-proved" />
 
 ## Next
 

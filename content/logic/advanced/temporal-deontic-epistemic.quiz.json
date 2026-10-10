@@ -1,0 +1,130 @@
+[
+  {
+    "id": "sea-battle-readings",
+    "section": "temporal-logic",
+    "question": "At a branching moment, tomorrow's sea battle happens on some branches and not others. On which reading does \"either it will be that there is a battle, or it will be that there is none\" fail?",
+    "options": [
+      "The Ockhamist reading, which evaluates relative to a selected branch",
+      "The Peircean reading, which requires truth on every branch",
+      "Both readings, since the battle is a future contingent either way",
+      "Neither reading, since excluded middle is a theorem of tense logic"
+    ],
+    "answer": 1,
+    "explanation": "On the Peircean reading each future-tensed disjunct needs truth on all branches, and neither has it, so the disjunction fails. Relative to any selected branch the battle either happens or not, so the Ockhamist reading keeps the disjunction true."
+  },
+  {
+    "id": "future-four-axiom",
+    "section": "temporal-logic",
+    "question": "Reading the box as \"it will always be the case that\", which frame condition validates $\\Box p \\rightarrow \\Box\\Box p$?",
+    "options": [
+      "Transitivity of the earlier-than relation",
+      "Density of the earlier-than relation",
+      "Linearity of the earlier-than relation",
+      "Reflexivity of the earlier-than relation on times"
+    ],
+    "answer": 0,
+    "explanation": "If $p$ holds at every later time, and any time later than a later time is itself later, then at every later time $p$ will always hold. Density validates a different schema, and linearity is what separates linear from branching time."
+  },
+  {
+    "id": "seriality-not-reflexivity",
+    "section": "deontic-logic",
+    "question": "Why does standard deontic logic include $\\Box p \\rightarrow \\Diamond p$ but not $\\Box p \\rightarrow p$?",
+    "options": [
+      "What ought to be is in fact the case, but what is permitted need not be",
+      "Every permission is also an obligation, so the two must be kept apart",
+      "The obligations must be jointly satisfiable, but what ought to be need not be",
+      "Ideal worlds must access themselves, though the actual world need not do so"
+    ],
+    "answer": 2,
+    "explanation": "Seriality guarantees some deontically acceptable alternative, so whatever is obligatory is permitted. Reflexivity would make every obligation fulfilled, which is precisely what an ought claim does not guarantee."
+  },
+  {
+    "id": "ross-paradox-source",
+    "section": "deontic-logic",
+    "question": "From an obligation to post the letter, standard deontic logic derives an obligation to post it or burn it. Which feature of the system is responsible?",
+    "options": [
+      "Seriality, which guarantees that some deontically ideal alternative exists",
+      "The absence of reflexivity, which lets obligations go unfulfilled",
+      "The D axiom, which says that whatever is obligatory is also permitted",
+      "Closure of the box under logical consequence"
+    ],
+    "answer": 3,
+    "explanation": "Posting entails posting or burning, and a normal box is closed under consequence, so the disjunctive obligation follows. The same closure produces the good Samaritan paradox, and neighbourhood semantics treats both by dropping it."
+  },
+  {
+    "id": "chisholm-structural-failure",
+    "section": "deontic-logic",
+    "question": "What goes wrong when Chisholm's contrary-to-duty set is formalised in standard deontic logic?",
+    "options": [
+      "Every scoping of the conditional obligations leaves the set inconsistent or a premise redundant",
+      "The set is genuinely inconsistent, so every faithful formalisation of it must be too",
+      "SDL has no conditional connective of its own, so the two conditional obligations cannot be written down",
+      "The set needs reflexivity, which SDL deliberately omits from its frames"
+    ],
+    "answer": 0,
+    "explanation": "Putting the obligation inside or outside each conditional produces one of two defects, and no assignment of scopes avoids both. The English set is consistent and its premises independent, so the fault lies with the formal system."
+  },
+  {
+    "id": "preference-semantics-parallel",
+    "section": "deontic-logic",
+    "question": "The preference semantics reads \"if $A$, it ought to be that $B$\" as true when $B$ holds at the best $A$-worlds. Which semantics is it exactly parallel to?",
+    "options": [
+      "Kripke semantics for intuitionistic logic, with betterness as growth of information",
+      "Neighbourhood semantics, with the best worlds forming a neighbourhood",
+      "The Stalnaker-Lewis semantics, with betterness in place of similarity",
+      "Adams' thesis, with betterness in place of conditional probability"
+    ],
+    "answer": 2,
+    "explanation": "The counterfactual is true when the consequent holds at the closest antecedent worlds; the conditional obligation, when it holds at the best ones. The ordering changes from similarity to betterness and the structure stays the same."
+  },
+  {
+    "id": "negative-introspection-violation",
+    "section": "epistemic-logic",
+    "question": "An agent does not know $p$, and does not know that she does not know it. Which principle does her state violate?",
+    "options": [
+      "Factivity, which corresponds to reflexivity of the relation",
+      "Positive introspection, which corresponds to transitivity",
+      "Consistency of knowledge, which corresponds to seriality of the relation",
+      "Negative introspection, which corresponds to the euclidean condition"
+    ],
+    "answer": 3,
+    "explanation": "Negative introspection says that not knowing implies knowing that one does not know, and her state is a counterexample. Most epistemologists reject the principle, which is why S5 is reserved for idealised agents."
+  },
+  {
+    "id": "omniscience-needs-new-semantics",
+    "section": "epistemic-logic",
+    "question": "Why can't logical omniscience be removed simply by dropping an axiom, as positive introspection can?",
+    "options": [
+      "Omniscience follows from negative introspection, which every S5 model validates",
+      "Every relational model validates necessitation and distribution, whatever the frame",
+      "Omniscience follows from factivity, which no account of knowledge can give up",
+      "Distribution is the only axiom involved, and no logic of knowledge can afford to drop it"
+    ],
+    "answer": 1,
+    "explanation": "Positive introspection corresponds to a frame condition and goes when the condition goes, but necessitation and distribution hold on every frame. So every remedy changes the semantics: impossible worlds, neighbourhood models, awareness structures or resource-bounded derivability."
+  },
+  {
+    "id": "common-knowledge-closure",
+    "section": "epistemic-logic",
+    "question": "How is common knowledge characterised in multi-agent modal semantics?",
+    "options": [
+      "Knowledge along the transitive closure of the agents' accessibility relations",
+      "Knowledge along the intersection of the agents' accessibility relations",
+      "Knowledge along the union of the agents' relations, taken one step at a time",
+      "Knowledge held by each agent separately, along that agent's own relation"
+    ],
+    "answer": 0,
+    "explanation": "Common knowledge is the infinite conjunction of everyone knows, everyone knows that everyone knows, and so on, which amounts to truth at every world reachable by any finite chain of the agents' relations. One step along the union gives only \"everyone knows\", which is the tempting mistake."
+  },
+  {
+    "id": "moore-announcement",
+    "section": "epistemic-logic",
+    "question": "In dynamic epistemic logic, a true sentence always remains true after it has been publicly announced.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "A Moore sentence such as \"$p$, and you do not know that $p$\" can be true, but once announced the hearer knows $p$, so its second conjunct becomes false. Announcement changes the epistemic state the sentence describes."
+  }
+]

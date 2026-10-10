@@ -1,0 +1,93 @@
+[
+  {
+    "id": "duty-about-not-owed-to",
+    "section": "mattering-for-ones-own-sake",
+    "question": "Someone holds that it is wrong to vandalise a village chapel solely because the villagers who cherish it would be distressed. On the article's distinction, what has she claimed?",
+    "options": [
+      "That the chapel has moral status, since it matters to the people near it",
+      "A duty about the chapel, owed to the villagers rather than to the chapel",
+      "That the chapel is a moral patient, since it is the thing being damaged",
+      "Nothing coherent, since only beings with moral status can ground duties"
+    ],
+    "answer": 1,
+    "explanation": "Her reasons are all about the villagers, so the duty concerns the chapel without being owed to it, like the reasons not to smash a stranger's window. Saying the chapel has status would require that it matter for its own sake, which she has not claimed."
+  },
+  {
+    "id": "newborn-patient-not-agent",
+    "section": "two-roles-often-confused",
+    "question": "On the article's definitions, what is a newborn?",
+    "options": [
+      "A moral patient but not a moral agent, since it can be wronged",
+      "A moral agent but not yet a moral patient, since it has interests",
+      "Neither, until it acquires the capacity for rationality later on",
+      "Both, since every human being is at once an agent and a patient"
+    ],
+    "answer": 0,
+    "explanation": "A newborn cannot recognise and act on moral reasons, so it is not an agent, but it would be monstrous to say it cannot be wronged. The last option is the ordinary assumption the article warns against: the two roles coincide in competent adults and come apart elsewhere."
+  },
+  {
+    "id": "regan-test-rationality",
+    "section": "two-roles-often-confused",
+    "question": "Someone proposes that moral status is grounded in the ability to make plans for one's own future. What does Regan's test say about this proposal?",
+    "options": [
+      "It passes, since every animal that lacks the ability also lacks status",
+      "It passes, provided most members of the species have that ability",
+      "It fails, since some humans who plainly have status lack the ability",
+      "It fails, since many animals have that ability and would gain status"
+    ],
+    "answer": 2,
+    "explanation": "Whatever is proposed as the ground of status must be possessed by every human being who obviously has status, and planning fails that test. The species-typical version in the second option is a different criterion, and the article lists it separately with its own difficulty."
+  },
+  {
+    "id": "harm-without-suffering",
+    "section": "what-the-modest-capacities-are",
+    "question": "A man's business partner secretly cheats him out of his share for years. He never finds out and lives contentedly. On Feinberg's analysis of harm, has he been harmed?",
+    "options": [
+      "No, since harm requires an experience that feels bad to the one harmed",
+      "No, since being cheated wrongs him without making him worse off at all",
+      "Only if he later finds out and suffers some distress as a result of it",
+      "Yes, since his interests were set back even though he never suffered"
+    ],
+    "answer": 3,
+    "explanation": "Harm is a setback to interests, and the article notes that a person deceived about something that matters to them has been harmed without suffering. The first option is the tempting one, but it equates harm with pain, which the article separates."
+  },
+  {
+    "id": "scalar-view-pressure",
+    "section": "what-the-modest-capacities-are",
+    "question": "What is the standing difficulty for the scalar view of moral status, on the article's account?",
+    "options": [
+      "It forces a sharp line across capacities that in fact vary continuously",
+      "Applied within our own species, it yields verdicts almost all reject",
+      "It cannot say where its threshold lies, or why it lies just there",
+      "It implies that saving a person rather than a mouse is a close call"
+    ],
+    "answer": 1,
+    "explanation": "If status comes in degrees, the same reasoning applied to humans with simpler mental lives produces conclusions almost everyone rejects, and the view must explain why the gradations stop at the species boundary. The sharp line is the all-or-nothing view's cost, and the threshold problem belongs to the threshold view."
+  },
+  {
+    "id": "potential-must-explain",
+    "section": "the-candidates-in-outline",
+    "question": "A view grounds moral status in the potential to develop sophisticated capacities. What must it explain, on the article's account?",
+    "options": [
+      "Why potentially having a status-conferring property gives status now",
+      "Why infants and embryos lack sophisticated capacities at present",
+      "Why sentience would extend moral status to most vertebrate animals",
+      "Why species membership is merely a biological classification"
+    ],
+    "answer": 0,
+    "explanation": "A potential doctor is not currently a doctor, so the view owes an account of why a potential possessor of the relevant capacity has the status already. That infants lack the capacities is the fact that motivates the view, not something it has to explain."
+  },
+  {
+    "id": "status-not-one-thing",
+    "section": "the-candidates-in-outline",
+    "question": "The reply concedes that moral status may not be one thing. What possibility does that concession open up?",
+    "options": [
+      "That status could be detected without regard to what a being is like",
+      "That biological facts alone could settle which beings have status",
+      "That a being has a claim not to suffer but none against painless killing",
+      "That every being with interests counts exactly as much as any other"
+    ],
+    "answer": 2,
+    "explanation": "If different protections rest on different grounds, a being could have some protections without others, which a single yes-or-no question about status closes off. Detecting status apart from what a being is like is what the reply calls a misunderstanding of the concept."
+  }
+]

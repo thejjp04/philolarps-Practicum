@@ -1,0 +1,130 @@
+[
+  {
+    "id": "schema-not-definition",
+    "section": "what-would-count-as-a-definition-of-truth",
+    "question": "Tarski treated the T-schema as an adequacy condition rather than a definition of truth. Why can it not serve as the definition?",
+    "options": [
+      "Some of its instances are false, so it would need restricting before it could define anything",
+      "It is an infinite list of instances stating no general condition, so it is silent on unlisted sentences",
+      "It uses the very sentence it defines truth for on its right-hand side, so any definition built from it is circular",
+      "Its instances hold only for sentences without quantifiers, so it cannot reach the whole language"
+    ],
+    "answer": 1,
+    "explanation": "A definition must be a finite account entailing every instance; the schema just is the instances. Using the sentence on the right is not circularity but the feature that makes instances indisputable, since nothing is said about the sentence there."
+  },
+  {
+    "id": "what-undefinability-says",
+    "section": "the-theorem",
+    "question": "Which of these does Tarski's undefinability theorem establish?",
+    "options": [
+      "No formula of arithmetic defines arithmetical truth, though a richer language can",
+      "Truth cannot be defined in any formal language whatever, however rich it may be",
+      "With enough extra axioms, arithmetic could come to define its own truth predicate",
+      "Arithmetical truth is undefinable because Peano arithmetic is an incomplete theory"
+    ],
+    "answer": 0,
+    "explanation": "Set theory defines truth for arithmetic without difficulty; what fails is a language defining truth for itself. Because the theorem concerns definability in a language rather than the strength of a theory, no addition of axioms touches it."
+  },
+  {
+    "id": "diagonalise-what",
+    "section": "the-theorem",
+    "question": "Suppose a formula $T(x)$ of arithmetic held of exactly the codes of true sentences. Applying the diagonal lemma to which formula yields the contradiction?",
+    "options": [
+      "$T(x)$ itself",
+      "The provability formula Prov$(x)$",
+      "$\\neg T(x)$",
+      "The negation of Prov$(x)$"
+    ],
+    "answer": 2,
+    "explanation": "Diagonalising $\\neg T(x)$ gives a sentence $\\lambda$ true just when $T(\\ulcorner \\lambda \\urcorner)$ is false, while $T$'s job makes $T(\\ulcorner \\lambda \\urcorner)$ true just when $\\lambda$ is: the liar. Diagonalising $T(x)$ yields a truth-teller, consistent with either value, and the negated provability formula yields Gödel's sentence instead."
+  },
+  {
+    "id": "incompleteness-from-undefinability",
+    "section": "incompleteness-seen-from-above",
+    "question": "Incompleteness follows from undefinability: provability is definable in arithmetic, truth is not, so they differ. What does this short route need, or lack, compared with Gödel's proof?",
+    "options": [
+      "It needs omega-consistency, an assumption that Gödel's own proof managed to avoid",
+      "It shows only that some falsehood is provable, not that some truth is unprovable",
+      "It works only for theories whose axioms are not recursively axiomatised",
+      "It assumes all theorems are true, and does not say which truth goes unproved"
+    ],
+    "answer": 3,
+    "explanation": "Two different sets, with the provable sentences all true, leave some truth unprovable, but nothing identifies it, and the premise is the semantic notion of arithmetical truth. Gödel's argument is syntactic throughout and hands over a specific sentence; it was Gödel's version, not this one, that originally assumed omega-consistency."
+  },
+  {
+    "id": "why-essentially-richer",
+    "section": "the-hierarchy",
+    "question": "Tarski requires the metalanguage to contain the object language, to contain its syntax, and to be essentially richer. Which requirement is the undefinability theorem restated as a design constraint?",
+    "options": [
+      "Being essentially richer, since a metalanguage no richer would define truth for itself",
+      "Containing the syntax, since otherwise the left-hand sides could not name any sentences",
+      "Containing the object language, since otherwise the right-hand sides could not be stated",
+      "All three equally, since dropping any one of them would let the liar be constructed"
+    ],
+    "answer": 0,
+    "explanation": "Translation supplies the right-hand sides and syntax supplies the names on the left; these make T-sentences statable at all. Only the demand for greater richness answers to the theorem: a language cannot define its own truth, so the definition must come from something stronger."
+  },
+  {
+    "id": "why-a-fixed-point-exists",
+    "section": "fixed-points",
+    "question": "Why is Kripke's stage-by-stage construction guaranteed to reach a fixed point?",
+    "options": [
+      "The language has countably many sentences, so the process stops after finitely many stages",
+      "Each stage assigns a value to every sentence, so the later stages have nothing left to change",
+      "It never retracts: what is settled at one stage stays settled, so it only adds",
+      "Self-referential sentences are excluded at the outset, so nothing is left to oscillate"
+    ],
+    "answer": 2,
+    "explanation": "A process on sets that only ever adds must stop growing if run far enough, though reaching the fixed point may take transfinitely many stages, not finitely many. Self-reference is not excluded; the liar is simply never settled."
+  },
+  {
+    "id": "liar-versus-truth-teller",
+    "section": "fixed-points",
+    "question": "How do the liar and the truth-teller differ on Kripke's account?",
+    "options": [
+      "The truth-teller is grounded, since its value traces back to itself, and the liar is not",
+      "The truth-teller is true at the minimal fixed point, while the liar has no value there",
+      "They do not differ, since each of them is valueless at every fixed point there is",
+      "Some fixed points make the truth-teller true and others false; none gives the liar a value"
+    ],
+    "answer": 3,
+    "explanation": "Neither is settled by the minimal construction, since each waits on its own value, but assigning the truth-teller either value is consistent and assigning the liar one is not. Both are ungrounded; the further fixed points show that the truth-teller's lack of a value is not inconsistency."
+  },
+  {
+    "id": "schema-at-fixed-points",
+    "section": "fixed-points",
+    "question": "At a Kripke fixed point, every instance of the T-schema biconditional is itself a true sentence of the object language.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "A sentence and the claim that it is true always share a semantic value, but for an ungrounded sentence both are valueless, and so is the biconditional between them on the scheme used. The equivalence holds at the level of value, not of what the language asserts."
+  },
+  {
+    "id": "revenge-concession",
+    "section": "the-strengthened-liar",
+    "question": "Kripke's construction leaves the liar without a value, so the liar is not true, which is what it says. What does the escape from this strengthened liar concede?",
+    "options": [
+      "That \"has no value\" and \"grounded\" belong to a metalanguage",
+      "That the liar does become true at some later transfinite stage of the construction",
+      "That the object language cannot contain its own truth predicate after all",
+      "That the T-schema has to be abandoned for the grounded sentences as well"
+    ],
+    "answer": 0,
+    "explanation": "The sentence saying the liar is not true is in the metalanguage where the fixed point is described; if the object language could express it, the construction would break. The object language keeps its own truth predicate, but not its own account of that predicate: the ghost of the hierarchy."
+  },
+  {
+    "id": "watergate-lesson",
+    "section": "what-the-alternatives-trade",
+    "question": "According to the reply to the objection, what does Kripke's Watergate example show?",
+    "options": [
+      "That English is a formal language after all, so Tarski's theorem applies to it quite directly",
+      "That contingent facts can decide whether a paradox arises, so syntax cannot screen it out",
+      "That a paradox can arise only when some sentence explicitly names itself",
+      "That English lacks a truth predicate that applies to its own sentences, as Tarski feared"
+    ],
+    "answer": 1,
+    "explanation": "Two speakers' remarks about each other turn paradoxical or harmless depending on what was actually said, so the dangerous sentences are not syntactically distinctive. The reply concedes that English is not formal and argues that the trouble does not come from formality."
+  }
+]

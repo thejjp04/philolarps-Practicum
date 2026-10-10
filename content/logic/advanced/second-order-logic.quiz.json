@@ -1,0 +1,130 @@
+[
+  {
+    "id": "schema-versus-axiom",
+    "section": "the-system",
+    "question": "Why does the first-order induction schema constrain fewer sets than the single second-order induction axiom?",
+    "options": [
+      "It has one instance per formula, so it reaches only the countably many definable sets",
+      "It has only finitely many instances, one for each formula actually written down in a proof",
+      "First-order induction applies only to finite sets of numbers, never to infinite ones",
+      "A first-order language has no symbol for successor, so closure under successor is unstatable"
+    ],
+    "answer": 0,
+    "explanation": "There are countably many formulas, so the schema speaks only of sets some formula defines, while the second-order axiom speaks of every set. The schema has infinitely many instances, one per formula; the limit is definability, not number."
+  },
+  {
+    "id": "induction-kills-nonstandard",
+    "section": "two-semantics",
+    "question": "Under standard semantics, how does the second-order induction axiom rule out nonstandard elements?",
+    "options": [
+      "It adds, for every numeral $\\bar{n}$, an axiom saying that each element differs from $\\bar{n}$",
+      "It lets a first-order formula define the standard part, which then excludes everything else",
+      "The set of standard elements is in range, definable or not, so induction covers everything",
+      "It forces the domain to be countable, and every countable model of arithmetic is standard"
+    ],
+    "answer": 2,
+    "explanation": "The set of standard elements contains zero and is closed under successor, so induction applied to it says every element is standard. First-order overspill shows no formula defines that set; second-order quantification reaches it anyway, and countable nonstandard models of first-order arithmetic exist."
+  },
+  {
+    "id": "no-complete-proof-system",
+    "section": "two-semantics",
+    "question": "Why can second-order logic under standard semantics have no complete proof system?",
+    "options": [
+      "Because its language has uncountably many sentences, which no proof system could ever list",
+      "Because Henkin semantics shows that some standard validities are in fact false",
+      "Because the continuum hypothesis is independent of the axioms of set theory",
+      "Categorical arithmetic would get its truths effectively derived from finitely many axioms"
+    ],
+    "answer": 3,
+    "explanation": "Categoricity makes every arithmetical sentence or its negation a consequence of the finitely many axioms, so a complete proof system would list all arithmetical truths, which incompleteness forbids. The language is countable, and independence of the continuum hypothesis bears on which sentences are valid, not on this argument."
+  },
+  {
+    "id": "what-henkin-restores",
+    "section": "two-semantics",
+    "question": "Which of these fails under standard semantics but holds under Henkin semantics?",
+    "options": [
+      "Categoricity of second-order Peano arithmetic",
+      "Compactness",
+      "Statement of induction as a single sentence",
+      "Unambiguous syntax for second-order quantifiers"
+    ],
+    "answer": 1,
+    "explanation": "A Henkin model is a two-sorted first-order structure, so compactness, completeness and Löwenheim-Skolem return. Categoricity goes the other way, holding under standard semantics and failing under Henkin, while the syntax and the single induction sentence are shared by both."
+  },
+  {
+    "id": "henkin-nonstandard-model",
+    "section": "two-semantics",
+    "question": "How can a Henkin model of second-order Peano arithmetic contain nonstandard elements and still satisfy the induction axiom?",
+    "options": [
+      "Its range of sets omits the set of standard elements, so induction is never applied to it",
+      "It satisfies induction only for formulas containing no second-order quantifiers",
+      "Its first-order domain is standard, and the nonstandard elements lie only among its sets",
+      "Henkin semantics drops the induction axiom, replacing it with the first-order schema"
+    ],
+    "answer": 0,
+    "explanation": "The induction axiom quantifies only over the sets the model supplies; if the set of standard elements is not among them, nothing forces every element to be standard. The axiom is retained and true in the model, which is why categoricity, not induction, is what Henkin semantics loses."
+  },
+  {
+    "id": "validity-and-ch",
+    "section": "two-semantics",
+    "question": "Under standard semantics, whether a certain sentence of pure second-order logic is valid depends on whether the continuum hypothesis holds.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "The continuum hypothesis is equivalent to a sentence of pure second-order logic, so its validity turns on a question independent of the axioms of set theory. With no complete proof system, nothing in the logic can settle it."
+  },
+  {
+    "id": "comprehension-in-henkin-models",
+    "section": "comprehension",
+    "question": "A Henkin model satisfies the full comprehension schema. Which sets must its range of second-order variables contain?",
+    "options": [
+      "Every subset of its domain, since comprehension makes the model a standard one",
+      "Only the sets definable by formulas containing no second-order quantifiers",
+      "Every set definable by a formula with parameters from the model",
+      "Only the finite subsets of its domain, together with their complements"
+    ],
+    "answer": 2,
+    "explanation": "Comprehension guarantees the definable sets and no more, which moves a Henkin model partway toward a standard one without making it standard. Restricting the defining formulas to those without second-order quantifiers is arithmetical comprehension, a weaker principle."
+  },
+  {
+    "id": "why-impredicative",
+    "section": "comprehension",
+    "question": "Why is full comprehension called impredicative?",
+    "options": [
+      "Because it asserts outright that every subset of the domain exists, definable or not",
+      "Because it is a schema with one instance per formula rather than a single axiom",
+      "Because it cannot be stated at all in a Henkin model, only under standard semantics",
+      "Its defining condition may quantify over a range including the relation it asserts"
+    ],
+    "answer": 3,
+    "explanation": "When $\\varphi$ contains second-order quantifiers, the relation said to exist is among the things those quantifiers range over, which is the circularity the vicious circle principle objects to. Comprehension asserts only the definable sets, and it is perfectly statable for Henkin models."
+  },
+  {
+    "id": "boolos-plural-reading",
+    "section": "comprehension",
+    "question": "On Boolos's plural reading, what does a monadic second-order quantifier commit one to?",
+    "options": [
+      "Sets of the objects in the domain, just as Quine charged",
+      "Only the objects themselves, read as \"there are some things such that\"",
+      "Properties, understood as abstract objects distinct from any set",
+      "Nothing at all, since second-order quantifiers are then mere schematic letters"
+    ],
+    "answer": 1,
+    "explanation": "The plural reading commits one to the things, not to a further object collecting them, so on it second-order logic quantifies over no sets. Quine's charge survives in modified form because the reading works less smoothly for polyadic quantification."
+  },
+  {
+    "id": "categoricity-relative-to-background",
+    "section": "comprehension",
+    "question": "According to the aside, why does second-order categoricity secure reference only for someone whose set theory is already determinate?",
+    "options": [
+      "Because Dedekind's argument is valid only for theories with Henkin semantics",
+      "Because second-order arithmetic has nonstandard models under standard semantics",
+      "The proof runs in a background theory, whose nonstandard models misidentify the numbers",
+      "Because categoricity fails for second-order analysis, which the numbers depend on"
+    ],
+    "answer": 2,
+    "explanation": "Inside any model of set theory the argument shows all models isomorphic, but a nonstandard model of set theory calls some nonstandard structure the natural numbers. Under standard semantics second-order arithmetic is categorical; the relativity lies in the background, not in the result."
+  }
+]

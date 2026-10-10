@@ -1,0 +1,106 @@
+[
+  {
+    "id": "classify-minted-coins",
+    "section": "two-senses-of-same",
+    "question": "Two coins struck from the same die are exactly alike in every relevant respect. Which kind of identity holds between them?",
+    "options": [
+      "Numerical identity only",
+      "Both numerical and qualitative identity",
+      "Qualitative identity only",
+      "Neither kind of identity"
+    ],
+    "answer": 2,
+    "explanation": "Exact similarity is qualitative identity, and there are still two coins, one of which can be in a pocket while the other is in a till. Saying they are numerically identical too is the slide between the two senses of \"same\" that the article blames for most apparent paradoxes of change."
+  },
+  {
+    "id": "not-the-same-person",
+    "section": "two-senses-of-same",
+    "question": "An old friend tells you, \"You're not the same person you were at school.\" On the article's distinction, what is the most charitable reading of the remark?",
+    "options": [
+      "You are numerically the same person but qualitatively different",
+      "You are numerically a different person from the one at school",
+      "You are qualitatively identical to your school self but numerically distinct",
+      "You are neither numerically nor qualitatively the same person"
+    ],
+    "answer": 0,
+    "explanation": "The friend is talking to the very person who was at school, so numerical identity is presupposed; what has gone is exact similarity. Taking \"not the same\" numerically would mean the friend is not addressing the schoolchild at all, which is not what anyone means by the remark."
+  },
+  {
+    "id": "swapped-vase",
+    "section": "persistence-and-change",
+    "question": "Overnight a museum replaces a blue vase on a plinth with a different, green one. On the article's definitions, has the vase changed colour?",
+    "options": [
+      "Yes: the vase on the plinth was blue and is now green, so its colour changed",
+      "Yes, but only as a Cambridge change, since nothing intrinsic to the vase altered",
+      "No, because colour is an extrinsic property of a vase and so cannot change",
+      "No: one thing was swapped for another, and change needs one thing at both times"
+    ],
+    "answer": 3,
+    "explanation": "Change is one persisting thing differing from itself, so it requires numerical identity across the two times. \"The vase on the plinth\" picks out different vases at different times, which makes the first option tempting, but two things differing is a swap and not a change."
+  },
+  {
+    "id": "too-strict-identity",
+    "section": "persistence-and-change",
+    "question": "On the article's account, what goes wrong with an account of identity over time that is too strict?",
+    "options": [
+      "It makes change trivial, since almost anything counts as the same as anything",
+      "It makes change impossible, since nothing that alters counts as surviving",
+      "It conflicts with Leibniz's law",
+      "It restricts change to intrinsic properties"
+    ],
+    "answer": 1,
+    "explanation": "Change requires one thing to be there before and after, so if almost no alteration is compatible with being the same thing, there is never one thing to have changed. Triviality is the opposite failure, the one that comes from an account that is too loose."
+  },
+  {
+    "id": "leibniz-law-licenses",
+    "section": "the-principle-that-generates-the-problem",
+    "question": "Which inference relies on Leibniz's law as the article states it?",
+    "options": [
+      "The statue and the clay share every property we can find, so they are one thing",
+      "The statue and the clay occupy exactly the same place, so they must be one thing",
+      "Something true of the statue is not true of the clay, so the statue is not the clay",
+      "The clay is part of the statue, so whatever is true of the clay is true of the statue"
+    ],
+    "answer": 2,
+    "explanation": "The law says identicals share everything, so finding a difference shows distinctness, which is why every argument for distinctness runs through it. The first option runs the law backwards, from sharing everything to identity, and that converse is a different and more contestable principle."
+  },
+  {
+    "id": "temporary-intrinsics-objection",
+    "section": "the-responses",
+    "question": "The first response rewrites \"the poker is cold\" as \"the poker is cold-at-noon\". What is the standard objection to it?",
+    "options": [
+      "It makes temperature and shape relations to times, not ways the poker is in itself",
+      "It denies that the poker at noon is the poker at one, so nothing survives the fire",
+      "It gives up Leibniz's law in order to save the poker's identity through the fire",
+      "It makes instantiation more complicated than it first appeared, which is a real cost"
+    ],
+    "answer": 0,
+    "explanation": "This is the problem of temporary intrinsics: being bent is not a relation the poker bears to anything. The complication in instantiation is the price of the second response, which moves the time onto the having precisely to keep the properties intrinsic."
+  },
+  {
+    "id": "temporal-parts-premise",
+    "section": "the-responses",
+    "question": "The view on which the poker has a cold temporal part and a hot temporal part denies which premise of the problem of change?",
+    "options": [
+      "That the poker at noon is cold and the poker at one o'clock is not cold",
+      "Leibniz's law, that identicals share everything true of either of them",
+      "That the argument is valid, since the conclusion does not really follow",
+      "That the poker at noon is numerically identical with the poker at one"
+    ],
+    "answer": 3,
+    "explanation": "The poker at noon and the poker at one are different temporal parts, so the first premise goes, while Leibniz's law is saved rather than abandoned. That is also what fuels the objection that the view gives up the thing in order to save the principle."
+  },
+  {
+    "id": "temporal-parts-crux",
+    "section": "the-responses",
+    "question": "The objection says that the temporal-parts view denies change rather than explaining it. According to the reply, what does the dispute finally turn on?",
+    "options": [
+      "Whether Leibniz's law is true, since the view gives it up to save the poker",
+      "Whether time is enough like space for the road analogy to be legitimate",
+      "Whether temperature is an intrinsic property of the poker or a relation to times",
+      "Whether the poker's temporal parts are qualitatively identical to one another"
+    ],
+    "answer": 1,
+    "explanation": "The defender says the whole extended poker changes by having qualitatively different parts at different times, just as a road can be narrow in one county and wide in another. That works only if time is relevantly like space, which is why the dispute needs a view about time and why Leibniz's law is not what is at issue."
+  }
+]

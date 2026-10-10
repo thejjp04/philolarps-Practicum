@@ -1,0 +1,114 @@
+[
+  {
+    "id": "gambler-positive-liberty",
+    "section": "liberty-in-two-senses",
+    "question": "A compulsive gambler wants to stop. Nobody is stopping him from staying home, yet he keeps going to the casino. In which sense of liberty is he unfree?",
+    "options": [
+      "Only the negative sense, since the casino is interfering with him",
+      "Only the positive sense, since he is not in command of himself",
+      "Both senses, since an addiction is itself a form of interference",
+      "Neither sense, since in the end he is doing what he chooses to do"
+    ],
+    "answer": 1,
+    "explanation": "Addiction is one of the natural examples of positive unfreedom: nobody is interfering, and yet the person is not running their own life. The third option treats addiction as interference, but negative liberty concerns other people preventing you."
+  },
+  {
+    "id": "berlin-divided-self",
+    "section": "liberty-in-two-senses",
+    "question": "What, on Berlin's argument, makes the positive concept of liberty dangerous?",
+    "options": [
+      "Splitting the self lets coercion pass as freeing the real self",
+      "It counts poverty as unfreedom, which licenses unlimited taxation",
+      "It treats having a share in self-government as a kind of freedom",
+      "It measures freedom by how many doors stand open, not their use"
+    ],
+    "answer": 0,
+    "explanation": "If freedom is self-mastery, the person can be divided into a higher and a lower self, and coercing them can be redescribed as aligning them with what their real self wants. The last option describes the negative concept's measure, not the positive concept's danger."
+  },
+  {
+    "id": "maccallum-constraint",
+    "section": "one-concept-or-two",
+    "question": "Two people disagree about whether poverty makes the poor unfree. On MacCallum's analysis, what are they really disagreeing about?",
+    "options": [
+      "Which of the two concepts of freedom is the genuine one",
+      "Whether the poor have any purposes they want to pursue",
+      "Which obstacles count as constraints on doing something",
+      "Whether freedom requires the absence of all interference"
+    ],
+    "answer": 2,
+    "explanation": "On MacCallum's single concept, every freedom claim fills three slots, and this dispute is over the constraint slot. The first option is the framing he rejects, though he relocates the disagreement rather than removing it."
+  },
+  {
+    "id": "equal-standing-not-even-shares",
+    "section": "equality-and-the-emptiest-true-principle-in-philosophy",
+    "question": "On the article's account, insisting that people be treated as of equal standing commits you to distributing goods evenly among them.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Equal standing concerns how people are to be regarded, with no one's interests counting for more, while an even distribution is a claim about outcomes. The article says it is possible to insist on the first while denying that the second follows."
+  },
+  {
+    "id": "formal-equality-silent",
+    "section": "equality-and-the-emptiest-true-principle-in-philosophy",
+    "question": "A club admits only applicants over two metres tall and applies the rule to every applicant without exception. Does the rule violate formal equality?",
+    "options": [
+      "Yes, since it treats applicants differently on the basis of height",
+      "Yes, since the rule produces a very uneven distribution of places",
+      "No, since a private club is not bound by the principle at all",
+      "No, since the principle is silent on which differences matter"
+    ],
+    "answer": 3,
+    "explanation": "Formal equality says to treat like cases alike without saying which likenesses are relevant, so a consistently applied rule satisfies it. Whether height is a relevant difference is the substantive question the principle leaves untouched."
+  },
+  {
+    "id": "welfare-expensive-taste",
+    "section": "equality-and-the-emptiest-true-principle-in-philosophy",
+    "question": "Someone is content only if she owns an expensive sports car. Which conception of equality would give her a claim on more than others, and so faces the expensive-taste objection?",
+    "options": [
+      "Equality of resources, since it adjusts bundles to each person's needs",
+      "Equality of opportunity, since it equalises everyone's starting position",
+      "Equality of welfare, since it equalises how lives go by their own lights",
+      "Equality of standing, since it forbids anyone being inferior to anyone"
+    ],
+    "answer": 2,
+    "explanation": "Equalising how well lives go by people's own lights means someone with costly tastes needs more to reach the same level. The first option misdescribes resource equality, which gives everyone the same bundle and so ignores differing needs."
+  },
+  {
+    "id": "justice-not-equality",
+    "section": "justice-as-the-third-demand",
+    "question": "Some people worked and others did not, yet everyone receives exactly the same. What does the article say this case shows?",
+    "options": [
+      "That an equal distribution can nonetheless be unjust",
+      "That justice and equality are at bottom one demand",
+      "That the distribution must have been imposed by force",
+      "That desert has no part to play in distribution at all"
+    ],
+    "answer": 0,
+    "explanation": "Justice is not a third name for equality: egalitarian answers are one family of answers to the distributive question, not the question itself. Treating the two as interchangeable is what the article says makes the actual arguments impossible to state."
+  },
+  {
+    "id": "benefit-in-kind-cost",
+    "section": "where-they-collide",
+    "question": "A state replaces a cash benefit with a uniform food parcel for everyone eligible. What cost does the article identify in this kind of move?",
+    "options": [
+      "A loss of formal equality, since recipients are treated unlike everyone else",
+      "A loss of negative liberty for recipients, who are taxed to fund it",
+      "No real cost, since the parcels distribute food perfectly equally",
+      "A loss of positive liberty, since recipients lose control of their lives"
+    ],
+    "answer": 3,
+    "explanation": "Deciding on people's behalf what they need equalises something at the cost of some people's control over their own lives. The negative liberty cost of redistribution falls on those taxed, not on the recipients."
+  },
+  {
+    "id": "freedom-not-summable",
+    "section": "where-they-collide",
+    "question": "The objection says redistribution increases freedom in total. What assumption does the reply say this needs?",
+    "options": [
+      "That freedom simply means the absence of interference by others",
+      "That freedom is a quantity that can be summed across people",
+      "That the taxed person does not really lose any freedom at all",
+      "That welfare rather than freedom is what should be maximised"
+    ],
+    "answer": 1,
+    "explanation": "For a gain to one person to exceed a loss to another, freedom must be summable, which the reply calls substantial and not obviously coherent. The third option is what the reply denies: the taxed person really is prevented, by threat, from doing something."
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "which-is-degenerate",
+    "section": "every-one-of-them-listed",
+    "question": "Which of these binary connectives is degenerate in the article's sense?",
+    "options": [
+      "Exclusive disjunction",
+      "Nonimplication",
+      "Negation of the first argument",
+      "The biconditional"
+    ],
+    "answer": 2,
+    "explanation": "A degenerate connective ignores at least one of its arguments, and the negation of the first returns the first argument negated whatever the second is. Exclusive disjunction, nonimplication and the biconditional all have outputs that change with each argument."
+  },
+  {
+    "id": "complement-of-conditional",
+    "section": "every-one-of-them-listed",
+    "question": "Which connective has the exact opposite output to $P \\rightarrow Q$ on every row?",
+    "options": [
+      "The converse conditional",
+      "Nonimplication, true only when $P$ is true and $Q$ false",
+      "Converse nonimplication, true only when $P$ is false and $Q$ true",
+      "The Peirce arrow, true only when both are false"
+    ],
+    "answer": 1,
+    "explanation": "The conditional is false on exactly one row, $P$ true and $Q$ false, so its complement is true on exactly that row, which is nonimplication. The converse conditional is a different connective rather than the opposite one: it is false only when $P$ is false and $Q$ true."
+  },
+  {
+    "id": "but-not-in-english",
+    "section": "every-one-of-them-listed",
+    "question": "Let $P$ be \"the alarm sounded\" and $Q$ be \"there was a fire\". Which sentence expresses nonimplication, the negation of $P \\rightarrow Q$?",
+    "options": [
+      "Either the alarm sounded or there was a fire, but not both",
+      "Neither did the alarm sound nor was there a fire",
+      "Not both: the alarm sounded and there was a fire",
+      "The alarm sounded, but there was no fire"
+    ],
+    "answer": 3,
+    "explanation": "The negation of $P \\rightarrow Q$ is true only when $P$ is true and $Q$ false, which is what \"$P$ but not $Q$\" says. The first sentence is exclusive disjunction, the second the Peirce arrow, and the third the Sheffer stroke."
+  },
+  {
+    "id": "exclusive-or-abbreviation",
+    "section": "every-one-of-them-listed",
+    "question": "Adding a symbol for exclusive disjunction to the language would let it express truth functions it could not express before.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Every binary truth function is already expressible from $\\neg$, $\\land$ and $\\lor$, so a new symbol would be an abbreviation rather than an extension. Which connectives get names reflects what English has words for, not what the system can say."
+  },
+  {
+    "id": "stroke-conditional",
+    "section": "the-two-that-suffice-alone",
+    "question": "Which formula built from the Sheffer stroke alone has the truth table of $P \\rightarrow Q$?",
+    "options": [
+      "$P \\mid (Q \\mid Q)$",
+      "$(P \\mid P) \\mid Q$",
+      "$(P \\mid Q) \\mid (P \\mid Q)$",
+      "$(P \\mid P) \\mid (Q \\mid Q)$"
+    ],
+    "answer": 0,
+    "explanation": "$Q \\mid Q$ is $\\neg Q$, and $P \\mid \\neg Q$ says not both $P$ and $\\neg Q$, which is exactly $P \\rightarrow Q$. Negating $P$ instead gives the converse, $Q \\rightarrow P$; the other two are the article's formulas for conjunction and disjunction."
+  },
+  {
+    "id": "peirce-adequacy-method",
+    "section": "the-two-that-suffice-alone",
+    "question": "To show that the Peirce arrow is adequate on its own, what is it enough to do?",
+    "options": [
+      "Show that it fails to preserve both truth and falsity",
+      "Express $\\neg$, $\\land$ and $\\lor$ with it, a set already known to be adequate",
+      "Show that its output depends on both of its arguments",
+      "Express $\\neg$ with it alone, since negation is exactly what the weaker sets lacked"
+    ],
+    "answer": 1,
+    "explanation": "Adequacy transfers: anything written with $\\neg$, $\\land$ and $\\lor$ can be rewritten symbol by symbol into the arrow. Failing to preserve truth and falsity is necessary but not enough, since the negation of the first argument fails both tests and is still not adequate."
+  },
+  {
+    "id": "negated-projection-fails",
+    "section": "and-no-others",
+    "question": "The negation of the first argument fails to preserve truth and fails to preserve falsity. Why is it still not adequate on its own?",
+    "options": [
+      "It is degenerate, and no degenerate connective can express negation",
+      "It is not associative, so its formulas are ambiguous",
+      "Every formula built from it depends only on its leftmost letter",
+      "It cannot express negation"
+    ],
+    "answer": 2,
+    "explanation": "Its value depends only on its first argument, so any formula built from it depends only on the leftmost letter and is either that letter or its negation, which puts conjunction out of reach. It expresses negation perfectly well, which is why it passed the first two tests."
+  },
+  {
+    "id": "truth-preserving-not-adequate",
+    "section": "and-no-others",
+    "question": "A binary connective returns true whenever both its arguments are true. What follows?",
+    "options": [
+      "It is adequate alone provided that it depends on both of its arguments",
+      "It must be one of the six degenerate connectives",
+      "It is adequate alone only if it is also associative",
+      "It cannot be adequate alone, since it can never express $\\neg P$"
+    ],
+    "answer": 3,
+    "explanation": "If a connective preserves truth, every formula built from it alone is true on the all-true interpretation, where $\\neg P$ is false. The biconditional shows that depending on both arguments does not help: it preserves truth and so cannot be adequate either."
+  },
+  {
+    "id": "stroke-not-associative",
+    "section": "why-the-parentheses-cannot-be-dropped",
+    "question": "Why can the parentheses in $(P \\mid Q) \\mid R$ not be dropped by convention, as they are in $P \\land Q \\land R$?",
+    "options": [
+      "The stroke is not commutative, so argument order matters",
+      "The stroke is not associative, so the groupings can differ in value",
+      "Precedence conventions cover only the five named connectives",
+      "Unique readability fails for any language with one connective"
+    ],
+    "answer": 1,
+    "explanation": "With $P$ and $Q$ true and $R$ false, $(P \\mid Q) \\mid R$ is true and $P \\mid (Q \\mid R)$ is false, so the bare string names no truth function. The stroke is commutative, since \"not both\" does not care about order; it is associativity that fails."
+  },
+  {
+    "id": "why-single-primitive",
+    "section": "where-the-two-came-from",
+    "question": "On the article's account, why did logicians in the early twentieth century prize a single primitive connective?",
+    "options": [
+      "Each primitive is an unexplained notion, so fewer meant less assumed",
+      "Formulas written with a single connective are shorter and much easier to read",
+      "Propositional logic was not known to be adequate without one",
+      "A single connective removed the need for any axioms"
+    ],
+    "answer": 0,
+    "explanation": "A primitive is taken as understood rather than explained, so cutting five primitives to one cut what the foundation had to assume. Readability was never the motive: formulas in the stroke are longer and harder to read, which the article treats as a genuine cost."
+  }
+]

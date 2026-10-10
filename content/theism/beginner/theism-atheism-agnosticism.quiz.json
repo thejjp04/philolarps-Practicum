@@ -1,0 +1,114 @@
+[
+  {
+    "id": "cost-of-psychological-definition",
+    "section": "positions-as-claims",
+    "question": "According to the article, what is the most serious cost of defining atheism as the absence of a belief rather than as a proposition?",
+    "options": [
+      "Atheists would then carry the whole burden of proof, since they would be the ones making a claim",
+      "Atheism and agnosticism would collapse into one position, since both would describe a lack of belief",
+      "No argument for atheism would be possible, since a state of mind cannot be true or a conclusion",
+      "People who have never considered the question would be excluded, since they hold no attitude at all"
+    ],
+    "answer": 2,
+    "explanation": "A psychological state cannot be supported by evidence or appear in an argument, so defining atheism that way makes the large literature arguing for it impossible in principle. The burden option has it backwards: on the absence-of-belief definition the whole burden shifts to the theist."
+  },
+  {
+    "id": "strong-is-also-weak",
+    "section": "positions-as-states-of-a-person",
+    "question": "Which of these follows from the definitions of weak and strong atheism?",
+    "options": [
+      "Every strong atheist is also a weak atheist",
+      "Weak atheists and strong atheists are two separate, non-overlapping groups",
+      "A weak atheist must have considered the question and found the arguments wanting",
+      "Counting as a weak atheist shows that a person has weighed the evidence"
+    ],
+    "answer": 0,
+    "explanation": "Believing that God does not exist entails not believing that God does, so the strong atheist falls inside the wider category. Weak atheism is defined by an absence, which is why an infant or a rock also qualifies and why being in it shows nothing about having reasoned well."
+  },
+  {
+    "id": "two-readings-of-agnosticism",
+    "section": "suspending-judgement-and-saying-nobody-can-know",
+    "question": "Ann says: \"I neither believe nor disbelieve that God exists.\" Ben says: \"The evidence supports neither side, so theists and atheists alike believe without adequate warrant.\" On the article's account, how do their positions differ?",
+    "options": [
+      "Ann is an agnostic, while Ben, who denies that anyone is justified in believing, is a weak atheist",
+      "Ann reports her own state of mind; Ben makes a claim about the evidence that needs defending like any other",
+      "Ben's is the more modest position, since unlike Ann he takes no stand on whether God exists at all",
+      "They hold the same position, stated once in the first person and once as a general claim about everyone else"
+    ],
+    "answer": 1,
+    "explanation": "Ann's statement is a report with nothing in it to argue against; Ben's is an epistemological thesis about the state of the arguments, and it can be wrong. The tempting thought that Ben is being modest misses that he has passed a negative verdict on everyone else's warrant."
+  },
+  {
+    "id": "suspender-both-labels",
+    "section": "suspending-judgement-and-saying-nobody-can-know",
+    "question": "On the psychological definitions, a person who suspends judgement about whether God exists is both an agnostic and a weak atheist.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "She lacks the belief that God exists, which makes her a weak atheist, and she suspends judgement, which makes her an agnostic in the first sense. The two labels are different partitions of the same territory, so arguing over which one is correct has no answer."
+  },
+  {
+    "id": "scope-of-a-refutation",
+    "section": "one-god-or-all-of-them",
+    "question": "Suppose an argument from suffering succeeded completely. On the article's account, what would it have shown?",
+    "options": [
+      "That no god of any kind exists, since every conception of the divine includes power and goodness",
+      "That agnosticism is the only reasonable position left, since the remaining conceptions are untested",
+      "That theists now bear the burden of proof for every other conception of the divine they might offer",
+      "That the God of classical theism does not exist, leaving limited or non-personal conceptions untouched"
+    ],
+    "answer": 3,
+    "explanation": "The argument targets a being who is at once all-powerful and perfectly good, and has no force against a limited or indifferent deity. Moving from that to \"no god of any kind\" is the overreach the article warns against: it would need either a survey of the alternatives or a general account of what the world contains."
+  },
+  {
+    "id": "not-merely-verbal",
+    "section": "who-has-to-argue",
+    "question": "Why does the article say the dispute over how to define atheism is \"not merely verbal\"?",
+    "options": [
+      "Because the right definition would settle whether God exists",
+      "Because it determines whether a person can be an atheist and an agnostic at once",
+      "Because it settles in advance which side loses a stalemate",
+      "Because it fixes which conception of God is under discussion"
+    ],
+    "answer": 2,
+    "explanation": "If atheism is a proposition, both sides owe reasons; if it is an absence of belief, the whole burden falls on the theist and failed theistic arguments are enough for the atheist to stand. No definition settles whether God exists, which is why that option, though it sounds weighty, is wrong."
+  },
+  {
+    "id": "courtroom-disanalogy",
+    "section": "who-has-to-argue",
+    "question": "What, according to the article, makes the courtroom analogy for the burden of proof imperfect?",
+    "options": [
+      "Juries weigh evidence about facts, whereas questions about God are matters of faith beyond evidence",
+      "A trial must reach a verdict and so needs a default, whereas inquiry can end in suspended judgement",
+      "The presumption of innocence is a claim about what is probable, which inquiry into God cannot assume",
+      "In a trial the prosecution makes the negative claim, whereas in this debate the theist makes the positive one"
+    ],
+    "answer": 1,
+    "explanation": "A default is institutionally required in court because a verdict must be reached; inquiry has no such requirement. The option about probability inverts the article's point: the presumption of innocence is a rule for inconclusive cases, not a claim about what is likely."
+  },
+  {
+    "id": "positive-claim-rule",
+    "section": "who-has-to-argue",
+    "question": "What is wrong, on the article's account, with the rule that the burden of proof falls on whoever makes the positive claim?",
+    "options": [
+      "It always places the burden on the atheist, which is unfair to the side that merely doubts",
+      "Theism is not really a positive claim, so the rule never applies to the theist in the first place",
+      "It forces every inquiry to end in a verdict, which inquiry, unlike a trial, does not require",
+      "Either side can be phrased positively or negatively, so the rule tracks grammar, not substance"
+    ],
+    "answer": 3,
+    "explanation": "\"God exists\" and \"God does not exist\" can each be rearranged into the other grammatical form, so a rule keyed to positivity sounds neutral but is a rule about sentence arrangement. It does not systematically favour either side, which is why the \"always the atheist\" option fails."
+  },
+  {
+    "id": "reasonable-burden-appeal",
+    "section": "who-has-to-argue",
+    "question": "What does the article offer as the reasonable version of an appeal to the burden of proof?",
+    "options": [
+      "A claim about prior plausibility: one hypothesis starts out likelier, so inconclusive evidence leaves it ahead",
+      "A presumption, modelled on the presumption of innocence, that any claimant is wrong until shown right",
+      "A rule that whoever states a position first must defend it first",
+      "A requirement that the other side meet whatever standard the challenger chooses"
+    ],
+    "answer": 0,
+    "explanation": "Prior plausibility is a real premise that can be argued over, which is what makes it reasonable. Demanding that the other side meet an unspecified standard is exactly the misuse the article describes: never stating or defending a position and calling that inquiry."
+  }
+]

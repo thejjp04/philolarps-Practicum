@@ -39,6 +39,8 @@ This is the distinction flagged in passing when the object language and metalang
 
 The practical consequence is that checking whether a line is an axiom is a matter of pattern matching rather than of consulting a list. Given a formula, one asks whether it can be read as an instance of one of the schemas, and the question is decidable by inspection.
 
+<Check id="schema-instance" />
+
 ## The system
 
 The language will be restricted to negation and the conditional. Nothing is lost by this, since that pair was shown adequate four articles ago, and the other connectives can be introduced as abbreviations.
@@ -99,6 +101,8 @@ Every line is covered, so in particular the last line is, and that is the theore
 
 Now the shape of the second schema explains itself. It is precisely what the modus ponens case of this induction requires, and the first schema is precisely what the axiom case requires. The two schemas were not chosen for their intuitive appeal, of which they have very little. They were chosen because they are what the proof needs.
 
+<Check id="modus-ponens-case" />
+
 ## What it buys
 
 With the theorem available the system becomes workable, and the earlier derivation becomes trivial. To show that $P \rightarrow P$ is a theorem, note that $P$ is derivable from $P$ in one line, and apply the deduction theorem. Five lines have collapsed into one observation.
@@ -124,6 +128,8 @@ Nothing in the argument above was automatic, and it is a mistake to expect the d
 The clearest case is modal logic. Standard modal systems add to the axioms a rule saying that whatever has been proved may be prefixed with the necessity operator, which is reasonable enough for theorems, since a theorem holds in every model whatever. But if that rule is allowed to apply to lines resting on premises, the deduction theorem fails at once. From the premise $\varphi$ one derives its necessitation in one step, so $\varphi$ yields the claim that $\varphi$ is necessary; yet the conditional from $\varphi$ to its own necessity is not a theorem of any system worth having, since a truth need not be a necessary truth. The standard response is to restrict the rule so that it applies only to lines depending on no premises, which restores the theorem at the cost of a more delicate definition of derivability.
 
 Other systems fail the theorem for other reasons. Logics that restrict how many times a premise may be used, or that require the premises of an argument to be relevant to its conclusion, are discussed in the advanced tier, and in several of them the deduction theorem holds only in a weakened form or not at all. The lesson is that the theorem is a result about a particular system rather than a general fact about conditionals, and that it must be proved again for every system in which it is wanted.
+
+<Check id="modal-failure" />
 
 ## Asking whether an axiom is needed
 

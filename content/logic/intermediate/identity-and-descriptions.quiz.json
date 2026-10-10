@@ -1,0 +1,127 @@
+[
+  {
+    "id": "identity-is-logical",
+    "section": "one-more-predicate-and-not-like-the-others",
+    "question": "Why does identity count as part of the logic rather than part of the subject matter?",
+    "options": [
+      "It is reflexive, symmetric and transitive, unlike ordinary predicates",
+      "Its interpretation is fixed in advance, the same on every interpretation",
+      "It can be defined from the other predicates of whatever language contains it",
+      "It is written between its terms, as the connectives are, not in front of them"
+    ],
+    "answer": 1,
+    "explanation": "An interpretation may make an ordinary predicate apply to whatever it likes, but $a = b$ is true exactly when $a$ and $b$ name the same object on every interpretation. Reflexivity, symmetry and transitivity follow from that, but plenty of non-logical relations have all three as well."
+  },
+  {
+    "id": "leibniz-law",
+    "section": "one-more-predicate-and-not-like-the-others",
+    "question": "Which principle is the indiscernibility of identicals?",
+    "options": [
+      "If $a$ and $b$ share all their properties, then $a = b$",
+      "If $a = b$ and $b = c$, then $a = c$ as well",
+      "If $a = b$, whatever is true of $a$ is true of $b$",
+      "Every object whatever is identical to itself"
+    ],
+    "answer": 2,
+    "explanation": "If $a$ and $b$ are one object, anything true of one is true of the other, which licenses substituting $b$ for $a$ in any formula. The first option is the converse, the identity of indiscernibles, which is a separate and much more contested thesis."
+  },
+  {
+    "id": "identity-not-definable",
+    "section": "one-more-predicate-and-not-like-the-others",
+    "question": "In any language, $a = b$ can be defined as the claim that $a$ and $b$ satisfy exactly the same predicates of that language.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "A language has only finitely many predicates, and two distinct objects may agree on every one of them. Such a definition captures indiscernibility relative to a vocabulary, a weaker relation, so identity has to be added rather than extracted."
+  },
+  {
+    "id": "two-existentials-not-two",
+    "section": "counting",
+    "question": "Why does $\\exists x \\exists y (Fx \\land Fy)$ fail to say that at least two things are $F$?",
+    "options": [
+      "One object can be the value of both $x$ and $y$, so a single $F$ suffices",
+      "It says that exactly two things are $F$, which is a stronger claim",
+      "Its variables $x$ and $y$ are free, so it is not yet a sentence",
+      "Counting needs a universal quantifier, and the formula has none"
+    ],
+    "answer": 0,
+    "explanation": "Two different variables do not force two different objects, so a single $F$ is enough to make the formula true. Adding $\\neg\\, x = y$ as a further conjunct forces distinctness and gives \"at least two\"."
+  },
+  {
+    "id": "at-most-one-when-none",
+    "section": "counting",
+    "question": "Which formula is true when nothing at all is $F$?",
+    "options": [
+      "$\\exists x (Fx \\land \\forall y (Fy \\rightarrow y = x))$",
+      "$\\exists x \\exists y (Fx \\land Fy \\land \\neg\\, x = y)$",
+      "$\\exists x Fx$",
+      "$\\forall x \\forall y ((Fx \\land Fy) \\rightarrow x = y)$"
+    ],
+    "answer": 3,
+    "explanation": "\"At most one thing is $F$\" is a universal claim and says nothing about anything existing, so it holds vacuously when nothing is $F$. The \"exactly one\" formula begins with an existential quantifier, so it requires an $F$ to exist."
+  },
+  {
+    "id": "only-ada",
+    "section": "only-except-and-superlatives",
+    "question": "With $Sx$ read \"$x$ solved the puzzle\" and $a$ for Ada, which formula says that only Ada solved the puzzle?",
+    "options": [
+      "$\\forall x (Sx \\rightarrow x = a)$",
+      "$Sa \\land \\forall x (Sx \\rightarrow x = a)$",
+      "$Sa \\land \\forall x (x = a \\rightarrow Sx)$",
+      "$\\exists x (Sx \\land x = a)$"
+    ],
+    "answer": 1,
+    "explanation": "\"Only Ada\" says that Ada solved it and that nothing else did, so both conjuncts are needed. The first option alone is true when nobody solved the puzzle, and the third only repeats that Ada solved it, since its second conjunct follows from $Sa$."
+  },
+  {
+    "id": "name-view-nonexistence",
+    "section": "the-definite-article",
+    "question": "Treat \"the present King of France\" as a name $k$. What goes wrong with \"The present King of France does not exist\"?",
+    "options": [
+      "It denies existence of the named object, so it is false or unintelligible",
+      "It comes out true, which conflicts with excluded middle for its negation",
+      "It has two readings, one true and one false, and English cannot mark which",
+      "It contains no predicate letter at all, so it cannot be translated into the language"
+    ],
+    "answer": 0,
+    "explanation": "On the name view the sentence attributes non-existence to the object $k$ names, so it comes out false or unintelligible, though it is plainly true. The two-readings diagnosis belongs to Russell's analysis, which is the cure rather than the problem."
+  },
+  {
+    "id": "tied-winners",
+    "section": "russells-analysis",
+    "question": "On Russell's analysis, which situation makes \"The winner of the race was disqualified\" false?",
+    "options": [
+      "Exactly one runner won the race, and that runner was disqualified",
+      "Exactly one runner won and was disqualified, and so were several others",
+      "Two runners tied for first place, and both were disqualified",
+      "None, since without a unique winner the sentence has no truth value at all"
+    ],
+    "answer": 2,
+    "explanation": "The analysis says there is a winner, at most one, and that one was disqualified, so a tie falsifies the uniqueness conjunct even though both winners were disqualified. Saying the sentence lacks a truth value is Strawson's view, not Russell's: on Russell's account a failed description makes the sentence false."
+  },
+  {
+    "id": "which-reading-contradicts",
+    "section": "scope-once-more",
+    "question": "On Russell's analysis, which reading of \"The present King of France is not bald\" is the contradictory of \"The present King of France is bald\"?",
+    "options": [
+      "Negation outside the quantifier, which is true, since there is no such king",
+      "Negation inside the quantifier, which is false, since there is no such king",
+      "Negation inside the quantifier, which is true, since nobody is a bald king",
+      "Neither, since both readings come out false and excluded middle fails"
+    ],
+    "answer": 0,
+    "explanation": "With the negation outside, the sentence denies that there is a unique bald present King of France, which is true and is the exact contradictory of the original. The inside reading asserts that there is a unique king who is not bald, which is false, so excluded middle survives: the false reading contradicts nothing."
+  },
+  {
+    "id": "strawson-verdict",
+    "section": "scope-once-more",
+    "question": "On Strawson's objection as the article presents it, what is the right verdict on \"The present King of France is bald\"?",
+    "options": [
+      "False, since one conjunct of what it asserts, that France has a king, is false",
+      "Ambiguous between a true reading and a false one, depending on scope",
+      "True, since it is perfectly meaningful and nothing in the world contradicts it",
+      "Neither true nor false, since its presupposition fails"
+    ],
+    "answer": 3,
+    "explanation": "Strawson holds that the speaker presupposes, rather than asserts, that France has a king, so when that fails no claim gets made at all. Calling the sentence false is Russell's verdict, which the objection accuses of turning a presupposition into a conjunct."
+  }
+]

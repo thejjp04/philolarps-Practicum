@@ -1,0 +1,106 @@
+[
+  {
+    "id": "interdefinability",
+    "section": "the-basic-vocabulary",
+    "question": "Using the equivalences between possibility and necessity, \"it is not necessary that the bridge stands\" says the same as which claim?",
+    "options": [
+      "It is possible that the bridge does not stand",
+      "It is impossible that the bridge stands",
+      "It is necessary that the bridge does not stand",
+      "It is possible that the bridge stands"
+    ],
+    "answer": 0,
+    "explanation": "Something is possible exactly when its denial is not necessary, so denying that standing is necessary amounts to allowing that not standing is possible. The second and third options are much stronger: they say standing is ruled out, not merely that it was not guaranteed."
+  },
+  {
+    "id": "classify-contingent",
+    "section": "the-basic-vocabulary",
+    "question": "Which of these is a contingent truth?",
+    "options": [
+      "Every bachelor is an unmarried man",
+      "The Thames flows through London",
+      "No square is round",
+      "Two plus two is four"
+    ],
+    "answer": 1,
+    "explanation": "The Thames could have taken another course, or London been built elsewhere, so the truth could have failed. The others cannot fail to be true, and a truth that cannot fail is necessary rather than contingent, however familiar or ordinary it sounds."
+  },
+  {
+    "id": "classify-fast-sprint",
+    "section": "kinds-of-possibility",
+    "question": "A human running a hundred metres in two seconds is best classified as what?",
+    "options": [
+      "Logically impossible",
+      "Logically possible but physically impossible",
+      "Physically possible but logically impossible",
+      "Physically possible, though it has never happened"
+    ],
+    "answer": 1,
+    "explanation": "No contradiction follows from supposing it, so it is logically possible, but the laws of nature as they bear on legs and muscles rule it out. The third option is ruled out by the nesting of the standards: whatever the laws permit is also free of contradiction."
+  },
+  {
+    "id": "water-metaphysical",
+    "section": "kinds-of-possibility",
+    "question": "On Kripke's argument, if water is $\\mathrm{H_2O}$, what kind of impossibility is water's being an element?",
+    "options": [
+      "Logical: the supposition contains a contradiction",
+      "Physical: the laws of nature forbid it",
+      "Merely apparent: it is impossible only for all we currently know",
+      "Metaphysical: being that compound is what water is"
+    ],
+    "answer": 3,
+    "explanation": "No contradiction follows from water being an element, and the question is what water is, not what the laws allow, so neither logic nor physics does the work. That gap is the case for a third standard, judged by the natures of things."
+  },
+  {
+    "id": "necessary-a-posteriori",
+    "section": "kinds-of-possibility",
+    "question": "Astronomers discovered that Hesperus is Phosphorus. On Kripke's view as the article reports it, what is the status of this truth?",
+    "options": [
+      "Necessary, even though it could only be known by looking",
+      "Contingent, since it was established by investigation",
+      "Necessary, and so knowable from the armchair after all",
+      "Contingent, since the two names might have picked out different things"
+    ],
+    "answer": 0,
+    "explanation": "An identity like this is necessary if true, and nobody could have known it without observing the sky, so necessity and armchair knowability come apart. Inferring contingency from the fact that investigation was needed is what the article calls the standard beginner's error in this area."
+  },
+  {
+    "id": "nesting-standards",
+    "section": "kinds-of-possibility",
+    "question": "On the article's working picture of how the three standards nest, if something is physically possible, what else is it?",
+    "options": [
+      "Logically possible, but perhaps metaphysically impossible",
+      "Metaphysically possible, but perhaps logically impossible",
+      "Both metaphysically and logically possible",
+      "Actual, since physics describes what happens"
+    ],
+    "answer": 2,
+    "explanation": "Logical possibility is the widest standard, metaphysical narrower, and physical narrower still, so passing the narrowest test means passing the wider ones. Possibility is not actuality: plenty that the laws permit has never happened."
+  },
+  {
+    "id": "alternative-situations",
+    "section": "what-modal-claims-are-about",
+    "question": "On the first account of what makes modal claims true, when is \"the match might not have lit\" true?",
+    "options": [
+      "When it holds in every complete alternative situation without exception",
+      "When the match did not in fact light on that occasion",
+      "When we can imagine the match failing to light",
+      "When its not lighting holds in at least one alternative situation"
+    ],
+    "answer": 3,
+    "explanation": "Possibility is truth in at least one alternative situation and necessity is truth in all of them. Reading possibility as \"in every situation\" swaps it for necessity, and the article adds that the account postpones the question of what those situations are rather than answering it."
+  },
+  {
+    "id": "imagination-deeper-problem",
+    "section": "what-modal-claims-are-about",
+    "question": "A critic says modal claims only report the limits of our imagination. What does the reply identify as the deeper problem with this view?",
+    "options": [
+      "Imagination cannot tell a chiliagon from a thousand-and-one-sided figure, so it misleads",
+      "Modal facts vary from person to person, just as the limits of imagination do",
+      "Saying we cannot picture something is itself modal, so modality has just moved into minds",
+      "The fact that modality resists elimination proves that the notion is in good order"
+    ],
+    "answer": 2,
+    "explanation": "The critic cannot state the view without using the notion it rejects, so possibility and necessity reappear as facts about minds needing the same account. The chiliagon point is real but is the first consideration, about imagination and possibility coming apart, and the article denies that resisting elimination proves anything is in good order."
+  }
+]

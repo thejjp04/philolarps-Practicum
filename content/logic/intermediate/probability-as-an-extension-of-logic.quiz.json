@@ -1,0 +1,127 @@
+[
+  {
+    "id": "field-of-events-die",
+    "section": "what-the-numbers-attach-to",
+    "question": "Which collection of events for one roll of a die is a field of events?",
+    "options": [
+      "The whole space together with the even outcomes",
+      "The empty set, the even outcomes and the odd outcomes",
+      "The empty set, the whole space, the evens and the odds",
+      "The whole space, the even outcomes and the outcome six"
+    ],
+    "answer": 2,
+    "explanation": "A field must contain the whole space and be closed under complement and finite union. The first lacks the odd outcomes and the empty set, the second lacks the whole space (the union of evens and odds), and the last lacks the complement of six."
+  },
+  {
+    "id": "union-with-overlap",
+    "section": "the-axioms",
+    "question": "If $P(A) = 0.5$, $P(B) = 0.4$ and $P(A \\cap B) = 0.2$, what is $P(A \\cup B)$?",
+    "options": [
+      "$0.9$",
+      "$0.7$",
+      "$0.2$",
+      "$0.5$"
+    ],
+    "answer": 1,
+    "explanation": "For events that can occur together, the union is the sum of the two probabilities minus their overlap: $0.5 + 0.4 - 0.2 = 0.7$. Simply adding to get 0.9 counts the overlap twice; plain addition is licensed only for exclusive events."
+  },
+  {
+    "id": "countable-additivity-cost",
+    "section": "the-axioms",
+    "question": "Which consequence of countable additivity have some found unwelcome?",
+    "options": [
+      "No measure spreads probability evenly over the naturals",
+      "The empty event can receive a small positive probability",
+      "An event and its complement need not sum to exactly one",
+      "Probabilities on infinite sample spaces can exceed one"
+    ],
+    "answer": 0,
+    "explanation": "Under countable additivity no measure gives every natural number the same probability, so there is no picking a natural number entirely at random, and de Finetti among others declined the stronger axiom for that reason. The other options contradict consequences of the basic axioms outright."
+  },
+  {
+    "id": "entailment-and-order",
+    "section": "reading-the-axioms-as-a-generalisation",
+    "question": "If $A$ entails $B$, which must hold under every probability measure?",
+    "options": [
+      "$P(A) \\geq P(B)$",
+      "$P(A) = P(B)$",
+      "$P(A) \\leq P(B)$",
+      "$P(B) = 1$ whenever $P(A) > 0$"
+    ],
+    "answer": 2,
+    "explanation": "Wherever $A$ holds $B$ holds, so the outcomes where $A$ holds are included in those where $B$ does, and $A$ cannot be more probable. The reversed inequality is the natural slip, since $A$ is the logically stronger claim, but stronger claims are less probable, not more."
+  },
+  {
+    "id": "conjunction-undetermined",
+    "section": "reading-the-axioms-as-a-generalisation",
+    "question": "$P(A) = 0.5$ and $P(B) = 0.5$. What do these values alone settle about $P(A \\cap B)$?",
+    "options": [
+      "It is $0.25$, the product of the two values",
+      "It is $0.5$, the smaller of the two values",
+      "It is $0$, since two halves already exhaust the space",
+      "Only that it lies from $0$ to $0.5$"
+    ],
+    "answer": 3,
+    "explanation": "Probability is not truth-functional: the value is 0.5 if the events coincide, 0 if they exclude each other, and 0.25 if they are independent. Answering 0.25 assumes independence, which the two values alone do not supply."
+  },
+  {
+    "id": "uncertainty-accumulates",
+    "section": "reading-the-axioms-as-a-generalisation",
+    "question": "If an argument is deductively valid and each of its premises has probability 0.9, its conclusion has probability at least 0.9.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Validity guarantees only that premises at probability one force the conclusion to one. With ten premises each at 0.9, a valid argument can leave its conclusion at little more than a third, because uncertainty accumulates across premises."
+  },
+  {
+    "id": "independence-is-numerical",
+    "section": "independence",
+    "question": "Under some measure, $P(A) = 0.5$, $P(B) = 0.2$ and $P(A \\cap B) = 0.1$. What follows?",
+    "options": [
+      "They are independent under this measure, causal links or not",
+      "They are not independent, since independence would need $P(A \\cap B) = 0.7$",
+      "They are independent only if neither event causes the other",
+      "They cannot be independent, since they are able to occur together"
+    ],
+    "answer": 0,
+    "explanation": "Independence is a numerical condition, and $0.5 \\times 0.2 = 0.1$, so the events are independent under this measure. It is not the same as having no causal connection, and overlap is no obstacle: exclusive events with positive probabilities are the ones that always fail it."
+  },
+  {
+    "id": "cox-and-rivals",
+    "section": "coxs-route-to-the-same-place",
+    "question": "On the article's account of Cox's theorem, what must a rival formalism for degrees of plausibility do if it is not a rescaled probability?",
+    "options": [
+      "Find a gap between Cox's requirements that they leave unsettled",
+      "Reject at least one of Cox's requirements, since it cannot satisfy them all",
+      "Use values outside the range from zero to one, which Cox does not cover",
+      "Give up the Boolean structure of the propositions it grades entirely"
+    ],
+    "answer": 1,
+    "explanation": "Cox's theorem says anything meeting the requirements is probability up to a change of scale, so there is no third option waiting between them. Changing the scale does not help, since rescaling is already allowed; a rival has to reject a requirement, which the article says alternative formalisms do."
+  },
+  {
+    "id": "square-side-or-area",
+    "section": "where-the-numbers-come-from",
+    "question": "A square's side is known only to lie between 1 and 2 metres. Indifference over side length and indifference over area give different probabilities that the side is under 1.5 metres. On the article's account, what does this show?",
+    "options": [
+      "One of the two calculations must contain an arithmetical error somewhere",
+      "Area is the right quantity to spread evenly, being the more basic of the two",
+      "The verdict depends on which quantity is taken as uniform, and the problem does not say",
+      "The Kolmogorov axioms are inconsistent when applied to continuous quantities"
+    ],
+    "answer": 2,
+    "explanation": "This is the structure of Bertrand's chords: spreading probability evenly over side length and over area are different assignments, and the description does not say which is meant. Both calculations are correct and the axioms are untouched; the trouble lies in the principle that supplies the initial numbers."
+  },
+  {
+    "id": "extension-or-analogy",
+    "section": "where-the-numbers-come-from",
+    "question": "According to the reply to the objection, when is probability a genuine extension of logic rather than a formal analogy?",
+    "options": [
+      "When probabilities are read as limiting frequencies in a sequence of trials",
+      "Whenever a measure satisfies the three Kolmogorov axioms, on any reading",
+      "Only when every probability assigned is either zero or one",
+      "When probabilities measure evidential support between propositions"
+    ],
+    "answer": 3,
+    "explanation": "If probabilities measure how far evidence supports a proposition, the subject matter is what follows from what, and the deductive case is support of degree one. On the frequency reading the objection is largely right, and the axioms alone settle nothing, since they are neutral between interpretations."
+  }
+]

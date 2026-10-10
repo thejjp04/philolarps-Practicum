@@ -53,6 +53,8 @@ The argument is the liar with the informal self-reference replaced by the diagon
 
 Two things about the statement repay attention. The first is that it is a claim about definability in a language, not about a theory's strength, so no addition of axioms touches it. The second is that it does not say truth is undefinable. It says arithmetical truth is not definable in the language of arithmetic. A richer language defines it easily: set theory proves the existence of a satisfaction relation for the language of arithmetic, and truth for arithmetic is definable there without any difficulty. What fails is a language defining truth for itself.
 
+<Check id="diagonalise-what" />
+
 ## Incompleteness, seen from above
 
 The undefinability theorem and the incompleteness theorem are close relatives, and the relation is worth stating because it makes the shape of both results visible at once.
@@ -99,6 +101,8 @@ The truth-teller is the case that shows what groundedness is measuring. Assignin
 
 The gain over Tarski is real. The object language is its own metalanguage; the T-sentences are respected in the sense that at a fixed point a sentence and the claim that it is true always have the same value; and the treatment of the liar falls out of the construction instead of being imposed by a rule against self-reference. The cost is that the biconditional expressing the T-schema is not itself true in the object language when the sentence is ungrounded, since a biconditional between two valueless sentences has no value on the scheme being used. The equivalence holds at the level of semantic value and not at the level of what the language asserts.
 
+<Check id="liar-versus-truth-teller" />
+
 ## The strengthened liar
 
 <Definition term="Strengthened liar">
@@ -110,6 +114,8 @@ The construction leaves the liar ungrounded and valueless. Now say what has just
 The escape is available but instructive. The sentence asserting that the liar is not true is a sentence of the metalanguage, in which the fixed point was described and in which "grounded" and "has no value" are available. Those notions are not expressible in the object language; if they were, the construction would break. So the object language contains its own truth predicate and does not contain its own account of what its truth predicate is doing, and the semantic notions needed to state the theory have climbed one level up. Kripke saw this clearly and said so in the paper: the ghost of the Tarski hierarchy is still with us.
 
 The pattern has a name now, revenge, and the general shape is that a theory which handles the liar by introducing a new semantic status finds that status expressible in some language, whereupon a new liar is built from it. Getting out of the hierarchy at one point puts you back in it at another.
+
+<Check id="revenge-concession" />
 
 ## What the alternatives trade
 

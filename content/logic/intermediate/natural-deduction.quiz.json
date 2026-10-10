@@ -1,0 +1,127 @@
+[
+  {
+    "id": "verify-versus-find",
+    "section": "what-has-to-be-specified",
+    "question": "In a proof system whose rules are checkable by shape alone, which of these is true?",
+    "options": [
+      "Checking a proof is mechanical and always terminates, but searching for one may have no bound",
+      "Checking and finding a proof are both mechanical procedures that always terminate",
+      "Finding a proof is mechanical, but checking one requires knowing what the formulas mean",
+      "Checking a proof requires building a truth table for each of its lines in turn"
+    ],
+    "answer": 0,
+    "explanation": "Checking a finished proof means reading the lines in order and confirming that each is a premise, an axiom or a rule application, which always terminates. Nothing bounds how long a proof might be, so a system can be perfectly precise and still give no idea how to find one."
+  },
+  {
+    "id": "which-rule-justifies",
+    "section": "two-rules-for-each-connective",
+    "question": "A proof has $(P \\land Q) \\rightarrow R$ on line 1, $P$ on line 2, $Q$ on line 3 and $P \\land Q$ on line 4. Which rule justifies line 4, and how can $R$ follow on line 5?",
+    "options": [
+      "Conjunction elimination, 2 and 3; then $R$ by conditional introduction, 1 to 4",
+      "Conjunction introduction, 2 and 3; then $R$ by conditional elimination, 1 and 4",
+      "Conditional elimination, 1 and 2; then $R$ by conjunction introduction, 3 and 4",
+      "Conjunction introduction, 2 and 3; then $R$ by conditional introduction, 1 to 4"
+    ],
+    "answer": 1,
+    "explanation": "Putting a $\\land$ in from its two conjuncts is conjunction introduction, and getting the consequent from a conditional and its antecedent is conditional elimination, which is modus ponens under its new name. Conditional introduction builds a conditional by discharging an assumption, so it can never yield the bare $R$."
+  },
+  {
+    "id": "disjunction-demanding-rule",
+    "section": "two-rules-for-each-connective",
+    "question": "Which of the two disjunction rules is the demanding one, and why?",
+    "options": [
+      "Introduction, since both disjuncts must already be on separate lines",
+      "Elimination, since one disjunct must be denied before the other is drawn",
+      "Introduction, since one disjunct must be shown true and the other false",
+      "Elimination, since the conclusion must follow from each disjunct"
+    ],
+    "answer": 3,
+    "explanation": "Introducing a disjunction is free: from any formula you may write its disjunction with anything. Getting something out of one costs two subproofs, since knowing that one of two things holds licenses a conclusion only if it follows either way. Denying one disjunct to get the other is disjunctive syllogism, which is not a primitive rule here."
+  },
+  {
+    "id": "forbidden-citation",
+    "section": "supposing-and-un-supposing",
+    "question": "Which citation does the scoping rule forbid?",
+    "options": [
+      "Citing a premise at depth zero from a line inside a subproof",
+      "Citing a line of an open subproof from a subproof nested inside it",
+      "Citing a line inside a closed subproof from the outer level",
+      "Citing a line at depth zero from a line two subproofs deep"
+    ],
+    "answer": 2,
+    "explanation": "Looking outward is always allowed, so premises and lines in still-open enclosing subproofs remain available. Looking into a subproof once it has closed is forbidden; without that restriction anything derived from a discharged assumption would count as proved from nothing, and every formula would be a theorem."
+  },
+  {
+    "id": "conditional-proof-structure",
+    "section": "conditional-proof",
+    "question": "With no premises at all, how does natural deduction prove $(P \\land Q) \\rightarrow P$?",
+    "options": [
+      "Assume $P \\land Q$, derive $P$ by conjunction elimination inside the subproof, then discharge",
+      "Assume $P$, derive $P \\land Q$ from it, then discharge by conditional introduction",
+      "Assume $\\neg P$, derive a contradiction from it, then write $P$ by reductio",
+      "Write $P \\land Q$ as a premise, then derive $P$ from it by conjunction elimination"
+    ],
+    "answer": 0,
+    "explanation": "Conditional introduction assumes the antecedent, reaches the consequent inside the subproof, and writes the conditional outside it. Taking $P \\land Q$ as a premise would only show $P \\land Q \\vdash P$; the theorem depends on nothing because its assumption has been discharged."
+  },
+  {
+    "id": "reductio-shape",
+    "section": "reductio",
+    "question": "To introduce $\\neg \\varphi$ by negation introduction, how must the subproof begin and end?",
+    "options": [
+      "Begin by assuming $\\neg \\varphi$, and end with some formula alongside its negation",
+      "Begin by assuming $\\varphi$, and end with some formula and its negation",
+      "Begin by assuming $\\varphi$, and end with $\\neg \\varphi$",
+      "Begin by assuming $\\neg \\varphi$, and end with $\\varphi$ itself on the last line"
+    ],
+    "answer": 1,
+    "explanation": "Negation introduction assumes the unnegated formula, derives a contradiction, discharges, and writes the negation. Assuming $\\neg \\varphi$ and concluding $\\varphi$ is classical reductio, the extra rule that spoils the system's symmetry, not the introduction rule for negation."
+  },
+  {
+    "id": "tollens-is-derived",
+    "section": "reductio",
+    "question": "Modus tollens is one of the primitive rules of the natural deduction system in this article.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "It is derived in six lines from conditional elimination, conjunction introduction and negation introduction. That is typical of the system: a small stock of paired rules generates the familiar patterns as results, which can then be used as shorthand."
+  },
+  {
+    "id": "cases-must-match",
+    "section": "proof-by-cases",
+    "question": "From $P \\lor Q$, you derive $R$ in a subproof assuming $P$, but in a subproof assuming $Q$ you reach only $S$. What does disjunction elimination allow at the outer level?",
+    "options": [
+      "$R$, since one case reaching the target is enough for the rule",
+      "$R \\land S$, since each case contributes its own result to the conclusion",
+      "$R$, provided the assumption $Q$ is discharged at the same time",
+      "Nothing yet, since both cases must end in the same formula"
+    ],
+    "answer": 3,
+    "explanation": "The rule needs the same formula from each disjunct, since only then does it follow either way. One repair is to write $R \\lor S$ at the end of each subproof by disjunction introduction, after which the rule yields $R \\lor S$; a conjunction of the two results is never licensed."
+  },
+  {
+    "id": "heuristic-first-move",
+    "section": "finding-a-proof",
+    "question": "With premise $P$ and target $Q \\rightarrow (P \\land Q)$, what does the article's strategy say to do first?",
+    "options": [
+      "Assume $Q$ and make $P \\land Q$ the new target, since the goal is a conditional",
+      "Assume $P \\land Q$ and make $Q$ the new target, working towards the antecedent",
+      "Assume the negation of the target and look for a contradiction, as reductio usually works",
+      "Take the premise apart first, applying conjunction elimination wherever possible"
+    ],
+    "answer": 0,
+    "explanation": "Work backwards: a conditional conclusion will almost certainly come from conditional introduction, so assume its antecedent and aim for its consequent. Reductio is the rule of last resort, kept for atomic targets or for when nothing else suggests itself."
+  },
+  {
+    "id": "drop-the-classical-rule",
+    "section": "the-classical-extra",
+    "question": "What results from removing double negation elimination and classical reductio while keeping every other rule?",
+    "options": [
+      "A system in which nothing involving negation can be proved any longer",
+      "Intuitionistic logic, in which excluded middle is no longer provable",
+      "An unsound system, since the remaining rules now prove too much",
+      "Classical logic again, since the removed rules are derivable from the rest"
+    ],
+    "answer": 1,
+    "explanation": "The symmetric fragment of matched introduction and elimination rules is a coherent logic in its own right, intuitionistic logic. Negation keeps its own introduction and elimination rules, so plenty involving negation stays provable; what goes is the classical extra, and with it excluded middle."
+  }
+]

@@ -67,6 +67,8 @@ The vocabulary here has drifted, and the drift is worth recording because the ol
 
 That argument is the reason the results below take the shape they do. To show a set undecidable, it is enough to show that it is recursively enumerable and that its complement is not, and the second half is where the diagonal argument goes.
 
+<Check id="complement-of-an-undecidable-re-set" />
+
 ## The halting problem
 
 <Definition term="Halting problem">
@@ -84,6 +86,8 @@ If $D$ halts on $D$, then $H$, asked about $D$ and $D$, answered yes, and $D$ wa
 The argument is Cantor's diagonal argument in another costume, and it is worth seeing the correspondence rather than merely being told about it. Cantor's proof takes a list of reals and builds one differing from the first in the first place, the second in the second, and so on, so that it cannot be on the list. This proof takes the procedures, considers what each does when applied to itself, which is the diagonal of the table whose rows are procedures and whose columns are inputs, and builds a procedure differing from every one of them at exactly that diagonal position. The self-application is the diagonal, and the inversion of the answer is the change of digit.
 
 The halting problem is the first natural example of a set that is recursively enumerable and not decidable, and by the small theorem above, the set of non-halting pairs is not recursively enumerable at all. Nothing lists the computations that run forever.
+
+<Check id="diagonal-change-of-digit" />
 
 ## The universal machine, and how far the damage spreads
 
@@ -110,6 +114,8 @@ Two qualifications keep the result in proportion. It concerns full first-order l
 The reduction technique also travels far beyond logic, and the range of what it has settled is the best evidence that the notion being reduced to is the right one. The word problem for groups, which asks whether two products of generators denote the same element, is undecidable in general. So is the question whether a given finite set of tiles can cover the plane. Hilbert's tenth problem, which asked for a procedure determining whether a polynomial equation with integer coefficients has a solution in integers, was answered negatively in 1970 by Matiyasevich, completing a line of work by Davis, Putnam and Julia Robinson. In each case the proof shows how to encode a computation into the objects of the problem, so that a decision procedure for the problem would decide halting. These are not results about logic that happen to be stated elsewhere; they are ordinary mathematical questions, asked for ordinary reasons, that turn out to have no general answer.
 
 The second qualification is that the theorem says nothing about any individual sentence. Every valid sentence has a derivation and every invalid one has a countermodel, and both can in principle be exhibited. What fails is the existence of a single method covering all cases. That is the same distinction drawn at the end of the article on completeness, between what exists and what can be found, and it is the distinction this whole article turns on.
+
+<Check id="direction-of-reduction" />
 
 ## The question that was being answered
 

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "flat-derivation",
+    "section": "the-other-extreme",
+    "question": "What most distinguishes a derivation in a Hilbert system from a natural deduction proof?",
+    "options": [
+      "It may cite axioms but never premises, so every line is a theorem",
+      "Nothing is assumed temporarily, so every line rests on the premises",
+      "It may not use modus ponens, which belongs to natural deduction",
+      "Its lines cannot be checked by shape, since axioms must be recognised by meaning"
+    ],
+    "answer": 1,
+    "explanation": "A derivation is a flat list of axioms, premises and rule applications, with no subproofs and no discharge. Premises are allowed, and modus ponens is usually the one rule such a system has."
+  },
+  {
+    "id": "schema-instance",
+    "section": "schemas-rather-than-axioms",
+    "question": "Which formula is an instance of the schema $\\varphi \\rightarrow (\\psi \\rightarrow \\varphi)$?",
+    "options": [
+      "$(P \\rightarrow Q) \\rightarrow (\\neg R \\rightarrow (Q \\rightarrow P))$",
+      "$\\neg R \\rightarrow ((P \\rightarrow Q) \\rightarrow (P \\rightarrow Q))$",
+      "$(P \\rightarrow Q) \\rightarrow ((P \\rightarrow Q) \\rightarrow \\neg R)$",
+      "$(P \\rightarrow Q) \\rightarrow (\\neg R \\rightarrow (P \\rightarrow Q))$"
+    ],
+    "answer": 3,
+    "explanation": "Substituting $P \\rightarrow Q$ for $\\varphi$ and $\\neg R$ for $\\psi$, uniformly, gives the last formula. The substitution must put the same formula in both places where $\\varphi$ occurs, which the others fail to do; $\\varphi$ may be replaced by a compound formula, not only by a letter."
+  },
+  {
+    "id": "abbreviation-is-literal",
+    "section": "the-system",
+    "question": "In the restricted language of this system, what is $P \\lor Q$?",
+    "options": [
+      "A way of writing $\\neg P \\rightarrow Q$, not a new formula of the language",
+      "A new formula, governed by a fourth axiom schema for disjunction",
+      "A way of writing $\\neg(P \\rightarrow \\neg Q)$ more compactly on the page",
+      "A string that may not appear in any derivation of the system"
+    ],
+    "answer": 0,
+    "explanation": "Disjunction is an abbreviation in the literal sense: a line containing it really contains $\\neg P \\rightarrow Q$. That keeps the language to two connectives, so inductions on formulas have only two cases. $\\neg(P \\rightarrow \\neg Q)$ is the abbreviation for conjunction."
+  },
+  {
+    "id": "no-recipe-for-derivations",
+    "section": "what-it-costs",
+    "question": "There is a straightforward procedure that generates derivations like the five-line proof of $P \\rightarrow P$ in this system.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The first line is the instance of the second schema that happens to work, and the only way to see that it works is to have the finished derivation in front of you. Searching for derivations in a Hilbert system is genuinely hard, which is why nobody works in one directly."
+  },
+  {
+    "id": "deduction-theorem-statement",
+    "section": "the-theorem-that-rescues-it",
+    "question": "Which of these is the deduction theorem?",
+    "options": [
+      "If $\\Gamma \\vdash \\psi$ and $\\Gamma \\vdash \\psi \\rightarrow \\varphi$, then $\\Gamma \\vdash \\varphi$",
+      "If $\\Gamma, \\psi \\vDash \\varphi$, then $\\Gamma \\vdash \\psi \\rightarrow \\varphi$",
+      "If $\\Gamma, \\psi \\vdash \\varphi$, then $\\Gamma \\vdash \\psi \\rightarrow \\varphi$",
+      "If $\\Gamma \\vdash \\psi \\rightarrow \\varphi$, then $\\Gamma, \\varphi \\vdash \\psi$"
+    ],
+    "answer": 2,
+    "explanation": "The theorem moves a premise $\\psi$ across the turnstile into the antecedent of a conditional, which is conditional proof recovered from outside the system. The first option is just modus ponens, and the second smuggles the semantic turnstile into a purely syntactic result."
+  },
+  {
+    "id": "modus-ponens-case",
+    "section": "the-theorem-that-rescues-it",
+    "question": "In the proof of the deduction theorem, which schema handles the case where a line follows by modus ponens from earlier lines?",
+    "options": [
+      "The first, which turns any derivable $\\chi$ into $\\psi \\rightarrow \\chi$",
+      "The second, which distributes $\\psi \\rightarrow$ across a conditional",
+      "The third, contraposition from a negative claim to a positive one",
+      "None, since modus ponens applied twice handles that case on its own"
+    ],
+    "answer": 1,
+    "explanation": "From $\\psi \\rightarrow \\theta$ and $\\psi \\rightarrow (\\theta \\rightarrow \\chi)$, an instance of the second schema plus two uses of modus ponens yields $\\psi \\rightarrow \\chi$. The first schema covers the axiom and premise case instead, and this fit is why the second schema, unappealing on its face, was chosen."
+  },
+  {
+    "id": "existence-not-derivation",
+    "section": "what-it-buys",
+    "question": "An argument establishes a result by applying the deduction theorem. What has it produced?",
+    "options": [
+      "A derivation in the system, written in a slightly abbreviated form",
+      "A natural deduction proof that the Hilbert system accepts as it stands",
+      "A valid argument, but only once the theorem is added to the system as a rule",
+      "A proof that a derivation exists, possibly a much longer one"
+    ],
+    "answer": 3,
+    "explanation": "The theorem is about the system, not a rule within it, so using it shows that some official derivation exists. Each application in the induction replaces a line with several, so that derivation can be very long, which matters when derivation length is itself under study."
+  },
+  {
+    "id": "modal-failure",
+    "section": "where-the-theorem-fails",
+    "question": "In a modal system, why does the deduction theorem fail if necessitation may be applied to lines that rest on premises?",
+    "options": [
+      "From a premise one gets its necessity, yet truth need not imply necessity",
+      "Modal systems have no modus ponens, so the induction has nothing to work on",
+      "A claim about necessity can never appear as the antecedent of a conditional",
+      "Necessitation is unsound even when it is applied only to theorems of the system"
+    ],
+    "answer": 0,
+    "explanation": "From $\\varphi$ one step gives that $\\varphi$ is necessary, so the deduction theorem would make the conditional from $\\varphi$ to its own necessity a theorem, though a truth need not be a necessary truth. Necessitation is safe for theorems, which hold in every model; the standard fix restricts it to lines depending on no premises."
+  },
+  {
+    "id": "independence-test",
+    "section": "asking-whether-an-axiom-is-needed",
+    "question": "To show the third schema independent of the first two using a three-valued table, what has to be verified?",
+    "options": [
+      "The third schema comes out false on some ordinary two-valued interpretation",
+      "The three values are genuine truth values that the language can express",
+      "The first two stay designated, modus ponens keeps them so, and the third can fail",
+      "A long and careful search fails to derive the third schema from the other two"
+    ],
+    "answer": 2,
+    "explanation": "If every instance of the other schemas is designated and modus ponens preserves designation, induction shows everything derivable from them is designated, so an undesignated instance of the third cannot be derived. The tables need not mean anything, and a failed search proves nothing."
+  },
+  {
+    "id": "soundness-four-cases",
+    "section": "why-anyone-uses-these-systems",
+    "question": "Why is the soundness proof for this Hilbert system so short?",
+    "options": [
+      "It has four cases: three schemas and one rule",
+      "The deduction theorem makes soundness follow automatically from the axioms",
+      "Hilbert systems have no premises",
+      "Completeness, once it is proved, gives soundness for the system free of charge"
+    ],
+    "answer": 0,
+    "explanation": "Soundness is proved by induction on derivations, so it needs one case per axiom schema (each a tautology) and one per rule (preserving truth). A natural deduction system has a case for each of its ten or more rules, and the cases involving discharge need extra care, which is the real case for Hilbert systems."
+  }
+]

@@ -1,0 +1,105 @@
+[
+  {
+    "id": "classify-directedness",
+    "section": "what-the-position-has-to-answer-to",
+    "question": "One child is hoping for a visit from the tooth fairy and another from Father Christmas, and they are hoping for different things. Which of the three facts any account must handle does this illustrate?",
+    "options": [
+      "True denials",
+      "Directedness",
+      "Fiction"
+    ],
+    "answer": 1,
+    "explanation": "Hoping, like searching, is aimed at something, and two hopes aimed at different nonexistent things differ, so the difference has to be located somewhere. Fiction is the tempting answer because both figures come from stories, but the fact at issue is about the mental state's aim, not about being right or wrong concerning a story."
+  },
+  {
+    "id": "golden-mountain-meinong",
+    "section": "taking-the-appearances-at-face-value",
+    "question": "On Meinong's view, what is true of the golden mountain?",
+    "options": [
+      "It is golden and is a mountain, and it does not exist",
+      "It is neither golden nor a mountain, since only existing things have properties",
+      "It exists, since it has the properties of being golden and being a mountain",
+      "It is golden only in the sense that people imagine it as golden"
+    ],
+    "answer": 0,
+    "explanation": "The principle of independence says what a thing is like is independent of whether it is, so the golden mountain genuinely has its properties while failing to exist. Inferring existence from having properties is precisely the link the principle cuts."
+  },
+  {
+    "id": "round-square-contradiction",
+    "section": "taking-the-appearances-at-face-value",
+    "question": "How does Meinong avoid concluding that the round square, being impossible, is not an object at all?",
+    "options": [
+      "He denies that the round square is really square",
+      "He treats \"the round square\" as a description that nothing satisfies",
+      "He holds that the law of contradiction governs what exists, not objects as such",
+      "He places the round square in a third realm alongside existence and non-existence"
+    ],
+    "answer": 2,
+    "explanation": "Restricting the law of contradiction to existent objects lets an impossible object still count as an object. The third-realm option is tempting because of Aussersein, but the article stresses that Aussersein is not a third realm; it is the claim that the question of being does not arise when an object is picked out."
+  },
+  {
+    "id": "existent-golden-mountain-assumption",
+    "section": "russells-attack",
+    "question": "Russell's existent golden mountain argument needs which assumption to get going?",
+    "options": [
+      "That contradictory objects cannot be referred to",
+      "That every description is satisfied by something",
+      "That fictional characters are created by their authors",
+      "That existence is a property a description can build in"
+    ],
+    "answer": 3,
+    "explanation": "If existence can be written into a specification, the theory's own rules make the existent golden mountain existent, yet nothing like it exists. Contradiction drives Russell's first objection, about the round square, not this one, which turns the theory's own principle against it."
+  },
+  {
+    "id": "fregean-dilemma",
+    "section": "russells-attack",
+    "question": "A Meinongian accepts the Fregean view that existence is not a feature a description can build in. According to the reply, where does that leave the position?",
+    "options": [
+      "Safe from the existent golden mountain, but without the resource that made it attractive",
+      "Still exposed to the existent golden mountain, since that object is golden and a mountain",
+      "Forced to say that the existent golden mountain exists after all",
+      "Free to keep existence as one more property that objects have or lack"
+    ],
+    "answer": 0,
+    "explanation": "That is why the objection works as a dilemma: either existence is a property and the existent golden mountain exists, or it is not and existence can no longer be one of the properties objects variously have and lack. The last option is the horn the Fregean move gives up."
+  },
+  {
+    "id": "pegasus-denial-analysis",
+    "section": "the-alternative",
+    "question": "On the mainstream analysis, what is the sentence \"Pegasus does not exist\" about?",
+    "options": [
+      "A winged horse that lacks the property of existing",
+      "The idea of Pegasus in the speaker's mind",
+      "A condition, and it says that nothing satisfies it",
+      "A fictional artefact, and it says that it is not a horse"
+    ],
+    "answer": 2,
+    "explanation": "Russell's theory of descriptions treats the apparent name as a description, so the sentence can be true without referring to any object. Reading it as about an idea fails because the idea of Pegasus certainly exists, so the denial would come out false."
+  },
+  {
+    "id": "holmes-artefact",
+    "section": "the-alternative",
+    "question": "On the treatment of fictional characters as artefacts created by their authors, what does \"Holmes does not exist\" deny?",
+    "options": [
+      "That Holmes is anything at all",
+      "That Holmes is a person",
+      "That Holmes has any properties",
+      "That anyone ever wrote about Holmes"
+    ],
+    "answer": 1,
+    "explanation": "On this view Holmes exists in the way symphonies and legal systems do, so the denial cannot mean he is nothing. It is read as denying that he is a person, which is the price paid for counting him among the things there are."
+  },
+  {
+    "id": "what-divides-the-sides",
+    "section": "what-is-actually-at-stake",
+    "question": "On the article's account, what divides the Meinongian from the mainstream view?",
+    "options": [
+      "An observable fact about fiction, such as where Holmes lived, that one side gets wrong",
+      "Whether \"Pegasus does not exist\" is true, since only one side can make it come out true",
+      "Whether Russell's theory of descriptions is logically valid, which would settle the matter",
+      "Where the complexity goes: a vast ontology, or an elaborate account of what sentences are about"
+    ],
+    "answer": 3,
+    "explanation": "Both sides agree on every observable fact and both want \"Pegasus does not exist\" to come out true. They disagree about which theory pays the more acceptable price for accommodating the data, which the article presents as the standard shape of a metaphysical argument."
+  }
+]

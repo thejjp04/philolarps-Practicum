@@ -1,0 +1,130 @@
+[
+  {
+    "id": "count-truth-functions",
+    "section": "how-much-has-to-be-covered",
+    "question": "A truth function has a truth table with 32 rows. How many distinct truth functions have tables of that size?",
+    "options": [
+      "$32$",
+      "$64$",
+      "$2^{32}$",
+      "$32^2$"
+    ],
+    "answer": 2,
+    "explanation": "Each of the 32 rows can independently be given either output, so there are $2^{32}$ ways to fill the column. 32 counts the rows rather than the functions, and 64 adds the two choices per row where it should multiply them."
+  },
+  {
+    "id": "constants-add-nothing",
+    "section": "how-much-has-to-be-covered",
+    "question": "Adding $\\top$ and $\\bot$ as primitive connectives to an adequate set lets it express truth functions it could not express before.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Any adequate set already expresses the two constants, by a tautology and by a contradiction. Taking them as primitive is a convenience some presentations adopt, not a gain in expressive power."
+  },
+  {
+    "id": "dnf-recipe",
+    "section": "the-construction-that-proves-adequacy",
+    "question": "A two-place truth function is true exactly when $P$ is true and $Q$ false, and when both are false. What formula does the recipe produce?",
+    "options": [
+      "$(P \\land \\neg Q) \\land (\\neg P \\land \\neg Q)$",
+      "$(\\neg P \\land Q) \\lor (P \\land Q)$",
+      "$(\\neg P \\lor Q) \\land (P \\lor Q)$",
+      "$(P \\land \\neg Q) \\lor (\\neg P \\land \\neg Q)$"
+    ],
+    "answer": 3,
+    "explanation": "Take the true rows only, write for each a conjunction of literals true on exactly that row, and disjoin them. Joining the row conjunctions with $\\land$ instead gives a contradiction, since no row makes both true. The result is equivalent to $\\neg Q$, which shows the recipe takes no notice of simpler structure."
+  },
+  {
+    "id": "all-false-case",
+    "section": "the-construction-that-proves-adequacy",
+    "question": "What does the recipe do with a truth function that is false on every row?",
+    "options": [
+      "It shows that $\\neg$, $\\land$ and $\\lor$ cannot express the function",
+      "It gives an empty disjunction, so the case is closed by any contradiction",
+      "It produces the conjunction of every letter negated",
+      "It produces the disjunction of every row's conjunction"
+    ],
+    "answer": 1,
+    "explanation": "With no true rows there is nothing to disjoin, so the case is handled separately by a formula such as $P \\land \\neg P$. The function is perfectly expressible; the recipe just needs one special case. The conjunction of every negated letter is true on the all-false row, so it expresses a different function."
+  },
+  {
+    "id": "adequacy-not-brevity",
+    "section": "what-the-construction-costs",
+    "question": "On the article's account, what does the adequacy of $\\{\\neg, \\land, \\lor\\}$ establish?",
+    "options": [
+      "Every truth function has some formula in that vocabulary, perhaps a huge one",
+      "Every truth function has a short formula in that vocabulary, given enough care",
+      "The recipe finds the shortest formula for each truth function",
+      "Every formula in that vocabulary is in disjunctive normal form"
+    ],
+    "answer": 0,
+    "explanation": "Adequacy concerns expressive power alone: nothing is out of reach. The recipe can produce on the order of $2^n$ disjuncts, and finding the shortest equivalent formula is a genuinely hard problem, so adequacy should not be heard as a promise of brevity."
+  },
+  {
+    "id": "and-from-neg-arrow",
+    "section": "trimming-further",
+    "question": "Which formula, using only $\\neg$ and $\\rightarrow$, has the truth table of $P \\land Q$?",
+    "options": [
+      "$\\neg P \\rightarrow Q$",
+      "$P \\rightarrow \\neg Q$",
+      "$\\neg(P \\rightarrow \\neg Q)$",
+      "$\\neg(\\neg P \\rightarrow Q)$"
+    ],
+    "answer": 2,
+    "explanation": "$P \\rightarrow \\neg Q$ is false only when $P$ and $Q$ are both true, so its negation is true exactly then, which is conjunction. Unnegated, $P \\rightarrow \\neg Q$ says \"not both\", and $\\neg P \\rightarrow Q$ is the article's formula for disjunction."
+  },
+  {
+    "id": "conditional-alone",
+    "section": "showing-that-a-set-is-not-adequate",
+    "question": "Why can the conditional on its own not express $\\neg P$?",
+    "options": [
+      "It preserves falsity, so all-false inputs always give false",
+      "It is not associative, so its formulas are ambiguous",
+      "It ignores its first argument whenever that is false",
+      "It preserves truth, so all-true inputs always give true"
+    ],
+    "answer": 3,
+    "explanation": "A conditional with both parts true is true, so by induction every formula built from $\\rightarrow$ alone is true when every letter is, while $\\neg P$ is false there. The falsity argument does not apply, since a conditional with both parts false is true."
+  },
+  {
+    "id": "non-adequacy-method",
+    "section": "showing-that-a-set-is-not-adequate",
+    "question": "To prove that a set of connectives is not adequate, which plan follows the article's method?",
+    "options": [
+      "Try hard to express negation with the set and report the failure",
+      "Find a property every connective preserves, then a function lacking it",
+      "Show that the normal form recipe cannot be run with that set",
+      "Find a truth function the set can express only with a very long formula"
+    ],
+    "answer": 1,
+    "explanation": "Induction on formulas shows every expressible function has the preserved property, so a function without it is out of reach. A failed attempt proves nothing, and needing a long formula is a matter of convenience, not of expressive power."
+  },
+  {
+    "id": "reply-shorter-metatheory",
+    "section": "showing-that-a-set-is-not-adequate",
+    "question": "According to the reply to the objection, how do results about small adequate sets make metatheory shorter?",
+    "options": [
+      "An induction on formulas needs one case per connective",
+      "Smaller sets give shorter formulas for every truth function",
+      "With fewer connectives, truth tables have fewer rows",
+      "Small adequate sets need no closure clause in their grammar"
+    ],
+    "answer": 0,
+    "explanation": "Proofs about every formula go by induction with a case for each connective, so a language with two connectives needs well under half the work of one with five. Smaller sets usually make formulas longer, not shorter, and the number of rows depends on letters, not connectives."
+  },
+  {
+    "id": "cnf-recipe",
+    "section": "showing-that-a-set-is-not-adequate",
+    "question": "A two-place truth function is false only when $P$ is true and $Q$ false. What does the conjunctive normal form recipe produce?",
+    "options": [
+      "$P \\land \\neg Q$",
+      "$P \\lor \\neg Q$",
+      "$\\neg P \\land Q$",
+      "$\\neg P \\lor Q$"
+    ],
+    "answer": 3,
+    "explanation": "The recipe runs on the false rows with the values flipped: the one false row has $P$ true and $Q$ false, so its clause is $\\neg P \\lor Q$, false on exactly that row and equivalent to $P \\rightarrow Q$. $P \\land \\neg Q$ is that row's conjunction without the flip, which is true on the row rather than false."
+  }
+]

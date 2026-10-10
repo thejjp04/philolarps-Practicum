@@ -1,0 +1,132 @@
+[
+  {
+    "id": "c-inductive-not-p-inductive",
+    "section": "what-the-move-to-probability-does",
+    "question": "An argument raises the probability of theism from 0.1 to 0.3. In Swinburne's terms, what has it achieved?",
+    "options": [
+      "A P-inductive argument, since it raises the probability substantially",
+      "A C-inductive argument, but not a P-inductive one",
+      "Nothing of value, since 0.3 is still improbable",
+      "A failed demonstrative argument, since the conclusion can still be false"
+    ],
+    "answer": 1,
+    "explanation": "A C-inductive argument raises the probability of its conclusion; only a P-inductive one makes it more probable than not, and 0.3 is not. The trap is treating any large rise as P-inductive, when the threshold is one half, which is why Swinburne needs several C-inductive arguments to add up to a P-inductive case."
+  },
+  {
+    "id": "sober-targets-the-likelihood",
+    "section": "the-evidence-factor",
+    "question": "Elliott Sober's objection to the design argument is aimed at which part of the Bayesian reconstruction?",
+    "options": [
+      "The prior of theism, since no rule fixes where to start",
+      "The likelihood on the negation of theism, since a multiverse would make life-permitting constants expected",
+      "The description of the evidence, since observers could only ever find themselves among life-permitting constants",
+      "The likelihood on theism, since bare theism predicts nothing without claims about divine purposes"
+    ],
+    "answer": 3,
+    "explanation": "Sober's point is that $\\Pr(e \\mid \\text{theism})$ cannot be computed without assumptions about what God would want, and those supplements are usually chosen after seeing the evidence, so the likelihood merely restates it. The prior option is tempting because Sober also distrusts priors, but this objection would bite even if everyone agreed where to start."
+  },
+  {
+    "id": "same-evidence-opposite-verdicts",
+    "section": "the-evidence-factor",
+    "question": "Ana and Ben agree that a body of evidence carries a Bayes factor of 20 in theism's favour. Ana starts at odds of 1 to 100 against theism; Ben starts at even odds. What follows?",
+    "options": [
+      "They converge, because a shared Bayes factor cancels out the difference between their starting points",
+      "Both end above one half, because a factor of 20 is strong enough to outweigh any reasonable prior",
+      "Ana ends near 0.17 and Ben near 0.95, on opposite sides of one half",
+      "Ben's verdict is better supported, being closer to indifference"
+    ],
+    "answer": 2,
+    "explanation": "Posterior odds are prior odds times the Bayes factor: 20 to 100 is about 0.17, and 20 to 1 is about 0.95. Multiplying both by the same factor preserves the gap between the priors rather than closing it, which is why a dispute rooted in where the parties began is not settled by evidence they agree on."
+  },
+  {
+    "id": "specific-theism-pays-in-the-prior",
+    "section": "the-evidence-factor",
+    "question": "A writer says conscious moral agents are near certain on theism, reading theism as including God's intention to make such creatures, and then gives theism the high prior suited to bare theism. On the article's account, what has gone wrong?",
+    "options": [
+      "Nothing, since a family's likelihood is that of its best-fitting member",
+      "The content that raises the likelihood lowers the prior, so the two readings cannot be mixed",
+      "It confuses the probability of the evidence given theism with the probability of theism given the evidence",
+      "It counts one piece of evidence twice by multiplying the Bayes factors of two overlapping arguments"
+    ],
+    "answer": 1,
+    "explanation": "A more specific hypothesis is less probable before evidence, so the maximal reading buys its high likelihood at the cost of its prior; taking the likelihood from one reading and the prior from the other is the equivocation the framework makes checkable. The best-fitting-member idea is wrong because the Bayes factor for a family is a weighted average across its members."
+  },
+  {
+    "id": "observer-selection-redescribes-evidence",
+    "section": "a-worked-case",
+    "question": "Which reply to the Bayesian fine-tuning argument contests how the evidence should be described, rather than the probability of the evidence on either hypothesis?",
+    "options": [
+      "The observer-selection reply",
+      "The multiverse reply",
+      "Sober's objection that theism must be supplemented with divine purposes",
+      "The objection that no probability distribution over the constants is well defined"
+    ],
+    "answer": 0,
+    "explanation": "The observer-selection reply replaces \"the constants are life-permitting\" with \"we, who could only exist where they are, observe that they are\", which is unsurprising on any hypothesis. The multiverse reply leaves the evidence statement alone and attacks $\\Pr(e \\mid \\neg h)$, arguing that it is not small."
+  },
+  {
+    "id": "why-priors-do-not-wash-out",
+    "section": "where-it-stops-working",
+    "question": "Convergence results show that agents with different priors come to agree after updating on shared evidence. Why, on the article's account, does that not dissolve the problem of the priors in natural theology?",
+    "options": [
+      "Convergence holds only for priors fixed by the principle of indifference",
+      "Convergence requires that the evidence be old, whereas the cumulative case relies on new observations",
+      "It needs agreed likelihoods and a long run of fresh evidence, and cannot move a prior of zero or one",
+      "Convergence applies only to C-inductive arguments, and the cumulative case aims to be P-inductive"
+    ],
+    "answer": 2,
+    "explanation": "All three conditions fail here: the parties dispute the likelihoods, natural theology has no stream of new evidence, and some participants start at the extremes. The results are about subjective priors, so the trap is thinking they presuppose an objective rule such as indifference."
+  },
+  {
+    "id": "indifference-depends-on-partition",
+    "section": "where-it-stops-working",
+    "question": "Why does the principle of indifference fail to supply an objective prior for theism?",
+    "options": [
+      "It gives theism a prior of zero, which no subsequent evidence, however strong, could ever raise",
+      "It is defensible only if simplicity tracks truth",
+      "It applies only to hypotheses that fix a definite probability for the evidence, which theism does not",
+      "Its verdict depends on how the possibilities are partitioned, which it cannot settle"
+    ],
+    "answer": 3,
+    "explanation": "Divide the space into theism and atheism and theism gets a half; divide it into theism, atheism and several further alternatives and it gets an eighth. Bertrand's paradox shows the same defect in cleaner form. The trouble is too many defensible answers, not a hostile one, so the principle never hands theism zero."
+  },
+  {
+    "id": "simplicity-must-track-truth",
+    "section": "where-it-stops-working",
+    "question": "Grant Swinburne that theism has a short statement and that unlimited degrees need no further specification. Which of these must still be established for simplicity to give theism a high intrinsic probability?",
+    "options": [
+      "That simplicity is a guide to truth, rather than merely a convenience that makes theories easier to use",
+      "That the evidence is highly probable on theism, so that the likelihood can support the prior",
+      "That infinite degrees of power require more specification than any large finite degree does",
+      "That the principle of indifference assigns theism one half before any evidence is considered"
+    ],
+    "answer": 0,
+    "explanation": "If the preference for simpler theories is only pragmatic, it licenses nothing about intrinsic probability, so the argument needs simplicity to track truth. The option about infinite degrees inverts Swinburne's claim: zero limits is supposed to need less specification than any particular finite value, not more."
+  },
+  {
+    "id": "old-evidence-confirms-nothing",
+    "section": "two-problems-the-framework-has-independently",
+    "question": "Applied literally, why does a long-known fact such as the universe exhibiting order fail to raise the probability of theism at all?",
+    "options": [
+      "Because order is equally expected whether or not God exists, so its likelihood ratio comes out at one",
+      "Because order supports only a C-inductive argument",
+      "Because its likelihood on theism cannot be computed until theism is supplemented with divine purposes",
+      "Because known evidence already has probability one, so conditioning on it leaves the posterior exactly where the prior was"
+    ],
+    "answer": 3,
+    "explanation": "This is the old evidence problem: if $\\Pr(e) = 1$ then $\\Pr(e \\mid h) = 1$ too, the ratio in the theorem is one, and nothing moves. The verdict does not depend on the likelihoods being equal; the counterfactual and ur-prior repairs exist because a fact can look strongly confirmatory and still receive probability one."
+  },
+  {
+    "id": "aggregation-needs-independence",
+    "section": "two-problems-the-framework-has-independently",
+    "question": "A cumulative case multiplies the Bayes factors of the design argument, the fine-tuning argument and the argument from consciousness. What is the article's main worry about that step?",
+    "options": [
+      "Multiplying factors above one lowers the posterior, as Plantinga's principle of dwindling probabilities shows",
+      "They may all rest on the universe being hospitable to complex structure, counting one fact several times",
+      "The factors should be averaged rather than multiplied, since theism is a family of hypotheses",
+      "Each argument is only C-inductive, and C-inductive arguments cannot combine into a P-inductive case"
+    ],
+    "answer": 1,
+    "explanation": "Multiplication is licensed only if the pieces are independent, and nobody has shown that these are. Dwindling probabilities is a different problem: it concerns links in a chain, where the conclusion inherits the product of merely probable steps, not parallel supports for one conclusion."
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "which-is-a-statement",
+    "section": "statements-not-questions-or-commands",
+    "question": "Which of these sentences could serve as a premise in an argument?",
+    "options": [
+      "What time does the last train leave?",
+      "Paris is the capital of Germany.",
+      "Read chapter two before Friday.",
+      "Let nobody leave the room until noon."
+    ],
+    "answer": 1,
+    "explanation": "A premise has to be a statement, something that is either true or false, and this one is a statement that happens to be false. Falsity does not disqualify a sentence from being a statement; it is the mark of one. The question and the two commands report nothing that could fail to be the case."
+  },
+  {
+    "id": "rhetorical-question",
+    "section": "statements-not-questions-or-commands",
+    "question": "A letter to the council reads: \"Would it not be reckless to build homes on a flood plain? The plan should be refused.\" When you set this out in standard form, what should you do with the first sentence?",
+    "options": [
+      "Drop it, since a question cannot appear anywhere in an argument",
+      "Keep it as written, since an argument can contain questions",
+      "Rewrite it as the statement it stands for: building there is reckless",
+      "Treat it as the conclusion, since it is the first thing the writer says"
+    ],
+    "answer": 2,
+    "explanation": "The rhetorical question is doing the work of a statement, and it is the writer's reason for refusing the plan, so it becomes a premise once rewritten as that statement. Keeping it as a question fails because, although a question can be mentioned inside an argument, it cannot serve as a premise."
+  },
+  {
+    "id": "conclusion-comes-first",
+    "section": "premises-and-conclusion",
+    "question": "\"The museum must have been shut on Monday, since the guard was off sick and the museum never opens without its guard.\" What is the conclusion?",
+    "options": [
+      "The museum was shut on Monday",
+      "The guard was off sick on Monday",
+      "The museum never opens without its guard",
+      "There is none, since no word like \"so\" or \"therefore\" appears"
+    ],
+    "answer": 0,
+    "explanation": "\"Since\" marks what follows it as premises, and the claim they are offered in support of is that the museum was shut. Position is no guide, and an argument needs no conclusion indicator: a premise indicator, or simply asking which claim the writer is leaning on the others to establish, is enough."
+  },
+  {
+    "id": "true-premises-bad-step",
+    "section": "inference",
+    "question": "\"Every bird has a backbone. Frogs have backbones. So frogs are birds.\" Both premises are true and the conclusion is false. Where has the argument gone wrong?",
+    "options": [
+      "In one of the premises, since a false conclusion means a false premise",
+      "Nowhere, since an argument whose premises are all true succeeds",
+      "In the conclusion, which is not a statement because it is false",
+      "In the inference: the premises are true but fail to support the conclusion"
+    ],
+    "answer": 3,
+    "explanation": "Both premises really are true, so the fault cannot lie in the starting material; it lies in the step from premises to conclusion. It is tempting to think a false conclusion must trace back to a false premise, but premises and inference can fail independently, and here only the inference has."
+  },
+  {
+    "id": "argument-or-assertion",
+    "section": "arguing-versus-asserting",
+    "question": "Which of these is an argument rather than an assertion?",
+    "options": [
+      "Smoking is dangerous, and I cannot say that strongly enough.",
+      "Since the 1990s, smoking has been widely seen as dangerous.",
+      "Smoking is dangerous, because it damages the lungs.",
+      "Smoking is obviously, seriously and undeniably dangerous."
+    ],
+    "answer": 2,
+    "explanation": "Only this one puts a claim forward together with something offered in its support. Emphasis and confidence do not turn an assertion into an argument, and the \"since\" in the second option is temporal rather than logical, so nothing there is offered as a reason."
+  },
+  {
+    "id": "suppressed-premise",
+    "section": "reconstructing-an-argument-from-prose",
+    "question": "\"The dog did not bark, so the intruder was someone it knew.\" Which suppressed premise makes this argument work?",
+    "options": [
+      "The dog barks at people it knows",
+      "The dog barks at anyone it does not know",
+      "The intruder was someone the dog knew",
+      "Dogs sometimes stay quiet when strangers come in"
+    ],
+    "answer": 1,
+    "explanation": "If the dog barks at every stranger and it stayed silent, the intruder cannot have been a stranger. The third option only repeats the conclusion, so it supplies nothing, and the others do not get you from silence to a familiar intruder."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "what-counts-as-experience",
+    "section": "what-counts",
+    "question": "Which of these is a religious experience in the article's sense?",
+    "options": [
+      "Being deeply moved by a hymn, though nothing presents itself as encountered",
+      "A vivid feeling of peace that the subject describes as her own emotional state",
+      "A quiet, lasting sense of being accompanied by something beyond oneself",
+      "Wonder at the size of the universe, without any impression of a presence in it"
+    ],
+    "answer": 2,
+    "explanation": "The definition needs an experience that seems to be *of* something, and of something taken to exist independently of the experiencing. A feeling the subject describes as her own emotional state fails the second condition even though it may be religiously coloured."
+  },
+  {
+    "id": "james-problem-in-miniature",
+    "section": "two-kinds-of-report",
+    "question": "James lists four marks of mystical experience. Which pair does the article say contains the whole epistemological problem in miniature?",
+    "options": [
+      "Ineffability and noetic quality, since it presents as knowledge yet resists saying what is known",
+      "Transiency and passivity, since a state that cannot be sustained or achieved cannot be tested",
+      "Passivity and noetic quality, since knowledge that simply arrives cannot be justified by effort",
+      "Ineffability and transiency, since a brief state that cannot be described is soon forgotten"
+    ],
+    "answer": 0,
+    "explanation": "Ordinary knowledge can be handed on, checked and corrected, but this arrives with conviction in a form no one else can assess, whether or not it is veridical. Transiency and passivity describe how the state comes and goes, not the tension between claiming knowledge and being unable to state it."
+  },
+  {
+    "id": "numinous-versus-union",
+    "section": "two-kinds-of-report",
+    "question": "Why does the article say numinous experience and mystical union pull in opposite directions?",
+    "options": [
+      "The numinous is a form of belief, while mystical union is a feeling that involves no belief at all",
+      "The numinous centres on distance from something wholly other; union dissolves that very distance",
+      "The numinous is a moral response, while mystical union is a rational judgement about unity",
+      "The numinous occurs only in theistic traditions, and mystical union only in non-theistic ones"
+    ],
+    "answer": 1,
+    "explanation": "Confrontation with a radically other is the heart of the numinous, while union is the disappearance of the gap between subject and object. Otto explicitly denied that the numinous is a belief, a moral response or a rational judgement, so the first and third options misdescribe it."
+  },
+  {
+    "id": "why-credulity-is-general",
+    "section": "swinburnes-two-principles",
+    "question": "Why, on Swinburne's case, is the principle of credulity not invented for the religious case?",
+    "options": [
+      "Because religious experiences are more vivid than ordinary perceptions and so deserve more trust than they get",
+      "Because the principle can be confirmed by checking perceptions against independent instruments",
+      "Because most people throughout history have accepted it, and their agreement is evidence of truth",
+      "Because without it perception collapses, since its reliability cannot be shown without circularity"
+    ],
+    "answer": 3,
+    "explanation": "Any check on perception uses some faculty whose reliability is also in question, so every workable epistemology grants perception a default entitlement that can be overridden case by case. Confirming perception with instruments is exactly what cannot be done non-circularly, since reading the instruments is itself perception."
+  },
+  {
+    "id": "alston-defensive-result",
+    "section": "nothing-checks-it",
+    "question": "What does Alston's reply to the objection that nothing checks religious experience establish, by his own account?",
+    "options": [
+      "Only a defensive result: critics have not convicted the practice by a standard they apply consistently",
+      "That religious practice delivers truth as reliably as sense perception does, by its own internal checks",
+      "That religious experiences can be checked by second observers, provided they share the same tradition",
+      "That sense perception is no more reliable than religious experience, so both should be doubted equally"
+    ],
+    "answer": 0,
+    "explanation": "Sense perception cannot pass the test the objection sets either, so failing it does not convict the religious practice. Alston was explicit that this does not show the practice delivers truth, which is the overreach in the second option."
+  },
+  {
+    "id": "what-debunks",
+    "section": "it-has-a-natural-cause",
+    "question": "On the article's account, what would make a natural cause debunk a particular religious experience?",
+    "options": [
+      "That the experience has an identifiable neural correlate in the brain of the person who is having it",
+      "That experiences of that kind can sometimes be induced by drugs or by stimulating the brain",
+      "That the cause would have produced the very same experience whether or not its object was there",
+      "That a physiological explanation of how the experience occurs has been found and confirmed"
+    ],
+    "answer": 2,
+    "explanation": "Every veridical perception has a neural correlate, so finding a mechanism does not show it is not a means of detection; what debunks is a cause insensitive to whether the object is present. The neural-correlate option is the weak general form of the objection that the article sets aside first."
+  },
+  {
+    "id": "katz-lasting-damage",
+    "section": "the-concepts-were-brought-to-it",
+    "question": "Where, on the article's account, does Katz's argument do damage that has not been repaired?",
+    "options": [
+      "To the claim that concept-laden experience can still count as perception of anything real",
+      "To the appeal to cross-cultural convergence, which may be produced by the analyst's abstraction",
+      "To the principle of credulity as applied to ordinary perception, which also turns out to be mediated",
+      "To the claim that religious experiences have a natural cause, which mediation shows they cannot have"
+    ],
+    "answer": 1,
+    "explanation": "If mystics only seem to report the same thing once their reports are described abstractly enough, the convergence is made rather than found, and it was the strongest evidential feature of Stace's version. The reply about the ornithologist defends concept-laden perception, so the first option names what survives Katz, not what he damaged."
+  },
+  {
+    "id": "cost-of-deflation",
+    "section": "the-diversity-problem",
+    "question": "What is the cost of the deflationary response to the diversity problem?",
+    "options": [
+      "It must hold that the reality behind all traditions is one that none of them is actually about",
+      "It concedes that someone in another tradition is placed symmetrically, and nothing settles between them",
+      "It must treat every report, including reports of many gods, as accurate about its object",
+      "What survives may be too thin, fitting an impersonal absolute as well as a personal God"
+    ],
+    "answer": 3,
+    "explanation": "Keeping only \"something transcendent, of overwhelming value, encountered\" avoids the conflicts but no longer supports the personal God the argument was meant to reach. The first option is the cost of Hick's view and the second the cost of Alston and Plantinga's, which is why the three responses are worth keeping apart."
+  },
+  {
+    "id": "perception-versus-testimony",
+    "section": "the-diversity-problem",
+    "question": "According to the aside, why can the same experience rightly carry more weight for the person who had it than for anyone else?",
+    "options": [
+      "For her it works as perception under credulity; for others it arrives as testimony, which weighs less",
+      "Because only the subject can know her experience was genuine, while others have no evidence from it at all",
+      "Because religious experience, unlike ordinary perception, is subject to a special disability when reported",
+      "Because others are entitled to treat her report as a symptom to be explained rather than as evidence"
+    ],
+    "answer": 0,
+    "explanation": "A friend's report of a rare bird is real evidence and weaker than the friend's own seeing, and the same structure applies here without any special disability. Saying others get no evidence at all ignores the principle of testimony, which gives the report weight, just not the full weight."
+  },
+  {
+    "id": "information-conceded",
+    "section": "the-diversity-problem",
+    "question": "Which point in the objection does the reply call the strongest and concede in full?",
+    "options": [
+      "That experiences take the shape of the culture that raised the subject, which debunks them",
+      "That the content of the experiences is too thin to settle any question the traditions dispute",
+      "That no one has returned with information they could not otherwise have had",
+      "That the experiences have neural correlates, which shows that nothing is encountered"
+    ],
+    "answer": 2,
+    "explanation": "No verified case exists, and defenders who change the subject are avoiding their best test. The cultural point is the one the reply says proves less than it appears, since all perception is shaped by training; it only stops the content confirming any tradition's specific doctrines."
+  }
+]

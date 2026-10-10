@@ -1,0 +1,130 @@
+[
+  {
+    "id": "what-breaks-compactness",
+    "section": "compactness",
+    "question": "Suppose a language could express \"the domain is finite\". Which collection of its sentences would show that compactness fails for it?",
+    "options": [
+      "\"There are at most $n$ things\", for every $n$, together with \"the domain is finite\"",
+      "\"There are at least $n$ things\", for every $n$, together with \"the domain is finite\"",
+      "\"There are at most $n$ things\", for every $n$, together with \"the domain is infinite\"",
+      "\"There are at least $n$ things\", for every $n$, with no further sentence added to them"
+    ],
+    "answer": 1,
+    "explanation": "Every finite selection is satisfied by a large enough finite domain, yet nothing satisfies the whole, so satisfiability is not settled by finite parts. The others make no such point: one is satisfied outright by a one-element domain, one by any infinite domain, and the one pairing \"infinite\" with \"at most $n$\" already has unsatisfiable finite subsets."
+  },
+  {
+    "id": "true-arithmetic-has-company",
+    "section": "what-compactness-forces-into-existence",
+    "question": "Compactness yields a model of every true first-order sentence of arithmetic that contains an element equal to no numeral. What does this show?",
+    "options": [
+      "That the first-order Peano axioms are too weak, and adding a stronger true axiom would exclude such models",
+      "That some first-order truth about the natural numbers must fail in the model containing that element",
+      "That no set of first-order truths about the natural numbers has only them as models, up to isomorphism",
+      "That the ordinary natural numbers themselves contain an element larger than every numeral"
+    ],
+    "answer": 2,
+    "explanation": "The theory used was already every first-order truth, so there is no stronger first-order theory to retreat to: the nonstandard model is unavoidable. It agrees with the natural numbers on every first-order sentence, so it is no counterexample to any truth; it simply is not the intended structure."
+  },
+  {
+    "id": "arbitrarily-large-finite-models",
+    "section": "what-compactness-forces-into-existence",
+    "question": "A first-order theory has, for every $n$ divisible by 3, a model with exactly $n$ elements. What follows?",
+    "options": [
+      "It has an infinite model",
+      "It has no infinite model, since every one of its models has a size divisible by 3",
+      "Nothing follows, since the compactness argument needs finite models of every size",
+      "It has an infinite model only if its language is uncountable"
+    ],
+    "answer": 0,
+    "explanation": "The argument needs only arbitrarily large finite models: any finite batch of \"at least $n$ things\" sentences, added to the theory, is satisfied by a big enough model of size divisible by 3, so compactness gives a model of them all, which is infinite. No first-order sentence can confine a theory to finite models once it has arbitrarily large ones."
+  },
+  {
+    "id": "paths-of-fixed-length",
+    "section": "what-compactness-forces-into-existence",
+    "question": "In the argument against axiomatising connectedness, why is \"there is no path of length $n$ between $a$ and $b$\" first-order for each $n$, when \"there is no path between $a$ and $b$\" is not?",
+    "options": [
+      "A path of fixed length is a finite object, while a path of unspecified length might turn out to be infinitely long",
+      "\"No path\" states an absence, and first-order sentences cannot express that something is absent",
+      "The new constants $a$ and $b$ are only allowed to occur in sentences that mention a fixed length",
+      "A fixed length needs a fixed number of quantified intermediate points; \"any length\" needs unboundedly many"
+    ],
+    "answer": 3,
+    "explanation": "A path of length three is \"there exist two intermediate points with the right edges\", and any fixed length works the same way with more quantifiers. A path of unspecified length would need a disjunction over every length at once, which no finite sentence supplies; absence is not the problem, since each \"no path of length $n$\" is itself a negative claim."
+  },
+  {
+    "id": "language-size-bound",
+    "section": "löwenheim-skolem",
+    "question": "Why does the downward theorem in general promise only a model no larger than the language, rather than a countable one?",
+    "options": [
+      "Because the Henkin construction cannot be carried out at all when the language is uncountable",
+      "Because compactness fails for languages that contain uncountably many constant symbols",
+      "Because uncountably many constants said to be pairwise distinct need that many elements",
+      "Because no proof of the countable case has yet been found that extends to larger languages"
+    ],
+    "answer": 2,
+    "explanation": "A model must supply a distinct object for each constant asserted distinct, so the vocabulary sets a floor and the bound is exactly right. Neither the Henkin method (via Zorn's lemma) nor compactness fails for uncountable languages; what fails is the claim of countability itself."
+  },
+  {
+    "id": "which-sizes-upward",
+    "section": "löwenheim-skolem",
+    "question": "A set of sentences in a countable language has a model with infinitely many elements. Of which infinite sizes must it have models?",
+    "options": [
+      "Only sizes at least as large as the infinite model it already has, since upward never shrinks",
+      "Every infinite size",
+      "Only the countable size, since the downward theorem applies to countable languages",
+      "Every uncountable size, though not necessarily the countable one"
+    ],
+    "answer": 1,
+    "explanation": "Upward gives a model of at least $\\kappa$ elements for any infinite $\\kappa$, and downward then trims it to exactly $\\kappa$, with the countable language imposing no floor above the countable. Thinking the existing model sets a minimum forgets the downward direction, which brings any model back down."
+  },
+  {
+    "id": "missing-bijection",
+    "section": "skolems-paradox",
+    "question": "A countable model of set theory satisfies \"the set of all sets of natural numbers is uncountable\". Why is this consistent with the model's being countable?",
+    "options": [
+      "The model's natural numbers are nonstandard, so \"countable\" means something different inside it",
+      "Set theory proves only a weakened form of Cantor's theorem, which a countable model can satisfy",
+      "The model's version of that set has uncountably many members, although the model itself is countable",
+      "That set is countable from outside, but no enumeration of it is an element of the model"
+    ],
+    "answer": 3,
+    "explanation": "Inside the model, \"uncountable\" means that no bijection with the natural numbers is among the model's elements, and that is true even though one exists outside. A countable model has only countably many elements to serve as members of anything, and nonstandard numbers are not needed: the omission is in the functions, not the numbers."
+  },
+  {
+    "id": "what-the-paradox-establishes",
+    "section": "elementary-equivalence",
+    "question": "According to the reply to the objection about Skolem's paradox, what does the theorem establish?",
+    "options": [
+      "A limit on what first-order axioms can fix, leaving open whether uncountability is determinate",
+      "That \"uncountable\" has no determinate meaning at all, only a meaning relative to each model",
+      "That a countable model of set theory leaves out most of the sets that there really are",
+      "That set theory is incoherent, since one and the same set is both countable and uncountable"
+    ],
+    "answer": 0,
+    "explanation": "The reply treats the result as a limitation on the axiomatic method and says the theorem is silent on the metaphysics. The realist reading (the model omits sets) and the relativist reading (the word is indeterminate) are each left unrefuted, so neither is what the theorem itself shows."
+  },
+  {
+    "id": "finite-structures-pinned-down",
+    "section": "elementary-equivalence",
+    "question": "Why do elementary equivalence and isomorphism coincide for finite structures in a language with finitely many predicates and constants?",
+    "options": [
+      "Löwenheim-Skolem cannot produce models of any other size once the given domain is finite",
+      "Compactness fails when it is restricted to the class of finite structures",
+      "One sentence can state the size and the whole pattern of relations, so its models are all isomorphic",
+      "Finite structures cannot contain elements that no numeral or closed term names"
+    ],
+    "answer": 2,
+    "explanation": "Name the $n$ elements with variables, say they are distinct and exhaust the domain, and list which tuples satisfy each predicate: any structure satisfying that sentence is isomorphic to the original. That Löwenheim-Skolem says nothing about finite models explains why no counterexample comes from it, but not why none exists."
+  },
+  {
+    "id": "same-size-not-enough",
+    "section": "elementary-equivalence",
+    "question": "Two elementarily equivalent structures of the same infinite cardinality must be isomorphic.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Applying the downward theorem to the compactness model of true arithmetic gives a countable nonstandard model, the same size as the natural numbers and elementarily equivalent to them, yet with an element that has infinitely many predecessors. Theories for which equal size does force isomorphism are the categorical ones, which the model-theory article takes up."
+  }
+]

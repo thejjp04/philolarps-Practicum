@@ -49,6 +49,8 @@ where $v_w(A)$ is 1 if $A$ is true at $w$ and 0 if it is false. Lower is better.
 
 Other scoring rules are possible. The logarithmic score measures inaccuracy by $-\ln c(A)$ for the true propositions. There is a family of rules, and part of the programme's work has been to identify which properties an acceptable rule must have. The most important is strict propriety: a scoring rule is strictly proper if every coherent credence function expects itself, by its own lights, to be more accurate than any alternative. A rule that fails propriety would recommend that you adopt credences other than your own simply to improve your expected score, which would reward dishonesty in a forecaster and incoherence in a thinker.
 
+<Check id="improper-rule-diagnosis" />
+
 ## The dominance argument
 
 <Definition term="Accuracy dominance">
@@ -75,6 +77,8 @@ Now take the coherent credence function $x = 0.5$, $y = 0.5$. If $A$ is true, it
 The geometry makes the general case clear. Picture credence functions as points in a plane, with $x$ on one axis and $y$ on the other. The two possible worlds correspond to the points $(1, 0)$ and $(0, 1)$. The coherent credence functions lie on the line segment between them, where $x + y = 1$. The Brier score is squared Euclidean distance. For any point off the segment, its orthogonal projection onto the segment is closer to both endpoints than the original point is. That projection is the dominating coherent credence function.
 
 The result extends to any finite set of propositions. The possible worlds become the vertices of a higher-dimensional shape, the coherent credence functions form its convex hull, and projection onto the hull gives the dominating function.
+
+<Check id="find-the-dominating-function" />
 
 ## Beyond probabilism
 
@@ -113,6 +117,8 @@ This is the swamping problem's cousin. Both arise because veritism makes truth t
 The theorem depends on the scoring rule being strictly proper. Why should accuracy be measured in this way? Propriety has an intuitive motivation, since a measure that would lead you to prefer other credences than your own seems defective. But some argue that assuming propriety is close to assuming what the argument wants to prove, since strict propriety already builds in a connection between credences and expectations that looks like probabilism.
 
 Pettigrew's reply is that propriety can be motivated independently of probabilism, and that the class of proper rules is wide enough that the argument does not depend on any particular choice. Whether the independence claim holds is disputed.
+
+<Check id="separateness-of-propositions" />
 
 ## Assessment
 

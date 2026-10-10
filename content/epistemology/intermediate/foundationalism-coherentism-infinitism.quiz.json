@@ -1,0 +1,127 @@
+[
+  {
+    "id": "available-but-not-basing",
+    "section": "what-the-theories-are-theories-of",
+    "question": "Maya has a good argument for a conclusion and knows it, but she actually believes the conclusion out of wishful thinking. What should we say?",
+    "options": [
+      "The proposition is justified for her, but her belief in it is not",
+      "Her belief is justified, since she possesses a good argument for it",
+      "Neither the proposition nor her belief is justified for her",
+      "Her belief is justified, but the proposition is not justified for her"
+    ],
+    "answer": 0,
+    "explanation": "The argument gives her propositional justification, but her belief is not based on it, so doxastic justification fails. The second option treats having a good reason as enough, which ignores the basing relation the structural theories are about."
+  },
+  {
+    "id": "which-foundationalism",
+    "section": "foundationalism",
+    "question": "A theorist counts \"there is a cup on the table\", formed by looking, as a basic belief, while allowing that later evidence could overturn it. Which position is this?",
+    "options": [
+      "Classical foundationalism",
+      "Modest foundationalism",
+      "Coherentism",
+      "Infinitism"
+    ],
+    "answer": 1,
+    "explanation": "Modest foundationalism lets perceptual beliefs about the immediate environment be basic and defeasible. Classical foundationalism would refuse to count it as basic, since its basic beliefs were incorrigible and concerned only one's own mental states or self-evident truths."
+  },
+  {
+    "id": "myth-of-the-given",
+    "section": "foundationalism",
+    "question": "What does Sellars call the Myth of the Given?",
+    "options": [
+      "The assumption that basic beliefs must be incorrigible, so that the foundations of knowledge cannot be mistaken",
+      "The assumption that every belief needs another belief to justify it",
+      "The assumption that experience is contentful enough to justify beliefs yet needs no justification itself",
+      "The assumption that a coherent set of beliefs must be true"
+    ],
+    "answer": 2,
+    "explanation": "Sellars's worry is that anything with enough content to justify looks like something that can itself be correct or incorrect, and so like a belief after all. Incorrigibility belongs to classical foundationalism only, whereas the Myth threatens modest foundationalism too."
+  },
+  {
+    "id": "circle-is-artefact",
+    "section": "coherentism",
+    "question": "A critic says coherentism lets you justify A by B and then B by A. How does the coherentist reply?",
+    "options": [
+      "Such circles are harmless as long as they are large enough",
+      "A is ultimately justified by experience rather than by B",
+      "The circle eventually ends in beliefs that are self-justifying",
+      "Justification belongs to the whole set, and the circle is an artefact of describing it one link at a time"
+    ],
+    "answer": 3,
+    "explanation": "The coherentist rejects the linear picture altogether: there is no chain, so nothing needs to terminate or loop. Defending big circles accepts the linear picture the coherentist rejects, and ending in self-justifying beliefs would be foundationalism."
+  },
+  {
+    "id": "isolation-case",
+    "section": "coherentism",
+    "question": "A conspiracy theorist's beliefs fit together more tightly than those of a careful scientist responding to messy data. Which objection to coherentism does this illustrate?",
+    "options": [
+      "The isolation objection",
+      "The Myth of the Given",
+      "The objection from finite minds",
+      "The regress argument itself"
+    ],
+    "answer": 0,
+    "explanation": "If coherence is all there is to justification, nothing ties a coherent system to the world, and a sophisticated delusion can outscore an accurate but untidy belief set. The Myth of the Given is an objection to foundationalism's basic beliefs, not to coherentism."
+  },
+  {
+    "id": "bonjour-gives-up",
+    "section": "coherentism",
+    "question": "BonJour answered the isolation objection by requiring a coherent system to include beliefs about the reliability of its own sources. Why did he later give up on this answer?",
+    "options": [
+      "Because no belief set can contain beliefs about its own sources",
+      "Because such beliefs would need to be basic, which turns the view into foundationalism",
+      "Because a system can contain the belief that its sources are reliable, and cohere, while they are not",
+      "Because the requirement makes coherence impossible for finite believers"
+    ],
+    "answer": 2,
+    "explanation": "Believing your sources are reliable is just one more belief that can fit neatly into the system without being true, so the connection to the world is still missing. The second option sounds like a natural diagnosis, but the article gives the reliability point as his reason."
+  },
+  {
+    "id": "neurath-floats",
+    "section": "coherentism",
+    "question": "On the article's assessment, Neurath's boat answers the isolation objection by showing why a coherent belief system connects to the world.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The image captures the holism, why no plank is foundational and why rebuilding is still possible, but says nothing about why the ship should float. That question of floating is exactly what the isolation objection asks."
+  },
+  {
+    "id": "klein-availability",
+    "section": "infinitism",
+    "question": "Finite minds cannot contain infinitely many beliefs. How does Klein respond to this objection to infinitism?",
+    "options": [
+      "Human minds do contain infinitely many beliefs, most of them stored unconsciously and never entertained",
+      "Only a finite number of reasons is ever needed, since the series eventually repeats",
+      "Justification attaches to propositions, so believers need not be involved at all",
+      "The reasons need only be available, in that the believer can produce the next when pressed"
+    ],
+    "answer": 3,
+    "explanation": "Availability rather than possession is the operative notion, much as someone who can add has infinitely many sums available. A repeating series would be circular, which is the coherentist horn infinitism is designed to avoid."
+  },
+  {
+    "id": "klein-crux",
+    "section": "infinitism",
+    "question": "A modest foundationalist says that stopping at a perceptual belief is not arbitrary, since experience fixes where the chain stops. Which premise of Klein's argument does this reject?",
+    "options": [
+      "That justification requires that the demand for a reason can be met without arbitrariness or circularity",
+      "That foundationalism meets the demand by declaring, arbitrarily, that no further reason is required",
+      "That coherentism lets a belief figure among its own supporting reasons",
+      "That only an infinite non-repeating series meets the demand while avoiding both failings"
+    ],
+    "answer": 1,
+    "explanation": "The foundationalist accepts that arbitrariness would be bad and simply denies that their stopping point is arbitrary. Klein's reply is that either experience counts as a reason, so the chain goes on, or the stopping point is left unexplained."
+  },
+  {
+    "id": "biscuit-objection",
+    "section": "scoring-the-three",
+    "question": "A child knows where the biscuits are kept but cannot answer a single why-question about it. According to the reply, what does this objection ultimately amount to?",
+    "options": [
+      "A refutation of every internalist theory of justification",
+      "An argument that young children lack knowledge altogether",
+      "A rival programme on which justification depends on how a belief was produced",
+      "A reason to prefer infinitism, since the child's reasons are merely available"
+    ],
+    "answer": 2,
+    "explanation": "The reply grants that the objection defeats a strong reading requiring articulation, which most internalists reject, and says its real thrust is the externalist and reliabilist programme. It does not refute internalism as such, since access can be construed as being in the right mental states."
+  }
+]

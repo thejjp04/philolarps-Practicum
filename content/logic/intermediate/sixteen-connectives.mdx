@@ -76,6 +76,8 @@ Negation, conjunction, and disjunction were shown adequate in the previous artic
 
 The Peirce arrow works the same way with the roles of conjunction and disjunction swapped. $P \downarrow P$ is $\neg P$. Negating an arrow gives disjunction, so $(P \downarrow Q) \downarrow (P \downarrow Q)$ is $P \lor Q$. And $(P \downarrow P) \downarrow (Q \downarrow Q)$ says that neither $\neg P$ nor $\neg Q$ holds, which is $P \land Q$.
 
+<Check id="stroke-conditional" />
+
 ## And no others
 
 Two of the sixteen work. The claim now is that the other fourteen do not, and the argument uses only the two preservation properties from the previous article.
@@ -92,6 +94,8 @@ The last two fall to a separate observation. Take the connective that returns th
 
 Four candidates, two eliminated, two verified. The result is exact: of the sixteen binary connectives, precisely two are adequate alone, and nothing weaker than a binary connective could be, since unary and nullary connectives cannot produce a function depending on two arguments at all.
 
+<Check id="negated-projection-fails" />
+
 ## Why the parentheses cannot be dropped
 
 The three translations above are already heavier than the formulas they replace, and there is a structural reason the heaviness cannot be worked off by the usual conventions.
@@ -99,6 +103,8 @@ The three translations above are already heavier than the formulas they replace,
 Conjunction and disjunction are associative, which is why $P \land Q \land R$ is written without internal parentheses and nobody objects. The stroke is not. Take $P$ and $Q$ true and $R$ false. Then $P \mid Q$ is false, and a stroke with two false arguments is true, so $(P \mid Q) \mid R$ is true. But $Q \mid R$ is true, and a stroke with two true arguments is false, so $P \mid (Q \mid R)$ is false. The two groupings give different answers, and the string with the parentheses removed does not name a truth function.
 
 The Peirce arrow behaves the same way. So a language with one connective saves nothing on parentheses and spends a great deal on repetition, since every use of negation costs a doubled subformula. A formula for conjunction in the stroke writes $P \mid Q$ twice, and a formula for a longer function repeats its parts on a scale that grows quickly. This is a genuine cost and it is why nobody works in the stroke by choice.
+
+<Check id="stroke-not-associative" />
 
 ## Where the two came from
 

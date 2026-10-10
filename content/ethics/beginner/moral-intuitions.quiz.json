@@ -1,0 +1,114 @@
+[
+  {
+    "id": "spot-the-intuition",
+    "section": "the-thing-being-relied-on",
+    "question": "Which of these is a moral intuition in the article's sense?",
+    "options": [
+      "Feeling queasy on seeing a photograph taken during surgery",
+      "Guessing, with little confidence, that a new policy might be unfair",
+      "Judging at once that punishing a whole class for one cheat was unfair",
+      "Reporting that you personally happen to dislike a certain kind of practice"
+    ],
+    "answer": 2,
+    "explanation": "An intuition is a judgement about a case that strikes you as correct without being inferred from anything. The other options are the three misreadings the article clears away: a feeling, a low-confidence hunch, and a report about the person rather than a claim about the case."
+  },
+  {
+    "id": "method-of-cases-clash",
+    "section": "the-thing-being-relied-on",
+    "question": "A principle says always to maximise total wellbeing. Someone describes a case in which it requires framing an innocent person, and judges confidently that this would be wrong. On the method of cases, what follows?",
+    "options": [
+      "The clash counts as evidence against the principle",
+      "The judgement must be revised to fit the well-established principle",
+      "The principle has been conclusively refuted by a single case",
+      "Nothing, since reactions to invented cases are not evidence of anything"
+    ],
+    "answer": 0,
+    "explanation": "The method treats a clash between a principle and a confident judgement about a case as evidence against the principle, which is counted as damaged. Conclusive refutation overstates it: as the article later explains, the adjustment can run the other way when the principle is better supported."
+  },
+  {
+    "id": "axioms-are-intuitions",
+    "section": "why-anything-is-built-on-this",
+    "question": "Why, according to the article, can moral theory not avoid intuitions by proving itself from self-evident axioms?",
+    "options": [
+      "No moral claim could possibly be self-evident to a careful thinker",
+      "Axioms are descriptive claims, so they cannot yield normative conclusions",
+      "Proofs from axioms are possible only in logic and in mathematics",
+      "The candidate axioms are themselves things that seem right on reflection"
+    ],
+    "answer": 3,
+    "explanation": "A self-evident moral axiom is an intuition with a formal presentation, so appealing to axioms does not escape reliance on judgements that strike people as correct. The comparison with logic makes the same point: testing rules against particular cases is not founding a subject on prejudice."
+  },
+  {
+    "id": "equilibrium-runs-both-ways",
+    "section": "the-method-stated-properly",
+    "question": "Reflective equilibrium is the method of preserving your initial reactions to cases and finding a theory that fits them.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The adjustment runs both ways: a well-supported principle can override a confident judgement about a case, and positions on slavery, on women and on animals have changed in just this way. A method that only preserved reactions would entrench whatever you started with."
+  },
+  {
+    "id": "considered-judgement-filter",
+    "section": "the-method-stated-properly",
+    "question": "Which judgement would Rawls exclude from reflective equilibrium as not a considered judgement?",
+    "options": [
+      "A calm judgement, reached after reflection, that a stranger was treated unfairly",
+      "A shareholder's hurried verdict on whether her own company acted wrongly",
+      "A judgement that conflicts with a well-supported moral principle",
+      "A confident judgement that no existing theory can yet explain"
+    ],
+    "answer": 1,
+    "explanation": "Considered judgements are made without distraction and without a stake in the outcome, and the shareholder's verdict fails on both counts. Conflict with a principle is not grounds for exclusion; it is what the process of mutual adjustment exists to resolve."
+  },
+  {
+    "id": "wide-equilibrium-adds",
+    "section": "the-method-stated-properly",
+    "question": "What does wide reflective equilibrium add to the narrow version?",
+    "options": [
+      "A larger number of judgements about particular cases, including invented ones",
+      "The judgements of people from other cultures and periods",
+      "Background theories, philosophical and empirical, bearing on the principles",
+      "A requirement that every principle used be self-evident"
+    ],
+    "answer": 2,
+    "explanation": "The wide version brings in theories from outside the moral system that bear on whether the principles could be true. More case judgements would only enlarge the narrow version, which is why that version stays exposed to the charge of tidying up a prejudice."
+  },
+  {
+    "id": "framing-effects-consequence",
+    "section": "the-method-stated-properly",
+    "question": "Suppose people's verdicts on a case change depending only on whether it is described in terms of lives saved or lives lost. What does the article say follows?",
+    "options": [
+      "Those judgements should be excluded, and cases built with more care",
+      "All moral intuitions should be abandoned, since none of them is reliable",
+      "The wording of a case turns out to be morally relevant after all",
+      "Wide reflective equilibrium absorbs the effect without any adjustment"
+    ],
+    "answer": 0,
+    "explanation": "A judgement that varies with irrelevant features of description is not tracking what it purports to track, and is set aside like a mismeasured value. The article calls the consequence narrower than it is often taken to be: a reason for care in constructing cases, not a reason to give them up."
+  },
+  {
+    "id": "coherence-not-truth",
+    "section": "what-the-method-cannot-do",
+    "question": "A person's principles and judgements agree perfectly. What does the article say this establishes?",
+    "options": [
+      "That the system is true, since nothing in it conflicts",
+      "That any other careful reasoner would reach the same system",
+      "That the inputs must all have been considered judgements",
+      "Consistency, which a well-constructed error can also have"
+    ],
+    "answer": 3,
+    "explanation": "Coherence is not truth, and the wide version is an attempt to import constraints from outside to address this. Convergence is the other trap: equilibrium is not uniqueness, so two careful reasoners can reach coherent systems that conflict."
+  },
+  {
+    "id": "singers-difficulty",
+    "section": "what-the-method-cannot-do",
+    "question": "Singer concludes that moral theory should rest on a few principles that survive scrutiny, such as that like interests count equally. What difficulty does the article raise for this?",
+    "options": [
+      "The principle of equal interests conflicts with most considered judgements",
+      "The principle too is just something that seems right on reflection",
+      "Singer's view relies heavily on judgements about particular cases",
+      "Singer's principle would exclude background theories from the method"
+    ],
+    "answer": 1,
+    "explanation": "Singer's austere alternative still rests on something that strikes reflective people as correct, with no non-intuitive derivation, which is what an intuition is. The method can be applied more austerely, the article concludes, but it is not clear it can be escaped."
+  }
+]

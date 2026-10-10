@@ -1,0 +1,88 @@
+[
+  {
+    "id": "insidious-perceptual-failure",
+    "section": "perception",
+    "question": "Which of these is an example of the third kind of perceptual failure, the one that does not feel like error?",
+    "options": [
+      "A straight oar looks bent where it enters the water, as it does for anyone",
+      "A feverish patient sees insects crawling across a bare white wall",
+      "A fan who is sure the referee is biased sees a clean tackle as a foul",
+      "A short-sighted driver cannot make out a road sign at fifty metres"
+    ],
+    "answer": 2,
+    "explanation": "What the fan sees is shaped by what he expects, so the error arrives looking like ordinary seeing. The oar is an illusion, where the senses deliver something the world does not match under ordinary conditions, and the feverish patient is hallucinating, with no object there at all."
+  },
+  {
+    "id": "strict-preserving-view",
+    "section": "memory",
+    "question": "You remember that water boils at a lower temperature at altitude, but have no idea where you learned it. On the strict preserving view, how well justified is your belief now?",
+    "options": [
+      "Exactly as well as the forgotten original source made it",
+      "Well, because a clear present recollection supports it on its own",
+      "Not at all, because memory stores beliefs but never their support",
+      "Better than at first, because the belief has survived for so long"
+    ],
+    "answer": 0,
+    "explanation": "On the preserving view memory adds nothing, so the belief is exactly as well supported as it was when formed, by a source you can no longer assess. The idea that a clear recollection supports the belief by itself is the rival generating view."
+  },
+  {
+    "id": "reconstruction-vs-generating",
+    "section": "memory",
+    "question": "Why does the reconstructive nature of memory make trouble for the view that memory generates justification of its own?",
+    "options": [
+      "Because memory never preserves anything accurately, so it supports nothing",
+      "Because people cannot recall their original grounds for most beliefs",
+      "Because reconstruction is really reasoning, so memory is just inference",
+      "Because vivid, confident recollections are sometimes wholly false"
+    ],
+    "answer": 3,
+    "explanation": "If vividness generated justification, it would generate the most in just the cases where reconstruction has inserted false material, since confidence does not track accuracy. Not recalling one's original grounds is a problem for the preserving view, not the generating one."
+  },
+  {
+    "id": "child-trusts-teacher",
+    "section": "testimony",
+    "question": "A four-year-old believes her teacher that whales are mammals. She has no track record of checking what teachers say. Whose account of testimony most easily counts her belief as justified?",
+    "options": [
+      "Hume's, because she has observed that teachers' reports tend to be true",
+      "Reid's, because trust in what we are told comes before any track record",
+      "Hume's, because testimony reduces to perception, memory and inference",
+      "Reid's, because she will be able to check the claim later for herself"
+    ],
+    "answer": 1,
+    "explanation": "Reid held that trust is an innate disposition that comes first rather than being earned, which fits a child with no record. Hume's account needs exactly the observed track record she lacks, and the last option gives Reid a Humean reason he did not rely on."
+  },
+  {
+    "id": "reduction-not-refuted",
+    "section": "testimony",
+    "question": "On the article's account, the fact that your record of reliable testimony is itself mostly testimony refutes Hume's reducing view.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The article says the reducing view is not refuted, since a defender can claim the record only needs to be good enough in the cases actually checked. What the difficulty shows is that the reduction cannot be as clean as it first appears."
+  },
+  {
+    "id": "parallel-postulate-lesson",
+    "section": "reason",
+    "question": "What lesson does the article draw from the history of Euclid's parallel postulate?",
+    "options": [
+      "That seeming self-evident does not guarantee that a claim is true",
+      "That reason cannot grasp any truth directly, without inference",
+      "That geometry is learned through perception rather than through reason",
+      "That inference from axioms is less reliable than direct observation"
+    ],
+    "answer": 0,
+    "explanation": "The postulate looked obviously true for two thousand years, yet consistent geometries exist in which it fails, so how obvious a claim feels is no guarantee. The case shows a failure mode of the direct grasp, not that there is no such capacity at all."
+  },
+  {
+    "id": "circularity-reply",
+    "section": "reason",
+    "question": "An objector says no source can be validated, since any defence of one uses that source or another. What is the article's first reply?",
+    "options": [
+      "Each source can be checked by the others, and that removes the circle",
+      "Reason can validate the other sources from a position outside them",
+      "Using a faculty under question differs from assuming the conclusion",
+      "Perception is self-evident, so it needs no validation of any kind"
+    ],
+    "answer": 2,
+    "explanation": "An argument that takes its conclusion as a premise is a different defect from one that relies on a faculty whose reliability is at issue, and an unreliable perception would tend to produce a mess rather than a stable, predictive picture. Appealing from one source to another only widens the circle, as the objector says."
+  }
+]

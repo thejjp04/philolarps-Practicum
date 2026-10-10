@@ -1,0 +1,106 @@
+[
+  {
+    "id": "classify-accidental",
+    "section": "the-division",
+    "question": "On the article's definitions, which of these properties of your dog Rex is accidental to him?",
+    "options": [
+      "Being identical to himself",
+      "Being either brown or not brown",
+      "Being named Rex",
+      "Being such that two and two make four"
+    ],
+    "answer": 2,
+    "explanation": "Rex could have been given another name and still been Rex, so his name is a property he has but could have lacked. The other three are properties he could not have lacked, which is precisely why the modal test will count them as essential despite their saying nothing about him."
+  },
+  {
+    "id": "individual-not-kind",
+    "section": "the-division",
+    "question": "Compare \"all tigers are striped\" with \"this tiger could not have lacked its stripes\". On the article's account, how are they related?",
+    "options": [
+      "The first is about a kind; the second is about this individual, as essentialism is",
+      "They are two ways of making one essentialist claim, since tigers are individuals",
+      "The second follows from the first, since this tiger is one of all the tigers there are",
+      "The first is the essentialist claim, and the second is only about a kind"
+    ],
+    "answer": 0,
+    "explanation": "The division between essential and accidental properties concerns what this particular thing could not have lacked, while a generalisation about tigers concerns a kind. The article warns that the questions are related but distinct, so moving from one to the other, as the third option does, needs argument."
+  },
+  {
+    "id": "accidental-modal-test",
+    "section": "the-modal-characterisation",
+    "question": "On the modal characterisation, when is a property accidental to an object?",
+    "options": [
+      "When the object lacks it but could have had it",
+      "When every object of the same kind has it",
+      "When it tells you nothing about what the object is",
+      "When the object has it and could have lacked it"
+    ],
+    "answer": 3,
+    "explanation": "Accidental properties are ones the object actually has, but which it is possible for it to lack. The first option drops the requirement that the object has the property at all; a property Socrates merely could have had, like being a sailor, is not one of his properties."
+  },
+  {
+    "id": "substantive-strength",
+    "section": "the-modal-characterisation",
+    "question": "\"This table could not have been made of ice.\" Which strength of essentialism does the claim belong to?",
+    "options": [
+      "The weakest version, which almost nobody denies or finds interesting",
+      "Substantive essentialism, the version the serious objections target",
+      "A claim about the kind \"table\" rather than about this table",
+      "No essentialism at all, since being made of ice is merely accidental"
+    ],
+    "answer": 1,
+    "explanation": "The claim says the table has an interesting property necessarily, which is what substantive essentialism asserts. The weakest version covers only trivial necessities such as self-identity, which is why almost nobody denies it and almost nobody finds it interesting."
+  },
+  {
+    "id": "trivial-necessities",
+    "section": "where-the-modal-account-strains",
+    "question": "On the modal test, Socrates has the property of being such that two and two make four essentially. Why is this a problem for the test?",
+    "options": [
+      "The test rates it essential, yet it says nothing about what Socrates is",
+      "The property is not really necessary, so the test misclassifies it as essential",
+      "Socrates could have lacked the property, so it should count as accidental",
+      "Only abstract objects can have arithmetical properties, so Socrates lacks it"
+    ],
+    "answer": 0,
+    "explanation": "The arithmetical fact is necessary, so Socrates has the property in every circumstance in which he exists, and the test duly counts it as essential. The fault is not a misclassification of necessity but that necessity admits far more than any account of what a thing is should admit."
+  },
+  {
+    "id": "singleton-asymmetry",
+    "section": "where-the-modal-account-strains",
+    "question": "Why, according to Fine, can the modal test not tell Socrates apart from the set whose only member is Socrates?",
+    "options": [
+      "Socrates could have failed to belong to the set, so membership is accidental to him",
+      "Sets are abstract objects, and abstract objects have no essences for the test to find",
+      "The necessities run both ways equally, though only the set's nature involves Socrates",
+      "The set does not necessarily contain Socrates, so the test gives no verdict either way"
+    ],
+    "answer": 2,
+    "explanation": "Each necessitates the same claims about the other, so the modal test treats them symmetrically, yet containing Socrates is part of what the set is while being in the set is no part of what Socrates is. The first option denies the very necessity that makes the case troubling: Socrates could not have failed to belong to it."
+  },
+  {
+    "id": "essence-first-replacement",
+    "section": "where-the-modal-account-strains",
+    "question": "What does the proposed replacement for the modal account take as basic?",
+    "options": [
+      "Necessity, with essence defined as whatever a thing could not have lacked",
+      "Essence, with a claim's necessity explained by what its subjects are",
+      "Description, with essence depending on the term a thing is picked out by",
+      "Kinds, with an individual's essence read off from the kind it belongs to"
+    ],
+    "answer": 1,
+    "explanation": "The replacement reverses the usual order: necessity is explained by what things are, rather than essence being defined from necessity. The first option is simply the modal account that Fine's case is meant to undermine."
+  },
+  {
+    "id": "quine-two-claims",
+    "section": "the-older-objection",
+    "question": "In Quine's case of the mathematician who cycles, which two claims does the standard reply say the example runs together?",
+    "options": [
+      "One about the person's rationality and one about their having two legs to cycle with",
+      "One about numerical identity and one about qualitative identity across descriptions",
+      "One about essential properties and one about intrinsic properties of the person",
+      "One about what falls under a term, and one about what an individual could not lack"
+    ],
+    "answer": 3,
+    "explanation": "\"All mathematicians are rational\" is true in virtue of what the term covers, while essentialism claims that this individual could not have failed to be rational. The shifting verdicts all belong to the first kind of claim, so they do not touch the second, though the reply still owes an account of how such individual claims are known."
+  }
+]

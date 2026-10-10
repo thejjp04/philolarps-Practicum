@@ -1,0 +1,127 @@
+[
+  {
+    "id": "goldman-or-fricker",
+    "section": "the-social-turn",
+    "question": "Which question belongs to Fricker's version of social epistemology but not to Goldman's veritistic version?",
+    "options": [
+      "Which social practices tend to produce true belief across a population",
+      "How reliable a source of testimony is, considered as an instrument",
+      "What participants in practices of sharing knowledge owe one another",
+      "How a single mind should weigh the evidence before it"
+    ],
+    "answer": 2,
+    "explanation": "Fricker's project is ethical as well as epistemic, concerned with what knowers owe each other. The first option is Goldman's veritistic question, which Fricker shares but which does not set her apart; the two approaches are compatible."
+  },
+  {
+    "id": "innocent-deficit",
+    "section": "testimonial-injustice",
+    "question": "A hearer gives a stranger less credibility than she deserves because he has no way of telling how reliable she is, and he would treat anyone in her position the same way. Is this testimonial injustice on Fricker's account?",
+    "options": [
+      "Yes, because any credibility deficit wrongs the speaker as a knower",
+      "No, because the deficit is not caused by prejudice",
+      "Yes, provided the stranger turns out to have been right",
+      "No, because testimonial injustice requires the hearer to intend harm"
+    ],
+    "answer": 1,
+    "explanation": "Innocent credibility deficits are everywhere, and a deficit becomes unjust only when prejudice causes it. The intent option is a tempting misreading: prejudice often operates below reflection, so Fricker's account does not require any intention to wrong the speaker."
+  },
+  {
+    "id": "prejudice-not-error",
+    "section": "testimonial-injustice",
+    "question": "What marks a hearer's association between a social identity and unreliability as prejudice rather than an ordinary mistake?",
+    "options": [
+      "It persists in the face of counter-evidence",
+      "The hearer holds it consciously and endorses it",
+      "It leads the hearer to a false belief on this occasion",
+      "It concerns a group the hearer openly dislikes"
+    ],
+    "answer": 0,
+    "explanation": "The article identifies prejudice by its resistance to counter-evidence, which an honest error lacks. Producing a false belief cannot be the mark, since ordinary mistakes do that too, and a prejudiced hearer may sometimes happen to be right."
+  },
+  {
+    "id": "wrong-without-consequences",
+    "section": "testimonial-injustice",
+    "question": "Suppose a jury disbelieves a Black defendant's testimony because of his race, but he is acquitted anyway on other evidence. On Fricker's argument, has he suffered testimonial injustice?",
+    "options": [
+      "No, since the injustice consists in a wrongful verdict, and in this case there was none",
+      "No, since the jury reached the correct verdict in the end",
+      "Yes, but only because the jurors formed a false belief about his testimony",
+      "Yes, since he was denied his standing as a giver of knowledge, whatever followed"
+    ],
+    "answer": 3,
+    "explanation": "The argument concludes that testimonial injustice wrongs the speaker as a knower, not merely through its downstream consequences. Locating the wrong in the verdict treats it as a harm of outcome, which is exactly the reading Fricker's conclusion rules out."
+  },
+  {
+    "id": "which-is-hermeneutical",
+    "section": "hermeneutical-injustice",
+    "question": "Which case is hermeneutical rather than testimonial injustice?",
+    "options": [
+      "A patient's accurate account of her pain is dismissed because of her ethnicity",
+      "Workers cannot name a harm they suffer because people like them were kept out of the professions that coin such terms",
+      "A jury disbelieves a witness because of a prejudice against her accent",
+      "A student cannot explain a proof because she missed the one class in which the concept she needed was introduced and named"
+    ],
+    "answer": 1,
+    "explanation": "Hermeneutical injustice is a gap in shared interpretive resources that exists because the group was excluded from making them. The student also lacks a concept, but the gap is a personal misfortune with no explanation in exclusion, so it is not an injustice of either kind."
+  },
+  {
+    "id": "no-one-at-fault",
+    "section": "hermeneutical-injustice",
+    "question": "On Fricker's account, hermeneutical injustice occurs only if some individual hearer is at fault.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The wrong lies in the collective stock of concepts, and no individual need be at fault, which is part of why the article calls it the more troubling form. Requiring a culpable hearer would collapse it back into something like testimonial injustice."
+  },
+  {
+    "id": "virtue-below-reflection",
+    "section": "hermeneutical-injustice",
+    "question": "Why, according to Fricker, can the virtue of testimonial justice not consist simply in resolving to be fair?",
+    "options": [
+      "Because fairness is an ethical notion and the virtue is purely epistemic",
+      "Because a resolution cannot be held across many different contexts",
+      "Because prejudice often works below reflection, so the virtue needs awareness of how one's position shapes how others sound",
+      "Because only institutions, not individuals, can correct credibility judgements"
+    ],
+    "answer": 2,
+    "explanation": "A resolution operates at the level of reflection, while the distortion often does not, so the virtue requires reflexive awareness and a readiness to adjust upwards. The institutional option is Anderson's criticism, which Fricker accepts only in part, treating the virtues as necessary but not sufficient."
+  },
+  {
+    "id": "contributory-case",
+    "section": "extending-the-framework",
+    "question": "A community has developed its own vocabulary for an experience its members share. Officials refuse to learn it, and so cannot make sense of complaints framed in it. Which of Dotson's categories fits?",
+    "options": [
+      "Contributory injustice",
+      "Testimonial smothering",
+      "Hermeneutical injustice in Fricker's original sense",
+      "Credibility excess"
+    ],
+    "answer": 0,
+    "explanation": "The concepts exist; what is missing is the willingness of dominant hearers to use them, which is how contributory injustice extends Fricker's category. It is tempting to call this hermeneutical injustice, but Fricker's original form involves a gap in the concepts available at all."
+  },
+  {
+    "id": "excess-is-comparative",
+    "section": "extending-the-framework",
+    "question": "Why does Medina hold that credibility excesses, and not only deficits, are part of the problem?",
+    "options": [
+      "Because an inflated speaker is wronged as a knower in just the same way that a discounted one is",
+      "Because excesses are more common than deficits",
+      "Because receiving too much credibility always leads to false beliefs",
+      "Because credibility is comparative, so one person's excess feeds another's deficit"
+    ],
+    "answer": 3,
+    "explanation": "An expert whose authority is inflated by social standing makes it harder for a less credentialled witness to be heard. The first option misses the structural point: Medina's concern is what the excess does to others, not a wrong to the person who receives it."
+  },
+  {
+    "id": "veritistic-grounds",
+    "section": "where-the-intermediate-tier-leaves-things",
+    "question": "According to the reply, why does testimonial injustice count as an epistemic failing before ethics is even mentioned?",
+    "options": [
+      "It is a systematically defective way of forming belief, and the defect shows up only when the source's social identity is attended to",
+      "Every moral wrong is, at bottom, also an epistemic one",
+      "The speaker's evidence in such cases is always weaker than the hearer's",
+      "Epistemology has always been a branch of ethics"
+    ],
+    "answer": 0,
+    "explanation": "Greenleaf misses an available truth through a distortion that will recur with every speaker of a certain kind, so any epistemology concerned with reliable processes must count it as a defect. The second option overreaches: the reply argues that this particular wrong has an epistemic aspect, not that all moral wrongs do."
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "deontology-needs-a-description",
+    "section": "three-routes-from-a-question-to-a-verdict",
+    "question": "A manager announces job cuts to staff only as \"a restructuring\", without saying that posts will go. On the article's account, what does deontology need before it can give a verdict on this?",
+    "options": [
+      "A prediction of how the staff will feel, and act, once the cuts become known",
+      "A judgement about whether an honest manager would be ashamed of the wording",
+      "A settled answer to whether the act is a failure to volunteer or a deception",
+      "Nothing further, since its principles classify the act once the facts are in"
+    ],
+    "answer": 2,
+    "explanation": "Deontology turns a moral question into a question about which description of the act is the right one, and it does not itself supply that answer. Predicting reactions is the input consequentialism needs, and asking what an honest person would do is the virtue ethicist's route."
+  },
+  {
+    "id": "where-disagreement-lies",
+    "section": "why-the-application-model-fails",
+    "question": "Two doctors accept the same normative theory and still disagree about what to do for a patient. On the first problem the article raises for the application model, where does their disagreement most likely sit?",
+    "options": [
+      "In the further judgement about the particular case that the theory needs",
+      "In some hidden difference between the theories they each claim to accept",
+      "In the theory itself, which must be inconsistent if it yields two verdicts",
+      "In the principles, since a theory only delivers verdicts through its rules"
+    ],
+    "answer": 0,
+    "explanation": "Theories underdetermine cases: they say what to look for and then require a further judgement about the situation, which is usually where the disagreement is. Positing a hidden difference in theory assumes that verdicts flow from theories alone, which is the application model under examination."
+  },
+  {
+    "id": "theory-versus-settled-case",
+    "section": "why-the-application-model-fails",
+    "question": "A carefully argued principle turns out to imply that torturing a child for entertainment is permissible. What does the article say is very often the reasonable response?",
+    "options": [
+      "Accept the verdict, since a valid deduction from a principle transmits truth",
+      "Abandon the principle, since the case is more certain than any principle",
+      "Suspend judgement on the case until the theory is settled",
+      "Keep both, since principles and cases answer quite different moral questions"
+    ],
+    "answer": 1,
+    "explanation": "Almost everyone is more certain that such torture is wrong than of any general principle, and deduction can run in either direction. Accepting the verdict treats the premises as the part to trust, which is the assumption the article rejects."
+  },
+  {
+    "id": "casuist-between-paradigms",
+    "section": "reasoning-from-cases-instead",
+    "question": "A new case sits between two paradigm cases that point in opposite directions. What does casuistry require at that point?",
+    "options": [
+      "Deriving the verdict from whichever moral theory has the strongest support",
+      "Declaring the case undecidable, since no single paradigm can settle it",
+      "Following whichever paradigm case the new case was compared with first",
+      "A judgement about which resemblance matters more here, and why it does"
+    ],
+    "answer": 3,
+    "explanation": "Where a case falls between paradigms, the reasoning has to say which resemblance carries more weight, and the answer is a judgement rather than a derivation. Turning to a theory abandons the method, whose point is that it works without agreement on any theory."
+  },
+  {
+    "id": "commission-establishes",
+    "section": "reasoning-from-cases-instead",
+    "question": "The members of the national commission disagreed about moral theory but agreed case by case on what should be done. What does the article say this establishes?",
+    "options": [
+      "That the verdicts the commission agreed on were very probably correct",
+      "That moral principles are useless in real medical cases",
+      "That agreement on cases does not depend on agreement about theory",
+      "That consensus came from deference to the members who were doctors"
+    ],
+    "answer": 2,
+    "explanation": "If verdicts were derived from theories, people with different theories would reach different verdicts, and these people did not. It does not show the verdicts were right, since a group sharing a background and a period can converge on something later seen as monstrous."
+  },
+  {
+    "id": "casuistry-uses-principles",
+    "section": "where-reasoning-from-cases-runs-out",
+    "question": "A casuist argues that a new case resembles a settled one and should be decided the same way. Why, on the article's account, does this not escape the use of principles?",
+    "options": [
+      "Saying which respect matters is a general claim about what carries moral weight",
+      "The settled case was itself first decided by applying some explicit principle",
+      "Reasoning by analogy is really deduction, and deduction needs universal premises",
+      "A paradigm counts as settled only once some principle has certified it as such"
+    ],
+    "answer": 0,
+    "explanation": "A resemblance is empty until it is said in which respect, and claiming a respect is the relevant one is a general claim about which features matter, which is what a principle is. Casuistry uses principles without stating them, which makes them harder to examine rather than absent."
+  },
+  {
+    "id": "particularism-reasons",
+    "section": "the-two-way-street",
+    "question": "What claim about reasons does Dancy's moral particularism rest on?",
+    "options": [
+      "Moral principles exist, but there are too many for any one person to learn",
+      "Judgements about cases are always more reliable than general principles",
+      "Reflective equilibrium yields only coherence, so principles must be dropped",
+      "A feature that favours an act in one case can count against it in another"
+    ],
+    "answer": 3,
+    "explanation": "If the same feature can favour, oppose or be irrelevant to an act depending on the case, no finite list of principles captures what makes acts right. The first option misreads the view: the claim is not that the principles are too numerous but that reasons do not behave in a principled way."
+  },
+  {
+    "id": "unanimity-needs-harder-look",
+    "section": "the-two-way-street",
+    "question": "Following the reply's concession, which conclusion deserves the hardest look?",
+    "options": [
+      "One reached by argument against an intuition that most people share",
+      "One reached unanimously by a group whose members it would benefit",
+      "One that costs the people who argued for it something significant",
+      "One that rests on judgements about cases rather than on principles"
+    ],
+    "answer": 1,
+    "explanation": "The concession is that unanimity within a group is not evidence and that conclusions benefiting the arguers deserve extra scrutiny. A conclusion that costs its proponents is the reverse case, which the reply treats as less suspect."
+  }
+]

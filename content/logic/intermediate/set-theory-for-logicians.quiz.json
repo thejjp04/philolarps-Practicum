@@ -1,0 +1,132 @@
+[
+  {
+    "id": "same-set",
+    "section": "sets",
+    "question": "Are $\\{a, b\\}$ and $\\{b, a, a\\}$ the same set?",
+    "options": [
+      "Yes, since a set is fixed by its members",
+      "No, since the second set has three members and the first has two",
+      "No, since the order differs",
+      "Only if $a$ and $b$ happen to be one and the same object"
+    ],
+    "answer": 0,
+    "explanation": "Both have exactly $a$ and $b$ as members, and by extensionality sets with the same members are the same set. A set has no order and no repetition, so listing $a$ twice adds nothing."
+  },
+  {
+    "id": "member-or-subset",
+    "section": "sets",
+    "question": "Let $A = \\{1, \\{2\\}\\}$. Which of these is true?",
+    "options": [
+      "$2 \\in A$",
+      "$\\{2\\} \\subseteq A$",
+      "$\\{2\\} \\in A$",
+      "$\\{1\\} \\in A$"
+    ],
+    "answer": 2,
+    "explanation": "The members of $A$ are $1$ and the set $\\{2\\}$, so $\\{2\\} \\in A$. For $\\{2\\} \\subseteq A$ the number $2$ would itself have to be a member of $A$, and it is not; $\\{1\\}$ is a subset of $A$ but not a member of it."
+  },
+  {
+    "id": "at-least-as-tall",
+    "section": "relations",
+    "question": "On a set of people, \"is at least as tall as\" is not an equivalence relation. Which property does it lack?",
+    "options": [
+      "Reflexivity",
+      "Transitivity",
+      "Symmetry",
+      "Both reflexivity and transitivity"
+    ],
+    "answer": 2,
+    "explanation": "Everyone is at least as tall as themselves, and the relation chains, so it is reflexive and transitive. It fails symmetry: if Ann is taller than Ben, Ann is at least as tall as Ben but not the other way round."
+  },
+  {
+    "id": "relation-as-pairs",
+    "section": "relations",
+    "question": "On the domain $\\{1, 2\\}$, with $a$ naming $1$ and $b$ naming $2$, the predicate $L$ is assigned the set $\\{\\langle 1, 2 \\rangle, \\langle 2, 2 \\rangle\\}$. Which formula is true?",
+    "options": [
+      "$Lba$",
+      "$Laa$",
+      "$\\forall x\\, Lbx$",
+      "$\\forall x\\, Lxb$"
+    ],
+    "answer": 3,
+    "explanation": "$Lab$ and $Lbb$ are both true, since $\\langle 1, 2 \\rangle$ and $\\langle 2, 2 \\rangle$ are in the set, so everything bears $L$ to $b$. $Lba$ would need $\\langle 2, 1 \\rangle$, and order matters in a pair, so $\\forall x\\, Lbx$ fails too."
+  },
+  {
+    "id": "which-is-a-function",
+    "section": "functions",
+    "question": "Which of these is a function from $\\{1, 2, 3\\}$ to $\\{1, 2, 3\\}$?",
+    "options": [
+      "$\\{\\langle 1, 2 \\rangle, \\langle 1, 3 \\rangle, \\langle 2, 1 \\rangle, \\langle 3, 3 \\rangle\\}$",
+      "$\\{\\langle 1, 2 \\rangle, \\langle 2, 2 \\rangle, \\langle 3, 1 \\rangle\\}$",
+      "$\\{\\langle 1, 1 \\rangle, \\langle 2, 3 \\rangle\\}$",
+      "$\\{\\langle 1, 1 \\rangle, \\langle 2, 2 \\rangle, \\langle 2, 3 \\rangle, \\langle 3, 3 \\rangle\\}$"
+    ],
+    "answer": 1,
+    "explanation": "A function gives each input exactly one value, so no object may appear first in two pairs and every input needs a pair; the third option leaves $3$ without a value. Two inputs sharing the value $2$ is allowed: it only stops the function being injective."
+  },
+  {
+    "id": "power-set-size",
+    "section": "the-power-set",
+    "question": "How many members does $\\mathcal P(\\{a, b, c, d\\})$ have?",
+    "options": [
+      "$4$",
+      "$8$",
+      "$15$",
+      "$16$"
+    ],
+    "answer": 3,
+    "explanation": "Each of the four members is either in or out of a subset, giving $2^4 = 16$ choices. The count includes the empty set and the whole set, both of which are subsets; forgetting the empty set gives 15."
+  },
+  {
+    "id": "evens-and-naturals",
+    "section": "size-without-counting",
+    "question": "Why do the even numbers have the same cardinality as the natural numbers?",
+    "options": [
+      "All infinite sets have the same cardinality as one another",
+      "Pairing each natural number with its double is a bijection between the two sets",
+      "Half of an infinite collection is still an infinite collection",
+      "The even numbers are a subset of the natural numbers, so they cannot be smaller"
+    ],
+    "answer": 1,
+    "explanation": "Same cardinality means a bijection exists, and $n \\mapsto 2n$ pairs every natural number with exactly one even number and leaves nothing over. Not all infinite sets match up, as the diagonal argument shows, so being infinite is not enough."
+  },
+  {
+    "id": "walk-the-diagonals",
+    "section": "size-without-counting",
+    "question": "To list all pairs of natural numbers, why walk the grid along its diagonals rather than along its rows?",
+    "options": [
+      "Rows contain repeated pairs, which the diagonals avoid listing twice",
+      "Diagonals give a bijection, while rows give only an injection into the list",
+      "Walking a row never finishes the first row",
+      "Rows list the pairs in the wrong order, and a list must respect size"
+    ],
+    "answer": 2,
+    "explanation": "The first row is already infinite, so a row-by-row list never reaches the second row, and most pairs never appear. Each diagonal is finite, so walking them in turn reaches every pair after finitely many steps."
+  },
+  {
+    "id": "diagonal-not-listed",
+    "section": "the-argument-that-stops-it",
+    "question": "In the diagonal argument, why is the constructed number missing from the proposed list?",
+    "options": [
+      "It is larger than every number on the list, so it cannot appear on it",
+      "It differs from the first number on the list in every one of its digits",
+      "It has more digits than any listed number",
+      "For each $n$, it differs from the $n$th number at digit $n$"
+    ],
+    "answer": 3,
+    "explanation": "It cannot be the $n$th entry for any $n$, because the two differ in the $n$th decimal place. It need not be larger than anything, and it differs from each entry in at least one place, not necessarily in all of them."
+  },
+  {
+    "id": "countable-mismatch",
+    "section": "what-logic-needs-from-this",
+    "question": "What mismatch between the two sides of first-order logic does the article identify?",
+    "options": [
+      "Formulas and derivations are countable, while the interpretations of a predicate need not be",
+      "Formulas are uncountable, while the derivations built from them are countable",
+      "Interpretations are countable, while the formulas they interpret are uncountable",
+      "Both sides are countable, but only the derivations can be arranged in a list"
+    ],
+    "answer": 0,
+    "explanation": "Formulas and derivations are finite strings over a countable alphabet, so there are countably many. Interpretations of even one predicate over a domain are as many as its subsets, which outrun the domain, so completeness connects collections of very different sizes."
+  }
+]

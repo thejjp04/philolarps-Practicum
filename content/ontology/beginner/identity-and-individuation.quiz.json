@@ -1,0 +1,88 @@
+[
+  {
+    "id": "strict-sense-of-same",
+    "section": "identity",
+    "question": "Which of these uses \"the same\" for identity in the strict sense?",
+    "options": [
+      "Ana and her twin sister have the same eyes",
+      "These two coins have the same design",
+      "Mark Twain is the same person as Samuel Clemens",
+      "We ordered the same dish, and two plates arrived"
+    ],
+    "answer": 2,
+    "explanation": "There is one person with two names, as there is one planet called both Hesperus and Phosphorus. In the other cases there are two things exactly alike in some respect; two plates arriving is the giveaway that \"the same dish\" there means the same kind."
+  },
+  {
+    "id": "statue-and-clay",
+    "section": "identity",
+    "question": "A lump of clay existed on Monday; a statue was made from it on Tuesday and did not exist on Monday. What does the principle that identical things share everything true of them allow you to conclude?",
+    "options": [
+      "That the statue and the clay are two things, not one",
+      "That the statue and the clay are one thing under two names",
+      "That the clay changed into a different thing on Tuesday",
+      "Nothing, since that principle applies only once we know they share everything"
+    ],
+    "answer": 0,
+    "explanation": "Something is true of the clay, existing on Monday, that is not true of the statue, so they cannot be one thing; every argument for distinctness runs this way. The last option confuses the principle with its converse: the principle needs only one difference to deliver distinctness."
+  },
+  {
+    "id": "converse-more-contentious",
+    "section": "identity",
+    "question": "On the article's account, the principle that things sharing all their properties are identical is less contentious than the principle that identical things share all their properties.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "It is the other way round: almost nobody rejects the principle that identical things share all their properties, while its converse is considerably more contentious, even though it gets used casually."
+  },
+  {
+    "id": "what-makes-a-criterion",
+    "section": "telling-one-from-another",
+    "question": "What makes \"the same set when the same members\" a model criterion of identity?",
+    "options": [
+      "It shows that sets exist, since anything with a criterion of identity must be real",
+      "It applies to things of every kind, not only to sets, so it settles all identity questions at once",
+      "It defines identity for sets in terms of indiscernibility, which every criterion must use",
+      "It turns a question about sameness of sets into membership questions that can be settled independently"
+    ],
+    "answer": 3,
+    "explanation": "A criterion is supposed to give a route from a question you cannot answer directly to one you can, and membership questions are settled independently. The first option overreaches: having a criterion does not show existence, any more than lacking one disproves it, though lacking one is a debt."
+  },
+  {
+    "id": "novels-and-volumes",
+    "section": "counting",
+    "question": "A shelf holds forty novels, each published in three volumes. Asked how many books are on the shelf, one person says forty and another says a hundred and twenty. Who is right?",
+    "options": [
+      "Both counts are correct, since they count different kinds: novels and volumes",
+      "Only a hundred and twenty, since the volumes are the physical objects present",
+      "Only forty, since a novel is one book however many volumes it is bound in",
+      "Neither, since books cannot be counted until we know what a thing is"
+    ],
+    "answer": 0,
+    "explanation": "Like one deck and fifty-two cards, the counts are of different things, and \"book\" is ambiguous between the two kinds. The last option misplaces the problem: the trouble with \"how many things?\" is that no kind is supplied, while here two perfectly good kinds are in play."
+  },
+  {
+    "id": "spot-the-sortal",
+    "section": "sortals",
+    "question": "Which of these terms is a sortal?",
+    "options": [
+      "Silver, as in \"there is silver in the drawer\"",
+      "Shiny, as in \"the drawer is full of shiny old things\"",
+      "Teaspoon, as in \"there are teaspoons in the drawer\"",
+      "Heavy, as in \"the drawer is heavy to pull out\""
+    ],
+    "answer": 2,
+    "explanation": "\"Teaspoon\" tells you what a thing is and how to count them. \"Silver\" is the trap: it is a noun, but \"how many silvers are in the drawer?\" has no answer until a kind, such as teaspoon or bar, is supplied."
+  },
+  {
+    "id": "ship-and-wood",
+    "section": "sortals",
+    "question": "On the standard response to Geach's relative identity, what should we say about the ship and the wood it is made from?",
+    "options": [
+      "They are one thing: the same wood but not the same ship, with nothing further to say",
+      "They are two things sharing their matter, and the identity asked about is the ordinary absolute one",
+      "They are one thing under every sortal, since they occupy exactly the same place",
+      "No answer can be given, since absolute identity cannot be expressed at all"
+    ],
+    "answer": 1,
+    "explanation": "The standard view grants that a sortal fixes what you are asking about, but holds that once it is fixed the relation is absolute identity, so ship and wood are two. The first option is Geach's own position, and it has to qualify the principle that identical things share everything true of them."
+  }
+]

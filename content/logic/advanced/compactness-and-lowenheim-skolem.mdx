@@ -47,6 +47,8 @@ The shape recurs. In each case a property is defined by the absence of something
 
 The trick has a constructive use as well as a destructive one. Take the first-order theory of the real numbers as an ordered field, add a constant $\varepsilon$, and add the sentences saying that $\varepsilon$ is positive and that $\varepsilon$ is less than $1/n$ for each numeral $n$. Every finite subset is satisfied in the ordinary reals, since a small enough real is below any finitely many of those bounds. So there is a model of every first-order truth about the reals containing a positive element smaller than every positive rational. The Archimedean property is therefore not first-order expressible in this language, and the model produced is an ordered field with genuine infinitesimals in it. Robinson's non-standard analysis, published in 1966, takes exactly this route and then rebuilds the differential calculus on infinitesimals in a way that is rigorous rather than merely suggestive, which is a fair return on a theorem whose usual work is to show that things cannot be said.
 
+<Check id="arbitrarily-large-finite-models" />
+
 ## Löwenheim-Skolem
 
 <Definition term="Löwenheim-Skolem theorem">
@@ -77,6 +79,8 @@ It helps to look at one object inside such a model rather than at the model as a
 
 The point generalises past this one case. A first-order theory can constrain how its models talk about their own elements, but it cannot reach outside those models to fix what the notions mean absolutely. Cardinality, powerset and finiteness are all relative in this way. Skolem drew the conclusion himself, in an address on axiomatised set theory in 1922: if the axiomatic method cannot secure an absolute notion of the uncountable, it cannot serve as a foundation in the sense its advocates wanted. Not everyone accepted the conclusion, and the standard reaction now is more measured, treating the relativity as a discovered feature of first-order axiomatisation rather than as a defect in set theory. What almost nobody disputes is the observation itself.
 
+<Check id="missing-bijection" />
+
 ## Elementary equivalence
 
 <Definition term="Elementary equivalence">
@@ -102,6 +106,8 @@ No contradiction has been produced, and it is worth being exact about why. The t
 <Aside title="Before the theorem they follow from">
 Löwenheim proved the downward result in 1915, fifteen years before the completeness theorem it is here derived from, and his argument was conducted in the algebra of relatives inherited from Peirce and Schröder rather than in anything a modern reader would recognise as first-order logic. Skolem gave a cleaner proof in 1920 and extended it to countable sets of sentences, which is why both names are attached. Compactness has a more scattered history: it is implicit in Gödel's completeness proof of 1930 for countable languages, and Mal'cev extended it to languages of arbitrary size in 1936. In each case the semantic result arrived before or alongside the syntactic machinery now used to prove it, which is one reason model theory eventually separated from proof theory and acquired methods of its own.
 </Aside>
+
+<Check id="same-size-not-enough" />
 
 ## Next
 

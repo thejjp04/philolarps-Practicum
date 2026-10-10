@@ -1,0 +1,127 @@
+[
+  {
+    "id": "law-versus-accident",
+    "section": "laws-and-their-violation",
+    "question": "What separates a law of nature from an accidental regularity, such as every coin in my pocket being copper?",
+    "options": [
+      "A law has been observed many more times, so the evidence for it is far greater in quantity",
+      "A law supports claims about what would have happened in circumstances that never arose",
+      "A law concerns the fundamental particles of physics, while accidents concern everyday objects",
+      "A law is discovered by experiment, while an accidental regularity is found by observation alone"
+    ],
+    "answer": 1,
+    "explanation": "The pocket fact tells you nothing about a coin that was never put there, whereas a law says what would have happened, which is why it can predict and explain. Number of observations does not mark the difference, since an accidental pattern could be checked as often."
+  },
+  {
+    "id": "regularity-violation-incoherent",
+    "section": "laws-and-their-violation",
+    "question": "Why does the regularity view of laws threaten the very idea of a miracle as a violation?",
+    "options": [
+      "Because it treats laws as necessities, which nothing at all, God included, could possibly override",
+      "Because on it laws are discovered only by repeated experiment, which no miracle could ever survive",
+      "Because on it the laws are God's own decrees, so a violation would set God against God's own will",
+      "If a law just records what always happens, an exception shows it was never a law"
+    ],
+    "answer": 3,
+    "explanation": "An exception falsifies a universal pattern rather than breaking it, so \"violation of a law\" describes nothing on this account. Treating laws as genuine necessities is the richer view the regularity theory is contrasted with, so the first option names the wrong side."
+  },
+  {
+    "id": "swinburne-price",
+    "section": "laws-and-their-violation",
+    "question": "Swinburne treats a miracle as a non-repeatable counterinstance to a law. What price does the article say this reply pays?",
+    "options": [
+      "Identifying a miracle depends on judging that no better law is available, a judgement about future science",
+      "It gives up the claim that miracles are caused by God, since a counterinstance needs no cause at all",
+      "It concedes Hume's conclusion, since a counterinstance can never be established on testimony alone",
+      "It makes every unrepeated experiment count as a miracle, including failed experiments in laboratories"
+    ],
+    "answer": 0,
+    "explanation": "Keeping the law and treating the event as an exception is rational only if no amended law does better, and whether one will turn up is a question about science not yet done. Swinburne's account is about identifying a counterinstance, not about whether testimony can establish one."
+  },
+  {
+    "id": "definition-not-neutral",
+    "section": "what-a-miracle-is",
+    "question": "Why does the article say Hume's choice of definition is not neutral?",
+    "options": [
+      "Because it builds God's action into the definition, so that any miracle at all would prove that God exists",
+      "Because it limits miracles to healings and resurrections, ignoring every other reported kind of event",
+      "Because defining a miracle as a violation sets it maximally against our best-supported knowledge",
+      "Because it was borrowed from Aquinas, whose theological commitments Hume did not himself share"
+    ],
+    "answer": 2,
+    "explanation": "If a miracle is by definition in conflict with the best-attested regularities, an argument that miracles are hard to establish is partly an argument from that definition. Aquinas's formulation differs, requiring only that the cause lie outside the created order, so the last option gets the history wrong."
+  },
+  {
+    "id": "aquinas-definition-tradeoff",
+    "section": "what-a-miracle-is",
+    "question": "On Aquinas's definition, a miracle is an event exceeding the productive power of nature. How does that change what a case must show?",
+    "options": [
+      "It makes the case easier in every respect, since nothing needs to be shown about nature at all",
+      "It is harder because it covers all that nature can do, easier because nothing need be broken",
+      "It makes the case impossible, since no one could survey everything that nature can do",
+      "It makes no difference, since an event beyond nature's power is just a violation of a law"
+    ],
+    "answer": 1,
+    "explanation": "One must show that nothing in nature could have done it, which quantifies over everything nature can do, yet the event need not be inconsistent with any law. Equating the two definitions misses that Aquinas's is about the cause, not a contravened regularity."
+  },
+  {
+    "id": "hume-not-impossible",
+    "section": "humes-argument",
+    "question": "Hume's argument in Section X is that miracles cannot occur.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The argument concerns only what it is reasonable to believe on testimony, and would be unaffected if miracles happened regularly but reached us only through reports. Reading it as an impossibility claim makes Hume look easier to answer than he is."
+  },
+  {
+    "id": "fourth-consideration",
+    "section": "humes-argument",
+    "question": "Why does the article call Hume's fourth consideration, about the miracles of rival religions, the strongest?",
+    "options": [
+      "Because it shows that all religions are equally false, since each one's miracles contradict the others",
+      "Because his readers rejected other traditions' miracles with no principle that would spare their own",
+      "Because it is the only consideration of the four that does not rest on any empirical claim at all",
+      "Because it proves that miracle reports always arise among populations with no means of checking them"
+    ],
+    "answer": 1,
+    "explanation": "The reports serve as credentials for incompatible systems and are of similar quality, so whatever disposes of the others' disposes of one's own. All four considerations are empirical, which the article treats as both their force and their weakness."
+  },
+  {
+    "id": "babbage-multiplication",
+    "section": "the-bayesian-turn",
+    "question": "What did Babbage show about multiple witnesses?",
+    "options": [
+      "That testimony can never outweigh uniform experience, however many witnesses there happen to be",
+      "That witnesses to religious events are rarely independent, so their numbers add nothing at all",
+      "That a single highly reliable witness is always better evidence than many witnesses of only moderate reliability",
+      "With independent errors, the chance all are wrong is a product that shrinks fast"
+    ],
+    "answer": 3,
+    "explanation": "Enough independent witnesses of moderate reliability can outweigh any prior improbability short of impossibility. That religious witnesses are rarely independent is the reply on Hume's behalf, not Babbage's result."
+  },
+  {
+    "id": "independence-is-the-crux",
+    "section": "the-bayesian-turn",
+    "question": "On the article's account, where is Hume's position best defended against the formal objections?",
+    "options": [
+      "At independence: shared communities and transmission produce correlated error that does not multiply down",
+      "At the maxim itself, which Earman's criticisms of its reasoning were later shown to have misunderstood entirely",
+      "At the prior probability, which is so low for any miracle that no testimony could ever overcome it",
+      "At the reliability of testimony, which experience shows to be far lower than the formal models assume"
+    ],
+    "answer": 0,
+    "explanation": "The multiplication works only if errors are unconnected, and Hume's second and third considerations are in effect arguments that they are not. The article calls this a much better argument than the maxim, so defending the maxim is not where Hume is strongest."
+  },
+  {
+    "id": "attribution-gap",
+    "section": "what-a-miracle-would-show",
+    "question": "Even if an extraordinary event were established, why could it not establish a religious claim from a standing start?",
+    "options": [
+      "Because unexplained events are always later explained, so none could ever count as a miracle",
+      "Because a single event cannot be repeated, and only repeatable events can be evidence for anything",
+      "Attributing it to God depends on a prior view of what God would do, which it was meant to support",
+      "Because the event's religious setting shows only that believers were present, not that anything happened"
+    ],
+    "answer": 2,
+    "explanation": "Setting, timing and fit with a purpose all presuppose a view about God, so the event can at most confirm a hypothesis already on the table. The article says unknown natural causes have a long record of turning up, not that every event is always explained."
+  }
+]

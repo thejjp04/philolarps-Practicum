@@ -1,0 +1,130 @@
+[
+  {
+    "id": "why-search-may-fail",
+    "section": "making-the-informal-notion-precise",
+    "question": "The search operation lets a recursive function fail to return a value. Why does the article treat this as essential rather than as a defect?",
+    "options": [
+      "Without search, addition and multiplication could not be defined from zero and successor",
+      "A class of functions that all terminate cannot contain one simulating arbitrary computations",
+      "Search is what allows a function to be defined by recursion on one of its arguments at a time",
+      "Only a partial function can grow faster than every primitive recursive function does"
+    ],
+    "answer": 1,
+    "explanation": "If every function in the class were total, a function simulating any computation in the class would have to terminate on every input, which arbitrary computations do not. Addition and multiplication need no search: they are primitive recursive, and Ackermann's function is total yet outgrows every primitive recursive function."
+  },
+  {
+    "id": "where-the-thesis-is-used",
+    "section": "making-the-informal-notion-precise",
+    "question": "Where in the case for Church's theorem is the Church-Turing thesis needed?",
+    "options": [
+      "In proving that no recursive function decides first-order validity",
+      "In showing that the valid sentences can be listed by a mechanical procedure",
+      "In translating between lambda calculus, Turing machines and recursive functions",
+      "In passing from \"no recursive function decides it\" to \"no procedure does\""
+    ],
+    "answer": 3,
+    "explanation": "Every mathematical result here mentions only recursive functions and is proved outright. The thesis carries the conclusion over from that formal class to the informal notion of a procedure, which is what makes the result interesting rather than what makes it true; the equivalence of the three formalisms is a theorem, not an appeal to the thesis."
+  },
+  {
+    "id": "thesis-and-minds",
+    "section": "making-the-informal-notion-precise",
+    "question": "The Church-Turing thesis entails that whatever a human mathematician can work out could also be worked out by a machine.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The thesis concerns effective procedures: finite, mechanical routines needing no ingenuity. It says nothing about what humans do except when they are following such a routine, so it is compatible with every position on whether minds are machines."
+  },
+  {
+    "id": "complement-of-an-undecidable-re-set",
+    "section": "deciding-and-listing",
+    "question": "A set is recursively enumerable but not decidable. What follows about its complement?",
+    "options": [
+      "It is not recursively enumerable",
+      "It is recursively enumerable as well, but likewise not decidable",
+      "It is decidable, being the complement of a set that can be listed",
+      "Nothing follows either way"
+    ],
+    "answer": 0,
+    "explanation": "A set is decidable exactly when it and its complement are both recursively enumerable. The set is listable, so if its complement were listable too the set would be decidable, which it is not; this is why nothing lists the computations that run forever."
+  },
+  {
+    "id": "diagonal-change-of-digit",
+    "section": "the-halting-problem",
+    "question": "Read the halting proof as Cantor's diagonal argument. Which feature of $D$ plays the part of changing the digit?",
+    "options": [
+      "Taking a procedure as its own input, so that each row meets its own column",
+      "Numbering the procedures as finite strings, so that they can be listed like reals",
+      "Looping when $H$ says yes and halting when $H$ says no",
+      "Calling $H$, which always terminates"
+    ],
+    "answer": 2,
+    "explanation": "Running each procedure on itself picks out the diagonal of the table of procedures against inputs; inverting the predicted behaviour at that position is the change of digit, which makes $D$ differ from every procedure on the list. Self-application is the diagonal, not the change."
+  },
+  {
+    "id": "why-semi-deciders-survive",
+    "section": "the-halting-problem",
+    "question": "A procedure that halts exactly on the halting pairs certainly exists. Why does the diagonal argument not refute it as it refutes $H$?",
+    "options": [
+      "$D$ halts only on an answer of no, and this procedure never gives one",
+      "This procedure cannot be handed another procedure as its input, so $D$ cannot call it",
+      "The set of halting pairs is not recursively enumerable, so there is nothing for it to list",
+      "Diagonal arguments refute only procedures that ever answer yes"
+    ],
+    "answer": 0,
+    "explanation": "Build $D$ from such a procedure and run it on itself: if $D$ does not halt on $D$, the procedure never answers, so $D$ never halts, which is consistent rather than contradictory. The halting set is recursively enumerable; what fails is listing its complement."
+  },
+  {
+    "id": "rice-and-syntax",
+    "section": "the-universal-machine-and-how-far-the-damage-spreads",
+    "question": "Which of these questions about an arbitrary procedure is decidable?",
+    "options": [
+      "Whether it ever returns zero on some input",
+      "Whether it halts on every input it could be given",
+      "Whether it computes the same function as some fixed procedure",
+      "Whether its text has more than a hundred instructions"
+    ],
+    "answer": 3,
+    "explanation": "Rice's theorem covers properties of the function a procedure computes, and the first three are all such properties, so each is undecidable. Counting instructions is a property of the text, not of the function, and a procedure settles it by inspection."
+  },
+  {
+    "id": "direction-of-reduction",
+    "section": "churchs-theorem",
+    "question": "To prove a problem $B$ undecidable using the halting problem, what must be supplied?",
+    "options": [
+      "A procedure converting each instance of $B$ into a question about halting that has the same answer",
+      "A procedure converting each halting question into an instance of $B$ with the same answer",
+      "A proof that the instances of $B$ can be numbered, as procedures and formulas can be",
+      "A proof that the set of instances of $B$ whose answer is yes is recursively enumerable"
+    ],
+    "answer": 1,
+    "explanation": "If halting reduces to $B$, a decider for $B$ would decide halting, so $B$ has none. Converting $B$ into halting is the easily made reversal: it shows only that $B$ is no harder than halting, which says nothing about whether $B$ is decidable."
+  },
+  {
+    "id": "what-church-does-not-say",
+    "section": "churchs-theorem",
+    "question": "Which of these follows from Church's theorem?",
+    "options": [
+      "Some valid first-order sentences have no derivation in any complete proof system",
+      "Every first-order theory of the natural numbers, even one with addition alone, is undecidable",
+      "No single procedure settles validity for every first-order sentence",
+      "Some sentences are neither valid nor falsified by any countermodel"
+    ],
+    "answer": 2,
+    "explanation": "The theorem denies a uniform method, not the existence of derivations or countermodels for individual sentences: completeness still gives every valid sentence a derivation. Nor does it reach every theory of numbers, since Presburger arithmetic, with addition alone, is decidable."
+  },
+  {
+    "id": "thesis-not-a-gap",
+    "section": "the-question-that-was-being-answered",
+    "question": "The objection says Church's theorem rests on an unproved thesis. On the article's reply, why is this not a gap a better proof could close?",
+    "options": [
+      "No proof can connect an informal notion to a formal one, so any such negative result has this shape",
+      "The thesis was in fact proved soon after 1936, when the three formalisms were shown equivalent",
+      "Church's theorem never needs the thesis, since validity is itself a precisely defined notion",
+      "The thesis could only be refuted by a procedure taking infinitely many steps, which is impossible"
+    ],
+    "answer": 0,
+    "explanation": "Since one side of the thesis is informal, no proof could deliver it, so the alternative to relying on it is giving up negative results altogether. The equivalence of the formalisms is evidence for the thesis rather than a proof of it, and the thesis is refutable in principle by a single genuine counterexample."
+  }
+]

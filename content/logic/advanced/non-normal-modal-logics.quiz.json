@@ -1,0 +1,130 @@
+[
+  {
+    "id": "omniscience-from-necessitation",
+    "section": "neighbourhood-semantics",
+    "question": "Read $\\Box$ as \"the agent knows that\". Which closure condition, on its own, commits the agent to knowing every theorem of logic?",
+    "options": [
+      "Distribution, since it closes knowledge under implication",
+      "Necessitation, since it makes every theorem of logic boxed",
+      "The conjunction principle, since it lets known items be combined",
+      "Replacement of provable equivalents, since every theorem is equivalent to every other"
+    ],
+    "answer": 1,
+    "explanation": "Necessitation takes any theorem $\\varphi$ to $\\Box \\varphi$ directly, which is the logical omniscience problem the article says epistemic logic avoids by dropping it. Distribution only closes knowledge under implication: it spreads what is already known but needs something known to start from."
+  },
+  {
+    "id": "strict-implication-paradox",
+    "section": "the-lewis-systems",
+    "question": "Lewis introduced strict implication to escape the paradoxes of material implication. Which analogous paradox does strict implication itself face?",
+    "options": [
+      "Any false sentence strictly implies every sentence whatever",
+      "Any true sentence is strictly implied by every sentence whatever",
+      "Strict implication is not transitive",
+      "Any necessary truth is strictly implied by every sentence"
+    ],
+    "answer": 3,
+    "explanation": "If $\\psi$ is necessary, no world makes $\\varphi$ true and $\\psi$ false, so $\\varphi$ strictly implies $\\psi$ whatever $\\varphi$ says. The options about merely false or merely true sentences describe the original material paradoxes, which strict implication does avoid, because a contingent truth can fail at some other world."
+  },
+  {
+    "id": "relational-as-neighbourhood",
+    "section": "neighbourhood-semantics",
+    "question": "A relational model is the special case of a neighbourhood model in which the neighbourhoods of a world are which sets?",
+    "options": [
+      "Exactly the supersets of the set of worlds it accesses",
+      "Exactly the subsets of the set of worlds it accesses",
+      "Exactly the singletons of the worlds it accesses",
+      "Exactly the set of worlds it accesses, and nothing else"
+    ],
+    "answer": 0,
+    "explanation": "Relationally, $\\Box \\varphi$ holds at $w$ when every accessible world satisfies $\\varphi$, that is, when the truth set of $\\varphi$ contains the accessible set; so the neighbourhoods must be its supersets. Taking only the accessible set itself would make $\\Box \\varphi$ true only when $\\varphi$ holds at exactly the accessible worlds, which is far too demanding."
+  },
+  {
+    "id": "neighbourhood-conjunction-countermodel",
+    "section": "neighbourhood-semantics",
+    "question": "Worlds $w$, $u$, $v$. The sentence $p$ is true at $u$ only, $q$ at $v$ only, and the neighbourhoods of $w$ are exactly $\\{u\\}$ and $\\{v\\}$. Which of these fails at $w$?",
+    "options": [
+      "$\\Box(p \\land q) \\rightarrow \\Box p$",
+      "$\\Box p \\rightarrow \\Box \\neg\\neg p$",
+      "$(\\Box p \\land \\Box q) \\rightarrow \\Box(p \\land q)$",
+      "$\\Box q \\rightarrow \\Box(q \\land q)$"
+    ],
+    "answer": 2,
+    "explanation": "The truth sets of $p$ and $q$ are both neighbourhoods, but that of $p \\land q$ is empty and is not, so the conjunction principle fails: the neighbourhoods are not closed under intersection. The monotonicity instance survives only because its antecedent $\\Box(p \\land q)$ is false here, and the other two replace a sentence by one with the same truth set."
+  },
+  {
+    "id": "monotone-and-conjunctive-not-normal",
+    "section": "neighbourhood-semantics",
+    "question": "In a neighbourhood model every world's neighbourhoods are closed under supersets and under intersection, but some world has no neighbourhoods at all. Which principle of the normal systems fails?",
+    "options": [
+      "Distribution, since closure under supersets is weaker than an accessibility relation",
+      "Necessitation, since $\\Box \\top$ is false at that world",
+      "The conjunction principle, having nothing to intersect",
+      "Replacement of provable equivalents, since that world gives $\\Box$ no truth sets at all"
+    ],
+    "answer": 1,
+    "explanation": "Necessitation corresponds to containing the set of all worlds, and an empty collection does not, so $\\Box \\top$ fails there. Monotonicity and the conjunction principle together already yield distribution, which is why the tempting first option is wrong: the only thing missing is the unit."
+  },
+  {
+    "id": "neighbourhood-replacement",
+    "section": "neighbourhood-semantics",
+    "question": "In a neighbourhood model with no closure conditions at all, if $\\varphi$ and $\\psi$ are true at exactly the same worlds, then $\\Box \\varphi$ and $\\Box \\psi$ are true at exactly the same worlds.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "Whether $\\Box \\varphi$ holds depends only on whether the truth set of $\\varphi$ is a neighbourhood, so sentences with the same truth set get the same verdict. That is why even the weakest system E keeps replacement of equivalents; dropping closure conditions does not by itself separate necessarily equivalent sentences, which is the job impossible worlds take on."
+  },
+  {
+    "id": "deontic-conflicting-obligations",
+    "section": "neighbourhood-semantics",
+    "question": "Why does deontic logic want the conjunction principle to fail?",
+    "options": [
+      "It would make every theorem of logic obligatory, however trivial the theorem",
+      "Obligations are not closed under logical equivalence, so a conjunction of them can differ from its parts",
+      "Conflicting obligations cannot both be true at one world, so the principle would never apply to them",
+      "Obligations to do $\\varphi$ and to do $\\neg \\varphi$ would yield an obligation to do everything"
+    ],
+    "answer": 3,
+    "explanation": "With the conjunction principle the two obligations yield $\\Box(\\varphi \\land \\neg \\varphi)$, and monotonicity then delivers an obligation to do anything at all. Making every theorem obligatory is the effect of necessitation, a different principle with a different deontic complaint."
+  },
+  {
+    "id": "non-normal-world-iterated-box",
+    "section": "non-normal-and-impossible-worlds",
+    "question": "In Kripke's semantics for S2 and S3, normal world $w$ accesses only $n$, a non-normal world. Which of these is false at $w$?",
+    "options": [
+      "$p \\lor \\neg p$",
+      "$\\Box(p \\lor \\neg p)$",
+      "$\\Box\\Box(p \\lor \\neg p)$",
+      "$\\Diamond(p \\lor \\neg p)$"
+    ],
+    "answer": 2,
+    "explanation": "A non-normal world still evaluates the connectives classically, so $p \\lor \\neg p$ is true at $n$ and $\\Box(p \\lor \\neg p)$ holds at $w$. What fails at $n$ is every boxed sentence, so $\\Box(p \\lor \\neg p)$ is false there and its necessitation is false at $w$; the trap is thinking non-normal worlds falsify everything."
+  },
+  {
+    "id": "coarse-propositions",
+    "section": "non-normal-and-impossible-worlds",
+    "question": "If a proposition is a set of possible worlds, why does believing one mathematical truth amount to believing all of them?",
+    "options": [
+      "Belief is closed under logical consequence, and mathematical truths all follow from one another",
+      "Every mathematical truth holds at every possible world, so all are one proposition",
+      "Necessitation makes every mathematical truth believed by any agent who believes one of them",
+      "Mathematical truths share one content, being provable from the same axioms"
+    ],
+    "answer": 1,
+    "explanation": "Two necessary truths are true at exactly the same possible worlds, so on this account there is only one necessary proposition to believe. The closure option describes a different failing (logical omniscience) that does not depend on how propositions are individuated; impossible worlds address the individuation problem by letting the truths come apart somewhere."
+  },
+  {
+    "id": "modal-logic-unified-by-question",
+    "section": "non-normal-and-impossible-worlds",
+    "question": "The objection says the weak systems are \"model theory for propositional attitudes wearing the notation of logic\". What is the core of the reply?",
+    "options": [
+      "Modal logic is unified by a question, which principles govern an operator on propositions",
+      "Belief and obligation are, on analysis, species of metaphysical necessity, so the notation fits them",
+      "The weak systems validate necessitation once impossible worlds are added",
+      "Non-normal systems came after Kripke semantics and so inherit its standing as a logic of necessity"
+    ],
+    "answer": 0,
+    "explanation": "The reply denies that the box was ever fixed as metaphysical necessity: Lewis's systems concerned implication and deontic logic predates relational semantics. The historical option gets the order backwards, since the Lewis systems came first and Kripke semantics thirty years later."
+  }
+]

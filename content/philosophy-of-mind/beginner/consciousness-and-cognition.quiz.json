@@ -1,0 +1,104 @@
+[
+  {
+    "id": "classify-use-of-conscious",
+    "section": "one-word-doing-too-many-jobs",
+    "question": "\"She was suddenly conscious of a draught from the window.\" Which use of the word is this?",
+    "options": [
+      "A creature's being awake and responsive rather than asleep or sedated",
+      "A relation between a creature and something it is aware of",
+      "A mental state's being available to the rest of the mind",
+      "A state's having something it is like for its subject to be in it"
+    ],
+    "answer": 1,
+    "explanation": "\"Conscious of\" relates her to something else, the draught, which is the relational use. It is easy to read it as her simply being awake, but she could have been awake all along and unaware of the draught, which is exactly why the uses have to be kept apart."
+  },
+  {
+    "id": "why-cognition-tractable",
+    "section": "the-processing-side",
+    "question": "On the article's account, why is explaining how a system tells red things from green things hard but not mysterious?",
+    "options": [
+      "The capacity is specified by what it does, so we know what a solution would look like",
+      "Neuroscience has already given a complete explanation of how colours are discriminated",
+      "Discriminating colours involves no information processing, only simple detection",
+      "Colour discrimination needs no physical mechanism at all, so nothing has to be found"
+    ],
+    "answer": 0,
+    "explanation": "You would specify the mechanism and check that it does the job, so the difficulty is engineering and empirical rather than conceptual. The article explicitly denies that cognition is finished business; its point is about the kind of difficulty, not that the work is done."
+  },
+  {
+    "id": "imagining-the-bat",
+    "section": "the-felt-side",
+    "question": "Someone vividly imagines hanging upside down in a cave and finding insects by their echoes. On Nagel's view, why does this not tell them what it is like to be a bat?",
+    "options": [
+      "They do not yet know enough facts about the bat's nervous system and echolocation",
+      "Bats are probably not conscious, so there is nothing that being one is like at all",
+      "They have imagined what it would be like for them, not what it is like for the bat",
+      "Imagination can represent sensations but not behaviour such as hunting by echo"
+    ],
+    "answer": 2,
+    "explanation": "Our imaginative resources come from our own experience, so they reach what it would be like for us to behave as a bat does. The shortage-of-facts option is the standard misreading: Nagel holds that someone could know every fact about bat physiology and still not know this."
+  },
+  {
+    "id": "point-of-view-method",
+    "section": "the-felt-side",
+    "question": "Why does Nagel doubt that the physical sciences can capture experience?",
+    "options": [
+      "Their instruments are not yet sensitive enough to detect experience in the brain",
+      "Experience is non-physical by definition, so physics cannot even mention it",
+      "Animals cannot report their experiences, so the sciences have no data to work from",
+      "They succeed by setting aside points of view, while experience is tied to one"
+    ],
+    "answer": 3,
+    "explanation": "Physical description succeeds by being available to any observer whatever their senses, and experience is nothing but a point of view, so the method seems to discard what it is asked to capture. Nagel's worry is about method, not about weak instruments or about a definition that settles the question in advance."
+  },
+  {
+    "id": "denying-qualia",
+    "section": "the-felt-side",
+    "question": "A philosopher announces that qualia do not exist. On the article's account, what are they most likely denying?",
+    "options": [
+      "That experience has intrinsic, private, directly known, non-functional features",
+      "That anything distinguishes an experience of red from an experience of green",
+      "That anyone ever has experiences at all, as opposed to merely processing information",
+      "That colours are properties of external objects rather than features of the given"
+    ],
+    "answer": 0,
+    "explanation": "Deniers of qualia are usually rejecting the loaded package of features some writers build into the word, not the neutral claim that experiences differ in character. Taking the denial as saying nothing distinguishes red experiences from green ones is the standard misunderstanding the article warns against."
+  },
+  {
+    "id": "blindsight-not-decisive",
+    "section": "the-other-half-of-the-split",
+    "question": "On the article's account, if blindsight turned out to be severely degraded ordinary vision, the distinction between phenomenal and access consciousness would have to be abandoned.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The distinction is conceptual: the two notions are defined in different terms, one by availability and one by felt character. Blindsight is evidence about whether they actually separate in human beings, so losing the case would not show the concepts are the same."
+  },
+  {
+    "id": "classify-tractable-question",
+    "section": "why-the-split-matters",
+    "question": "Which of these questions falls on the side of the split where the shape of a physical explanation is clear?",
+    "options": [
+      "Why is there something it is like to taste coffee?",
+      "Why does red look this way rather than some other way?",
+      "Why is the mechanism of pain accompanied by hurting rather than running in the dark?",
+      "How does the brain hold a phone number in mind for a few seconds?"
+    ],
+    "answer": 3,
+    "explanation": "Holding a number in mind is a cognitive capacity specified by what it does, so explaining it means finding the mechanism that does it. The other three ask about felt character, where, even with the full mechanism in hand, a question seems to remain about why it is accompanied by experience at all."
+  },
+  {
+    "id": "evidence-demand-reply",
+    "section": "why-the-split-matters",
+    "question": "The objection says phenomenal consciousness is idle, since all evidence about the mind is evidence of access. What is the reply's first point against it?",
+    "options": [
+      "Blindsight gives direct evidence of phenomenal consciousness without any access",
+      "Reports about experience are not physical events, so they escape the objection",
+      "The demand asks for evidence that the hypothesis itself implies is unavailable",
+      "Introspection detects phenomenal properties directly, so evidence is available"
+    ],
+    "answer": 2,
+    "explanation": "If phenomenal consciousness existed distinct from access, things would look exactly as they do, so the demand cannot test the hypothesis. The reply in fact grants that every report is a physical event with a physical cause, which is why the second option gets it backwards."
+  }
+]

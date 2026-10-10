@@ -69,6 +69,8 @@ The bookkeeping is what the vertical bars and indentation in the proofs below ar
 
 That restriction is the whole safety mechanism, and it is easy to see what happens without it. Assume $P$. Derive $P$ from the assumption, trivially. If the assumption could be discharged while the line derived from it stayed citable, $P$ would have been proved from nothing at all, and every formula would be a theorem. The scoping is not a notational nicety; it is the difference between a system and a disaster.
 
+<Check id="forbidden-citation" />
+
 ## Conditional proof
 
 <Definition term="Conditional proof">
@@ -117,6 +119,8 @@ The rule of modus tollens, which the beginner tier listed alongside modus ponens
 
 Line 2 being cited from inside the subproof is worth pausing on. It sits at depth zero, outside, and the citation rule permits looking outward. Premises and anything established at an outer level remain available inside every subproof opened beneath them. What is forbidden is the reverse: looking into a subproof from outside, or into a subproof that has closed.
 
+<Check id="reductio-shape" />
+
 ## Proof by cases
 
 Disjunction elimination can now be stated properly. Given a disjunction, and given a subproof deriving some formula from the first disjunct, and another deriving the same formula from the second, the formula may be written at the outer level.
@@ -136,6 +140,8 @@ Disjunction elimination can now be stated properly. Given a disjunction, and giv
 />
 
 Two assumptions are made and both are discharged by the single application at line 8. The rule is the formal counterpart of an argument that says: either way, the same thing follows. Its shape also explains why disjunction is the connective beginners find hardest to use. Introducing one is free and gains nothing; getting anything out of one costs two subproofs.
+
+<Check id="cases-must-match" />
 
 ## Nesting
 

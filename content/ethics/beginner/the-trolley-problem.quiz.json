@@ -1,0 +1,106 @@
+[
+  {
+    "id": "what-the-problem-asks",
+    "section": "what-the-problem-is",
+    "question": "A student says: \"The trolley problem is the question of whether I would pull the lever.\" What has gone wrong, on the article's definition?",
+    "options": [
+      "Nothing: the problem simply is what you would do at the lever",
+      "The problem is what most people would do, which is an empirical matter",
+      "The problem is whether consequences matter morally at all, in any case",
+      "The problem is finding a principle that allows switching but not pushing"
+    ],
+    "answer": 3,
+    "explanation": "The trolley problem is the demand for a principle that yields both verdicts, although five are saved at the cost of one in each case. Treating it as a survey of what people would do misses that the interest lies in the gap between the verdicts and the difficulty of explaining it."
+  },
+  {
+    "id": "consequentialist-no-problem",
+    "section": "what-the-problem-is",
+    "question": "Why does the article say consequentialism has no trolley problem?",
+    "options": [
+      "It gives one verdict for both cases and can dismiss the footbridge reaction",
+      "It forbids both pulling the lever and pushing the man, since both kill",
+      "It explains why pushing the man produces a worse outcome than switching",
+      "It treats the footbridge reaction as tracking a real moral difference between them"
+    ],
+    "answer": 0,
+    "explanation": "If only outcomes matter, the two cases are identical, and reluctance to push is squeamishness with no moral standing. The problem arises only for someone who thinks the reaction is tracking something, which is what the last option describes."
+  },
+  {
+    "id": "doing-allowing-both-kill",
+    "section": "the-first-candidate-fails",
+    "question": "Why does the doing and allowing distinction fail to solve the trolley problem?",
+    "options": [
+      "In the switch case you merely let the one person die, rather than killing him",
+      "In both cases you kill the one, so it cannot tell them apart",
+      "The distinction between doing and allowing is not a real one",
+      "It would permit pushing the man as well as pulling the lever"
+    ],
+    "answer": 1,
+    "explanation": "Pulling the lever redirects a lethal object onto someone who was in no danger, which is doing harm, just as pushing is. The first option is the tempting mistake: if switching were only allowing, the distinction would explain the verdicts, but it is not."
+  },
+  {
+    "id": "bystander-matters",
+    "section": "the-first-candidate-fails",
+    "question": "Why did it matter that Thomson's agent is a bystander rather than the driver?",
+    "options": [
+      "A bystander has no special duties, and so may always simply do nothing",
+      "The driver intends the death, while the bystander merely foresees it",
+      "The bystander chooses between killing one and letting five die",
+      "A bystander cannot be held responsible for where the trolley goes"
+    ],
+    "answer": 2,
+    "explanation": "The driver chooses between two things he does, so the case could be read as one killing against another. The bystander could do nothing, so permission to switch is permission to kill one rather than let five die, which is hard to square with doing and allowing driving the footbridge verdict."
+  },
+  {
+    "id": "two-bombers",
+    "section": "the-second-candidate",
+    "question": "One bomber destroys a munitions factory, foreseeing that nearby civilians will die. Another kills civilians in order to break the enemy's morale. According to the doctrine of double effect, how do they differ?",
+    "options": [
+      "Only the second intends the deaths, since his plan fails if the civilians survive",
+      "Both intend the deaths, since both know in advance that the deaths will occur",
+      "Neither intends the deaths, since both are aiming at ending the war",
+      "Only the first intends the deaths, since he deliberately chose a target where he knew civilians lived"
+    ],
+    "answer": 0,
+    "explanation": "The survival test from the article sorts them: if the civilians lived, the first bomber's plan would still have worked, and the second's would have failed. The second option collapses foresight into intention, which is the very distinction the doctrine depends on."
+  },
+  {
+    "id": "loop-variant-lesson",
+    "section": "the-second-candidate",
+    "question": "In the loop variant, the one person's body is what stops the trolley before it reaches the five. If people still judge diverting permissible there, what follows?",
+    "options": [
+      "Double effect gives the right verdicts after all, once the loop is understood",
+      "The one person's death is merely foreseen on the loop, as on the side track",
+      "Double effect is not what is driving the verdicts",
+      "Doing and allowing must be what explains the switch case"
+    ],
+    "answer": 2,
+    "explanation": "On the loop the one is used as a means, exactly as on the footbridge, so double effect predicts the verdict should flip. If it does not, the doctrine's impressive fit with the original pair was not because it tracks what drives the judgements."
+  },
+  {
+    "id": "greene-is-ought",
+    "section": "the-second-candidate",
+    "question": "Greene found that footbridge-type cases engage regions associated with emotional processing. Why can't that finding alone show the footbridge reaction lacks justificatory force?",
+    "options": [
+      "fMRI results are too unreliable to support any conclusion about how moral judgement works",
+      "That a judgement has a causal history is descriptive; lacking force is normative",
+      "Emotional judgements are known to be more reliable than slow, reasoned ones",
+      "The minority who approved of pushing were also responding emotionally"
+    ],
+    "answer": 1,
+    "explanation": "Getting from a fact about mechanism to a verdict about authority needs an argument, which is the gap the first article flagged between descriptive premises and normative conclusions. The article treats the result as real, so dismissing the data is not the point."
+  },
+  {
+    "id": "why-strip-the-cases",
+    "section": "the-second-candidate",
+    "question": "Why are trolley cases stripped of uncertainty and third options, according to the reply?",
+    "options": [
+      "Because real moral difficulty rarely involves any uncertainty",
+      "So that principles drawn from them are guaranteed to transfer to real cases",
+      "To make the cases quick and easy for students to answer in class",
+      "So a difference in verdict can be traced to one specific feature"
+    ],
+    "answer": 3,
+    "explanation": "Stripped-down cases work like experimental controls: the fewer the differences, the more a difference in verdict reveals. Guaranteed transfer is exactly what the reply concedes is open, since it is unclear whether principles from cases of stipulated certainty apply to an uncertain world."
+  }
+]

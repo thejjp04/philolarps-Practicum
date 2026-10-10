@@ -45,6 +45,8 @@ So the box and the diamond are not truth functions, and every method in this sub
 
 What has gone wrong is that the value of $\Box \varphi$ depends on more than the value of $\varphi$. It depends on something the assignment of a single truth value throws away, namely how $\varphi$ stands with respect to alternatives to the way things actually are. A semantics for the box therefore has to keep track of the alternatives, and that requirement is what determines the entire shape of what follows.
 
+<Check id="box-not-truth-function" />
+
 ## Evaluating at a point
 
 <Definition term="Possible world">
@@ -86,6 +88,8 @@ Two features of the relativised clauses deserve to be noticed at once, because b
 The first is that $\Box \varphi$ no longer implies $\varphi$. If $w$ cannot see itself, the truth of $\varphi$ throughout what $w$ can see says nothing about $\varphi$ at $w$. The deontic reading gets what it needed.
 
 The second is what happens at a world with nothing accessible from it, sometimes called a dead end. There, every universal claim about accessible worlds holds vacuously, exactly as a universal quantifier over an empty range does. So $\Box \varphi$ is true at a dead end for every formula $\varphi$ whatever, including formulas that are contradictions, and correspondingly $\Diamond \varphi$ is false there for every $\varphi$. That is not a defect to be repaired but a consequence of the clauses, and one of the traditional systems is defined precisely by ruling dead ends out.
+
+<Check id="dead-end-world" />
 
 ## Frames and models
 
@@ -148,6 +152,8 @@ The objection assumes the semantics is offered as a reductive analysis, and as m
 <Aside title="Systems before semantics">
 Modal logic was studied for over four decades before it had this semantics, which is the reverse of the order used here and explains some otherwise puzzling names. C. I. Lewis introduced a strict conditional in 1918 out of dissatisfaction with the material conditional, and in 1932 he and C. H. Langford presented five systems labelled S1 through S5, each stronger than the last. Those were axiom systems with no interpretation attached: one could derive theorems in them and compare them for strength, but there was no answer to the question of what made a formula valid, and so no way to show that a system had left something out. Kripke published a completeness theorem in 1959 and the semantics for the propositional systems in the years following, and the effect was immediate, since every axiom could now be matched against a condition on the accessibility relation. Related ideas had been developing elsewhere at the same time, notably in Hintikka's work on the logic of knowledge and belief, and the resulting framework is sometimes called relational semantics for that reason. The labels S4 and S5 survive from Lewis and Langford's list, which is why two of the standard systems are named after their position in a numbered sequence and the rest are named after letters.
 </Aside>
+
+<Check id="two-world-countermodel" />
 
 ## Next
 

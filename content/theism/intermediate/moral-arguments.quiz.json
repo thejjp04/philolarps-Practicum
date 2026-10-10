@@ -1,0 +1,127 @@
+[
+  {
+    "id": "the-question-in-dispute",
+    "section": "clearing-the-ground",
+    "question": "The article separates three questions about morality and God. Which one is actually in dispute in the moral argument?",
+    "options": [
+      "Whether people who do not believe in God can ever come to know any moral truths",
+      "Whether people who do not believe in God can act well",
+      "Whether moral facts of a particular kind could obtain in a world with no God",
+      "Whether believers behave better, on average, than non-believers"
+    ],
+    "answer": 2,
+    "explanation": "The dispute is about grounding, as a dispute about what makes arithmetic true is not a dispute about whether anyone can count. All parties answer yes to the knowledge and behaviour questions, and the popular version that runs them together is one no defender in the literature asserts."
+  },
+  {
+    "id": "anscombe-recommendation",
+    "section": "the-feature-the-argument-leans-on",
+    "question": "Anscombe argued that \"moral obligation\" is a survival from a conception of ethics as law, which supplied a lawgiver. What did she recommend?",
+    "options": [
+      "That philosophers drop the notion until they have an adequate philosophy of psychology, and turn to virtue",
+      "That philosophers return to a divine lawgiver, which alone can give the notion of obligation its proper force",
+      "That obligation be grounded in social agreement instead of in divine law, as the moderns intended",
+      "That ethics abandon objective requirements altogether and treat moral words as expressions of feeling"
+    ],
+    "answer": 0,
+    "explanation": "Her positive programme was virtue ethics, which does without obligation as a basic notion. Reading her as calling for a return to a divine lawgiver is the common misquotation; the theist can use her diagnosis, but that was not her prescription."
+  },
+  {
+    "id": "resisting-kants-postulate",
+    "section": "kants-version",
+    "question": "Kant's moral argument is practical rather than theoretical. On the article's account, what does a critic need to do to resist it?",
+    "options": [
+      "Show that the moral law does not really bind us, so that no postulate is needed at all",
+      "Refute the ontological argument, since Kant's practical case depends on it in order to reach its conclusion about God",
+      "Show that virtue and happiness do line up in nature after all, so that no God is needed",
+      "Nothing about God; just hold that one can accept the moral law while resigned to the highest good never coming"
+    ],
+    "answer": 3,
+    "explanation": "The postulates are what an agent must assume to be committed to morality without incoherence, so the critic attacks the incoherence claim, not a premise about God. Kant had himself dismantled the ontological argument in the first *Critique*, so his case does not rest on it."
+  },
+  {
+    "id": "first-horn-tautology",
+    "section": "the-euthyphro-dilemma",
+    "question": "On the first horn of the Euthyphro dilemma, an act is right because God commands it. Why does that make \"God is good\" empty?",
+    "options": [
+      "Because God could have commanded cruelty",
+      "Because it then says only that God conforms to God's own commands",
+      "Because rightness is then prior to and independent of God",
+      "Because a single God cannot be compared with the many gods of the original"
+    ],
+    "answer": 1,
+    "explanation": "If goodness is whatever God commands, praising God as good becomes a tautology rather than a substantive claim. That God could have commanded cruelty is the first problem with this horn, arbitrariness, which is distinct from the emptiness of the praise."
+  },
+  {
+    "id": "adams-loving-god",
+    "section": "the-euthyphro-dilemma",
+    "question": "Why does Adams's restriction to the commands of an essentially loving God answer the arbitrariness objection?",
+    "options": [
+      "Because a loving God would never in fact choose to command cruelty, though able to",
+      "Because love, not command, is what constitutes obligation on his view",
+      "Because commands to be cruel are then not merely unissued but impossible",
+      "Because it makes rightness independent of God's will altogether"
+    ],
+    "answer": 2,
+    "explanation": "Since God is essentially loving, there is no possible situation in which God commands cruelty, which removes the horn's sting. Saying God merely would not choose to leaves open that God could, which is exactly the arbitrariness the objection presses."
+  },
+  {
+    "id": "what-adams-would-establish",
+    "section": "the-euthyphro-dilemma",
+    "question": "Adams accepts that God's nature, and so goodness, is prior to God's commands. What, then, could the moral argument establish at most?",
+    "options": [
+      "That one feature of morality, the bindingness of requirements, depends on God",
+      "That the whole of morality, goodness included, depends on God's will",
+      "That goodness is constituted by God's commands",
+      "That moral facts are brute necessities needing no explanation beyond themselves"
+    ],
+    "answer": 0,
+    "explanation": "Adams grounds only obligation in commands, so the second horn has been taken for goodness, which makes the argument narrower than its popular presentations. Brute moral necessities are Wielenberg's secular view, not something the theistic argument would establish."
+  },
+  {
+    "id": "wielenberg-parity",
+    "section": "the-alternatives",
+    "question": "The theist complains that Wielenberg's view leaves necessary moral facts lying about unexplained. What is Wielenberg's reply?",
+    "options": [
+      "That moral facts are natural facts, and so are explained by science like any other natural facts",
+      "That moral facts are fully explained by the evolution of our moral judgements, which need no further ground",
+      "That necessary truths are explained by God's nature after all, so the theist's complaint is correct",
+      "That the theist has one too, God's necessary and unexplained nature, so the dispute is only where to stop"
+    ],
+    "answer": 3,
+    "explanation": "Both views terminate in something necessary that nothing makes, which is why the reply is hard to answer. Wielenberg holds that moral facts are irreducible and not natural facts, so the scientific option misdescribes his position."
+  },
+  {
+    "id": "street-targets-everyone",
+    "section": "the-alternatives",
+    "question": "Street's evolutionary challenge is aimed at theists in particular, and leaves secular moral realists untouched.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The challenge targets moral realists generally, so the theistic realist inherits it along with everyone else and must answer it too. Whether explaining how a belief arose undermines it is a separate question, and treating explanation as refutation is a recognised mistake."
+  },
+  {
+    "id": "direction-of-confidence",
+    "section": "the-alternatives",
+    "question": "What methodological point does the objection make, which the reply concedes without qualification?",
+    "options": [
+      "Clear moral judgements are better supported than any grounding theory, so a theory that conflicts with one has evidence against it",
+      "Grounding theories are more secure than particular moral judgements",
+      "Texts reporting divine commands settle what morality requires",
+      "Moral judgements cannot be known without a theory of their grounding"
+    ],
+    "answer": 0,
+    "explanation": "That torturing a child for amusement is wrong is far more secure than any premise about what commands require, so the theory must give way, not the judgement. The second option is the reasoning the objection attributes to the divine command theorist, which the reply agrees is reasoning badly."
+  },
+  {
+    "id": "authority-relocated",
+    "section": "the-alternatives",
+    "question": "The reply's final concession asks where God's standing to issue binding commands comes from. Why is each answer trouble for the theist?",
+    "options": [
+      "Every possible answer makes God's commands arbitrary in just the way the first horn feared",
+      "Every answer requires that God be bound by some higher authority still, which no classical theist can accept",
+      "Goodness concedes the second horn, power makes might right, and a basic fact is brute normativity",
+      "None of the answers is compatible with God being loving, which Adams's theory needs"
+    ],
+    "answer": 2,
+    "explanation": "Appealing to God's commands relocates the question of authority one level up without answering it. The arbitrariness charge belonged to the first horn and was blunted by Adams; this difficulty survives even if his reply works."
+  }
+]

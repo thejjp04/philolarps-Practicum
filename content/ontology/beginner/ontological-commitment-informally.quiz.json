@@ -1,0 +1,88 @@
+[
+  {
+    "id": "inventory-belongs-to-theory",
+    "section": "the-list",
+    "question": "Which of these is true of an ontological inventory, as the article defines it?",
+    "options": [
+      "It is the list of things a person sincerely says exist when the question is put to them",
+      "It contains every kind of thing a theory mentions, whether or not it says they exist",
+      "It belongs to a theory, so someone can hold a theory whose inventory they would deny",
+      "It is fixed by observation, since only what can be observed needs to be on the list"
+    ],
+    "answer": 2,
+    "explanation": "The inventory is settled by what the theory says must exist for its claims to be true, which can outrun what its holders would sincerely accept, and that gap is what makes the technique useful. The first option makes it a matter of stated belief, which is exactly the level at which the article says disputes go nowhere."
+  },
+  {
+    "id": "which-commits-to-vaccines",
+    "section": "what-commits-you",
+    "question": "Which sentence commits its speaker to the existence of vaccines?",
+    "options": [
+      "Some vaccines have to be stored below freezing",
+      "No vaccine against the common cold exists",
+      "Researchers hope one day to find a vaccine against colds",
+      "If a vaccine against colds existed, it would sell well"
+    ],
+    "answer": 0,
+    "explanation": "It never uses the word \"exists\", but there is no way for it to be true unless there are vaccines, so it commits implicitly. The second sentence is the tempting one because it mentions vaccines and uses \"exists\", but mentioning is cheap: it is true only if a certain kind of vaccine is absent."
+  },
+  {
+    "id": "implicit-commitment",
+    "section": "what-commits-you",
+    "question": "A theory that never uses the word \"exists\" carries no ontological commitments.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Commitment is settled by truth conditions, not by vocabulary, and it is usually implicit: \"some subspecies are endangered\" commits to subspecies without saying that anything exists. Thinking that only explicit existence statements commit is one of the two tempting misreadings the article warns against."
+  },
+  {
+    "id": "agree-on-sentences",
+    "section": "what-commits-you",
+    "question": "Two philosophers accept every sentence of arithmetic, yet one says numbers exist and the other denies it. How is this possible, on the article's account?",
+    "options": [
+      "One of them must be insincere, since accepting the sentences is believing in numbers",
+      "Arithmetic is about marks on paper, so it carries no commitments for anyone",
+      "Commitment is a matter of personal belief, and their beliefs simply differ",
+      "They analyse the sentences differently, so they disagree about what their truth requires"
+    ],
+    "answer": 3,
+    "explanation": "Two people can agree on every sentence and disagree about the inventory, because one has an analysis on which the commitment is not there. Treating commitment as personal belief is the trap: commitment is a feature of an account, which is why the productive question is what the account requires, not what the person believes."
+  },
+  {
+    "id": "why-holes-are-harder",
+    "section": "the-escape-route",
+    "question": "On the article's account, why is rewriting \"there is a hole in the bucket\" as \"the bucket is perforated\" more contested than the average-family paraphrase?",
+    "options": [
+      "Holes can be counted, compared and located, and each such sentence needs its own rewriting",
+      "\"Perforated\" just means having holes, so the rewriting keeps the commitment it was meant to remove",
+      "Buckets are themselves contested entities, whereas families are not",
+      "The original sentence is false, so a paraphrase of it achieves nothing"
+    ],
+    "answer": 0,
+    "explanation": "One sentence is easy to rewrite, but holes support a great deal of further talk, and whether every such sentence can be handled is settled case by case. The worry about \"perforated\" is a natural objection, but the article treats the paraphrase as committing only to a bucket and a way the bucket is."
+  },
+  {
+    "id": "paraphrase-objection-assumption",
+    "section": "the-escape-route",
+    "question": "An objector argues that no paraphrase can both say the same as the original and require less. Which assumption does the reply say the objector makes?",
+    "options": [
+      "That a paraphrase must say exactly the same thing as the original, not merely something close",
+      "That a sentence's apparent commitments are its real ones, which is the point in dispute",
+      "That a paraphrase must require fewer kinds of entity than the original sentence did",
+      "That the original sentence is true, so its commitments have to be accepted"
+    ],
+    "answer": 1,
+    "explanation": "On the reply, a paraphrase displays what the original said all along, so the original never required average families and there is no gap to close. The first and third options are demands the strategy itself accepts, which is why the objection can turn them against each other."
+  },
+  {
+    "id": "how-views-are-defeated",
+    "section": "using-it",
+    "question": "According to the article, how is an ontological view that relies on paraphrase defeated?",
+    "options": [
+      "By showing that it conflicts with widely shared intuitions about what is real",
+      "By showing that it leaves a different inventory from the theory it started from",
+      "By showing that its paraphrases fail on sentences or inferences they were not designed for",
+      "By an observation that its rival predicts and it does not"
+    ],
+    "answer": 2,
+    "explanation": "Disputes proceed as arguments about the adequacy of a rewriting, and a view is defeated when its paraphrases can be shown to fail, which is a demonstrable matter. Consulting intuitions about what is real is exactly the method the article says ontology does not use."
+  }
+]

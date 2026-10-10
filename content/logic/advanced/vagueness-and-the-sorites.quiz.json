@@ -1,0 +1,129 @@
+[
+  {
+    "id": "cost-of-denying-tolerance",
+    "question": "Why does simply denying the tolerance premise of the sorites look like a poor response?",
+    "options": [
+      "It means some exact hair count is the last bald one, which seems to deny vagueness",
+      "It requires giving up modus ponens, which the chain of reasoning uses at every single step",
+      "It makes the base case doubtful, since a man with no hairs might then fail to count as bald",
+      "It makes the argument invalid, though each of its steps is an instance of a valid form"
+    ],
+    "answer": 0,
+    "explanation": "The negation of tolerance says some single hair makes the difference, and that sharp cutoff is just what vagueness seemed to rule out. Modus ponens and the base case are untouched by denying tolerance; the argument stays valid and loses a premise."
+  },
+  {
+    "id": "supertrue-disjunction",
+    "section": "supervaluationism",
+    "question": "Harry is a borderline case of baldness. On supervaluationism, which of these is supertrue?",
+    "options": [
+      "Harry is bald",
+      "If Harry is bald, so is everyone with more hair than him",
+      "Either Harry is bald or he is not",
+      "\"Harry is bald\" is true or \"Harry is not bald\" is true"
+    ],
+    "answer": 2,
+    "explanation": "Every precisification makes one disjunct true, so the disjunction holds on all of them even though neither disjunct does. The last option is the trap: it says a disjunct is supertrue, and for a borderline case neither is, which is how excluded middle survives while bivalence fails."
+  },
+  {
+    "id": "penumbral-gap-theory",
+    "section": "supervaluationism",
+    "question": "Al has strictly less hair than Bo, and both are borderline bald. Why does a gap theory using the Kleene tables mishandle \"if Bo is bald, Al is bald\"?",
+    "options": [
+      "It makes the conditional false, since Bo's case is clearer than Al's on the tables",
+      "Both parts take the third value, so the conditional is gappy when it should be true",
+      "It makes the conditional true, but only by counting Al as a clear case of baldness",
+      "It cannot evaluate a conditional with gappy parts, so the sentence gets no value"
+    ],
+    "answer": 1,
+    "explanation": "Kleene's tables evaluate sentence by sentence, so two gappy parts give a gappy conditional. Every admissible precisification respects the ordering, so the conditional is true on all of them, which is the penumbral connection supervaluationism captures and the gap theory misses."
+  },
+  {
+    "id": "supervaluation-sorites-verdict",
+    "section": "supervaluationism",
+    "question": "What does the supervaluationist say about the sorites?",
+    "options": [
+      "Some particular hair count is supertruly the last bald one, though no one can know which",
+      "The tolerance premise is very nearly true, and small losses accumulate over the steps",
+      "The tolerance premise is neither true nor false, so the argument is unsound without being refuted",
+      "That there is a cutoff is supertrue, though no claim locating it at a particular number is"
+    ],
+    "answer": 3,
+    "explanation": "Every precisification has a last bald man, so the universal tolerance claim is false on all of them, yet they disagree on where the cutoff falls. The first option is the epistemicist's view and the second the degree theorist's; the third errs because tolerance comes out false, not gappy."
+  },
+  {
+    "id": "degree-of-tolerance-conditional",
+    "section": "degrees",
+    "question": "Suppose each added hair lowers the degree of \"he is bald\" by $0.00001$. With the Łukasiewicz conditional $\\min(1, 1 - v(\\varphi) + v(\\psi))$, what degree does each tolerance conditional get?",
+    "options": [
+      "$0.99999$",
+      "$1$",
+      "$0.5$",
+      "$0.00001$"
+    ],
+    "answer": 0,
+    "explanation": "The consequent falls short of the antecedent by $0.00001$, so the conditional is $1 - 0.00001$. That is why the degree theorist calls tolerance very nearly true: each step loses a negligible amount, and the losses add up over a hundred thousand steps to take the conclusion to zero."
+  },
+  {
+    "id": "artificial-precision-generalises",
+    "section": "degrees",
+    "question": "The article says the artificial precision objection to degree theories generalises. To which wider problem?",
+    "options": [
+      "Logical omniscience, since degrees are closed under logical consequence",
+      "The strengthened liar, since \"this is not true\" can be given a degree",
+      "Higher-order vagueness, since an exact degree is itself a sharp boundary",
+      "Penumbral failure, since conditionals of equal degree misbehave"
+    ],
+    "answer": 2,
+    "explanation": "Requiring that a borderline man is bald to exactly $0.6$ draws precisely the kind of sharp line the theory was meant to avoid, one level up. Penumbral failure is the other difficulty the article lists, but it is a separate problem, not the generalisation."
+  },
+  {
+    "id": "margin-for-error",
+    "section": "epistemicism",
+    "question": "Suppose the boundary of \"bald\" lies between 3,412 and 3,413 hairs. On Williamson's view, why can no one know that a man with 3,412 hairs is bald?",
+    "options": [
+      "There is no fact about whether he is bald, since use fixes no boundary",
+      "Such a belief would easily have been wrong, as the same method misjudges nearby cases",
+      "Knowledge needs certainty, and counting hairs by sight is always fallible",
+      "Speakers have not yet surveyed enough of their own use to locate where the boundary lies"
+    ],
+    "answer": 1,
+    "explanation": "The margin for error principle says knowledge requires that one would not easily have been wrong, and a belief this close to the boundary fails that test. The epistemicist insists there is a fact, fixed by the totality of use, and denies that the relevant use is surveyable at all."
+  },
+  {
+    "id": "gap-theory-higher-order",
+    "section": "higher-order-vagueness",
+    "question": "Why is higher-order vagueness an embarrassment for a simple gap theory?",
+    "options": [
+      "It gives borderline cases no truth value, so it cannot classify them at any level",
+      "It treats every predicate as precise, so it cannot recognise any borderline cases",
+      "It cannot state excluded middle, so the classification into three categories fails",
+      "It draws a sharp line between the true and the gappy, the kind of line it denied"
+    ],
+    "answer": 3,
+    "explanation": "The gap theory replaces one sharp boundary with two, between true and gappy and between gappy and false. If the borderline region has no sharp edges, those boundaries are as objectionable as the one the theory was introduced to avoid."
+  },
+  {
+    "id": "epistemicism-higher-order",
+    "section": "higher-order-vagueness",
+    "question": "Higher-order vagueness troubles epistemicism in the same way it troubles supervaluationism, since both must say which precisifications are admissible.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Only supervaluationism needs a notion of admissible precisification, and that notion is vague. Epistemicism predicts sharp boundaries at every level and explains their apparent absence by the same ignorance throughout, which the article calls its strongest structural argument."
+  },
+  {
+    "id": "sorites-shows-inconsistency",
+    "section": "higher-order-vagueness",
+    "question": "Against the deflationary objection, what does the reply say the sorites demonstrates?",
+    "options": [
+      "That ordinary speakers reason badly whenever they use vague predicates",
+      "That vague predicates should be replaced by precise ones wherever possible",
+      "That three compelling commitments are jointly inconsistent, so one must go",
+      "That classical logic fails for natural language, though not for mathematics"
+    ],
+    "answer": 2,
+    "explanation": "The argument is a proof that the base case, tolerance and the validity of the chain cannot all stand, whether or not anyone reasons this way in conversation. Replacing vague predicates is the deflationist's proposal, which the reply rejects because nearly every predicate outside mathematics is vague."
+  }
+]

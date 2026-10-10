@@ -37,6 +37,8 @@ The interval of values the conclusion's probability may take, given the probabil
 
 The framework goes back to Boole, who posed the problem of determining a conclusion's probability from its premises' probabilities and recognised that the answer is an interval. Modern treatments by Hailperin and by Nilsson set it up as linear programming and it is the basis of probabilistic logic in artificial intelligence, where the width of the interval is the practical obstacle: without independence assumptions the bounds are usually too wide to act on, and with them they are usually unjustified.
 
+<Check id="accumulation-bound-compute" />
+
 ## Conditional probability as primitive
 
 The accumulation problem is about unconditional probabilities. A second difficulty concerns conditioning, and it forces a revision of the axioms.
@@ -59,6 +61,8 @@ The condition that no possible proposition receives probability zero. It secures
 
 Regularity is attractive as a norm, since assigning probability zero to something possible looks like ruling out what one cannot rule out, and it is provably unavailable in the continuous case. Primitive conditional probability is the standard response, and infinitesimal probabilities are the other, at the cost of a nonstandard value space.
 
+<Check id="popper-zero-condition" />
+
 ## Imprecise probability
 
 <Definition term="Imprecise probability">
@@ -76,6 +80,8 @@ This is not logic. Logic concerns validity, which is a relation between sentence
 <Reply>
 The boundary is not where the objection places it. The accumulation bound is a theorem about the classical consequence relation and every probability measure over its models, proved from the additivity axioms and nothing about agents. Adams's coincidence result is likewise a characterisation of classical validity, arrived at from a probabilistic starting point, and characterisations of a consequence relation are logic by any standard. What is true is that the interpretation of the numbers is a separate question and that this article has not settled it: the results hold whether the measures are credences, frequencies, or chances. The more useful observation is that the traditional conception of validity was always doing less work than it appeared to. Truth preservation is a guarantee about a case that almost never obtains, and asking what a valid argument secures in the case that does obtain is a question about consequence, not about psychology.
 </Reply>
+
+<Check id="fair-versus-unknown-coin" />
 
 ## Next
 

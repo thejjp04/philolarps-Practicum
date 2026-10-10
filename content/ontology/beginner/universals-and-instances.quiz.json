@@ -1,0 +1,88 @@
+[
+  {
+    "id": "destroy-every-red-thing",
+    "section": "the-argument-that-starts-everything",
+    "question": "Suppose every red thing were destroyed. On immanent realism, what would become of redness?",
+    "options": [
+      "It would be nothing at all, since universals exist only in the things that have them",
+      "It would survive untouched, since universals exist independently of any of their instances",
+      "It would survive as a resemblance holding between the red things that once existed",
+      "It would become a particular, since it could no longer be in many places at once"
+    ],
+    "answer": 0,
+    "explanation": "Immanent realism, Aristotle's view and Armstrong's, locates universals in their instances, so redness with no red things would be nothing. Surviving untouched is Plato's transcendent realism, the other side of the split the article describes."
+  },
+  {
+    "id": "count-types-and-tokens",
+    "section": "types-and-tokens",
+    "question": "How many word tokens and how many word types are there in \"a rose is a rose is a rose\"?",
+    "options": [
+      "Three tokens and eight types",
+      "Eight tokens and eight types",
+      "Eight tokens and three types",
+      "Three tokens and three types"
+    ],
+    "answer": 2,
+    "explanation": "There are eight inscriptions of words, but only three distinct words, \"a\", \"rose\" and \"is\", each repeated. The first option swaps the terms: tokens are the particular instances, so there are always at least as many tokens as types."
+  },
+  {
+    "id": "types-are-not-general",
+    "section": "types-and-tokens",
+    "question": "\"Dog\" is a type because it is general, whereas the narrower \"spaniel\" is not a type.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Both are types, because both are repeatable: there can be two spaniels at once. A type is a type by being repeatable, not by being general, and the test is whether there can be two of it at the same time."
+  },
+  {
+    "id": "nominalist-premise",
+    "section": "the-alternative",
+    "question": "Which premise of the one over many argument do opponents of universals deny?",
+    "options": [
+      "That the apple, the pillar box and the jumper are alike in any respect at all",
+      "That the conclusion, if accepted, would name a genuine entity",
+      "That particulars such as apples can be wholly present in only one place at a time",
+      "That several things being the same in a respect requires one thing they all have"
+    ],
+    "answer": 3,
+    "explanation": "Everyone accepts that the three red things are alike; what the opposition denies is that this sameness needs a single shared item, and resemblance accounts take the facts of likeness as basic instead. Denying the first premise would mean denying the ordinary fact everyone starts from."
+  },
+  {
+    "id": "resemblance-regress-worry",
+    "section": "the-alternative",
+    "question": "Why is the resemblance theorist at risk of needing the very entity the view was meant to avoid?",
+    "options": [
+      "Resemblance comes in degrees, and degrees can only be measured using numbers",
+      "Resemblance is itself something many pairs of things share, so it looks like a universal",
+      "Resemblance holds only between particulars that already have the same universals",
+      "Resemblance can be observed, so it must exist as a physical object in its own right, like a mug"
+    ],
+    "answer": 1,
+    "explanation": "If many pairs are alike in being resembling pairs, resemblance looks like one thing they all have, which is a universal by another name. Rodriguez-Pereyra's reply is to treat the resemblance facts as primitive, so there is strictly no resemblance relation for the objection to fasten on."
+  },
+  {
+    "id": "what-is-at-stake",
+    "section": "the-alternative",
+    "question": "An objector says that realists and their opponents agree on every observation, so nothing is at stake. What does the reply say is at stake?",
+    "options": [
+      "Whether apples and pillar boxes are really red, which the two sides answer differently",
+      "Whether an observation could one day settle the question, once instruments improve",
+      "What each theory makes available, such as treating laws of nature as relations between universals",
+      "Only the choice of a word, \"redness\", which one side adds and the other declines to add"
+    ],
+    "answer": 2,
+    "explanation": "A theory is judged by what it lets you say next, and with universals the difference between a law and an accidental regularity has somewhere to live. The last option restates the objection itself, which the reply rejects."
+  },
+  {
+    "id": "green-or-prime",
+    "section": "how-many-properties-are-there",
+    "question": "Being green or a prime number: on which conception of properties is this a property?",
+    "options": [
+      "The abundant conception, but not the sparse one",
+      "The sparse conception, but not the abundant one",
+      "Both conceptions, since it is a meaningful predicate",
+      "Neither conception, since nothing could have it"
+    ],
+    "answer": 0,
+    "explanation": "The abundant conception gives a property for every meaningful predicate, however gerrymandered, while the sparse conception admits only properties responsible for objective similarity and causal power. Being a meaningful predicate is enough only on the abundant view, which is why the third option fails."
+  }
+]

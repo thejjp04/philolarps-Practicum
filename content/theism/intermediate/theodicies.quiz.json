@@ -1,0 +1,127 @@
+[
+  {
+    "id": "theodicy-vulnerability",
+    "section": "the-other-kind-of-response",
+    "question": "Why is a theodicy open to a kind of refutation that a defence is not?",
+    "options": [
+      "A theodicy relies on revealed scripture, which a critic is free to reject outright as unreliable",
+      "A theodicy targets the logical version, which has since been shown to be the weaker argument",
+      "It claims to give God's actual reasons, so showing them improbable or incomplete refutes it",
+      "A theodicy avoids appeal to free will, so it has nothing to say about evil that humans choose"
+    ],
+    "answer": 2,
+    "explanation": "A defence only describes a way things could be, so its improbability is no objection; a theodicy says how things are and must cover every instance. Nothing in the definition ties a theodicy to scripture, so the first option invents a weakness."
+  },
+  {
+    "id": "privation-leaves-the-fawn",
+    "section": "evil-as-a-lack",
+    "question": "On the article's account, why does the privation theory do little against the problem of evil as stated?",
+    "options": [
+      "Calling the fawn's condition a lack of health leaves it as bad, and the creator's position unchanged",
+      "It is a Manichean view, so a theist who adopts it has already given up on a single good creator",
+      "It denies that suffering occurs at all, which conflicts with the one premise no one disputes",
+      "It shows that God created evil after all, since a lack is something God must positively bring about"
+    ],
+    "answer": 0,
+    "explanation": "The objection was never about evil's metaphysical category, so a creator who allows much privation stands where one who allows much positive badness stands. The view was Augustine's answer to the Manichees, who held good and evil to be rival powers, so the second option reverses its history."
+  },
+  {
+    "id": "toothache-strain",
+    "section": "evil-as-a-lack",
+    "question": "What does the toothache example show about the privation theory?",
+    "options": [
+      "That pain is too trivial an evil to test a theory that was meant for moral horrors and their victims",
+      "That a lack of proper functioning can explain the cause but misses what is bad about the pain",
+      "That the theory works for physical evil but has nothing whatever to say about moral evil",
+      "That privation theorists must deny that animals and small children feel any pain at all"
+    ],
+    "answer": 1,
+    "explanation": "A toothache is naturally described as a presence, and calling it an absence captures its cause without capturing its badness. The example is chosen because pain is where the view strains most, not because pain is trivial."
+  },
+  {
+    "id": "possible-but-not-actualisable",
+    "section": "the-free-will-defence",
+    "question": "What distinction does Plantinga draw that Mackie's argument does not observe?",
+    "options": [
+      "Between moral evil and natural evil, which Mackie had treated as a single undivided kind of thing",
+      "Between God's power and God's goodness, since Mackie had assumed that each limits the other",
+      "Between agents who are free and agents who only seem free, since God could create either kind",
+      "Between the worlds that are possible and the worlds God is able to actualise, given free choices"
+    ],
+    "answer": 3,
+    "explanation": "A world where everyone always freely chooses well may be possible, yet what agents freely do is not up to God, so God may be unable to bring it about. Agents who only seem free would not supply the good the defence appeals to, so the third option misses the point."
+  },
+  {
+    "id": "transworld-only-possible",
+    "section": "the-free-will-defence",
+    "question": "Plantinga argues that every agent God could have created is in fact transworld depraved.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "He claims only that it is possible, and does not think it likely, because a claim of inconsistency is defeated by a single coherent possibility. Reporting the defence as asserting universal transworld depravity is the misreading the article warns against."
+  },
+  {
+    "id": "fwd-cost-other-direction",
+    "section": "the-free-will-defence",
+    "question": "What cost of the free will defence does the article say its users rarely count?",
+    "options": [
+      "Freedom must be worth what is actually done with it, every atrocity in the record included",
+      "It makes God responsible for natural evil, which no free creature could ever have chosen to bring about",
+      "It commits the theist to holding that God does not know in advance what free agents will do",
+      "It requires that animals have free will, since otherwise their suffering would remain unexplained"
+    ],
+    "answer": 0,
+    "explanation": "If freedom justifies permitting moral evil, its value has to match the actual price, and it is not obvious a good being would pay it. The defence relies on God knowing what agents would freely do, so the third option gets its commitments backwards."
+  },
+  {
+    "id": "greater-good-requires",
+    "section": "goods-that-need-evils",
+    "question": "Why does omnipotence put pressure on the word \"requires\" in a greater-good account?",
+    "options": [
+      "An omnipotent being would need no goods at all, so nothing could ever require anything of it",
+      "Omnipotence implies that God could have created only the good and none of the evil without any loss",
+      "A being who can do anything logically possible cannot cite convenience, so the link must be a real necessity",
+      "Omnipotence makes the amount of evil irrelevant, since any quantity can be offset by enough good"
+    ],
+    "answer": 2,
+    "explanation": "Only a genuine necessity excuses an unlimited being, and for most proposed pairings of good and evil it is not obvious there is one. Asserting outright that God could have had the good without the evil overstates; the article says only that the necessity is often unclear."
+  },
+  {
+    "id": "soul-making-natural-evil",
+    "section": "the-soul-making-theodicy",
+    "question": "What explanatory advantage does the soul-making theodicy have over the free will defence?",
+    "options": [
+      "It explains the distribution of suffering, which is allotted in proportion to each person's need for growth",
+      "It accommodates natural evil directly, since a world with real stakes is needed for growth",
+      "It covers animal suffering, which builds character in the creatures who endure it over time",
+      "It needs no claim about life after death, so it fits every tradition it was meant to defend"
+    ],
+    "answer": 1,
+    "explanation": "Obstacles and natural hazards are just what a world built for development needs, whereas the free will defence reaches natural evil only by an uncomfortable manoeuvre. Distribution is the theodicy's worst difficulty, not a strength, so the first option reverses the article."
+  },
+  {
+    "id": "hick-universalism",
+    "section": "the-soul-making-theodicy",
+    "question": "Why did Hick accept universal salvation as part of his theodicy?",
+    "options": [
+      "Because the Irenaean tradition he drew on had always taught it, as Origen had held in his own day",
+      "Because Keats's phrase, on Hick's reading of it, implied that every soul would be completed",
+      "Because without it the theodicy could not deal with the deaths of animals before humans existed",
+      "If the process failed for many, the suffering would be unjustified, so it must succeed for all"
+    ],
+    "answer": 3,
+    "explanation": "Since the process visibly fails in this life, Hick extended it beyond death and made its completion universal, a requirement rather than an extra. The article notes that Hick constructed the Irenaean type rather than reporting a doctrine anyone held in his form."
+  },
+  {
+    "id": "skeptical-theism-third-cost",
+    "section": "skeptical-theism",
+    "question": "Which objection to skeptical theism does the article call the sharpest for the theist?",
+    "options": [
+      "It undercuts revelation, which needs confidence God has no hidden reason to let the record mislead",
+      "It offers a theodicy, so it is open to the same distribution objections that sink soul-making",
+      "It depends on Rowe's own premise, so it concedes the very inference that it set out to attack",
+      "It applies only to animal suffering, leaving every human case of suffering entirely without a response"
+    ],
+    "answer": 0,
+    "explanation": "If we cannot judge what reasons God might have, we cannot be confident the record of what God has said is not misleading, which costs the theist something they wanted. Skeptical theism is not a theodicy and offers no reason at all, so the second option misclassifies it."
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "not-sameness-of-matter",
+    "section": "why-the-first-version-is-not-yet-hard",
+    "question": "A car survives new tyres and a person survives the replacement of their cells. What does the article conclude from cases like these?",
+    "options": [
+      "A thing persists only while most of its original matter remains",
+      "Whatever makes a thing the same over time, it is not sameness of matter",
+      "Persisting over time requires staying qualitatively identical",
+      "Each replacement produces a new object that merely resembles the old one"
+    ],
+    "answer": 1,
+    "explanation": "Because ordinary things survive the replacement of their material, identity over time cannot consist in keeping the same matter, and spatiotemporal continuity is offered instead. The \"most of its matter\" option tries to rescue the matter view, but the repaired ship eventually keeps none of its timbers and still seems to survive."
+  },
+  {
+    "id": "least-negotiable-premise",
+    "section": "hobbess-addition",
+    "question": "In Hobbes's version there are two candidate ships. Which part of the argument does the article treat as least negotiable?",
+    "options": [
+      "That the repaired ship is the original, since it traces an unbroken path through time",
+      "That the reassembled ship is the original, since it has the original timbers",
+      "That the two ships are not each other, since one thing cannot be in two places",
+      "None of it: the argument is invalid, so no premise has to be given up at all"
+    ],
+    "answer": 2,
+    "explanation": "Identity is transitive, and Leibniz's law rules out one thing being in two places at once, so the third premise is the hardest to give up. The argument is valid, which is exactly why one of the other two premises has to go."
+  },
+  {
+    "id": "continuity-wins-cost",
+    "section": "the-available-answers",
+    "question": "A philosopher holds that the repaired ship is the original and the reassembled one a replica. Which cost does the article say this answer has to meet?",
+    "options": [
+      "Accepting that a person ceases to exist as the material of their body is replaced",
+      "Accepting that the ship's survival depends on what someone does in a shed elsewhere",
+      "Admitting that ordinary concepts of objects run out before every case is decided",
+      "Explaining why the original timbers, arranged as before, do not carry identity"
+    ],
+    "answer": 3,
+    "explanation": "If continuity wins, the original matter correctly arranged counts for nothing, and that needs explaining. The cost about persons belongs to the opposite answer, on which matter wins and the same reasoning would end a person whose material is replaced."
+  },
+  {
+    "id": "forced-answers-signal",
+    "section": "the-available-answers",
+    "question": "Every answer is defensible and none is satisfying. On the article's account, what does that combination indicate?",
+    "options": [
+      "The ship concept has no stored verdict for reassembly, so an answer must be legislated",
+      "The question is meaningless and should be set aside, since no discovery could settle it",
+      "One of the four answers is correct, but we have no way of finding out which one",
+      "Leibniz's law does not apply to artefacts such as ships, only to natural objects"
+    ],
+    "answer": 0,
+    "explanation": "Ship concepts were shaped in harbours where nobody keeps the old planks, so they were never tested against reassembly. The article explicitly denies that this makes the question meaningless; it means the answer is chosen by weighing costs elsewhere rather than discovered."
+  },
+  {
+    "id": "sortal-reply",
+    "section": "the-available-answers",
+    "question": "The deflationary objection says the puzzle vanishes once a sortal is specified: the same wood is the reassembled ship, the same vessel is the repaired one. Why does the reply say this does not fully dissolve it?",
+    "options": [
+      "Sortals cannot be specified for artefacts such as ships, only for natural kinds",
+      "The question can be asked with \"ship\" fixed, and both candidates are still ships",
+      "Asking about the same wood and the same vessel gives the same answer after all",
+      "Specifying a sortal makes Leibniz's law inapplicable, so transitivity no longer holds"
+    ],
+    "answer": 1,
+    "explanation": "Fixing the kind as \"ship\" does not choose between two things that are both ships and both have a claim. The reply grants the objection's real point, that much of the paradox comes from sliding between kinds, so the remaining difficulty has to be stated with the kind held fixed."
+  },
+  {
+    "id": "four-dimensional-verdict",
+    "section": "what-the-case-is-used-for",
+    "question": "On an account where objects are extended through time, what does the ship case come to?",
+    "options": [
+      "A forced choice among the four answers, since the original must be one whole ship",
+      "A question about how we group particles, with no answer beyond our conventions",
+      "A proof that the original ship never existed, since it had no single path",
+      "Two objects sharing their early parts, and a question of which one a name tracked"
+    ],
+    "answer": 3,
+    "explanation": "If the two ships share their early temporal parts, nothing is both original and replica, and what remains is a question about reference. The forced choice among four answers is the predicament of the rival account, on which objects are wholly present at each moment."
+  }
+]

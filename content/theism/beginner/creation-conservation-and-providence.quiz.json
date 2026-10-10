@@ -1,0 +1,114 @@
+[
+  {
+    "id": "why-reject-emanation",
+    "section": "bringing-something-into-being-from-nothing",
+    "question": "On one view the world flows out of God as light flows out of a flame. Why, on the article's account, does the doctrine of creation ex nihilo reject it?",
+    "options": [
+      "It leaves matter as old as God, and so outside the scope of what God is responsible for",
+      "It treats creating as a change undergone by some subject that existed before the act of creation",
+      "It keeps total dependence only by making the world divine, or giving God parts to give away",
+      "It entails that the world began at a first moment, which reason cannot demonstrate"
+    ],
+    "answer": 2,
+    "explanation": "Emanation keeps everything dependent on God but pays for it by putting God's own substance into the world. Matter as old as God is the objection to the other rejected view, the Greek picture of a craftsman ordering material that was already there."
+  },
+  {
+    "id": "created-but-eternal",
+    "section": "bringing-something-into-being-from-nothing",
+    "question": "On Aquinas's view, a world that had always existed, with no first moment, could still be created.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "What creation asserts is dependence, not a starting date, so an eternal world would depend on God just as much. Aquinas held that the world's having a beginning is believed rather than demonstrated, which is why he could treat the two questions separately."
+  },
+  {
+    "id": "hostage-to-physics",
+    "section": "bringing-something-into-being-from-nothing",
+    "question": "Why does the article advise a theist against identifying the early state described by cosmology with the moment of creation?",
+    "options": [
+      "Because cosmology has already shown that there was something before that early state of the universe",
+      "Because it ties the doctrine to physics, though the classical claim was never about a datable event",
+      "Because the doctrine of creation forbids the universe from having any first state at all, early or not",
+      "Because it would turn the doctrine into an argument that needs premises, which a doctrine cannot have"
+    ],
+    "answer": 1,
+    "explanation": "If the doctrine is tied to a first moment, a cosmology with an earlier state or no first state would refute it on a point it never needed to defend. The article does not claim cosmology has found anything before that state; the worry is about what would follow if it did."
+  },
+  {
+    "id": "what-rules-out-clockmaker",
+    "section": "keeping-it-in-being",
+    "question": "What, in the classical doctrine, rules out the picture of God as a clockmaker who builds the world and walks away?",
+    "options": [
+      "The claim that God made the world from nothing rather than from existing material",
+      "The claim that the world had a first moment, before which nothing at all existed",
+      "The claim that God intervenes from time to time to correct the world's course as it runs",
+      "The claim that dependence on God is a relation holding at every moment a thing exists"
+    ],
+    "answer": 3,
+    "explanation": "Conservation says a thing would cease to exist at once if God's sustaining action stopped, so nothing runs on without God. Creation from nothing is fully compatible with the clockmaker on its own: the clockmaker could have made the clock from nothing and still walked away."
+  },
+  {
+    "id": "fire-does-not-heat",
+    "section": "keeping-it-in-being",
+    "question": "\"Fire does not heat water; God heats the water when fire is present.\" Which position is this, and what motivates it?",
+    "options": [
+      "Occasionalism, since a creature that cannot keep itself in being seems poorly placed to cause anything",
+      "The position associated with Aquinas, on which God acts through created causes rather than instead of them",
+      "Deism, on which God keeps things in existence and then leaves them to exercise their own powers",
+      "Meticulous providence, on which every event, however small, is specifically intended by God"
+    ],
+    "answer": 0,
+    "explanation": "Denying that created things are causes in their own right is occasionalism. The Aquinas position is the tempting confusion, but it says the opposite: fire genuinely heats, with God acting through it, because the two contributions do not compete."
+  },
+  {
+    "id": "immanence-from-transcendence",
+    "section": "not-one-of-the-things-and-present-to-all-of-them",
+    "question": "On the classical position, how are transcendence and immanence related?",
+    "options": [
+      "They trade off against each other, so classical theism holds a moderate amount of each",
+      "Immanence is affirmed and transcendence is only a figure of speech, since God sustains the world from within it",
+      "Immanence follows from transcendence: as cause of each thing's existing, God is present wherever anything is",
+      "Transcendence is the deeper truth, and God is immanent only at the moment of creation, not afterwards"
+    ],
+    "answer": 2,
+    "explanation": "Aquinas's reasoning is that a cause of existence must be present wherever it acts, and it acts wherever anything exists. The trade-off picture is the usual assumption the article sets out to correct; taken to its ends, it yields pantheism on one side and deism on the other."
+  },
+  {
+    "id": "what-molinism-owes",
+    "section": "running-it",
+    "question": "According to the article, what does the Molinist response to providence and freedom owe?",
+    "options": [
+      "An account of how God moves the will from within without competing with the creature's freedom",
+      "An explanation of how a God who is in time can still govern the world responsively rather than by plan",
+      "A justification for restricting omniscience as earlier defined, so that free choices are left open",
+      "An account of how facts about what possible creatures would freely do could be known before they exist"
+    ],
+    "answer": 3,
+    "explanation": "Molinism promises detailed providence with libertarian freedom by giving God knowledge of these conditional facts prior to creating, and that knowledge is what needs explaining. Moving the will from within is the Thomist response, and a God in time with restricted foreknowledge is the third family's view and cost."
+  },
+  {
+    "id": "providence-sharpens-evil",
+    "section": "running-it",
+    "question": "Why, on the article's account, does a stronger doctrine of providence sharpen the problem of evil?",
+    "options": [
+      "Because strong providence denies that creatures have any causal powers",
+      "Because the more detailed the governing, the more each particular instance of suffering is something a good and powerful being deliberately allowed",
+      "Because strong providence requires God to be in time",
+      "Because providence implies that suffering is an illusion"
+    ],
+    "answer": 1,
+    "explanation": "On a meticulous account every horror is specifically permitted with a purpose, so each one calls for a reason. Denying creaturely causation is occasionalism, a separate thesis about conservation rather than a consequence of detailed providence."
+  },
+  {
+    "id": "conservation-not-empty",
+    "section": "running-it",
+    "question": "The objection says a world sustained by God and a world where things simply persist would look identical. How does the reply respond?",
+    "options": [
+      "It denies the two worlds would look identical, since conservation makes predictions about how things persist",
+      "It accepts the point and concedes that conservation is empty, but holds it is still worth believing",
+      "It accepts they look identical but denies the claim is empty, since it entails nothing is a brute existent",
+      "It argues that conservation is a discovery that theism explains, and so counts as support for theism"
+    ],
+    "answer": 2,
+    "explanation": "Conservation is a claim about what it takes for anything to be there, so it is silent on behaviour like many metaphysical claims, yet it can still be denied by someone who holds that things persist by their own nature. The reply explicitly concedes the last option's opposite: conservation was derived from theism and cannot count as independent support for it."
+  }
+]

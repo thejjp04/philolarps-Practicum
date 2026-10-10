@@ -1,0 +1,96 @@
+[
+  {
+    "id": "same-sentence-two-propositions",
+    "section": "what-the-letters-stand-for",
+    "question": "Ana says \"I am hungry\" and, a moment later, Ben says \"I am hungry\". On the article's account, how many propositions have been expressed?",
+    "options": [
+      "One, since it is the same sentence both times",
+      "Two, since the sentence says different things on each occasion",
+      "None, since a sentence containing \"I\" is neither true nor false",
+      "One, since both utterances are about hunger"
+    ],
+    "answer": 1,
+    "explanation": "A proposition is what a sentence says, and one sentence can express different propositions on different occasions of use. Ana's utterance can be true while Ben's is false, which could not happen if the same sentence meant the same proposition both times."
+  },
+  {
+    "id": "which-is-truth-functional",
+    "section": "truth-functions",
+    "question": "Which of these ways of joining $P$ and $Q$ is a truth function?",
+    "options": [
+      "$P$ after $Q$",
+      "$P$, because $Q$",
+      "$P$, although $Q$",
+      "Sam knows that $P$ and suspects that $Q$"
+    ],
+    "answer": 2,
+    "explanation": "\"Although\" asserts both parts and adds a contrast that is not a matter of truth values, so its value is fixed by the parts just as $P \\land Q$ is. With each of the others, knowing that both parts are true still leaves the whole undecided, because the order, the causal link or Sam's state of mind could fail."
+  },
+  {
+    "id": "negation-not-contrary",
+    "section": "negation",
+    "question": "Let $P$ stand for \"the soup is hot\". Which English sentence says what $\\neg P$ says?",
+    "options": [
+      "The soup is cold",
+      "The soup is lukewarm",
+      "The soup is neither hot nor cold",
+      "It is not the case that the soup is hot"
+    ],
+    "answer": 3,
+    "explanation": "$\\neg P$ is true in every case where $P$ fails, with no middle ground. \"The soup is cold\" is the tempting choice, but lukewarm soup is neither hot nor cold, so $P$ and \"the soup is cold\" can both be false at once, which never happens with $P$ and $\\neg P$."
+  },
+  {
+    "id": "conjunction-drops-order",
+    "section": "conjunction",
+    "question": "$B \\land S$ and $S \\land B$ always have the same truth value, even though \"She boarded the train and fell asleep\" and \"She fell asleep and boarded the train\" can differ in truth value.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Conjunction is fixed by its table, which pays no attention to order, so the two formulas agree in every case. The English sentences describe different sequences of events, and that loss is something to notice when translating rather than a fault in the table."
+  },
+  {
+    "id": "build-exclusive-or",
+    "section": "disjunction",
+    "question": "\"Tonight's final will be played in Leeds or in York, but not in both.\" With $L$ and $Y$ for the two places, which formula captures this?",
+    "options": [
+      "$L \\lor Y$",
+      "$(L \\lor Y) \\rightarrow \\neg (L \\land Y)$",
+      "$(L \\land Y) \\lor \\neg (L \\lor Y)$",
+      "$(L \\lor Y) \\land \\neg (L \\land Y)$"
+    ],
+    "answer": 3,
+    "explanation": "The sentence asserts that at least one place hosts the final and that not both do, which is the inclusive disjunction conjoined with the denial of the conjunction. $L \\lor Y$ alone is the tempting answer, but the symbol is always inclusive and is true when both hold; $(L \\lor Y) \\rightarrow \\neg (L \\land Y)$ rules out both without saying that either one happens."
+  },
+  {
+    "id": "false-antecedent-true",
+    "section": "the-conditional",
+    "question": "Let $P$ stand for \"Lisbon is in Spain\" and $Q$ for \"Lisbon is in Asia\". Read as a material conditional, $P \\rightarrow Q$ is true.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "The material conditional is false only when the antecedent is true and the consequent false. Lisbon is not in Spain, so the antecedent is false and the whole conditional comes out true, however beside the point it sounds."
+  },
+  {
+    "id": "conditional-vs-biconditional-row",
+    "section": "the-biconditional",
+    "question": "In which case do $P \\rightarrow Q$ and $P \\leftrightarrow Q$ have different truth values?",
+    "options": [
+      "$P$ true and $Q$ true",
+      "$P$ true and $Q$ false",
+      "$P$ false and $Q$ true",
+      "$P$ false and $Q$ false"
+    ],
+    "answer": 2,
+    "explanation": "With $P$ false and $Q$ true, the conditional counts the case as true, while the biconditional counts any mismatch as false. When $P$ is true and $Q$ false both connectives are false, so that row cannot tell them apart."
+  },
+  {
+    "id": "reading-if-as-iff",
+    "section": "the-biconditional",
+    "question": "Someone takes \"If the alarm sounds, the building is cleared\" to say also that the building is cleared only if the alarm sounds. What mistake are they making?",
+    "options": [
+      "Reading an inclusive \"or\" as an exclusive one",
+      "Reading a conditional as though it were a biconditional",
+      "Treating a phrase like \"because\" as though it were a truth function",
+      "Treating a prefix like \"un-\" as a negation"
+    ],
+    "answer": 1,
+    "explanation": "Adding \"only if the alarm sounds\" turns a one-way claim into a two-way one, which is the biconditional. The conditional leaves open that the building is cleared for some other reason, such as a fire drill, and losing sight of that is the source of two named fallacies."
+  }
+]

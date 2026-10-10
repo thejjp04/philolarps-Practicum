@@ -1,0 +1,104 @@
+[
+  {
+    "id": "experience-not-belief",
+    "section": "the-state-under-examination",
+    "question": "You measure the two lines in a geometrical illusion, confirm they are the same length, and they go on looking different. What does the article take this to show?",
+    "options": [
+      "Your belief that the lines are equal must be mistaken, since experience is more basic",
+      "Perception corrects itself once you have measured carefully, given a little time",
+      "The experience is a hallucination rather than a perception, since nothing is unequal",
+      "Experience is not a matter of what you believe, since it survives believing the opposite"
+    ],
+    "answer": 3,
+    "explanation": "The look persists after the belief has changed, so whatever experience is, it is not the same as taking something to be the case. Doubting the measurement gets things backwards: the belief is correct and the experience simply does not answer to it."
+  },
+  {
+    "id": "pure-sensation-stage",
+    "section": "the-state-under-examination",
+    "question": "On the article's account, there is good evidence that adult perception begins with a stage of pure, unstructured sensation that is afterwards organised into objects.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The evidence suggests perception is organised from very early on and arrives already structured into surfaces and objects, and nobody has pointed to a moment of pure sensation in an adult. The sensation and perception distinction is kept because it marks a difference in what a theory explains, not because the stage has been found."
+  },
+  {
+    "id": "phenomenal-principle-step",
+    "section": "the-trouble-starts-with-ordinary-cases",
+    "question": "Which premise takes you from \"the round coin looks elliptical\" to \"what you are aware of is not the coin\"?",
+    "options": [
+      "If a thing looks some way to you, you are aware of something that is that way",
+      "Illusory and veridical experiences are of the same kind, so one account covers both",
+      "Perceptual experience is not the same as belief, so the look survives what you know",
+      "Sense data are neither in the head nor where the coin is, so they must be inner"
+    ],
+    "answer": 0,
+    "explanation": "The phenomenal principle supplies an elliptical item of awareness, and since the coin is not elliptical, that item is not the coin. The same-kind premise is also part of the argument, but its job is the later step, extending the conclusion from illusions to every experience."
+  },
+  {
+    "id": "rejecting-common-kind",
+    "section": "the-trouble-starts-with-ordinary-cases",
+    "question": "Someone accepts that in illusions you are aware of something other than the ordinary object, but insists that in normal perception you see the object itself. Which part of the argument from illusion are they rejecting?",
+    "options": [
+      "The phenomenal principle, that looking elliptical requires an elliptical item",
+      "The claim that illusory and veridical experiences do not differ in kind",
+      "The claim that the coin is really round, whatever it looks like from the side",
+      "The claim that perceptual experience is not belief"
+    ],
+    "answer": 1,
+    "explanation": "Granting the conclusion for illusions while denying it for ordinary perception means treating the two as different in kind, which is the premise that gives the argument its reach. The cost, on the article's account, is explaining where the line falls as the coin is tilted by degrees."
+  },
+  {
+    "id": "sense-datum-cost",
+    "section": "the-trouble-starts-with-ordinary-cases",
+    "question": "Which of these is one of the objections to sense data that the article previews?",
+    "options": [
+      "They cannot explain why the coin looks elliptical, since they are themselves round",
+      "They make perception too direct, leaving no room for perceptual error or illusion at all",
+      "They fit nowhere in the physical world, neither in the head nor where the object is",
+      "They cannot have colours or shapes of their own, since only physical things can"
+    ],
+    "answer": 2,
+    "explanation": "A physicalist who accepts sense data owes an account of where they are and what they are. The other options get the theory backwards: sense data are introduced precisely to explain the elliptical look, they actually have the qualities presented, and they put a screen between perceiver and world rather than making perception more direct."
+  },
+  {
+    "id": "hallucination-sharper",
+    "section": "hallucination-is-worse",
+    "question": "Why is the argument from hallucination sharper than the argument from illusion?",
+    "options": [
+      "It does not need the phenomenal principle, since no ordinary object is present",
+      "Hallucinations are much more common than illusions, so the argument covers more cases",
+      "It shows that hallucinations can always be told apart from genuine perceptions",
+      "It leans even more heavily on the phenomenal principle than the illusion argument does"
+    ],
+    "answer": 0,
+    "explanation": "With nothing there, whatever the subject is aware of cannot be an ordinary object, so the argument cannot be met by denying that anything is really elliptical. If anything, it relies on hallucinations being indistinguishable from perceptions, the opposite of the third option."
+  },
+  {
+    "id": "classify-representational",
+    "section": "hallucination-is-worse",
+    "question": "A theorist says your experience represents the coin as elliptical, in the way a false belief represents the world wrongly without needing a false fact to be about. Which of the four responses is this?",
+    "options": [
+      "There is an inner item with the presented qualities",
+      "The ellipticality attaches to the manner of experiencing, not to any item",
+      "Experience is representational and can misrepresent",
+      "Genuine perception and hallucination are different kinds of state"
+    ],
+    "answer": 2,
+    "explanation": "Modelling experience on contentful states lets it misrepresent the coin without any elliptical thing existing. The second option also avoids an inner object, but by making ellipticality a way of experiencing rather than something the experience represents."
+  },
+  {
+    "id": "austin-leaves-hallucination",
+    "section": "hallucination-is-worse",
+    "question": "Austin showed that the coin's elliptical look is not an error about anything. According to the reply, why does this not remove the problem?",
+    "options": [
+      "Austin was wrong that the cases called illusions are heterogeneous, so they stand together",
+      "Ordinary language in fact supports the existence of sense data, properly understood",
+      "The coin really is elliptical when seen from the side, so it is a genuine illusion",
+      "Hallucination is untouched: fully perceptual experiences occur with nothing there"
+    ],
+    "answer": 3,
+    "explanation": "Even if every case of perspectival variation is innocent, hallucination still demands an account of an experience with no object. The reply concedes that Austin was right about heterogeneity, so the first option denies something the reply grants."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "what-success-would-deliver",
+    "section": "arguing-without-evidence",
+    "question": "If an ontological argument succeeded, what would it deliver that the cosmological and design arguments could not?",
+    "options": [
+      "Stronger probabilistic support for theism than any observation of the world could ever give",
+      "A demonstration that God's existence is a necessary truth, established from concepts alone",
+      "A first cause that is also personal and good",
+      "Evidence that does not depend on what the concept of God contains"
+    ],
+    "answer": 1,
+    "explanation": "An argument from concepts alone would make God's existence a necessary truth with the standing of mathematics, which is why it is the one place in the subject where a demonstration is still claimed. Thinking of it as merely stronger support misses that it is a different kind of argument, not a better probabilistic one."
+  },
+  {
+    "id": "no-single-ordering",
+    "section": "anselm",
+    "question": "Suppose greatness has several dimensions that trade off against one another, with no single ordering. What follows for Anselm's argument?",
+    "options": [
+      "It proves the existence of several gods, one greatest in each dimension of greatness",
+      "Existence stops being a great-making property, since nothing can be compared",
+      "Nothing, since existing is greater than not existing on every dimension alike",
+      "There may be no maximum, so Anselm's description of God may pick out nothing"
+    ],
+    "answer": 3,
+    "explanation": "The argument needs a single ordering on which there is a top; without one the description, like \"the greatest number that is both large and easily written\", may have no referent. Existence could still be great-making on every dimension, but that does not supply the maximum the argument needs."
+  },
+  {
+    "id": "island-reply-and-cost",
+    "section": "the-lost-island",
+    "question": "What is Anselm's reply to Gaunilo's most excellent island, and what does it commit him to?",
+    "options": [
+      "Islands lack an intrinsic maximum, so the parody has no subject; he must hold the perfections have maxima",
+      "Islands are physical and so cannot be perfect in every respect; he must hold that God is immaterial",
+      "Existence is great-making only in God's case; he must accept a special rule that applies to one being",
+      "The island reasoning is perfectly valid after all; he must accept that the most excellent island really exists"
+    ],
+    "answer": 0,
+    "explanation": "Any island can be improved by one more palm tree, so there is no greatest conceivable island, but the reply only works if power, knowledge and goodness are not open-ended in the same way. That ties the argument to a substantive metaphysics rather than logic alone, which is why the reply \"does not come free\"."
+  },
+  {
+    "id": "caterus-conditional",
+    "section": "descartes",
+    "question": "Descartes says existence belongs to the idea of a supremely perfect being as the angle sum belongs to the idea of a triangle. What, according to Caterus, actually follows?",
+    "options": [
+      "That a supremely perfect being exists, since its idea includes existence",
+      "That no supremely perfect being exists, since triangles too are only ideas",
+      "Only a conditional: if there is a supremely perfect being, it exists",
+      "That the idea of a supremely perfect being is incoherent"
+    ],
+    "answer": 2,
+    "explanation": "The essence of a triangle tells you what any triangle must be like, not that there are any, and by parity Descartes' analysis yields only the uninformative conditional. Caterus does not claim the conclusion is false; his point is that the analysis cannot reach it."
+  },
+  {
+    "id": "hundred-thalers",
+    "section": "kant",
+    "question": "What is Kant's example of the hundred thalers meant to show?",
+    "options": [
+      "That real coins are worth more to their owner than imagined ones, so existence is a great-making property after all",
+      "A hundred real coins have nothing in their concept that a hundred possible ones lack, so existence adds nothing",
+      "That money, unlike God, can be conceived only as contingent, so the cases are not parallel",
+      "That the concept of a hundred coins remains incomplete until the coins themselves exist"
+    ],
+    "answer": 1,
+    "explanation": "If the real coins contained something extra, what you had conceived would not have been a hundred coins; the difference is whether anything answers to the concept. The first option draws the opposite moral: it treats existence as one of the features a thing has more or less of, which is the move Kant attacks."
+  },
+  {
+    "id": "frege-second-order",
+    "section": "kant",
+    "question": "Why does Frege's account of existence do more damage to the argument than saying that existence is only a weak great-making property?",
+    "options": [
+      "It shows that existence is a property of objects, but the least valuable one",
+      "It shows that existence is great-making only for necessary beings",
+      "It shows that the concept of God has no instances",
+      "It treats existence as a property of concepts, namely being instantiated, so it cannot be one of the properties that make up a concept at all"
+    ],
+    "answer": 3,
+    "explanation": "On Frege's analysis \"God exists\" says the concept God has an instance, so the argument uses \"exists\" in a position where it cannot function. The article stresses that the problem is not feebleness as a great-making property, which is what the first option still assumes."
+  },
+  {
+    "id": "modal-escapes-kant",
+    "section": "the-modal-revival",
+    "question": "Why is Plantinga's modal argument not open to the objection from Kant and Frege?",
+    "options": [
+      "It relies on the S5 principle, and its premise is about possibility, not a definition containing existence",
+      "It shows that existence is a predicate after all, and so answers Kant and Frege directly on their own ground",
+      "It supports its premise by observing the actual world, so it no longer argues from concepts alone",
+      "It concludes only that God probably exists, which is all the Kant and Frege objection allows"
+    ],
+    "answer": 0,
+    "explanation": "Maximal greatness is defined in modal terms and the argument uses the S5 principle, so nothing turns on whether existence is a property. Defenders do not claim to have rehabilitated existence as a predicate; they route around the question."
+  },
+  {
+    "id": "symmetry-problem",
+    "section": "the-symmetry-problem",
+    "question": "Why has the symmetry problem stopped the modal ontological argument?",
+    "options": [
+      "The argument turns out to be invalid in the modal system S5 once it is properly formalised",
+      "Maximal greatness turns out to be an incoherent property, so nothing could possibly have it",
+      "\"Possibly one exists\" and \"possibly none exists\" seem equally innocent, yet they cannot both be true",
+      "The actual world might not be among the possible worlds, so the final step of the argument would fail"
+    ],
+    "answer": 2,
+    "explanation": "The argument is valid; the trouble is that its premise is exactly as contested as its conclusion, so it moves nobody who is undecided. Incoherence of maximal greatness is a separate line of attack, and the symmetry problem works even if the property is perfectly coherent."
+  },
+  {
+    "id": "conceivability-not-possibility",
+    "section": "conceivability-and-possibility",
+    "question": "Why can our being able to entertain a maximally great being without finding a contradiction not settle whether one is possible?",
+    "options": [
+      "Because nothing about God can be conceived at all",
+      "Because for a claim that is necessary if true at all, imagining it either way tells us about our imagination, as with an unproved mathematical conjecture",
+      "Because conceivability is a guide only to physical possibility",
+      "Because the premise concerns the actual world, not possible worlds"
+    ],
+    "answer": 1,
+    "explanation": "An unproved conjecture seems conceivably true and conceivably false, yet one of those is impossible, and the same holds for both possibility premises here. The argument does not need God to be inconceivable; the problem is that conceiving is a weak guide where the subject is remote from experience."
+  },
+  {
+    "id": "atheist-commitment",
+    "section": "conceivability-and-possibility",
+    "question": "According to the reply, what must an atheist who rejects the modal argument hold?",
+    "options": [
+      "That the principle that what is possibly necessary is necessary is false",
+      "That God's existence is possible but not actual",
+      "That the argument is invalid",
+      "That a necessarily existing perfect being is impossible"
+    ],
+    "answer": 3,
+    "explanation": "Since the inference rules are not in dispute, rejecting the conclusion means rejecting the single premise, which is a substantive modal claim. \"Possible but not actual\" is the tempting middle ground, but for a being that exists in every world if in any, it is not available."
+  }
+]

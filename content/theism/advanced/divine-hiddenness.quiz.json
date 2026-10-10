@@ -1,0 +1,130 @@
+[
+  {
+    "id": "why-nonresistance",
+    "section": "the-datum",
+    "question": "Why does Schellenberg state the argument in terms of nonresistant nonbelief rather than reasonable nonbelief?",
+    "options": [
+      "A seeker's reasoning is irrelevant to whether they are open, and openness is what love responds to",
+      "Nonresistant nonbelief is far more common than reasonable nonbelief, so the premise is easier to establish",
+      "Framing it in terms of reasonableness would turn the argument from a deductive into an evidential one",
+      "Resisting relationship with God is itself a form of reasonable nonbelief, so the categories coincide"
+    ],
+    "answer": 0,
+    "explanation": "Asking whether nonbelief is reasonable invites the reply that the nonbeliever has assessed the evidence badly, and drags the argument into disputes about the standards for rational belief. Nonresistance sidesteps this, because a seeker can reason poorly and still be open, and the divine love thesis is about responding to openness."
+  },
+  {
+    "id": "openness-requires-belief",
+    "section": "the-premise-about-love",
+    "question": "The divine love thesis requires only that God be open to relationship, not that anyone be drawn into it. Why does that openness require that a nonresistant person be able to believe?",
+    "options": [
+      "Because a perfectly loving God would bring every capable person into the relationship",
+      "Because only those who believe that God exists can be known and loved by God",
+      "Because nobody can address, trust or be conscious of someone they take not to exist",
+      "Because belief in God is a moral duty that a loving God must make it possible to fulfil"
+    ],
+    "answer": 2,
+    "explanation": "The step is offered as conceptual: whatever else a relationship with God involves, it involves acts directed at God that are unavailable to someone for whom the question of God's existence has come out negative. The first option is the trap, since the thesis concerns an open door from God's side and never requires God to force anyone through it."
+  },
+  {
+    "id": "deductive-and-brittle",
+    "section": "the-premise-about-love",
+    "question": "Because the hiddenness argument is deductive, a theist who successfully denies any one of its premises defeats it entirely.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "A deductive argument claims inconsistency rather than improbability, so the theist's task is clear: deny exactly one premise. That clarity is also the argument's brittleness, which is why a weaker probabilistic version was developed that cannot be defeated by a single flaw in a single premise."
+  },
+  {
+    "id": "what-god-must-do",
+    "section": "what-being-able-to-believe-amounts-to",
+    "question": "On the article's account, what does the argument require God to do for a nonresistant seeker?",
+    "options": [
+      "Provide public evidence strong enough to remove all doubt in everyone who examines it",
+      "Directly install in the seeker the belief that God exists",
+      "Ensure that the seeker actually enters into a relationship with God",
+      "Make the situation one in which belief forms naturally in someone who is open"
+    ],
+    "answer": 3,
+    "explanation": "Since belief is not under direct voluntary control, the seeker's inability to believe is not a choice, and what is needed is a situation in which belief can form, through means such as an experience or a sense of presence that need be neither coercive nor public. The demand is minimal, which is what makes it hard to answer: it asks for neither certainty nor overwhelming proof."
+  },
+  {
+    "id": "other-channel-concession",
+    "section": "denying-the-third-premise",
+    "question": "A theist holds that all nonbelief is culpable, then says that God relates through some other channel to populations who never encountered this conception of God. Why does the article say this concedes the point?",
+    "options": [
+      "It admits that those populations were resisting God after all",
+      "If relationship is available there without belief, the second premise is what is being denied",
+      "It shows that the sensus divinitatis is not universal after all, so the first premise fails instead",
+      "It turns the deductive argument into a merely evidential one"
+    ],
+    "answer": 1,
+    "explanation": "Describing whole populations with no exposure to the relevant God as resisting is not credible, and the other-channel reply tacitly grants this. Its real content is that relationship need not run through belief, which denies the second premise rather than defending the claim that nonresistant nonbelief does not exist."
+  },
+  {
+    "id": "modest-evidence-suffices",
+    "section": "denying-the-second-premise",
+    "question": "Murray argues that overwhelming evidence of God would coerce finite agents and make genuine virtue impossible. What is Schellenberg's main reply?",
+    "options": [
+      "Coerced action can still be virtuous, so no good would be lost",
+      "The argument needs only that belief be possible, which modest and resistible evidence allows",
+      "Hiddenness also coerces, by pressing people towards unbelief",
+      "God could give overwhelming evidence to some people and not to others"
+    ],
+    "answer": 1,
+    "explanation": "The coercion reply explains why God would not provide overwhelming proof, but the argument never asked for that, so the reply proves too little. Schellenberg adds that the goods on offer presuppose that the person can already respond to God, which is exactly what the nonresistant nonbeliever cannot do."
+  },
+  {
+    "id": "coercion-reply-cost",
+    "section": "denying-the-second-premise",
+    "question": "What awkward commitment does the coercion reply bring with it for the theist?",
+    "options": [
+      "That God must remain hidden from believers as well as from nonbelievers",
+      "That nobody who believes in God can act from a virtuous motive at all, however modest their belief",
+      "That reports of a vivid sense of God's presence are exaggerated, or the most devout are least free",
+      "That trusting God is worth less than being certain of God's existence"
+    ],
+    "answer": 2,
+    "explanation": "If vivid awareness of God would swamp every other motive, those within the traditions who report exactly that awareness are in the compromised condition the reply describes, so the theist must discount their reports or say the most devout are the least free. The reply does not imply that all believers lack virtue, since ordinary belief need not be overwhelming."
+  },
+  {
+    "id": "cost-of-rea",
+    "section": "denying-the-first-premise",
+    "question": "Rea argues that the argument's picture of what love requires is too parochial to bind a being as unlike us as God. On the article's account, what does this cost the theist?",
+    "options": [
+      "It requires denying that God has anything like a personality or a characteristic mode of self-presentation",
+      "It commits the theist to holding that all nonbelief is culpable resistance",
+      "It concedes that relationship with God requires no belief on the person's part",
+      "It drifts towards skeptical theism's costs and clashes with the traditions' own imagery of divine love"
+    ],
+    "answer": 3,
+    "explanation": "The more the theist insists that we cannot say what divine love would look like, the closer the view comes to the sceptical reply to the argument from evil and its spreading costs, and the devotional literature is not reticent about what God's love involves. Rea's appeal to God's personality is part of his case, not something the view forces him to deny."
+  },
+  {
+    "id": "two-directions-of-relationship",
+    "section": "denying-the-first-premise",
+    "question": "The objection says relationship with God may not require belief, since God can know and sustain a person who does not believe. How does the reply answer it?",
+    "options": [
+      "What the nonbeliever lacks is the ability to address, trust and knowingly respond to God",
+      "Being known and sustained by God does in fact require that the person believe that God exists",
+      "Agnostics who pray show that relationship without belief is psychologically impossible",
+      "Accounts on which God initiates the relationship are departures from the tradition"
+    ],
+    "answer": 0,
+    "explanation": "Being known, sustained and loved by God is open to the nonbeliever on anyone's account, and the argument never denied it. Its concern is the relation the person can stand in to God, and a relationship in which only one party can act is not what a perfectly loving being would settle for on behalf of someone, like the praying agnostic, who wants more."
+  },
+  {
+    "id": "free-will-no-purchase",
+    "section": "where-it-stands",
+    "question": "Why does the article say that appeals to the free choices of others, which do much work against the argument from evil, have no purchase on hiddenness?",
+    "options": [
+      "Nonresistant nonbelievers lack free will, so freedom cannot explain their condition",
+      "Hiddenness concerns God's own conduct towards a seeker, and nobody else's freedom is at stake",
+      "Belief is under direct voluntary control, so the seeker's own choice already explains it",
+      "The hiddenness argument is deductive, and free will replies answer only evidential arguments"
+    ],
+    "answer": 1,
+    "explanation": "The argument from evil concerns what God permits to happen, often at others' hands, which is where appeals to free choice get their grip; whether a given seeker can believe is a matter of God's own conduct towards that person. The option about voluntary control reverses the article's point: belief is not under direct voluntary control, which is why inability to believe is not a choice."
+  }
+]

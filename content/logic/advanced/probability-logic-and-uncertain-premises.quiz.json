@@ -1,0 +1,130 @@
+[
+  {
+    "id": "accumulation-bound-compute",
+    "section": "uncertainty-accumulates",
+    "question": "A valid argument has five premises, each with probability $0.95$, and nothing is known about how they depend on one another. What lower bound is guaranteed for the conclusion?",
+    "options": [
+      "$0.95$",
+      "$0.774$, that is, $0.95^5$",
+      "$0.75$",
+      "$0.25$"
+    ],
+    "answer": 2,
+    "explanation": "Each premise has uncertainty $0.05$, and the conclusion's uncertainty can be as large as their sum, $0.25$, so the guaranteed bound is $1 - 0.25$. The figure $0.95^5$ assumes the premises are independent, which is information the bound is not allowed to use."
+  },
+  {
+    "id": "lottery-preface-diagnosis",
+    "section": "uncertainty-accumulates",
+    "question": "What does the article identify as the source of the lottery and preface paradoxes?",
+    "options": [
+      "Accumulation: each premise is probable, but the bound on their conjunction falls as they multiply",
+      "An invalid step, hidden in the move from claims about each ticket to a claim about all of them",
+      "Probabilistic dependence among the premises, which a correct model of the case would remove",
+      "Vagueness in \"probably\", which lets small errors compound across premises like a sorites"
+    ],
+    "answer": 0,
+    "explanation": "Conjoining many probable premises is valid, but the conjunction can be improbable, and that is all the paradoxes exhibit. The article insists neither contains an invalid step, so the hidden-invalidity diagnosis is precisely what it rejects."
+  },
+  {
+    "id": "coincidence-misread",
+    "section": "uncertainty-accumulates",
+    "question": "Adams showed that, for arguments without nested conditionals, probabilistic validity coincides with classical validity. Which of these is a misreading of that result?",
+    "options": [
+      "That a classically valid argument keeps its conclusion's uncertainty within the sum of its premises'",
+      "That a classically valid argument from highly probable premises has a highly probable conclusion",
+      "That an argument failing the probabilistic test is classically invalid as well",
+      "That classical logic is vindicated, in a substantial sense, in a probabilistic setting"
+    ],
+    "answer": 1,
+    "explanation": "The result says validity bounds how much uncertainty accumulates, and with many premises that bound can be low. The first option is the result itself, which is why it is easy to slide from it into the overstatement."
+  },
+  {
+    "id": "entailment-interval-conjunction",
+    "section": "uncertainty-accumulates",
+    "question": "Given $P(A) = 0.7$ and $P(B) = 0.6$, with nothing known about their dependence, what is the probabilistic entailment interval for $P(A \\land B)$?",
+    "options": [
+      "$[0.42, 0.42]$",
+      "$[0, 0.6]$",
+      "$[0.3, 0.7]$",
+      "$[0.3, 0.6]$"
+    ],
+    "answer": 3,
+    "explanation": "The two must overlap by at least $0.7 + 0.6 - 1 = 0.3$, and the conjunction can be no more probable than its less probable conjunct, $0.6$. The point value $0.42$ assumes independence, which is exactly the kind of assumption the article says is usually unjustified."
+  },
+  {
+    "id": "popper-zero-condition",
+    "section": "conditional-probability-as-primitive",
+    "question": "On the primitive treatment of conditional probability, what is the status of $P(A \\mid B)$ when $P(B) = 0$?",
+    "options": [
+      "It can be well defined and non-trivial; the ratio formula is simply silent there",
+      "It is undefined there, exactly as it is on Kolmogorov's definition of it as a ratio",
+      "It is automatically $0$, since a condition of probability zero never obtains",
+      "It is automatically $1$, since anything follows from an impossible condition"
+    ],
+    "answer": 0,
+    "explanation": "Taking the two-place function as basic lets conditional probabilities on measure zero conditions be axiomatised directly, which is what conditioning on a point in a continuous space requires. Probability zero is not impossibility, so neither automatic value is warranted."
+  },
+  {
+    "id": "regularity-uncountable",
+    "section": "conditional-probability-as-primitive",
+    "question": "Why is regularity unattainable in a space with uncountably many mutually exclusive possibilities?",
+    "options": [
+      "No probability measure at all can be defined on a space of that size and shape",
+      "Finite additivity fails as soon as the possibilities are uncountable",
+      "Only countably many disjoint propositions can have positive probability",
+      "The ratio formula breaks down whenever a denominator is very small"
+    ],
+    "answer": 2,
+    "explanation": "For each $n$, fewer than $n$ disjoint propositions can exceed $1/n$, or the total would pass one, so at most countably many get positive probability and the rest get zero. Such spaces carry measures perfectly well; what fails is giving every possibility a positive share."
+  },
+  {
+    "id": "fair-versus-unknown-coin",
+    "section": "imprecise-probability",
+    "question": "One coin is known to be fair; another has a bias about which nothing is known. How does imprecise probability distinguish the two states?",
+    "options": [
+      "Both get the point value $1/2$, and the difference shows up only in betting behaviour",
+      "The fair coin gets $1/2$; the unknown coin gets a set of functions, a wide interval",
+      "The unknown coin gets $1/2$ held with a lower degree of confidence than the fair one",
+      "The fair coin gets an interval around $1/2$, and the unknown coin a single sharp value"
+    ],
+    "answer": 1,
+    "explanation": "A single function cannot separate symmetric ignorance from knowledge of fairness, since both yield $1/2$; a set of functions can, and its width measures what is not known. The two states also respond differently to evidence, which a single shared point value would hide."
+  },
+  {
+    "id": "dilation",
+    "section": "imprecise-probability",
+    "question": "On imprecise probability, updating a set of functions on new evidence never widens the interval a proposition receives.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Pointwise updating can widen the interval, which is dilation, one of the theory's acknowledged costs. It is counterintuitive precisely because one expects evidence to reduce what is unknown."
+  },
+  {
+    "id": "imprecision-from-sharp-premises",
+    "section": "imprecise-probability",
+    "question": "Why does imprecision arise within probability logic even for someone who starts with sharp premise probabilities?",
+    "options": [
+      "Sharp values cannot satisfy finite additivity once the premises are numerous",
+      "Dilation widens every sharp value as soon as any evidence comes in",
+      "Regularity fails, so sharp values must be replaced by intervals around zero",
+      "Its entailment interval is itself imprecise, though got from precise inputs"
+    ],
+    "answer": 3,
+    "explanation": "Fixing the premises' probabilities exactly still leaves a range for the conclusion, and that range is an imprecise probability. Dilation concerns updating sets of functions, not the derivation of an interval from sharp premises."
+  },
+  {
+    "id": "accumulation-is-logic",
+    "section": "imprecise-probability",
+    "question": "The objection says probability logic is epistemology, not logic. How does the reply defend the accumulation bound as logic?",
+    "options": [
+      "It is a theorem about classical consequence and every measure on its models, proved without agents",
+      "Credences are logical objects, so any theorem constraining credence is a theorem of logic",
+      "It holds only when the numbers are chances, which are objective features of the world",
+      "Logic concerns degrees of belief as much as truth, so the objection's boundary is merely verbal"
+    ],
+    "answer": 0,
+    "explanation": "The bound follows from additivity alone and holds whether the measures are credences, frequencies or chances, so nothing about agents enters. The reply explicitly leaves the interpretation of the numbers open, so restricting the result to chances gets it wrong."
+  }
+]

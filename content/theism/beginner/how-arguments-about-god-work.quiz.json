@@ -1,0 +1,127 @@
+[
+  {
+    "id": "why-demonstration-fails",
+    "section": "proof-in-the-strict-sense",
+    "question": "On the article's account, why do the classical arguments fail as demonstrations, even if they are valid?",
+    "options": [
+      "Their inferences have been shown not to hold",
+      "A valid argument transmits only the certainty its premises have, and the metaphysical premises are less obvious to a doubter than the conclusion is to a believer",
+      "Hume and Kant showed that God's existence cannot be known at all",
+      "Their premises are certain, but certainty cannot pass from premises to conclusion"
+    ],
+    "answer": 1,
+    "explanation": "A demonstration needs premises more secure than its conclusion for the audience that doubts it, and premises like \"a causal series cannot go on without limit\" are not. The attacks were almost all on premises, not inferences, and the article warns that concluding the arguments are worthless is the standard overreaction."
+  },
+  {
+    "id": "demanding-proof",
+    "section": "proof-in-the-strict-sense",
+    "question": "Why does the article say that demanding proof of God's existence is not rigour?",
+    "options": [
+      "Because God's existence is a matter of faith, which no proof could reach or ever be expected to reach at all",
+      "Because the arguments for God are already proofs, so the demand has in fact been met long ago",
+      "Because proof is possible only in mathematics and logic, so demanding it about what exists is a category mistake",
+      "Because hardly any claim about what exists, like that other minds exist, meets it, so this is a double standard"
+    ],
+    "answer": 3,
+    "explanation": "The reasonable standard for claims about what exists is support, not proof, and we apply that standard everywhere else. The option about mathematics sounds close, but the article's point is about consistency of standards, not a general ban on proof outside formal subjects."
+  },
+  {
+    "id": "evidence-is-comparative",
+    "section": "support-without-proof",
+    "question": "A striking feature of the world is exactly what a theist would expect. What else must hold for it to count as evidence for theism?",
+    "options": [
+      "It must be more to be expected on theism than on the alternatives",
+      "It must be something that no naturalist has yet been able to explain",
+      "It must follow deductively from theism",
+      "Theism must have been probable before the evidence came in"
+    ],
+    "answer": 0,
+    "explanation": "A fact both hypotheses predict equally well is evidence for neither, however striking it is, so the comparison with the alternatives is essential. The prior-probability option confuses two factors: priors affect where the total balance ends up, not whether a piece of evidence favours one side."
+  },
+  {
+    "id": "strong-evidence-low-prior",
+    "section": "support-without-proof",
+    "question": "On the probabilistic framework, evidence that strongly favours a hypothesis can still leave that hypothesis improbable.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "The outcome depends both on how well each hypothesis leads you to expect the evidence and on how likely each was beforehand. A hypothesis that started improbable enough can stay improbable after favourable evidence, which is where the question of who has to argue returns with content."
+  },
+  {
+    "id": "evidence-for-a-false-view",
+    "section": "support-without-proof",
+    "question": "An atheist grants that the universe's order is some evidence for theism, while holding that theism is probably false. On the article's account, what has she done?",
+    "options": [
+      "Contradicted herself, since any evidence for a claim makes that claim more probable than not",
+      "Conceded the argument from order and moved, without saying so, to agnosticism",
+      "Said something ordinary: one consideration pushes one way, the overall balance the other",
+      "Treated the argument from order as a failed demonstration rather than as evidence at all"
+    ],
+    "answer": 2,
+    "explanation": "Granting that a consideration favours a hypothesis is compatible with judging the hypothesis unlikely overall, just as a theist can grant that suffering is evidence against theism. That is impossible to say about a proof, which is why the contradiction option tempts anyone still thinking in demonstrative terms."
+  },
+  {
+    "id": "chain-versus-body",
+    "section": "putting-the-pieces-together",
+    "question": "The objection to cumulative cases says that ten leaky buckets hold no water. What distinction does the reply draw?",
+    "options": [
+      "Between quantified weighing of the evidence and the informed judgement Mitchell preferred",
+      "Between arguments for theism, which can accumulate, and arguments against it, which cannot",
+      "Between demonstrative arguments, which fail, and probabilistic ones, which can still succeed",
+      "Between a chain, where weakness compounds, and independent evidence, where support adds up"
+    ],
+    "answer": 3,
+    "explanation": "Independent facts, each somewhat more likely on one hypothesis, can jointly establish it, as in identifying a criminal. The quantified-versus-judgement contrast is real, but it divides Swinburne from Mitchell over how to weigh, not whether accumulation works."
+  },
+  {
+    "id": "independence-condition",
+    "section": "putting-the-pieces-together",
+    "question": "A cumulative case lists three arguments, each of which depends on the principle that everything contingent has a cause of its existing. Which condition for accumulation does this threaten?",
+    "options": [
+      "Independence: three arguments resting on one disputed principle are really one argument",
+      "Each piece must favour the hypothesis over its rivals, rather than merely being consistent with it",
+      "The case must be assessed as a whole, not refuted by attacking its strongest member",
+      "The weighing must be done with explicit numbers, so that the shared premise is visible"
+    ],
+    "answer": 0,
+    "explanation": "If the shared principle fails, all three fail together, so the apparent convergence is an artefact. The favouring condition concerns whether each piece is more expected on theism than its rivals, which these arguments might satisfy while still not being independent."
+  },
+  {
+    "id": "nothing-could-count-against",
+    "section": "putting-the-pieces-together",
+    "question": "According to the aside, what is the cost of holding a position for which nothing at all could count against it?",
+    "options": [
+      "The position is thereby shown to be false",
+      "The position predicts nothing, so no observation supports it either",
+      "The position must be held on faith rather than evidence",
+      "The position takes on the whole burden of proof"
+    ],
+    "answer": 1,
+    "explanation": "A hypothesis compatible with every possible observation is supported by none of them, and the cost applies evenly to theism and naturalism. The aside explicitly says such a position is not thereby false, which is the overstatement in the first option."
+  },
+  {
+    "id": "presumption-reframed",
+    "section": "where-to-begin",
+    "question": "On the article's account, what does Flew's presumption of atheism become when restated in probabilistic terms?",
+    "options": [
+      "A rule that the theist must speak first in any debate, as the prosecution does in a trial",
+      "A definition of atheism as the absence of belief, which shifts the whole burden of proof onto the theist",
+      "A substantive claim that theism starts out unlikely enough for inconclusive evidence to leave it so",
+      "A claim that atheism has already been established by the failure of the theistic arguments"
+    ],
+    "answer": 2,
+    "explanation": "The procedural rule turns into a claim about theism's prior probability, which can be argued, for instance against Swinburne's view that theism is simple and so likely in advance. The speaking-first rule is the original procedural form, which the article says amounts to having no argument at all."
+  },
+  {
+    "id": "what-survives-the-numbers",
+    "section": "where-to-begin",
+    "question": "The objection says the probabilities in this subject are invented. What does the reply say survives?",
+    "options": [
+      "The specific numbers, provided they are carried to enough decimal places to be checked",
+      "Swinburne's conclusion that, on the total evidence, theism is more probable than not",
+      "Informal weighing of the considerations, which avoids making any judgements about prior probabilities",
+      "Comparative judgements that some feature is more to be expected on one hypothesis than another"
+    ],
+    "answer": 3,
+    "explanation": "The framework needs comparisons, not numbers, and those can be stated and defended. Informal weighing is the tempting alternative, but the reply says it makes all the same judgements about priors and weights while leaving them unstated."
+  }
+]

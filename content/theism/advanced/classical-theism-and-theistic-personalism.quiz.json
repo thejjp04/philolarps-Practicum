@@ -1,0 +1,132 @@
+[
+  {
+    "id": "which-claim-divides-the-portraits",
+    "section": "two-portraits",
+    "question": "Which claim could a classical theist accept only as a way of describing effects in creatures, while a theistic personalist could accept it at face value?",
+    "options": [
+      "God's existence does not depend on anything outside himself at all",
+      "God knows every truth, past, present and future",
+      "After hearing a request, God formed an intention to grant it",
+      "God is perfectly good in everything he does and wills"
+    ],
+    "answer": 2,
+    "explanation": "Forming an intention after anything is a change of state, which the classical account denies of God, whereas the personalist God responds to what creatures do. Both camps can affirm the other three, analysing them differently, which is why the split is not a disagreement about the list of perfections."
+  },
+  {
+    "id": "is-being-unaffected-a-perfection",
+    "section": "what-the-personalists-were-actually-doing",
+    "question": "Both camps practise perfect being theology. On the article's account, what single prior question divides them?",
+    "options": [
+      "Whether being unaffected by anything external is a perfection or a defect",
+      "Whether God is whatever is maximally perfect, or merely the greatest actual being",
+      "Whether the classical arguments for God's existence succeed",
+      "Whether the biblical texts about God's grief and repentance should be read literally"
+    ],
+    "answer": 0,
+    "explanation": "The classical theist ranks independence highest and so requires impassibility; the personalist thinks a being that cannot respond is worse, not better. Both reason from perfection, so the second option names their common ground rather than their disagreement."
+  },
+  {
+    "id": "swinburne-and-the-verificationist",
+    "section": "what-the-personalists-were-actually-doing",
+    "question": "Why, on the article's account, did Swinburne state theism in vocabulary that carries ordinary meaning?",
+    "options": [
+      "Because he took the classical arguments for God's existence to have failed on their own terms",
+      "Because he held that God belongs to a kind with other possible members, like any other person",
+      "Because the revival of the subject required abandoning perfect being theology altogether",
+      "Because verificationists said \"God exists\" expresses no proposition, and apophatic silence concedes that"
+    ],
+    "answer": 3,
+    "explanation": "The mid-century objection was to meaningfulness rather than to the arguments, so the response was a statement of theism that could be assessed for consistency. The first option misidentifies the pressure: the personalist move answers a doubt that Aquinas's audience never had, not a failure of the classical proofs."
+  },
+  {
+    "id": "exists-said-by-analogy",
+    "section": "the-charge-of-making-god-a-being",
+    "question": "A personalist objects that if God is not a being, the sentence \"God exists\" is false or meaningless. What is the classical reply?",
+    "options": [
+      "That God is the highest being of all, so the sentence is true in the ordinary way",
+      "That \"exists\" is said of God and of creatures by analogy rather than in one shared sense",
+      "That Scotus showed being to be univocal, so \"exists\" means the same of God and creatures",
+      "That the sentence is meaningless but religiously indispensable"
+    ],
+    "answer": 1,
+    "explanation": "God's existing is related to a creature's by analogy, so denying that God is a being among beings is not denying that God is real. Univocity is the reverse of this reply: on the genealogy classical theists favour, Scotus's univocal \"being\" is what put God on one scale with creatures."
+  },
+  {
+    "id": "transcendental-not-categorial",
+    "section": "the-anthropomorphism-objection",
+    "question": "The personalist argues that classical theism is anthropomorphic too, since it applies \"causes\" to God as freely as others apply \"loves\". What is the classical reply?",
+    "options": [
+      "Causal and existential terms are transcendental, applying wherever anything exists",
+      "Classical theism uses no vocabulary drawn from the analysis of ordinary things",
+      "Both \"loves\" and \"causes\" apply to God in exactly the sense they apply to creatures",
+      "Hume showed that any design argument yields only a finite designer, so both camps fail"
+    ],
+    "answer": 0,
+    "explanation": "The reply treats \"causes\" as transcendental rather than categorial: not one more creaturely predicate carving up a domain, but a term that applies wherever there is anything at all. Whether that line can be drawn without begging the question is where the argument stalls; the second option is false by the article's own account, since act, potency and causation are drawn from ordinary things."
+  },
+  {
+    "id": "classical-account-of-petition",
+    "section": "what-the-split-does-to-the-standard-problems",
+    "question": "On the classical account, how can petitionary prayer make a difference?",
+    "options": [
+      "God takes the request into account and then decides afterwards what to do about it",
+      "Prayer changes only the person who prays, never the outcome that was asked for",
+      "Prayer can cause the outcome within the order God's act establishes, without causing his willing it",
+      "God is affected by the request in his concrete states while his abstract essence remains entirely unchanged"
+    ],
+    "answer": 2,
+    "explanation": "The classical theist places the asking inside the order God's eternal act establishes rather than treating it as an input to that act, which preserves the practice but not the usual picture of it. Deciding after the request is the personalist account, and the concrete-states option is Hartshorne's dipolar view."
+  },
+  {
+    "id": "each-camps-easy-question",
+    "section": "what-the-split-does-to-the-standard-problems",
+    "question": "On the article's account, which question is easy for the personalist and hard for the classical theist?",
+    "options": [
+      "What fixes God's own nature",
+      "Why God is not composed of parts",
+      "How God can be independent of everything external",
+      "How creation could have been otherwise"
+    ],
+    "answer": 3,
+    "explanation": "A being with no unrealised potency does not choose between options in the ordinary sense, which is why the modal collapse literature exists, while the personalist God simply could have chosen differently. What fixes God's own nature is the mirror case, easy for the classical theist and hard for the personalist, so the difficulty is relocated rather than removed."
+  },
+  {
+    "id": "hartshorne-trades-aseity",
+    "section": "the-third-position",
+    "question": "What does Hartshorne's neo-classical theism trade away to secure divine responsiveness?",
+    "options": [
+      "The necessity of God's abstract essence",
+      "Aseity, since a God whose concrete states depend on the world depends on the world",
+      "Perfect being theology, since Hartshorne reasons from responsiveness rather than from perfection",
+      "God's knowledge of the world"
+    ],
+    "answer": 1,
+    "explanation": "In his abstract essence God stays necessary and unchanging, but his concrete states are affected and enriched by creatures, which is the dependence the argument from independence ruled out. The perfect-being option is the tempting error: Hartshorne keeps classical reasoning about perfection and argues that perfection includes relativity."
+  },
+  {
+    "id": "resisting-the-equivocation-worry",
+    "section": "rival-specifications-or-different-concepts",
+    "question": "The equivocation worry concludes that either the arguments for and against God aim at different targets or one camp's conception is unstable. On the article's account, how can the argument be resisted?",
+    "options": [
+      "By holding that the classical denial of deliberation is compatible with a good enough analogue of it",
+      "By denying that the cosmological argument concludes to a non-composite source of everything else",
+      "By noting that the problem of evil, as usually formulated, assumes no particular conception of God",
+      "By rejecting perfect being theology, which both camps share"
+    ],
+    "answer": 0,
+    "explanation": "The article names the third premise as the resistible one: if a simple God has something close enough to deliberation, the cosmological argument and the problem of evil can share a target. The third option is what the worry denies, since the problem of evil as usually formulated presupposes a God who chooses among options."
+  },
+  {
+    "id": "reference-by-practice-cost",
+    "section": "rival-specifications-or-different-concepts",
+    "question": "On the third diagnosis, both camps refer to whatever the worshipping tradition has been tracking. What is the main cost of that diagnosis?",
+    "options": [
+      "It makes the dispute merely verbal, since each camp is then defining its own term",
+      "It predicts that philosophers who switch camps will see themselves as having simply changed the subject",
+      "It requires the classical and personalist descriptions to serve as definitions of \"God\"",
+      "Practice fixes reference cleanly for natural kinds with samples, and God offers no obvious sample"
+    ],
+    "answer": 3,
+    "explanation": "A defender can say religious experience plays the role of the sample, but that hands the question to the argument from experience and inherits its difficulties. The first option inverts the view's chief attraction: it explains why the dispute feels substantive, since on this account both camps are theorising about one thing."
+  }
+]

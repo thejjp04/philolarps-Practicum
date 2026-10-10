@@ -1,0 +1,130 @@
+[
+  {
+    "id": "fawn-closes-exits",
+    "section": "the-case",
+    "question": "On the article's account, what makes Rowe's fawn a better example for an evidential argument than a human atrocity?",
+    "options": [
+      "It is the most intense kind of suffering that anyone could describe, so it weighs most heavily",
+      "Having no agent, no prospect of growth and no witness, it closes off the standard replies",
+      "It is a natural evil, and no theist has ever offered a reply of any kind to natural evil",
+      "Animal suffering can be measured more objectively than human suffering can"
+    ],
+    "answer": 1,
+    "explanation": "A human atrocity invites replies about free will and about the moral education of witnesses, and the fawn admits none of them. The trap is the thought that the best example is the worst evil: in an evidential argument it is the one that closes the most exits."
+  },
+  {
+    "id": "good-that-merely-follows",
+    "section": "what-justification-would-require",
+    "question": "A theist observes that a great deal of good followed from some instance of suffering. Why, on the article's account, does this not show that the suffering was justified?",
+    "options": [
+      "Goods and evils are incommensurable, so no good of any kind could ever justify any suffering at all",
+      "The good must outweigh the suffering, and goods that follow from evils rarely turn out to do so",
+      "The good might have been had otherwise; it must be one even omnipotence could not secure without the evil",
+      "Only goods the sufferer consciously experiences can be weighed against that suffering, and this one was not"
+    ],
+    "answer": 2,
+    "explanation": "Omnipotence removes the limits of resources, side effects and difficulty, so the only barriers left are logical: the good must be one whose securing requires permitting the evil, or requires something that does. Outweighing is not enough, since a benefit can exceed the cost and still have been obtainable without paying it."
+  },
+  {
+    "id": "every-instance-needed",
+    "section": "what-justification-would-require",
+    "question": "To deny the first premise of Rowe's argument, a theist need only hold that most instances of intense suffering are connected to a justifying good.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The premise says only that at least one instance, out of the enormous number across the history of sentient life, could have been prevented at no cost. Denying it therefore requires that every single instance be connected to a good in the required way, including the least tractable ones."
+  },
+  {
+    "id": "running-it-backwards",
+    "section": "running-the-argument-backwards",
+    "question": "A theist grants Rowe's second premise and, on the strength of her other grounds for belief in God, concludes that the first premise is false. On the article's account, what has she done?",
+    "options": [
+      "Begged the question, since she has simply assumed the very conclusion that is under dispute",
+      "Refuted the argument by showing, from her other grounds, that its first premise is false",
+      "Shown that the argument is invalid, since a valid argument cannot be run in both directions",
+      "Made a legitimate move that declines to be moved, at the cost of owing a good in every case"
+    ],
+    "answer": 3,
+    "explanation": "Running a valid argument backwards is the right response when one is more confident of the denial of its conclusion than of a premise, and Rowe accepted the move. But it answers nothing: it takes on the commitment that a justifying good exists in every case, which theodicy tries to discharge and skeptical theism proposes to hold without discharging."
+  },
+  {
+    "id": "friendly-atheism-claim",
+    "section": "friendly-atheism",
+    "question": "What does Rowe's friendly atheism claim?",
+    "options": [
+      "That the argument makes atheism rational without convicting every theist of irrationality",
+      "That the argument shows theism to be irrational, though theists still deserve courtesy and respect",
+      "That when theists and atheists disagree, one of them must have reasoned badly",
+      "That the argument has force only for those who already doubt that God exists"
+    ],
+    "answer": 0,
+    "explanation": "An argument that shifts a probability tells you which way to move from where you are, not where everyone must end up, so a theist with other grounds can respond correctly and still believe. The courtesy reading misses this: the friendliness follows from the argument's probabilistic form rather than being an attitude added to it."
+  },
+  {
+    "id": "cornea-application",
+    "section": "the-bridge-and-the-restriction-on-it",
+    "question": "Which of these inferences satisfies CORNEA?",
+    "options": [
+      "I listened for a minute and heard no dog whistle, so none was blown",
+      "As a novice, I studied a grandmaster's move and saw no point to it, so it has none",
+      "I looked across the empty car park and saw no lorry, so none is parked there",
+      "I examined the worktop by eye and saw no bacteria, so none are present"
+    ],
+    "answer": 2,
+    "explanation": "CORNEA licenses inferring absence only when the thing, if present, would probably have made a detectable difference, and a parked lorry would have been seen. The grandmaster case is the instructive trap: as with the parent and the child, a large disparity in understanding makes failing to see a point weak evidence that there is none, which is Wykstra's claim about the goods God might foresee."
+  },
+  {
+    "id": "noseeum-disagreement",
+    "section": "the-shape-of-the-inference",
+    "question": "Once the noseeum pattern was named, where did the disagreement with Rowe turn out to lie?",
+    "options": [
+      "Whether inferences from not finding something to its absence are ever good",
+      "Whether gratuitous evil is logically compatible with an omnipotent God",
+      "Whether an omniscient, wholly good being would prevent preventable suffering",
+      "Whether the detectability assumption holds for the goods such a being might foresee"
+    ],
+    "answer": 3,
+    "explanation": "Noseeum inferences are everywhere in ordinary and scientific reasoning, and nobody disputes that many are good, so the first option is the trap. The dispute is over whether, if a justifying good existed, we would probably have noticed it, which is a question about our epistemic position relative to God rather than about evil."
+  },
+  {
+    "id": "cornea-and-likelihoods",
+    "section": "the-turn-to-probabilities",
+    "question": "Why does CORNEA, as Wykstra first stated it, not reach Rowe's Bayesian reformulation?",
+    "options": [
+      "It draws only on cases where a justifying good, had there been one, would have been detectable to us",
+      "It asks how probable the observations are on each hypothesis, and infers nothing about what exists",
+      "It assumes that theism has a low prior probability, which CORNEA does not address at all",
+      "CORNEA constrains only deductive arguments, and the reformulation is explicitly probabilistic"
+    ],
+    "answer": 1,
+    "explanation": "CORNEA constrains inferences from failing to observe something to its absence, and a likelihood comparison contains no such inference. The skeptical theist can still object, but only by claiming that we cannot assess the likelihoods either, which is a much wider claim than Wykstra's original condition."
+  },
+  {
+    "id": "disjunctive-theodicy",
+    "section": "the-turn-to-probabilities",
+    "question": "To avoid the prior cost of a specific theodicy, a theist asserts only that some theodicy or other is correct. Why does the article say this does not help?",
+    "options": [
+      "A vague disjunction makes no specific pattern of evil much more probable, so the likelihood barely rises",
+      "A disjunction of theodicies has a lower prior than any one of its disjuncts, so the prior cost only increases",
+      "Theodicies are mutually inconsistent with one another, so their disjunction is necessarily false",
+      "Asserting a disjunction is a form of skeptical theism, and so it falls foul of CORNEA as before"
+    ],
+    "answer": 0,
+    "explanation": "Disjoining does protect the prior, which is why the move tempts, and a disjunction is at least as probable as each disjunct, so the second option gets the arithmetic backwards. The cost moves to the other side: a vague disjunction makes no specific pattern of evil much more expected, so the likelihood gap stays open."
+  },
+  {
+    "id": "total-evidence-both-edges",
+    "section": "everything-has-to-go-in",
+    "question": "On the article's account, which use of the total evidence requirement is legitimate?",
+    "options": [
+      "Noting suffering is not all the evidence, while counting hiddenness, diversity and the rest too",
+      "Citing the arguments for theism to set one argument from evil aside, while weighing the others one at a time",
+      "Adding a theodicy that makes the fawn's suffering probable, without asking what it predicts elsewhere",
+      "Treating the conclusion of a successful evidential argument as settling the question of God's existence"
+    ],
+    "answer": 0,
+    "explanation": "The requirement cuts both ways: it blocks the step from one successful evidential argument to atheism, but it equally forbids invoking total evidence against one argument while conducting the rest of the case selectively. It also applies to any added theodicy, which may make other observations, such as the suffering of creatures incapable of moral growth, less probable."
+  }
+]

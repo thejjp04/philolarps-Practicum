@@ -1,0 +1,88 @@
+[
+  {
+    "id": "formal-or-informal",
+    "section": "what-makes-a-fallacy-formal",
+    "question": "Which of these is a formal fallacy rather than an informal one?",
+    "options": [
+      "Rejecting a claim because the person making it is dishonest",
+      "Using \"bank\" to mean a riverside in one premise and a lender in the next",
+      "Concluding $\\neg Q$ from $P \\rightarrow Q$ and $\\neg P$",
+      "Concluding there are no ghosts because no one has shown there are"
+    ],
+    "answer": 2,
+    "explanation": "A formal fallacy can be diagnosed with the content stripped out, and this schema has a truth-table row where both premises are true and the conclusion false. The shifting \"bank\" is tempting because it looks structural, but it is a matter of what a word means, not of how the connectives are arranged."
+  },
+  {
+    "id": "hidden-not-in-consequent",
+    "section": "affirming-the-consequent",
+    "question": "\"If Jo is vegan, Jo does not eat cheese. Jo does not eat cheese. So Jo is vegan.\" Which form does this argument have?",
+    "options": [
+      "Denying the antecedent, since the second premise is a negation",
+      "Affirming the consequent, which is invalid",
+      "Denying the consequent, which is valid",
+      "Affirming the antecedent, which is valid"
+    ],
+    "answer": 1,
+    "explanation": "The consequent is \"Jo does not eat cheese\", and the second premise asserts exactly that before concluding the antecedent. The \"not\" belongs to the consequent itself, so nothing is being denied; a non-vegan who simply dislikes cheese is the counterexample."
+  },
+  {
+    "id": "denying-antecedent-counterexample",
+    "section": "denying-the-antecedent",
+    "question": "\"If you train every day, you will finish the marathon. You do not train every day. So you will not finish.\" Which situation is a counterexample?",
+    "options": [
+      "You train every day and you finish",
+      "You train every day and you do not finish",
+      "You do not train every day and you do not finish",
+      "You do not train every day and you finish anyway"
+    ],
+    "answer": 3,
+    "explanation": "A counterexample needs both premises true and the conclusion false: no daily training, and a finish anyway. Training every day and failing to finish makes the first premise false, so it attacks the conditional rather than the inference."
+  },
+  {
+    "id": "one-row-ruled-out",
+    "section": "denying-the-antecedent",
+    "question": "What single fact about $P \\rightarrow Q$ explains why both affirming the consequent and denying the antecedent fail?",
+    "options": [
+      "It rules out one case only, $P$ true with $Q$ false",
+      "It is true only when $P$ and $Q$ are both true",
+      "It is false in every case where $P$ is false",
+      "It says the same thing as $Q \\rightarrow P$"
+    ],
+    "answer": 0,
+    "explanation": "The conditional says nothing at all about situations where $P$ fails, and both fallacies try to extract a claim about such a situation. Treating it as equivalent to $Q \\rightarrow P$ is exactly the two-way reading that makes the fallacies tempting."
+  },
+  {
+    "id": "fallacy-not-refutation",
+    "section": "two-things-a-fallacy-does-not-show",
+    "question": "A colleague argues: \"If the server crashed, the site is down. The site is down. So the server crashed.\" You point out that this affirms the consequent. What have you shown?",
+    "options": [
+      "That the premises given do not settle whether the server crashed",
+      "That the server did not crash, since the only argument for it fails",
+      "That the first premise is false",
+      "That your colleague does not believe the conclusion"
+    ],
+    "answer": 0,
+    "explanation": "The fallacy shows the conclusion is unsupported, not that it is refuted; the server may well have crashed. Concluding that it did not overreaches in the same way the original argument did."
+  },
+  {
+    "id": "genuine-biconditional",
+    "section": "two-things-a-fallacy-does-not-show",
+    "question": "If a speaker's \"if\" is genuinely meant as \"if and only if\", then reasoning from the consequent back to the antecedent commits the fallacy of affirming the consequent.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "With a biconditional as the premise, reasoning from one side to the other is valid, so the fallacy is not being committed; its input is a one-way conditional. The practical lesson is to settle which claim is on the table before ruling on the argument."
+  },
+  {
+    "id": "which-is-valid",
+    "section": "recognising-them-at-speed",
+    "question": "Which of these arguments is valid?",
+    "options": [
+      "$P \\rightarrow Q$ and $\\neg P$, so $\\neg Q$",
+      "$P \\rightarrow Q$ and $Q$, so $P$",
+      "$P \\rightarrow Q$ and $\\neg Q$, so $\\neg P$",
+      "$Q \\rightarrow P$ and $P$, so $Q$"
+    ],
+    "answer": 2,
+    "explanation": "Denying the consequent is valid: if $P$ held, $Q$ would too, and $Q$ does not. The last option is affirming the consequent with the letters swapped, which is why it pays to check which side of the arrow the second premise is about rather than which letter it mentions."
+  }
+]

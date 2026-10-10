@@ -1,0 +1,132 @@
+[
+  {
+    "id": "why-the-identity-thesis",
+    "section": "what-simplicity-says",
+    "question": "Why, on the article's account, does the tradition identify God with his goodness rather than letting goodness be a property God has?",
+    "options": [
+      "Otherwise God would depend on his goodness, and his combination of attributes would need explaining",
+      "Because \"good\" and \"powerful\" turn out to mean exactly the same thing whenever they are applied to God",
+      "Because properties are abstract objects, and nothing abstract can be a part of a concrete God",
+      "Because the identity thesis is what makes God a person"
+    ],
+    "answer": 0,
+    "explanation": "Distinct attributes would make God dependent on them and composite, with a further fact about why just these are combined, and the tradition finds both consequences intolerable. The synonymy option mistakes a metaphysical claim for a semantic one: the doctrine says the attributes are one thing, not that the words share a sense."
+  },
+  {
+    "id": "two-routes-to-simplicity",
+    "section": "why-the-doctrine-was-adopted",
+    "question": "An opponent refutes the argument from independence to simplicity. Why, on the article's account, has she not thereby refuted the doctrine?",
+    "options": [
+      "Simplicity follows directly from God's omnipresence, which the opponent has not touched",
+      "The doctrine was adopted by inspecting God's nature, so it never rested on that argument",
+      "Aquinas also reaches it from pure actuality, since what has no unrealised capacity cannot be composed",
+      "The modal collapse argument entails simplicity independently, whatever becomes of the dependence argument"
+    ],
+    "answer": 2,
+    "explanation": "Composition requires parts capable of being arranged otherwise, and a purely actual being has no such capacity, so the doctrine has a second, Aristotelian route that defenders can shift to under pressure. The inspection option gets the history backwards: nobody arrived at simplicity by noticing an absence of seams, since the doctrine is derived."
+  },
+  {
+    "id": "plantinga-needs-goodness-as-property",
+    "section": "the-property-objection",
+    "question": "Plantinga's objection that the identity thesis makes God an abstract object turns on which assumption?",
+    "options": [
+      "That God's act of creating is identical with his essence, so that creating is necessary",
+      "That God is composed of matter and form, like every other substance that has properties",
+      "That God exists in time",
+      "That God's goodness is a property, and properties are abstract objects"
+    ],
+    "answer": 3,
+    "explanation": "If God is his goodness and goodness is a property, God is a property, and properties do not know, act or love. The act-of-creating premise belongs to the modal collapse argument, a different objection aimed at divine freedom rather than at divine personhood."
+  },
+  {
+    "id": "brower-truthmaker-reading",
+    "section": "the-property-objection",
+    "question": "How does Brower's truthmaker reading try to answer Plantinga?",
+    "options": [
+      "It treats the identity claims as restrictions on what may be said, rather than as metaphysical assertions",
+      "It makes God himself, not any property, the truthmaker for each intrinsic predication about him",
+      "It accepts that God is a property, but denies that properties are abstract objects at all",
+      "It denies that any intrinsic predication about God is true, so there is nothing to make true"
+    ],
+    "answer": 1,
+    "explanation": "In creatures the truthmaker for a predication includes a distinct property; on Brower's reading God alone is the truthmaker, so no property is needed. The first option is the other defensive route, which asserts less and therefore explains less, whereas Brower tries to say what the doctrine does assert."
+  },
+  {
+    "id": "modal-fallacy-reply-needs",
+    "section": "modal-collapse",
+    "question": "The most discussed reply to the modal collapse argument says that one necessary divine act can have a contingent effect. What must be true for this reply to work?",
+    "options": [
+      "God's essence must exist only contingently, so that its necessity does not transfer",
+      "S5 must fail for statements about divine action",
+      "God's act of creating must be distinct from his essence, so that the first premise fails",
+      "A divine act must be individuable independently of what it produces"
+    ],
+    "answer": 3,
+    "explanation": "The reply holds the act fixed while the effect varies, which makes sense only if the act is not individuated by its result; if it is, the reply gives up the identity it needed. Making the act distinct from the essence would also escape the argument, but by abandoning simplicity rather than defending it."
+  },
+  {
+    "id": "providential-collapse",
+    "section": "modal-collapse",
+    "question": "According to Schmid, what survives even if the modal collapse argument fails as stated?",
+    "options": [
+      "Nothing in a simple God varies with what he creates, so nothing could be his intending this world",
+      "The original conclusion that everything that exists, the created world included, exists of absolute necessity",
+      "The conclusion that God cannot know which of the possible worlds is actual",
+      "The conclusion that God must exist in time, since providence requires succession"
+    ],
+    "answer": 0,
+    "explanation": "This is Schmid's providential collapse: the world may be contingent, yet nothing in a simple God corresponds to choosing it, so providence rather than contingency is what goes. The second option is the original modal collapse conclusion, which is exactly what Schmid allows might not follow."
+  },
+  {
+    "id": "eternal-simultaneity-not-transitive",
+    "section": "timelessness",
+    "question": "What is the main objection to Stump and Kretzmann's relation of eternal-temporal simultaneity?",
+    "options": [
+      "It leaves a timeless God frozen and lifeless, with no life of any kind to possess all at once",
+      "It makes God present to each moment only by locating him within that moment",
+      "It is deliberately not transitive, so it is not simultaneity in any recognisable sense",
+      "It works only on presentism, on which nothing but the present moment is real"
+    ],
+    "answer": 2,
+    "explanation": "Were the relation transitive, every moment would be simultaneous with every other by way of God, which is why it is built not to be. The \"frozen\" charge is the one Stump and Kretzmann set out to resist, by treating eternity as a mode of duration rather than the absence of one."
+  },
+  {
+    "id": "no-tensed-facts-costs-eternalism",
+    "section": "sempiternity",
+    "question": "The timeless theist answers Wolterstorff's argument from changing knowledge by saying there are no tensed facts for God to know. On the article's account, what does this answer cost?",
+    "options": [
+      "It denies that God knows every truth, since there are truths about what time it is now",
+      "It ties the doctrine to eternalism, so that if presentism is true the timeless God is in trouble",
+      "It concedes that God undergoes succession, since he knows the whole array one part at a time",
+      "It makes God's knowledge depend on creatures"
+    ],
+    "answer": 1,
+    "explanation": "If all events are equally real and passage is a feature of perspective, nothing God knows changes, but a doctrine about God now rests on a contested theory of time. The omniscience option is tempting, yet on the eternalist view there is no tensed truth for God to miss."
+  },
+  {
+    "id": "impassibility-is-not-indifference",
+    "section": "impassibility",
+    "question": "Which of these can an impassibilist consistently affirm?",
+    "options": [
+      "God's love for creatures is maximal, understood as a settled disposition to will their good",
+      "God is gratified when creatures offer praise, though his love does not depend on it",
+      "God is moved by a creature's prayer to feel a compassion he did not feel before it was made",
+      "God's love grows or diminishes with how creatures behave"
+    ],
+    "answer": 0,
+    "explanation": "Impassibility denies that creatures cause states in God, not that God wills their good, so love as a settled disposition is untouched. Being moved by prayer is the most tempting option, but a state brought about in God by what a creature does is exactly what the doctrine rules out."
+  },
+  {
+    "id": "gavrilyuk-impassibility-as-qualifier",
+    "section": "impassibility",
+    "question": "What is Gavrilyuk's challenge to the standard passibilist story about the church fathers?",
+    "options": [
+      "That the fathers let Greek philosophy overwrite the biblical portrait of a God who grieves and relents",
+      "That the incarnation shows the divine nature itself suffered, not only the human nature",
+      "That impassibility followed from timelessness, so the fathers had no choice but to affirm it",
+      "That for the fathers impassibility qualified ascriptions of emotion to God rather than denying them"
+    ],
+    "answer": 3,
+    "explanation": "On Gavrilyuk's reading, impassibility marked which ascriptions of feeling are not to be taken in the creaturely way, so the Hellenistic takeover is a modern construction. The first option is the passibilist story he is challenging, and the article notes that his historical point does not settle the philosophical one."
+  }
+]

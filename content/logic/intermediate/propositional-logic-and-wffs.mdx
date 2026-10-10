@@ -59,6 +59,8 @@ Now take $P \land \lor Q$. There is no way to build it. The second clause introd
 
 Two more strings are worth checking. $\neg \neg \neg P$ is a wff, obtained by applying the negation rule three times; the grammar sets no limit on iteration. And $(P)$ is not a wff, because no clause ever wraps parentheses around a formula on its own. Parentheses arrive only with a binary connective, and always in the same package with one.
 
+<Check id="official-wff" />
+
 ## What the parentheses are for
 
 The grammar as stated puts a pair of parentheses around every binary compound, which is heavier than anything written in practice. There is a reason for the weight.
@@ -83,6 +85,8 @@ Atomic formulas have none of either, so the counts are equal at zero. For the ne
 
 That argument is short, but it establishes something about infinitely many strings, and nothing shorter than the recursive definition would have supported it. Every major result later in this ladder, including soundness and completeness, is proved this way.
 
+<Check id="induction-breaks-down" />
+
 ## Talking about the language
 
 The last two sentences of the previous section did something that needs marking. They used the symbols $\varphi$ and $\psi$, which are not part of the language of propositional logic at all. No formula contains a $\varphi$.
@@ -102,6 +106,8 @@ Keeping the levels apart is not fussiness. Several of the deepest results in thi
 <Aside title="Schemas and formulas">
 An expression like $\varphi \rightarrow (\psi \rightarrow \varphi)$ is often called a formula, but strictly it is a schema: a metalanguage pattern with a formula at every uniform substitution for its variables. Axiom systems are usually presented as a handful of schemas rather than as an infinite list of axioms, which is convenient and occasionally misleading. When a system is described as having three axioms, the count is of schemas, and the axioms themselves number infinitely many.
 </Aside>
+
+<Check id="object-language-formula" />
 
 ## Next
 

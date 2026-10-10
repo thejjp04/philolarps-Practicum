@@ -1,0 +1,127 @@
+[
+  {
+    "id": "envatted-twin",
+    "section": "the-division",
+    "question": "You and a twin who is a brain in a vat are alike in every internal respect, but your beliefs are mostly true and hers are mostly false. What must an internalist say?",
+    "options": [
+      "You and she are justified in exactly the same beliefs",
+      "Only you are justified, since only your beliefs are reliably formed",
+      "Neither of you is justified, since she cannot tell her situation apart from yours",
+      "She is justified only in her beliefs about her own mental states"
+    ],
+    "answer": 0,
+    "explanation": "Internalism says that believers alike in all internal respects are alike in justification, whatever the world outside is doing. The second option is the externalist verdict, which lets reliability, a fact neither of you can detect, make the difference."
+  },
+  {
+    "id": "which-job-pushes",
+    "section": "the-division",
+    "question": "A philosopher insists that a theory of justification must explain why justification is worth having. Which way does this push, according to the article?",
+    "options": [
+      "Towards internalism, since a standard must be one the believer can comply with",
+      "Towards internalism, since only internal states can be evaluated",
+      "Towards externalism, since justification seems to matter for its link to truth",
+      "Towards neither, since the two jobs of justification never conflict"
+    ],
+    "answer": 2,
+    "explanation": "If justification matters because of its link to truth, a standard a brain in a vat could meet perfectly looks empty, and that pushes outward. The first option describes the other job, the evaluative one about blamelessness, which pushes towards internalism instead."
+  },
+  {
+    "id": "hidden-memory-trace",
+    "section": "two-ways-of-being-internalist",
+    "question": "A stored memory trace that no amount of reflection will reveal shapes what seems plausible to you and so supports one of your beliefs. Which internalist view allows it to count as a justifier?",
+    "options": [
+      "Access internalism, but not mentalism",
+      "Mentalism, but not access internalism",
+      "Both, since the trace is inside the head",
+      "Neither, since only externalists allow such factors"
+    ],
+    "answer": 1,
+    "explanation": "Mentalism requires only that justifiers be mental states, accessible or not, whereas access internalism requires that reflection could reveal them. Being inside the head is not enough for access internalism, which is why the third option fails."
+  },
+  {
+    "id": "mentalism-keeps-motivation",
+    "section": "two-ways-of-being-internalist",
+    "question": "On the article's account, mentalism keeps the motivating thought that made access internalism attractive.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Access internalism is motivated by the idea that believers can be held to a standard only if they can see whether it is met. A mental state you cannot access is no more answerable to you than a fact about your visual cortex, so mentalism's easier-to-defend boundary leaves that motivation behind."
+  },
+  {
+    "id": "barn-and-facade-inside",
+    "section": "the-case-against-internalism",
+    "question": "Henry's internal states are exactly the same whether he is looking at the one real barn or at a facade. What does the externalist take this to show?",
+    "options": [
+      "That Henry is unjustified in both situations, since his perception cannot tell the two apart",
+      "That Henry knows in both situations",
+      "That justification plays no part in knowledge",
+      "That something outside the head makes the difference between knowledge and its absence"
+    ],
+    "answer": 3,
+    "explanation": "Since nothing inside Henry changes while his epistemic standing does, the externalist concludes that the epistemically relevant properties were never all inside. Saying he is unjustified in both cases would not explain anything, since the cases still differ in whether he knows."
+  },
+  {
+    "id": "mechanic-ear",
+    "section": "the-case-against-internalism",
+    "question": "An experienced mechanic knows the engine sounds wrong but could not say what in the sound tells her so, even on reflection. On access internalism, what follows?",
+    "options": [
+      "Either she does not know, or her knowledge rests on reasons she does not have",
+      "She knows, since her trained hearing is reliable",
+      "She is justified, since the way the engine sounds to her is a mental state",
+      "She knows, but only once she can later articulate her grounds"
+    ],
+    "answer": 0,
+    "explanation": "Access internalism admits only justifiers the believer could find on reflection, and she cannot, which is the uncomfortable result the argument from creatures presses. The reliability verdict is the externalist's, and the mental-state verdict is the mentalist's."
+  },
+  {
+    "id": "norman-turns-premise",
+    "section": "the-case-against-externalism",
+    "question": "BonJour's clairvoyant Norman is designed to turn which premise of the externalist argument from reliability against it?",
+    "options": [
+      "That what makes justification worth having is its connection to truth",
+      "That a believer can meet every internal condition while being systematically unreliable",
+      "That a believer can be reliable while satisfying no internal condition",
+      "That in each pair it is the reliable believer whose beliefs relate to truth in the way that matters"
+    ],
+    "answer": 2,
+    "explanation": "Norman is exactly a reliable believer who meets no internal condition, and BonJour's intuition is that he is irresponsible rather than justified. The envatted-believer premise is not his target; the case works by using the reliable-clairvoyant premise as a counterexample instead of as support."
+  },
+  {
+    "id": "unconcessive-reply",
+    "section": "the-case-against-externalism",
+    "question": "The internalist complains that a standard nobody can apply guides nobody. What is the externalist's unconcessive reply?",
+    "options": [
+      "Our intuition about Norman comes from importing the background knowledge that clairvoyance does not exist",
+      "Norman can apply the standard after all, by checking his track record",
+      "Reliability itself provides guidance to anyone who has it",
+      "Guidance was never the job: a theory of justification says what makes beliefs good, not how to form them"
+    ],
+    "answer": 3,
+    "explanation": "The unconcessive reply rejects the demand for guidance outright, comparing the theory to an account of biological function. The first option is the other, concessive reply, which accepts the intuition's force but explains it away as the effect of a defeater."
+  },
+  {
+    "id": "child-on-the-phone",
+    "section": "the-case-against-externalism",
+    "question": "A young child reliably recognises her mother's voice on the phone but has no idea why her hearing should be trusted. On Sosa's division, what does she have?",
+    "options": [
+      "Reflective knowledge but not animal knowledge",
+      "Animal knowledge but not reflective knowledge",
+      "Both animal and reflective knowledge",
+      "Neither, since she cannot say why she should be believed"
+    ],
+    "answer": 1,
+    "explanation": "Animal knowledge is true belief from a faculty that works; reflective knowledge adds an understanding of why the faculty should be trusted, which she lacks. Denying her any knowledge applies the access internalist's demand that Sosa's distinction was designed to soften."
+  },
+  {
+    "id": "what-is-at-issue",
+    "section": "where-this-leaves-the-woman",
+    "question": "According to the reply to the objection that the skull is an arbitrary boundary, what is really at issue between internalists and externalists?",
+    "options": [
+      "Whether knowledge is a relation between a mind and a fact",
+      "Whether the skin marks a principled epistemological boundary",
+      "Whether the justification component of knowledge is itself relational",
+      "Whether extended mind arguments are sound"
+    ],
+    "answer": 2,
+    "explanation": "Everyone agrees that knowledge relates a mind to the world; the dispute is whether justification does too. The first option is common ground, which is why the marriage analogy misfires: it treats as disputed something nobody denies."
+  }
+]

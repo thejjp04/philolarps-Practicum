@@ -1,0 +1,106 @@
+[
+  {
+    "id": "powerful-being-not-god",
+    "section": "the-claim-this-subject-is-about",
+    "question": "Suppose it were shown that an enormously powerful and intelligent being exists somewhere inside the universe. On the article's account, why would that not show that God exists?",
+    "options": [
+      "Because only omnipotence is in dispute, and even enormous power falls short of the maximal power God has",
+      "Because God is that on which everything else depends, not the most impressive item among the things there are",
+      "Because the claim concerns a perfectly good being, and power and intelligence on their own say nothing about goodness",
+      "Because God is defined as existing outside space, and anything found inside the universe is in space"
+    ],
+    "answer": 1,
+    "explanation": "The claim is that everything else depends on God for its existence, so finding a very impressive thing within the world is the wrong kind of result. The goodness option points to a real gap, but the article's point is structural: even a perfectly good being inside the inventory would not be the being on which the inventory depends."
+  },
+  {
+    "id": "single-ordering-of-greatness",
+    "section": "where-the-attributes-come-from",
+    "question": "One philosopher says God must be incapable of change, since that is greater; another says being responsive to what happens is greater. Which weakness of the perfect-being method does their disagreement illustrate?",
+    "options": [
+      "It assumes a single ordering of greatness on which any two properties can be compared",
+      "It assumes that all the properties it generates can be held together at once",
+      "It reads the attributes off scripture instead of generating them by a procedure",
+      "It ascribes very large quantities of each property to God rather than perfections that cannot be exceeded"
+    ],
+    "answer": 0,
+    "explanation": "The two philosophers agree on the method and disagree about which of two properties ranks higher, which is exactly where a single ordering of greatness is needed. The co-possibility worry is the method's other weakness, and it would arise only once both properties had been attributed and turned out to exclude each other."
+  },
+  {
+    "id": "stone-paradox-reply",
+    "section": "maximal-power",
+    "question": "How does the standard reply to the puzzle of the stone too heavy for God to lift work?",
+    "options": [
+      "God can make the stone and also lift it, because omnipotence is not bound by the law of non-contradiction",
+      "God cannot make the stone, which shows that omnipotence is really only very great power rather than maximal power",
+      "A stone unliftable by a necessarily omnipotent being is no possible object, so failing to make one is no limit",
+      "God could make the stone but chooses not to, so no power is actually lacking, only the will to use it"
+    ],
+    "answer": 2,
+    "explanation": "The reply treats the unliftable stone like a round square: the description picks out nothing that could be made, so failing to make it is not a failure of power. The first option is the Cartesian route, which escapes the puzzle only at the cost of making it unclear what is being asserted."
+  },
+  {
+    "id": "power-to-act-wrongly",
+    "section": "maximal-power",
+    "question": "Suppose we say that maximal power does not include the power to act wrongly. What follows, on the article's account?",
+    "options": [
+      "God is not omnipotent after all, since there is then something, acting wrongly, that God cannot do",
+      "God still could act wrongly, since power is untouched, but God's goodness means God never chooses to",
+      "Perfect goodness turns out to be impossible for any being, since a good being must be able to choose evil and refuse it",
+      "Omnipotence has been defined partly in terms of goodness, so the attributes are less independent than they look"
+    ],
+    "answer": 3,
+    "explanation": "That horn keeps God omnipotent only by building goodness into what power is. The first option is the other horn of the dilemma: it follows if maximal power is taken to include the power to act wrongly."
+  },
+  {
+    "id": "pike-uses-fixed-past",
+    "section": "maximal-knowledge",
+    "question": "What does Pike's argument rely on to get from God's foreknowledge to the conclusion that tomorrow's action is unavoidable?",
+    "options": [
+      "The claim that God causes whatever God foreknows, so that God's knowledge fixes our acts",
+      "The fixity of the past: what God believed long ago is a past fact nobody can now affect",
+      "A confusion between what is certain to happen and what is necessary in itself",
+      "The claim that the future already exists in the same way that the past does"
+    ],
+    "answer": 1,
+    "explanation": "God's past belief is a fact about the past, and since God cannot be mistaken it settles what you will do. The article stresses that the argument is stronger than older versions precisely because it does not rest on a confusion about necessity, so that option names what Pike avoids."
+  },
+  {
+    "id": "standard-of-goodness-cost",
+    "section": "perfect-goodness",
+    "question": "Which cost does the article attach to the reading on which God is the standard of goodness rather than a moral agent like us?",
+    "options": [
+      "It makes the problem of evil bite harder, since God then owes us more",
+      "It makes God subject to moral standards outside God",
+      "It makes the praise offered to God difficult to interpret",
+      "It requires God to change in response to suffering"
+    ],
+    "answer": 2,
+    "explanation": "If God is not a good instance of anything but the standard itself, it becomes unclear what praising God's goodness says. The problem of evil bites hardest on the other reading, where God is a moral agent held to the standards that bind us."
+  },
+  {
+    "id": "perfections-versus-personhood",
+    "section": "a-god-with-a-mind",
+    "question": "Why does the article call the personal attribute the source of the deepest strain in the classical package?",
+    "options": [
+      "A being with a mind would need a body to perceive and act through, and classical theism denies that God has one",
+      "Persons know only some things and must learn the rest over time, so a personal God could not be omniscient",
+      "Several major traditions hold that the ultimate reality is not a person, which classical theism must deny",
+      "Perfections reached by the same method, such as having no parts, each subtract something from personhood"
+    ],
+    "answer": 3,
+    "explanation": "A being with no parts has no distinct beliefs and desires, and a being outside time cannot deliberate, so pushing the perfections makes God less person-like. Other traditions' non-personal ultimates are real, but they are an external alternative, not a strain inside the classical package."
+  },
+  {
+    "id": "gap-problem",
+    "section": "a-god-with-a-mind",
+    "question": "Suppose an argument from the existence of the universe succeeds completely. According to the article, what has it established?",
+    "options": [
+      "That something exists without depending on anything and everything else depends on it, but not that it is one, has a mind, or cares",
+      "That the God of classical theism exists",
+      "That a personal creator exists, though not necessarily a good one",
+      "That a designer of great power and intelligence exists"
+    ],
+    "answer": 0,
+    "explanation": "The argument delivers a thin conclusion, and the distance between it and the full concept of God is the gap problem. Assuming the being must at least be personal is the commonest form of the unremarked step the article warns against."
+  }
+]

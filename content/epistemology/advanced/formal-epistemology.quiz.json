@@ -1,0 +1,127 @@
+[
+  {
+    "id": "conjunction-exceeds-conjunct",
+    "section": "the-synchronic-norm",
+    "question": "Your credence that the train is late is 0.4, and your credence that the train is late and the driver is ill is 0.5. Which consequence of the axioms do your credences violate?",
+    "options": [
+      "$c(A) + c(\\neg A) = 1$",
+      "Non-negativity, $c(A) \\geq 0$",
+      "If $A$ entails $B$, then $c(A) \\leq c(B)$",
+      "Normalisation, since you are not certain the train is late"
+    ],
+    "answer": 2,
+    "explanation": "\"Late and ill\" entails \"late\", so it can be no more probable than \"late\" alone, and giving the conjunction 0.5 against 0.4 for its conjunct breaks that constraint. Normalisation is the tempting misreading: it demands certainty only in tautologies, and \"the train is late\" is not one."
+  },
+  {
+    "id": "unchecked-tautology",
+    "section": "the-synchronic-norm",
+    "question": "A logician has credence 0.9 in a long formula that is in fact a tautology, though she has not yet checked it. What does probabilism say about her?",
+    "options": [
+      "Nothing is amiss, since her credence matches the strength of her evidence",
+      "She is incoherent, since normalisation requires credence 1 in every tautology, however complicated",
+      "She is incoherent, since additivity requires her to see every logical incompatibility, however subtle",
+      "Nothing is amiss, since probabilism constrains only credences in contingent propositions"
+    ],
+    "answer": 1,
+    "explanation": "Normalisation applies to every tautology, recognised or not, which is why probabilism taken literally demands logical omniscience and is usually treated as an ideal to approximate. Additivity is the axiom about incompatibilities, and it is not the one her credence in a tautology breaks."
+  },
+  {
+    "id": "build-the-book",
+    "section": "the-dutch-book-argument-in-detail",
+    "question": "Your credence that a horse will win is 0.3 and your credence that it will not win is 0.5. Using the standard bridge from credences to fair bets, how can a bookie guarantee you a loss with bets that pay one pound?",
+    "options": [
+      "Buy both bets from you for 80 pence in total, then collect one pound from you whatever happens",
+      "Sell you both bets for 80 pence in total, then pay you one pound whatever happens",
+      "Sell you the bet on a win and buy from you the bet on a loss, each at your price",
+      "No book is possible, since credences summing to less than 1 cannot be exploited"
+    ],
+    "answer": 0,
+    "explanation": "Your credences sum to 0.8, so you will sell both bets for 30 and 50 pence; exactly one pays out, and you owe one pound, a sure loss of 20 pence. Selling you both bets is the move that works when credences sum to more than 1; here it would hand you a sure gain of 20 pence."
+  },
+  {
+    "id": "reluctant-gambler",
+    "section": "objections",
+    "question": "Someone who would not stake their house at even odds on a fair coin may still have credence one half in heads. Which part of the Dutch book argument does this case put under pressure?",
+    "options": [
+      "The Dutch book theorem, that incoherent credences can always be exploited",
+      "The converse theorem, that coherent credences can never be exploited",
+      "The claim that a sure loss is a practical rather than an epistemic defect",
+      "The bridge from credences to the bets one regards as fair"
+    ],
+    "answer": 3,
+    "explanation": "The case shows that willingness to bet can come apart from credence, through dislike of gambling or the nonlinear value of money, which undermines the assumption linking the two. The theorems are mathematical results about what follows given the bridge, and the case leaves them untouched."
+  },
+  {
+    "id": "christensen-depragmatised",
+    "section": "objections",
+    "question": "How does Christensen's depragmatised Dutch book argument answer the charge that losing money is a practical failing rather than an epistemic one?",
+    "options": [
+      "By showing that incoherent credences are guaranteed to be less accurate than some coherent alternative",
+      "By locating the defect in inconsistent evaluations: the same bets judged both fair and a sure loss",
+      "By arguing that incoherent agents will in fact be exploited by real bookies",
+      "By treating betting behaviour as a measurement device that defines credence"
+    ],
+    "answer": 1,
+    "explanation": "For Christensen the bookie is only a dramatic device: what matters is that your credences lead you to evaluate one set of bets as both fair and a guaranteed loss, and that inconsistency is an epistemic defect. Accuracy dominance is a different, bet-free route to probabilism, the subject of the next article."
+  },
+  {
+    "id": "conditionalize-this",
+    "section": "the-diachronic-norm",
+    "question": "Your credences are $c(H) = 0.3$, $c(E) = 0.5$ and $c(H \\land E) = 0.2$. You then learn $E$ with certainty and nothing stronger. By conditionalization, what is your new credence in $H$?",
+    "options": [
+      "0.4",
+      "0.2",
+      "0.3",
+      "0.7"
+    ],
+    "answer": 0,
+    "explanation": "Your new credence is the old $c(H \\mid E) = c(H \\land E) / c(E) = 0.2 / 0.5 = 0.4$. Reading off 0.2 confuses the conditional credence with the credence in the conjunction, which is only its numerator."
+  },
+  {
+    "id": "conditionalization-order",
+    "section": "the-diachronic-norm",
+    "question": "If you conditionalize on $E_1$ and then on $E_2$, you end up with the same credences as if you had conditionalized on $E_2$ and then on $E_1$.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Conditionalization is cumulative: either order gives the same result as learning $E_1 \\land E_2$ at once. That is one of the features that set it apart from Jeffrey updating, which is not commutative."
+  },
+  {
+    "id": "bound-by-a-plan",
+    "section": "the-diachronic-dutch-book",
+    "question": "What is the main challenge to the diachronic Dutch book argument for conditionalization?",
+    "options": [
+      "Bets offered at different times cannot be combined into a single book, since the bookie's offers change",
+      "It assumes that evidence is always learned with certainty",
+      "It applies only to agents who are already incoherent at some single time",
+      "It is unclear why you are bound by an earlier plan; abandoning it may be only a change of mind"
+    ],
+    "answer": 3,
+    "explanation": "If you reject your earlier updating plan when the time comes, the bookie has exposed a change of mind, which is not obviously irrational, and this is the concern van Fraassen's reflection principle made precise. The worry about certain evidence is real but separate: it limits where conditionalization applies, not whether the diachronic argument supports it."
+  },
+  {
+    "id": "jeffrey-calculation",
+    "section": "jeffrey-updating",
+    "question": "Let $G$ be that a cloth is green and $H$ that your friend will buy it. Beforehand, $c(H \\mid G) = 0.8$ and $c(H \\mid \\neg G) = 0.2$. Inspection by candlelight raises $c(G)$ to 0.7, and rigidity holds. What is your new credence in $H$?",
+    "options": [
+      "0.8",
+      "0.56",
+      "0.62",
+      "0.7"
+    ],
+    "answer": 2,
+    "explanation": "Jeffrey's rule weights each conditional credence by the new credence in its condition: $0.8 \\times 0.7 + 0.2 \\times 0.3 = 0.62$. The answer 0.56 forgets the $\\neg G$ term, and 0.8 treats $G$ as learned for certain, which is ordinary conditionalization, the special case where $c_{\\text{new}}(G) = 1$."
+  },
+  {
+    "id": "cube-factory-lesson",
+    "section": "jeffrey-updating",
+    "question": "In the cube factory, indifference over side length gives probability one half that the side is under half a metre, and indifference over volume gives one eighth. What does this show?",
+    "options": [
+      "That volume is the correct parameter for indifference, since it carries the most information about a cube",
+      "That the principle of indifference gives answers that depend on how the possibilities are described",
+      "That convergence theorems fail whenever two agents' priors differ",
+      "That subjective Bayesians must assign probability zero to some possibilities"
+    ],
+    "answer": 1,
+    "explanation": "The same ignorance, described by side, face area or volume, yields different probabilities for one event, so indifference cannot be the objective constraint on priors that objective Bayesians wanted. Nothing in the case singles out volume, and choosing it would itself be a substantive commitment of exactly the kind indifference was meant to avoid."
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "modus-ponens-form",
+    "section": "modus-ponens",
+    "question": "Which pair of premises licenses the conclusion $Q$ by modus ponens?",
+    "options": [
+      "$P \\rightarrow Q$ and $P$",
+      "$P \\rightarrow Q$ and $\\neg P$",
+      "$Q \\rightarrow P$ and $P$",
+      "$P \\lor Q$ and $P$"
+    ],
+    "answer": 0,
+    "explanation": "Modus ponens affirms the antecedent: given the conditional and its antecedent $P$, you may infer the consequent $Q$. The pair with $Q \\rightarrow P$ and $P$ affirms the consequent of that conditional, which is the fallacy, not the rule."
+  },
+  {
+    "id": "tollens-which-side",
+    "section": "modus-tollens",
+    "question": "\"If the seal is broken, the sample is spoiled. The seal is not broken. So the sample is not spoiled.\" What is wrong with this argument?",
+    "options": [
+      "It denies the antecedent, so true premises can sit with a false conclusion",
+      "Nothing is wrong with it: it is a textbook instance of modus tollens",
+      "It affirms the consequent, so its conclusion goes beyond what the premises say",
+      "It is valid, but its second premise is false, which makes it unsound"
+    ],
+    "answer": 0,
+    "explanation": "Modus tollens has to deny the consequent. This argument denies the antecedent instead, and a spoiled sample with an intact seal makes both premises true and the conclusion false. The two arguments look alike on the page, which is why it pays to check which side of the arrow the second premise talks about."
+  },
+  {
+    "id": "tollens-testing",
+    "section": "modus-tollens",
+    "question": "A hypothesis predicts a result, and the result fails to appear. Which form takes you from the failed prediction to rejecting the hypothesis?",
+    "options": [
+      "Modus ponens",
+      "Modus tollens",
+      "Hypothetical syllogism",
+      "Disjunctive syllogism"
+    ],
+    "answer": 1,
+    "explanation": "The reasoning is: if the hypothesis is true, the prediction holds; the prediction does not hold; so the hypothesis is false. Denying the consequent to deny the antecedent is modus tollens."
+  },
+  {
+    "id": "hypothetical-conclusion",
+    "section": "hypothetical-syllogism",
+    "question": "What kind of statement does hypothetical syllogism give you as its conclusion?",
+    "options": [
+      "A conditional, $P \\rightarrow R$, which asserts neither $P$ nor $R$",
+      "The bare statement $R$, once the chain of conditionals is complete",
+      "The negation $\\neg P$, since the chain runs back to where it started",
+      "A disjunction, $P \\lor R$, covering both ends of the chain at once"
+    ],
+    "answer": 0,
+    "explanation": "Chaining $P \\rightarrow Q$ and $Q \\rightarrow R$ yields $P \\rightarrow R$. It tells you nothing outright about whether $P$ or $R$ holds; it hands you a new conditional to use later, and that is what lets long chains be built."
+  },
+  {
+    "id": "match-chain-lesson",
+    "section": "hypothetical-syllogism",
+    "question": "The soaked-match chain seems to follow hypothetical syllogism yet ends in a false conclusion. According to the article, where does it go wrong?",
+    "options": [
+      "Hypothetical syllogism is simply invalid for the material conditional",
+      "In translating English \"if\" into the arrow, not in the chaining itself",
+      "The chain quietly relies on reading a hidden \"or\" as exclusive",
+      "It affirms the consequent of the first conditional at its second step"
+    ],
+    "answer": 1,
+    "explanation": "Inside the formal language the chain is valid, because the arrow is defined by its truth table. English conditionals do not always behave like the material conditional, and chains are where the gap shows. The fault lies in the translation."
+  },
+  {
+    "id": "disjunctive-inclusive",
+    "section": "disjunctive-syllogism",
+    "question": "Disjunctive syllogism is valid even when \"or\" is read inclusively, so that both disjuncts might be true.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "Ruling out $P$ leaves $Q$ standing whether or not both could have held. The rule needs only the weaker, inclusive reading, which is why it is safe on any English \"or\"."
+  },
+  {
+    "id": "affirming-a-disjunct",
+    "section": "disjunctive-syllogism",
+    "question": "From $P \\lor Q$ and $P$, what follows about $Q$?",
+    "options": [
+      "$\\neg Q$, by disjunctive syllogism",
+      "$Q$, since a disjunction asserts both sides",
+      "Nothing: both disjuncts may be true",
+      "$\\neg Q$, provided the premises are consistent"
+    ],
+    "answer": 2,
+    "explanation": "On the inclusive reading, the row where both $P$ and $Q$ are true makes both premises true and $\\neg Q$ false. If the \"or\" really was exclusive, that has to be written as a separate premise, $\\neg(P \\land Q)$, rather than smuggled into the connective."
+  },
+  {
+    "id": "four-steps-order",
+    "section": "putting-them-together",
+    "question": "In the four-step argument, which rule is applied first, to $C \\rightarrow L$ and $\\neg L$?",
+    "options": [
+      "Modus ponens, giving $L$",
+      "Modus tollens, giving $\\neg C$",
+      "Disjunctive syllogism, giving $B$",
+      "Hypothetical syllogism, giving $B \\rightarrow S$"
+    ],
+    "answer": 1,
+    "explanation": "Denying the consequent $L$ yields $\\neg C$. Disjunctive syllogism then takes $B \\lor C$ and $\\neg C$ to $B$, and modus ponens takes $B \\rightarrow S$ and $B$ to $S$."
+  }
+]

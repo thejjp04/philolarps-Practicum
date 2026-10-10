@@ -1,0 +1,130 @@
+[
+  {
+    "id": "classify-the-believer",
+    "section": "the-three-standard-positions",
+    "question": "A believer holds that her tradition alone is fully correct about God, but that devout people of other faiths may reach its promised goods through their own practice without recognising the source. Which position is this?",
+    "options": [
+      "Strict exclusivism, since she holds that her own tradition alone is correct about God",
+      "Inclusivism, since uniqueness is kept while its goods are open to outsiders",
+      "Pluralism, since she treats other traditions as authentic paths to the same goods",
+      "Steadfastness, since she keeps her belief despite disagreement from sincere peers"
+    ],
+    "answer": 1,
+    "explanation": "Inclusivism keeps the claim to uniqueness while holding that outsiders may attain its goods through their own traditions without knowing it, as in Rahner's anonymous Christianity. Strict exclusivism would add that the goods are available only through her tradition, and pluralism would deny that any tradition is uniquely correct."
+  },
+  {
+    "id": "pluralism-not-all-true",
+    "section": "the-three-standard-positions",
+    "question": "Religious pluralism, as the article defines it, holds that the claims of all the major traditions are true.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "That would be inconsistent on its face, since the traditions' claims conflict. Pluralism denies exclusivism's uniqueness claim and treats the traditions as roughly equally authentic responses to the same reality, explaining their conflicts by differences in the human frameworks through which it is encountered."
+  },
+  {
+    "id": "why-traditions-do-not-refute-each-other",
+    "section": "the-pluralistic-hypothesis",
+    "question": "On Hick's hypothesis, why does a tradition worshipping a personal God not refute one oriented towards an impersonal absolute?",
+    "options": [
+      "Both describe the Real as it appears through human frameworks, and neither applies to the Real in itself",
+      "Personal and impersonal descriptions turn out to be logically compatible once they are properly analysed",
+      "The Real in itself is both personal and impersonal, so each tradition captures one of its real aspects",
+      "Only the tradition with the better moral fruits counts as describing the Real, so there is no contest"
+    ],
+    "answer": 0,
+    "explanation": "On the Kantian structure Hick borrows, the described divinities are phenomena and the Real in itself is like the noumenon, so no tradition's description applies to the Real as it is and none is refuted by another. Saying the Real is both personal and impersonal in itself is the trap: it applies descriptions to the Real in itself, which the hypothesis forbids."
+  },
+  {
+    "id": "pluralism-says-all-are-wrong",
+    "section": "what-is-wrong-with-it",
+    "question": "Why does the article say pluralism is not, after all, the position that avoids telling the traditions they are wrong?",
+    "options": [
+      "It ranks traditions by their fruits, and so declares the less fruitful ones mistaken",
+      "It holds that the Real is impersonal, which contradicts every theistic tradition",
+      "Each tradition holds its descriptions true, so pluralism says all are wrong about the same thing",
+      "It denies that the Real exists at all, so it says every tradition lacks an object"
+    ],
+    "answer": 2,
+    "explanation": "The traditions do not take their descriptions to be culturally conditioned appearances of an unknowable reality; they take them to be true. Telling all of them they are wrong about that is arguably a stronger claim than any exclusivist makes about a single rival; the ranking-by-fruits worry is a separate objection, about the criterion's lack of neutrality."
+  },
+  {
+    "id": "disagreement-cuts-both-ways",
+    "section": "the-epistemic-version-of-the-problem",
+    "question": "Grant the argument from religious disagreement in Feldman's form. Whose position does it put under pressure?",
+    "options": [
+      "Confident theists only, since only they assert distinctive claims that others reject",
+      "Exclusivists only, since inclusivists and pluralists already concede the central point",
+      "Nobody in practice, since genuine religious peers cannot exist by definition",
+      "Confident believers and confident atheists alike, favouring suspension of judgement"
+    ],
+    "answer": 3,
+    "explanation": "Atheism is also a claim rejected by people who seem equally intelligent, informed and sincere, so the honest response to genuine peer disagreement, on Feldman's view, is suspension on either side. That symmetry is the feature most often overlooked in popular versions of the argument."
+  },
+  {
+    "id": "conciliationism-self-application",
+    "section": "the-epistemic-version-of-the-problem",
+    "question": "Why does the article say conciliatory views have trouble applying to themselves?",
+    "options": [
+      "Epistemologists, near peers, disagree about conciliationism, so a conciliationist should doubt it",
+      "Conciliationism tells everyone to suspend judgement, including about whether anyone disagrees",
+      "Conciliationism can be held only by someone who already has no strong views about anything",
+      "Conciliationism assumes that peerhood can be established, which it denies elsewhere"
+    ],
+    "answer": 0,
+    "explanation": "If peer disagreement requires lowering confidence, then disagreement among epistemologists about whether it does requires lowering confidence in conciliationism, so the view undercuts its own application. The separate difficulty that peerhood is almost never established is a problem for the argument's second premise, not a self-application problem."
+  },
+  {
+    "id": "alstons-discomfort",
+    "section": "what-the-earlier-objection-about-conflicting-claims-becomes",
+    "question": "Why did Alston regard his own response to religious diversity as uncomfortable?",
+    "options": [
+      "It concedes that sense perception is no more reliable than religious experience, which few accept",
+      "It requires showing that one's own practice can be validated without circularity",
+      "It gives rivals the same entitlement, yet one holds that only one's own practice tracks the truth",
+      "It implies that religious experiences in every tradition are equally non-veridical"
+    ],
+    "answer": 2,
+    "explanation": "Since no doxastic practice, including perception, can be validated without circularity, a participant has no outside reason either to prefer or to abandon their practice; but then a rival participant has exactly the same entitlement. Holding that alongside the belief that one's own practice tracks something the other does not is what Alston found unsatisfactory."
+  },
+  {
+    "id": "arrogance-applies-to-all",
+    "section": "the-exclusivist-reply",
+    "question": "How did Plantinga answer the charge that exclusivism is arrogant or arbitrary?",
+    "options": [
+      "By arguing that most exclusivists hold their views humbly, so the charge simply mistakes their attitude",
+      "By arguing that the charge is a moral one and so has no bearing on rationality",
+      "By arguing that disagreement shows the other party's faculties to be malfunctioning",
+      "By arguing that every option, withholding and pluralism included, judges others to have gone wrong"
+    ],
+    "answer": 3,
+    "explanation": "The person who withholds belief holds that everyone who believes has gone wrong, and the pluralist holds that all the traditions are mistaken about the status of their own claims. So if the charge of arrogance applies to exclusivism, it applies to every available option, agnosticism included."
+  },
+  {
+    "id": "need-not-versus-should-not",
+    "section": "the-exclusivist-reply",
+    "question": "On the article's assessment, what does Plantinga's epistemic defence of exclusivism establish?",
+    "options": [
+      "That the exclusivist need not be moved by disagreement, not that they should not be",
+      "That disagreement is never a defeater for anyone, whatever their faculties are like",
+      "That only the exclusivist may retain belief, since the opponent's faculties are impaired",
+      "That the exclusivist's belief is true, since it is formed by a properly functioning faculty"
+    ],
+    "answer": 0,
+    "explanation": "Awareness of numbers alone does not show one's faculties to be less reliable, so the exclusivist is not forced to give up the belief. But the opposite party can run the same argument, so the discussion ends without either side gaining anything; Plantinga's view also allows that disagreement would defeat if one had independent reason to doubt one's own faculties."
+  },
+  {
+    "id": "what-geography-leaves",
+    "section": "the-point-about-geography",
+    "question": "Once the genetic fallacy is set aside, what survives of the argument from the geographical distribution of belief?",
+    "options": [
+      "Beliefs caused by upbringing are thereby shown to be false or at least unjustified",
+      "The believer would have believed otherwise if born elsewhere, and that counterfactual refutes their belief",
+      "The believer needs a reason, beyond the faculty's own say-so, why it works for them and not others",
+      "Religious belief is uniquely caused by upbringing, unlike belief that the earth is old"
+    ],
+    "answer": 2,
+    "explanation": "The believer must hold that a faculty reliable in their own case delivers falsehood for people who differ mainly in birthplace, and trusting it requires a reason for the asymmetry beyond its own deliverance. The counterfactual about being born elsewhere holds equally for beliefs nobody doubts, such as the earth's age; what differs in the religious case is the lack of a method both sides share."
+  }
+]

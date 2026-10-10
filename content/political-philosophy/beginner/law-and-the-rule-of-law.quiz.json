@@ -1,0 +1,114 @@
+[
+  {
+    "id": "power-conferring-rules",
+    "section": "the-thing-in-question",
+    "question": "A statute sets out the formalities for making a valid contract of sale. Why does a statute like this tell against Austin's account of law?",
+    "options": [
+      "It confers a power and commands no one, so it is not a command",
+      "It is backed by a sanction, and so fits Austin's model exactly",
+      "It is obeyed only by the people who choose to make contracts",
+      "It is too technical to be habitually obeyed by the population"
+    ],
+    "answer": 0,
+    "explanation": "Someone who ignores such a statute has not disobeyed anything, only failed to make a valid contract, so it cannot be recast as a command without distortion. The second option is the reverse of the point, since the statute threatens no sanction for not contracting."
+  },
+  {
+    "id": "internal-point-of-view",
+    "section": "the-thing-in-question",
+    "question": "On Hart's diagnosis, what did Austin leave out that separates participants in a legal system from a gunman's victims?",
+    "options": [
+      "That participants predict more reliably that they will be punished",
+      "That participants obey, out of habit, a sovereign who obeys nobody",
+      "That participants have consented to the system and victims have not",
+      "That participants treat the rules as standards for judging conduct"
+    ],
+    "answer": 3,
+    "explanation": "Participants do not merely predict punishment; they treat the rules as standards for criticising conduct, including their own. Habitual obedience to a sovereign is Austin's own account, which Hart says cannot distinguish law from the gunman."
+  },
+  {
+    "id": "positivist-would-accept",
+    "section": "the-old-division",
+    "question": "Which of these claims would a legal positivist accept?",
+    "options": [
+      "A rule's moral quality is part of what makes it legally valid",
+      "A rule can be valid law and still deserve moral condemnation",
+      "Valid law ought to be obeyed, whatever its moral content is",
+      "Law and morality have nothing whatever to do with each other"
+    ],
+    "answer": 1,
+    "explanation": "Positivism separates what the law is from what it ought to be precisely so that bad law can be identified as law and criticised. The last option is the common misstatement: positivists accept that law and morality interact in many ways, denying only that moral merit determines validity."
+  },
+  {
+    "id": "aquinas-unjust-rule",
+    "section": "the-old-division",
+    "question": "On Aquinas's view, what follows for a rule contrary to the human good?",
+    "options": [
+      "The courts will refuse to enforce it, so it has no effects at all",
+      "It is valid law, though it ought nonetheless to be reformed",
+      "It does not bind in conscience, being violence rather than law",
+      "It is still law, since law and morality are wholly identical"
+    ],
+    "answer": 2,
+    "explanation": "The natural law claim concerns the obligation to obey and what deserves the name of law, not whether courts will enforce the rule. No serious natural lawyer has held that an unjust rule has no effects, which is the trap in the first option."
+  },
+  {
+    "id": "rule-of-law-not-having-laws",
+    "section": "governing-by-law-rather-than-by-will",
+    "question": "On the article's account, any regime that has laws thereby satisfies the rule of law.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Every regime has laws. The rule of law requires that power be exercised through them rather than around them, with officials acting on published rules and people able to find out in advance where they stand."
+  },
+  {
+    "id": "retroactive-offence",
+    "section": "governing-by-law-rather-than-by-will",
+    "question": "A government publicly enacts a statute making an act criminal and applies it to people who did it last year. Which of Fuller's conditions does this fail?",
+    "options": [
+      "Generality, since it singles out the people who did the act",
+      "Publicity, since the law was secret at the time it was passed",
+      "Prospectivity, since no one could comply with it at the time",
+      "Stability, since it changes faster than people can adapt to it"
+    ],
+    "answer": 2,
+    "explanation": "Nobody can comply today with a rule enacted next year about today, which is why rules must be prospective. The statute was published, so publicity is not what fails; the trouble is that it reaches back to conduct before it existed."
+  },
+  {
+    "id": "raz-knife",
+    "section": "governing-by-law-rather-than-by-will",
+    "question": "What is Raz's comparison between the rule of law and a sharp knife meant to show?",
+    "options": [
+      "Fuller's conditions make law efficient, whatever it is used for",
+      "A system failing Fuller's conditions is not a legal system at all",
+      "Wicked regimes cannot keep to clear and stable public rules",
+      "The rule of law is the highest virtue a legal system can have"
+    ],
+    "answer": 0,
+    "explanation": "Sharpness is a real virtue in a knife and tells you nothing about what the knife is for; likewise a regime pursuing terrible ends has every reason to satisfy Fuller's conditions. The second option is Fuller's own conclusion, which the comparison is meant to resist."
+  },
+  {
+    "id": "rule-of-law-without-constitution",
+    "section": "governing-by-law-rather-than-by-will",
+    "question": "A regime with unlimited powers governs entirely through clear, published and stable statutes. On the article's account, what does it satisfy?",
+    "options": [
+      "Constitutionalism, but not the rule of law",
+      "Both, since its statutes act as a fundamental law",
+      "Neither, since unlimited power is arbitrary command",
+      "The rule of law, though not constitutionalism"
+    ],
+    "answer": 3,
+    "explanation": "The rule of law asks only that power be exercised through general rules, and the article says it is satisfied by a regime with unlimited powers that uses clear published statutes. Constitutionalism asks that some powers not exist at all, which this regime fails."
+  },
+  {
+    "id": "not-merely-verbal",
+    "section": "governing-by-law-rather-than-by-will",
+    "question": "Why, according to the reply, is the dispute between positivists and natural lawyers not merely verbal?",
+    "options": [
+      "The two sides in fact disagree about the facts of the case",
+      "Natural lawyers deny that the courts enforce unjust rules",
+      "The views guide courts differently, as after a regime change",
+      "Positivists endorse wicked statutes by calling them law"
+    ],
+    "answer": 2,
+    "explanation": "When a court after a regime change must decide whether acts under the old statutes were lawful, the two positions give different guidance about how to reason. The reply grants that the sides agree on the facts, so the first option concedes the objection's premise rather than answering it."
+  }
+]

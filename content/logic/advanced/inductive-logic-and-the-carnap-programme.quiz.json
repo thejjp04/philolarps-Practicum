@@ -1,0 +1,127 @@
+[
+  {
+    "id": "count-state-structure-descriptions",
+    "section": "logical-probability",
+    "question": "In a language with one predicate $F$ and two individuals $a$ and $b$, how many state descriptions are there, and how many structure descriptions?",
+    "options": [
+      "4 and 4",
+      "4 and 3",
+      "3 and 4",
+      "2 and 3"
+    ],
+    "answer": 1,
+    "explanation": "Each individual is $F$ or not, giving four state descriptions. Permuting individuals merges the two in which exactly one is $F$, leaving three structure descriptions: both, exactly one, neither."
+  },
+  {
+    "id": "c-star-learns",
+    "section": "logical-probability",
+    "question": "In the same language, what probability does Carnap's $c^{*}$ give to $Fb$ conditional on $Fa$?",
+    "options": [
+      "$2/3$",
+      "$1/2$",
+      "$1/3$",
+      "$3/4$"
+    ],
+    "answer": 0,
+    "explanation": "Each structure description gets $1/3$, and the \"exactly one\" structure splits into two state descriptions of $1/6$, so $P(Fa) = 1/2$ and $P(Fa \\land Fb) = 1/3$, giving $2/3$. Weighting state descriptions equally gives $1/2$, which is the function that learns nothing from experience."
+  },
+  {
+    "id": "continuum-compute",
+    "section": "the-continuum",
+    "question": "In Carnap's continuum, with $k = 2$, $\\lambda = 2$, and 8 of 10 observed individuals having a property, what is the probability that the next individual has it?",
+    "options": [
+      "$0.8$",
+      "$0.5$",
+      "$0.75$",
+      "$0.83$"
+    ],
+    "answer": 2,
+    "explanation": "$(8 + 2/2) / (10 + 2) = 9/12 = 0.75$. The straight rule, $\\lambda = 0$, gives the observed $0.8$, and $0.83$ comes from adding $\\lambda$ rather than $\\lambda / k$ to the numerator."
+  },
+  {
+    "id": "lambda-to-infinity",
+    "section": "the-continuum",
+    "question": "As $\\lambda$ grows without bound, the continuum's prediction approaches the observed frequency $n_{i} / n$.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "As $\\lambda$ grows, the formula tends to $1/k$ whatever the evidence, so the function ignores experience entirely. The observed frequency is the other extreme, the straight rule at $\\lambda = 0$."
+  },
+  {
+    "id": "free-parameter-problem",
+    "section": "the-continuum",
+    "question": "Why does the parameter $\\lambda$ undermine the programme's aim?",
+    "options": [
+      "No value of $\\lambda$ makes the function learn, so induction stays impossible",
+      "The value of $\\lambda$ must be read off observed frequencies, making confirmation empirical",
+      "Different values of $\\lambda$ give incompatible verdicts on which arguments are deductively valid",
+      "Every value meets the formal criteria, so confirmation turns on a free choice, not on form"
+    ],
+    "answer": 3,
+    "explanation": "The programme wanted confirmation fixed by logical form, and the continuum offers infinitely many formally legitimate functions with nothing in logic to choose among them. Every finite positive $\\lambda$ does learn from experience, so the difficulty is selection, not learning."
+  },
+  {
+    "id": "de-finetti-representation",
+    "section": "the-continuum",
+    "question": "What does de Finetti's representation theorem say about an exchangeable probability assignment?",
+    "options": [
+      "It is a mixture of independent identically distributed ones, as if estimating an unknown chance",
+      "It spreads probability equally over state descriptions, and so it cannot learn from experience",
+      "It must take $\\lambda = k$, which makes it coincide with Carnap's function $c^{*}$ exactly",
+      "It gives every universal generalisation positive probability once enough instances are seen"
+    ],
+    "answer": 0,
+    "explanation": "An agent who treats individuals symmetrically behaves as though uncertain about an objective chance, which links the continuum to Bayesian statistics. Exchangeability constrains the form of the function, but it leaves $\\lambda$ free and does not single out $c^{*}$."
+  },
+  {
+    "id": "zero-confirmation-mechanism",
+    "section": "universal-laws",
+    "question": "On the article's account, why does every member of the continuum give a universal generalisation probability zero over infinitely many individuals?",
+    "options": [
+      "Universal sentences cannot be expressed using state descriptions over infinitely many individuals",
+      "The parameter $\\lambda$ becomes infinite when a hypothesis quantifies over all individuals",
+      "It conjoins infinitely many instances, each below one in probability, and the product tends to zero",
+      "Exchangeability forbids any proposition about the whole sequence from having probability one"
+    ],
+    "answer": 2,
+    "explanation": "However high each instance's probability, an infinite product of factors below one goes to zero, and finite evidence leaves infinitely many factors in place. The parameter is untouched; the result holds for every value of it."
+  },
+  {
+    "id": "hintikka-cost",
+    "section": "universal-laws",
+    "question": "What do Hintikka's systems show about the zero confirmation result?",
+    "options": [
+      "That universal laws must have probability zero on any prior that respects exchangeability",
+      "That $\\lambda$ can be fixed by logic alone once constituents are added to the language",
+      "That Goodman's artificial predicates can be excluded from the language on formal grounds",
+      "That the zero result stems from Carnap's priors, at the price of a new free choice"
+    ],
+    "answer": 3,
+    "explanation": "Giving constituents positive prior probability lets laws gain probability with evidence, so the zero result is not forced by the probabilistic framework. But the prior over constituents is a further free choice on top of $\\lambda$, so the selection problem grows rather than shrinks."
+  },
+  {
+    "id": "goodman-prior-to-technicalities",
+    "section": "universal-laws",
+    "question": "Why does Goodman's new riddle compromise the programme before any of its technical difficulties arise?",
+    "options": [
+      "Grue-like predicates make every universal law receive probability zero from the start",
+      "Values depend on the choice of predicates, and no formal criterion picks the natural ones",
+      "Colour predicates violate exchangeability, so de Finetti's theorem does not apply to them",
+      "Grue forces $\\lambda = 0$, so the function predicts only the observed frequencies"
+    ],
+    "answer": 1,
+    "explanation": "Every confirmation function is defined relative to a language, and the same evidence confirms incompatible hypotheses under different primitives. A claim to rest on logical form alone cannot survive dependence on a choice that form does not make."
+  },
+  {
+    "id": "bayesian-inherits-priors",
+    "section": "universal-laws",
+    "question": "Why, on the reply, does Bayesian confirmation theory not escape Carnap's problem through its convergence theorems?",
+    "options": [
+      "Convergence needs priors agreeing on what gets probability zero, so priors do the parameter's work",
+      "Bayesian agents update by conditionalisation, which can never raise the probability of a law at all",
+      "Convergence holds only for exchangeable priors, and scientific priors are never exchangeable",
+      "Subjective priors make confirmation a matter of psychology, which a logic of support must ignore"
+    ],
+    "answer": 0,
+    "explanation": "An agent who gives a law probability zero never learns it, so which propositions get zero is decided by the prior, just as Carnap's parameter decided the rate of learning. Conditionalisation can raise a law's probability when its prior is positive, which is exactly why the prior matters."
+  }
+]

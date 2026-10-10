@@ -1,0 +1,93 @@
+[
+  {
+    "id": "not-coercion-but-authority",
+    "section": "the-thing-both-cases-involve",
+    "question": "Someone says the tax authority differs from the robber because the tax authority does not coerce anyone. What is wrong with this, on the article's account?",
+    "options": [
+      "Nothing, since well-intentioned state action is not really coercion",
+      "Coercion is always wrong, so the state is no better than the robber",
+      "Both coerce, so the difference must lie elsewhere, in a claimed right",
+      "The robber does not coerce, since the victim could refuse and run off"
+    ],
+    "answer": 2,
+    "explanation": "Every law is backed by a penalty, so both cases are coercive and coercion cannot be what separates them. The second option overreaches the other way: coercion needs justification, but restraining someone about to push a stranger onto a track shows it is not automatically wrong."
+  },
+  {
+    "id": "what-counts-as-political-obligation",
+    "section": "the-thing-only-one-case-involves",
+    "question": "Which of these would be a political obligation in the article's sense?",
+    "options": [
+      "A duty not to commit murder, which the law also forbids",
+      "A duty to drive on the left, held because the law says so",
+      "A duty to keep a promise you made to your neighbour",
+      "A duty to hand over your wallet when a robber threatens you"
+    ],
+    "answer": 1,
+    "explanation": "Political obligation is a duty to obey held in virtue of the law's having spoken, on a matter where nothing else makes one option better. The duty not to murder is one you would have in a state of anarchy, so a theory that only delivers it has not delivered political obligation."
+  },
+  {
+    "id": "justification-not-legitimacy",
+    "section": "three-things-that-are-not-one-thing",
+    "question": "An argument shows convincingly that life with states is far better than life without them. On Simmons's distinction, what has it shown?",
+    "options": [
+      "A justification of the state, not that this state may rule you",
+      "That every existing state is legitimate over all of its own subjects",
+      "That each subject has a general duty to obey their own state",
+      "That no state can be legitimate without its subjects' consent"
+    ],
+    "answer": 0,
+    "explanation": "Showing that states in general are a good thing justifies the state; showing that this particular state has the right to rule these particular people is a claim about legitimacy, and it does not follow. A well-run club is a fine thing and has no authority over people who never joined."
+  },
+  {
+    "id": "unrequested-benefit",
+    "section": "the-answers-on-offer",
+    "question": "While you are away, a neighbour mows your lawn without being asked and then sends you a bill. Which answer to what confers legitimacy faces the problem this case illustrates?",
+    "options": [
+      "The consent answer, since almost nobody has consented to their state",
+      "Raz's service answer, since the neighbour judged better than you did",
+      "The natural duty answer, since the mowing serves a just institution",
+      "The benefit answer, since unrequested benefits rarely create debts"
+    ],
+    "answer": 3,
+    "explanation": "The benefit answer says that taking the advantages of a scheme means owing a share of its costs, but benefits can be pressed on people who never asked, and that does not usually generate a debt. The consent answer has a real problem too, but it is not the one this case shows."
+  },
+  {
+    "id": "raz-service-test",
+    "section": "the-answers-on-offer",
+    "question": "On Raz's account, when does a state have legitimate authority over you in some domain?",
+    "options": [
+      "When you have consented to its rule over that particular domain of life",
+      "When following it helps you act on reasons that apply to you anyway",
+      "When most of its subjects believe that it has the right to rule",
+      "When it supplies benefits that you have chosen to accept from it"
+    ],
+    "answer": 1,
+    "explanation": "An authority is legitimate when you would comply better with the reasons that already apply to you by following its directives than by your own judgement. That makes legitimacy piecemeal, holding only where the state actually knows better, which is the problem the article names."
+  },
+  {
+    "id": "weber-belief-not-legitimacy",
+    "section": "the-answers-on-offer",
+    "question": "A regime is widely believed by its subjects to have the right to rule. What follows, on the article's account?",
+    "options": [
+      "It is legitimate, since popular acceptance confers the right to rule",
+      "It is illegitimate, since such belief can always be manufactured",
+      "It is legitimate in Weber's sense, which settles nothing normative",
+      "Its subjects now have a political obligation to obey its directives"
+    ],
+    "answer": 2,
+    "explanation": "Weber offered a sociology of belief, not an account of when the belief is correct, so stable regimes with wide acceptance can still be illegitimate in the normative sense. The second option overcorrects: the aside does not say that belief in legitimacy makes a regime illegitimate."
+  },
+  {
+    "id": "comply-without-obligation",
+    "section": "the-answers-on-offer",
+    "question": "A philosophical anarchist accepts Wolff's conclusion that no state has legitimate authority. What does she say about complying with the law?",
+    "options": [
+      "That every state ought to be actively resisted wherever that is possible",
+      "That deferring to any authority means abandoning one's judgement",
+      "That following experts' instructions is itself a moral failure",
+      "That a reasonably just order should usually be complied with anyway"
+    ],
+    "answer": 3,
+    "explanation": "The position accepts Wolff's premise and declines his practical conclusion: there is no general duty to obey, yet the reasons to comply with a reasonably just legal order are strong. Active resistance is the practical conclusion it declines."
+  }
+]

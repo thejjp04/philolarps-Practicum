@@ -1,0 +1,130 @@
+[
+  {
+    "id": "form-of-the-theses",
+    "section": "the-thesis-stated",
+    "question": "Which statement captures the form of Bergmann's skeptical theses?",
+    "options": [
+      "There are goods beyond our ken that justify the evils we observe",
+      "Our beliefs about which things are good and which are evil are often false",
+      "We lack good reason to think the goods, evils and entailments we know of are representative",
+      "God's ways are mysterious and cannot be understood by finite minds"
+    ],
+    "answer": 2,
+    "explanation": "Each thesis denies only that we have reason to think our sample representative, which is weaker than asserting hidden goods and leaves our beliefs about what the sample contains intact. The first option is the trap: skeptical theism needs only agnosticism about goods beyond our ken, not belief in them, and the last is the older, vaguer claim the name tends to suggest."
+  },
+  {
+    "id": "target-is-the-support",
+    "section": "what-the-theses-are-aimed-at",
+    "question": "Which part of Rowe's argument do the skeptical theses attack?",
+    "options": [
+      "The normative premise that a wholly good being would prevent such suffering if it could",
+      "The support for the factual premise: the inference from finding no good to there being none",
+      "The validity of the step from the two premises to the conclusion",
+      "The factual premise itself, by identifying a justifying good for each case of suffering there is"
+    ],
+    "answer": 1,
+    "explanation": "The skeptical theist usually accepts the normative premise gladly, since it expresses what perfect goodness comes to, and attacks only the noseeum inference supporting the factual one. Identifying a justifying good for each case is what a theodicy does, and declining to do that is exactly what distinguishes skeptical theism from theodicy."
+  },
+  {
+    "id": "purely-defensive",
+    "section": "what-the-theses-are-aimed-at",
+    "question": "A skeptical theist who successfully blocks Rowe's argument has thereby gained some reason to believe that God exists.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The position is purely defensive: blocking the argument restores the situation to what it was before the argument was made, and whether theism is supported must then be settled by other arguments. Presenting it as a positive answer to the problem of evil claims more than it can deliver."
+  },
+  {
+    "id": "setting-the-dial",
+    "section": "how-strong-a-scepticism-is-needed",
+    "question": "Why does the strength at which the skeptical theses are set pose a structural difficulty for the position?",
+    "options": [
+      "A weak setting only weakens the noseeum inference, and the strong setting that blocks it is what spreads",
+      "A weak setting blocks the inference outright, but nobody finds such a modest thesis independently plausible",
+      "A strong setting stays safely contained, but it is too weak to block the noseeum inference",
+      "Every setting blocks the inference equally, so the choice between them makes no difference"
+    ],
+    "answer": 0,
+    "explanation": "An incomplete sample can still support a probabilistic conclusion, as a partial census does, so only the strong setting, on which no probability can be assigned, blocks the inference. Every cost the article lists draws its force from that strong setting, and no intermediate setting has been found that both blocks the inference and stays contained."
+  },
+  {
+    "id": "blamelessness-not-reasoning",
+    "section": "the-first-cost-moral-reasoning",
+    "question": "To the moral paralysis objection, the skeptical theist replies that obligations are indexed to what the agent knows, not to what is true. What is the critic's rejoinder?",
+    "options": [
+      "Obligations are indexed to what is true rather than what is known, so the principle is false",
+      "The reply quietly assumes a consequentialist account of obligation",
+      "The reply implies that God too is excused for not intervening",
+      "It saves my blamelessness, not my reason to think saving the child is better"
+    ],
+    "answer": 3,
+    "explanation": "The principle is real, and it is why we do not blame people for unforeseeable consequences, but the question was whether I have any reason to think the rescue leaves the world better. The charge of consequentialism is a separate theistic response, aimed at the objection itself rather than a rejoinder to this reply."
+  },
+  {
+    "id": "certainty-is-not-containment",
+    "section": "the-first-cost-moral-reasoning",
+    "question": "The fourth response says the duty to save the drowning child is more certain than any premise of any philosophical argument. On the article's account, what does this response still fail to supply?",
+    "options": [
+      "A reason why the theses defeat one inference about what a good agent should do but not the other",
+      "Any real assurance that the duty of rescue is more certain than the philosophical theory threatening it",
+      "An explanation of why we do not blame people for unforeseeable consequences",
+      "A demonstration that duty-based accounts of obligation are true"
+    ],
+    "answer": 0,
+    "explanation": "The response is honest about the order of certainty, which is its strength, but it saves the practice without saying which applications of the scepticism are legitimate. Pointing at the certainty of the duty does not explain why the theses block the inference about God's reasons and leave the inference about mine untouched, so containment is asserted rather than shown."
+  },
+  {
+    "id": "spillover-to-promises",
+    "section": "the-second-cost-containment",
+    "question": "Why, on the skeptical spillover worry, do the theses threaten a theist's confidence that God will keep a promise?",
+    "options": [
+      "Promises are known through revelation, and the theses rule revelation out as a source of knowledge",
+      "A promise concerns the future, and the theses deny us knowledge of the future",
+      "Judging that a good being would keep its word absent a defeating reason is what the theses deny us",
+      "Keeping any promise might require permitting suffering, which a good God never does"
+    ],
+    "answer": 2,
+    "explanation": "If we cannot tell that a good being would prevent a fawn's suffering absent a defeating reason, we cannot tell that it would keep a promise absent one either, since a good beyond our ken might depend on the promise being broken. The theses do not rule out revelation; the containment strategy leans on it, and the critic's point is that reasoning from God's character to God's actions needs the value knowledge already given up."
+  },
+  {
+    "id": "completeness-versus-accuracy",
+    "section": "the-third-cost-appearances",
+    "question": "The strongest skeptical theist reply separates inferences that need our sample of goods to be complete from those that need only that what we grasp be accurate. Which inference might survive the theses on that classification?",
+    "options": [
+      "We found no good that justifies this suffering, so there is probably none",
+      "No good we know of requires this evil, so no good requires it",
+      "We can see no reason God would allow this, so God would not allow it",
+      "Goodness excludes gratuitous deception, so a good God would not permit it"
+    ],
+    "answer": 3,
+    "explanation": "The claim about deception concerns the content of goodness, not the extent of the space of goods, so it needs only that our grasp of goodness be accurate. The other three all move from what we have failed to find to what is not there, which needs a representative sample; whether every disputed inference can be sorted this way is the open question, since no general criterion has been produced."
+  },
+  {
+    "id": "cost-to-positive-arguments",
+    "section": "what-it-does-to-the-theists-own-case",
+    "question": "Why does the article say skeptical theism puts pressure on the theist's own arguments, such as fine-tuning?",
+    "options": [
+      "It is itself a noseeum inference, and so it falls under CORNEA",
+      "It relies on judging what a perfect being would have reason to bring about",
+      "It presupposes naturalism, which the skeptical theist rejects",
+      "It concerns physics, and the theses say our grasp of physics is unrepresentative"
+    ],
+    "answer": 1,
+    "explanation": "Such arguments count as evidence only if theism makes some features of the world more expected, and whether to fine-tune a universe for life is as much a judgement about divine reasons as whether to permit a child's death. Holding that our access to those reasons grounds positive arguments but not negative ones is a combination that needs a defence."
+  },
+  {
+    "id": "what-has-held",
+    "section": "where-it-leaves-things",
+    "question": "On the article's assessment of where the debate stands, which of these has been established?",
+    "options": [
+      "That noseeum inferences about justifying goods are weaker than they first look",
+      "That a criterion exists for separating the inferences the theist needs from those the atheist uses",
+      "That skeptical theism amounts to a positive answer to the problem of evil",
+      "That accepting the theses leads to paralysis in ordinary moral reasoning"
+    ],
+    "answer": 0,
+    "explanation": "The core defensive claim has held, and those pressing evidential arguments now accept the burden of defending the detectability assumption. The containment claim has not: no sorting criterion has been produced, which leaves each of the three costs a live objection rather than a result settled in either direction."
+  }
+]

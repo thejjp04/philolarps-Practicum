@@ -1,0 +1,88 @@
+[
+  {
+    "id": "fails-the-particular-test",
+    "section": "particulars",
+    "question": "Which of these, if it exists, fails the article's test for being a particular?",
+    "options": [
+      "The Eiffel Tower, which stretches over a large area of Paris",
+      "Redness, if the whole of it is present in each red thing at once",
+      "A single electron, which is far too small to be seen anywhere",
+      "The river Thames, which flows through many places at the same time"
+    ],
+    "answer": 1,
+    "explanation": "The test asks whether a thing could be wholly present in two separated places at once, and redness, so conceived, is. The Thames is the trap: it occupies many places, but only part of it is in each, so it is a particular like the mug."
+  },
+  {
+    "id": "even-the-mug-costs",
+    "section": "particulars",
+    "question": "Why does the article say that even ordinary particulars such as a mug are \"not free\"?",
+    "options": [
+      "If the mug is something besides its arranged particles, that extra thing must earn its keep",
+      "Mugs can be broken and destroyed, so their existence is only ever temporary and never secure",
+      "Mugs are repeatable, since many mugs are made to a single design",
+      "Mugs cannot be observed directly, since we only ever see their surfaces"
+    ],
+    "answer": 0,
+    "explanation": "Some philosophers hold that strictly there are only particles arranged mug-wise, and that \"there is a mug here\" just reports their arrangement, so admitting the mug is a real addition. The third option confuses the mug with its design: the design is repeatable, but this mug cannot be wholly in two places at once."
+  },
+  {
+    "id": "stabbing-and-killing",
+    "section": "events",
+    "question": "Brutus stabbed Caesar, and the stabbing killed him. On Kim's account of events, are the stabbing and the killing one event or two?",
+    "options": [
+      "One, since they have exactly the same causes and the same effects",
+      "One, since they occur at exactly the same place and time",
+      "Two, since different properties are exemplified, even at the same place and time",
+      "Neither, since causal talk can always be rewritten so as to avoid mentioning events at all"
+    ],
+    "answer": 2,
+    "explanation": "Kim takes an event to be an object's exemplifying a property at a time, so being a stabbing and being a killing make two events occupying the same place and time. Sameness of causes and effects is Davidson's coarser criterion, on which there is one event that is both a stabbing and a killing."
+  },
+  {
+    "id": "what-property-sceptics-deny",
+    "section": "properties",
+    "question": "Two mugs are both chipped. What do those who deny that there are properties deny?",
+    "options": [
+      "That both of the mugs are in fact chipped, since only the word \"chipped\" is shared between them",
+      "That \"chipped\" is a meaningful predicate that applies to each of the mugs",
+      "That the mugs resemble each other in any respect at all",
+      "That the fact of their both being chipped requires an extra entity besides the mugs"
+    ],
+    "answer": 3,
+    "explanation": "Nobody denies that the two mugs are both chipped; the disagreement is about what that fact requires, not about the fact. The first option makes the sceptic deny the obvious, which is not the position anyone holds."
+  },
+  {
+    "id": "benacerraf-dilemma",
+    "section": "numbers",
+    "question": "What is the dilemma Benacerraf posed for the philosophy of mathematics?",
+    "options": [
+      "The account that makes mathematical statements true makes mathematical knowledge hard to explain, and vice versa",
+      "Physics cannot be stated without mathematics, so we must accept numbers or give up physics",
+      "Numbers lack a criterion of identity, so we cannot say when we have one number or two",
+      "Mathematical theorems are useful but false, so mathematics is a convenient fiction"
+    ],
+    "answer": 0,
+    "explanation": "If numbers stand outside space and time, nothing about them can affect us, yet knowledge seems to need some connection between knower and known. The second option is the indispensability argument, a case for numbers rather than the epistemological worry against them."
+  },
+  {
+    "id": "case-against-numbers",
+    "section": "numbers",
+    "question": "The case against numbers is that theorems such as \"there are infinitely many primes\" are false.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The case against is an epistemological worry about how we could know about causally inert objects, not a claim that the theorem is false. Those who reject numbers usually rewrite the mathematics so that it stays true without the apparent commitment."
+  },
+  {
+    "id": "not-just-grammar",
+    "section": "the-rest-of-the-list",
+    "question": "An objector says the list of candidates merely reflects which words English happens to make nouns. How does the reply answer?",
+    "options": [
+      "By arguing that English nouns, having evolved over centuries, reliably reflect the structure of reality",
+      "By conceding that the list is arbitrary, but holding that the subject's results are not",
+      "By treating the list as final, so that every noun on it names something that exists",
+      "By noting that whether a paraphrase works has an answer, so where it fails the commitment is a finding"
+    ],
+    "answer": 3,
+    "explanation": "The list is only where enquiry starts; the paraphrase strategy tests how much of each apparent commitment is grammatical, and Davidson's events show that some commitments survive it. The second option half-states the reply but misreports it, since the reply does not concede the list is arbitrary: it denies that starting from English means taking English at its word."
+  }
+]

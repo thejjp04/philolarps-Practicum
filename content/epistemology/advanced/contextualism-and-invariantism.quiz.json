@@ -1,0 +1,127 @@
+[
+  {
+    "id": "which-claim-to-give-up",
+    "section": "three-answers",
+    "question": "A philosopher accepts the bank-case intuitions and holds that knowledge depends only on truth-relevant factors such as evidence and reliability. Which claim must she give up, and what does that make her?",
+    "options": [
+      "The claim that knowledge is independent of stakes, making her a subject-sensitive invariantist",
+      "The claim that the intuitions are correct, making her a classical invariantist",
+      "The claim that \"knows\" means the same in both cases, making her a contextualist",
+      "The claim that \"knows\" means the same in both cases, making her a moderate invariantist"
+    ],
+    "answer": 2,
+    "explanation": "She keeps the first and third claims, so the one left to surrender is that the sentence means the same in both cases, which is the contextualist's move. Giving up the stakes-independence of knowledge is the subject-sensitive invariantist's choice, and she has explicitly kept it; moderate invariantists are invariantists, so they never give up the single meaning."
+  },
+  {
+    "id": "lewis-rule-of-attention",
+    "section": "contextualism",
+    "question": "A lecturer asks her students to consider that they might all be brains in vats. On Lewis's account, what happens to the students' knowledge that they have hands?",
+    "options": [
+      "It lapses while the possibility is attended to, and returns once they stop attending to it",
+      "It is unaffected, since the possibility was never one their evidence needed to eliminate",
+      "It is lost for good, since a possibility once raised can never again be properly ignored",
+      "It survives, since knowledge requires eliminating only those possibilities that are likely"
+    ],
+    "answer": 0,
+    "explanation": "By the Rule of Attention, a possibility that is attended to is not being ignored, so the students' evidence must eliminate it, which it cannot; on leaving the seminar the possibility is properly ignored again and the knowledge returns. That is why Lewis says epistemology destroys knowledge, but only temporarily, not permanently as the third option has it."
+  },
+  {
+    "id": "contextualist-sceptical-diagnosis",
+    "section": "the-response-to-scepticism",
+    "question": "What does the contextualist say about the closure-based sceptical argument?",
+    "options": [
+      "Closure fails, so knowing I have hands does not require knowing I am not a brain in a vat",
+      "It is sound at the high standards it raises, but ordinary knowledge claims stay true",
+      "The second premise is false at every standard, since I do know I am not a brain in a vat",
+      "The argument shifts standards midway through, so it is invalid in every context"
+    ],
+    "answer": 1,
+    "explanation": "Raising the sceptical hypothesis raises the standards, and relative to that context every premise is true and closure holds, so the argument is sound there; ordinary claims, made at ordinary standards, are untouched. Denying closure is the tempting misreading, but keeping closure within each context is one of the view's main attractions."
+  },
+  {
+    "id": "schiffer-not-stanley",
+    "section": "semantic-blindness",
+    "question": "Schiffer's semantic blindness objection draws a contrast between \"flat\" and \"knows\". Which contrast?",
+    "options": [
+      "\"Flat\" accepts degree modifiers such as \"very\" and \"flatter than\", while \"knows\" does not accept them",
+      "\"Flat\" is used loosely in ordinary speech, while \"knows\" is used precisely",
+      "Disputes about flatness can be settled by measurement, while disputes about whether someone knows cannot be settled at all",
+      "Speakers can see that \"flat\" shifts standards; the sceptic's convert thinks they simply do not know"
+    ],
+    "answer": 3,
+    "explanation": "If \"knows\" were context-sensitive, competent speakers should recognise the shift as they do with \"flat\", yet the person gripped by scepticism takes themselves to have discovered ignorance full stop. The point about degree modifiers is a real objection, but it is Stanley's argument from linguistic evidence, not Schiffer's."
+  },
+  {
+    "id": "domain-restriction-problem",
+    "section": "the-linguistic-evidence",
+    "question": "Some contextualists respond to Stanley by modelling \"knows\" on quantifier domain restriction rather than on gradable adjectives. What problem does the article say this brings?",
+    "options": [
+      "Domain restriction requires gradability, which \"knows\" was just shown to lack",
+      "Restrictions are usually easy to make explicit, but \"knows\" resists such explicit qualification",
+      "Quantifiers are not context-sensitive at all, so the model cannot explain how the standards shift",
+      "The model makes ordinary knowledge attributions false in every context"
+    ],
+    "answer": 1,
+    "explanation": "One can say \"every bottle in the kitchen is empty\" to make the restriction explicit, but there is no comparably natural way to spell out the standard at which someone \"knows\". The model's whole appeal is that it does not need gradability, so the first option gets its motivation backwards."
+  },
+  {
+    "id": "moderate-invariantist-verdict",
+    "section": "invariantism",
+    "question": "On moderate invariantism, what is the status of \"I don't know the bank will be open\", said in the high-stakes case?",
+    "options": [
+      "False, though asserting that you know would be misleading in that situation",
+      "True, because the standards for knowledge rise with the subject's stakes",
+      "True as uttered in that conversation, though false at ordinary standards",
+      "True, because the high-stakes subject has less evidence than the low-stakes one"
+    ],
+    "answer": 0,
+    "explanation": "Moderate invariantism fixes the standards at an ordinary level, so you know in both cases and the reluctance is explained pragmatically. Standards rising with the subject's stakes is subject-sensitive invariantism, and truth relative to the conversation is contextualism; the evidence is stipulated to be the same in both cases."
+  },
+  {
+    "id": "deny-knowledge-action",
+    "section": "subject-sensitive-invariantism",
+    "question": "A critic grants that in the high-stakes case you may not rationally act as if the bank will be open, and that your evidence is unchanged, yet insists that you still know. Which premise of the argument from knowledge and action must she deny?",
+    "options": [
+      "That the cost of being wrong is too great to proceed without checking in the high-stakes case",
+      "That your evidence and reliability are the same in both cases",
+      "That in the low-stakes case you may rationally act as if the bank will be open",
+      "That if you know that p, p is warranted enough for you to act as if p"
+    ],
+    "answer": 3,
+    "explanation": "Knowing that p while being unable rationally to act as if p is exactly what the knowledge-action principle forbids, so her position requires denying it. The premise about the cost of error might look like the weak point, but she has already granted that acting without checking would be irrational."
+  },
+  {
+    "id": "ignorant-high-stakes-dilemma",
+    "section": "the-costs-of-subject-sensitivity",
+    "question": "The cheque will bounce on Monday, but you have no idea that it will. What dilemma does this pose for subject-sensitive invariantism?",
+    "options": [
+      "If stakes matter, knowledge depends on the attributor's context; if they do not, the bank-case intuitions are simply mistaken",
+      "If stakes matter, closure fails; if they do not, the sceptic wins",
+      "Actual stakes make knowledge hinge on unknown facts; perceived stakes make a belief about stakes matter when stakes do not",
+      "If actual stakes matter, your evidence changes without your noticing; if only perceived stakes matter, it stays the same"
+    ],
+    "answer": 2,
+    "explanation": "Either knowledge hinges on an unknown fact that seems disconnected from anything epistemic, or the view becomes a psychologism on which your beliefs about stakes matter even though the stakes themselves do not. The fourth option misstates the case: evidence is held fixed on both horns, which is what makes the dilemma bite."
+  },
+  {
+    "id": "knowledge-lost-without-evidence",
+    "section": "the-costs-of-subject-sensitivity",
+    "question": "On subject-sensitive invariantism, a subject can stop knowing that the bank opens on Saturday without any change in their evidence, their belief, or the bank's hours.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "If a larger cheque arrives during Friday, the subject's stakes rise and the view says they knew in the morning but not in the afternoon, though nothing epistemic has changed. This is one of the costs the article charges to the view, alongside the odd counterfactuals it makes true."
+  },
+  {
+    "id": "ssi-route-around-scepticism",
+    "section": "where-this-leaves-closure-and-scepticism",
+    "question": "On the article's account, how can the subject-sensitive invariantist resist the sceptic in the seminar room?",
+    "options": [
+      "By granting that raising the hypothesis raises the standards, but only for that conversation",
+      "By denying closure, so that knowing about hands does not require knowing about vats",
+      "By noting that nothing practical hangs on the question there, so the stakes are low and you know",
+      "By holding that you know at ordinary standards, the only ones there are, and that apparent ignorance is pragmatic"
+    ],
+    "answer": 2,
+    "explanation": "For this view what matters is the subject's stakes, and in the seminar room they are low, so you know you are not a brain in a vat and the sceptic is charged with treating an idle question as practically fraught. The last option is the moderate invariantist's route and the first is the contextualist's."
+  }
+]

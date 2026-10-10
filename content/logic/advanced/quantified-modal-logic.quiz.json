@@ -1,0 +1,132 @@
+[
+  {
+    "id": "talking-donkey-disagreement",
+    "section": "the-two-semantics",
+    "question": "A constant domain theorist and a variable domain theorist both accept that there might have been a talking donkey. What do they disagree about?",
+    "options": [
+      "Whether the sentence \"there might have been a talking donkey\" comes out true at all",
+      "Whether quantifiers at a world range over that world's domain or over every world's",
+      "Whether the would-be donkey exists at the actual world",
+      "Whether the box distributes over the material conditional in quantified contexts"
+    ],
+    "answer": 2,
+    "explanation": "On constant domains the would-be donkey is already in the actual domain and simply is not a donkey (or not concrete) here; on variable domains it exists only at some other world. Both semantics evaluate quantifiers against the domain of the world in question; they differ over whether that domain is the same everywhere."
+  },
+  {
+    "id": "growing-domain-countermodel",
+    "section": "the-barcan-formulas",
+    "question": "World $w$ has domain $\\{a\\}$ and accesses only world $v$, whose domain is $\\{a, b\\}$. At $v$, $b$ is $F$ and $a$ is not. Which of these is false at $w$?",
+    "options": [
+      "$\\Diamond \\exists x\\, Fx \\rightarrow \\exists x\\, \\Diamond Fx$",
+      "$\\exists x\\, \\Diamond Fx \\rightarrow \\Diamond \\exists x\\, Fx$",
+      "$\\Box \\forall x\\, \\neg Fx \\rightarrow \\forall x\\, \\Box \\neg Fx$",
+      "$\\exists x\\, \\Diamond \\neg Fx$"
+    ],
+    "answer": 0,
+    "explanation": "Something at $v$ is $F$, so $\\Diamond \\exists x\\, Fx$ holds at $w$, but the only object at $w$ is $a$, which is not $F$ at $v$; the Barcan formula fails because the domain grows. The converse Barcan instance has a false antecedent here, so it is true: growing domains threaten the Barcan formula, not its converse."
+  },
+  {
+    "id": "actualist-with-new-objects",
+    "section": "the-barcan-formulas",
+    "question": "A metaphysician holds that there could have been things that do not actually exist, but that nothing which actually exists could have failed to exist. Read as conditions on domains along accessibility, which formulas does her view validate?",
+    "options": [
+      "The Barcan formula but not its converse, since new things can appear",
+      "Both formulas, since no actual object ever goes missing",
+      "Neither formula, since her domains vary from world to world",
+      "The converse Barcan formula but not the Barcan formula"
+    ],
+    "answer": 3,
+    "explanation": "Her domains never shrink (actual things exist everywhere accessible) but can grow (new things may appear). Non-shrinking validates the converse Barcan formula and growth falsifies the Barcan formula. The tempting thought that variable domains kill both overlooks that each formula tracks only one direction of change."
+  },
+  {
+    "id": "converse-barcan-casualty",
+    "section": "the-barcan-formulas",
+    "question": "The converse Barcan formula follows from the quantifier axiom $\\forall x\\, \\varphi \\rightarrow \\varphi[t/x]$, necessitation, distribution and generalisation. On the article's account, which of these does the variable domain theorist usually give up?",
+    "options": [
+      "Necessitation, so that the quantifier axiom need not hold at every world",
+      "The unrestricted quantifier axiom, in favour of a free-logic version",
+      "Distribution, so that necessity is no longer closed under implication",
+      "Generalisation, so that the final step to $\\forall x\\, \\Box \\varphi$ is blocked"
+    ],
+    "answer": 1,
+    "explanation": "The usual move is to free logic, where instantiation requires that the term denotes something existing. Keeping the modal rules intact and changing the quantifier logic is why the article calls this a metaphysical position forcing a change to the underlying logic, not just to the modal axioms."
+  },
+  {
+    "id": "necessitism-contingency",
+    "section": "the-barcan-formulas",
+    "question": "On Williamson's necessitism, what makes \"there could have been a talking donkey\" true?",
+    "options": [
+      "An actual but non-concrete object that could have been a concrete talking donkey",
+      "An object in the domain of some other world, though not in the domain of ours",
+      "A counterpart of some actual donkey, a distinct object which talks at another world",
+      "The epistemic possibility, for all we know, of a talking donkey"
+    ],
+    "answer": 0,
+    "explanation": "Necessitism holds that everything necessarily exists and locates contingency in whether a thing is concrete, so the possible donkey is already here, non-concretely. Placing the object only in another world's domain is exactly the variable domain picture Williamson rejects."
+  },
+  {
+    "id": "identity-derivation-property",
+    "section": "the-necessity-of-identity",
+    "question": "In the three-line derivation of $a = b \\rightarrow \\Box\\, a = b$, Leibniz's law is applied to which property of $a$?",
+    "options": [
+      "Being identical to $b$",
+      "Existing at every accessible world",
+      "Being necessarily identical to $a$",
+      "Being rigidly designated by the name \"$a$\""
+    ],
+    "answer": 2,
+    "explanation": "Reflexivity and necessitation give $\\Box\\, a = a$, so $a$ has the property of being necessarily identical to $a$; Leibniz's law transfers it to $b$, yielding $\\Box\\, a = b$. Nothing about names enters the proof, which is why the theorem concerns objects rather than designators."
+  },
+  {
+    "id": "hesperus-epistemic-reading",
+    "section": "the-necessity-of-identity",
+    "question": "\"Hesperus might not have been Phosphorus\" sounds true. How does the article square this with the necessity of identity?",
+    "options": [
+      "Leibniz's law fails inside modal contexts, so the derivation does not go through for these names",
+      "\"Might\" is read epistemically there, and the identity is metaphysically necessary",
+      "The names are disguised definite descriptions, so the identity they express is contingent",
+      "The theorem concerns names rather than objects, so it is silent about Venus"
+    ],
+    "answer": 1,
+    "explanation": "A competent speaker can fail to know the identity, which makes its falsity epistemically possible without making it metaphysically possible. Treating the names as non-rigid descriptions is the view rigid designation was introduced to reject, and the article stresses that the theorem is about objects however designated."
+  },
+  {
+    "id": "statue-clay-what-is-ruled-out",
+    "section": "the-necessity-of-identity",
+    "question": "Which claim about a statue and the clay it is made of does the necessity of identity, by itself, rule out?",
+    "options": [
+      "That the statue and the clay are distinct, since they have different modal properties",
+      "That the statue and the clay are identical, since they share all their matter",
+      "That the statue and the clay differ in their persistence conditions",
+      "That the statue and the clay are identical though they could have been distinct"
+    ],
+    "answer": 3,
+    "explanation": "The theorem is a conditional: if they are identical, they are necessarily identical, so only contingent identity is excluded. It does not settle whether they are identical at all, which is why the article says it tells one nothing about the statue and its clay."
+  },
+  {
+    "id": "counterpart-threat",
+    "section": "the-necessity-of-identity",
+    "question": "Why does Lewis's counterpart theory put the necessity of identity under pressure?",
+    "options": [
+      "Counterparthood is a similarity relation that need not be one-to-one, so one object can have two counterparts at a world",
+      "Counterpart theory rejects the reflexivity of identity at worlds other than the actual one",
+      "Counterpart theory requires constant domains, which conflict with rigid designation",
+      "Counterpart theory treats every name as an abbreviated definite description"
+    ],
+    "answer": 0,
+    "explanation": "If $a = b$ and $a$ has two distinct counterparts at some world, a counterpart of $a$ and a counterpart of $b$ there can be different objects, so $\\Box\\, a = b$ fails. Identity is still reflexive within each world; the trouble lies in the relation linking worlds, not in identity itself."
+  },
+  {
+    "id": "kripke-stipulation-reply",
+    "section": "the-necessity-of-identity",
+    "question": "Kripke rejects the demand for a criterion of transworld identity. What is his reason?",
+    "options": [
+      "Objects at different worlds can always be matched by their essential qualities",
+      "Each object exists at exactly one world, so the question does not arise",
+      "Possible worlds are stipulated, so which object a situation concerns is specified rather than recognised",
+      "Transworld identity follows from the Barcan formula, which every system validates"
+    ],
+    "answer": 2,
+    "explanation": "In describing a situation in which Nixon lost, one specifies that it concerns Nixon; there is no act of recognition and so no epistemic problem. Matching by qualities is the picture the reply rejects, and the one-world-per-object view is Lewis's, not Kripke's."
+  }
+]

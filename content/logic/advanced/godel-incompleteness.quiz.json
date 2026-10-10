@@ -1,0 +1,127 @@
+[
+  {
+    "id": "two-completenesses",
+    "section": "two-senses-of-complete",
+    "question": "First-order logic is complete, yet Peano arithmetic, a first-order theory, is incomplete. Why is there no conflict?",
+    "options": [
+      "The logic derives every consequence of the axioms, and an undecided sentence is simply not a consequence",
+      "The completeness theorem covers only theories with finitely many axioms, and Peano arithmetic has a schema",
+      "Peano arithmetic is formulated in a logic stronger than first-order logic, to which completeness does not apply",
+      "The incompleteness theorem shows that the completeness theorem breaks down once arithmetic is added"
+    ],
+    "answer": 0,
+    "explanation": "A complete logic derives whatever follows from the axioms; a complete theory settles every sentence. An undecided sentence is one where neither it nor its negation follows, so it is true in some models of the axioms and false in others, and no failure of the logic is involved."
+  },
+  {
+    "id": "true-arithmetic-escapes",
+    "section": "why-some-constraint-on-the-axioms-is-needed",
+    "question": "True arithmetic, the set of all sentences true in the natural numbers, is consistent and complete. Why does this not contradict the first incompleteness theorem?",
+    "options": [
+      "True arithmetic does not represent enough arithmetic for the theorem's hypotheses to apply to it",
+      "True arithmetic contains its own Gödel sentence and so turns out to be inconsistent after all",
+      "Its axioms do not form a decidable set, so it is not recursively axiomatizable",
+      "The theorem concerns only those theories whose set of theorems is decidable, which this one is not"
+    ],
+    "answer": 2,
+    "explanation": "The theorem applies only to theories whose axioms can be effectively recognised, and no decidable set of axioms has exactly the truths of arithmetic as its theorems. True arithmetic certainly represents the recursive relations, since it contains every true instance; it escapes by not being something anyone could write down."
+  },
+  {
+    "id": "how-the-diagonal-sentence-refers",
+    "section": "the-diagonal-lemma",
+    "question": "A sentence cannot contain the numeral for its own code, since that numeral is longer than the sentence. How does the diagonal lemma get around this?",
+    "options": [
+      "By choosing a special coding in which some sentences have codes shorter than the sentences themselves",
+      "By having the sentence describe a computable substitution whose result is that very sentence",
+      "By restricting the lemma to the provability formula, whose special properties allow self-reference",
+      "By adding a new constant to the language that names the self-referential sentence directly"
+    ],
+    "answer": 1,
+    "explanation": "The sentence says that $\\psi$ holds of the result of substituting the numeral for $d$ into the formula coded by $d$, and that result is the very sentence constructed. No property of $\\psi$ is used, so every expressible condition gets a self-ascribing sentence, which is why the lemma yields different theorems for different choices of $\\psi$."
+  },
+  {
+    "id": "why-omega-consistency",
+    "section": "the-first-theorem",
+    "question": "In Gödel's original argument, why was plain consistency not enough to show that the negation of G is unprovable?",
+    "options": [
+      "Because plain consistency had already been used up in the first half of the argument, about G",
+      "Because without omega-consistency the theory might go on to prove G as well as its negation",
+      "Because the diagonal lemma holds only in theories that are omega-consistent",
+      "Because refuting each instance while proving the existential is no outright contradiction"
+    ],
+    "answer": 3,
+    "explanation": "A theory proving the negation of G would refute \"$n$ codes a proof of G\" for each particular $n$ while proving that some number codes one; no finite selection of those sentences is contradictory, so only omega-consistency rules this out. Rosser later found a sentence for which plain consistency suffices for both halves."
+  },
+  {
+    "id": "sense-of-true-unprovable",
+    "section": "is-g-true",
+    "question": "In what sense is G true and unprovable?",
+    "options": [
+      "If the theory is consistent, G holds in the natural numbers yet is unprovable in that theory",
+      "G is true in every model of the theory, and yet the theory itself cannot prove it",
+      "G cannot be proved by any mathematical means whatever, and is true all the same",
+      "G is true because the theory itself proves that G is unprovable, which is what G says"
+    ],
+    "answer": 0,
+    "explanation": "The truth of G is conditional on consistency, concerns the standard model only, and is established in a stronger setting where G is provable. If G held in every model, the completeness theorem would make it provable; since the theory does not prove G, some of its models make G false."
+  },
+  {
+    "id": "perverse-provability",
+    "section": "the-second-theorem",
+    "question": "A provability formula agrees with the standard one about which sentences are provable but is built in a perverse way. What can happen to the consistency sentence defined from it?",
+    "options": [
+      "Nothing changes, since the second theorem concerns only which sentences are provable",
+      "The first incompleteness theorem stops applying to the theory that uses the new formula",
+      "The theory may prove it, since the formula can fail the derivability conditions",
+      "The theory must refute it, since the new formula no longer tracks the structure of proofs"
+    ],
+    "answer": 2,
+    "explanation": "The proof of the second theorem uses only the three derivability conditions, so a formula that fails them escapes it even while picking out the right sentences. The theorem constrains consistency sentences that express consistency in a way tracking proofs, not every sentence that happens to be equivalent to one."
+  },
+  {
+    "id": "extensions-of-q",
+    "section": "where-the-boundary-lies",
+    "question": "Robinson's Q has no induction and cannot prove that addition is commutative. Why is every consistent, recursively axiomatizable theory containing Q incomplete, including those that prove commutativity?",
+    "options": [
+      "Every theory containing Q inherits its failure to prove that addition is commutative",
+      "Q already represents every recursive relation, and so does any theory containing it",
+      "Q includes just enough induction to generate undecided instances in every extension of it",
+      "Q is finitely axiomatised, and finite axiomatisation is what makes a theory of numbers incomplete"
+    ],
+    "answer": 1,
+    "explanation": "Representing the recursive relations is all the proof needs, and it is inherited by every theory containing Q. Peano arithmetic proves commutativity and is still incomplete, so the weakness of Q is not what is being passed on."
+  },
+  {
+    "id": "incompleteness-versus-ch",
+    "section": "set-theory-and-independence",
+    "question": "How does the independence of the continuum hypothesis from set theory relate to the first incompleteness theorem?",
+    "options": [
+      "The continuum hypothesis is the Gödel sentence of Zermelo-Fraenkel set theory with choice",
+      "Its independence follows from the second theorem, since it implies the consistency of set theory",
+      "Incompleteness does not apply to set theory, so a separate kind of argument was needed",
+      "Incompleteness ensures some sentence is undecided; the model constructions show this one is"
+    ],
+    "answer": 3,
+    "explanation": "Gödel's and Cohen's arguments are semantic, building models of the axioms in which the hypothesis holds and in which it fails, and they identify a sentence of real mathematical interest. The incompleteness theorem does apply to set theory, but it only ensures that undecided sentences exist, without saying which."
+  },
+  {
+    "id": "what-lucas-can-see",
+    "section": "what-the-theorems-do-not-show",
+    "question": "On the standard reply to Lucas, what can a person actually establish about a formal system's Gödel sentence?",
+    "options": [
+      "That if the system is consistent then its Gödel sentence holds, which the system can prove too",
+      "That the Gödel sentence is true outright, which the system itself can never establish",
+      "That the system is consistent, which by the second theorem the system cannot prove of itself",
+      "That the Gödel sentence is false in every nonstandard model of the formal system"
+    ],
+    "answer": 0,
+    "explanation": "The conditional is provable by the system itself, so it marks no difference between person and machine. The unconditional conclusion needs the system's consistency, and for anything as complex as a candidate model of a mind nobody knows that, which is the premise the second theorem makes hard to come by."
+  },
+  {
+    "id": "beyond-all-proof",
+    "section": "what-the-theorems-do-not-show",
+    "question": "The incompleteness theorems show that there are arithmetical truths no proof whatever could establish.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Each Gödel sentence is unprovable in one particular theory and provable in a stronger one, by an ordinary argument anyone can follow. What the theorems rule out is a single recursively axiomatizable theory that reaches every truth, not truths that resist all proof."
+  }
+]

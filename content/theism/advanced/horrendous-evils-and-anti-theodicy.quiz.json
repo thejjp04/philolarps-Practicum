@@ -1,0 +1,130 @@
+[
+  {
+    "id": "features-of-horrendous-evil",
+    "section": "the-evils-in-question",
+    "question": "Which of these is a feature of Adams's definition of a horrendous evil?",
+    "options": [
+      "It is measured by how far it lowers the world's overall balance of good",
+      "It is marked out by the intensity of the pain it involves",
+      "It can befall a perpetrator through what they have done, not only a victim",
+      "It shows that the life containing it is not worth having lived"
+    ],
+    "answer": 2,
+    "explanation": "Participation includes doing, so a person can be ruined by their own acts, which free will theodicies have said nothing about. The last option is the trap: the definition gives only a reason at first sight to doubt that the life could be a great good to its subject, a defeasible appearance that an adequate response would have to overturn, not a verdict."
+  },
+  {
+    "id": "good-world-versus-good-to-persons",
+    "section": "why-the-standard-moves-do-not-reach-them",
+    "question": "Suppose an enormous good for the world depends on a horror that ruins one person's life, and the world is better for containing both. On Adams's account, what has this shown?",
+    "options": [
+      "That God is good to that person, since the world as a whole came out ahead",
+      "At most that God is good at producing a good world, not that God is good to that person",
+      "That the horror was gratuitous, since a world without it would have been possible",
+      "Nothing either way, since we cannot judge whether the world is better on the whole or not"
+    ],
+    "answer": 1,
+    "explanation": "Adams separates God's goodness in producing a good world from God's goodness to individual persons, and the ruined person is not compensated by the world's coming out ahead. A being who arranged an excellent world at the cost of ruining some inhabitants would satisfy the first and fail the second, and it is the second that most theistic traditions assert."
+  },
+  {
+    "id": "defeat-or-balancing",
+    "section": "balancing-off-and-defeat",
+    "question": "Which case is one of defeat, rather than balancing off, in Chisholm's sense?",
+    "options": [
+      "A painful injury is followed by a large inheritance that more than makes up for it",
+      "A family's loss is compensated by substantial gains to their wider community",
+      "A long illness is outweighed by many decades of good health that follow it",
+      "An early failure is taken up into a life whose meaning depends on it"
+    ],
+    "answer": 3,
+    "explanation": "An evil is defeated when it is taken up into a larger whole whose value depends on its presence, as a difficult passage makes a musical resolution what it is. The other cases merely set a separate good against the bad, which leaves the bad an unqualified evil that happens to be outweighed, and the community case also puts the good outside the sufferer's life."
+  },
+  {
+    "id": "what-the-argument-concludes",
+    "section": "balancing-off-and-defeat",
+    "question": "The argument from horrendous evils, as the article sets it out, concludes that God does not exist.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Its conclusion is that the responses standardly offered by theodicy, which supply only balancing off, do not show that God is good to each person. That leaves a theism which claims God is good to persons with an unpaid debt, rather than refuting theism."
+  },
+  {
+    "id": "why-finite-goods-cannot-defeat",
+    "section": "what-could-defeat-a-horror",
+    "question": "Why, on Adams's account, can no amount of ordinary finite goods defeat a horror?",
+    "options": [
+      "They are commensurable with the harm, so they can outweigh it but never take it up",
+      "There are always fewer of them in a life than there are evils to be covered, however long it lasts",
+      "They cannot occur at all in a life that has once contained a horror",
+      "They are enjoyed by other people rather than by the one who suffered"
+    ],
+    "answer": 0,
+    "explanation": "Happiness, achievement and relationship are of the same order as the harm, so they can sit alongside it but not take it up. Adams's candidate is relationship with God, a good incommensurate with anything finite, into which the horror is integrated through divine participation in suffering; the point concerns the kind of good, not a shortfall in quantity."
+  },
+  {
+    "id": "why-the-account-is-eschatological",
+    "section": "whether-the-sufferer-has-to-see-it",
+    "question": "Adams accepts that a life's being a great good to someone requires that they eventually be able to recognise it. Why does this make her account eschatological?",
+    "options": [
+      "Recognition requires knowing God's reasons, which nobody can know within the limits of this life",
+      "Defeat requires goods to other people, and those only appear after death",
+      "Many participants die in or are destroyed by the horror, so recognition cannot come in this life",
+      "Only perpetrators need to recognise the defeat, and they are judged after death"
+    ],
+    "answer": 2,
+    "explanation": "Goodness to someone is not goodness in their vicinity, so the participant must come to see their experience as taken up rather than merely ended, and for many that cannot happen before death. For anyone assessing theism from outside, the cost is that the answer moves to a place where nothing can check it."
+  },
+  {
+    "id": "tension-with-skeptical-theism",
+    "section": "how-it-relates-to-the-sceptical-reply",
+    "question": "Why is it uncomfortable, on the article's account, to hold both skeptical theism and Adams's account of defeat?",
+    "options": [
+      "Saying only intimacy with God can defeat a horror is the kind of value judgement it says we cannot make",
+      "They are strictly inconsistent, since one says the relevant goods are beyond our ken and the other names one",
+      "Skeptical theism relies on balancing off, which Adams's account explicitly rejects",
+      "Adams denies that we have any grasp of the structure of value at all"
+    ],
+    "answer": 0,
+    "explanation": "Arguing that nothing smaller than intimacy with God will do is a substantive comparative claim about the structure of value, which sits badly with insisting on human incapacity in matters of value. The two are not strictly inconsistent, which is the trap, since one could identify the shape of an adequate response without surveying the goods available in particular cases."
+  },
+  {
+    "id": "who-is-an-anti-theodicist",
+    "section": "the-other-tradition",
+    "question": "Which of these people holds an anti-theodicist position?",
+    "options": [
+      "An atheist who thinks every theodicy so far has failed, so the argument from evil succeeds",
+      "A theist who thinks theodicy has not yet succeeded but hopes a better one will be found",
+      "A confident theist who holds that justifying God's permission of horrors should not be attempted",
+      "A skeptical theist who holds that we cannot tell which goods God might be securing by permitting evil"
+    ],
+    "answer": 2,
+    "explanation": "Anti-theodicy claims that the project should not be undertaken, not merely that it has not yet succeeded, and several of its proponents are confident theists. The atheist is the tempting misreading of it as a concession that the argument from evil wins; the skeptical theist still engages the argument, by blocking an inference rather than refusing the question."
+  },
+  {
+    "id": "insensitivity-and-truth",
+    "section": "the-other-tradition",
+    "question": "A theodicist answers the moral insensitivity objection by showing that her theodicy is true. Why does this not meet the objection?",
+    "options": [
+      "The objection assumes from the outset that no theodicy could possibly be true, so it begs the question",
+      "A true theodicy may still fail to persuade those who are suffering",
+      "The objection is a charge against the theodicist's personal character",
+      "The objection targets theodicy as a practice, whose effect does not depend on truth"
+    ],
+    "answer": 3,
+    "explanation": "The charge is that habitually explaining atrocities as permitted for a greater good trains one to see others' worst experiences as instrumental, and that this deforms perception whether or not the explanations are true. The better versions are explicit that it is not a charge that theodicists are bad people; it concerns the tendency of a practice."
+  },
+  {
+    "id": "the-third-stance",
+    "section": "ivans-refusal",
+    "question": "The dilemma objection says anti-theodicy must either treat evils as evidence against God or explain how they are not. What does the reply to it contest?",
+    "options": [
+      "That evils could ever count as evidence against God's existence, however terrible they are",
+      "That those are the only stances, since protest and action are also available",
+      "That a theist is entitled to ask how evil and God's goodness could be compatible with each other",
+      "That holding belief in God alongside such protest puts that belief under any real strain at all"
+    ],
+    "answer": 1,
+    "explanation": "The reply offers a third stance on which the right response to horror is protest and action, and the demand for a justification is itself a symptom of the wrong relation to what happened, as with offering reasons to the grieving. It does not deny the strain: it concedes that the stance is under strain and claims only that the strain is no worse than in the alternatives."
+  }
+]

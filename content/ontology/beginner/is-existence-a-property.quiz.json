@@ -1,0 +1,91 @@
+[
+  {
+    "id": "kant-target-premise",
+    "section": "the-argument-that-provoked-the-question",
+    "question": "Which step of Descartes's ontological argument does Kant's objection target?",
+    "options": [
+      "The claim that existence is a perfection, a feature that a concept can include",
+      "The claim that the concept of a supremely perfect being includes every perfection",
+      "The claim that we really do possess a concept of a supremely perfect being",
+      "The inference from what a concept includes to how things stand in the world"
+    ],
+    "answer": 0,
+    "explanation": "Kant denies that existence is a determining property, so it cannot be one of the features a concept contains, and without that the argument cannot get existence out of the concept. The premise that the concept includes every perfection can stand; the trouble is that existence is not among the perfections to be included."
+  },
+  {
+    "id": "hundred-thalers-lesson",
+    "section": "the-argument-that-provoked-the-question",
+    "question": "What does the hundred thalers example show, on the article's reading?",
+    "options": [
+      "That real thalers have more properties than possible ones",
+      "That existence is a perfection, since real money is better to have than possible money",
+      "That existing adds nothing to the description of a thing, and yet it is not nothing",
+      "That merely possible thalers are non-existent objects with the same properties as real ones"
+    ],
+    "answer": 2,
+    "explanation": "Considered as concepts, the real and the possible hundred thalers are identical, while the difference to one's finances is considerable, so existing is neither a further detail of the description nor nothing. Reading the example as showing that real money has more properties gets it backwards."
+  },
+  {
+    "id": "spot-second-order",
+    "section": "making-the-objection-precise",
+    "question": "Which of these is a second-order property?",
+    "options": [
+      "Being white, which some tigers have",
+      "Weighing over two hundred kilograms",
+      "Being a tiger, which every tiger has",
+      "Being instantiated by fewer than a thousand things"
+    ],
+    "answer": 3,
+    "explanation": "Being instantiated by fewer than a thousand things is not something any individual tiger has; it is something a property, such as being a white tiger, can have. Being a tiger is the tempting choice because it is general, but it is still had by individual animals, so it sits at the first level."
+  },
+  {
+    "id": "dodos-do-not-exist",
+    "section": "making-the-objection-precise",
+    "question": "On Frege's analysis, what does \"Dodos do not exist\" say?",
+    "options": [
+      "That each dodo lacks the property of existing, though it has all its other features",
+      "That nothing at all has the property of being a dodo",
+      "That dodos have being of a kind but lack existence",
+      "That the word \"dodo\" fails to express any concept at all"
+    ],
+    "answer": 1,
+    "explanation": "For Frege an existence claim says of a property whether something has it, so the sentence is about the property of being a dodo, not about dodos. The first option treats existence as a first-order feature that individuals lack, which is exactly the picture the analysis replaces."
+  },
+  {
+    "id": "singular-existentials",
+    "section": "the-predicate",
+    "question": "Why is \"Socrates does not exist\" a difficulty for the Fregean analysis, and what is the standard response?",
+    "options": [
+      "Socrates once existed, so the analysis wrongly makes the sentence true; the response adds tenses",
+      "The sentence revives a first-order existence predicate, and with it the ontological argument",
+      "It concerns a past object; the response makes existence come in degrees",
+      "A name is not a property; the response treats the name as a disguised description"
+    ],
+    "answer": 3,
+    "explanation": "The nothing-has-it treatment needs a property to apply to, and Russell's theory of descriptions supplies one by turning \"Socrates\" into something like \"the teacher of Plato\", at the cost of a controversial view of names. The second option is the trap: even a first-order existence predicate would not restore the ontological argument, since existence would still need to be shown a perfection."
+  },
+  {
+    "id": "first-order-predicate-still-fails",
+    "section": "the-predicate",
+    "question": "Even if existence were allowed as a genuine first-order predicate, the ontological argument would still face Kant's original complaint.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "A first-order existence predicate would still have to be shown to be a perfection contained in a concept, and that is the step Kant's complaint attacks. So the objection from singular existentials, whatever its force against Frege, does nothing to rescue Descartes."
+  },
+  {
+    "id": "ontological-question-reframed",
+    "section": "what-follows-for-the-subject",
+    "question": "On the Fregean view, what is the ontological question about any kind, such as electrons?",
+    "options": [
+      "Whether individual electrons possess the further property of existing",
+      "In what degree or mode electrons exist",
+      "Whether anything satisfies the condition of being an electron",
+      "Whether the concept of an electron includes existence among its features"
+    ],
+    "answer": 2,
+    "explanation": "Existence claims say whether conditions are satisfied, so asking whether electrons exist is asking whether anything satisfies the condition of being one. Talk of degrees or modes of existing presupposes that existence is a feature things can have more or less of, which views wanting such degrees must argue for against the Fregean analysis."
+  }
+]

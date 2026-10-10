@@ -1,0 +1,104 @@
+[
+  {
+    "id": "object-asymmetry",
+    "section": "things",
+    "question": "The article's definition of an object deliberately builds in very little. What is the one substantive commitment it does make?",
+    "options": [
+      "Objects are made of matter and have a location",
+      "Objects last for some time rather than flashing in and out",
+      "Objects bear properties without being properties of anything else",
+      "Objects are nothing more than bundles of the properties they bear"
+    ],
+    "answer": 2,
+    "explanation": "The asymmetry between bearer and borne is the one thing the definition assumes, which is why numbers, handled mugs and brief flashes are not ruled out. The bundle option is the rival view that denies the asymmetry, and the article flags that ordinary speech assumes the asymmetry without establishing it."
+  },
+  {
+    "id": "two-chipped-mugs",
+    "section": "ways-things-are",
+    "question": "Two mugs are both chipped. What does the article's working distinction between a thing and how it is commit you to?",
+    "options": [
+      "That a single entity, chippedness, is wholly present in each of the two mugs at once",
+      "Only that each mug is some way, leaving open whether chippedness is shared",
+      "That there are just two chipped mugs and no property of being chipped at all",
+      "That \"is chipped\" must name a property, since it is a meaningful predicate"
+    ],
+    "answer": 1,
+    "explanation": "The article stays neutral on whether there is one thing both mugs have, since every side of that dispute accepts the thing and how-it-is distinction in some form. The first and third options each take a side in the very dispute the article sets aside for the ontology ladder."
+  },
+  {
+    "id": "predication-vs-instantiation",
+    "section": "what-connects-them",
+    "question": "Why, on the article's account, can instantiation not be the same thing as predication?",
+    "options": [
+      "A world with no speakers in it could still contain mugs that are chipped",
+      "Predication concerns true sentences, instantiation false ones as well",
+      "Instantiation is something speakers do, while predication holds in the world",
+      "Every property corresponds to a predicate, but not every predicate to a property"
+    ],
+    "answer": 0,
+    "explanation": "Predication is a linguistic operation, and instantiation is the worldly relation that makes a predication true, so it can hold where nobody is speaking. The third option reverses the two notions, which is the commonest way of muddling them."
+  },
+  {
+    "id": "abundant-assumption",
+    "section": "what-connects-them",
+    "question": "Since \"is not a mug\" attaches happily to the Eiffel Tower, someone concludes there is a property of being not a mug that the tower instantiates. Which conception of properties are they assuming?",
+    "options": [
+      "The sparse conception, on which only predicates that carve nature at its joints track properties",
+      "The bundle theory, on which an object is nothing over and above the properties it bears",
+      "The view that every property is really a relation",
+      "The abundant conception, on which every meaningful predicate corresponds to a property"
+    ],
+    "answer": 3,
+    "explanation": "Moving straight from a meaningful predicate to a property is exactly what the abundant conception permits. The sparse conception denies that move, treating predicates like \"is not a mug\" as useful shorthand rather than as tracking a joint in nature."
+  },
+  {
+    "id": "bradley-regress-response",
+    "section": "what-connects-them",
+    "question": "How does the usual response to Bradley's regress stop it?",
+    "options": [
+      "By accepting the endless chain of relating relations as harmless, since each link is real",
+      "By treating instantiation as a kind of predication, something speakers do rather than the world",
+      "By denying that instantiation is a third item that itself needs attaching to the others",
+      "By denying that objects really have properties at all, so there is nothing to connect"
+    ],
+    "answer": 2,
+    "explanation": "The regress starts only if instantiation is a third constituent alongside the mug and the property; the usual response makes it a primitive tie instead. Accepting the chain as harmless is tempting but concedes the objection's premise, and the article notes that even the tie response may only stop the regress by declaring it stopped."
+  },
+  {
+    "id": "classify-extrinsic",
+    "section": "two-kinds-of-property",
+    "question": "Which of these properties of a particular coin is extrinsic?",
+    "options": [
+      "Being made of copper and nickel",
+      "Having a mass of 3.56 grams",
+      "Being circular with a milled edge",
+      "Being legal tender in Britain"
+    ],
+    "answer": 3,
+    "explanation": "A coin that was the only thing in existence could still be copper, circular and of that mass, but it could not be legal tender, which depends on a country and its laws. Mass can feel relational because we measure it against standards, but the coin has it purely in virtue of how it itself is."
+  },
+  {
+    "id": "lewis-three-converge",
+    "section": "two-kinds-of-property",
+    "question": "On the article's account, Lewis's three ways of orientating the intrinsic and extrinsic distinction (aboutness, determination and duplication) are agreed to pick out one and the same notion.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "They sound like three ways of saying one thing, but the literature notes they may pick out different notions. The article's lesson is that a distinction can be indispensable in practice and still resist a clean definition."
+  },
+  {
+    "id": "taller-than-you",
+    "section": "two-kinds-of-property",
+    "question": "A man in Delhi grows taller than you, so you stop being taller than him. On the article's account, what has happened to you?",
+    "options": [
+      "A Cambridge change: an extrinsic property shifted while nothing about you altered",
+      "A genuine change, since you had a property and now lack it, which is all change requires",
+      "No change at all, since relations are not properties of either person",
+      "An intrinsic change, since your height relative to him is now different from what it was"
+    ],
+    "answer": 0,
+    "explanation": "Restricting genuine change to intrinsic properties is what stops everything counting as changing constantly, and what is left over is called Cambridge change. The \"genuine change\" option applies the bare have-then-lack definition without that restriction, which is the absurdity the distinction exists to block."
+  }
+]

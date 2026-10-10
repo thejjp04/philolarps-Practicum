@@ -1,0 +1,130 @@
+[
+  {
+    "id": "origin-bears-on-justification",
+    "section": "the-discipline",
+    "question": "In the drug example, what does learning how your friend came by their view about the company tell you?",
+    "options": [
+      "That the view about the company is false, since a belief from a bad cause cannot be true",
+      "Nothing about the company, but a lot about whether their confidence is worth relying on",
+      "Nothing at all, since appealing to how a belief arose is always the genetic fallacy",
+      "That the view is probably false, though not certainly, since bad causes are unreliable"
+    ],
+    "answer": 1,
+    "explanation": "An origin cannot show a belief false but can remove a support for it, so if their confidence was your reason, you have lost your reason. Treating every appeal to causes as fallacious is the confusion this distinction is meant to clear up."
+  },
+  {
+    "id": "feuerbach-not-demolition",
+    "section": "the-nineteenth-century-accounts",
+    "question": "How did Feuerbach himself understand his projection theory?",
+    "options": [
+      "As a demolition of religion, showing that its content was false and ought to be discarded entirely",
+      "As a scientific hypothesis about childhood dependence, to be tested against clinical observation",
+      "As an account of worship directed at society, which really does exceed and outlast the individual",
+      "As preserving religion's content by relocating it, so what was said of God stays true of humanity"
+    ],
+    "answer": 3,
+    "explanation": "He took worship to be the species contemplating its own nature unawares, and kept its content as true of humanity. Childhood dependence is Freud's mechanism and society is Durkheim's, so the second and third options belong to his successors."
+  },
+  {
+    "id": "freud-illusion-technical",
+    "section": "the-nineteenth-century-accounts",
+    "question": "In Freud's technical sense, calling religious beliefs illusions means they are false.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "An illusion in his sense is a belief whose adoption is driven by wish rather than evidence, and the label does not prejudge whether it is also false. Reading \"illusion\" as \"falsehood\" commits exactly the genetic fallacy the article opens with."
+  },
+  {
+    "id": "projection-weakness",
+    "section": "the-nineteenth-century-accounts",
+    "question": "What common weakness does the article find in the nineteenth-century projection accounts?",
+    "options": [
+      "They were reached by reflection, posited untested mechanisms and are hard to falsify",
+      "They were all refuted outright by the global persistence of religion in the twentieth century",
+      "They assumed that religion is an adaptation, which later cognitive science showed to be false",
+      "They were written by unbelievers, so motive fixed their conclusions"
+    ],
+    "answer": 0,
+    "explanation": "Any religious phenomenon can be redescribed as projection after the fact, so the accounts resist testing. Their prediction of decline has a mixed record rather than an outright refutation, and dismissing them for their authors' motives would be the genetic fallacy again."
+  },
+  {
+    "id": "by-product-not-module",
+    "section": "the-empirical-successor",
+    "question": "What is the central move of the cognitive science of religion?",
+    "options": [
+      "Identifying a dedicated religion module in the brain that evolved because belief aided group survival",
+      "Showing that religious belief comes from explicit reasoning about nature",
+      "Treating religion as a by-product of ordinary capacities that evolved for other purposes",
+      "Explaining religion as a projection of the collective, which really does impose obligations on individuals"
+    ],
+    "answer": 2,
+    "explanation": "There is no religion module or instinct; agent detection, mind-reading and memory produce religious concepts when working normally. An adaptation for religion is exactly what the definition contrasts the programme with, so the first option reverses it."
+  },
+  {
+    "id": "boyer-minimally-counterintuitive",
+    "section": "the-empirical-successor",
+    "question": "On Boyer's account, which concept is best remembered and passed on?",
+    "options": [
+      "A statue that exists only on Tuesdays, has no location and is made of grief, since strangeness grips",
+      "A statue that does nothing unusual at all, since familiar concepts are the easiest of all to store",
+      "A statue that hears prayers, violating one expectation while behaving normally in every other respect",
+      "Whichever statue is most important to the community, since transmission follows social importance"
+    ],
+    "answer": 2,
+    "explanation": "Concepts violating one or two expectations sit in the narrow band that survives cultural transmission best. Violating everything makes a concept untransmissible, and violating nothing makes it forgettable, so neither extreme wins."
+  },
+  {
+    "id": "agency-detection-status",
+    "section": "the-empirical-successor",
+    "question": "On the article's account, what is the current status of hyperactive agency detection?",
+    "options": [
+      "A live hypothesis that has faced empirical challenge, so it should be flagged as such in any argument",
+      "An established result, confirmed by experiments in which threatening conditions produced over-detection",
+      "A refuted proposal, which researchers abandoned once Barrett changed its name to hypersensitive",
+      "An untestable speculation in the style of Freud, which no experiment could ever bear upon at all"
+    ],
+    "answer": 0,
+    "explanation": "Experimental work has questioned whether threat produces the predicted over-detection, so the mechanism is a hypothesis rather than a result. The renaming widened the range of triggers and was not an abandonment, so the third option misreads it."
+  },
+  {
+    "id": "vision-not-debunked",
+    "section": "what-follows",
+    "question": "Why does the natural history of vision not debunk what we see?",
+    "options": [
+      "Because vision, unlike religious belief, was not shaped by selection",
+      "Because vision has no complete natural explanation, so its origin leaves room for a further cause",
+      "Because vision is a product of reasoning, and only beliefs not reached by reasoning can be debunked",
+      "Because a mechanism can be caused, evolved and reliable at once, and vision tracks the world"
+    ],
+    "answer": 3,
+    "explanation": "Debunking needs the mechanism to be insensitive to the truth of its outputs, and vision is not. Vision is a product of selection with a complete natural explanation, so the first two options deny what the article affirms."
+  },
+  {
+    "id": "barrett-reply-limit",
+    "section": "the-replies",
+    "question": "What is the limit of Barrett's reply that God may have designed the agency-detecting mechanism?",
+    "options": [
+      "It only works if the mechanism is reliable, which the evidence of conflicting religions shows it is not",
+      "It defends theism only for those who already believe, and offers no support for theism itself",
+      "It proves too much, making every mechanism-formed belief true",
+      "It conflicts with the cognitive science itself, which shows that the mechanism was not designed at all"
+    ],
+    "answer": 1,
+    "explanation": "The reply is available only to someone who already holds that a God designed the mechanism, so citing the mechanism as evidence of design would assume the conclusion. The conflicting-claims point is the later objection from performance, not the limit the article attaches to the reply."
+  },
+  {
+    "id": "universal-belief-argument",
+    "section": "the-replies",
+    "question": "According to the aside, what is the clearest result of the natural-explanation programme?",
+    "options": [
+      "That religious belief is unjustified for anyone who first acquired it through these mechanisms",
+      "That the persistence of religion requires no explanation at all, natural or otherwise",
+      "It ends the argument that a conviction found in every society is unlikely to be a mistake",
+      "That theism is less probable than atheism, since natural causes explain belief but not unbelief"
+    ],
+    "answer": 2,
+    "explanation": "If every society would produce such beliefs whether or not anything answered to them, near-universality is no longer evidence. Natural explanations exist for unbelief too, and the article stresses that symmetry, so the last option misstates it."
+  }
+]

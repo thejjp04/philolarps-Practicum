@@ -1,0 +1,127 @@
+[
+  {
+    "id": "problem-generated-by-simplicity",
+    "section": "why-the-problem-is-generated-from-inside",
+    "question": "Why, on the article's account, is the problem of religious language generated from inside the classical tradition?",
+    "options": [
+      "Because sceptics showed that theological sentences fail to express any proposition at all",
+      "Because if God has no properties, \"is good\" cannot be attributing a property to a subject",
+      "Because simplicity requires every true statement about God to be checkable by observation",
+      "Because simplicity makes \"omnipotent\" and \"omniscient\" synonyms, which usage refutes"
+    ],
+    "answer": 1,
+    "explanation": "Rung 4 denied that God has properties, so whatever the predicate does in the theological sentence, it is not what it does in \"Ahmed is good\". The verificationist charge came later and from outside; the classical worry is independent of it, which is why its collapse left this problem standing."
+  },
+  {
+    "id": "maimonides-reads-predicates-negatively",
+    "section": "saying-what-god-is-not",
+    "question": "On Maimonides's account, what does \"God is wise\" properly say?",
+    "options": [
+      "That God has wisdom in the highest possible degree, without any limit",
+      "That God's wisdom stands to God as human wisdom stands to a human",
+      "That God's wisdom is identical with his power and with God himself",
+      "That God is not ignorant"
+    ],
+    "answer": 3,
+    "explanation": "Maimonides allows only negative attributes and attributes of action, so a positive-looking predicate of essence is read as a denial. The proportionality option is Aquinas's analogy, a way of keeping positive predication that Maimonides refuses."
+  },
+  {
+    "id": "negation-leans-on-natural-theology",
+    "section": "saying-what-god-is-not",
+    "question": "A reply to the objection that a purely negative God is indistinguishable from no God says the denials operate on a referent fixed by the earlier arguments. What does this reply cost?",
+    "options": [
+      "It makes negative theology depend on natural theology, so negation is not self-sufficient",
+      "It concedes that the resulting conception of God is not merely thin but entirely empty",
+      "It requires positive attributes of essence after all, contrary to Maimonides",
+      "It commits the apophatic theologian to the univocity of being"
+    ],
+    "answer": 0,
+    "explanation": "Reference is fixed by the argument to \"that on which everything else depends\", and the via negativa then says what the referent is not, a dependence the mystical tradition would not have welcomed. The reply explicitly rejects the emptiness option: it concedes the conception is thin, not that it is empty."
+  },
+  {
+    "id": "pure-equivocation-kills-inference",
+    "section": "what-a-word-can-be-doing",
+    "question": "Why is pure equivocation not a live position for predicates applied to God?",
+    "options": [
+      "Because it places God under a common concept with creatures, which simplicity forbids",
+      "Because it would make all talk of God literally false rather than merely imprecise or thin",
+      "Because every argument about God, the classical theist's included, would then equivocate",
+      "Because it makes the perfection named exist in creatures first and in God derivatively"
+    ],
+    "answer": 2,
+    "explanation": "If every term shifts sense between premises about creatures and conclusions about God, no argument about God could be valid, so equivocation serves as the reductio that motivates a third option. Placing God under a common concept is the cost of univocity, the opposite extreme."
+  },
+  {
+    "id": "proportionality-missing-term",
+    "section": "what-a-word-can-be-doing",
+    "question": "What is the standard objection to the analogy of proportionality?",
+    "options": [
+      "It is just univocity under another name, since \"wise\" keeps one sense throughout",
+      "A proportion needs three terms known, and how God's wisdom stands to God is the unknown one",
+      "It reverses Aquinas's order of being, putting creatures' perfections before God's",
+      "It applies only to terms like \"healthy\", which hold primarily of one thing and derivatively of others"
+    ],
+    "answer": 1,
+    "explanation": "To know how God's wisdom stands to God you would need to know God, which the doctrine denies, so critics say analogy names the problem rather than solving it and collapses into univocity or equivocation once spelled out. The \"healthy\" example belongs to the analogy of attribution, a different form."
+  },
+  {
+    "id": "scotus-neutral-concept",
+    "section": "the-univocity-of-being",
+    "question": "What is Scotus's argument that the concept of being is univocal across God and creatures?",
+    "options": [
+      "God and creatures differ only in degree rather than in kind, so one concept naturally covers both",
+      "Analogy collapses into equivocation, and equivocation is a reduction to absurdity",
+      "Natural theology has already shown that God is one more item in the inventory of beings",
+      "One can be certain God exists yet unsure whether God is finite, so being is a neutral concept"
+    ],
+    "answer": 3,
+    "explanation": "A concept neutral between finite and infinite is one concept, and without it the arguments of natural theology would equivocate. The degree option misreads Scotus: univocity concerns the concept, while the modes of being, finite and infinite, differ absolutely."
+  },
+  {
+    "id": "verificationism-fell-from-within",
+    "section": "the-charge-of-meaninglessness",
+    "question": "On the article's account, the verification principle was abandoned chiefly because theologians showed that it refuted itself.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "It collapsed for reasons internal to philosophy of science: every precise version either excluded scientific generalisations or admitted the metaphysics it was meant to exclude. The self-refutation point is real, but the decisive failure was that no satisfactory reformulation was ever produced."
+  },
+  {
+    "id": "mitchell-weighs-the-evidence",
+    "section": "the-charge-of-meaninglessness",
+    "question": "Which response to Flew concedes that the troubling evidence really counts against the belief, while holding that it is outweighed by a commitment formed on other grounds?",
+    "options": [
+      "Mitchell's parable of the partisan and the stranger",
+      "Hare's account of bliks as frameworks for interpreting experience",
+      "Hick's eschatological verification at the end of the road",
+      "Braithwaite's account of religious statements as declared intentions"
+    ],
+    "answer": 0,
+    "explanation": "The partisan knows the ambiguous incidents count against him and keeps trusting anyway, weighing evidence against commitment. Hare's bliks are the tempting confusion, but they are unfalsifiable frameworks within which falsification is conducted, not beliefs weighed against counter-evidence."
+  },
+  {
+    "id": "non-assertion-concedes-the-charge",
+    "section": "giving-up-the-description",
+    "question": "What is the common objection to Braithwaite's account and to the Wittgensteinian line on religious language?",
+    "options": [
+      "They make religious sentences verifiable after all, which positivists never accepted",
+      "They rely on the analogy of being, which collapses into univocity once its content is spelled out",
+      "Believers take themselves to assert things, so these views concede the verificationist charge",
+      "They treat religious language as scientific description and so commit a category error"
+    ],
+    "answer": 2,
+    "explanation": "Someone praying for a recovery is asking someone to do something, so an account on which the sentences were never assertions has agreed with the charge and recommended carrying on. The category-error option inverts the Wittgensteinian view, which accuses its critics of exactly that mistake."
+  },
+  {
+    "id": "alston-functional-univocity",
+    "section": "where-the-argument-stands",
+    "question": "How does Alston argue that some predicates can apply to God literally?",
+    "options": [
+      "By giving them functional meanings, so a core carries over while the way of realising it does not",
+      "By reading every predicate negatively, so that \"knows\" means \"is not ignorant\"",
+      "By holding that God's knowing is realised in the same machinery as ours, only freed of every limit",
+      "By treating the predicates as related in sense through the analogy of proportionality"
+    ],
+    "answer": 0,
+    "explanation": "Alston claims a limited univocity: to say God knows is to say a functional condition holds, without the neural or temporal machinery that realises knowing in us. The classical reply is that functional conditions still give God a structure, which is composition again."
+  }
+]

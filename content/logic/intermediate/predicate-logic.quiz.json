@@ -1,0 +1,127 @@
+[
+  {
+    "id": "relation-place-order",
+    "section": "inside-the-sentence",
+    "question": "With $Txy$ read \"$x$ taught $y$\", $a$ for Ann and $b$ for Ben, which formula says that Ben was taught by Ann?",
+    "options": [
+      "$Tba$",
+      "$Tab$",
+      "$Tab \\land Tba$",
+      "$Tbb$"
+    ],
+    "answer": 1,
+    "explanation": "The first place is the teacher and the second the one taught, so Ann teaching Ben is $Tab$. The passive \"Ben was taught by Ann\" puts Ben first in English, which makes $Tba$ tempting, but $Tba$ says that Ben taught Ann."
+  },
+  {
+    "id": "domain-changes-truth",
+    "section": "saying-something-about-everything",
+    "question": "With $Sx$ read \"$x$ is a student\", $\\forall x Sx$ is true under one interpretation and false under another, though $S$ means the same in both. What explains this?",
+    "options": [
+      "The interpretations have different domains, and a universal claim is about its domain alone",
+      "The variable $x$ names a different object under each interpretation",
+      "The formula contains a free variable, so it has no fixed truth value",
+      "The quantifier is ambiguous between \"every\" and \"any\" in English"
+    ],
+    "answer": 0,
+    "explanation": "A universal claim is about the domain and nothing outside it, so \"everything is a student\" can be true over a domain of students and false over one containing anyone else. A variable names nothing at all, and here $x$ is bound, so the formula is a sentence."
+  },
+  {
+    "id": "conditional-or-conjunction",
+    "section": "which-connective-goes-with-which-quantifier",
+    "question": "The domain contains two philosophers, both mathematicians, and a rock. Which of $\\forall x (Px \\rightarrow Mx)$ and $\\forall x (Px \\land Mx)$ is true?",
+    "options": [
+      "Only the conjunction, since every object satisfies both predicates",
+      "Both, since every philosopher in the domain is a mathematician",
+      "Only the conditional, since the rock satisfies it vacuously as a non-philosopher",
+      "Neither, since the rock is neither a philosopher nor a mathematician"
+    ],
+    "answer": 2,
+    "explanation": "The rock is not a philosopher, so it satisfies the conditional vacuously and does not interfere, while the conjunction demands that the rock be both a philosopher and a mathematician. That is why \"every philosopher is a mathematician\" takes the conditional."
+  },
+  {
+    "id": "some-are-not",
+    "section": "which-connective-goes-with-which-quantifier",
+    "question": "Which formula says that some philosopher is not a mathematician?",
+    "options": [
+      "$\\exists x (Px \\rightarrow \\neg Mx)$",
+      "$\\neg \\exists x (Px \\land Mx)$",
+      "$\\forall x (Px \\rightarrow \\neg Mx)$",
+      "$\\exists x (Px \\land \\neg Mx)$"
+    ],
+    "answer": 3,
+    "explanation": "An existential claim has to find an object that is a philosopher and fails to be a mathematician, so it takes a conjunction. The conditional version is made true by any non-philosopher at all, and $\\neg \\exists x (Px \\land Mx)$ says that no philosopher is a mathematician."
+  },
+  {
+    "id": "renaming-bound-variables",
+    "section": "bound-and-free",
+    "question": "Which formula says the same as $\\forall x \\exists y Lxy$?",
+    "options": [
+      "$\\forall y \\exists x Lxy$",
+      "$\\forall z \\exists w Lzw$",
+      "$\\exists y \\forall x Lxy$",
+      "$\\forall x \\exists y Lyx$"
+    ],
+    "answer": 1,
+    "explanation": "Bound variables can be renamed throughout without changing the claim, provided each quantifier still governs the same places. $\\forall y \\exists x Lxy$ looks like a mere relettering, but it changes which place the universal quantifier governs, so it says that everyone is loved by someone."
+  },
+  {
+    "id": "free-occurrences",
+    "section": "scope",
+    "question": "In $\\exists x (Fx \\land Gy) \\rightarrow Hx$, which variable occurrences are free?",
+    "options": [
+      "Only $y$, since every $x$ is claimed by the quantifier",
+      "Only the $x$ in $Hx$, since $y$ sits inside the brackets",
+      "$y$, and the $x$ in $Hx$",
+      "None, since the quantifier binds every variable that follows it"
+    ],
+    "answer": 2,
+    "explanation": "The scope of $\\exists x$ is fixed by the parentheses, so it reaches $Fx$ and $Gy$ but not $Hx$. The $y$ is never bound because no quantifier uses $y$, and the $x$ in $Hx$ lies outside the scope, so the formula is not a sentence."
+  },
+  {
+    "id": "quantifier-de-morgan",
+    "section": "scope",
+    "question": "Which formula is equivalent to $\\neg \\forall x Fx$?",
+    "options": [
+      "$\\exists x \\neg Fx$",
+      "$\\forall x \\neg Fx$",
+      "$\\neg \\exists x Fx$",
+      "$\\neg \\exists x \\neg Fx$"
+    ],
+    "answer": 0,
+    "explanation": "Not everything is $F$ exactly when something fails to be $F$. $\\forall x \\neg Fx$ says nothing is $F$, which is far stronger: in a domain of three objects, two of them $F$, $\\neg \\forall x Fx$ is true and $\\forall x \\neg Fx$ false."
+  },
+  {
+    "id": "self-admiration-domain",
+    "section": "two-quantifiers-at-once",
+    "question": "In a domain of three people, each admires themselves and nobody else. With $Axy$ read \"$x$ admires $y$\", which formula is true?",
+    "options": [
+      "$\\exists y \\forall x Axy$",
+      "$\\forall x \\forall y Axy$",
+      "$\\exists x \\forall y Axy$",
+      "$\\forall x \\exists y Axy$"
+    ],
+    "answer": 3,
+    "explanation": "Each person has someone they admire, namely themselves, and an existential inside a universal may pick a different object for each person. Nobody is admired by all three, so $\\exists y \\forall x Axy$ is false: there the one object must serve for everyone."
+  },
+  {
+    "id": "no-unicorns",
+    "section": "what-the-quantifiers-do-not-mean",
+    "question": "In a domain with no unicorns, what are the values of $\\forall x (Ux \\rightarrow Px)$ and $\\exists x (Ux \\land Px)$?",
+    "options": [
+      "Both false, since there is nothing for either formula to be about",
+      "The first true and the second false, since no object is a unicorn",
+      "Both true, since neither formula is about anything in the domain",
+      "The first false and the second true, since universals need instances"
+    ],
+    "answer": 1,
+    "explanation": "Every object fails to be a unicorn, so each satisfies the conditional vacuously and the universal is true, while nothing satisfies the conjunction. Universal claims carry no existential import in the modern treatment; when it is wanted, $\\exists x Ux$ has to be conjoined explicitly."
+  },
+  {
+    "id": "tableau-may-run-forever",
+    "section": "what-is-preserved-and-what-is-lost",
+    "question": "In predicate logic, a tableau for an invalid argument always terminates with an open branch.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The tableau still closes on every valid argument given enough time, but on an invalid one it may run forever. That is the loss of decidability: no mechanical test settles validity for every argument in this language."
+  }
+]

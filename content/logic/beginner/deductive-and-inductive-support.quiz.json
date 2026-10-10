@@ -1,0 +1,93 @@
+[
+  {
+    "id": "nearly-valid",
+    "section": "two-standards-not-two-topics",
+    "question": "A student calls an argument \"nearly valid, because the premises make the conclusion very likely\". On the article's account, what is the right correction?",
+    "options": [
+      "Validity is all or nothing; what the student describes is inductive strength",
+      "The argument is valid, since very likely is close enough to guaranteed",
+      "The argument is deductive but weak, since it misses validity by only a little",
+      "The argument counts as inductively correct, since it is above the line"
+    ],
+    "answer": 0,
+    "explanation": "Deductive success is all or nothing, so there is no such thing as a nearly valid argument; making a conclusion very likely is a high degree of inductive strength. A deductive argument that falls short is not weak but invalid, and inductive strength has no line above which an argument counts as correct."
+  },
+  {
+    "id": "particular-to-general-deduction",
+    "section": "the-distinction-that-people-get-wrong",
+    "question": "Which of these arguments is valid even though it runs from a particular premise to a general conclusion?",
+    "options": [
+      "Every swan on this lake is white, and this bird is one of them, so it is white",
+      "Omar passed the exam, so at least one person passed the exam",
+      "The last three trains were late, so the next train will be late",
+      "Every metal tested so far conducts electricity, so every metal does"
+    ],
+    "answer": 1,
+    "explanation": "If Omar passed then someone did, so the premise guarantees the conclusion even though it moves from a particular case to a general one. The last option has the particular-to-general shape the old slogan assigns to induction and really is inductive, which is why direction of travel cannot be the test."
+  },
+  {
+    "id": "grant-support-deny-guarantee",
+    "section": "the-distinction-that-people-get-wrong",
+    "question": "A friend says: \"Her fingerprints are on the glass, so it is certain she was in the room.\" The evidence is good but falls short of a guarantee. On the article's account, what is the best response?",
+    "options": [
+      "Reject the argument outright, since it is invalid and so gives no support at all",
+      "Accept the conclusion as certain, since the evidence is strong",
+      "Grant that the evidence supports the conclusion, but deny that it guarantees it",
+      "Deny the premise, since fingerprints are no evidence of where someone was"
+    ],
+    "answer": 2,
+    "explanation": "When evidence is offered as decisive but is only suggestive, the right move is to grant the support and deny the guarantee. Rejecting it outright treats failing the deductive standard as failing every standard, which throws away real support."
+  },
+  {
+    "id": "invalid-charge-useless",
+    "section": "why-the-gap-exists-at-all",
+    "question": "A critic points out that a carefully argued weather forecast is not valid. How much damage does that do to the forecast?",
+    "options": [
+      "A great deal: an invalid argument gives no reason at all to accept its conclusion",
+      "Some: it shows the forecast is more likely wrong than right",
+      "It depends on whether the critic can also show a premise is false",
+      "None in itself: no ampliative argument is valid, so the charge does no work"
+    ],
+    "answer": 3,
+    "explanation": "A forecast reaches past its evidence, and any conclusion that does so could be false while the premises are true, so failing validity is what such arguments do by nature. The charge is technically correct and useless; the real question is how strongly the evidence supports the forecast, not whether it guarantees it."
+  },
+  {
+    "id": "spot-the-abduction",
+    "section": "explanation-as-a-reason-to-believe",
+    "question": "The kitchen floor is wet, there is a puddle under the freezer, and the freezer has stopped humming. You conclude that the freezer has broken down and defrosted. What kind of inference is this?",
+    "options": [
+      "Deduction, since the evidence entails the conclusion",
+      "Abduction, since one hypothesis best explains all the evidence",
+      "Generalisation, since it draws a rule from many observed cases",
+      "An unreasonable inference, since it is invalid"
+    ],
+    "answer": 1,
+    "explanation": "Nothing in the evidence entails a broken freezer (a power cut would produce much the same evidence), but one cause accounts for all three observations at once, which is inference to the best explanation. It is not a generalisation: no rule about a class of cases is being drawn from observed instances."
+  },
+  {
+    "id": "hume-circularity",
+    "section": "the-problem-underneath",
+    "question": "Someone defends induction by pointing out that inductive reasoning has worked well in the past. On Hume's problem as the article presents it, what is wrong with this defence?",
+    "options": [
+      "It is itself an inductive argument, so it assumes what was in question",
+      "It is a deductive argument with a premise that is false",
+      "Inductive reasoning has in fact failed more often than it has worked",
+      "Past success is irrelevant, since induction is a matter of pure logical form"
+    ],
+    "answer": 0,
+    "explanation": "Moving from \"induction has worked so far\" to \"induction will keep working\" is an inference from observed cases to unobserved ones, which is exactly what was being questioned. The defence is circular, not deductive, and its premise about past success is not what is in doubt."
+  },
+  {
+    "id": "why-deduction-first",
+    "section": "why-this-ladder-is-about-deduction",
+    "question": "Why does the rest of this logic tier set inductive strength aside?",
+    "options": [
+      "Because induction matters less than deduction to how people actually reason",
+      "Because inductive arguments are all invalid and so not worth study",
+      "Because validity depends only on form, which can be checked mechanically",
+      "Because no mathematics of any kind governs inductive strength"
+    ],
+    "answer": 2,
+    "explanation": "Validity can be decided by a procedure that never asks what the sentences are about, while inductive strength depends on subject matter, background information and the alternatives in play. The article is explicit that this is a choice about where to start, not a claim that induction matters less, and probability theory does govern it even though no algorithm reads off an argument's strength."
+  }
+]

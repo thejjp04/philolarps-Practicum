@@ -1,0 +1,130 @@
+[
+  {
+    "id": "pantheism-not-relabelling",
+    "section": "the-world-as-the-divine",
+    "question": "On the defence Levine develops, what distinguishes pantheism from a naturalism that merely reveres nature?",
+    "options": [
+      "The claim that nature was designed by a being who turns out to be identical with it",
+      "The claim that the universe is contingent and so depends on something beyond itself",
+      "The claim that the totality is a genuine unity whose value grounds a fitting response",
+      "The claim that nature will answer prayer when it is approached with the proper reverence"
+    ],
+    "answer": 2,
+    "explanation": "Reverence for nature is something an atheist may share, so it cannot be what pantheism adds; the substantive claim is that the totality is a unity rather than an aggregate, with a value that makes the religious vocabulary appropriate. A contingent universe dependent on something beyond it is the classical theist's picture, which Spinoza denied."
+  },
+  {
+    "id": "cosmological-argument-changes-sides",
+    "section": "the-world-as-the-divine",
+    "question": "Why does the cosmological argument, on the article's account, change sides rather than simply fail under pantheism?",
+    "options": [
+      "The pantheist accepts a necessary being and identifies it with the totality, so everything is necessary",
+      "There is no being standing outside the arrangement to have caused it, so the argument has no conclusion",
+      "The pantheist grants that the universe is contingent, so the necessary being must lie somewhere beyond it",
+      "A totality cannot be a necessary being, so the argument's conclusion counts directly against pantheism"
+    ],
+    "answer": 0,
+    "explanation": "What blocks the pantheist reading for the theist is the assumption that the universe is contingent, and Spinoza denied it, accepting the argument's conclusion with the totality as the necessary being. The price, paid openly, is that nothing could have been otherwise. The point about no outside arranger belongs to the design argument, which does fail outright."
+  },
+  {
+    "id": "pantheism-and-evil-cost",
+    "section": "the-world-as-the-divine",
+    "question": "Pantheism dissolves the problem of evil without giving up anything the problem was protecting.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The problem disappears because there is no agent who could have prevented the evil, which is a real advantage. But the relief comes from removing the being whose conduct was at issue, so providence, any reason to think the arrangement good, and anything that could answer a prayer go with it."
+  },
+  {
+    "id": "panentheism-and-evil",
+    "section": "the-world-in-the-divine",
+    "question": "Why does the article say the problem of evil is arguably worse for panentheism than for classical theism?",
+    "options": [
+      "Panentheism identifies God with the world outright, so every evil is literally a part of God",
+      "Panentheism keeps divine impassibility, so God remains unmoved by the suffering within the world",
+      "Panentheism makes God omnipotent in a stronger sense, so more evils could have been prevented",
+      "A God affected by every event lacks the classical distance and is not radically other"
+    ],
+    "answer": 3,
+    "explanation": "A God intimately involved in and affected by everything that happens has none of the distance the classical picture supplied, and the sceptical replies lose most of their force when the being is not radically other. Panentheism contains the world in God rather than identifying them, and it drops impassibility and traditional omnipotence rather than strengthening them."
+  },
+  {
+    "id": "design-and-number",
+    "section": "more-than-one",
+    "question": "Why does the design argument, read carefully, fail to favour one designer over several?",
+    "options": [
+      "Parsimony favours several designers, since each of them would then need far less power",
+      "Nothing in the inference fixes the number, and large artefacts are usually made by many hands",
+      "A single designer of everything would face the paradox of the stone, which several designers would not",
+      "Organisation in nature is too uneven and inconsistent to have come from a single mind"
+    ],
+    "answer": 1,
+    "explanation": "The argument infers from organisation of a kind agents produce to an agent or agents, and nothing in that reasoning settles how many; Philo noted that the analogy with large human artefacts favours a committee. Parsimony, if anything, counts against multiplying agents, though only against unnecessary ones."
+  },
+  {
+    "id": "monotheisms-real-advantage",
+    "section": "more-than-one",
+    "question": "On the article's account, what is monotheism's real advantage over polytheism?",
+    "options": [
+      "It is simpler, and parsimony always favours positing fewer entities whatever the evidence",
+      "It avoids the attribute paradoxes, which arise only when perfections are spread over many gods",
+      "It terminates the regress the cosmological argument opens, which many gods within a world leave open",
+      "It is better supported by the design argument, which points to one single organising intelligence"
+    ],
+    "answer": 2,
+    "explanation": "If the gods are beings within a larger reality, the question of what explains that reality is untouched, whereas a single ultimate ends the regress. Parsimony is weaker than it sounds, since several agents are not unnecessary if the phenomena support them, and the attribute paradoxes arise from loading every perfection onto one being, not from distributing them."
+  },
+  {
+    "id": "what-natural-theology-reaches",
+    "section": "a-creator-who-does-not-intervene",
+    "question": "Why does the article say deism matters for assessing the natural theology of the intermediate tier?",
+    "options": [
+      "If every one of those arguments succeeded, they would reach roughly deism, not a God who cares or reveals",
+      "Deism refutes natural theology by showing that reason can establish nothing worth having in religion",
+      "Deism shows that the hiddenness argument fails against any creator who established the world's order",
+      "Deism is what remains of theism once every theodicy has failed against the problem of evil"
+    ],
+    "answer": 0,
+    "explanation": "Cosmological, design and fine-tuning arguments deliver a necessary being, a designer, or a being interested in life, but none delivers intervention, care for individuals, answered prayer or revelation. The deists themselves held that reason establishes everything worth having, so the second option inverts their view; and hiddenness presses hardest on deism rather than failing against it."
+  },
+  {
+    "id": "diagnosis-not-justification",
+    "section": "traditions-without-a-creator",
+    "question": "How does a tradition without a creator transform the question of suffering, on the article's account?",
+    "options": [
+      "It asks whether suffering is gratuitous, rather than whether it is outweighed by goods",
+      "It turns a question about God's goodness into a question about God's power",
+      "It leaves the question as it was, since suffering needs justifying on any view",
+      "It asks what suffering is, what produces it and what ends it, not why it is permitted"
+    ],
+    "answer": 3,
+    "explanation": "The change is from justification to diagnosis, which eliminates the problem the evil rungs were occupied with while raising its own difficulties about whether the diagnosis is correct and the cure effective. Justification is needed only where someone permitted the suffering, so the third option assumes the very creator these traditions lack."
+  },
+  {
+    "id": "agent-or-separate",
+    "section": "what-the-positions-have-in-common",
+    "question": "Which problem arises from the ultimate's being separate from the world, rather than from its being an agent?",
+    "options": [
+      "The problem of evil",
+      "How divine action works",
+      "Divine hiddenness",
+      "The coherence of the attributes"
+    ],
+    "answer": 1,
+    "explanation": "Being an agent is what makes evil, hiddenness and the coherence of the attributes problems; being separate is what makes divine action, divine knowledge of contingents and creation problems. Panentheism's appeal on divine action is exactly that, with the world inside God, acting is no longer action across a gap."
+  },
+  {
+    "id": "cumulative-case-debits",
+    "section": "what-the-positions-have-in-common",
+    "question": "The objection says classical theism explains the conclusions of natural theology jointly and economically. What does the reply say follows once the case is put that way?",
+    "options": [
+      "The individual arguments then each establish classical theism on their own after all",
+      "Pantheism wins outright, since the problem of evil counts for nothing against it",
+      "It is then an inference to the best explanation, so the rivals' debits count too",
+      "The underdetermination argument is shown to be invalid, since its third premise is false"
+    ],
+    "answer": 2,
+    "explanation": "Joint explanation is a real advantage, but it is a comparative argument from theoretical virtue, so its debits count too: the problem of evil weighs against classical theism exactly where it weighs nothing against pantheism. The cumulative case may still come out ahead, but it cannot claim the individual arguments as establishing its conclusion; nor does the reply say pantheism wins."
+  }
+]

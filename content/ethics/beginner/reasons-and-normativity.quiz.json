@@ -1,0 +1,101 @@
+[
+  {
+    "id": "superstition-motivating-reason",
+    "section": "reasons-in-two-senses",
+    "question": "A man refuses to sign a contract on Friday the 13th because he thinks the date is unlucky. On the article's distinction, what does he have?",
+    "options": [
+      "A motivating reason but no normative reason",
+      "A normative reason but no motivating reason",
+      "Both, since he acted on a consideration",
+      "Neither, since superstition is not a reason in any sense"
+    ],
+    "answer": 0,
+    "explanation": "The unlucky date is what he acts on, so it is his motivating reason, but nothing about the date counts in favour of delaying. Saying he has no reason in any sense throws away the very contrast needed to state what is wrong with his choice."
+  },
+  {
+    "id": "counting-in-favour-primitive",
+    "section": "reasons-in-two-senses",
+    "question": "Why does Scanlon refuse to define a normative reason as \"what a rational person would act on\"?",
+    "options": [
+      "Rational people often act against their reasons",
+      "It would make reasons depend on what people happen to want",
+      "An account of rationality will itself have to mention reasons",
+      "It confuses reasoning about what to do with reasoning about what is the case"
+    ],
+    "answer": 2,
+    "explanation": "Attempts to define counting in favour keep smuggling it back in, and rationality is a case in point, so Scanlon treats the notion as primitive. The job then becomes saying what has it and what follows, rather than reducing it to something more basic."
+  },
+  {
+    "id": "why-not-reduce-to-motivation",
+    "section": "reasons-in-two-senses",
+    "question": "What would be lost if reasons were reduced to whatever actually motivates people?",
+    "options": [
+      "The ability to explain why anyone acts at all, since motives would stop being reasons",
+      "The fact that reasons can be missed, and the criticism of acting on a bad one",
+      "The distinction between moral and prudential reasons, since both would become desires",
+      "The fact that every reason eventually moves a rational person who notices it"
+    ],
+    "answer": 1,
+    "explanation": "On the reduction, a failing roof gives its owner no reason until they notice it, and someone acting on superstition cannot be criticised for it. Explaining action is exactly what motivating reasons are good for, so that is not what the reduction loses."
+  },
+  {
+    "id": "normativity-wider-than-ethics",
+    "section": "the-general-phenomenon",
+    "question": "On the article's account, normativity is the same thing as morality.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Ethics is one region of the normative and not the whole of it. Rationality, the epistemic assessment of belief, and the standards internal to games and crafts also favour, require or grade rather than merely describe."
+  },
+  {
+    "id": "broken-promise-residue",
+    "section": "reasons-do-not-come-one-at-a-time",
+    "question": "You break a minor promise in order to drive a neighbour to hospital, and doing so was right. Why do you still owe an apology, on the article's account?",
+    "options": [
+      "Breaking the promise was wrong after all, though excusable given the emergency",
+      "The promise only appeared to be a reason and turned out on reflection not to be one",
+      "An apology is owed for any disappointment at all",
+      "The promise was a pro tanto reason that was outweighed, not cancelled"
+    ],
+    "answer": 3,
+    "explanation": "An outweighed reason is still there, and the apology owed is the evidence of it. The second option is what the phrase \"prima facie\" suggests, a merely apparent reason, which is why the article prefers \"pro tanto\": the promise genuinely was a reason and genuinely lost."
+  },
+  {
+    "id": "verdict-or-reason",
+    "section": "reasons-do-not-come-one-at-a-time",
+    "question": "Which of these is an all-things-considered verdict rather than a pro tanto reason?",
+    "options": [
+      "That the job pays well counts in favour of taking it",
+      "Given everything, you ought to turn the job down",
+      "The long commute is a point against the job",
+      "The job would let you learn a new skill"
+    ],
+    "answer": 1,
+    "explanation": "Ought-claims are usually the output of the weighing, and \"given everything\" marks this one as conclusive. The other three are inputs to the weighing: each counts for or against the job to some degree and can be outweighed."
+  },
+  {
+    "id": "williams-cold-agent",
+    "section": "reasons-do-not-come-one-at-a-time",
+    "question": "On Bernard Williams's view as the article presents it, what is true of a cold agent whose motivations contain nothing that helping would serve?",
+    "options": [
+      "They may simply have no reason to help, so saying they do is false",
+      "They have every reason to help, and are simply not moved by any of it",
+      "They have a motivating reason to help but lack any normative reason to",
+      "They ought to help, though on this view they lack a reason"
+    ],
+    "answer": 0,
+    "explanation": "Williams ties a person's reasons to their existing motivations, corrected for false beliefs and unfinished reasoning, so an agent with nothing relevant to serve lacks the reason. The second option is the opposing position, on which some reasons apply whatever a person happens to care about."
+  },
+  {
+    "id": "conflict-needs-reasons",
+    "section": "why-start-here",
+    "question": "\"You ought to visit your mother tonight, and you ought to go to the interview tonight, and you cannot do both.\" What does the reply say the vocabulary of reasons lets you say here that ought-claims alone cannot?",
+    "options": [
+      "That one of the two ought-claims must be false",
+      "That neither is a real requirement, since genuine requirements never conflict",
+      "That two considerations pull opposite ways, as they ordinarily do",
+      "That the conflict is really about the facts of the evening's timetable"
+    ],
+    "answer": 2,
+    "explanation": "Two conflicting ought-claims leave nothing further to say, whereas two reasons pulling opposite ways is what deliberation normally looks like. Concluding that one ought must be false is where you are driven if oughts are all you have, which is the reply's point against the objection."
+  }
+]

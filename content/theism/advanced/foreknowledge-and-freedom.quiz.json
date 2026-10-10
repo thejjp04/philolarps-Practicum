@@ -1,0 +1,127 @@
+[
+  {
+    "id": "what-is-accidentally-necessary",
+    "section": "setting-out-the-argument",
+    "question": "Which of these is accidentally necessary today?",
+    "options": [
+      "That two plus two is four, since nothing could make it false",
+      "That it will rain in Paris tomorrow, since it is already true",
+      "That it rained in Paris yesterday, though it might not have",
+      "That rain is water, since that holds in every possible world"
+    ],
+    "answer": 2,
+    "explanation": "Yesterday's rain was contingent in itself but is now beyond anyone's power to affect, which is exactly accidental necessity. Two plus two and rain being water are necessary by their content, not by the accident of being past, and tomorrow's rain is not past at all."
+  },
+  {
+    "id": "belief-is-a-past-state",
+    "section": "what-the-argument-is-not",
+    "question": "Why is theological fatalism harder to resist than logical fatalism, on the article's account?",
+    "options": [
+      "A past belief is a state someone was in at a time, not merely a truth about the future",
+      "God's beliefs cause what they are about, whereas mere truths about the future cause nothing",
+      "Theological fatalism also threatens freedom understood as acting on one's own desires",
+      "Logical fatalism needs determinism, whereas the theological version does not need it at all"
+    ],
+    "answer": 0,
+    "explanation": "The usual escape from logical fatalism denies that a truth about the future is a fact about the past, but a belief held at a time is as past as anything gets. The causal option misreads both arguments, which concern entailment and power rather than influence."
+  },
+  {
+    "id": "compatibilist-can-shrug",
+    "section": "what-the-argument-is-not",
+    "question": "Someone who holds that freedom is acting on one's own desires without external constraint can accept the whole fatalist argument without conceding that anyone acts unfreely.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "The argument attacks only the ability to do otherwise, and nothing in it says your act fails to flow from your character. That is why the problem bites for libertarians, and for the free will defence that needs their conception, rather than for compatibilists."
+  },
+  {
+    "id": "timeless-analogue-of-the-argument",
+    "section": "the-boethian-route",
+    "question": "What is the standard reply, from Pike and developed by Zagzebski, to the Boethian solution?",
+    "options": [
+      "A timeless God could not know temporal events at all, so the solution sacrifices omniscience",
+      "Aquinas's vision model makes your act necessary, since what is seen must be occurring",
+      "Timelessness is incompatible with the essential omniscience the argument assumes",
+      "Timeless knowledge is as fixed as past knowledge, so a timeless version of the argument runs"
+    ],
+    "answer": 3,
+    "explanation": "If timeless knowledge is fixed, the power to refrain is power to make a fixed item different, the old predicament in new vocabulary; if it is not fixed, timelessness bought nothing. The vision option inverts Aquinas, for whom seeing an act occur imposes only a harmless conditional necessity."
+  },
+  {
+    "id": "ockhamism-denies-accidental-necessity",
+    "section": "ockhamism",
+    "question": "At which premise does Ockhamism break the argument for theological fatalism?",
+    "options": [
+      "That God believed a thousand years ago that you would have coffee tomorrow",
+      "That facts about what God believed in the past are accidentally necessary",
+      "That God is essentially omniscient, so cannot hold a false belief",
+      "That a power to refrain would be a power over God's past belief or its truth"
+    ],
+    "answer": 1,
+    "explanation": "Ockhamists treat God's past belief as a soft fact, partly about tomorrow, and soft facts about the past carry no accidental necessity. Denying the first premise is the Boethian route, and open theism's too: both say there was no such belief, for different reasons."
+  },
+  {
+    "id": "soft-fact-hard-core",
+    "section": "ockhamism",
+    "question": "Grant that God's belief in the year 1000 is a soft fact. Critics say it still has a hard core: God's being in a certain state then. How do Ockhamists reply?",
+    "options": [
+      "God has no states at all, since a timeless God is not in any state at any time whatever",
+      "God's states are past but can still be changed by what creatures do today",
+      "The state is individuated by what it is about, so no state-in-itself is left over",
+      "God's state in 1000 is fixed by middle knowledge, not by the future act itself"
+    ],
+    "answer": 2,
+    "explanation": "If a belief state is individuated partly by its content, removing the soft component leaves nothing intrinsic and past, so the debate turns on whether mental states are individuated by their contents. The timeless option is the Boethian solution, not an Ockhamist reply, and no Ockhamist claims the past can be changed."
+  },
+  {
+    "id": "classify-middle-knowledge",
+    "section": "molinism",
+    "question": "God knows that if Ana were offered the post in circumstance C, she would freely accept it. On Molinism, what kind of knowledge is this?",
+    "options": [
+      "Middle knowledge: contingent, not up to God, and known prior to his creative decision",
+      "Natural knowledge, since it concerns a possibility God knows without deciding anything",
+      "Free knowledge, since its truth depends on which world God decides to actualise",
+      "None, since nothing yet settles what a merely possible person would freely do"
+    ],
+    "answer": 0,
+    "explanation": "A counterfactual of freedom is contingent, so it is not natural knowledge, and it is settled by the creature rather than by God's decision, so it is not free knowledge. The last option states the conclusion of the grounding objection, which Molinists reject."
+  },
+  {
+    "id": "molinist-answer-to-grounding",
+    "section": "molinism",
+    "question": "How does the Molinist, roughly following Flint, answer the grounding objection?",
+    "options": [
+      "God's own creative decision makes the counterfactuals true, so they need no further ground of any kind",
+      "Each person's character settles what they would do, which supplies the ground",
+      "Counterfactuals of freedom are false, but God can still use them as estimates",
+      "They may be true without a ground, and the objection would also impugn ordinary counterfactuals"
+    ],
+    "answer": 3,
+    "explanation": "The Molinist declines the truthmaker demand, noting that parallel reasoning would undermine counterfactuals about existing people that we take to be sometimes true. Grounding them in God's decision or in a determining character is exactly what Molinism cannot do without losing the freedom of the act."
+  },
+  {
+    "id": "open-theism-rejects-bivalence",
+    "section": "open-theism",
+    "question": "What does open theism need to defend on its own terms, according to the article?",
+    "options": [
+      "That omniscience covers only what God has decided to bring about",
+      "That propositions about future free acts are not yet true, with something like presentism",
+      "That God knows future free acts but chooses, out of respect for freedom, not to attend to them",
+      "That God's knowledge is limited by his temporal location, as personalists say"
+    ],
+    "answer": 1,
+    "explanation": "Open theists deny that there is anything to know, not that God fails to know something true, so the position rests on rejecting bivalence for future contingents. The self-limitation option keeps the foreknowledge and so leaves the fatalist argument untouched."
+  },
+  {
+    "id": "molinism-constrains-god",
+    "section": "the-same-problem-turned-on-god",
+    "question": "Why do critics say that Molinism limits God's aseity?",
+    "options": [
+      "Because God must create every world he knows to be possible",
+      "Because middle knowledge requires the creatures it concerns to exist before God decides anything",
+      "Because God did not make the counterfactuals, yet they limit which worlds he can actualise",
+      "Because God's natural knowledge depends on which creatures he creates"
+    ],
+    "answer": 2,
+    "explanation": "On Molinism God finds the counterfactuals true rather than choosing them, so some possible worlds are ones he cannot actualise because their creatures would not cooperate, the same structure as transworld depravity. The creatures need not exist for this; the constraint comes from truths about merely possible creatures."
+  }
+]

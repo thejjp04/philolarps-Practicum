@@ -1,0 +1,112 @@
+[
+  {
+    "id": "instantiation-premise",
+    "question": "In free logic, what further premise is needed to infer $Fa$ from $\\forall x\\, Fx$?",
+    "options": [
+      "$Fa \\lor \\neg Fa$",
+      "$\\exists x\\, Fx$",
+      "$\\exists y\\, (y = a)$",
+      "$a = a$"
+    ],
+    "answer": 2,
+    "explanation": "Quantifiers range only over what exists, so a universal claim reaches $a$ only if $a$ denotes something existing, which is what $\\exists y\\, (y = a)$ says. The trap is $a = a$: in a positive free logic it can hold of an empty name, so it does not establish existence."
+  },
+  {
+    "id": "pegasus-material-object",
+    "question": "Suppose \"everything is a material object\" is true. Classically it yields \"Pegasus is a material object\". Which step does free logic block?",
+    "options": [
+      "Universal instantiation to a name not shown to denote anything",
+      "Existential generalisation from a sentence about Pegasus to a claim that something exists",
+      "Accepting the universal premise, which free logic treats as gappy whenever names fail",
+      "Using a fictional name at all, which free logic forbids in any premise or conclusion"
+    ],
+    "answer": 0,
+    "explanation": "The argument moves from a universal claim to an instance with a non-denoting name, which is exactly the step free logic restricts. Free logic does restrict existential generalisation too, but this argument never uses it, and free logic is designed to let fictional names appear."
+  },
+  {
+    "id": "self-identity-of-empty-term",
+    "section": "three-variants",
+    "question": "In which variant of free logic does $t = t$ come out false when $t$ is empty?",
+    "options": [
+      "Positive, since an outer object stands in for what the term would denote",
+      "Negative, since every atomic sentence with an empty term is false",
+      "Neutral, since an identity with an empty term is neither true nor false",
+      "None, since identity is reflexive in every free logic whatever"
+    ],
+    "answer": 1,
+    "explanation": "Negative free logic makes every atomic sentence with an empty term false, identity included, which handles identity without needing any object. Positive free logic can keep $t = t$ true by giving $t$ an outer denotation, and neutral free logic makes it gappy rather than false."
+  },
+  {
+    "id": "vulcan-positive-outer",
+    "section": "three-variants",
+    "question": "A free logician wants \"Vulcan was posited to explain Mercury's perihelion\" to come out true, taken at face value. What does she need?",
+    "options": [
+      "A negative free logic, with a story operator to account for the sentence's truth",
+      "A neutral free logic, with supervaluation over ways of completing the gap",
+      "A negative free logic, with an outer domain supplying an object for the name",
+      "A positive free logic, with an outer domain supplying something for the name"
+    ],
+    "answer": 3,
+    "explanation": "Only positive free logic lets an atomic sentence with an empty term be true, and the outer domain gives the predicate something to hold of. Negative free logic makes the sentence false and must explain its apparent truth by paraphrase or a story operator, which is not taking it at face value."
+  },
+  {
+    "id": "russell-vs-neutral-negation",
+    "section": "the-empty-domain",
+    "question": "Consider \"the present king of France is not bald\". What value does it get on Russell's wide-scope reading, and in a neutral free logic?",
+    "options": [
+      "False on Russell's reading, and false in neutral free logic as well, since the subject is empty",
+      "Neither true nor false on both, since the description fails to denote",
+      "True on Russell's reading, and neither true nor false in a neutral free logic",
+      "False on Russell's reading, but true in neutral free logic, which negates the gappy atom"
+    ],
+    "answer": 2,
+    "explanation": "On the wide-scope reading the sentence denies that there is a unique bald present king of France, which is true. A neutral free logic keeps the description as a term and leaves both the sentence and its negation gappy, which is why negation is the standard test case between the approaches."
+  },
+  {
+    "id": "empty-domain-quantifiers",
+    "section": "the-empty-domain",
+    "question": "In the empty domain, what are the values of $\\forall x\\, Fx$ and $\\exists x\\, Fx$?",
+    "options": [
+      "True and false",
+      "False and false",
+      "True and true",
+      "Neither, since nothing is there to evaluate them"
+    ],
+    "answer": 0,
+    "explanation": "A universal claim has no counterexample when there is nothing at all, so it is vacuously true, and an existential claim has no witness, so it is false. That is why $\\exists x\\, (x = x)$ stops being a theorem once the empty domain is admitted."
+  },
+  {
+    "id": "subalternation-fails",
+    "section": "the-empty-domain",
+    "question": "In an inclusive free logic, $\\forall x\\, Fx \\rightarrow \\exists x\\, Fx$ is valid.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "In the empty domain the antecedent is vacuously true and the consequent false. Classically the inference holds only because every model is required to have at least one object, which is exactly the existence assumption inclusive logic drops."
+  },
+  {
+    "id": "deflationary-outer-domain",
+    "section": "three-variants",
+    "question": "What distinguishes the deflationary reading of the outer domain from the Meinongian one?",
+    "options": [
+      "It moves the outer objects inside the domain over which the quantifiers range",
+      "It lets the quantifiers range over the outer domain as well as the inner one",
+      "It makes every atomic sentence about an outer object false rather than true",
+      "It treats the outer objects as technical surrogates, with no ontological commitment"
+    ],
+    "answer": 3,
+    "explanation": "Both readings share the formal construction; they differ over whether the outer objects are non-existent things or mere devices. Letting quantifiers range over the outer domain would undo the point of free logic, which keeps quantification to what exists."
+  },
+  {
+    "id": "reasons-beyond-descriptions",
+    "section": "the-empty-domain",
+    "question": "Which reason for free logic does the reply give that is unconnected with definite descriptions?",
+    "options": [
+      "Variable domain modal logic needs terms that denote at some worlds and not at others",
+      "Ordinary proper names lack the uniquely identifying descriptions elimination requires",
+      "Russell's theory leaves every sentence about fiction without a truth value at all",
+      "Quine proved that names cannot in general be converted into definite descriptions"
+    ],
+    "answer": 0,
+    "explanation": "Terms that denote at some worlds and not others are needed by variable domain semantics whatever one says about descriptions, and no paraphrase removes them. The point about proper names is also in the reply, but it is an objection to eliminating names in favour of descriptions, so it is not independent of them."
+  }
+]

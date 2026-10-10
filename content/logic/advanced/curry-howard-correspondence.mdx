@@ -35,6 +35,8 @@ The correspondence covers the whole of intuitionistic propositional logic once t
 
 Excluded middle is where the reading pays its way. A term of type $A + (A \rightarrow \bot)$, for a variable $A$, would be a uniform procedure returning either a value of an arbitrary type or a function refuting it, and no such procedure exists. The intuitionistic rejection is recovered as a fact about programs rather than as a philosophical stipulation.
 
+<Check id="which-type-inhabited" />
+
 ## Normalisation
 
 The correspondence would be a curiosity if it stopped at syntax. Its substance is that the dynamics match.
@@ -48,6 +50,8 @@ The case of implication shows the whole pattern. A proof that introduces $\varph
 Prawitz proved in 1965 that every natural deduction proof normalises, and the same statement in the other vocabulary is that every typed term reduces to a normal form. Strong normalisation, that every reduction sequence terminates, holds too, and the significance is worth pausing on: a typed lambda calculus cannot express a non-terminating computation, so the price of the correspondence is that the programs are not all the programs. Adding a fixed point operator makes the language Turing complete and makes the logic inconsistent, since the fixed point operator inhabits every type, and these are the same fact.
 
 The relation to cut elimination is the expected one. Natural deduction normalisation and sequent calculus cut elimination correspond to one another, so the result proved in the article on sequent calculus is a theorem about the termination of a computation. The subformula property becomes the statement that a normal term's subterms have types occurring in its own, which is why type checking is decidable.
+
+<Check id="fixed-point-inconsistency" />
 
 ## What the correspondence became
 
@@ -66,6 +70,8 @@ The correspondence holds for a restricted fragment and is being sold as a genera
 <Reply>
 The restriction is real and is the source of the content rather than an embarrassment. That strong normalisation and consistency are the same theorem is informative precisely because a language with unrestricted recursion loses both together, and the correspondence predicts that in advance. As for scope, the boundary has moved repeatedly and in the direction the objection says it cannot: Griffin typed control operators classically, linear logic gave a proof-theoretic account of resource use and state, and monadic typing brought effects and input-output inside. The fragment is also less small than it sounds, since every proof assistant in serious use is an implementation of it, and the formalisation of the four colour theorem, the odd order theorem and the Kepler conjecture were carried out in such systems. The correspondence is a working tool with a known domain, and the honest statement is that the domain has been enlarged four times in fifty years.
 </Reply>
+
+<Check id="past-the-intuitionistic-boundary" />
 
 ## Next
 

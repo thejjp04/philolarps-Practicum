@@ -1,0 +1,119 @@
+[
+  {
+    "id": "classify-access-view",
+    "section": "three-claims-that-get-run-together",
+    "question": "A philosopher holds that you have a special, non-behavioural route to your own mind, but that the route sometimes misleads you. Which position is this?",
+    "options": [
+      "Incorrigibility, since a special route means sincere reports cannot be false",
+      "Privileged access without incorrigibility, since the route can fail",
+      "First-person authority alone, since nothing special is going on epistemically",
+      "None of the three, since a route that can fail is not privileged at all"
+    ],
+    "answer": 1,
+    "explanation": "Privileged access only claims a route to your own states that nobody else has; it does not claim the route is infallible. Incorrigibility is the stronger thesis that sincere reports cannot be false, which this philosopher explicitly denies."
+  },
+  {
+    "id": "which-entails-which",
+    "section": "three-claims-that-get-run-together",
+    "question": "How are privileged access, first-person authority and incorrigibility related?",
+    "options": [
+      "Incorrigibility entails the other two, but neither of them entails it",
+      "Privileged access entails incorrigibility, since a special route cannot go wrong",
+      "First-person authority entails incorrigibility, since we defer to sincere reports",
+      "None entails any other, since they are three wholly independent theses"
+    ],
+    "answer": 0,
+    "explanation": "The theses come in descending order of strength: if your reports cannot be false, you must have a special route and they deserve deference, but not the reverse. Deferring to reports can be a social practice that allows them to be wrong, which is why authority does not entail incorrigibility."
+  },
+  {
+    "id": "classify-confabulation",
+    "section": "what-the-psychology-found",
+    "question": "A shopper sincerely says she chose a pair of stockings for its finer weave, though in fact its position in the row drove her choice. What is this?",
+    "options": [
+      "Lying, since she is giving a false account of why she chose the pair",
+      "An accurate report, since the weave is what she consciously attended to",
+      "Confabulation: a sincere report not based on the process it describes",
+      "A perceptual failure, since she could not see that the pairs were identical"
+    ],
+    "answer": 2,
+    "explanation": "She believes what she says and does not recognise it as invented, which is what separates confabulation from lying. Her report purports to describe why she chose, and the process that actually produced the choice was not the one she reports."
+  },
+  {
+    "id": "source-of-causal-reports",
+    "section": "what-the-psychology-found",
+    "question": "According to Nisbett and Wilson, where do people's reports about the causes of their own choices come from?",
+    "options": [
+      "Direct inspection of the deciding process, which is accurate but hard to put into words",
+      "Deliberate invention, since people know the real cause but prefer to conceal it",
+      "Memory of the choice itself, which fades in the moments after it is made",
+      "A background theory of what tends to influence people, right only when it is right"
+    ],
+    "answer": 3,
+    "explanation": "People produce a plausible explanation from their general theory of what influences choices, so the report is accurate exactly when the theory happens to be. Deliberate invention is ruled out because the subjects believe what they say and deny the real influence when asked."
+  },
+  {
+    "id": "state-not-cause",
+    "section": "what-that-does-and-does-not-establish",
+    "question": "A defender of privileged access says the stocking study leaves the traditional view intact. Which question would they expect a shopper to answer correctly?",
+    "options": [
+      "Whether she preferred the rightmost pair of stockings",
+      "Why she preferred the pair of stockings that she chose",
+      "Whether the position of the pairs influenced her choice",
+      "Which features of the stockings produced her preference"
+    ],
+    "answer": 0,
+    "explanation": "The traditional view claimed access to states such as preferences, not to the processes that produce them. The other three questions all ask about causes, which is where the subjects confabulated and where nobody claimed privileged access."
+  },
+  {
+    "id": "schwitzgebel-target",
+    "section": "what-that-does-and-does-not-establish",
+    "question": "Why is Schwitzgebel's argument harder for the traditional view to absorb than the confabulation studies?",
+    "options": [
+      "It shows that people misreport the causes of their choices even under good conditions",
+      "It shows that people cannot report their own preferences when asked directly",
+      "It targets current conscious experience, the states the traditional view trusted most",
+      "It shows that introspection needs an inner organ, which nobody has ever found"
+    ],
+    "answer": 2,
+    "explanation": "The defender's reply to the confabulation studies was that they concern causes, not states; Schwitzgebel argues that even reports of present experience conflict and shift with fashion. The first option describes the older evidence, which the state-versus-cause reply already handles."
+  },
+  {
+    "id": "belief-by-looking-outward",
+    "section": "what-that-does-and-does-not-establish",
+    "question": "On the account described in the aside, how do you find out whether you believe it will rain tomorrow?",
+    "options": [
+      "By turning your attention inward and inspecting a stored state of belief",
+      "By considering the weather, so answering the matching question about the world",
+      "By recalling how you have behaved in the past when rain was forecast",
+      "By noticing a feeling of expectation and inferring the belief behind it"
+    ],
+    "answer": 1,
+    "explanation": "On this account the first-person question about belief is answered by answering the question about the world, which would explain why nobody can say what inner observation consists in. Inner inspection is the perceptual model the account is meant to replace."
+  },
+  {
+    "id": "classify-weakest-access",
+    "section": "where-that-leaves-the-instrument",
+    "question": "On the article's grading, which of these reports falls where introspective access is weakest?",
+    "options": [
+      "\"I am in pain rather than elated\"",
+      "\"My visual field is sharp right out to its edges\"",
+      "\"I want the cup I am reaching for\"",
+      "\"I took this job for the salary, not the location\""
+    ],
+    "answer": 3,
+    "explanation": "Reports about why you chose are claims about causes and processes, where access is very weak and reports are driven by theory. The visual-field report is tempting, but fine detail of experience sits in the middle grade: weak, though not as weak as access to causes."
+  },
+  {
+    "id": "data-survive-reply",
+    "section": "where-that-leaves-the-instrument",
+    "question": "The objection says that if introspection is unreliable, the philosophy of consciousness has no data. What is the reply's first point?",
+    "options": [
+      "Introspection is incorrigible after all, so its reports cannot really be in error",
+      "Careful philosophers' reports of their own experience reliably agree with each other",
+      "Claims such as that seeing red is like something are of the broad, reliable kind",
+      "Behaviour gives direct access to experience, so introspection is not needed"
+    ],
+    "answer": 2,
+    "explanation": "The arguments the objection lists rely on reports that the existence of experience is not in question, which survive the evidence; Schwitzgebel's unreliability concerns its detailed character. The second option is the opposite of what the reply says: disagreement between careful philosophers is its sign that a method has been pushed too far."
+  }
+]

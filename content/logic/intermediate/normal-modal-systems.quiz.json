@@ -1,0 +1,132 @@
+[
+  {
+    "id": "necessitation-restriction",
+    "section": "what-every-normal-system-has",
+    "question": "Why may the rule of necessitation not be applied to a formula that was merely assumed?",
+    "options": [
+      "Assumed formulas may not contain boxes, so the result would be ill-formed",
+      "Necessitation applies only to tautologies of propositional logic",
+      "It would let any assumed contingent truth be inferred to be necessary",
+      "The distribution schema would then fail on frames that lack reflexivity"
+    ],
+    "answer": 2,
+    "explanation": "A theorem is true at every world of every model, so boxing it is safe, but an assumption may be true at one world only, and boxing it would take a premise to its own necessity. Necessitation applies to every theorem, including modal ones such as instances of K, not only to tautologies."
+  },
+  {
+    "id": "distribution-on-every-frame",
+    "section": "what-every-normal-system-has",
+    "question": "Why is the distribution schema valid on every frame, with no condition on the relation?",
+    "options": [
+      "At each accessible world, modus ponens yields the consequent",
+      "Every frame is reflexive, so each world can always check its own values",
+      "It is an instance of a propositional tautology",
+      "Necessitation makes every schema of the system valid on every frame"
+    ],
+    "answer": 0,
+    "explanation": "If the conditional and its antecedent hold at every accessible world, modus ponens gives the consequent at each, and the argument uses no property of $R$, which is why K is the floor. Frames need not be reflexive, and to propositional logic the three boxed parts are unrelated atoms, so the schema is no tautology."
+  },
+  {
+    "id": "theorem-of-k",
+    "section": "a-derivation-in-k",
+    "question": "Which of these is a theorem of K?",
+    "options": [
+      "$\\Box P \\rightarrow P$",
+      "$\\Box (P \\lor Q) \\rightarrow (\\Box P \\lor \\Box Q)$",
+      "$\\Box P \\rightarrow \\Diamond P$",
+      "$(\\Box P \\land \\Box Q) \\rightarrow \\Box (P \\land Q)$"
+    ],
+    "answer": 3,
+    "explanation": "In K a boxed conjunction is equivalent to the conjunction of the boxes. The disjunction version fails because the box behaves like a universal quantifier: every accessible world may satisfy $P \\lor Q$, some through $P$ only and others through $Q$ only. The other two need reflexivity and seriality, which K does not assume."
+  },
+  {
+    "id": "reflexivity-countermodel",
+    "section": "correspondence",
+    "question": "To show that a frame where some world $w$ does not see itself refutes $\\Box \\varphi \\rightarrow \\varphi$, what valuation does the proof use?",
+    "options": [
+      "$P$ true at $w$ and false at every other world",
+      "$P$ true at every world except $w$",
+      "$P$ false at every world of the frame, including $w$",
+      "$P$ true at every world of the frame, including $w$"
+    ],
+    "answer": 1,
+    "explanation": "Every world $w$ sees is some other world, so $P$ holds at all of them and $\\Box P$ is true at $w$, while $P$ itself is false there. Making $P$ true everywhere would make the schema true at $w$, so the countermodel has to single $w$ out."
+  },
+  {
+    "id": "serial-chain-frame",
+    "section": "the-five-conditions",
+    "question": "A frame has worlds $w_1$, $w_2$ and $w_3$: $w_1$ sees $w_2$, $w_2$ sees $w_3$, $w_3$ sees itself, and nothing else holds. Which schema is valid on it?",
+    "options": [
+      "$\\Box \\varphi \\rightarrow \\varphi$",
+      "$\\Box \\varphi \\rightarrow \\Box \\Box \\varphi$",
+      "$\\Box \\varphi \\rightarrow \\Diamond \\varphi$",
+      "$\\varphi \\rightarrow \\Box \\Diamond \\varphi$"
+    ],
+    "answer": 2,
+    "explanation": "Every world sees at least one world, so the frame is serial and D holds. It is not reflexive ($w_1$ does not see itself), not transitive ($w_1$ does not see $w_3$) and not symmetric ($w_2$ does not see $w_1$), so T, 4 and B can all be refuted on it."
+  },
+  {
+    "id": "belief-built-on-d",
+    "section": "the-five-conditions",
+    "question": "Why is the logic of belief usually built on D rather than T?",
+    "options": [
+      "T would make everything believed true",
+      "D allows contradictory beliefs",
+      "T lacks the distribution schema that a logic of belief requires",
+      "D makes belief introspective, while T leaves introspection open"
+    ],
+    "answer": 0,
+    "explanation": "T's schema $\\Box \\varphi \\rightarrow \\varphi$ says that what is believed is so, which is right for knowledge and wrong for belief. D asks only that what is believed be possible, ruling out the dead ends where contradictory beliefs would hold vacuously."
+  },
+  {
+    "id": "why-s5-contains-both",
+    "section": "the-five-conditions",
+    "question": "Why does S5 contain both B and S4?",
+    "options": [
+      "Every euclidean relation is already symmetric and transitive by itself",
+      "The euclidean condition alone implies that every world sees itself",
+      "Reflexivity plus euclidean gives symmetry and transitivity",
+      "S5 frames always contain exactly one world, which sees itself"
+    ],
+    "answer": 2,
+    "explanation": "With reflexivity, a world that sees $v$ sees two worlds, $v$ and itself, so the euclidean condition makes $v$ see it back, and transitivity follows similarly, giving an equivalence relation. Without reflexivity the euclidean condition does not deliver this, which is why the first option fails."
+  },
+  {
+    "id": "s5-collapse",
+    "section": "iterated-operators",
+    "question": "In S5, what does $\\Diamond \\Box \\Diamond P$ reduce to?",
+    "options": [
+      "$\\Box P$",
+      "$\\Box \\Diamond P$",
+      "$P$",
+      "$\\Diamond P$"
+    ],
+    "answer": 3,
+    "explanation": "In S5 every string of operators reduces to its last one, so the result is $\\Diamond P$. Strings do not collapse like this in S4, where only repetitions of a single operator are redundant and alternating strings such as $\\Box \\Diamond$ survive."
+  },
+  {
+    "id": "why-decidable",
+    "section": "what-the-correspondences-are-good-for",
+    "question": "Why are all six systems decidable?",
+    "options": [
+      "Unprovable formulas fail on a small finite model",
+      "Their theorems are all tautologies of ordinary propositional logic",
+      "Truth tables extend to the box",
+      "Each of the six systems has only finitely many theorems to list"
+    ],
+    "answer": 0,
+    "explanation": "Any formula a system fails to prove is refuted on a finite model whose size is bounded by something computed from the formula, so only finitely many models need checking. The operators are not truth-functional, so truth tables cannot be extended, and each system has infinitely many theorems."
+  },
+  {
+    "id": "correspondence-is-discovery",
+    "section": "systems-these-do-not-include",
+    "question": "According to the reply to the objection, what shows that correspondence results are discoveries rather than relabelling?",
+    "options": [
+      "Every condition on the relation turns out to match some modal schema",
+      "Some conditions match no schema; some schemas match no first-order condition",
+      "Each schema was chosen long before anyone had studied frames at all",
+      "The six systems were all shown to be sound and complete for their frames"
+    ],
+    "answer": 1,
+    "explanation": "No schema is valid on exactly the irreflexive frames, and the Löb schema corresponds to a condition that is not first-order expressible. If the matching were automatic, neither fact could hold, so finding that a property is reachable is a result rather than a stipulation."
+  }
+]

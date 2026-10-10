@@ -1,0 +1,127 @@
+[
+  {
+    "id": "survival-separable",
+    "section": "the-soul-that-continues",
+    "question": "On the article's account, how is the question of survival related to the existence of God?",
+    "options": [
+      "Survival entails God, since only a divine act could preserve anything at all through the death of the body",
+      "God entails survival, since a perfectly good being could not allow persons simply to end at death",
+      "Each is coherent without the other: survival without God, and God without survival, have both been held",
+      "They are the same question, since every argument for one is also an argument for the other"
+    ],
+    "answer": 2,
+    "explanation": "The question is separable in both directions, and each combination has had defenders. The immortality view has the soul continue by its own nature, so survival does not by definition require a divine act."
+  },
+  {
+    "id": "simplicity-too-much-too-little",
+    "section": "the-soul-that-continues",
+    "question": "In what sense does the simplicity argument prove both too much and too little?",
+    "options": [
+      "It covers animal souls as well, and an indestructible simple thing need keep no memory or character",
+      "It proves the soul survives but not that it is immortal, and it applies only to the souls of the good",
+      "It proves that the brain is not needed for thought, but cannot explain why brain damage affects the mind",
+      "It shows the body is composite, which no one denied, and says nothing about whether minds are simple"
+    ],
+    "answer": 0,
+    "explanation": "Indestructibility would extend to every soul, which few of its users want, and bare survival of a simple thing is not survival as someone. The dependence of the mind on the brain is a separate objection, which the argument fails to explain rather than a sense in which it proves too much."
+  },
+  {
+    "id": "resurrection-differs",
+    "section": "the-person-who-is-raised",
+    "question": "Which of these is true of bodily resurrection but not of the immortality of the soul?",
+    "options": [
+      "The person continues through death by means of a part of them that is not the body",
+      "There is a genuine interval during which the person does not exist, and return is by God's act",
+      "What survives is a mind that has shed its body, and is later joined to a new one by God's act",
+      "The doctrine's founding text is Plato's *Phaedo*, which argues from the soul's simplicity"
+    ],
+    "answer": 1,
+    "explanation": "On resurrection no part escapes death, so the person really ceases and is restored by divine action, not by any natural property. The soul that separates and is later reunited is the later composite, which inherits the problems of both views."
+  },
+  {
+    "id": "duplication-trilemma",
+    "section": "whether-it-would-still-be-you",
+    "question": "Why does the duplication problem defeat the natural repair of having God recreate the right memories and character?",
+    "options": [
+      "Because memories cannot be transferred to a new body, since they are stored in the matter of the old brain",
+      "Because the recreated person would know they were a copy, and so could not really be the original",
+      "Because God would not deceive anyone, and a copy taken for the original would be a form of deception",
+      "God could do it twice; both being you is impossible, and neither or one leaves the single case unexplained"
+    ],
+    "answer": 3,
+    "explanation": "If both were you, one person would be two; if neither, the single case was not identity either; if only one, something beyond memory and character is doing unexplained work. Arguments about where memories are stored address reassembly, the crudest of the three difficulties, not duplication."
+  },
+  {
+    "id": "van-inwagen-simulacrum",
+    "section": "whether-it-would-still-be-you",
+    "question": "How did van Inwagen offer his simulacrum proposal?",
+    "options": [
+      "As a proof that resurrection is possible on materialism, not as an account of what happens",
+      "As his own belief about what happens at death, supported by the testimony of Paul's letter to Corinth",
+      "As a refutation of materialism about persons, since it shows how absurd the materialist must become",
+      "As an alternative to Aquinas's account, keeping the soul as the form of the body while dropping matter"
+    ],
+    "answer": 0,
+    "explanation": "It uses the defence structure from the theodicies article: one coherent possibility shows resurrection is not impossible on materialism. Its discomfort is presented as a finding about what materialism requires, not as an argument against materialism."
+  },
+  {
+    "id": "aquinas-form-interval",
+    "section": "whether-it-would-still-be-you",
+    "question": "Aquinas treats the soul as the form of the body. Where does this account run into difficulty?",
+    "options": [
+      "In reassembly, since the same form cannot inform matter that has been scattered and reused elsewhere",
+      "In duplication, since the same form could inform two bodies at once and so yield two of the very same person",
+      "In the interval: a form without matter is not a human being, so either a gap or too much for the soul",
+      "In dualism, since treating the soul as a form makes it a second substance joined to the body after all"
+    ],
+    "answer": 2,
+    "explanation": "Between death and resurrection either the person does not exist, reintroducing the gap, or the separated soul does more than the theory allows. The account avoids both the reassembly problem and crude dualism, so the first and last options name its strengths as weaknesses."
+  },
+  {
+    "id": "buddhist-rebirth",
+    "section": "return-rather-than-survival",
+    "question": "On Buddhist accounts of rebirth as the article describes them, what continues from one life to the next?",
+    "options": [
+      "A persisting self that passes through each life, as on the Hindu accounts the article contrasts with them",
+      "A causally connected series rather than a thing, since there is no persisting self to be reborn",
+      "The memories of earlier lives, which can be recovered through meditation and so confirm identity",
+      "The same body in a new form, transformed rather than reanimated, as on Paul's account of resurrection"
+    ],
+    "answer": 1,
+    "explanation": "Denying a persisting self makes what continues a causal series, and the tradition treats the loss of personal survival as a correction of the wish rather than a cost. The persisting self is the Hindu answer, which handles identity the way the immortality view does."
+  },
+  {
+    "id": "karma-and-distribution",
+    "section": "return-rather-than-survival",
+    "question": "On the article's account, reincarnation with a karmic account solves the distribution problem without any significant cost.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "It supplies the reason theodicy struggles to supply, but at the price of holding that every present misfortune is deserved by its bearer. Many find that harder to accept than the problem it solves."
+  },
+  {
+    "id": "anselm-proportionality",
+    "section": "hell",
+    "question": "How does the counter to Anselm's reply on proportionality go?",
+    "options": [
+      "It accepts that offences against an infinite being are infinite but denies that God is infinite in that sense",
+      "It argues that punishment must be finite because God's love will finally prevail over every separation",
+      "It holds that hell is chosen rather than inflicted, so the question of desert does not even arise",
+      "It makes guilt independent of the offender's understanding, unlike responsibility everywhere else"
+    ],
+    "answer": 3,
+    "explanation": "Anselm grounds the gravity of an offence in whom it is against, which detaches guilt from what the offender understood. Hell as chosen rather than inflicted is the free-will response of Walls and Swinburne, a different reply to the problem."
+  },
+  {
+    "id": "annihilation-cost",
+    "section": "hell",
+    "question": "What precise cost does annihilationism pay for its answer to the proportionality objection?",
+    "options": [
+      "It fits the immortality picture poorly, since on that view a soul cannot cease to exist by its nature",
+      "It concedes that God could have saved everyone and chose not to, giving up the claim of universal love",
+      "Those annihilated get no later putting-right, so their suffering in this life is never compensated",
+      "It imposes an infinite penalty after all, since ceasing to exist forever is an unending loss"
+    ],
+    "answer": 2,
+    "explanation": "Any response to evil that relies on things being put right afterwards is unavailable for those who cease to exist, so the doctrine buys its answer about punishment with its answer about suffering. Ceasing to exist is a finite, bounded loss on the article's account, which is how it answers proportionality."
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "id": "coady-on-global",
+    "section": "the-first-question",
+    "question": "Why, according to Coady, can global reductionism about testimony not get started?",
+    "options": [
+      "Testimony is unreliable more often than perception or memory, so it cannot be trusted at all",
+      "Children trust testimony before they can evaluate speakers, which proves that trust is innate",
+      "The evidence anyone could cite for testimony's reliability is itself overwhelmingly testimonial",
+      "Hume's observations of reports matching events were too few to support a generalisation"
+    ],
+    "answer": 2,
+    "explanation": "You have not personally checked that reports of distant events or encyclopaedias are accurate; your evidence for that reached you through further reports. Children illustrate the problem in its purest form, but the argument does not need any claim that trust is innate."
+  },
+  {
+    "id": "stranger-tells-time",
+    "section": "the-first-question",
+    "question": "You believe a stranger who tells you the time. Why does the article say local reductionism struggles to explain your justification?",
+    "options": [
+      "It forbids trusting strangers on any matter, which would make everyday life impossible",
+      "It requires you to check the time for yourself before believing the stranger",
+      "It treats trust as a default, so it cannot explain why the stranger's track record should matter",
+      "Its only reason, that people usually report the time accurately, is a general claim about testimony"
+    ],
+    "answer": 3,
+    "explanation": "The local version needs reasons for trusting this speaker, and the only ones available are general facts about testimony, so it borrows from the global version it abandoned. Treating trust as a default is anti-reductionism, the opposing view, not a feature of local reductionism."
+  },
+  {
+    "id": "lackey-teacher",
+    "section": "the-first-question",
+    "question": "A teacher who does not believe in evolution nonetheless teaches it accurately, and her pupils come to know it. What does Lackey take this to show?",
+    "options": [
+      "That the pupils lack knowledge, since knowledge cannot pass through someone who does not have it",
+      "That testimony can pass on knowledge the speaker lacks, so the speaker's side matters too",
+      "That anti-reductionism is right, since the pupils had no reason against trusting her",
+      "That reductionism is right, since the pupils had independent reasons to trust a teacher"
+    ],
+    "answer": 1,
+    "explanation": "Lackey argues that both theories go wrong by locating testimonial knowledge entirely in the hearer; the reliability of the testimony itself matters. The first option assumes testimony can only transmit knowledge the speaker already has, which is exactly what the case is meant to refute."
+  },
+  {
+    "id": "skilled-liar",
+    "section": "the-first-question",
+    "question": "On anti-reductionism, a credulous child and a careful adult are equally entitled to believe a skilled liar whose lie contains no internal warning signs.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "If acceptance is the default and neither hearer has reasons against it, both are entitled, which is the gullibility objection. The anti-reductionist must either accept this or say what more the careful adult's entitlement involves."
+  },
+  {
+    "id": "who-is-a-peer",
+    "section": "the-second-question",
+    "question": "Which of these people is your epistemic peer on whether a particular bridge design is safe?",
+    "options": [
+      "An engineer with the same data, who is as able and careful as you are",
+      "A more experienced engineer who has seen the same data and also visited the site",
+      "A friend who is as clever and careful as you but has not seen the data",
+      "An engineer with the same data, who is less careful but happens to agree with you"
+    ],
+    "answer": 0,
+    "explanation": "A peer must match you both in evidence and in ability to assess it. The more experienced engineer has extra evidence from the site visit, which makes her better placed than a peer, so deferring to her is a testimony case rather than peer disagreement."
+  },
+  {
+    "id": "radiologists",
+    "section": "the-second-question",
+    "question": "Two equally skilled radiologists look at the same scan and disagree about whether a shadow is a tumour. Neither has any other information. What does conciliationism recommend for each?",
+    "options": [
+      "Keep her own view, since her own reading of the scan still supports it",
+      "Move substantially towards the other's view, perhaps suspending judgement",
+      "Switch to the other's view, since the disagreement shows her own reading was wrong",
+      "Defer to whichever of the two is more confident in her reading"
+    ],
+    "answer": 1,
+    "explanation": "By symmetry, neither has a reason independent of the disagreement to favour her own reading, so each should give the other's view equal weight. Switching outright is not conciliation but favouring the other view for no better reason than one's own."
+  },
+  {
+    "id": "kelly-standard-reply",
+    "section": "the-second-question",
+    "question": "Kelly argues that the peer who assessed the evidence correctly should not have to give up her view. What is the standard reply?",
+    "options": [
+      "Evidence never favours one conclusion over another, so neither party has it on her side",
+      "The correct peer should still defer, since a majority is more reliable than any individual",
+      "Disagreement shows that the two were never really peers, so the case cannot arise",
+      "She cannot tell that she is the one who got it right, since her peer has the same grounds"
+    ],
+    "answer": 3,
+    "explanation": "The correct party has exactly the same grounds for confidence as her mistaken peer, so being right does not give her a reason she can use. The reply grants that the evidence supports one side; what it denies is that either party can tell which."
+  },
+  {
+    "id": "total-evidence-stay-put",
+    "section": "the-second-question",
+    "question": "On Kelly's total evidence view, when may you rationally hold your ground against a peer?",
+    "options": [
+      "Whenever you are confident that you have assessed the evidence correctly",
+      "Never, since the higher-order evidence of disagreement always outweighs the first-order case",
+      "When your first-order evidence is overwhelming, as with simple arithmetic",
+      "Always, since the fact of disagreement never cancels the support the evidence gives"
+    ],
+    "answer": 2,
+    "explanation": "Both kinds of evidence count, and how much each weighs depends on how strong the first-order case was, so a peer who insists that two plus two is five has simply blundered. Mere confidence is not enough, since your mistaken peer may be just as confident."
+  },
+  {
+    "id": "self-undermining",
+    "section": "the-second-question",
+    "question": "Why is conciliationism said to be self-undermining?",
+    "options": [
+      "It recommends suspending judgement on every question, including all of mathematics",
+      "It relies on the steadfast view to establish that peers are equally reliable",
+      "It counts disagreement as evidence, which presupposes that someone has already erred",
+      "Its own peers reject it, so by its own lights its adherents should lose confidence in it"
+    ],
+    "answer": 3,
+    "explanation": "Kelly, Feldman and Sosa are peers of Christensen and Elga and reject conciliationism, so the principle recommends its own rejection. The first option overstates its reach: it recommends suspension where real peers disagree, not across mathematics."
+  },
+  {
+    "id": "what-idealisation-teaches",
+    "section": "how-the-two-questions-connect",
+    "question": "The objection says peer disagreement is a fiction, since no two people share exactly the same evidence. According to the reply, what does the idealised case still show?",
+    "options": [
+      "That disagreement alone, without other information, is evidence of error",
+      "That peers should always split the difference exactly, whatever the subject",
+      "That real disagreements are usually best explained by bias on the other side",
+      "That idealised cases bear on real disagreements only when the parties' evidence is exactly identical"
+    ],
+    "answer": 0,
+    "explanation": "The restaurant case removes the usual excuses, and the evidence of error it isolates is still received in messy real cases, mixed with evidence about who is better placed. Explaining disagreement away as the other side's bias is precisely the move the reply says the idealised case forbids."
+  }
+]

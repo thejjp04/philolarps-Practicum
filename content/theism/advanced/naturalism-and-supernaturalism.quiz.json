@@ -1,0 +1,130 @@
+[
+  {
+    "id": "naturalism-stated-negatively",
+    "section": "the-two-frameworks",
+    "question": "Why, on the article's account, do most careful naturalists state their position negatively, as the denial of a specific list?",
+    "options": [
+      "A positive statement would commit them to methodological naturalism, which is only a rule of method",
+      "Defined by future science it is unfalsifiable; defined by current physics it is very likely false",
+      "Supernaturalism is defined positively, so its rival has to be stated as its exact contradictory",
+      "Science has already shown that no mind exists independently of physical processes"
+    ],
+    "answer": 1,
+    "explanation": "Both positive readings of \"natural\" fail, so the honest formulation is negative, at the cost of defining the position by what it rejects. The methodological option confuses two theses: methodological naturalism is a constraint on inquiry and makes no claim about what exists."
+  },
+  {
+    "id": "spirits-without-a-creator",
+    "section": "the-two-frameworks",
+    "question": "On the article's definitions, a view with many limited spirits acting on nature but no creator counts as supernaturalism but not as theism.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "Supernaturalism needs only one agent outside the natural order acting on it, and theism is one form of it among others. The terms are therefore not interchangeable, which the definition points out with exactly this case."
+  },
+  {
+    "id": "limitation-into-boundary",
+    "section": "the-methodological-version",
+    "question": "What is the critics' objection to methodological naturalism, as the article states it?",
+    "options": [
+      "A method that could never detect a supernatural cause cannot conclude that there is none",
+      "It amounts to asserting atheism, so religious scientists who accept it are being inconsistent",
+      "Supernatural hypotheses do constrain observation, so they are tractable by scientific means",
+      "It forbids philosophy as well as science from ever considering supernatural explanations"
+    ],
+    "answer": 0,
+    "explanation": "The rule converts a limitation into a boundary, and is often quietly upgraded from \"science does not consider such causes\" to \"there are none\". The atheism option is the trap: the defence of the rule turns precisely on its not asserting atheism, and its critics' point is about the slide, not the rule itself."
+  },
+  {
+    "id": "best-of-a-bad-set",
+    "section": "explanation-as-a-form-of-argument",
+    "question": "Lipton answers the worry that the best explanation may be the best of a bad set. Why does that answer carry less weight in the comparison of theism and naturalism?",
+    "options": [
+      "Inference to the best explanation cannot conclude to unobserved entities, and God is unobserved",
+      "Theism has no explanatory power at all, so it never enters the field of candidates",
+      "In metaphysics the field of candidates is disciplined only by imagination, not by experiment",
+      "The data are compatible with both frameworks, so only a deductive argument could decide"
+    ],
+    "answer": 2,
+    "explanation": "Lipton relies on our being reasonably good at generating candidates, which holds best where experiment prunes the field. The first option misdescribes the pattern, whose distinguishing feature is precisely that it can conclude to entities not observed, such as atoms."
+  },
+  {
+    "id": "swinburne-measure-of-simplicity",
+    "section": "explanation-as-a-form-of-argument",
+    "question": "On what measure does Swinburne argue that theism is a simple hypothesis?",
+    "options": [
+      "The fewest independent kinds of entity and mechanism the hypothesis requires",
+      "God has no parts or properties distinct from his essence, as the doctrine of divine simplicity holds",
+      "It explains the most data with the fewest auxiliary assumptions of any rival",
+      "Few and non-arbitrary specified quantities, infinite values fixing no arbitrary number"
+    ],
+    "answer": 3,
+    "explanation": "A finite value invites the question why that value, while unlimited power, knowledge and goodness specify no arbitrary constants. Counting kinds of entity is the measure of the objection, by which theism adds a whole new category and comes out complex."
+  },
+  {
+    "id": "which-terminus-is-better",
+    "section": "whether-the-explanation-needs-explaining",
+    "question": "Both frameworks end in something unexplained. On what ground does the theist claim her terminus is the more satisfactory one?",
+    "options": [
+      "It is simpler, since a being of unlimited power fixes no arbitrary constants",
+      "It is necessary, whereas a contingent brute fact leaves a question standing",
+      "It is the thing already known to exist, rather than an entity posited behind it",
+      "It is a personal explanation, and a personal explanation needs none in turn"
+    ],
+    "answer": 1,
+    "explanation": "The theist locates the difference in contingency, appealing to the necessary terminus of rung 3, and the naturalist replies that such necessity has not been shown coherent. Being already known to exist is the naturalist's argument for making the universe the terminus, not the theist's."
+  },
+  {
+    "id": "what-the-symmetry-establishes",
+    "section": "what-each-framework-has-to-absorb",
+    "question": "Each framework has awkward features to absorb: suffering and unbelief for theism; consciousness, intentionality, mathematics and moral facts for naturalism. What does the article say this symmetry establishes?",
+    "options": [
+      "Neither faces a decisive counterexample, so the real disputes are quantitative",
+      "The two frameworks are equally probable, since each has the same number of awkward cases",
+      "Accommodation is costless for naturalism, which can always appeal to science being unfinished",
+      "Both frameworks are unfalsifiable, so the evidence can support neither of them"
+    ],
+    "answer": 0,
+    "explanation": "Both handle their awkward cases by argument rather than capitulation, so the question becomes quantitative and likelihoods keep appearing. The parity option overreaches: the symmetry is in kind, and nothing in it makes the frameworks equally probable."
+  },
+  {
+    "id": "classify-principled-gap",
+    "section": "the-gaps",
+    "question": "Which of these is a principled gap, in the article's sense, rather than a contingent one?",
+    "options": [
+      "One that has resisted scientific explanation for centuries despite sustained inquiry",
+      "A single anomalous event, such as a reported miracle, that current science cannot explain",
+      "One where an agent fits the data better than any naturalistic rival now on offer",
+      "One where a feature of the phenomenon shows in advance why no explanation could come"
+    ],
+    "answer": 3,
+    "explanation": "A principled gap is grounded in the phenomenon rather than our present ignorance, which is the status fine-tuning's defenders claim for the constants. Long resistance to explanation is the tempting answer, but planetary motion resisted too, and a long-standing gap is still a contingent one."
+  },
+  {
+    "id": "one-feature-counted-twice",
+    "section": "adding-things-up",
+    "question": "A cumulative case counts several considerations separately, though all of them trace to one underlying feature of the world. What has gone wrong?",
+    "options": [
+      "It has left out the evidence on the other side, so it is a brief rather than a calculation",
+      "Weak arguments never accumulate, since leaky buckets hold no more water than one",
+      "It double-counts, since one item of evidence has been described in several ways",
+      "Each consideration's prior has been set by intuition rather than by measurement"
+    ],
+    "answer": 2,
+    "explanation": "Evidence compounds only if the items are independent, so a single feature counted several times inflates the result. The leaky-bucket option is the objection the Bayesian reply rejects: independent weak evidence does accumulate."
+  },
+  {
+    "id": "framework-sets-expectation",
+    "section": "what-the-framing-settles-and-what-it-hides",
+    "question": "A theist finds fine-tuning astonishing and a naturalist finds it unremarkable. On the article's account, what are they disagreeing about?",
+    "options": [
+      "The physics, and in particular how narrow the life-permitting range of the constants is",
+      "What should have been expected, which each side's background framework sets",
+      "Whether inference to the best explanation is a legitimate form of argument at all",
+      "Whether fine-tuning is a contingent gap or a principled one in current knowledge"
+    ],
+    "answer": 1,
+    "explanation": "Under the framework framing, what counts as surprising is fixed by the background picture, which is why the arguments do not converge. The physics option is the trap: the article says explicitly that they are not disagreeing about the physics."
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "features-any-account-must-earn",
+    "section": "the-vocabulary",
+    "question": "Which of these is one of the two features of causation that the article says any account has to earn?",
+    "options": [
+      "Every effect has exactly one cause, which an account must single out",
+      "Causation has a direction: the lighting did not cause the striking",
+      "Causes and effects can be seen directly, if one watches closely enough",
+      "Every cause is a sufficient condition for its effect, whatever else holds"
+    ],
+    "answer": 1,
+    "explanation": "The two fixed points are direction and support for claims about what would have happened otherwise. The idea that causing can be watched directly is exactly what Hume denies in the next section, so it cannot be something every account is obliged to deliver."
+  },
+  {
+    "id": "classify-fuel-condition",
+    "section": "conditions",
+    "question": "A car will not start unless there is fuel in the tank, though fuel alone does not start it. Fuel in the tank is therefore what?",
+    "options": [
+      "A necessary condition for the car starting",
+      "A sufficient condition for the car starting",
+      "Both a necessary and a sufficient condition for the car starting",
+      "The cause of the car starting"
+    ],
+    "answer": 0,
+    "explanation": "Without fuel there is no starting, which makes it necessary, and fuel alone does not start the car, so it is not sufficient. Calling it the cause runs together a condition and causation, the gap the article illustrates with oxygen and the match."
+  },
+  {
+    "id": "selecting-the-cause",
+    "section": "conditions",
+    "question": "A fire needed oxygen, dry wood and a missing sprinkler, and an investigator names the dropped cigarette as its cause. On the article's account, what governs that choice?",
+    "options": [
+      "Which condition was sufficient for the fire on its own, without the others",
+      "Which condition came last before the fire started, since causes are immediate",
+      "Which condition was necessary, since the others were not",
+      "What was unusual, under someone's control, or relevant to the enquiry"
+    ],
+    "answer": 3,
+    "explanation": "Picking out \"the\" cause from many jointly required conditions is a real practice, but the article separates it from the metaphysical question of what causation is. Every listed condition was necessary for the fire, so necessity cannot be what singles out the cigarette."
+  },
+  {
+    "id": "night-and-day",
+    "section": "humes-challenge",
+    "question": "Night follows day with perfect regularity, yet day does not cause night. What does this show about Hume's first definition?",
+    "options": [
+      "It is too strict, since it leaves out genuine causes that act only once",
+      "Day and night are both effects of a common cause, which it cannot detect",
+      "It is too permissive: regularity is present where causation is absent",
+      "It is correct, since regular succession is all causation could ever amount to"
+    ],
+    "answer": 2,
+    "explanation": "The regularity is there and the causation is not, so regularity lets in too much, and it gets direction wrong too, since night is just as regularly followed by day. The common-cause diagnosis belongs to the barometer case, a different failure of the same account."
+  },
+  {
+    "id": "classify-common-cause",
+    "section": "humes-challenge",
+    "question": "Ice-cream sales and drownings rise and fall together, but neither causes the other: both go up in hot weather. Which of the article's cases has the same shape?",
+    "options": [
+      "Night regularly following day",
+      "The falling barometer and the storm",
+      "The two assassins and the backup",
+      "Oxygen and the lighting of the match"
+    ],
+    "answer": 1,
+    "explanation": "Barometer and storm are both effects of falling pressure, just as sales and drownings are both effects of the heat, and regularity cannot tell a cause from a shared symptom. Night and day is also a regularity without causation, but there the trouble is permissiveness and direction, not a hidden common cause."
+  },
+  {
+    "id": "humes-actual-project",
+    "section": "humes-challenge",
+    "question": "On the article's reading, what was Hume actually doing with the regularity account?",
+    "options": [
+      "Asking where in experience the idea of necessary connection could come from",
+      "Proving that causation is nothing but regular succession between kinds of event",
+      "Showing that causing is a further ingredient visible in each collision",
+      "Replacing regularity with a test about what would have happened otherwise"
+    ],
+    "answer": 0,
+    "explanation": "Hume's answer is that nothing in the observed sequence supplies the idea, and the felt necessity is a habit of expectation formed by regularity. Reading him as simply claiming that causation is nothing but regularity is the easy misreading the aside warns against."
+  },
+  {
+    "id": "counterfactual-direction",
+    "section": "the-other-definition",
+    "question": "On the counterfactual account, why does the striking cause the lighting and not the other way round?",
+    "options": [
+      "The striking came first in time, and a cause always precedes its effect",
+      "Striking is regularly followed by lighting, but lighting is not followed by striking",
+      "The striking is a sufficient condition for the lighting, but not the other way round",
+      "Remove the striking and the lighting goes; remove the lighting and the striking stays"
+    ],
+    "answer": 3,
+    "explanation": "Dependence runs one way, so the account gets direction right without any further stipulation. Appealing to temporal order is tempting, but that is exactly the extra stipulation the article says the counterfactual account does not need."
+  },
+  {
+    "id": "chains-transitivity",
+    "section": "chains",
+    "question": "What consequence does building causal chains into the counterfactual account have?",
+    "options": [
+      "Every necessary condition of an effect counts as one of its causes",
+      "Causation loses its direction once chains grow long enough to loop back",
+      "Causation comes out transitive, so a cause of a cause counts as a cause",
+      "Preemption ceases to be a problem in every version, including the hardest"
+    ],
+    "answer": 2,
+    "explanation": "Causation holds between the ends of a chain, not only between adjacent links, which is what makes it transitive. The chain machinery handles only the early-cutoff version of preemption; the version with the backup active until the end is still open."
+  },
+  {
+    "id": "classify-preemption",
+    "section": "chains",
+    "question": "A cat knocks a vase off a shelf; had it not, a gust of wind a moment later would have knocked the vase off instead. Applied directly, what does the simple counterfactual test say?",
+    "options": [
+      "The cat did not cause the fall, since the vase would have fallen anyway",
+      "The cat caused the fall, since it acted first and the wind never arrived",
+      "The wind caused the fall, since it would have been sufficient on its own",
+      "Both the cat and the wind caused the fall, since each was enough on its own"
+    ],
+    "answer": 0,
+    "explanation": "The fall does not depend on the cat, so the bare test denies that the cat caused it, which is plainly wrong. This is preemption, the same structure as the two assassins, and it is the benchmark any account of causation has to meet."
+  }
+]

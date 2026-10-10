@@ -1,0 +1,115 @@
+[
+  {
+    "id": "why-second-order",
+    "section": "what-validity-on-a-frame-means",
+    "question": "Why is validity on a frame a second-order condition, when truth at a world in a model is not?",
+    "options": [
+      "It quantifies over every assignment of truth values to atoms, that is, over all sets of worlds",
+      "It quantifies over every frame at once, and frames are themselves relational structures",
+      "The box is a quantifier over accessible worlds, and nesting boxes raises the order each time",
+      "It requires following chains of accessible worlds of every length, which no single formula can"
+    ],
+    "answer": 0,
+    "explanation": "A frame fixes worlds and relation but not the assignment, so validity there says \"for every assignment\", a quantification over subsets of the set of worlds. The box quantifies over worlds, which is first-order, however deeply it is nested."
+  },
+  {
+    "id": "one-model-is-not-the-frame",
+    "section": "what-validity-on-a-frame-means",
+    "question": "A formula true at every world of one particular model built on a frame is valid on that frame.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Validity on a frame requires truth at every world under every assignment, so one model is one assignment among many. $\\Box \\varphi \\rightarrow \\varphi$ is true throughout any model making $\\varphi$ true everywhere, even on a frame where it is not valid."
+  },
+  {
+    "id": "falsifying-assignment-for-t",
+    "section": "correspondence",
+    "question": "In a frame where some world $w$ does not see itself, which assignment falsifies $\\Box \\varphi \\rightarrow \\varphi$ at $w$?",
+    "options": [
+      "Make $\\varphi$ true at $w$ and nowhere else",
+      "Make $\\varphi$ false at every world, so that both sides of the conditional fail at $w$",
+      "Make $\\varphi$ true at every world except $w$",
+      "Make $\\varphi$ true at every world, so that $\\Box \\varphi$ is certain to hold at $w$"
+    ],
+    "answer": 2,
+    "explanation": "Every world $w$ sees then satisfies $\\varphi$, so $\\Box \\varphi$ holds at $w$, while $\\varphi$ fails there. This is the general pattern: make the atom true exactly where the frame condition would have required it, and the missing link shows up as a counterexample."
+  },
+  {
+    "id": "two-world-frame",
+    "section": "correspondence",
+    "question": "A frame has two worlds, $w$ and $v$; $w$ sees $v$, and nothing else is related. Which of these axioms is valid on it?",
+    "options": [
+      "$\\Box \\varphi \\rightarrow \\varphi$",
+      "$\\Box \\varphi \\rightarrow \\Diamond \\varphi$, since $w$ sees a world and so does every other",
+      "$\\varphi \\rightarrow \\Box \\Diamond \\varphi$, since the only link runs in a single direction",
+      "$\\Box \\varphi \\rightarrow \\Box \\Box \\varphi$"
+    ],
+    "answer": 3,
+    "explanation": "There is no two-step path at all, so the frame is trivially transitive and axiom 4 holds. It is not reflexive, it is not serial because $v$ sees nothing, and it is not symmetric because $v$ does not see $w$, so T, D and B all fail."
+  },
+  {
+    "id": "lob-not-first-order",
+    "section": "correspondence",
+    "question": "Why does no first-order condition on frames correspond to the Löb axiom?",
+    "options": [
+      "Because the Löb axiom lies outside the Sahlqvist class",
+      "By compactness, a first-order theory of \"no infinite ascending chain\" would have a model with one",
+      "Because its frames must be irreflexive, and irreflexivity cannot be stated in first-order terms",
+      "Because transitivity, which its frames also need, is itself not a first-order condition"
+    ],
+    "answer": 1,
+    "explanation": "Add constants and sentences saying each sees the next; every finite part has a model among the intended frames, so compactness yields one with an infinite chain. Falling outside the Sahlqvist class only withdraws a guarantee, and irreflexivity and transitivity are both first-order."
+  },
+  {
+    "id": "outside-sahlqvist",
+    "section": "correspondence",
+    "question": "A modal formula falls outside Sahlqvist's syntactic class. What follows?",
+    "options": [
+      "Nothing definite: Sahlqvist's theorem then offers no guarantee either way",
+      "It corresponds to no first-order condition on frames, since Sahlqvist's class contains them all",
+      "It cannot be canonical, since canonicity is proved only for Sahlqvist formulas",
+      "It is valid on no frame at all"
+    ],
+    "answer": 0,
+    "explanation": "The theorem gives a sufficient condition: Sahlqvist formulas have computable first-order correspondents and are canonical. Formulas outside the class may or may not have either property; the Löb axiom happens to have neither, but it is valid on plenty of frames."
+  },
+  {
+    "id": "what-canonicity-buys",
+    "section": "canonicity",
+    "question": "A normal modal logic is shown to be canonical. What follows directly?",
+    "options": [
+      "Its axioms are defined by first-order conditions on the accessibility relation",
+      "Every one of its axioms is a Sahlqvist formula",
+      "It is complete with respect to the class of frames its axioms define",
+      "It is decidable, since its canonical frame can be searched for countermodels"
+    ],
+    "answer": 2,
+    "explanation": "The canonical frame validates the axioms, so it belongs to the class they define, and any non-theorem fails in the canonical model; hence completeness, uniformly. Canonicity and first-order definability are independent, and Sahlqvist formulas are only one source of canonical logics."
+  },
+  {
+    "id": "canonical-not-first-order",
+    "section": "canonicity",
+    "question": "Every canonical modal logic is defined by some first-order condition on frames.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Canonicity and first-order definability are independent: there are canonical logics defined by no first-order condition, and first-order conditions defining no canonical logic. Sahlqvist formulas have both properties, which is why they are easily confused."
+  },
+  {
+    "id": "more-than-translation",
+    "section": "canonicity",
+    "question": "The objection says correspondence results are mere computations within a definition. On the reply, what goes beyond that?",
+    "options": [
+      "The individual translations, such as axiom 4 into transitivity, which had to be discovered",
+      "The fact that every modal formula turns out to have some first-order correspondent",
+      "The proof that frame validity is first-order after all, once the box is unpacked",
+      "General theorems, such as Sahlqvist's, that could have gone otherwise and had to be proved"
+    ],
+    "answer": 3,
+    "explanation": "The reply grants that individual translations follow from the definitions, as every theorem does, and points to the general results: a syntactic class always yields first-order conditions, some modally definable classes are not first-order, and modal definability has an exact characterisation. Not every formula has a first-order correspondent, as the Löb axiom shows."
+  }
+]

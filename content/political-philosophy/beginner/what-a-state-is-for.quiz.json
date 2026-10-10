@@ -1,0 +1,101 @@
+[
+  {
+    "id": "definition-by-means",
+    "section": "defining-it-by-what-it-does",
+    "question": "Why does Weber's definition count a brutal tyranny as a state just as much as a well-run republic?",
+    "options": [
+      "It defines the state by the consent of the people it rules over",
+      "It defines the state by its means, not by what it does with them",
+      "It defines the state by success in providing order and defence",
+      "It counts only morally justified force as part of the definition"
+    ],
+    "answer": 1,
+    "explanation": "The definition says nothing about what the state does with its force, so it covers tyrannies and republics alike. Defining the state by its success at its jobs would be a definition by ends, which is exactly what Weber avoided."
+  },
+  {
+    "id": "licensed-force-monopoly",
+    "section": "defining-it-by-what-it-does",
+    "question": "A state permits self-defence and licenses private security firms. Does this show that it lacks a monopoly on force?",
+    "options": [
+      "Yes, since a monopoly means only officials may ever use force at all",
+      "No, since private force does not count unless it is lethal force",
+      "No, since the monopoly is over the terms on which force is used",
+      "Yes, unless those firms are owned and run by the state itself"
+    ],
+    "answer": 2,
+    "explanation": "What the state claims is authority over the terms: force used within its territory is either licensed or treated as a wrong. The first option is the common misdescription the article corrects, since no state has ever claimed that only officials may use force."
+  },
+  {
+    "id": "hobbes-readiness",
+    "section": "the-three-standard-jobs",
+    "question": "On Hobbes's argument, what makes life without a common power so impoverished?",
+    "options": [
+      "People are naturally cruel, so they fight one another constantly",
+      "Some people are far stronger, and they dominate all the others",
+      "With no state, there are no rules or sanctions of any kind at all",
+      "A standing readiness to fight rules out any long-term undertaking"
+    ],
+    "answer": 3,
+    "explanation": "The result is not constant fighting but a permanent readiness for it, in which nothing requiring time and confidence can be undertaken. Hobbes's premise is that people are roughly equal in their capacity to harm each other, which is why the second option gets him backwards."
+  },
+  {
+    "id": "public-goods-structural",
+    "section": "the-three-standard-jobs",
+    "question": "Why does the public goods problem arise even among people who genuinely want the good?",
+    "options": [
+      "One contribution barely changes whether it exists, yet costs in full",
+      "People who want a good tend to overestimate how much others want it",
+      "Those who cannot be excluded from a good come to value it far less",
+      "Selfish people always come to outnumber cooperative ones in big groups"
+    ],
+    "answer": 0,
+    "explanation": "Each individual contribution makes almost no difference to whether the good exists while costing the contributor the whole of what they put in. That is why the article calls it a structural problem rather than a moral failing, so the appeal to selfishness misses the point."
+  },
+  {
+    "id": "anarchism-not-disorder",
+    "section": "the-reply",
+    "question": "On the article's account, anarchism is the view that there should be no rules or sanctions.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Almost every anarchist tradition proposes rules, coordination and sanctions. What it rejects is that these must come from a body claiming supreme authority backed by a monopoly on force."
+  },
+  {
+    "id": "communal-strand-challenge",
+    "section": "the-reply",
+    "question": "Which difficulty does the article say the communal strand of anarchism must answer?",
+    "options": [
+      "Why competing protective agencies would not merge into a single large one",
+      "How a federation that enforces decisions on dissenters is not a state",
+      "How courts could work as arbitration services chosen by the parties",
+      "Why taxation and conscription do not count as forms of coercion"
+    ],
+    "answer": 1,
+    "explanation": "Once a federation of communities can enforce its decisions on members who dissent, it is unclear how it differs from a state. The consolidation of protective agencies is the individualist strand's difficulty, not the communal one's."
+  },
+  {
+    "id": "ostrom-third-option",
+    "section": "the-reply",
+    "question": "What does Ostrom's evidence establish, on the article's account?",
+    "options": [
+      "That the state is unnecessary for providing any public good at all",
+      "That common resources are always destroyed when nobody owns them",
+      "That privatisation is the most reliable way to save a commons",
+      "That users' self-governance is a real alternative in some cases"
+    ],
+    "answer": 3,
+    "explanation": "She documented commons managed sustainably by their users for centuries without state control or private ownership, so self-governance is a real third option. The first option overstates it: the arrangements were mostly small, and the aside says the result does not vindicate anarchism."
+  },
+  {
+    "id": "origins-not-justification",
+    "section": "the-reply",
+    "question": "Suppose states arose by conquest and accident rather than by design. What does the reply say follows for whether they are justified?",
+    "options": [
+      "Nothing directly, since origin and justification are separate",
+      "They cannot be justified, since no one ever chose to set them up",
+      "They are justified, since they survived where their rivals failed",
+      "The public goods argument is historical, and so it is refuted"
+    ],
+    "answer": 0,
+    "explanation": "That an institution arose by accident is irrelevant to whether people subject to it now have reason to maintain it. Treating survival as justification is the mistake the objection itself warns against, since the state's victory is a fact about power."
+  }
+]

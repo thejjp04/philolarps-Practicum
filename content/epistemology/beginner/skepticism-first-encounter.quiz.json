@@ -1,0 +1,88 @@
+[
+  {
+    "id": "everyday-skeptic",
+    "section": "the-position",
+    "question": "A friend refuses to believe a new supplement works until she sees trial data. Is she a skeptic in the article's sense?",
+    "options": [
+      "No, because she applies a standard rather than arguing it cannot be met",
+      "Yes, because she doubts the claim, and skepticism is at bottom a form of doubt",
+      "Yes, because she holds a local skepticism about one kind of product",
+      "No, because a skeptic must deny that anything at all is known"
+    ],
+    "answer": 0,
+    "explanation": "She is a skeptic only in the everyday sense, demanding evidence before accepting a claim. The philosophical skeptic argues that the standard cannot be met; and local versions exist, so a skeptic need not deny all knowledge."
+  },
+  {
+    "id": "skepticism-not-doubt",
+    "section": "the-position",
+    "question": "A philosophical skeptic about the external world must feel unsure whether there is a floor beneath their feet.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Skepticism is a claim about the epistemic standing of ordinary beliefs, not about anyone's confidence in them. Skeptics have generally walked around buildings rather than through walls."
+  },
+  {
+    "id": "purpose-of-doubt",
+    "section": "descartess-method",
+    "question": "What was Descartes trying to achieve with his method of doubt?",
+    "options": [
+      "To show that nothing at all can be known by anyone",
+      "To record how uncertain ordinary people really feel",
+      "To find a secure foundation by seeing what survives extreme doubt",
+      "To test each of his beliefs individually until none of them were left standing"
+    ],
+    "answer": 2,
+    "explanation": "The method was constructive: demolish everything demolishable and build the sciences on whatever is left. Treating Descartes as a skeptic reverses his intention, and he attacked whole classes of belief precisely because there were too many to check one at a time."
+  },
+  {
+    "id": "pinch-test",
+    "section": "descartess-method",
+    "question": "According to the dream argument, why can't you settle whether you are awake by pinching yourself?",
+    "options": [
+      "Because pain cannot be felt in dreams, so a pinch would settle it at once",
+      "Because you could be wrong about which hand did the pinching",
+      "Because dreams are always less vivid, so a pinch adds nothing",
+      "Because any test is an experience, and any experience can be dreamt"
+    ],
+    "answer": 3,
+    "explanation": "No experiential test separates dreaming from waking, since the test itself would be one more experience, and pinching yourself is exactly the sort of thing that happens in dreams. The folk idea that dreams contain no pain is what makes the pinch seem to work."
+  },
+  {
+    "id": "closure-premise",
+    "section": "the-argument-itself",
+    "question": "What principle lies behind the first premise of the skeptical argument (if I am justified in believing I have hands, I am justified in believing I am not a handless brain in a vat)?",
+    "options": [
+      "Any belief that could possibly be false is unjustified",
+      "Justification carries across an entailment you recognise",
+      "Evidence must be the same in every possible scenario",
+      "Being justified in a belief requires being certain of it"
+    ],
+    "answer": 1,
+    "explanation": "Having hands entails not being a handless brain in a vat, and you know it does, so justification for the first should carry over to the second. The argument does not rely on a demand for certainty; its second premise comes from the scenario being built so that all your evidence is identical either way."
+  },
+  {
+    "id": "relevant-alternatives",
+    "section": "the-shape-of-the-responses",
+    "question": "A view says a birdwatcher can know she sees a goldfinch without ruling out a robot goldfinch, because robots are not a relevant alternative in that context. Which part of the skeptical argument does this view deny?",
+    "options": [
+      "The first premise, linking justification about hands to ruling out the vat",
+      "The second premise, that you cannot be justified in denying the vat",
+      "The coherence of the vat hypothesis, since words need causal contact",
+      "None of it, since the view accepts the conclusion but keeps practice"
+    ],
+    "answer": 0,
+    "explanation": "If ordinary knowledge only needs to rule out relevant alternatives, being justified about hands does not require being justified in denying the vat, which is the first premise. Moore's response is the one that denies the second premise, by running the argument backwards."
+  },
+  {
+    "id": "self-refutation-reply",
+    "section": "the-shape-of-the-responses",
+    "question": "Against the charge that skepticism refutes itself because the skeptic must know the premises, what is the article's main reply?",
+    "options": [
+      "That skeptics may know their premises, since the argument is only about logic",
+      "That self-refutation is not a real defect in an argument of any kind",
+      "That the argument can be offered conditionally, as a challenge, not a claim",
+      "That the skeptic has no need to explain the argument's own standing"
+    ],
+    "answer": 2,
+    "explanation": "The argument can say: if your standards are what you say, this is where they lead, which asserts nothing about what is known. The article grants that the skeptic does owe an account of the argument's standing, and the argument concerns the external world, not logic."
+  }
+]

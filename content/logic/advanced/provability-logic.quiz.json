@@ -1,0 +1,130 @@
+[
+  {
+    "id": "rule-not-axiom",
+    "section": "the-predicate-behaves-like-an-operator",
+    "question": "The first derivability condition says that if PA proves $A$ then PA proves $\\Box A$. Why is this not the claim that PA proves $A \\rightarrow \\Box A$?",
+    "options": [
+      "There is no difference, since the deduction theorem makes the two claims equivalent",
+      "Like necessitation it covers only theorems; $A \\rightarrow \\Box A$ would make all truths provable",
+      "$A \\rightarrow \\Box A$ is the third derivability condition, which is harder to establish",
+      "The condition concerns truth in the natural numbers, while the formula concerns provability in PA"
+    ],
+    "answer": 1,
+    "explanation": "A rule taking theorems to theorems says nothing about sentences the theory does not prove, and the deduction theorem cannot convert it, since $A$ as a mere hypothesis is not a theorem. If PA proved $A \\rightarrow \\Box A$ for every $A$, then, PA being sound, every true sentence would be provable, which incompleteness rules out."
+  },
+  {
+    "id": "henkin-sentence-provable",
+    "section": "the-axiom-that-is-missing",
+    "question": "Suppose PA proves $H \\leftrightarrow \\Box H$, so that $H$ says of itself that it is provable. Then PA proves $H$.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 0,
+    "explanation": "From the biconditional PA proves $\\Box H \\rightarrow H$, which is reflection for $H$, and Löb's theorem then yields $H$ itself. This settled Henkin's question, to which both answers had at first looked consistent."
+  },
+  {
+    "id": "second-theorem-from-lob",
+    "section": "the-axiom-that-is-missing",
+    "question": "How does the second incompleteness theorem follow from Löb's theorem?",
+    "options": [
+      "Take $A$ to be consistency itself: it is not of the form $\\Box A \\rightarrow A$, so it cannot be proved",
+      "Take $A$ to be the Gödel sentence, which says of itself that it is unprovable",
+      "Take $A$ to be $\\bot$: consistency is then $\\Box \\bot \\rightarrow \\bot$, so proving it yields $\\bot$",
+      "Take $A$ to be any theorem: PA proves $\\Box A$, and so proves its own consistency"
+    ],
+    "answer": 2,
+    "explanation": "The consistency statement $\\neg \\Box \\bot$ is just reflection for a contradiction, so if PA proved it, Löb's theorem would deliver $\\bot$ and PA would be inconsistent. No Gödel sentence needs to be constructed to see this."
+  },
+  {
+    "id": "reflection-for-the-unprovable",
+    "section": "the-axiom-that-is-missing",
+    "question": "PA does not prove a certain sentence $A$. What can be said about $\\Box A \\rightarrow A$?",
+    "options": [
+      "It is false in the natural numbers, since its consequent $A$ is unprovable",
+      "PA proves it, since PA is sound",
+      "PA refutes it, since PA cannot establish its own soundness for any sentence",
+      "It is true in the natural numbers, yet PA does not prove it"
+    ],
+    "answer": 3,
+    "explanation": "Since $A$ is not provable, $\\Box A$ is false, so the conditional is true. But if PA proved it, Löb's theorem would give $A$, so PA does not: the reflection principle holds and is never a route to anything new."
+  },
+  {
+    "id": "where-condition-three-enters",
+    "section": "the-axiom-that-is-missing",
+    "question": "In the proof of Löb's theorem, what is the third derivability condition, $\\Box A \\rightarrow \\Box \\Box A$, used for?",
+    "options": [
+      "To obtain a $\\psi$ with $\\psi \\leftrightarrow (\\Box \\psi \\rightarrow A)$ from the diagonal lemma",
+      "To pass from $\\Box \\psi \\rightarrow (\\Box \\Box \\psi \\rightarrow \\Box A)$ to $\\Box \\psi \\rightarrow \\Box A$",
+      "To infer $\\Box \\psi$ once $\\psi$ itself has been proved outright in PA",
+      "To chain $\\Box \\psi \\rightarrow \\Box A$ with the assumed reflection principle $\\Box A \\rightarrow A$"
+    ],
+    "answer": 1,
+    "explanation": "Instantiated at $\\psi$, it supplies $\\Box \\psi \\rightarrow \\Box \\Box \\psi$, which discharges the middle antecedent. Inferring $\\Box \\psi$ from a proof of $\\psi$ is the first condition, the external rule, and the diagonal lemma needs none of the three."
+  },
+  {
+    "id": "reflexive-point-falsifies-lob",
+    "section": "the-system",
+    "question": "Take a frame with a single world that can see itself. What happens to the Löb axiom $\\Box(\\Box A \\rightarrow A) \\rightarrow \\Box A$ there?",
+    "options": [
+      "It fails: with $A$ false, $\\Box(\\Box A \\rightarrow A)$ holds while $\\Box A$ does not",
+      "It holds, since the frame is transitive and transitivity is all the Löb axiom requires",
+      "It holds there, although the $\\mathsf{4}$ axiom fails on this frame",
+      "It fails, because the $\\mathsf{K}$ axiom already fails on every reflexive frame"
+    ],
+    "answer": 0,
+    "explanation": "At the world, $\\Box A$ is false because the world sees itself and $A$ is false there; so $\\Box A \\rightarrow A$ is true, and its necessitation holds. Transitivity is not enough: the frame must have no infinite ascending chain, and a world that sees itself gives one."
+  },
+  {
+    "id": "complete-without-canonicity",
+    "section": "the-system",
+    "question": "$\\mathsf{GL}$ is not canonical. How are its completeness and decidability secured?",
+    "options": [
+      "By adding the $\\mathsf{4}$ axiom as an extra assumption, which restores canonicity",
+      "By Solovay's theorem on provability in PA",
+      "Via finite transitive irreflexive frames, plus a finite axiomatisation",
+      "By the decidability of PA, which settles every arithmetical interpretation in turn"
+    ],
+    "answer": 2,
+    "explanation": "Its frame condition is not first-order, so the canonical model method fails, but Segerberg showed completeness for finite transitive irreflexive frames. The finite model property plus a finite axiomatisation gives decidability; PA itself is undecidable, so no help comes from there."
+  },
+  {
+    "id": "what-solovay-proved",
+    "section": "arithmetical-completeness",
+    "question": "What does Solovay's arithmetical completeness theorem say about $\\mathsf{GL}$?",
+    "options": [
+      "It derives exactly the modal formulas all of whose arithmetical interpretations are true",
+      "It derives exactly the modal formulas valid on every transitive frame, finite or infinite",
+      "Every theorem of PA is an interpretation of a $\\mathsf{GL}$ theorem",
+      "It derives exactly the formulas all of whose interpretations PA proves"
+    ],
+    "answer": 3,
+    "explanation": "The theorem matches derivability in $\\mathsf{GL}$ with provability in PA under every interpretation. Asking instead which formulas always interpret into truths gives a slightly larger system, the closure of $\\mathsf{GL}$ under a reflection rule, which was Solovay's companion result."
+  },
+  {
+    "id": "applying-arithmetical-completeness",
+    "section": "arithmetical-completeness",
+    "question": "$\\Box p \\rightarrow p$ is not a theorem of $\\mathsf{GL}$. What does arithmetical completeness then guarantee?",
+    "options": [
+      "Some sentence $A$ for which PA does not prove $\\Box A \\rightarrow A$",
+      "Some sentence $A$ for which $\\Box A \\rightarrow A$ is false in the natural numbers",
+      "Some sentence $A$ for which PA proves the negation of $\\Box A \\rightarrow A$",
+      "Nothing, since it concerns only what $\\mathsf{GL}$ derives"
+    ],
+    "answer": 0,
+    "explanation": "A non-theorem has an interpretation that PA fails to prove; here any sentence PA does not prove will do, by Löb's theorem. Each such $\\Box A \\rightarrow A$ is still true, since PA is sound, so the guarantee is about unprovability, not falsity."
+  },
+  {
+    "id": "more-than-a-pun",
+    "section": "arithmetical-completeness",
+    "question": "The objection calls the box of provability logic a pun on necessity. What, on the reply, shows that the modal notation earns its place?",
+    "options": [
+      "Provability is a species of necessity, as the shared $\\mathsf{K}$ and $\\mathsf{4}$ principles show",
+      "An exact, proved correspondence with PA, and frame conditions that make the system decidable",
+      "Montague's result that necessity must always be treated as a predicate of sentences",
+      "PA proves $\\Box A \\rightarrow A$ for every $A$, just as necessity entails truth"
+    ],
+    "answer": 1,
+    "explanation": "The reply denies that provability is a kind of necessity; the axiom that makes necessity what it is fails here. What the notation buys is a theorem, arithmetical completeness, and access to frames, which give decidability; Montague's result is a reason the operator reading is standard elsewhere."
+  }
+]

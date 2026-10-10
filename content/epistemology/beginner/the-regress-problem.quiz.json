@@ -1,0 +1,106 @@
+[
+  {
+    "id": "what-generates-regress",
+    "section": "how-the-problem-arises",
+    "question": "Which two assumptions together generate the epistemic regress?",
+    "options": [
+      "A justified belief needs a reason, and a reason is a further supporting belief",
+      "Every belief is doubtful until proved, and proof always requires certainty",
+      "Knowledge requires truth, and truth can only be established by evidence",
+      "Most beliefs come from perception, and perception can always mislead us"
+    ],
+    "answer": 0,
+    "explanation": "Grant that justification needs a reason and that a reason is another belief, and every justified belief sits at the end of a chain that can itself be questioned. Doubts about perception raise the skeptical problem of the previous article, which is a different worry."
+  },
+  {
+    "id": "classify-the-horn",
+    "section": "how-the-problem-arises",
+    "question": "Asked why she trusts her memory, Lena cites her diary. Asked why she trusts her diary, she says she remembers writing it carefully. Which horn of Agrippa's trilemma has she landed on?",
+    "options": [
+      "Infinite regress, since each answer invites another question",
+      "Unsupported assumption, since she stops at memory without proof",
+      "Circularity, since memory ends up among the grounds for memory",
+      "None, since she has given a reason at every single step"
+    ],
+    "answer": 2,
+    "explanation": "Her support for memory runs through the diary and back to memory, so what should confirm the matter needs that matter to be made convincing: the mode of reciprocity. Giving a reason at every step does not help when the reasons loop."
+  },
+  {
+    "id": "valid-so-reject-premise",
+    "section": "the-argument-stated",
+    "question": "The regress argument is valid and almost nobody accepts its conclusion. What follows?",
+    "options": [
+      "The conclusion must be accepted, since the argument is valid",
+      "The argument must be invalid after all, since its conclusion is false",
+      "Nothing, since its conclusion is only one sceptical hypothesis",
+      "A premise must be rejected, and which one fixes your theory"
+    ],
+    "answer": 3,
+    "explanation": "A valid argument with a conclusion you reject forces you to reject a premise, and the regress argument leaves only a few to choose from. Validity does not force acceptance of the conclusion unless the premises are all true, which is exactly what is in dispute."
+  },
+  {
+    "id": "stopping-not-arbitrary",
+    "section": "the-first-premise-is-the-weak-point",
+    "question": "On the article's account, why is ending the chain at a basic belief not simply stopping arbitrarily?",
+    "options": [
+      "Because basic beliefs are obvious to anyone who considers them carefully",
+      "Because something other than a belief may confer justification on it",
+      "Because basic beliefs are certain and so could not possibly be false",
+      "Because the chain is too long to follow, so it has to stop somewhere"
+    ],
+    "answer": 1,
+    "explanation": "The premise that a terminating chain fails assumes the only possible support is another belief; if experience or something else non-doxastic can confer justification, the last belief is supported without being inferred. Appealing to obviousness is exactly what the article says every version of this answer must do better than."
+  },
+  {
+    "id": "non-doxastic-candidate",
+    "section": "the-first-premise-is-the-weak-point",
+    "question": "Which of these is a candidate for the non-doxastic support that could justify a basic belief?",
+    "options": [
+      "A further belief that the process producing it is reliable",
+      "The fact that other people agree with the belief",
+      "The experience on which the belief is based",
+      "The way the belief coheres with everything else one believes"
+    ],
+    "answer": 2,
+    "explanation": "Experience itself is one of the candidates the article lists, along with self-evidence and the reliability of the process (not a belief about it). A further belief that the process is reliable is the trap: it is another belief, so it would restart the chain rather than end it."
+  },
+  {
+    "id": "coherentism-burden",
+    "section": "the-three-exits-named",
+    "question": "A theorist holds that beliefs are justified by how they fit together into a whole, with none of them foundational. Which exit is this, and what burden does it carry?",
+    "options": [
+      "Foundationalism, which must say which beliefs are basic and why",
+      "Coherentism, which must say why a coherent set has to be true",
+      "Infinitism, which must say how a finite mind has endless reasons",
+      "Scepticism, which must say why judgement should be suspended"
+    ],
+    "answer": 1,
+    "explanation": "Mutual support with no foundations is coherentism, the option of embracing the second horn and denying that circularity is vicious. Its burden is that a well-constructed fiction is coherent too, so coherence alone does not seem to guarantee truth."
+  },
+  {
+    "id": "infinitism-availability",
+    "section": "the-three-exits-named",
+    "question": "On Klein's infinitism, what does having a justified belief require?",
+    "options": [
+      "That one has actually worked through an infinite chain of reasons",
+      "That one's reasons eventually loop back to the original belief",
+      "That one's reasons stop at a belief that needs no support",
+      "That endless, non-repeating reasons are available to one"
+    ],
+    "answer": 3,
+    "explanation": "Justification is a matter of having the reasons available, not of having traversed them, which is how the view tries to avoid the charge that no finite thinker completes the chain. Reasons that loop back would make it coherentism rather than infinitism."
+  },
+  {
+    "id": "web-is-second-exit",
+    "section": "the-three-exits-named",
+    "question": "An objector says there is no chain at all, since beliefs are justified by their relations to everything else a person believes. On the article's reply, what is this objection in effect?",
+    "options": [
+      "An argument for the second exit, which still faces the circularity charge",
+      "A dissolution of the trilemma, since without a chain the regress cannot start",
+      "A version of foundationalism, since the whole web acts as a foundation",
+      "A concession to the sceptics, since a web cannot justify anything"
+    ],
+    "answer": 0,
+    "explanation": "Replacing the chain with a web is precisely what the second horn offers, and calling it a web rather than a circle does not answer the charge that the beliefs support one another. The underlying question survives without any metaphor: either a belief's justification depends on other beliefs or it does not."
+  }
+]

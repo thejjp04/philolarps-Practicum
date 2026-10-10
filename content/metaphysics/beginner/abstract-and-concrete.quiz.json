@@ -1,0 +1,104 @@
+[
+  {
+    "id": "way-of-example-limit",
+    "section": "the-paradigms",
+    "question": "The article's definitions of concrete and abstract objects work by pointing at examples. What is the weakness of this way of drawing the distinction?",
+    "options": [
+      "It gets the paradigm cases wrong, since numbers and mugs land on the wrong sides",
+      "It gives no verdict on any case that the list of examples does not already settle",
+      "It says only what abstract objects lack, never what they are like in themselves",
+      "It runs the abstract and concrete distinction together with the type-token one"
+    ],
+    "answer": 1,
+    "explanation": "The way of example hopes the sense of the distinction will emerge from the list, and it usually does until a case arrives that the list does not cover. Saying only what abstract objects lack is the weakness of the way of negation, the standard analysis, not of the way of example."
+  },
+  {
+    "id": "exhaustive-by-fiat",
+    "section": "the-standard-analysis",
+    "question": "The standard account makes the abstract and concrete distinction exhaustive and exclusive by fiat. What does that commit it to?",
+    "options": [
+      "Some objects count as both abstract and concrete",
+      "Abstract objects can be described by what they are like, not only by what they lack",
+      "Every object is either a number or a physical thing",
+      "Every hard case has to be forced onto one side rather than sitting between them"
+    ],
+    "answer": 3,
+    "explanation": "If every object must be exactly one of the two, there is no room for an in-between verdict, so hard cases have to be squeezed onto a side. The option about describing what abstract objects are like gets the account backwards: its definition is negative all the way through."
+  },
+  {
+    "id": "middlemarch-problem",
+    "section": "where-it-breaks",
+    "question": "Why is a novel such as *Middlemarch* a problem for the standard account?",
+    "options": [
+      "Not located as a copy is, it counts as abstract, yet it was created and has affected readers",
+      "It is located wherever its copies are, so it counts as concrete, yet it cannot cause anything at all",
+      "It is a token of a type, and the standard account says that tokens can never be abstract objects",
+      "It does not exist, since fiction is not real"
+    ],
+    "answer": 0,
+    "explanation": "The novel survives the destruction of any copy and is not located as a copy is, which pushes it to the abstract side, yet it is dated and causally consequential, which the account says abstract objects are not. The second option reverses the case: the trouble is precisely that the novel *does* cause things."
+  },
+  {
+    "id": "sensations-lesson",
+    "section": "where-it-breaks",
+    "question": "Suppose there are properties of experience that make no causal difference to behaviour. According to the article, what follows for the standard account?",
+    "options": [
+      "Such properties are abstract, since they cannot cause anything and so meet the account's condition",
+      "The spatial condition fails here, so causal inefficacy must be what does the real work instead",
+      "Causal inefficacy alone cannot suffice for abstractness, so the spatial condition does the work",
+      "Nothing follows for the account unless such properties are first shown to exist in someone"
+    ],
+    "answer": 2,
+    "explanation": "Properties that occur at a particular time in a particular person's experience are plainly not abstract, so causal inertness on its own cannot be what makes something abstract. The article stresses that this holds even if no such properties exist, since the point concerns what the account's conditions could deliver."
+  },
+  {
+    "id": "unrepeatable-set",
+    "section": "nearby-distinctions-it-is-not",
+    "question": "There is only one set containing exactly your two hands, so it is unrepeatable. On the article's account, this makes the set concrete.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The repeatable and unrepeatable distinction cuts across the abstract and concrete one: sets are paradigm abstract objects, and this one is also unrepeatable. Assuming that whatever is unrepeatable must be concrete is exactly the conflation the section warns against."
+  },
+  {
+    "id": "types-and-tokens",
+    "section": "nearby-distinctions-it-is-not",
+    "question": "Which claim about types and tokens does the article accept?",
+    "options": [
+      "Every type is abstract and every token is concrete, so the two distinctions coincide",
+      "A type cannot be created or dated, being abstract",
+      "Types are often abstract and tokens often concrete, but the distinctions differ",
+      "A performance of a symphony is a type rather than a token, since it can be repeated"
+    ],
+    "answer": 2,
+    "explanation": "The correlation is real but imperfect, and keeping the distinctions apart is what lets the created, dated novel be seen as a problem for the standard account. Treating them as one distinction, as the first option does, hides that problem rather than solving it."
+  },
+  {
+    "id": "burden-on-hard-cases",
+    "section": "nearby-distinctions-it-is-not",
+    "question": "Someone argues that numbers cannot be known because they are abstract. According to the reply to the objection, what would make this argument assessable?",
+    "options": [
+      "Saying which feature of abstractness blocks knowledge, and showing that numbers have it",
+      "Giving a definition of abstractness that no counterexample, however exotic, can touch",
+      "Pointing out that numbers are paradigm abstract objects, so their classification is not in doubt",
+      "Showing that the abstract and concrete distinction is only a habit and not a distinction"
+    ],
+    "answer": 0,
+    "explanation": "The distinction is reliable on paradigms and unreliable at the margins, so an argument must name the feature doing the work rather than appeal to the bare label. Noting that numbers are paradigms is tempting, but it still leaves open which feature of abstractness is supposed to block knowledge."
+  },
+  {
+    "id": "epistemic-objection-feature",
+    "section": "why-it-matters-downstream",
+    "question": "The worry about how we could ever know anything about numbers depends on which feature of abstractness?",
+    "options": [
+      "Lacking a location in space",
+      "Being unrepeatable",
+      "Being a type rather than a token",
+      "Being causally inefficacious"
+    ],
+    "answer": 3,
+    "explanation": "If numbers cause nothing, nothing about them reaches us, so knowledge of them must work without causal contact. Lacking a location is tempting, but the article ties the spatial condition to a different argument, the one against admitting properties into a purely physical inventory."
+  }
+]

@@ -45,6 +45,8 @@ Two things about this list matter more than the details. Every rule is fixed by 
 The state of a branch that contains both some formula and its negation. Such a branch describes an impossible interpretation and is marked closed, and no further work is done on it. A tableau all of whose branches are closed is itself closed, and a branch on which every formula has been decomposed and which has not closed is open.
 </Definition>
 
+<Check id="which-rule-branches" />
+
 ## A valid argument
 
 Take the premises $P \rightarrow Q$ and $\neg Q$ with the conclusion $\neg P$. The tableau begins with both premises and the negation of the conclusion.
@@ -88,6 +90,8 @@ Read the left branch. It contains $\neg P$ from line 3, $Q$ from line 2, and $\n
 
 This is the property the previous article's system lacked. An open branch is not the absence of a result. It is a result, and it can be read off directly: assign true to every sentence letter appearing unnegated on the branch and false to every one appearing negated, and the assignment satisfies everything on it.
 
+<Check id="countermodel-from-branch" />
+
 ## Why it always finishes
 
 The termination argument is short and it is the one that makes the method a decision procedure rather than a technique.
@@ -105,6 +109,8 @@ To test whether a single formula is a tautology, start the tableau with its nega
 To test whether a formula is a contradiction, start with the formula itself. To test whether a set of formulas is satisfiable, start with all of them and see whether any branch stays open. And to test whether two formulas are logically equivalent, start with the negation of their biconditional; a closed tableau says they agree everywhere.
 
 Each of these is the same procedure pointed at a different starting set, which is worth noticing because it makes clear what the method actually decides. It decides satisfiability, and every other question is reduced to that one before the first rule is applied.
+
+<Check id="tautology-test" />
 
 ## Keeping the tree small
 

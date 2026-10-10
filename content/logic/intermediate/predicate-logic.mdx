@@ -67,6 +67,8 @@ The pattern is worth committing to memory, and the reason behind it is worth kee
 
 With that in hand the ancient argument can be written down at last: $\forall x (Hx \rightarrow Mx)$ and $Hs$, therefore $Ms$. Whether the system can prove it is a question for the next tier, but at least the premises and conclusion are now connected by shared vocabulary rather than being three unrelated letters.
 
+<Check id="conditional-or-conjunction" />
+
 ## Bound and free
 
 The variable in $\forall x Mx$ is attached to the quantifier in front of it, and that attachment has to be made precise, because a formula may contain variables that no quantifier has claimed.
@@ -101,6 +103,8 @@ The first says that not everything is $F$, which is satisfied as soon as one thi
 
 The corresponding pair for the existential quantifier behaves the same way. $\neg \exists x Fx$ says that nothing is $F$, while $\exists x \neg Fx$ says that something is not $F$. And putting the two observations together gives the relations that let each quantifier be defined from the other: $\forall x Fx$ is equivalent to $\neg \exists x \neg Fx$, and $\exists x Fx$ is equivalent to $\neg \forall x \neg Fx$. Everything is $F$ exactly when nothing fails to be, and something is $F$ exactly when not everything fails to be. These are the quantifier analogues of De Morgan's laws, and they mean the language could get by with one quantifier and negation if brevity were not worth anything.
 
+<Check id="free-occurrences" />
+
 ## Two quantifiers at once
 
 The genuinely new expressive power of this language appears when one quantifier falls within the scope of another, and it is here that the notation earns its awkwardness.
@@ -120,6 +124,8 @@ The reason for the asymmetry is worth seeing rather than memorising. In the firs
 A small domain makes this concrete. Let the domain be three people, and let the first love the second, the second love the third, and the third love the first. Then for each person there is someone they love, so $\forall x \exists y Lxy$ is true. But nobody is loved by all three, so $\exists y \forall x Lxy$ is false. The pattern of the relation is enough to separate the two formulas, and no such separation was expressible at all in the language of the previous articles.
 
 This is not a curiosity confined to examples about love. The difference between a promise that holds for each case separately and a promise that holds for all cases at once is the difference between continuity and uniform continuity in analysis, between a system in which every problem is eventually solvable and one in which a single method solves them all, and between a great many pairs of philosophical claims that sound alike when stated in English. Ordinary language marks the distinction poorly, often not at all, and the fact that the notation marks it unmissably is one of the strongest arguments for using the notation.
+
+<Check id="self-admiration-domain" />
 
 ## What the quantifiers do not mean
 

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "which-claim-goes",
+    "section": "the-problem-is-a-conflict",
+    "question": "A philosopher holds that pain is non-physical and that every physical event with a cause has a sufficient physical cause. Which of the article's four claims must they give up?",
+    "options": [
+      "That mental states are real and have the features they appear to have",
+      "That mental features look unlike physical features",
+      "That the mental and the physical affect each other",
+      "That the physical world is causally self-contained"
+    ],
+    "answer": 2,
+    "explanation": "If pain is non-physical and every physical effect already has a sufficient physical cause, there is no work left for the pain to do in moving your foot, so it comes out causally idle. They have explicitly kept the fourth claim, so the tempting thought that closure is what has to go is ruled out by their own position."
+  },
+  {
+    "id": "elisabeth-objection",
+    "section": "two-kinds-of-thing",
+    "question": "What was the core of Princess Elisabeth's objection to Descartes?",
+    "options": [
+      "Physics explained motion by contact between extended things, and a mind has no extension",
+      "Descartes could not really conceive of his mind existing without his body, as he claimed",
+      "What can be conceived apart need not be able to exist apart, even by the power of God",
+      "Feelings such as pain are located in the body, so the mind must be extended after all"
+    ],
+    "answer": 0,
+    "explanation": "Elisabeth asked how a thinking thing with no extension could move a body at all, which is the interaction problem in its original form. The other options attack Descartes's argument for distinctness, which is a different target from how distinct substances could interact."
+  },
+  {
+    "id": "classify-property-view",
+    "section": "two-kinds-of-thing",
+    "question": "A philosopher holds that there is only one kind of thing in the world, but that experiences have some properties that are not physical properties. On the article's account, which label fits?",
+    "options": [
+      "Physicalism, since there is only one kind of thing and everything is of that kind",
+      "Idealism, since experience is treated as fundamental and the physical is built from it",
+      "Neither, since dualism requires two kinds of substance",
+      "A form of dualism, since some properties resist absorption into the physical"
+    ],
+    "answer": 3,
+    "explanation": "The article says dualism comes in strengths, and one holds there is only one kind of thing while denying that all its properties are physical. Physicalism requires everything to be physical or wholly fixed by the physical, so counting things is not enough to earn the label."
+  },
+  {
+    "id": "hempels-dilemma",
+    "section": "one-kind-of-thing",
+    "question": "If physicalism says everything is as current physics describes, it is almost certainly false. According to Hempel's dilemma, what goes wrong if it says everything is as a completed future physics would describe?",
+    "options": [
+      "It becomes trivially true, since a completed physics would describe everything",
+      "Nobody knows what has been asserted, so it cannot be evaluated",
+      "It collapses into dualism, since future physics may include mental properties",
+      "It becomes an empirical claim that neuroscience could settle"
+    ],
+    "answer": 1,
+    "explanation": "Nobody knows what a completed physics will contain, so the thesis has no determinate content to assess. The triviality worry is tempting but misses the point: the trouble is not that the claim is guaranteed true, it is that we cannot say what it claims."
+  },
+  {
+    "id": "what-correlations-show",
+    "section": "why-the-neuroscience-does-not-settle-it",
+    "question": "Imaging reliably correlates reported pain with activity in certain brain regions. On the article's account, what does this establish?",
+    "options": [
+      "That pain is identical with that brain activity, since the two always occur together",
+      "That dualism has been refuted by experiment, since the mind evidently needs the brain",
+      "That mental states depend systematically on brain states, as both sides accept",
+      "That the problem is now purely a matter for neuroscience"
+    ],
+    "answer": 2,
+    "explanation": "Correlation is consistent with identity and equally with two distinct things reliably linked, so a dualist predicts the same imaging results for a different reason. Reading identity straight off the correlation is the natural slip, and it is exactly the disputed step."
+  },
+  {
+    "id": "problem-without-the-ghost",
+    "section": "why-the-neuroscience-does-not-settle-it",
+    "question": "Ryle argued that the problem rests on picturing the mind as a ghost in the machine. Why does the reply say that dropping the picture does not dissolve the problem?",
+    "options": [
+      "Ryle's picture is accurate, so there is nothing to drop",
+      "The problem was invented by Descartes and so depends on his framework, which Ryle kept",
+      "Behavioural analyses of mental terms were completed and turned out to confirm the picture",
+      "It can be stated in terms of properties, not places, and the felt feature remains"
+    ],
+    "answer": 3,
+    "explanation": "The four claims make no mention of an inner compartment, and there is still something it is like to be in pain wherever, if anywhere, the pain is. The reply also notes the problem predates Descartes and appears in traditions with no exposure to him, which tells against the idea that he invented it."
+  },
+  {
+    "id": "behaviourism-failure",
+    "section": "why-the-neuroscience-does-not-settle-it",
+    "question": "According to the reply, why could mental terms not be analysed wholly into behaviour and behavioural dispositions?",
+    "options": [
+      "Behaviour cannot be observed reliably enough to serve as the basis of any definition",
+      "What someone does when they want something depends on what they believe, and the reverse",
+      "Mental terms name inner objects in a hidden compartment, which behaviour cannot reach",
+      "Many animals behave in complex ways without having minds, so behaviour is not enough"
+    ],
+    "answer": 1,
+    "explanation": "Each attempted analysis of wanting had to mention believing and vice versa, so the analyses could never be completed in purely behavioural terms. The hidden-compartment option restates the very picture Ryle rejected, which is not why the behavioural programme failed."
+  }
+]

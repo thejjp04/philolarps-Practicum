@@ -1,0 +1,127 @@
+[
+  {
+    "id": "regress-dissolved",
+    "section": "justification-as-reliability",
+    "question": "How does process reliabilism escape the regress of justification?",
+    "options": [
+      "Justification comes from a process, and processes need no justification themselves",
+      "It takes the foundationalist horn, treating perceptual beliefs as self-justifying",
+      "It allows an infinite chain of reasons, provided each one is reliably formed",
+      "It treats beliefs as justified in bulk, by how reliably they cohere with one another"
+    ],
+    "answer": 0,
+    "explanation": "The trilemma assumed that reasons confer justification, so the question of what justifies the reasons always recurs; a process is not the kind of thing that needs justifying. The theory has a foundationalist shape, but it does not make any belief self-justifying, which is what the second option claims."
+  },
+  {
+    "id": "wishful-premises",
+    "section": "justification-as-reliability",
+    "question": "Sam reasons by a reliable form of inference from premises he holds out of wishful thinking. On Goldman's refinement, is his conclusion justified?",
+    "options": [
+      "Yes, because the inference itself is a conditionally reliable process",
+      "Yes, because inference takes beliefs as input and so is exempt from the reliability test",
+      "No, because its input beliefs are themselves unjustified",
+      "No, because inference is never a reliable way of forming beliefs"
+    ],
+    "answer": 2,
+    "explanation": "A belief-dependent process confers justification only when it is conditionally reliable and its input beliefs are justified, and Sam's inputs come from wishful thinking. Conditional reliability alone is the tempting half-answer: it guarantees good outputs only from good inputs."
+  },
+  {
+    "id": "goldfinch-generality",
+    "section": "the-problem-of-specifying-the-process",
+    "question": "Your belief that the bird is a goldfinch was produced by a process truly describable as \"perception\", as \"vision at five metres in good light\", and as \"identification by someone who has read one field guide\". What difficulty does this raise for reliabilism?",
+    "options": [
+      "Reliability scores for processes like these are too hard to measure in practice",
+      "Only the broadest description, perception, picks out a genuine psychological process",
+      "If the belief is false, none of the descriptions is relevant to its justification",
+      "The descriptions differ in reliability, and nothing principled picks one out"
+    ],
+    "answer": 3,
+    "explanation": "Every description is true of the same episode and they carry different reliability scores, so the theory issues no verdict until one is selected. The article stresses that the problem is not difficulty of measurement, which is what the first option suggests, but the lack of a principled selection rule."
+  },
+  {
+    "id": "narrowest-description",
+    "section": "the-problem-of-specifying-the-process",
+    "question": "Why can the reliabilist not simply choose the narrowest description of the process that produced a belief?",
+    "options": [
+      "Because narrow descriptions are always less reliable than broad ones, so too much comes out unjustified",
+      "Because cognitive science does not recognise any processes as narrow as that",
+      "Because it occurs only once, so its reliability just tracks whether that belief is true",
+      "Because narrow descriptions bring in the believer's context, which the theory forbids"
+    ],
+    "answer": 2,
+    "explanation": "A fully specific process type has a single instance, so it is perfectly reliable or perfectly unreliable according to whether that one belief is true, and justification collapses into truth. Narrow descriptions are not systematically less reliable, as the first option claims; they are degenerate."
+  },
+  {
+    "id": "pick-the-intuitive-one",
+    "section": "the-problem-of-specifying-the-process",
+    "question": "A reliabilist may solve the generality problem by selecting, in each case, whichever description of the process yields the intuitively correct verdict.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "That makes the theory's verdicts depend on the very intuitions it was meant to explain, which the article calls circular. The rule has to be stated in terms the theory has available independently."
+  },
+  {
+    "id": "henry-not-apt",
+    "section": "adding-the-agent",
+    "question": "In the fake barn district, Henry's true belief that he sees a barn manifests his normal perceptual competence. How does Sosa's framework classify it?",
+    "options": [
+      "Accurate and apt, but not adroit",
+      "Adroit and apt, but not accurate",
+      "Accurate and adroit, but not apt",
+      "Accurate, adroit and apt"
+    ],
+    "answer": 2,
+    "explanation": "The belief is true and manifests competence, but its truth is explained by his luck in which building he faced, not by the competence, so it is not apt. The other combinations are impossible or wrong: aptness means accurate because adroit, so it cannot occur without both."
+  },
+  {
+    "id": "responsibilist-coverage",
+    "section": "adding-the-agent",
+    "question": "What is the main difficulty for responsibilist virtue epistemology, on which the virtues are traits such as open-mindedness and intellectual courage?",
+    "options": [
+      "Character traits such as courage are not reliable, so they cannot connect belief with truth at all",
+      "Ordinary perceptual knowledge manifests no such traits, yet it is most of what anyone knows",
+      "It has nothing to say about the ethics of belief or about intellectual education",
+      "It treats the believer as a mechanism, so credit for success cannot be assigned"
+    ],
+    "answer": 1,
+    "explanation": "Seeing that the kettle is on manifests no courage or open-mindedness, so most responsibilists treat their account as one of a high-grade achievement rather than of knowledge in general. The third option gets the strand backwards: its connection to the ethics of belief and to education is its distinctive strength."
+  },
+  {
+    "id": "what-because-owes",
+    "section": "adding-the-agent",
+    "question": "According to the article, what does the aptness analysis owe in place of the older theories' account of justification?",
+    "options": [
+      "An account of when competence is present in a performance",
+      "An account of when a competence, rather than something else, explains a success",
+      "An account of which processes are reliable enough to be competences",
+      "An account of how a believer can know her faculties are reliable"
+    ],
+    "answer": 1,
+    "explanation": "The analysis rests on the explanatory \"because\" in accurate because adroit, so it owes an account of when competence accounts for an outcome. Mere presence of competence is not enough, since competence is present in every Gettier case."
+  },
+  {
+    "id": "same-bill",
+    "section": "what-the-two-approaches-share",
+    "question": "Where, according to the article, does the generality problem reappear for virtue epistemology?",
+    "options": [
+      "In saying whether a competence is a faculty or a character trait",
+      "In saying whether reflective knowledge requires animal knowledge",
+      "In saying which beliefs count as accurate",
+      "In saying which competence, at which level of generality, a belief manifests"
+    ],
+    "answer": 3,
+    "explanation": "Any belief manifests competences describable at many levels, so virtue epistemology must say which one is in play, just as reliabilism must say which process. The faculty versus trait question divides virtue theorists from one another but is not the generality problem."
+  },
+  {
+    "id": "demon-victim-goldman",
+    "section": "what-the-two-approaches-share",
+    "question": "A demon victim has experiences exactly like yours, but her beliefs are almost all false. According to the reply, what is Goldman's response?",
+    "options": [
+      "She has weak justification, blamelessness, but not strong justification",
+      "She is fully justified, because her processes would be reliable in a normal world",
+      "She is not justified at all, and the intuition that she is should be dismissed",
+      "She has animal knowledge but lacks reflective knowledge of her situation"
+    ],
+    "answer": 0,
+    "explanation": "Goldman distinguishes two notions and accepts both, which concedes that the internalist was tracking something real. Dismissing the intuition outright is the hard line that this concession avoids; the reply's point is only that blamelessness is not all there is to justification."
+  }
+]

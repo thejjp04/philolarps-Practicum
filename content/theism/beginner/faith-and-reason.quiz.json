@@ -1,0 +1,132 @@
+[
+  {
+    "id": "faith-without-belief",
+    "section": "what-the-word-covers",
+    "question": "Mara orders her life around the claim that God exists and commits to living as though it is true, but she does not think it more likely than not. Which model of faith can count her as having faith?",
+    "options": [
+      "The propositional model, since she is committed to a claim",
+      "Aquinas's model, since she does not hold the claim tentatively",
+      "The trust model, since she relies on God as on a friend",
+      "The family of models on which faith does not require belief"
+    ],
+    "answer": 3,
+    "explanation": "Those models were introduced for exactly this case: commitment without believing in the more-likely-than-not sense. The trust model is the tempting answer, but it presupposes believing that the one trusted exists, which is what Mara lacks."
+  },
+  {
+    "id": "revealer-circularity",
+    "section": "what-the-word-covers",
+    "question": "On Aquinas's model, faith is assent to propositions on the authority of a revealer who cannot err. What difficulty does the article raise for it?",
+    "options": [
+      "The revealer's existence is taken either on faith, circularly, or on argument, which makes faith rest on natural theology",
+      "It cannot explain why faith is firmer than opinion, since belief on testimony is never more certain than its source is",
+      "It turns faith into trust in a person, so that it is no longer assent to any propositions at all",
+      "It makes faith depend on the believer's passion rather than on any reason the believer could give"
+    ],
+    "answer": 0,
+    "explanation": "The believer does not see that there is a revealer or that these are the revelations, so that step needs a basis, and both available bases cause trouble. The firmness point is one the model handles explicitly: faith has the firmness of knowledge without its seeing."
+  },
+  {
+    "id": "point-of-the-shipowner",
+    "section": "belief-and-evidence",
+    "question": "What general lesson does Clifford draw from the shipowner who convinced himself, without checking, that his ship was seaworthy?",
+    "options": [
+      "Belief needs to match the evidence only where lives or serious harms are at stake, as with the ship",
+      "Beliefs lead to action and spread to others, so careless believing does harm sincerity does not excuse",
+      "A sincere belief excuses whatever harm follows from it, provided the believer acted in good faith",
+      "Religious beliefs are more dangerous than ordinary ones, since they cannot be checked against the world"
+    ],
+    "answer": 1,
+    "explanation": "Clifford's point is that beliefs are not private, which is why he states the duty as holding always, everywhere and for anyone. Reading the example as a rule only for high-stakes cases misses that it is meant to generalise."
+  },
+  {
+    "id": "evidentialism-parity",
+    "section": "belief-and-evidence",
+    "question": "We rely on memory, on other minds, and on the future resembling the past without independent evidence for them. What does the article take this to show about strong evidentialism?",
+    "options": [
+      "That religious belief meets the evidential standard after all, since it stands in just the same position as memory",
+      "That the principle is self-undermining, since the principle itself fails its own evidential test",
+      "That it is false, or else evidence must be read widely enough to cover these, and religion might qualify too",
+      "That belief is not under voluntary control, so nobody can be blamed for believing without sufficient evidence"
+    ],
+    "answer": 2,
+    "explanation": "This is the difficulty that the principle condemns nearly everything anyone believes, and it forces a choice about how widely to read \"evidence\". Self-undermining is a separate difficulty, about the principle's own support, and the article is explicit that none of this shows religious belief meets the standard."
+  },
+  {
+    "id": "fideism-that-survives",
+    "section": "faith-not-answerable-to-reason",
+    "question": "Once the caricature is set aside, what does the article say the surviving version of fideism claims?",
+    "options": [
+      "That evidentialism is too narrow an account of reason, so some commitments may reasonably be exempt from it",
+      "That reason should be abandoned wherever faith is concerned, since faith is a higher way of knowing than reason",
+      "That belief is admirable precisely because it is absurd, as Tertullian is often quoted as saying",
+      "That religion is a self-contained practice whose standards make it immune from outside criticism"
+    ],
+    "answer": 0,
+    "explanation": "The modest position targets one account of reason, not reason itself. The \"immune from criticism\" thesis is the one grouped as Wittgensteinian fideism, which the article says is poorly supported by Wittgenstein's writing and was denied by the philosopher most associated with it."
+  },
+  {
+    "id": "self-defeat-reply",
+    "section": "faith-not-answerable-to-reason",
+    "question": "A critic says fideism is self-defeating because it is argued for. The fideist answers that her argument shows evidentialism fails by its own standards. What is the force of this answer?",
+    "options": [
+      "It concedes that fideism is self-defeating, but argues that self-defeat is harmless in religious matters",
+      "It shows that reason has no jurisdiction over religious questions, which is what fideism set out to claim",
+      "It shows that every religion is equally entitled to the same exemption from evidential standards",
+      "An internal critique of evidentialism is not a claim to be exempt from reason, so it is not self-defeating"
+    ],
+    "answer": 3,
+    "explanation": "The charge works only if the fideist claims exemption from reason while using it; an internal critique uses evidentialism's own standards against it. The generalisation point is a different objection, that the exemption is available to every incompatible commitment."
+  },
+  {
+    "id": "real-dispute-basic-belief",
+    "section": "faith-not-answerable-to-reason",
+    "question": "According to the aside, what is the real dispute between serious defenders of faith and serious defenders of evidence?",
+    "options": [
+      "Whether it is ever reasonable to hold a belief for no reason at all, on faith alone",
+      "Which beliefs are entitled to be held without being inferred from others, and why",
+      "Whether every belief must be inferred from some other, more secure belief",
+      "Whether perception is a reliable source of belief"
+    ],
+    "answer": 1,
+    "explanation": "Both sides accept that some beliefs are not inferred, as perception shows; they disagree about whether religious belief belongs in that class. The \"every belief inferred\" requirement is one almost no defender of evidence holds, since it generates a regress nothing survives."
+  },
+  {
+    "id": "reason-and-revealed-truths",
+    "section": "two-sources-two-projects",
+    "question": "On the classical arrangement, what can reason still do with a revealed truth, such as the Trinity, that it cannot demonstrate?",
+    "options": [
+      "Demonstrate it, once revelation has supplied the premises it needs",
+      "Nothing, since such truths lie wholly outside reason's reach",
+      "Show that the alleged demonstrations of its impossibility fail",
+      "Show that it is more probable than not on the evidence"
+    ],
+    "answer": 2,
+    "explanation": "Reason cannot establish these truths but is not idle: it can defend them by refuting arguments that they are impossible. The \"nothing at all\" option overstates the division, which Aquinas drew between what reason can prove and what it can only defend."
+  },
+  {
+    "id": "barth-objection",
+    "section": "two-sources-two-projects",
+    "question": "What does the article identify as the weightiest objection to natural theology?",
+    "options": [
+      "A theological one: that investigating God by human standards inverts the relation it describes",
+      "That every one of its arguments has been examined in turn and shown to fail on its own terms",
+      "That natural science has made it unnecessary, by explaining the world without any appeal to God",
+      "That it cannot reach the truths that only revelation supplies, such as the Trinity"
+    ],
+    "answer": 0,
+    "explanation": "The charge, pressed by Barth, is that natural theology is improper, not that it fails, which makes it a division within religion rather than between religion and its critics. The failure of the arguments is what most readers expect, and the article explicitly says that is not where the objection's weight lies."
+  },
+  {
+    "id": "conflicting-claims-concession",
+    "section": "two-sources-two-projects",
+    "question": "Where does the reply concede that the special-pleading objection to faith is strongest?",
+    "options": [
+      "In showing that no belief may be held without inference",
+      "In the conflicting-claims problem: the same source of warrant seems to support incompatible beliefs held with equal sincerity",
+      "In showing that appeals to faith made late cannot be reasons",
+      "In showing that memory and other minds need independent support"
+    ],
+    "answer": 1,
+    "explanation": "The reply grants that no adequate general answer to conflicting religious claims exists and that the difficulty is unresolved. It rejects the principle that no belief may be held without inference, since that principle would refute almost everything anyone believes."
+  }
+]

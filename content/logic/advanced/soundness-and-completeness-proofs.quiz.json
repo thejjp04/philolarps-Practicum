@@ -1,0 +1,127 @@
+[
+  {
+    "id": "new-schema-obligation",
+    "section": "soundness-in-full",
+    "question": "A fourth axiom schema is added to the Hilbert system. What is the only new thing the soundness proof then needs?",
+    "options": [
+      "A check that the new schema is true under at least one interpretation, so that it is satisfiable",
+      "A check that adding the schema to the other three does not make a contradiction derivable",
+      "A check that every instance of the new schema is true under every interpretation",
+      "A new modus ponens case, since the new schema changes which lines modus ponens can yield"
+    ],
+    "answer": 2,
+    "explanation": "Only the axiom case of the induction mentions the specific axioms, so the new obligation is that every instance is valid. Consistency is not enough: adding a single sentence letter $P$ as an axiom keeps the system consistent but lets it derive something false under every interpretation that makes $P$ false."
+  },
+  {
+    "id": "soundness-gives-which-half",
+    "section": "soundness-in-full",
+    "question": "Soundness, together with the definition of consistency, already shows that every consistent set of formulas has a model.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Soundness yields the converse: a set with a model is consistent, since a derived contradiction would have to be true in that model. Getting from consistency to a model is the hard half, and it is what Lindenbaum's lemma and the canonical model are for."
+  },
+  {
+    "id": "deduction-theorem-in-negation-property",
+    "section": "sets-that-behave-like-interpretations",
+    "question": "In showing that a maximal consistent set $\\Gamma^*$ contains at least one of $\\varphi$ and $\\neg \\varphi$, what job does the deduction theorem do?",
+    "options": [
+      "It turns a contradiction derived from $\\Gamma^*$ plus $\\varphi$ into a derivation of $\\neg \\varphi$ from $\\Gamma^*$ alone",
+      "It shows that $\\Gamma^*$ cannot contain both $\\varphi$ and $\\neg \\varphi$, since that pair would derive every formula",
+      "It shows that whatever $\\Gamma^*$ derives is already a member of $\\Gamma^*$, by maximality",
+      "It lets $\\Gamma^*$ be extended by whichever of $\\varphi$ and $\\neg \\varphi$ is consistent with it at that stage"
+    ],
+    "answer": 0,
+    "explanation": "If neither is present, maximality makes both extensions inconsistent, and the deduction theorem converts each into a derivation from $\\Gamma^*$ alone, of $\\neg \\varphi$ and of its negation, contradicting consistency. Ruling out both being present needs no deduction theorem at all: a set containing a formula and its negation is inconsistent outright."
+  },
+  {
+    "id": "why-the-union-is-consistent",
+    "section": "lindenbaums-lemma",
+    "question": "Every set in Lindenbaum's chain is consistent. What guarantees that their union is consistent too?",
+    "options": [
+      "Any union of consistent sets of formulas is itself consistent, so nothing special is needed",
+      "The language is countable, so the chain has only countably many stages to combine",
+      "Each formula was tested against every later formula on the list before it was added",
+      "A derived contradiction cites finitely many formulas, all present at some single stage"
+    ],
+    "answer": 3,
+    "explanation": "Since derivations are finite, a contradiction derivable from the union would already be derivable from one consistent stage of the chain. Unions of consistent sets in general are not consistent ($\\{P\\}$ and $\\{\\neg P\\}$ each are), and countability is what lets the chain be built, not what keeps its union consistent."
+  },
+  {
+    "id": "truth-lemma-without-maximality",
+    "section": "the-canonical-model-propositional-case",
+    "question": "Suppose the propositional construction is applied to a set that is consistent but not maximal, making each sentence letter true just when it belongs to the set. Which fact used in the truth lemma is lost?",
+    "options": [
+      "That every sentence letter receives exactly one truth value under the interpretation",
+      "That the set contains, for every formula, either it or its negation",
+      "That the set never contains a formula together with its negation",
+      "That a true conditional with a true antecedent always has a true consequent"
+    ],
+    "answer": 1,
+    "explanation": "A non-maximal set can contain neither $P$ nor $\\neg P$; then $P$ is false in the interpretation, so $\\neg P$ is true without belonging to the set, and the negation case fails. Letters still each get exactly one value, since absence counts as false, and the set is still consistent, so neither of those is the problem."
+  },
+  {
+    "id": "existential-without-instances",
+    "section": "where-the-first-order-case-resists",
+    "question": "Why does the model whose objects are the original constants fail to satisfy the truth lemma?",
+    "options": [
+      "A maximal consistent set can contain $\\exists x \\varphi$ while containing $\\varphi(c)$ for no constant $c$",
+      "A maximal consistent set can contain $\\forall x \\varphi$ while leaving out some instance $\\varphi(c)$ of it",
+      "A domain has to consist of objects, and constants are symbols, so they cannot serve as the objects",
+      "A maximal consistent set of first-order formulas need not decide every formula of the language"
+    ],
+    "answer": 0,
+    "explanation": "Such a set says that something satisfies $\\varphi$ while naming nothing that does, so the existential is in the set and false in the model. The universal case is safe, because universal instantiation puts every instance into a set closed under derivability, and nothing in the definition of a structure forbids a domain made of symbols."
+  },
+  {
+    "id": "which-witness-axiom-clashes",
+    "section": "the-henkin-construction",
+    "question": "Let $\\Gamma = \\{\\exists x Px, \\neg Pa\\}$. Adding which of these to $\\Gamma$ produces an inconsistent set?",
+    "options": [
+      "$\\exists x Px \\rightarrow Pc$, with $c$ a new constant",
+      "$\\exists x \\neg Px \\rightarrow \\neg Pa$",
+      "$\\exists x Px \\rightarrow Pa$",
+      "$\\exists x \\neg Px \\rightarrow \\neg Pc$, with $c$ a new constant"
+    ],
+    "answer": 2,
+    "explanation": "With $\\exists x Px$ in $\\Gamma$, the conditional delivers $Pa$, which clashes with $\\neg Pa$; this is why the witness must be fresh, since a constant already constrained by $\\Gamma$ may be the wrong one. The others are consistent with $\\Gamma$: a new $c$ can denote whatever has $P$ (or lacks it), and the conditional ending in $\\neg Pa$ has a consequent $\\Gamma$ already asserts."
+  },
+  {
+    "id": "strong-form-carries-the-load",
+    "section": "the-henkin-construction",
+    "question": "Why does the article insist that it has proved the strong form of completeness and not only the weak form?",
+    "options": [
+      "Because the weak form fails for first-order logic, holding only in the propositional case",
+      "Because the applications, such as compactness, concern arbitrary and often infinite premise sets",
+      "Because the strong form is what is needed to show that every valid formula is a theorem",
+      "Because only the strong form survives once identity is added to the language of the theory"
+    ],
+    "answer": 1,
+    "explanation": "The weak form is the special case with $\\Gamma$ empty: every valid formula is a theorem. Compactness and the results on sizes of models are claims about infinite premise sets, so they need the statement that every consistent set has a model; the weak form is not false for first-order logic, merely too weak to deliver them."
+  },
+  {
+    "id": "confirmable-not-refutable",
+    "section": "what-falls-out-of-the-construction",
+    "question": "Completeness, together with the finiteness of derivations, gives a procedure that lists derivations one by one. What does that procedure achieve for first-order validity?",
+    "options": [
+      "It decides validity, since each formula is eventually either derived or shown to have no derivation",
+      "It halts on every invalid formula, because it eventually finds a countermodel among the countable models",
+      "It halts on every formula, though on invalid ones only after unboundedly many steps",
+      "It halts on every valid formula, and on an invalid one it may run forever without warning"
+    ],
+    "answer": 3,
+    "explanation": "Completeness guarantees that a derivation of each valid formula is somewhere on the list, so the search finds it. Nothing on the list ever certifies that no derivation exists, so the procedure confirms validity without deciding it: completeness is about what exists, not about what can be found."
+  },
+  {
+    "id": "objection-trick-reply",
+    "section": "what-falls-out-of-the-construction",
+    "question": "The objection says completeness is a trick, since the model is assembled out of the theory's own sentences. On the article's reply, what most clearly shows that it is not a harmless trick?",
+    "options": [
+      "It has consequences nobody built in and many would avoid, such as countable models for every consistent theory",
+      "The Henkin model turns out to be isomorphic to the intended model of whatever consistent theory it starts from",
+      "The construction explains why syntax should suffice to capture semantic consequence, which no rival proof does",
+      "Models made of symbols are excluded by the definition of a structure, so the proof must rest on something else"
+    ],
+    "answer": 0,
+    "explanation": "The reply points to unwelcome results the construction delivers, above all that no first-order theory can force its models to be uncountable. It concedes that the proof does not explain why syntax suffices, and the Henkin model is generally not the intended model at all, as the countable models of uncountable theories show."
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "interpretations-and-models",
+    "section": "assignments-and-what-makes-a-formula-true",
+    "question": "A formula contains exactly the letters $P$, $Q$ and $R$, and it comes out true on three rows of its truth table. Which description fits?",
+    "options": [
+      "8 interpretations and 3 models: satisfiable, not a tautology",
+      "3 interpretations, each of them a model: a tautology",
+      "6 interpretations and 3 models: satisfiable, not a tautology",
+      "8 models and 3 interpretations: satisfiable, not a tautology"
+    ],
+    "answer": 0,
+    "explanation": "Three letters give $2^3 = 8$ interpretations, the rows of the table, and a model is an interpretation that makes the formula true, so there are 3. Having a model makes it satisfiable, and failing on the other 5 rows keeps it from being a tautology. The last option swaps the two notions: every model is an interpretation, not the other way round."
+  },
+  {
+    "id": "what-refutes-entailment",
+    "section": "the-first-relation",
+    "question": "To show that $\\Gamma \\vDash \\varphi$ fails, what is it enough to exhibit?",
+    "options": [
+      "A failed attempt to derive $\\varphi$ from $\\Gamma$",
+      "An interpretation on which $\\varphi$ is false",
+      "An interpretation making every member of $\\Gamma$ true and $\\varphi$ false",
+      "An interpretation making some member of $\\Gamma$ false and making $\\varphi$ true"
+    ],
+    "answer": 2,
+    "explanation": "Semantic consequence says every interpretation making all the premises true makes the conclusion true, so a single countermodel refutes it. An interpretation making $\\varphi$ false is not enough on its own, since it may also make a premise false, and a failed derivation concerns the other relation entirely."
+  },
+  {
+    "id": "affirming-consequent-countermodel",
+    "section": "the-first-relation",
+    "question": "Does $P \\rightarrow Q, Q \\vDash P$ hold?",
+    "options": [
+      "Yes: every interpretation making $Q$ true makes $P \\rightarrow Q$ true",
+      "No: the interpretation with $P$ false and $Q$ true is a countermodel",
+      "No: the interpretation with $P$ true and $Q$ false is a countermodel",
+      "Yes: modus ponens takes the two premises to $P$"
+    ],
+    "answer": 1,
+    "explanation": "With $P$ false and $Q$ true both premises are true and the conclusion false, so the consequence fails. The interpretation with $P$ true and $Q$ false makes the first premise false, so it is no countermodel at all: a countermodel has to make every premise true."
+  },
+  {
+    "id": "why-syntactic",
+    "section": "the-second-relation",
+    "question": "In what sense is the single turnstile *syntactic*?",
+    "options": [
+      "It concerns which strings are wffs, not what follows from what",
+      "It holds whenever the conclusion uses only the premises' letters",
+      "It is settled by examining every interpretation of the premises",
+      "Whether a sequence is a proof can be checked by its shape alone"
+    ],
+    "answer": 3,
+    "explanation": "A proof is a finite sequence meeting purely structural conditions, so a device that knew nothing about truth could verify one. Examining interpretations is what the double turnstile involves, and which strings are wffs is a question of grammar, not of consequence."
+  },
+  {
+    "id": "turnstile-system-relative",
+    "section": "the-second-relation",
+    "question": "If $\\Gamma \\vdash \\varphi$ holds in one proof system for propositional logic, it holds in every proof system for propositional logic.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Syntactic consequence is always relative to a specified system, and a formula derivable with one set of axioms and rules may not be derivable with another. Systems that do prove the same things have to be shown to agree; the agreement is not built into the turnstile."
+  },
+  {
+    "id": "failed-search",
+    "section": "why-the-distinction-is-not-pedantry",
+    "question": "You search for a derivation of $\\varphi$ from $\\Gamma$ for a week and find none. What has the search established?",
+    "options": [
+      "Nothing either way, since a proof may be longer than the search went",
+      "That $\\varphi$ is not a syntactic consequence of $\\Gamma$ in that system",
+      "That $\\varphi$ is not a semantic consequence of $\\Gamma$",
+      "That the proof system in use is incomplete"
+    ],
+    "answer": 0,
+    "explanation": "Finding a proof establishes the relation, but failing to find one establishes nothing, because the definition sets no bound on how long a derivation may be. This is the asymmetry with the truth-table test, where a failed search for a countermodel is itself a definite answer."
+  },
+  {
+    "id": "finite-premises",
+    "section": "why-the-distinction-is-not-pedantry",
+    "question": "$\\Gamma$ is an infinite set and $\\Gamma \\vdash \\varphi$. Why must some finite part of $\\Gamma$ already yield $\\varphi$?",
+    "options": [
+      "By the compactness theorem, which concerns derivations",
+      "Because propositional logic has only finitely many letters",
+      "Because every infinite set of formulas has redundant members",
+      "A derivation is finite, so it cites only finitely many premises"
+    ],
+    "answer": 3,
+    "explanation": "The finiteness comes free with the definition of a derivation: a proof can only have used the premises it actually cited. Compactness is the corresponding claim for the double turnstile, and it is a substantial result precisely because nothing in the definition of $\\vDash$ suggests it."
+  },
+  {
+    "id": "empty-left-side",
+    "section": "the-empty-premise-set",
+    "question": "Which pairing reads the two turnstiles with nothing on the left correctly?",
+    "options": [
+      "$\\vDash \\varphi$: $\\varphi$ is a theorem; $\\vdash \\varphi$: $\\varphi$ is a tautology",
+      "$\\vDash \\varphi$: $\\varphi$ is satisfiable; $\\vdash \\varphi$: $\\varphi$ is a theorem",
+      "$\\vDash \\varphi$: $\\varphi$ is a tautology; $\\vdash \\varphi$: $\\varphi$ is a theorem",
+      "$\\vDash \\varphi$: $\\varphi$ is a tautology; $\\vdash \\varphi$: $\\varphi$ is an axiom"
+    ],
+    "answer": 2,
+    "explanation": "With no premises, the double turnstile says every interpretation makes $\\varphi$ true, so it is a tautology, and the single turnstile says $\\varphi$ is derivable from nothing, so it is a theorem. A theorem need not be an axiom; most are reached from the axioms by rules."
+  },
+  {
+    "id": "rule-breaks-soundness",
+    "section": "the-two-results-that-connect-them",
+    "question": "A proof system is given an extra rule: from $P \\rightarrow Q$ and $Q$, write $P$. Which property does the system lose?",
+    "options": [
+      "Completeness, since the new rule adds derivations",
+      "Soundness, since the rule can lead from truths to a falsehood",
+      "Decidability, since derivations can now grow without bound",
+      "Neither, since adding rules cannot change any consequences"
+    ],
+    "answer": 1,
+    "explanation": "With $P$ false and $Q$ true both premises are true and the conclusion false, so the rule yields derivations with no matching semantic consequence. Adding a rule can never make a system less complete, since it only adds to what is derivable; the danger runs the other way, towards unsoundness."
+  },
+  {
+    "id": "why-two-symbols",
+    "section": "the-two-results-that-connect-them",
+    "question": "Soundness and completeness together say the two turnstiles agree for classical logic. According to the reply to the objection, why keep two symbols anyway?",
+    "options": [
+      "The theorems need two sides to have content, and elsewhere they differ",
+      "The two relations disagree on some formulas of propositional logic",
+      "The double turnstile belongs to the object language, the single one does not",
+      "Completeness fails for standard first-order logic"
+    ],
+    "answer": 0,
+    "explanation": "A theorem stated in notation that cannot tell its two sides apart would be a remark about notation, and in second-order logic on its standard semantics the relations come apart for good. Neither turnstile belongs to the object language, and both theorems hold for propositional and first-order logic."
+  }
+]

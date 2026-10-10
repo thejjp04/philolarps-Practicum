@@ -103,6 +103,8 @@ The finiteness of derivations, used in the second step, is doing more work in th
 
 One limitation should be recorded. The construction enumerates the formulas, so it depends on the language being countable. For an uncountable language the chain cannot be built this way and the result is obtained instead from Zorn's lemma, at the cost of using a fragment of set theory the countable case avoids. Nothing else in the proof changes.
 
+<Check id="why-the-union-is-consistent" />
+
 ## The canonical model, propositional case
 
 <Definition term="Canonical model">
@@ -136,6 +138,8 @@ The quantifiers break it. Consider the universal case first, which is the easier
 The existential case fails. A maximal consistent set may contain $\exists x \varphi$ without containing $\varphi$ with any constant substituted for $x$. There is nothing incoherent about such a set: it says that something is thus and so while declining, for every name in the language, to say that the thing named is thus and so. A set can perfectly well be consistent and unhelpful in this way, and in the model built from the constants the existential claim would then be true in the set and false in the model, wrecking the truth lemma.
 
 The problem is one of vocabulary rather than of logic. The set makes an existential claim and the language has no name available for anything satisfying it. The repair is to supply the names.
+
+<Check id="existential-without-instances" />
 
 ## The Henkin construction
 
@@ -184,6 +188,8 @@ The complaint identifies the construction correctly and draws the wrong conclusi
 <Aside title="Two proofs, forty years apart">
 Gödel proved completeness in his dissertation of 1929, published the following year, and the proof is not the one given here. It works through normal forms and an argument that a formula not refutable in the system is satisfiable, and it is harder to follow and harder to adapt. Henkin's method, published in 1949, replaced it almost entirely within a decade, for a reason visible in the structure of this article: the construction is modular. The Lindenbaum step, the witnessing step and the truth lemma are separable, each can be modified without disturbing the others, and the result is a template rather than a single proof. Completeness for modal systems, for many-valued systems, for intuitionistic logic and for various fragments is proved by substituting different material into the same three slots, and the canonical model of modal logic, in which the worlds are the maximal consistent sets and one sees another when it contains everything the first necessitates, is the same construction with the frame added.
 </Aside>
+
+<Check id="confirmable-not-refutable" />
 
 ## Next
 

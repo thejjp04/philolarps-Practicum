@@ -1,0 +1,129 @@
+[
+  {
+    "id": "where-explosion-is-blocked",
+    "question": "On the article's account, which step of the standard derivation of explosion do paraconsistent systems give up?",
+    "options": [
+      "Disjunction introduction, from $\\varphi$ to $\\varphi \\lor \\psi$, for an unrelated $\\psi$",
+      "Disjunctive syllogism, from $\\varphi \\lor \\psi$ and $\\neg \\varphi$ to $\\psi$",
+      "Assuming $\\varphi$ and $\\neg \\varphi$ together as premises of one derivation",
+      "Generalising from one arbitrary $\\psi$ to every sentence of the language"
+    ],
+    "answer": 1,
+    "explanation": "The derivation has only two rules, and the article says the restriction falls on disjunctive syllogism, which fails exactly when both $\\varphi$ and $\\neg \\varphi$ hold. Disjunction introduction is kept; giving it up would cost far more, and the generalisation step is not a separate inference at all."
+  },
+  {
+    "id": "variable-sharing-test",
+    "section": "relevance",
+    "question": "Which of these fails the variable sharing condition, and so cannot be a theorem of a relevance logic?",
+    "options": [
+      "$(p \\land q) \\rightarrow p$",
+      "$p \\rightarrow (p \\lor q)$",
+      "$(p \\land \\neg p) \\rightarrow p$",
+      "$(p \\land \\neg p) \\rightarrow q$"
+    ],
+    "answer": 3,
+    "explanation": "The explosive conditional has no variable in common between antecedent and consequent. The tempting $(p \\land \\neg p) \\rightarrow p$ also has a contradictory antecedent, but it shares $p$ with its consequent and is simply conjunction elimination, which relevance logics keep."
+  },
+  {
+    "id": "variable-sharing-not-sufficient",
+    "section": "relevance",
+    "question": "Any conditional whose antecedent and consequent share a propositional variable is a theorem of the relevance logics described.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Variable sharing is a necessary condition, a test rather than an analysis. $p \\rightarrow (q \\rightarrow p)$ shares $p$ between antecedent and consequent, yet relevance logics reject it, because deriving it requires weakening in the idle premise $q$."
+  },
+  {
+    "id": "routley-star-glut",
+    "section": "relevance",
+    "question": "With $\\neg \\varphi$ true at $w$ just when $\\varphi$ fails at the star world $w^*$, when can $p$ and $\\neg p$ both be true at $w$?",
+    "options": [
+      "When $w = w^*$ and $p$ is true at that one world",
+      "When the ternary relation relates $w$ to itself and to $w^*$",
+      "When $p$ is true at $w$ and false at $w^*$, so $w \\neq w^*$",
+      "Never, since the star clause keeps negation classical at every world"
+    ],
+    "answer": 2,
+    "explanation": "$\\neg p$ at $w$ needs $p$ to fail at $w^*$, so $p \\land \\neg p$ at $w$ needs $p$ true at $w$ and false at $w^*$, impossible if they are the same world. A world that is its own star therefore treats negation classically; the ternary relation governs the conditional, not negation."
+  },
+  {
+    "id": "relevance-vs-paraconsistency",
+    "section": "paraconsistency",
+    "question": "Which is true of relevance logics and paraconsistent logics?",
+    "options": [
+      "Every relevance logic is paraconsistent, but some paraconsistent logics are not relevance logics",
+      "Every paraconsistent logic is a relevance logic, since rejecting explosion is itself a relevance requirement",
+      "They coincide: a logic rejects explosion just when it requires premises to bear on conclusions",
+      "Relevance logics reject explosion as a conditional theorem but keep it as a rule of inference"
+    ],
+    "answer": 0,
+    "explanation": "Relevance logics are not explosive, so they are paraconsistent, but da Costa's systems, Priest's logic of paradox and Jaśkowski's discussive logic reach paraconsistency by other routes without the relevance requirement. Containing a contradiction is a weaker demand than requiring premises to bear on conclusions."
+  },
+  {
+    "id": "disjunctive-syllogism-recovered",
+    "section": "paraconsistency",
+    "question": "How does the paraconsistent logician usually answer the charge that losing disjunctive syllogism gives up an inference that works?",
+    "options": [
+      "It was never valid, even classically, since the disjunction might be exclusive",
+      "It can be replaced by affirming a disjunct, which is safe in inconsistent theories",
+      "It is valid whenever the disjunction is read exclusively, which is the usual case",
+      "It fails only in inconsistent situations, so consistent theories can recover it"
+    ],
+    "answer": 3,
+    "explanation": "The reply separates validity from reliability: disjunctive syllogism can be restored as an admissible rule or used by default until a contradiction appears. Affirming a disjunct is invalid on the inclusive reading regardless of consistency, and the classical validity of disjunctive syllogism never depended on exclusivity."
+  },
+  {
+    "id": "admissibility-in-r",
+    "section": "paraconsistency",
+    "question": "The Anderson-Belnap result says that adding disjunctive syllogism to R yields no new theorems. What does this establish?",
+    "options": [
+      "R's theorems are closed under the rule, though it is not valid from arbitrary premises",
+      "Disjunctive syllogism is a valid inference in R after all, so R is not paraconsistent in the end",
+      "R already proves some contradiction, so disjunctive syllogism has nothing to add",
+      "R becomes explosive once disjunctive syllogism is added, but only for its theorems"
+    ],
+    "answer": 0,
+    "explanation": "Admissibility is closure of the set of theorems under the rule, not validity of the rule from any premises. A theory built on R that contains a contradiction still cannot use disjunctive syllogism to explode, so paraconsistency is untouched."
+  },
+  {
+    "id": "paraconsistency-not-dialetheism",
+    "section": "dialetheism",
+    "question": "A database designer adopts a paraconsistent logic so that conflicting reports do not make every query succeed. What does that choice commit her to?",
+    "options": [
+      "That some contradictions are true, namely the conflicting reports she receives",
+      "That the conflicting reports are neither true nor false until they are resolved",
+      "Only that consequence is not explosive, not that any contradiction is true",
+      "That disjunctive syllogism fails even in theories that are perfectly consistent"
+    ],
+    "answer": 2,
+    "explanation": "Paraconsistency is a claim about which arguments are valid; dialetheism is a claim about which sentences are true. The designer can hold that one report is simply false and still want inconsistency contained, which is why running the two together is the confusion the article warns against."
+  },
+  {
+    "id": "strengthened-liar",
+    "section": "dialetheism",
+    "question": "On Priest's argument, why does declaring the liar neither true nor false fail to solve it?",
+    "options": [
+      "Bivalence is a theorem of every acceptable logic, so gaps are ruled out in advance",
+      "A sentence saying of itself that it is not true is, if neither true nor false, not true, which is what it says",
+      "Truth-value gaps make any logic explosive",
+      "The liar is a theorem of classical logic, so it cannot lack a value"
+    ],
+    "answer": 1,
+    "explanation": "If the strengthened liar is a gap, it is not true, and that is exactly what it says, so it seems true after all; every consistent solution faces some such revenge. The dialetheist stops the regress by accepting the liar as both true and false, paying for it with a non-explosive logic."
+  },
+  {
+    "id": "rejection-relocates",
+    "section": "dialetheism",
+    "question": "Priest treats rejection as a speech act distinct from asserting a negation. Critics say this relocates the difficulty rather than solving it. Where to?",
+    "options": [
+      "To the semantics: the Routley star must now be the identity map on every world",
+      "To logic: disjunctive syllogism must be readmitted whenever a claim is denied",
+      "To attitudes: accepting and rejecting one claim together must count as incoherent",
+      "To truth: the liar must turn out to be neither true nor false after all"
+    ],
+    "answer": 2,
+    "explanation": "For rejection to exclude anything, accepting and rejecting the same claim must be ruled out, and that is consistency reimposed at the level of attitudes. Some dialetheists bite the bullet and allow rational agents to be in such a state; nothing in the exchange concerns the star semantics or disjunctive syllogism."
+  }
+]

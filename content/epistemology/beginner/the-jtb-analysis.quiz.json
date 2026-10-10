@@ -1,0 +1,106 @@
+[
+  {
+    "id": "not-jointly-sufficient",
+    "section": "what-an-analysis-is",
+    "question": "Someone proposes that S knows that P if and only if P is true and S believes it. A lucky guess that turns out right is offered against the proposal. Which way does the proposal fail?",
+    "options": [
+      "Its conditions are not jointly sufficient, since a lucky guess meets them all",
+      "One of its conditions is not necessary, since it excludes genuine knowledge",
+      "It is circular, since it uses the idea of knowing in stating the conditions",
+      "It tracks the cases correctly but does nothing to explain why they fall so"
+    ],
+    "answer": 0,
+    "explanation": "The guess satisfies both conditions without being knowledge, so the analysis admits a case it should exclude, which is a failure of joint sufficiency. A failure of necessity runs the other way: a genuine case of knowledge that lacks one of the conditions."
+  },
+  {
+    "id": "knows-is-factive",
+    "section": "why-truth",
+    "question": "Which of these inferences is licensed by the meaning of the verb alone?",
+    "options": [
+      "From \"Ravi is sure the shop is open\" to \"the shop is open\"",
+      "From \"Ravi knows the shop is open\" to \"the shop is open\"",
+      "From \"Ravi suspects the shop is open\" to \"the shop is open\"",
+      "From \"Ravi believes the shop is open\" to \"the shop is open\""
+    ],
+    "answer": 1,
+    "explanation": "\"Knows\" is factive: saying someone knows something commits you to its being true. Being sure is the tempting alternative, but certainty is a state of the believer and people are sometimes sure of falsehoods."
+  },
+  {
+    "id": "filing-cabinet",
+    "section": "why-belief",
+    "question": "What unwelcome result would follow if the belief condition were dropped from the analysis?",
+    "options": [
+      "People could know things that are false, provided they had good reasons",
+      "A lucky guess that turned out right would count as knowledge",
+      "Knowing would require a certainty that almost nobody ever has",
+      "A person, or even a filing cabinet, could know what it takes no attitude to"
+    ],
+    "answer": 3,
+    "explanation": "Without belief, knowledge becomes detachable from the knower's mind, so something could know a truth it takes no stance on at all. Knowing falsehoods is what dropping the truth condition would allow, and the lucky guess is what the justification condition rules out."
+  },
+  {
+    "id": "which-condition-fails",
+    "section": "why-justification",
+    "question": "Mia is convinced, for no reason at all, that her flight will be delayed, and it is. Which condition of the JTB analysis does she fail?",
+    "options": [
+      "The truth condition, since she could easily have been wrong",
+      "The belief condition, since a hunch is not a belief",
+      "The justification condition, since she has no reason",
+      "None, so on the analysis she knows the flight is delayed"
+    ],
+    "answer": 2,
+    "explanation": "Her belief is true and she holds it, but she holds it for no reason, which is exactly what the justification condition excludes. That she could easily have been wrong does not make her belief false; it is true, just accidentally so."
+  },
+  {
+    "id": "status-gained",
+    "section": "what-the-analysis-does-well",
+    "question": "Yesterday you believed, on flimsy grounds, that the bridge was closed. Today an official notice confirms it. On the JTB analysis, what has changed?",
+    "options": [
+      "The content of your belief, which now includes the notice",
+      "The justification of your belief, which can now be knowledge",
+      "The truth of the claim, which the notice has now made true",
+      "Nothing, since a true belief was already knowledge yesterday"
+    ],
+    "answer": 1,
+    "explanation": "The analysis lets a belief gain the status of knowledge without changing its content, because the evidence came in. The bridge was closed all along, so the truth condition was met yesterday too; what was missing was the justification."
+  },
+  {
+    "id": "gettier-recipe",
+    "section": "where-it-fails",
+    "question": "Ann has excellent reason to think her colleague Ben owns a Ford, and infers that someone in the office owns a Ford. Ben does not, but, unknown to Ann, Cara does. Why is this a problem for the JTB analysis?",
+    "options": [
+      "Her belief is justified, true and held, yet right only by accident",
+      "Her belief is false, so she fails the truth condition after all",
+      "Her belief is unjustified, since anything inferred from a falsehood is",
+      "Her belief is not really held, since she would never bet on Cara"
+    ],
+    "answer": 0,
+    "explanation": "This follows Gettier's recipe: infer something true from a justified false belief, and the result meets all three conditions while its truth has nothing to do with Ann's reasons. Saying inference from a falsehood cannot justify is one of the later repairs, not something the analysis as stated contains."
+  },
+  {
+    "id": "the-gap-exploited",
+    "section": "where-it-fails",
+    "question": "What structural feature of the JTB analysis do Gettier's cases exploit?",
+    "options": [
+      "Justification comes in degrees, and the analysis never says how much is enough",
+      "A person can believe something without feeling confident that it is true",
+      "Truth is defined too thinly to say what makes a statement true",
+      "Nothing in it requires justification and truth to be connected"
+    ],
+    "answer": 3,
+    "explanation": "Justification and truth were introduced as separate conditions, so a belief can have both without the one having anything to do with the other. The vagueness about how much justification is enough is a real gap, but Gettier's cases work even with plenty of justification."
+  },
+  {
+    "id": "knowledge-first",
+    "section": "where-it-fails",
+    "question": "According to Williamson's view as the article presents it, how should knowledge relate to justification?",
+    "options": [
+      "Knowledge is justification plus truth plus a fourth condition yet to be found",
+      "Knowledge is mere true belief, so justification can be dropped entirely",
+      "Knowledge is basic and is used to explain evidence and justification",
+      "Knowledge is impossible, since every analysis meets a counterexample"
+    ],
+    "answer": 2,
+    "explanation": "Williamson holds that knowledge is a basic mental state that resists analysis, so the explanatory order runs the other way, from knowledge to evidence and justification. Looking for a fourth condition is the repair strategy his view rejects."
+  }
+]

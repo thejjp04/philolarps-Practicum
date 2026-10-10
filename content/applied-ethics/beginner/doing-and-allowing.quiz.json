@@ -1,0 +1,132 @@
+[
+  {
+    "id": "allowing-while-busy",
+    "section": "two-distinctions-that-are-not-the-same",
+    "question": "A neighbour spends the afternoon painting her fence while, as she knows, a child next door is starving. On Foot's and Quinn's account, what has she done?",
+    "options": [
+      "Done harm, since she was actively doing something the whole afternoon",
+      "Done harm, since she could have prevented the death and chose not to",
+      "Allowed harm, since she did not start or sustain the fatal sequence",
+      "Nothing assessable, since her contribution to the outcome was not an act"
+    ],
+    "answer": 2,
+    "explanation": "What matters is whether the agent initiated or sustained the sequence leading to the harm, not whether her body moved. The first option is the trap of reading the doctrine as one about bodily movement, which is exactly what Foot and Quinn reject."
+  },
+  {
+    "id": "rachels-method",
+    "section": "the-bare-difference-argument",
+    "question": "Someone wants to test, by Rachels's method, whether lying is worse than misleading. What should they do?",
+    "options": [
+      "Survey which of the two practices people actually engage in more often",
+      "Build two cases alike in all but lying versus misleading, and compare",
+      "Find real cases of each and compare how much harm they did on average",
+      "Derive the answer from a general theory of what makes acts wrong"
+    ],
+    "answer": 1,
+    "explanation": "The bare difference method constructs cases that differ in the one respect under examination and nothing else, then asks whether the judgements differ. Comparing real cases lets many other differences in, so any difference in verdict could not be traced to the one feature."
+  },
+  {
+    "id": "smith-jones-reply",
+    "section": "what-the-argument-establishes-and-what-it-does-not",
+    "question": "What is the most damaging reply to the Smith and Jones comparison, on the article's account?",
+    "options": [
+      "Jones in fact behaved slightly better, since he never touched the child",
+      "Jones intended nothing, so the cases differ in intention as well",
+      "The argument shows only that both men are bad, not that they are equal",
+      "Both had resolved on the death, so the setting hides any difference"
+    ],
+    "answer": 3,
+    "explanation": "Both men are greedy, intend the death and are ready to kill, so it is unsurprising they come out equal; that shows only that the distinction makes no difference at that setting. The second option is false to the case, since Jones intends the child's death just as Smith does."
+  },
+  {
+    "id": "restraint-versus-rescue",
+    "section": "what-the-argument-establishes-and-what-it-does-not",
+    "question": "On the structural point from Foot and Quinn, why can everyone comply with a duty not to kill at once, when the same is not true of a duty to save?",
+    "options": [
+      "Restraint fixes what each must do; rescue has no limit or allocation",
+      "Killing is always intended, while a failure to save is merely foreseen",
+      "Killing involves a bodily movement, while failing to save does not",
+      "The duty to save is owed only to people the agent knows personally"
+    ],
+    "answer": 0,
+    "explanation": "A duty of restraint can be discharged by everyone simultaneously and specifies exactly what each person is to do, while the need for saving is unlimited, costly and does not say who bears the cost. The bodily movement option revives the misreading the article set aside at the start."
+  },
+  {
+    "id": "where-things-stand",
+    "section": "what-the-argument-establishes-and-what-it-does-not",
+    "question": "Which best states where the article says the debate stands after Rachels?",
+    "options": [
+      "Rachels showed that the distinction never does any moral work at all",
+      "The distinction settles cases, so active killing is always forbidden",
+      "The distinction makes a difference, but one that can be outweighed",
+      "Bennett's descriptive account of the distinction is now widely accepted"
+    ],
+    "answer": 2,
+    "explanation": "Rachels showed the distinction cannot do the work a blanket rule against active killing assumed, not that it never does any work. The strongest current positions treat it as a difference that can be outweighed rather than one that settles cases."
+  },
+  {
+    "id": "proportionality-still-needed",
+    "section": "aiming-at-a-harm-and-expecting-it",
+    "question": "A factory owner foresees, but does not intend, that her new process will pollute a river. On the doctrine of double effect, is that enough to make the process permissible?",
+    "options": [
+      "Yes, since double effect permits any harm that is merely foreseen",
+      "No, since double effect forbids every act with a foreseen bad effect",
+      "Yes, provided the good effect is produced by means of the bad one",
+      "No, since there must also be a proportionately serious reason for it"
+    ],
+    "answer": 3,
+    "explanation": "Double effect is permissive and never licenses anything on its own, because the proportionality condition still has to be met. The first option drops that condition, which the reply later notes is routinely dropped by people who quote the rest of the doctrine."
+  },
+  {
+    "id": "closeness-redescription",
+    "section": "aiming-at-a-harm-and-expecting-it",
+    "question": "A surgeon says he intends only to change the dimensions of the skull, not the death that follows. What problem for double effect does this illustrate?",
+    "options": [
+      "Nobody has said when a redescription of an intention is honest",
+      "Double effect cannot be applied to medical cases of any kind at all",
+      "Proportionality can never be satisfied when a life is lost as a result",
+      "Side effects must be unforeseen if they are to fall outside intention"
+    ],
+    "answer": 0,
+    "explanation": "If the redescription is accepted, double effect loses the verdict it was built to deliver; if refused, a rule is needed saying why, and nobody has stated one precisely. The last option confuses side effects with surprises, whereas double effect is about effects foreseen but not aimed at."
+  },
+  {
+    "id": "intention-gives-no-guidance",
+    "section": "aiming-at-a-harm-and-expecting-it",
+    "question": "Why does the second objection in the aside say double effect fails to guide an agent?",
+    "options": [
+      "Intentions are private, so other people can never know what they are",
+      "The principle has too many conditions to be applied in the moment",
+      "Her intention is part of what she is deciding, not a fact to consult",
+      "The principle only ever permits, so it can never forbid anything"
+    ],
+    "answer": 2,
+    "explanation": "Permissibility is supposed to be consultable before acting, but on double effect it depends on what the agent will intend, which is part of the decision itself. The privacy of intentions is a problem for others assessing the agent, not for the agent seeking guidance."
+  },
+  {
+    "id": "which-distinction-for-strangers",
+    "section": "where-the-two-distinctions-meet",
+    "question": "Which distinction can explain the difference between killing a stranger for their organs and failing to send money that would save one?",
+    "options": [
+      "Doing and allowing, since in the second case the agent only allows",
+      "Double effect, since the second agent merely foresees the stranger's death",
+      "Neither, since the outcome is a death in both of the two cases",
+      "Both equally, since each of the two cases involves using a person"
+    ],
+    "answer": 0,
+    "explanation": "The killer does harm while the person who fails to send money allows it. Double effect is the tempting answer, but in the second case nothing is intended at all, so the contrast between intending and foreseeing does not by itself explain the difference."
+  },
+  {
+    "id": "letting-die-not-licence",
+    "section": "where-the-two-distinctions-meet",
+    "question": "Someone reasons: letting die is not killing, so I may let anyone die. What does the reply say?",
+    "options": [
+      "That is right, since only the duty not to kill is a genuine duty",
+      "That is right, provided the deaths are foreseen and not intended",
+      "That is wrong, since letting die is morally the same as killing",
+      "The duty to prevent harm is weaker, but it is not cancelled"
+    ],
+    "answer": 3,
+    "explanation": "The reply's concession is that nothing in the distinctions licenses indifference, and a weaker duty is still a duty. The third option overcorrects: the reply defends a difference between killing and letting die while denying that it cancels the duty to help."
+  }
+]

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "which-is-propositional",
+    "section": "what-is-being-analysed",
+    "question": "Which of these is an example of propositional knowledge?",
+    "options": [
+      "Knowing how to ride a bicycle",
+      "Knowing your neighbour well after years of chats",
+      "Knowing that the library closes at six",
+      "Knowing Lisbon from having lived there"
+    ],
+    "answer": 2,
+    "explanation": "Propositional knowledge takes a complete statement as its object, here that the library closes at six. Knowing a person or a city is familiarity by acquaintance and knowing how is a capacity; both are real, but neither has the form \"S knows that P\"."
+  },
+  {
+    "id": "opinions-can-be-true",
+    "section": "the-three-notions",
+    "question": "Because an opinion is held on grounds that do not settle the matter, an opinion cannot be true.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Opinion is a belief with a particular standing, held provisionally or where reasonable disagreement is expected, and that standing says nothing about whether it is true. The bettor who simply felt lucky held an opinion about the coin, and it was correct."
+  },
+  {
+    "id": "just-your-opinion",
+    "section": "the-three-notions",
+    "question": "You claim that a new tax raised unemployment, and a colleague replies: \"That's just your opinion.\" On the article's account, what does the remark at most show?",
+    "options": [
+      "That the claim reports a preference and so is neither true nor false",
+      "That competent people disagree about it, not that there is no answer",
+      "That the claim is false, since facts are not matters of opinion",
+      "That nobody is in a position to believe the claim"
+    ],
+    "answer": 1,
+    "explanation": "The remark usually reports that a matter is disputed and gets heard as saying it is mere preference. Whether the tax raised unemployment is true or false even though competent people disagree, so the two divisions come apart and the remark does not show that no answer exists."
+  },
+  {
+    "id": "knowledge-requires-truth",
+    "section": "the-three-notions",
+    "question": "Last year Sam said he knew the shop opened on Sundays. It turns out it never did. Which is the right description?",
+    "options": [
+      "Sam never knew it; he only believed it",
+      "Sam knew it then, but his knowledge has since changed",
+      "Sam knew it, since he had good reason to say so at the time",
+      "Sam partly knew it, since his belief was close to the truth"
+    ],
+    "answer": 0,
+    "explanation": "Knowledge requires truth, so discovering the claim was false retracts the claim to have known it rather than revising it. Good reasons or confidence at the time can make a belief reasonable, but they cannot make a false belief into knowledge."
+  },
+  {
+    "id": "meno-tethering",
+    "section": "the-menos-question",
+    "question": "A guide with a correct opinion about the road gets you to Larissa as well as one who knows it. On the account in the *Meno*, what makes knowledge better?",
+    "options": [
+      "Knowledge has a different content from the true opinion",
+      "Knowledge is held with more confidence than opinion",
+      "Knowledge is more likely to be true at the moment it is held",
+      "Knowledge is tied down by an account of why, so it stays put"
+    ],
+    "answer": 3,
+    "explanation": "True opinions are like the statues of Daedalus, which run away unless tied down, and an account of why something is so holds a belief in place. The difference lies in what supports the belief, not in its content: both guides believe the same thing about the same road."
+  },
+  {
+    "id": "radford-confidence",
+    "section": "is-belief-really-required",
+    "question": "In Radford's case, an examinee answers history questions correctly again and again while insisting he is only guessing. On the reply most epistemologists give, what does he lack?",
+    "options": [
+      "Belief that his answers are correct",
+      "Answers that are actually true",
+      "Confidence in himself as a source",
+      "Any link between his schooling and his answers"
+    ],
+    "answer": 2,
+    "explanation": "His repeated right answers are exactly what belief predicts, so what he lacks is a second-order confidence in his own reliability, not belief. The case's lasting lesson is that belief shows in what a person does with a claim, not in how sure they say they are."
+  }
+]

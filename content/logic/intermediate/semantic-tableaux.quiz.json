@@ -1,0 +1,127 @@
+[
+  {
+    "id": "what-goes-at-the-root",
+    "section": "testing-the-negation-instead",
+    "question": "To test whether $P \\lor Q$ and $\\neg P$ together entail $Q$, what goes at the root of the tableau?",
+    "options": [
+      "$P \\lor Q$, $\\neg P$ and $Q$",
+      "$P \\lor Q$, $\\neg P$ and $\\neg Q$",
+      "$\\neg(P \\lor Q)$, $P$ and $\\neg Q$",
+      "$\\neg Q$ alone, with the premises added later"
+    ],
+    "answer": 1,
+    "explanation": "The method looks for a countermodel, so it asks whether the premises together with the negated conclusion have a model. Putting $Q$ itself at the root would ask whether premises and conclusion can be true together, which says nothing about validity."
+  },
+  {
+    "id": "which-rule-branches",
+    "section": "the-two-shapes-of-rule",
+    "question": "Which of these formulas is decomposed by a branching rule?",
+    "options": [
+      "$\\neg(P \\lor Q)$",
+      "$\\neg(P \\rightarrow Q)$",
+      "$P \\land Q$",
+      "$\\neg(P \\land Q)$"
+    ],
+    "answer": 3,
+    "explanation": "A negated conjunction needs only one conjunct false, which leaves a choice, so the branch splits into $\\neg P$ and $\\neg Q$. The other three each demand two things at once and write both on the same branch."
+  },
+  {
+    "id": "negated-conditional-rule",
+    "section": "the-two-shapes-of-rule",
+    "question": "What does the rule for $\\neg(P \\rightarrow Q)$ write down?",
+    "options": [
+      "$P$ and $\\neg Q$, both on the same branch",
+      "$\\neg P$ and $Q$, both on the same branch",
+      "A branch with $P$ and a separate branch with $\\neg Q$",
+      "A branch with $\\neg P$ and a separate branch with $Q$"
+    ],
+    "answer": 0,
+    "explanation": "A conditional is false only when its antecedent is true and its consequent false, so both requirements go on one branch. The split into $\\neg P$ and $Q$ is the rule for the unnegated conditional."
+  },
+  {
+    "id": "already-closed",
+    "section": "the-two-shapes-of-rule",
+    "question": "Before any further decomposition, which branch is already closed?",
+    "options": [
+      "One containing $P \\lor Q$ and $\\neg P$",
+      "One containing $\\neg \\neg P$ and $\\neg P$",
+      "One containing $P \\land Q$ and $\\neg Q$",
+      "One containing $\\neg P$ and $\\neg Q$"
+    ],
+    "answer": 1,
+    "explanation": "A branch closes when it contains some formula and its negation, and $\\neg \\neg P$ is the negation of $\\neg P$. The branch with $P \\land Q$ and $\\neg Q$ will close once the conjunction is decomposed, but it has not closed yet, and the other two can be satisfied."
+  },
+  {
+    "id": "countermodel-from-branch",
+    "section": "an-invalid-argument",
+    "question": "A tableau tests the premise $P \\lor Q$ against the conclusion $P$. Its root holds $P \\lor Q$ and $\\neg P$; the left branch adds $P$ and closes, and the right branch adds $Q$ and stays open. What does the open branch give?",
+    "options": [
+      "A countermodel with $P$ true and $Q$ false",
+      "A countermodel with $P$ false and $Q$ false",
+      "A countermodel with $P$ false and $Q$ true",
+      "Nothing, since an open branch only reports that no proof was found"
+    ],
+    "answer": 2,
+    "explanation": "Assign true to each letter appearing unnegated on the branch and false to each negated one: $Q$ true, $P$ false. That makes the premise true and the conclusion false. An open branch is a result, not the absence of one, which is exactly what natural deduction's proof search could not offer."
+  },
+  {
+    "id": "why-tableaux-finish",
+    "section": "why-it-always-finishes",
+    "question": "What guarantees that every propositional tableau is finite?",
+    "options": [
+      "Every branch eventually closes against some formula already on it",
+      "Non-branching rules are always applied before the branching ones",
+      "Rules only write shorter formulas, and none is decomposed twice on a branch",
+      "The language has only finitely many sentence letters to work with"
+    ],
+    "answer": 2,
+    "explanation": "Formulas only shrink, so everything on the tree comes from a finite stock of subformulas and their negations, each used once per branch. Branches need not close (the open ones are the informative ones), and the order of rules affects the size of the tree, not whether it ends."
+  },
+  {
+    "id": "tautology-test",
+    "section": "the-same-method-for-other-questions",
+    "question": "To test whether $P \\rightarrow (Q \\rightarrow P)$ is a tautology, what goes at the root, and what outcome shows that it is one?",
+    "options": [
+      "The formula itself, with every branch staying open",
+      "Its negation, with at least one branch staying open",
+      "The formula itself, with every branch closing",
+      "Its negation, with every branch closing"
+    ],
+    "answer": 3,
+    "explanation": "A tautology is true on every interpretation, so its negation is unsatisfiable, and a tableau started from the negation closes completely. Starting from the formula itself and finding every branch closed would instead show that it is a contradiction."
+  },
+  {
+    "id": "one-open-branch-enough",
+    "section": "the-same-method-for-other-questions",
+    "question": "If a finished tableau for a set of formulas has even one open branch, the set is satisfiable.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "An open branch can be read off as an interpretation satisfying everything on it, including the starting formulas at the root. The closed branches do not matter: the method decides satisfiability, and one surviving way of satisfying the set is enough."
+  },
+  {
+    "id": "decompose-which-first",
+    "section": "keeping-the-tree-small",
+    "question": "The root holds $P \\lor Q$ and $R \\land S$. Which should be decomposed first?",
+    "options": [
+      "$P \\lor Q$, since branching early exposes closures sooner on each side",
+      "$R \\land S$, since after the split it would be done twice",
+      "Either one, since the order affects neither the result nor the size",
+      "$P \\lor Q$, since disjunctions must be decomposed before conjunctions"
+    ],
+    "answer": 1,
+    "explanation": "A non-branching rule adds formulas to one branch, while splitting first duplicates all remaining work across both branches. The order never changes the outcome, but it does change the size of the tree, which is the trap in the third option."
+  },
+  {
+    "id": "tableaux-generalise",
+    "section": "what-the-method-is-really-doing",
+    "question": "According to the reply to the objection, what is the more important advantage of tableaux over truth tables?",
+    "options": [
+      "They extend to predicate and modal logic, where tables fail",
+      "They decide some propositional arguments that truth tables cannot settle",
+      "They are always smaller than the truth table for the same argument",
+      "They produce a natural deduction proof as a by-product of closing"
+    ],
+    "answer": 0,
+    "explanation": "Truth tables stop working over infinite domains, while tableaux extend with a few extra rules, which is why automated provers are built on them. The two methods decide exactly the same propositional questions, and the saving in size is not guaranteed: in the worst case there is none."
+  }
+]

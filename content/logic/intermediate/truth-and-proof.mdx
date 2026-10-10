@@ -41,6 +41,8 @@ Notice what the argument did. It examined interpretations and reported what it f
 
 The same argument has a counterpart that derives and examines nothing. From $P \rightarrow Q$ and $\neg Q$, the rule of modus tollens yields $\neg P$ in a single step, and the sequence consisting of the two premises followed by that conclusion meets the structural conditions on a proof. The two arguments reach the same verdict about the same three formulas by wholly different means, and neither could be converted into the other without going through one of the theorems named below.
 
+<Check id="affirming-consequent-countermodel" />
+
 ## The second relation
 
 <Definition term="Syntactic consequence">
@@ -62,6 +64,8 @@ Syntactic consequence has no such symmetry. Finding a proof establishes that the
 The relations also behave differently under change. Adding a rule to a proof system can add syntactic consequences without touching any semantic ones, since the semantics never mentioned rules. Changing the semantics, as the articles on many-valued and intuitionistic logic do, can remove semantic consequences while the proof system sits unchanged.
 
 A third difference shows up as soon as the premise set is allowed to be infinite, which nothing in either definition forbids. A derivation is finite by definition, so if $\Gamma \vdash \varphi$ holds then some finite part of $\Gamma$ already suffices; a proof can only have used the premises it actually cited. The semantic definition carries no such restriction on its face, since it quantifies over interpretations of the whole set at once. That the restriction nonetheless holds on the semantic side as well is the compactness theorem, treated later in this tier, and it is a substantial result precisely because nothing in the definition of $\vDash$ suggests it.
+
+<Check id="failed-search" />
 
 ## The empty premise set
 
@@ -92,6 +96,8 @@ That they coincide is exactly what the two theorems assert, and a theorem stated
 <Aside title="Reading the turnstiles aloud">
 The double turnstile is read "entails" or "semantically implies"; the single turnstile is read "proves" or "yields". A common habit is to read both as "therefore", which defeats the purpose of having two. It also helps to remember that neither symbol belongs to the object language. $P \rightarrow Q$ is a formula and can appear inside another formula; $P \vDash Q$ is a metalanguage claim about two formulas and cannot appear inside anything. Writing something like $(P \vDash Q) \lor R$ is a category error rather than a false statement.
 </Aside>
+
+<Check id="rule-breaks-soundness" />
 
 ## Next
 

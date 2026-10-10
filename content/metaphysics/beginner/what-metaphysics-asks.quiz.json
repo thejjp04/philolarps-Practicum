@@ -1,0 +1,91 @@
+[
+  {
+    "id": "name-origin-lesson",
+    "section": "the-name-is-an-accident",
+    "question": "Someone argues that metaphysics must be about spirits and hidden realms, since its name means \"beyond the physical\". On the article's account, what is wrong with this?",
+    "options": [
+      "Aristotle coined the word to mean \"more fundamental than physics\", a claim about rank rather than about spirits",
+      "The title records where the books sat in an edition, so it says nothing about their content",
+      "The word does mean \"beyond the physical\", but only in the harmless sense of \"more general than physics\"",
+      "It translates Aristotle's phrase \"first philosophy\", which never meant that"
+    ],
+    "answer": 1,
+    "explanation": "*Ta meta ta phusika* means \"the ones after the physics\", a label an editor gave the books for their place in the edition. The tempting idea that Aristotle chose the word to signal priority over physics fails because he never used the word at all."
+  },
+  {
+    "id": "symptom-of-metaphysical-question",
+    "section": "what-makes-a-question-metaphysical",
+    "question": "By the article's symptom, which of these questions is metaphysical?",
+    "options": [
+      "At what temperature does the gold in a wedding ring melt?",
+      "How many of the water molecules in a river today were also flowing in it a year ago?",
+      "Given that all its water has been replaced, is it the same river it was a year ago?",
+      "How fast does the river flow where it meets the sea, and does that speed vary with the tide?"
+    ],
+    "answer": 2,
+    "explanation": "A metaphysical question survives every possible answer to the corresponding scientific one: even a complete molecular history leaves open what makes it the same river. The molecule-counting question sounds close, but it is the scientific question, and a measurement would settle it."
+  },
+  {
+    "id": "relation-to-science",
+    "section": "what-makes-a-question-metaphysical",
+    "question": "On the article's account, how do metaphysics and the sciences relate where they interact?",
+    "options": [
+      "Scientific results constrain metaphysics, but no experiment supplies the interpretation of its own results",
+      "Metaphysics settles from the armchair some empirical questions that experiments are unable to reach",
+      "They never interact, since metaphysical questions are independent of every possible scientific result",
+      "Metaphysics decides in advance which scientific results may be accepted, before anyone interprets them"
+    ],
+    "answer": 0,
+    "explanation": "The traffic runs mostly one way: relativity constrains theories of time, and quantum mechanics bears on whether the world is made of particles with definite properties. The tempting thought that the two never meet ignores exactly these constraints, which the advanced tier takes seriously."
+  },
+  {
+    "id": "where-is-seven",
+    "section": "categories",
+    "question": "Asked where the number seven is, a philosopher says the question has no answer. On the article's account of categories, what is the best reading of this?",
+    "options": [
+      "Seven is somewhere, but its location is undiscovered",
+      "Seven is everywhere at once, since numbers apply to every collection of things wherever it is",
+      "Seven does not exist at all, since whatever exists must have a location in space and time",
+      "The question does not apply to things in seven's category, so there is nothing to find"
+    ],
+    "answer": 3,
+    "explanation": "A category scheme is a claim about which questions make sense about which things, and \"where?\" is not a question that applies to numbers. Reading the missing answer as an unknown one treats seven as an object of the wrong category, which is exactly the mistake the scheme is meant to prevent."
+  },
+  {
+    "id": "grammar-objection-method",
+    "section": "categories",
+    "question": "The objection says that categories are just the grammar of one language written large. According to the reply, what does the objection actually establish?",
+    "options": [
+      "That every category is an artefact of the language it is stated in",
+      "A method: before claiming a category, check whether it can be paraphrased away",
+      "That a distinction drawn in language cannot also be a distinction in the world",
+      "That a different language would produce exactly the same list of categories"
+    ],
+    "answer": 1,
+    "explanation": "The reply grants that the match between categories and grammar is worth worrying about, but denies that being drawable in language makes a distinction merely linguistic, as electric charge shows. What survives is a test to apply, not a proof that all categories are artefacts."
+  },
+  {
+    "id": "structural-question",
+    "section": "the-relation-to-ontology",
+    "question": "On this site's division, which of these is a structural question that metaphysics adds to ontology's inventory question?",
+    "options": [
+      "Are there numbers, or only numerals and the things we count with them?",
+      "Do fictional characters such as Sherlock Holmes exist?",
+      "What is it for a thing to have a property?",
+      "Are there any objects that do not exist?"
+    ],
+    "answer": 2,
+    "explanation": "Ontology asks what is on the list; metaphysics adds questions about how things on it are structured, such as what having a property consists in. The other three all ask whether something is on the list, which makes them inventory questions however abstract their subject matter."
+  },
+  {
+    "id": "division-is-convenience",
+    "section": "the-relation-to-ontology",
+    "question": "On the article's account, the line it draws between ontology and metaphysics is principled, so someone who drew it differently would be making a mistake.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The article calls the division practical rather than principled, a convenience of exposition, and notes that some writers treat ontology as the whole of metaphysics. Nobody should be argued out of a position on the strength of where the line falls."
+  }
+]

@@ -29,6 +29,8 @@ Two notions are easily confused and the confusion causes trouble later. A set $A
 
 The usual operations are defined from membership. The union of two sets has as members whatever belongs to either; the intersection has whatever belongs to both; the difference of $A$ and $B$ has whatever belongs to $A$ and not to $B$. Nothing in what follows requires more than these.
 
+<Check id="member-or-subset" />
+
 ## Relations
 
 <Definition term="Relation">
@@ -48,6 +50,8 @@ A relation that assigns to each object in one set exactly one object in another.
 A function is a special sort of relation rather than a new kind of thing, which is worth knowing because it means that nothing new has to be assumed to have functions available. The condition making a relation a function is that no object appears as the first member of two different pairs.
 
 Bijections are the case that matters most here. A bijection between two sets pairs each member of one with exactly one member of the other and leaves nothing over on either side, so it is a way of showing that two sets match up perfectly without counting either of them. That last point becomes essential as soon as the sets are infinite and counting is not available.
+
+<Check id="which-is-a-function" />
 
 ## The power set
 
@@ -86,6 +90,8 @@ The number so constructed is between zero and one, and it is not on the list, si
 The same argument in a more general form gives a stronger result. For any set whatever, no function from that set to its power set is surjective, so the power set is strictly larger. Given any function $f$ from $A$ to $\mathcal P(A)$, consider the subset of $A$ containing exactly those members $a$ for which $a$ is not in $f(a)$. That subset is not the value of $f$ at any argument, since supposing it were the value at $b$ leads to a contradiction either way about whether $b$ belongs to it.
 
 The consequence is that there is no largest infinite size. Take any infinite set, form its power set, and something strictly larger has been produced; take the power set of that, and so on without end. Cantor established both results, the first in a paper of 1874 and the general form by the diagonal method a little under two decades later.
+
+<Check id="diagonal-not-listed" />
 
 ## What logic needs from this
 

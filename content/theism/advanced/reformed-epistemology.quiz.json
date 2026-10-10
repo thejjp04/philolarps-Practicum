@@ -1,0 +1,130 @@
+[
+  {
+    "id": "classical-criterion-undermines-itself",
+    "section": "what-the-objection-was-resting-on",
+    "question": "Why is the classical foundationalist criterion for proper basicality self-referentially incoherent?",
+    "options": [
+      "It excludes memory beliefs and beliefs about other minds, which nobody proposes to give up",
+      "It treats perception as basic, though perception can only be checked by further perception",
+      "It is not self-evident, incorrigible or evident to the senses, and no argument for it exists",
+      "It demands that each basic belief be inferred from some further basic belief"
+    ],
+    "answer": 2,
+    "explanation": "By its own lights nobody is entitled to accept the criterion without argument, and none has been produced, the same fate as the verification principle. Excluding memory and other-minds beliefs is the criterion's other failure, that it is too narrow, not its incoherence."
+  },
+  {
+    "id": "grounds-without-premises",
+    "section": "the-reformed-proposal",
+    "question": "On Plantinga's model, how do circumstances such as seeing the night sky stand to the belief in God formed in them?",
+    "options": [
+      "They ground the belief without being premises, as an experience grounds a perceptual belief",
+      "They are premises from which God's existence is inferred by analogy with human design",
+      "They merely cause it, and the belief counts as basic precisely because it has no ground",
+      "They are evidence that the faculty is reliable, which must be shown before belief is rational"
+    ],
+    "answer": 0,
+    "explanation": "The sensus divinitatis operates on the occasion of the circumstances, as being appeared to in a certain way occasions a perceptual belief, so the belief is basic without being arbitrary. The option that it has no ground is the trap: Plantinga insists theistic belief is grounded, only not by propositions."
+  },
+  {
+    "id": "parity-conclusion-is-negative",
+    "section": "the-reformed-proposal",
+    "question": "Someone accepts every premise of the parity argument. What, on the article's account, have they been given?",
+    "options": [
+      "A reason to believe in God, provided they find in themselves a working sensus divinitatis",
+      "A proof that belief in God is properly basic for anyone who happens to hold it",
+      "Grounds to treat the earlier theistic arguments as failures",
+      "A defence against one objection, but no reason to think theism is true"
+    ],
+    "answer": 3,
+    "explanation": "The conclusion is deliberately negative: belief in God cannot be ruled irrational merely for being held without argument. The first option overreads it into a positive case, which the argument removes an objection without supplying."
+  },
+  {
+    "id": "not-fideism",
+    "section": "the-reformed-proposal",
+    "question": "On the article's account, Reformed epistemology agrees with fideism that theistic belief stands outside rational assessment.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Reformed epistemology holds that theistic belief is assessed by the same standards as any other belief and passes, which is stronger and more exposed than fideism. What it shares with fideism is only the denial that arguments are required."
+  },
+  {
+    "id": "warrant-is-conditional-on-truth",
+    "section": "warrant",
+    "question": "On Plantinga's proper-function account of warrant, what follows about belief in God produced by a sensus divinitatis?",
+    "options": [
+      "It has warrant whether or not theism is true, since the faculty works the same either way",
+      "If theism is true it has warrant; if theism is false there is no such faculty or warrant",
+      "It is justified, as a matter of duty fulfilled, but cannot rise to knowledge",
+      "It has warrant only after an argument has shown that the faculty is reliable"
+    ],
+    "answer": 1,
+    "explanation": "If God made us with the faculty, its outputs meet every clause: proper function, congenial environment, truth-aimed and reliable design. The first option misses that a faculty which does not exist cannot function properly, so warrant is contingent on truth."
+  },
+  {
+    "id": "de-jure-collapses-into-de-facto",
+    "section": "warrant",
+    "question": "What does Plantinga mean by the collapse of the de jure question into the de facto one?",
+    "options": [
+      "Every objection that theistic belief is improper either presupposes theism false or fails",
+      "Whether theism is true is settled by whether believers have met their epistemic duties",
+      "Theistic belief is rational if and only if at least one of the theistic arguments succeeds",
+      "Critics must first show theism to be irrational before arguing that it is false"
+    ],
+    "answer": 0,
+    "explanation": "The critic who wants to call belief in God intellectually improper without calling it untrue has nowhere to stand. The second option reverses the direction: the collapse makes rationality depend on truth, not truth on the believer's dutifulness."
+  },
+  {
+    "id": "pumpkin-reply-begs-the-question",
+    "section": "the-obvious-objection",
+    "question": "Plantinga answers the Great Pumpkin objection partly by saying his account requires grounds, which the Pumpkin belief lacks. Why do critics say this step assumes what is in dispute?",
+    "options": [
+      "Grounds have to be propositions, and the model offers only circumstances in their place",
+      "The Pumpkin belief has a triggering circumstance as well, namely the arrival of Halloween",
+      "The grounding faculty exists only on the supposition that theism is true",
+      "No criterion of proper basicality is available to anyone, Plantinga included"
+    ],
+    "answer": 2,
+    "explanation": "The reply amounts to saying the belief has a ground because it is true, which the Pumpkin believer can say too. The criterion option is Plantinga's own first step, not the critics' complaint against the second."
+  },
+  {
+    "id": "classify-naturalistic-explanation",
+    "section": "defeaters",
+    "question": "Which of these does the article present as an undercutting rather than a rebutting defeater for belief in God?",
+    "options": [
+      "The problem of evil, as evidence that the distribution of suffering counts against theism",
+      "Religious diversity, understood as showing that each religion's central claims are false",
+      "The Great Pumpkin objection, since it shows that theistic belief is groundless",
+      "An account of why the belief arises that makes no reference at all to its truth"
+    ],
+    "answer": 3,
+    "explanation": "A debunking explanation severs the connection between belief and ground without indicating falsity, as coloured lighting does for colour beliefs. The problem of evil is the leading rebutting defeater, since it is offered as evidence that theism is false."
+  },
+  {
+    "id": "alston-more-exposed",
+    "section": "the-other-route-perception",
+    "question": "In what respect is Alston's perceptual account more exposed than Plantinga's, on the article's account?",
+    "options": [
+      "It posits a faculty whose operation the believer never notices or reports",
+      "Perceptual practices can be checked, and the checks on religious experience are weaker",
+      "It makes belief in God inferred from religious experience rather than basic",
+      "It needs a non-circular justification of ordinary sense perception before it can begin"
+    ],
+    "answer": 1,
+    "explanation": "There is nothing corresponding to any competent observer's ability to look again, a disanalogy Alston calls one of degree. The unnoticed faculty is the respect in which Plantinga's account is more exposed, which is why Alston's is less exposed there."
+  },
+  {
+    "id": "symmetry-establishes-less",
+    "section": "what-it-settles",
+    "question": "Any belief system that tells a story about a faculty producing its beliefs can run Plantinga's argument. What do critics take this symmetry to show?",
+    "options": [
+      "An argument vindicating every view on condition that it is correct distinguishes none of them",
+      "The account is self-referentially incoherent in just the way classical foundationalism was",
+      "Every such system is in fact warranted, whether or not its central claims are true",
+      "Proper basicality makes any immediately held belief immune to defeaters"
+    ],
+    "answer": 0,
+    "explanation": "Plantinga accepts the symmetry as fair, since each system's warrant is then contingent on its truth, but critics conclude that the argument establishes less than it appears to. The third option drops the condition: warrant follows only if the system is true."
+  }
+]

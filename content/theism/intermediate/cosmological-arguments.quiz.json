@@ -1,0 +1,132 @@
+[
+  {
+    "id": "no-specific-fact-to-explain",
+    "section": "the-shared-shape",
+    "question": "A design argument can often be answered by supplying a better explanation of the feature it starts from. Why, on the article's account, can a cosmological argument not be answered that way?",
+    "options": [
+      "Because cosmological arguments are meant as proofs, while design arguments only ever claim probability",
+      "Because science has no explanation of the universe's origin to offer, and on some views never could have one",
+      "Because it starts from the bare fact that there is a universe, leaving no specific feature to explain away",
+      "Because it makes no use of any principle about causes or explanations, only of the concept of God"
+    ],
+    "answer": 2,
+    "explanation": "What distinguishes the family is its starting point: not order or suitability for life, but that there is anything at all. The \"no scientific explanation yet\" option would make the argument hostage to future science, which is not why the strategy fails."
+  },
+  {
+    "id": "which-version-needs-a-beginning",
+    "section": "the-shared-shape",
+    "question": "Suppose physics established that the universe has no first state. Which version of the cosmological argument would lose a premise?",
+    "options": [
+      "Only the Kalam argument",
+      "Only the Leibnizian argument from contingency",
+      "Only the Thomistic argument from what is happening now",
+      "All three, since each argues to a first cause at the start of time"
+    ],
+    "answer": 0,
+    "explanation": "Only the Kalam starts from a beginning; the contingency argument would run unchanged in an eternal universe, and the Thomistic series is not a series running back in time. Treating every version as an argument for a cause at the start of time is the misdescription that leads people to refute one version and think they have refuted all three."
+  },
+  {
+    "id": "rearrangement-objection",
+    "section": "the-causal-premise",
+    "question": "Which objection to \"whatever begins to exist has a cause\" does the article call more damaging and less often answered?",
+    "options": [
+      "Quantum events show that some things begin to exist without any cause, so the premise is false as stated",
+      "Its supporting cases all rearrange existing material in running time; the universe's beginning does not",
+      "It quietly assumes that God exists, so any argument built on it is circular from the outset",
+      "Nothing ever really begins to exist, since matter and energy are conserved through every change"
+    ],
+    "answer": 1,
+    "explanation": "A generalisation drawn from statues and marble is being applied to a case with no prior material and no prior time, so the defender must argue that it covers both. The quantum objection is the other one pressed, and its outcome turns on the interpretation of quantum mechanics rather than on this mismatch of cases."
+  },
+  {
+    "id": "strange-is-not-impossible",
+    "section": "the-premise-that-the-universe-began",
+    "question": "What does the defender of the Kalam need the infinite library to show, and what does the article say it actually shows?",
+    "options": [
+      "It needs an actual infinite to be mathematically inconsistent, and Cantor's work on infinite sets showed that it is",
+      "It needs only that an infinite collection be strange, and the illustration shows exactly that",
+      "It needs a potential infinite to be impossible, which nobody disputes, and the library shows it",
+      "It needs an actual infinite to be impossible, but the illustration shows only that one would be strange"
+    ],
+    "answer": 3,
+    "explanation": "To rule out an infinite past, the premise needs impossibility, and strangeness falls short of it. Cantor's work cuts the other way: the arithmetic of infinite sets is consistent, which is why Craig shifts to the claim that consistency does not show something could exist."
+  },
+  {
+    "id": "composition-reply-concedes",
+    "section": "the-argument-from-contingency",
+    "question": "Russell charged the argument from contingency with the fallacy of composition. What does the reply grant, and what does it leave to another premise?",
+    "options": [
+      "It grants the composition step is fallacious here, and rests everything on the principle of sufficient reason",
+      "It grants that the collection is not contingent, and leaves the question of its explanation open",
+      "Composition shows the collection is contingent; the principle of sufficient reason says it needs explaining",
+      "It holds that every whole has the properties of its parts, so no further premise is needed"
+    ],
+    "answer": 2,
+    "explanation": "If each member might have failed to exist, all might have, so the collection is contingent; that inference is one of the sound uses of composition. Composition is not always valid, which is why the last option overreaches, and the step from contingent to explained is carried by the principle, not by composition."
+  },
+  {
+    "id": "cost-of-free-production",
+    "section": "the-argument-from-contingency",
+    "question": "To escape van Inwagen's objection, most defenders say a necessary being can freely produce a contingent effect. What does that reply cost?",
+    "options": [
+      "The principle of sufficient reason must allow free choices to count as explained without being necessitated",
+      "The necessary being turns out to be contingent after all, since it might have chosen otherwise",
+      "Everything contingent turns out to be necessary, since a necessary cause necessitates its effects",
+      "The argument must assume once more that the universe began, since a free choice has to be made at some time"
+    ],
+    "answer": 0,
+    "explanation": "The being's choosing this rather than something else is itself a contingent fact, so it must count as explained without being necessitated, and whether the weakened principle still supports the argument is the live question. \"Everything turns out necessary\" is the horn of van Inwagen's dilemma that the reply is designed to avoid, not its cost."
+  },
+  {
+    "id": "spot-the-per-se-series",
+    "section": "the-argument-from-what-is-happening-now",
+    "question": "Which of these is a causal series per se, in the sense the Thomistic argument needs?",
+    "options": [
+      "A grandfather causes a father, who causes a son",
+      "Each state of the universe brings about the next state according to physical law",
+      "A match lights a fuse, which then burns on its own",
+      "A thing's existing now depends on something conferring existence on it now"
+    ],
+    "answer": 3,
+    "explanation": "In a per se series each member's causing depends on the simultaneous causing of the one before, and existential dependence at this moment is the version that does not rely on the hand-and-stick illustration. The other cases are ordered per accidens: each member causes the next and is then no longer needed, and Aquinas allowed such series to run back forever."
+  },
+  {
+    "id": "thomist-and-conservation",
+    "section": "the-argument-from-what-is-happening-now",
+    "question": "On the article's account, how is the Thomistic argument related to the doctrine of divine conservation?",
+    "options": [
+      "The argument supplies independent evidence that the doctrine of conservation is true",
+      "They are the same claim in two directions, so neither can independently support the other",
+      "Conservation is needed for the Kalam argument but not for the Thomistic one",
+      "The argument undermines conservation by placing all causal power in God rather than creatures"
+    ],
+    "answer": 1,
+    "explanation": "If nothing needs holding in existence the argument has no premise, and if the argument works conservation follows. Using the argument as fresh support for conservation, or the reverse, is the circularity the article tells the defender to accept openly."
+  },
+  {
+    "id": "the-weight-bearing-step",
+    "section": "from-a-first-cause-to-god",
+    "question": "In the standard route from a first cause to a personal God, which step does the article say carries the weight and is where a critic should press?",
+    "options": [
+      "The inference that the cause of space and time is itself outside space and time",
+      "The inference that the cause of the whole physical order is enormously powerful",
+      "The inference that a timeless cause of a temporal effect must have a will, though nothing shows the options are only mechanism and choice",
+      "The inference that the universe began to exist"
+    ],
+    "answer": 2,
+    "explanation": "The move to a will needs mechanism and choice to be the only alternatives, and needs timeless choosing to be coherent, though choosing looks like something that takes place. The earlier steps to timelessness and power are less contested; neither yields anything knowing, good, or personal."
+  },
+  {
+    "id": "exemption-objection-reply",
+    "section": "from-a-first-cause-to-god",
+    "question": "The objection says every cosmological argument demands a cause for everything and then exempts God. What is the reply's central point?",
+    "options": [
+      "That the exemption is real but harmless, since God is the conclusion anyway",
+      "That no version says everything has a cause: each premise is restricted in advance, so the real question is whether the restriction is principled",
+      "That the demand really is universal, and an infinite regress of causes is no problem",
+      "That the universe cannot be the stopping point because it is not known to exist"
+    ],
+    "answer": 1,
+    "explanation": "The premises cover what begins, what is contingent, or what has derived power, and a necessary or underived being falls outside them by the terms stated before the conclusion is in view. The reply grants the fair part of the objection, that a restriction shaped around one beneficiary would be suspicious, and treats the universe as a serious rival stopping point rather than dismissing it."
+  }
+]

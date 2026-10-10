@@ -1,0 +1,132 @@
+[
+  {
+    "id": "too-many-constants",
+    "section": "tarskis-analysis",
+    "question": "On Tarski's definition, what would follow if every expression of a language were counted as a logical constant?",
+    "options": [
+      "Nothing would be valid, since no model could reinterpret the vocabulary",
+      "Every true sentence would be a logical truth",
+      "Consequence would coincide with derivability in some complete system",
+      "Only the first-order truths of the language would count as logical"
+    ],
+    "answer": 1,
+    "explanation": "With nothing left to reinterpret, the only model that matters is the intended one, so a sentence holds in every model just when it is true. The first option inverts the effect: holding more fixed makes more arguments valid, not fewer."
+  },
+  {
+    "id": "red-coloured-constants",
+    "section": "tarskis-analysis",
+    "question": "Which of these arguments is valid only if \"red\" and \"coloured\" are held fixed as logical constants?",
+    "options": [
+      "$a$ is red; so $a$ is coloured",
+      "$a$ is red; so $a$ is red or $b$ is coloured",
+      "$a$ is red and coloured; so $a$ is coloured",
+      "Everything is red; so $a$ is red"
+    ],
+    "answer": 0,
+    "explanation": "Reinterpreting the predicates freely produces a model where $a$ is in the extension of \"red\" but not of \"coloured\", so the first argument is valid only if their meanings are fixed. The others are valid by the connectives and quantifiers alone, whatever the predicates mean."
+  },
+  {
+    "id": "fails-permutation-invariance",
+    "section": "permutation-invariance",
+    "question": "Which of these fails the permutation invariance criterion?",
+    "options": [
+      "Identity, which holds between each object and itself",
+      "The quantifier \"there are uncountably many\"",
+      "An ordinary predicate such as \"is red\"",
+      "The universal quantifier over the whole domain"
+    ],
+    "answer": 2,
+    "explanation": "A permutation can move an object into or out of the extension of \"red\", so its value is not preserved. The cardinality quantifier passes, because permutations preserve how many objects there are, which is the source of the criterion's difficulty at the upper end."
+  },
+  {
+    "id": "cardinality-quantifier-invariant",
+    "section": "permutation-invariance",
+    "question": "Why does the permutation criterion count \"there are uncountably many\" as a logical constant?",
+    "options": [
+      "It is definable from the first-order quantifiers together with identity",
+      "It has harmonious introduction and elimination rules in a sequent calculus",
+      "It is invariant under homomorphism, which is what Feferman requires",
+      "Permutations preserve cardinality, and the quantifier is sensitive only to it"
+    ],
+    "answer": 3,
+    "explanation": "An invariant notion is insensitive to which objects are which and sensitive at most to how many, and this quantifier is exactly that. It is not first-order definable, and Feferman's homomorphism criterion is designed to exclude quantifiers of this kind."
+  },
+  {
+    "id": "feferman-objection",
+    "section": "permutation-invariance",
+    "question": "What is Feferman's objection to the permutation invariance criterion?",
+    "options": [
+      "It makes logical truth hang on set-theoretic questions like the continuum hypothesis",
+      "It excludes identity, which any acceptable criterion ought to count among the constants",
+      "It counts ordinary predicates as logical whenever their extensions are large",
+      "It cannot explain why tonk fails to be a logical constant despite having rules"
+    ],
+    "answer": 0,
+    "explanation": "Counting the full second-order quantifier as logical yields a consequence relation that settles the continuum hypothesis, so what is a logical truth would depend on set theory. Identity passes the criterion, as do the other standard constants; the complaint is about what it lets in, not what it keeps out."
+  },
+  {
+    "id": "tonk-disharmony",
+    "section": "permutation-invariance",
+    "question": "Why does Prior's tonk fail the proof-theoretic criterion for logical constants?",
+    "options": [
+      "It has no introduction rule of its own, so nothing could ever license asserting it",
+      "Its rules are those of disjunction, which is already a logical constant",
+      "Elimination yields more than introduction put in, making everything derivable",
+      "It fails permutation invariance, since it treats different objects differently"
+    ],
+    "answer": 2,
+    "explanation": "Tonk is introduced like disjunction, from $A$ alone, and eliminated like conjunction, to $B$, so any $A$ yields any $B$. Its rules are a mismatched pair rather than those of a single existing connective, and the failure is one of harmony, a proof-theoretic notion, not of invariance."
+  },
+  {
+    "id": "situations-give-relevant",
+    "section": "pluralism",
+    "question": "In the Beall-Restall framework, taking a case to be a possibly inconsistent or incomplete situation yields which consequence relation?",
+    "options": [
+      "Classical consequence, since situations are fragments of worlds",
+      "Relevant consequence, in which explosion fails",
+      "Intuitionistic consequence, since situations are stages of construction",
+      "Strong Kleene consequence, since situations may leave sentences gappy"
+    ],
+    "answer": 1,
+    "explanation": "An inconsistent situation can make $\\varphi$ and $\\neg \\varphi$ hold without making everything hold, so explosion fails and the relation is relevant. Worlds give classical consequence and constructive stages give intuitionistic; the point is that one schema admits all three."
+  },
+  {
+    "id": "pluralism-reply-to-priest",
+    "section": "pluralism",
+    "question": "Priest objects that pluralism cannot say whether the conclusion of an actual argument follows. How do Beall and Restall reply?",
+    "options": [
+      "Only classical consequence governs actual arguments, the others being idealisations",
+      "Every argument valid in one admissible relation is valid in all of them",
+      "Priest's own dialetheism faces the same difficulty in a sharper form",
+      "The verdicts concern different relations, and the application decides which matters"
+    ],
+    "answer": 3,
+    "explanation": "Verdicts about different relations do not conflict, and which relation is relevant depends on the application, as which geometry applies depends on the space. Making classical consequence the only one for real arguments would abandon pluralism rather than defend it."
+  },
+  {
+    "id": "quine-change-of-subject",
+    "section": "pluralism",
+    "question": "Quine argued that a deviant logician who rejects excluded middle has merely changed the meaning of \"not\". What is the most effective answer, on the article's account?",
+    "options": [
+      "The parties agree on much about negation and argue in terms both understand",
+      "A connective's meaning is fixed by its truth table, not by the laws governing it",
+      "Intuitionists accept excluded middle after all, once double negation is added",
+      "Quine's holism changes every meaning at once, so no subject is ever changed"
+    ],
+    "answer": 0,
+    "explanation": "Parties who share most of the laws of negation and conduct their dispute in mutually understood terms are not talking past one another. Intuitionists accept $\\neg\\neg(\\varphi \\lor \\neg\\varphi)$, but that is not acceptance of excluded middle itself."
+  },
+  {
+    "id": "second-order-stakes",
+    "section": "pluralism",
+    "question": "According to the reply to the deflationary objection, what hangs on whether second-order quantification is logical?",
+    "options": [
+      "Whether the truth functional connectives count as logical constants at all, or only by convention",
+      "Whether categoricity results secure reference or move the problem into set theory",
+      "Whether tonk can be added conservatively to second-order logic, as Belnap required",
+      "Whether Tarski's analysis replaces derivability with truth in a model"
+    ],
+    "answer": 1,
+    "explanation": "If second-order quantification is logical, categoricity theorems pin down their structures; if not, the work is done by set theory and the problem is only relocated. The reply also lists the status of the completeness and incompleteness theorems; the standing of the connectives is not in question."
+  }
+]

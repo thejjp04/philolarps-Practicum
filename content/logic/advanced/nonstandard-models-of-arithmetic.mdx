@@ -35,6 +35,8 @@ The construction used only compactness, which means nonstandard models are not a
 The distinction matters when reading claims about what nonstandard models show. A model obtained by compactness from true arithmetic gets every arithmetical sentence right, and is peculiar only in its structure. A model of Peano arithmetic plus the negation of consistency gets an arithmetical sentence wrong, in the sense that the sentence is false of the natural numbers, and its wrongness is invisible from inside because the false sentence is witnessed by an element the model cannot see is nonstandard.
 </Aside>
 
+<Check id="two-ways-to-be-wrong" />
+
 ## The shape of such a model
 
 The order type of a countable nonstandard model can be described exactly, and the description is the same for all of them.
@@ -44,6 +46,8 @@ The standard part sits at the bottom, an initial segment order-isomorphic to the
 These blocks are themselves ordered, and the ordering is dense: between any two blocks there is a third, obtained by halving the difference between representatives, since the model proves that every number is either twice another or one more than twice another. There is no least block, because the block containing $a$ is above the block containing the half of $a$. There is no greatest, because of the block containing $2a$. A countable dense linear order without endpoints is order-isomorphic to the rationals, by Cantor's theorem, so the order type of any countable nonstandard model is the natural numbers followed by the rationals-many copies of the integers.
 
 The description is complete and it is also cheap, in the sense that it tells one nothing about addition and multiplication. Two countable nonstandard models can share this order type and fail to be isomorphic, and the classification of countable models of Peano arithmetic up to isomorphism is a deep subject rather than a corollary.
+
+<Check id="no-least-block" />
 
 ## Overspill
 
@@ -76,6 +80,8 @@ If no nonstandard model can be exhibited, the claim that such models exist is do
 <Reply>
 The first half of that conclusion is correct and is the standard reading. First-order logic does not pin down the natural numbers up to isomorphism, and this is precisely what the existence of nonstandard models states. The inference to fiction is the part that fails. Nonstandard models are used to prove theorems about the standard model that have no known proof otherwise, which is difficult to square with their being artefacts: the transfer arguments of nonstandard analysis, which apply the same construction to the reals, yield results about ordinary real analysis, and those results are about the ordinary reals. More to the point, the inexhibitability is itself a theorem, which means it is a fact about these structures rather than a symptom of ignorance. An object about which one can prove that it has no recursive presentation is being described with some precision. The right lesson is that existence proofs in logic are frequently nonconstructive and that this restricts what can be done with the objects, not what can be said about them.
 </Reply>
+
+<Check id="what-tennenbaum-rules-out" />
 
 ## Next
 

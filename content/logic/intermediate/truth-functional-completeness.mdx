@@ -74,6 +74,8 @@ Nothing in the argument used any feature of this particular table. The same step
 
 One case needs separate handling. A function false on every row has no true rows to work from, so the recipe produces an empty disjunction. Such a function is expressed by any contradiction, for instance $P \land \neg P$, and the case is closed.
 
+<Check id="dnf-recipe" />
+
 ## What the construction costs
 
 The recipe is guaranteed to work and it is guaranteed to be wasteful.
@@ -89,6 +91,8 @@ With adequacy established for three connectives, De Morgan's laws remove one mor
 The same move in the other direction shows that negation and disjunction are adequate. And since $\varphi \lor \psi$ has the same table as $\neg \varphi \rightarrow \psi$, negation together with the conditional is adequate as well.
 
 Three two-element sets, then, each suffice. The next article shows that a single connective can suffice on its own, which is the limiting case.
+
+<Check id="and-from-neg-arrow" />
 
 ## Showing that a set is not adequate
 
@@ -121,6 +125,8 @@ Convenience and expressive power are separate questions and the article is about
 <Aside title="The other normal form">
 Conjunctive normal form is the mirror image: a conjunction of disjunctions of literals. It is obtained by the same recipe run on the false rows with the values flipped, and every truth function has a formula in this form as well. Which form is wanted depends on the use. Satisfiability procedures are almost always defined on conjunctive normal form, since a conjunction is satisfiable only if every clause can be satisfied at once, and that gives the search something to work on clause by clause.
 </Aside>
+
+<Check id="conditional-alone" />
 
 ## Next
 

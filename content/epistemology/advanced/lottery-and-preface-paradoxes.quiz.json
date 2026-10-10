@@ -1,0 +1,132 @@
+[
+  {
+    "id": "thesis-versus-view",
+    "section": "the-threshold-view",
+    "question": "How do the threshold view and the Lockean thesis differ?",
+    "options": [
+      "The Lockean thesis says what belief is; the threshold view says when believing is rational",
+      "The threshold view says what belief is; the Lockean thesis says when belief is rational",
+      "Both are norms of rationality, differing only in where they set the threshold for belief",
+      "Both are accounts of what belief is, one for credence and the other for binary belief"
+    ],
+    "answer": 1,
+    "explanation": "The threshold view is a claim about the nature of belief, that it just is credence of at least $t$; the Lockean thesis is a norm tying rational belief to rationally high credence. The first option swaps them, an easy slip since the two fit together so naturally that they are often run together."
+  },
+  {
+    "id": "how-many-tickets",
+    "section": "the-lottery-paradox",
+    "question": "Your threshold for belief is 0.97. In a fair lottery with exactly one winner, what is the smallest number of tickets for which your credence that any given ticket loses exceeds the threshold?",
+    "options": [
+      "33",
+      "30",
+      "34",
+      "97"
+    ],
+    "answer": 2,
+    "explanation": "Each ticket loses with probability $1 - 1/n$, which exceeds 0.97 only when $n > 1/0.03 \\approx 33.3$, so 34 tickets are needed. With 33 tickets the probability of losing is about 0.9697, just short of the threshold, which is why rounding $1/(1 - t)$ down gives the wrong answer."
+  },
+  {
+    "id": "preface-arithmetic",
+    "section": "the-preface-paradox",
+    "question": "An author has credence 0.98 in each of 100 independent claims in her book. Roughly what should her credence be that the book contains at least one error?",
+    "options": [
+      "About 0.87",
+      "About 0.13",
+      "About 0.02",
+      "About 0.98"
+    ],
+    "answer": 0,
+    "explanation": "Her credence that every claim is true is $0.98^{100} \\approx 0.13$, so her credence that at least one is false is about 0.87. The figure 0.13 is the credence in the conjunction, the very claim the preface denies; small doubts about each claim accumulate into near-confidence that something is wrong."
+  },
+  {
+    "id": "preface-blocks-lottery-responses",
+    "section": "the-preface-paradox",
+    "question": "Why do responses that deny the individual lottery beliefs not carry over to the preface paradox?",
+    "options": [
+      "The preface involves far fewer propositions than a large lottery, so conjunction closure does no harm there",
+      "The author's claims are not independent of one another, so the probabilities do not multiply",
+      "The author does not really believe there is an error, but only says so out of modesty",
+      "The author plainly should believe each claim she has checked, and refusing would be absurd scepticism"
+    ],
+    "answer": 3,
+    "explanation": "Many find believing that a particular ticket will lose unwarranted whatever the odds, but the author has checked each claim, so denying her the individual beliefs is not a live option. The modesty reading fails because she has good evidence, from the track record of long books, that some claim is false."
+  },
+  {
+    "id": "what-must-give",
+    "section": "responses",
+    "question": "On the article's account, what do the lottery and preface paradoxes force you to give up?",
+    "options": [
+      "Probabilism, since a credence of $1 - 1/n$ in each ticket's losing is incoherent across the tickets",
+      "At least one of the Lockean thesis, conjunction closure, and the consistency of rational belief",
+      "The assumption that the lottery is fair, since fairness is never known in practice",
+      "The belief that some ticket will win, since it rests only on the organisers' say-so"
+    ],
+    "answer": 1,
+    "explanation": "The three principles together yield rational belief in a contradiction, so one must go, and each has its defenders. Probabilism is not under threat: assigning $1 - 1/n$ to each ticket's losing is perfectly coherent, and the trouble arises only when high credence is converted into binary belief and the beliefs are combined."
+  },
+  {
+    "id": "cost-of-dropping-closure",
+    "section": "abandon-conjunction-closure",
+    "question": "Kyburg, Foley and Christensen give up conjunction closure. What cost does the article identify for this response?",
+    "options": [
+      "It becomes unclear why believing an argument's premises commits one to its conclusion",
+      "It forces one to believe outright that every ticket in the lottery will lose, despite knowing otherwise",
+      "It requires giving up probabilism along with deductive cogency",
+      "It makes what one believes depend on how the possibilities are partitioned"
+    ],
+    "answer": 0,
+    "explanation": "If believing each premise does not commit one to believing their conjunction, multi-premise reasoning loses its grip, since a valid argument's conclusion follows from the premises taken together. Dependence on partitioning is the cost of Leitgeb's stability theory, a response that keeps closure."
+  },
+  {
+    "id": "normic-support",
+    "section": "abandon-the-lockean-thesis",
+    "question": "On Martin Smith's view, why can a friend's testimony about where they were justify belief when the odds against your lottery ticket cannot?",
+    "options": [
+      "Testimony usually confers a much higher probability than even very long lottery odds",
+      "Testimony gives knowledge, and only beliefs that amount to knowledge are justified",
+      "If the testimony proves false, that calls for special explanation, whereas a ticket winning needs none",
+      "Testimony is not statistical evidence, and purely statistical evidence can never ground belief at all"
+    ],
+    "answer": 2,
+    "explanation": "Normic support is evidence on which the belief's being false would be abnormal and need explaining: a lie needs an explanation, but someone had to win. The last option is Nelkin's account and the second is the knowledge-first answer; both reject the Lockean thesis too, but for different reasons."
+  },
+  {
+    "id": "stability-cost",
+    "section": "stability",
+    "question": "Leitgeb's stability theory keeps consistency and full conjunction closure. What price does it pay?",
+    "options": [
+      "Belief requires credence 1, so ordinary contingent beliefs are almost never rational",
+      "Rational beliefs may be inconsistent, as long as the inconsistency is acknowledged",
+      "Any link between belief and high credence must be abandoned entirely",
+      "What one believes depends on how the space of possibilities is partitioned"
+    ],
+    "answer": 3,
+    "explanation": "Belief is credence that stays above the threshold on conditionalizing on anything consistent with it, and which propositions qualify varies with the partition of possibilities. The theory keeps a version of the Lockean thesis rather than abandoning it, which is precisely its appeal."
+  },
+  {
+    "id": "bus-company-case",
+    "section": "stability",
+    "question": "A pedestrian is hit by an unidentified bus, and 80 per cent of the town's buses belong to one company. Courts would not find against the company on that evidence alone. On the article's account, what does this reluctance suggest?",
+    "options": [
+      "That legal proof, like belief, needs evidence bearing on this case, not just high probability",
+      "That 80 per cent falls short of the civil standard of proof on the balance of probabilities",
+      "That statistical evidence is irrelevant to legal questions and should be inadmissible",
+      "That courts tacitly apply the criminal standard of proof even in civil cases"
+    ],
+    "answer": 0,
+    "explanation": "Like the gatecrasher case, it has the lottery's structure: the probability clears the legal threshold, yet acting on bare statistics seems wrong, which suggests something other than probability is required. The second option is false, since 80 per cent comfortably exceeds the balance of probabilities; that is what makes the case puzzling."
+  },
+  {
+    "id": "belief-as-reliance",
+    "section": "what-the-paradoxes-show-about-belief",
+    "question": "On Ross and Schroeder's view, why does the Lockean thesis fail?",
+    "options": [
+      "Because there are only credences, and talk of belief is loose shorthand for high credence",
+      "Because belief is a matter of what one is prepared to rely on in reasoning, not of confidence",
+      "Because belief requires certainty, which no contingent proposition ever warrants",
+      "Because rational belief must aim at knowledge, which lottery propositions never achieve"
+    ],
+    "answer": 1,
+    "explanation": "For Ross and Schroeder, believing $p$ is being disposed to take $p$ for granted in reasoning, so belief and credence can come apart. The first option is the opposite, Jeffrey's reductive view, on which there is no fact about belief independent of credence and present purposes."
+  }
+]

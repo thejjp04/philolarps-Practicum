@@ -1,0 +1,127 @@
+[
+  {
+    "id": "preemption-case",
+    "section": "the-comparative-idea",
+    "question": "A thief takes a cyclist's unlocked bike. Had he not, a second thief waiting nearby would have taken it a minute later. What does the counterfactual account of harm say about the first thief?",
+    "options": [
+      "That he harmed her, since she is worse off than she was before the theft",
+      "That he did not harm her, since she would have lost the bike anyway",
+      "That both thieves harmed her, since each would leave her worse off",
+      "That the harm is overdetermined, so each thief did half of it"
+    ],
+    "answer": 1,
+    "explanation": "The account measures harm against what would otherwise have happened, and here she would have lost the bike anyway, so it finds no harm, which is plainly wrong. The first option compares with how she was before the act, which is a different baseline from the counterfactual one."
+  },
+  {
+    "id": "non-comparative-cost",
+    "section": "the-comparative-idea",
+    "question": "What does the non-comparative account of harm give up in exchange for handling the four problem cases?",
+    "options": [
+      "It needs a list of states bad in themselves, which will be disputed",
+      "It can no longer explain why breaking someone's arm is a harm to them",
+      "It must know what would otherwise have happened in each and every case",
+      "It cannot count causing someone a painful condition as harming them"
+    ],
+    "answer": 0,
+    "explanation": "The non-comparative view holds that certain states are bad for a person full stop, so it has to say which, whereas the comparative account needed no list. Knowing what would otherwise have happened is the comparative account's practical burden, which the alternative escapes."
+  },
+  {
+    "id": "personal-not-kantian-autonomy",
+    "section": "being-the-author-of-ones-own-life",
+    "question": "A competent adult spends her savings on an expedition most people think foolish, acting on a policy she could not will everyone to follow. On the article's distinction, what does her choice exercise?",
+    "options": [
+      "Kantian autonomy, since in choosing she gives herself her own law",
+      "Neither kind, since a choice no rational will could universalise is unfree",
+      "Personal autonomy, which includes authority to make foolish choices",
+      "Kantian autonomy, provided she has thought the decision through"
+    ],
+    "answer": 2,
+    "explanation": "Personal autonomy is a person's authority over their own life, including choices no rational will could universalise and most would consider foolish. Kantian autonomy is exercised by acting on principles anyone could act on, so her choice is not an exercise of it."
+  },
+  {
+    "id": "frankfurt-smoker",
+    "section": "being-the-author-of-ones-own-life",
+    "question": "A smoker wants a cigarette and also wants not to want one. She smokes. On Frankfurt's hierarchical account, is she acting autonomously?",
+    "options": [
+      "Yes, since nobody is interfering with her choice to smoke at all",
+      "Yes, since she acts on a desire of her own, whatever else she wants",
+      "No, since smoking is a choice no rational will could universalise",
+      "No, since the desire moving her is one she does not endorse"
+    ],
+    "answer": 3,
+    "explanation": "On the hierarchical account a person acts autonomously when the desire moving them is one they endorse from the higher standpoint, and hers is not. The absence of interference is beside the point, as the article's addict shows."
+  },
+  {
+    "id": "capacity-is-process",
+    "section": "being-able-to-decide-this",
+    "question": "A patient understands the information, appreciates that it applies to her, reasons with it, and refuses a treatment the doctor thinks plainly wise. On the process standard, what follows for her capacity?",
+    "options": [
+      "Her capacity is in doubt, since the choice she has made looks disastrous",
+      "Nothing, since capacity concerns how she decided, not what she decided",
+      "She lacks capacity for this decision but keeps it for other decisions",
+      "She has capacity only if the risk she takes on by refusing is low"
+    ],
+    "answer": 1,
+    "explanation": "The four abilities concern how a person reaches a decision, and she has all of them. Doubting capacity because the outcome looks bad is the temptation the process standard exists to block, since it would let assessors override any decision they disliked."
+  },
+  {
+    "id": "capacity-decision-relative",
+    "section": "being-able-to-decide-this",
+    "question": "On the article's account, a person can have capacity to decide what to eat while lacking capacity to decide about major surgery.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Capacity is decision-relative: it belongs to a person facing a specific decision at a specific time, not to the person globally. A finding of incapacity attaches to a decision, not to a life."
+  },
+  {
+    "id": "what-the-surgeon-wronged",
+    "section": "what-agreement-does",
+    "question": "The surgeon in the opening case improved the patient's health. On the article's account, what did operating without consent wrong?",
+    "options": [
+      "Her health, since every surgery carries some risk of harm to it",
+      "Her family, whose consent the surgeon should have sought first",
+      "Her standing as the person entitled to decide what is done to her",
+      "Nothing, since on the counterfactual account she was not harmed at all"
+    ],
+    "answer": 2,
+    "explanation": "Consent works by waiving a claim against interference, and the surgeon overrode that claim. The wrong was done to her standing as the one entitled to decide, which no improvement in health repairs, so the absence of harm does not settle the matter."
+  },
+  {
+    "id": "consent-between-bad-options",
+    "section": "what-agreement-does",
+    "question": "A worker understands the risks and freely takes dangerous work because the alternative is destitution. What does the article say follows?",
+    "options": [
+      "Her consent is invalid, since nobody would choose such work freely",
+      "Her consent is valid, but that does not certify her background situation",
+      "Her consent is valid, so the arrangement as a whole is morally acceptable",
+      "Her consent is invalid, since she could not have known every risk"
+    ],
+    "answer": 1,
+    "explanation": "All four conditions are met, so the consent is valid, but consent transfers a permission without certifying the situation the person consented from. Treating a valid consent as a full endorsement of the arrangement is what the article calls the most common misuse of the concept."
+  },
+  {
+    "id": "harm-to-others-not-paternalism",
+    "section": "overriding-a-person-for-their-own-sake",
+    "question": "A city bans smoking in bars on the ground that bar staff breathe in the smoke. Is this paternalism in the article's sense?",
+    "options": [
+      "No, since the reason is harm to others, not the smokers' own good",
+      "Yes, since it restricts smokers without their agreement to the rule",
+      "Yes, it is soft paternalism, since smokers are not fully informed",
+      "No, since a law counts as paternalism only if it is hard paternalism"
+    ],
+    "answer": 0,
+    "explanation": "Paternalism needs three things: restriction, no consent, and the person's own good as the reason. The second option names only the first two, which is why an intervention justified by harm to others is not paternalism whatever else it is."
+  },
+  {
+    "id": "soft-and-hard-lifeguard",
+    "section": "overriding-a-person-for-their-own-sake",
+    "question": "A lifeguard stops a swimmer who knows about the rip current, has heard the warnings, and wants to swim anyway. Which kind of paternalism is this?",
+    "options": [
+      "Soft paternalism, since no swimmer can be completely informed",
+      "Soft paternalism, since he is protecting the swimmer's own real decision",
+      "No paternalism, since a lifeguard acts to protect other people",
+      "Hard paternalism, since it overrides an informed, voluntary choice"
+    ],
+    "answer": 3,
+    "explanation": "Soft paternalism intervenes only where a choice is not adequately voluntary or informed, and this swimmer's choice is both. Pleading that no one is ever fully informed is the move the objection describes, and the reply answers it by requiring adequacy rather than perfection."
+  }
+]

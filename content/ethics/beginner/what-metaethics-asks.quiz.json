@@ -1,0 +1,101 @@
+[
+  {
+    "id": "metaethical-or-normative",
+    "section": "two-levels",
+    "question": "Which of these is a metaethical claim rather than a claim of normative ethics?",
+    "options": [
+      "Breaking a promise is wrong unless keeping it causes serious harm",
+      "Consequences alone make actions right or wrong",
+      "Moral claims express attitudes rather than report facts",
+      "Gratuitous cruelty is always wrong, whoever does it"
+    ],
+    "answer": 2,
+    "explanation": "Metaethics makes claims about moral claims, such as what they mean and whether they can be true. \"Consequences alone make actions right or wrong\" is general and theoretical, but it is still a first-order answer to what makes actions right, so it belongs to normative ethics."
+  },
+  {
+    "id": "stepping-back-not-neutral",
+    "section": "two-levels",
+    "question": "Because metaethics steps back from first-order disputes, its claims do not take any contestable side.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Stepping back is not neutrality. Saying that moral claims express attitudes rather than report facts is itself a substantive and contestable claim, made at a different level from claims about which acts are wrong."
+  },
+  {
+    "id": "which-area-asks",
+    "section": "the-first-question-what-are-we-saying",
+    "question": "\"Is 'stealing is wrong' the kind of sentence that can be true or false at all?\" Which area of metaethics asks this?",
+    "options": [
+      "Moral metaphysics",
+      "Moral semantics",
+      "Moral epistemology",
+      "Normative ethics"
+    ],
+    "answer": 1,
+    "explanation": "Asking whether a moral sentence states a fact, or instead expresses an attitude or prescribes, is asking what it means and what speech act it performs. Metaphysics is the tempting answer, but it asks what would have to exist for moral claims to be true, which presupposes they are the kind of thing that can be."
+  },
+  {
+    "id": "mackie-error-theory",
+    "section": "the-second-question-is-there-anything-there",
+    "question": "Which position does the article attribute to J. L. Mackie?",
+    "options": [
+      "Moral claims express attitudes, so they are neither true nor false",
+      "Moral properties are natural properties, like facts about health",
+      "Moral facts are constituted by the output of a procedure of reasoning",
+      "Moral claims do state facts, and all the positive ones are false"
+    ],
+    "answer": 3,
+    "explanation": "Mackie accepted that moral claims state facts and held that the world contains nothing of the kind they are about, partly because objective values would be very strange entities. The first option is the rival semantic view, which denies that moral claims state facts in the first place."
+  },
+  {
+    "id": "no-moral-observation",
+    "section": "the-third-question-how-could-anyone-tell",
+    "question": "Why is moral epistemology harder than its counterpart for claims about the natural world, on the article's account?",
+    "options": [
+      "There is no moral observation, so the obvious source of evidence is missing",
+      "Moral claims cannot be true, so there is nothing there to know",
+      "Persistent moral disagreement has already shown that there is no moral knowledge",
+      "Intuitions are only feelings, and feelings cannot justify any belief"
+    ],
+    "answer": 0,
+    "explanation": "Nobody sees the wrongness of an act the way they see its speed, which leaves intuition and inference, each of which has been challenged. Disagreement is raised as evidence that the sources are not working well, but the article leaves open whether that argument succeeds."
+  },
+  {
+    "id": "motivation-burden",
+    "section": "a-fourth-strand",
+    "question": "Suppose sincerely judging that you ought to do something necessarily brings some motivation to do it. Which kind of view owes an explanation of that, on the article's account?",
+    "options": [
+      "A view on which moral judgements express attitudes of approval or disapproval",
+      "A view on which moral judgements are beliefs about ordinary facts",
+      "Any first-order theory of right action, such as consequentialism",
+      "A view on which all positive moral claims are false"
+    ],
+    "answer": 1,
+    "explanation": "Beliefs about the ordinary world generally do not come with motivation attached, so a view treating moral judgements as such beliefs must explain why these do. The attitude view is the tempting wrong answer: it gets the connection for nothing, and pays for it elsewhere."
+  },
+  {
+    "id": "natural-properties-empirical",
+    "section": "a-fourth-strand",
+    "question": "Suppose moral properties turn out to be natural properties, such as facts about wellbeing. What follows for moral epistemology, on the article's account?",
+    "options": [
+      "Some special faculty, beyond the senses, is needed to detect them",
+      "Moral knowledge becomes impossible, since nothing natural is normative",
+      "Moral knowledge is empirical, gained from the ordinary sources",
+      "Moral sentences turn out not to state facts"
+    ],
+    "answer": 2,
+    "explanation": "An answer in metaphysics restricts the epistemology: natural properties are known in the ordinary ways. A special faculty is what the irreducible, non-natural view needs, and saying what it is has been that position's standing difficulty."
+  },
+  {
+    "id": "expressivist-keeps-convictions",
+    "section": "a-fourth-strand",
+    "question": "According to the reply, what does an expressivist maintain about a person who comes to think moral claims express attitudes?",
+    "options": [
+      "They may keep every conviction, even that cruelty is wrong whatever anyone feels",
+      "They must conclude that cruelty is wrong only because they disapprove of it",
+      "They should stop making moral claims, since none of those claims are true",
+      "They must recast their convictions as reports of their own feelings and attitudes"
+    ],
+    "answer": 0,
+    "explanation": "The expressivist holds that first-order commitments survive the metaethical result intact, which is why the objection describes the situation accurately and draws the wrong conclusion. The second option is the tempting mistake: it makes the wrongness of cruelty depend on attitudes, a first-order claim the expressivist rejects."
+  }
+]

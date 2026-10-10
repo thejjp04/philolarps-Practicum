@@ -1,0 +1,130 @@
+[
+  {
+    "id": "gap-vs-glut-designation",
+    "section": "designation",
+    "question": "Why is the third value undesignated in a gap logic but designated in a glut logic?",
+    "options": [
+      "Gap logics are paraconsistent and glut logics are not, so only gluts can be designated safely",
+      "Designation is read off the truth tables, and the gap and glut tables differ",
+      "A gappy sentence is not true, while a glutty sentence is true, among other things",
+      "Gaps arise only for future contingents, and gluts only for vague predicates"
+    ],
+    "answer": 2,
+    "explanation": "Designation marks what counts as success for validity, and a glut is at least true while a gap is not. The choice is made independently of the tables, which is the article's hinge: identical tables can carry different designations."
+  },
+  {
+    "id": "strong-vs-weak-kleene",
+    "section": "the-systems",
+    "question": "With $p$ true and $q$ undefined, what is the value of $p \\lor q$ on Kleene's strong scheme and on his weak scheme?",
+    "options": [
+      "True on the strong scheme, undefined on the weak",
+      "Undefined on both schemes",
+      "True on both schemes",
+      "Undefined on the strong scheme, true on the weak"
+    ],
+    "answer": 0,
+    "explanation": "The strong scheme makes a compound defined whenever the defined parts settle it, and one true disjunct settles a disjunction, which is short-circuit evaluation. The weak scheme lets any undefined part make the whole undefined, like a computation that must wait for every branch."
+  },
+  {
+    "id": "lukasiewicz-vs-k3-tautologies",
+    "section": "the-systems",
+    "question": "Łukasiewicz's three-valued logic and K3 both leave the third value undesignated, yet Łukasiewicz's system has tautologies and K3 has none. What accounts for the difference?",
+    "options": [
+      "Łukasiewicz's disjunction is true when both disjuncts are indeterminate, so excluded middle holds",
+      "Łukasiewicz's conditional is true when both sides are indeterminate, so $\\varphi \\rightarrow \\varphi$ is true on every assignment",
+      "Łukasiewicz designates the third value, but only for conditionals",
+      "K3 has no conditional, so it cannot express $\\varphi \\rightarrow \\varphi$"
+    ],
+    "answer": 1,
+    "explanation": "In K3, giving every atom the third value gives every formula the third value, so nothing is always designated; Łukasiewicz's conditional is the clause that breaks this. Excluded middle fails in both systems, since a disjunction of two indeterminate sentences is indeterminate."
+  },
+  {
+    "id": "k3-valid-argument",
+    "section": "the-systems",
+    "question": "Which of these arguments is valid in K3?",
+    "options": [
+      "The argument with no premises to $p \\lor \\neg p$",
+      "The argument from $p$ to $q \\lor \\neg q$",
+      "The argument with no premises to $p \\rightarrow p$",
+      "The argument from $p \\land \\neg p$ to $q$"
+    ],
+    "answer": 3,
+    "explanation": "No assignment makes $p \\land \\neg p$ true in K3, so explosion is vacuously valid; each of the others fails when the relevant atom takes the third value. Having no tautologies and being explosive both come from designating truth alone."
+  },
+  {
+    "id": "lp-modus-ponens-failure",
+    "section": "the-systems",
+    "question": "In LP, which assignment makes both premises of modus ponens, $\\varphi$ and $\\varphi \\rightarrow \\psi$, designated and its conclusion undesignated?",
+    "options": [
+      "$\\varphi$ glutty and $\\psi$ false",
+      "$\\varphi$ false and $\\psi$ glutty",
+      "$\\varphi$ true and $\\psi$ false",
+      "$\\varphi$ glutty and $\\psi$ glutty"
+    ],
+    "answer": 0,
+    "explanation": "A glutty $\\varphi$ is designated, and since its negation is glutty too, the conditional takes the glutty value and is designated, while $\\psi$ is plain false. A true $\\varphi$ with a false $\\psi$ makes the conditional false, which is the classical case and no counterexample."
+  },
+  {
+    "id": "lp-not-contained-in-k3",
+    "section": "the-systems",
+    "question": "LP and K3 share their tables and LP designates more values, so every argument valid in LP is valid in K3.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Designating more values makes premises easier to satisfy but also conclusions, so neither consequence relation contains the other. Excluded middle is valid in LP and not in K3, and explosion is valid in K3 and not in LP."
+  },
+  {
+    "id": "belnap-empty-value",
+    "section": "the-systems",
+    "question": "In Belnap's four-valued system the values are the subsets of $\\{\\text{true}, \\text{false}\\}$. In his example of a computer collecting reports, what does the empty set represent?",
+    "options": [
+      "A proposition reported both true and false",
+      "A proposition reported true by every source",
+      "A proposition no source has reported on",
+      "A proposition reported false by every source"
+    ],
+    "answer": 2,
+    "explanation": "The empty set is the gap, no information either way, while the full set is the glut, conflicting reports. Separating the two is exactly what Belnap's system does that a single third value cannot."
+  },
+  {
+    "id": "fde-no-tautologies",
+    "section": "the-systems",
+    "question": "FDE designates the glut as well as truth, as LP does, yet FDE has no tautologies while LP has all the classical ones. Why?",
+    "options": [
+      "FDE does not designate truth itself",
+      "FDE uses tables other than the strong Kleene ones",
+      "FDE is explosive, so its tautologies are trivial",
+      "FDE also has a gap value, and giving every atom the gap gives every formula an undesignated value"
+    ],
+    "answer": 3,
+    "explanation": "The gap behaves in FDE as the third value does in K3: an all-gap assignment makes every formula gappy, and the gap is undesignated. FDE is not explosive, which is the property it shares with LP."
+  },
+  {
+    "id": "lukasiewicz-continuum-conditional",
+    "section": "the-systems",
+    "question": "In infinite-valued Łukasiewicz logic, with the conditional $\\min(1, 1 - v(\\varphi) + v(\\psi))$, what is the value of $\\varphi \\rightarrow \\psi$ when $v(\\varphi) = 0.8$ and $v(\\psi) = 0.5$?",
+    "options": [
+      "$0.5$",
+      "$0.7$",
+      "$0.3$",
+      "$1$"
+    ],
+    "answer": 1,
+    "explanation": "$1 - 0.8 + 0.5 = 0.7$, which is below 1, so that is the value. The conditional loses exactly the amount by which the consequent falls short of the antecedent ($0.3$); taking the consequent's value, $0.5$, is the error to avoid."
+  },
+  {
+    "id": "revenge-concession",
+    "section": "the-systems",
+    "question": "What does the reply concede to the revenge objection?",
+    "options": [
+      "That a many-valued semantics does not by itself dissolve the liar, which remains open",
+      "That only many-valued treatments of the liar face a revenge problem, so rivals are better off",
+      "That Kleene's scheme is not an accurate account of partial computation after all",
+      "That the third value lacks an independent meaning in every application proposed for it"
+    ],
+    "answer": 0,
+    "explanation": "The reply defends the systems through applications where no paradox arises, such as partial computation and conflicting sources, and concedes only the narrower claim about the liar. It explicitly denies that revenge is peculiar to many-valued treatments."
+  }
+]

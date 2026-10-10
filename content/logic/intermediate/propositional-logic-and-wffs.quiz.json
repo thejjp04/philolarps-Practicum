@@ -1,0 +1,119 @@
+[
+  {
+    "id": "closure-clause-missing",
+    "section": "why-a-list-will-not-work",
+    "question": "A would-be definition of Ada's ancestors says: Ada's parents are ancestors, and any parent of an ancestor is an ancestor. Judged as a recursive definition, what is missing?",
+    "options": [
+      "A base clause, so that the set has some first members",
+      "A further recursion clause, since chaining parents alone never reaches great-grandparents",
+      "A closure clause, since a set that also held strangers would fit both clauses",
+      "Nothing, since two clauses suffice when the base case is finite"
+    ],
+    "answer": 2,
+    "explanation": "The base clause (Ada's parents) and the recursion clause (parents of ancestors) are both present, and chaining the second reaches great-grandparents and beyond. What is missing is the clause saying nothing else belongs, and without it Ada's ancestors plus anyone at all still satisfy the first two clauses, just as the natural numbers plus the moon do."
+  },
+  {
+    "id": "atomic-is-relative",
+    "section": "the-alphabet",
+    "question": "Translated into propositional logic, \"Every dog is a mammal; Rex is a dog; so Rex is a mammal\" comes out invalid. On the article's account, why?",
+    "options": [
+      "The argument really is invalid, and only looks valid in English",
+      "Each sentence becomes a separate letter, and the validity lies inside the sentences",
+      "\"Every\" has no symbol in this language, so the first premise cannot be given any formula",
+      "Sentences about named individuals are excluded by the grammar of wffs"
+    ],
+    "answer": 1,
+    "explanation": "A sentence letter stands for a whole proposition whose internal structure the system ignores, so the argument becomes $P$, $Q$, therefore $R$, which has a countermodel. The argument is not really invalid: atomicity is relative to the system, and predicate logic opens the atoms up and recovers it."
+  },
+  {
+    "id": "official-wff",
+    "section": "the-grammar",
+    "question": "Under the official grammar, with no parentheses dropped by convention, which of these strings is a wff?",
+    "options": [
+      "$(\\neg P)$",
+      "$(P)$",
+      "$\\neg \\neg \\neg P$",
+      "$\\neg P \\land (Q \\lor R)$"
+    ],
+    "answer": 2,
+    "explanation": "The negation clause can be applied any number of times, so $\\neg \\neg \\neg P$ is built from $P$ in three steps. Parentheses arrive only packaged with a binary connective, which rules out $(P)$ and $(\\neg P)$, and the official form of the last string would need outer parentheses: $(\\neg P \\land (Q \\lor R))$."
+  },
+  {
+    "id": "excluded-by-closure",
+    "section": "the-grammar",
+    "question": "No clause of the grammar mentions the string $P \\land \\lor Q$. What excludes it?",
+    "options": [
+      "A rule forbidding two binary connectives side by side",
+      "Unique readability, since it has two candidate main connectives",
+      "The base clause, since $\\lor Q$ is not a sentence letter",
+      "The closure clause, since no sequence of building steps produces it"
+    ],
+    "answer": 3,
+    "explanation": "The grammar never lists what is ungrammatical; it says what is grammatical and then closes the door. Since $\\land$ is introduced only between two wffs and $\\lor Q$ is not one, the string has no construction, and the closure clause excludes everything without one. There is no special prohibition rule to appeal to."
+  },
+  {
+    "id": "readings-come-apart",
+    "section": "what-the-parentheses-are-for",
+    "question": "The unparenthesised string $P \\lor Q \\land R$ can be read as $(P \\lor Q) \\land R$ or as $P \\lor (Q \\land R)$. On which assignment do the two readings get different values?",
+    "options": [
+      "$P$ false, $Q$ true, $R$ true",
+      "$P$ true, $Q$ false, $R$ false",
+      "$P$ false, $Q$ false, $R$ true",
+      "$P$ true, $Q$ true, $R$ true"
+    ],
+    "answer": 1,
+    "explanation": "With $P$ true and $R$ false, $(P \\lor Q) \\land R$ is false because its last conjunct is, while $P \\lor (Q \\land R)$ is true because its first disjunct is. The other assignments happen to give both readings the same value, but one disagreeing row is enough to show the bare string fixes no single truth function."
+  },
+  {
+    "id": "unique-readability-tables",
+    "section": "what-the-parentheses-are-for",
+    "question": "Why does unique readability matter for truth tables?",
+    "options": [
+      "It fixes a single main connective, which the table computes last",
+      "It ensures that every wff, however long, has only finitely many rows",
+      "It guarantees that every wff contains a binary connective",
+      "It stops the closure clause admitting strings like $(P)$"
+    ],
+    "answer": 0,
+    "explanation": "A truth table builds columns from the inside out, so it needs to know which connective applies last, and unique readability guarantees each wff has exactly one construction and so one main connective. The number of rows is a separate matter, fixed by how many letters occur."
+  },
+  {
+    "id": "induction-breaks-down",
+    "section": "proving-things-about-every-formula",
+    "question": "Try to prove, by the article's method, that every wff contains at least as many binary connectives as negation signs. Where does the proof break down?",
+    "options": [
+      "At the base case, since atomic formulas contain no connectives",
+      "At the binary rules, which add two parentheses as well as one binary connective",
+      "At the negation rule, which adds a negation sign and no binary connective",
+      "Nowhere, since the property holds of every wff"
+    ],
+    "answer": 2,
+    "explanation": "Atomic formulas have zero of each, so the base case holds, and the binary rules only add to the binary count. The negation rule adds a negation sign without a binary connective, so it fails to pass the property on, and $\\neg P$ is a counterexample. A property survives this kind of proof only if every building rule preserves it."
+  },
+  {
+    "id": "object-language-formula",
+    "section": "talking-about-the-language",
+    "question": "Which of these is a formula of the object language of propositional logic?",
+    "options": [
+      "$\\varphi \\lor \\neg \\varphi$",
+      "$(\\varphi \\land P)$",
+      "\"$(P \\land Q)$ is a wff\"",
+      "$\\neg(P \\land Q)$"
+    ],
+    "answer": 3,
+    "explanation": "The object language contains only sentence letters, the five connectives and parentheses. Anything containing $\\varphi$ belongs to the metalanguage, even when mixed with a sentence letter, and a sentence saying that some string is a wff is a metalanguage claim about a formula rather than a formula itself."
+  },
+  {
+    "id": "schema-count",
+    "section": "talking-about-the-language",
+    "question": "A proof system is described as having three axioms, each given as a schema such as $\\varphi \\rightarrow (\\psi \\rightarrow \\varphi)$. How many axioms does it actually have?",
+    "options": [
+      "Infinitely many, one for each uniform substitution into the schemas",
+      "Three, since each schema is a single formula",
+      "Three, together with the theorems that follow from them",
+      "Finitely many, one for each formula short enough to write down"
+    ],
+    "answer": 0,
+    "explanation": "A schema is a metalanguage pattern, and every formula got by substituting formulas uniformly for $\\varphi$ and $\\psi$ is an axiom. The count of three counts schemas; the trap is treating a schema as itself a formula, which it cannot be, since no formula contains $\\varphi$."
+  }
+]

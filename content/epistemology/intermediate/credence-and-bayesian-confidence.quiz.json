@@ -1,0 +1,127 @@
+[
+  {
+    "id": "betting-threshold",
+    "section": "belief-by-degrees",
+    "question": "You will pay up to seventy pence for a ticket that pays one pound if it rains, and no more. On the betting defence of credences, what does this show?",
+    "options": [
+      "That you consciously judge rain to be seventy per cent likely, and act on that judgement",
+      "That your betting dispositions fix a credence of 0.7 in rain",
+      "That you believe outright that it will rain, since your credence is above one half",
+      "That your credence that it will not rain is also 0.7"
+    ],
+    "answer": 1,
+    "explanation": "The number records a threshold revealed by betting behaviour; the claim is not that you consciously think the decimal. The first option reads the defence as introspective, which is exactly what the article says it is not."
+  },
+  {
+    "id": "dutch-book-case",
+    "section": "belief-by-degrees",
+    "question": "Mia has credence 0.6 that it will rain tomorrow and credence 0.6 that it will not. What does the Dutch book argument say about her?",
+    "options": [
+      "Some set of bets she would accept guarantees her a loss whatever happens",
+      "Nothing is wrong, since each credence on its own lies between 0 and 1 as required",
+      "She is irrational only if she actually goes on to place the bets",
+      "She loses money only if it rains, so her credence in rain is the one that is too high"
+    ],
+    "answer": 0,
+    "explanation": "Rain and no rain are incompatible and exhaust the options, so probabilism requires her credences to sum to 1, and hers sum to 1.2. Checking each number separately misses the point: the axioms constrain how credences fit together, and the guaranteed loss comes from the combination."
+  },
+  {
+    "id": "conditionalise-test",
+    "section": "conditioning",
+    "question": "Before any result arrives, your credence that a patient has the disease, on the supposition that their test is positive, is 0.3. You then learn that the test is positive, and nothing stronger. By conditionalisation, what should your new credence in the disease be?",
+    "options": [
+      "Whatever your unconditional credence in the disease was beforehand",
+      "The probability of a positive test given that the patient has the disease",
+      "0.3, your old conditional credence, now promoted",
+      "1, since you are now certain of the evidence"
+    ],
+    "answer": 2,
+    "explanation": "Conditionalisation sets the posterior equal to the old conditional probability of the hypothesis given the evidence. The second option reverses the conditional, giving the probability of the evidence given the hypothesis, which is a different quantity."
+  },
+  {
+    "id": "what-confirms",
+    "section": "the-theorem",
+    "question": "On the article's account, when does evidence $e$ confirm a hypothesis $h$?",
+    "options": [
+      "When $P(e \\mid h)$ is high",
+      "When $P(h)$ is above one half",
+      "When $P(e)$ is high",
+      "When $P(e \\mid h)$ is greater than $P(e)$"
+    ],
+    "answer": 3,
+    "explanation": "Evidence confirms a hypothesis to the extent that it is more expected under that hypothesis than in general. A high likelihood alone is not enough, because evidence that was going to turn up anyway, whatever the truth, tells you nothing."
+  },
+  {
+    "id": "rare-disease-test",
+    "section": "the-theorem",
+    "question": "A condition affects one person in ten thousand. A test detects it in everyone who has it and gives a false positive for one per cent of those who do not. A randomly chosen person tests positive. Roughly how likely is it that they have the condition?",
+    "options": [
+      "About 99 per cent",
+      "About 1 per cent",
+      "About 50 per cent",
+      "About 0.01 per cent"
+    ],
+    "answer": 1,
+    "explanation": "In a million people, 100 have the condition and test positive, while about 9,999 of the rest give false positives, so only around 100 of roughly 10,100 positives are genuine. The 99 per cent answer is the neglect of the prior: it reads the test's accuracy as if it were the probability of the hypothesis."
+  },
+  {
+    "id": "theorem-not-in-dispute",
+    "section": "the-theorem",
+    "question": "Someone who rejects conditionalisation as the rule for learning is thereby committed to rejecting Bayes's theorem.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Bayes's theorem is a two-line consequence of the definition of conditional probability and is not in dispute. What can be rejected is the epistemology built around it, including conditionalisation, while accepting the mathematics entirely."
+  },
+  {
+    "id": "grue-prior",
+    "section": "what-the-framework-does-to-the-old-questions",
+    "question": "An agent gives a high prior to a grue-like hypothesis, obeys the probability axioms, and conditionalises correctly on every observation. On the article's account, what can the Bayesian framework say against her?",
+    "options": [
+      "That she violates probabilism, since grue-like hypotheses cannot have high priors",
+      "That conditionalisation will force her to drop the hypothesis after a single observation",
+      "That the convergence theorems show her present predictions to be irrational",
+      "Nothing internal to the framework, since it does not say which priors to start with"
+    ],
+    "answer": 3,
+    "explanation": "Her credences are coherent and update correctly, and this is precisely where Hume's problem reappears. The convergence theorems only say that agents with different priors agree eventually, given enough evidence, which does not convict her now."
+  },
+  {
+    "id": "lottery-dilemma",
+    "section": "what-the-framework-does-to-the-old-questions",
+    "question": "You know that exactly one of a million tickets will win. Which two assumptions does the lottery paradox show you cannot both keep?",
+    "options": [
+      "That belief is credence above some threshold below one, and that belief is closed under conjunction",
+      "That credences obey the probability axioms, and that learning proceeds by conditionalisation on new evidence",
+      "That every ticket has the same chance, and that the lottery is fair",
+      "That belief requires certainty, and that knowledge requires belief"
+    ],
+    "answer": 0,
+    "explanation": "A threshold below one licenses believing of each ticket that it loses, and closure under conjunction then yields the belief that no ticket wins, which you know is false. The probabilistic constraints are not under pressure here; the trouble is connecting credence to ordinary all-or-nothing belief."
+  },
+  {
+    "id": "bayes-and-knowledge",
+    "section": "the-scope-of-the-programme",
+    "question": "Which question does the article say Bayesian epistemology, taken on its own, does not answer?",
+    "options": [
+      "How confidence should change when new evidence arrives",
+      "Whether a set of degrees of belief is coherent",
+      "When a high credence amounts to knowledge",
+      "How strongly a given piece of evidence confirms a hypothesis"
+    ],
+    "answer": 2,
+    "explanation": "The framework is a theory of rational confidence and its revision and has no account of knowing, which is why Gettier cases do not arise for it. Updating, coherence and confirmation are exactly what it handles with precision."
+  },
+  {
+    "id": "ought-implies-can",
+    "section": "the-scope-of-the-programme",
+    "question": "According to the reply, where does the principle that ought implies can bite hardest against treating the Bayesian framework as a normative ideal?",
+    "options": [
+      "The requirement of sharp credences, which nobody experiences as decimals",
+      "The requirement of credence 1 in every logical truth, which no finite agent can even approach",
+      "The reliance on betting behaviour to fix the numbers",
+      "The assumption that agents with different priors eventually agree"
+    ],
+    "answer": 1,
+    "explanation": "Logical omniscience would require already knowing every theorem of mathematics, so it is not a shortfall from an ideal but an ideal no agent could approach. Sharpness is the problem the reply says imprecise credences can handle, so it is the weaker charge."
+  }
+]

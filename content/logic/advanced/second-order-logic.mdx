@@ -25,6 +25,8 @@ The induction axiom becomes $\forall X\,((X0 \wedge \forall n\,(Xn \rightarrow X
 
 Higher-order logic continues the ascent, adding variables for properties of properties and so on up the finite types. Each further order adds expressive power in principle, though in practice second order is where the interesting results are, since the pattern established there repeats.
 
+<Check id="schema-versus-axiom" />
+
 ## Two semantics
 
 The syntax is unambiguous and the semantics is not. When a sentence says every property, which properties does the quantifier range over?
@@ -52,6 +54,8 @@ The failures do not stop at completeness. Compactness fails, since the sentence 
 
 Henkin semantics restores everything. Completeness, compactness and Löwenheim-Skolem all hold, because a Henkin model is a first-order structure of a two-sorted signature. What is lost is exactly the categoricity, since a Henkin model of arithmetic whose second-order domain omits the set of standard elements is a nonstandard model satisfying the induction axiom. The two semantics are not variants of a single logic with a shared metatheory; they are different logics that share a syntax.
 
+<Check id="no-complete-proof-system" />
+
 ## Comprehension
 
 The bridge between them is an axiom schema.
@@ -75,6 +79,8 @@ Boolos replied that the commitment is less than it appears, since the plural rea
 <Aside title="Where the categoricity argument actually lives">
 Dedekind's proof that the second-order axioms are categorical is itself carried out in a background theory, usually set theory. Read from inside that theory, the argument shows that any two models are isomorphic. Read from outside, the argument is available in any model of set theory, including nonstandard ones, and a nonstandard model of set theory will call some of its own nonstandard structures the natural numbers. Categoricity is therefore relative to the background, a point made by Skolem and pressed by Putnam. It does not make the result empty, but it does mean that second-order categoricity secures reference only for someone whose set theory was already determinate.
 </Aside>
+
+<Check id="categoricity-relative-to-background" />
 
 ## Next
 

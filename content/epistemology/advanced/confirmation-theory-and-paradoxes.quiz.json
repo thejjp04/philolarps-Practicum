@@ -1,0 +1,132 @@
+[
+  {
+    "id": "incremental-confirmation",
+    "section": "confirmation",
+    "question": "A positive test result raises the probability that a patient has a rare disease from 1 in 1,000 to 1 in 50. In the article's sense, does the result confirm the hypothesis that the patient has the disease?",
+    "options": [
+      "No, since the hypothesis remains very improbable even after the positive result",
+      "Yes, since confirmation is incremental: the evidence raises the hypothesis's probability",
+      "No, since base rates make positive results for rare conditions evidentially worthless here",
+      "It cannot be settled without knowing whether the hypothesis entails the result"
+    ],
+    "answer": 1,
+    "explanation": "Confirmation in this sense is about whether evidence raises a hypothesis's credibility, not whether the hypothesis ends up credible overall, and a twentyfold rise is confirmation. The first option confuses confirmation with high posterior probability, which is exactly the base-rate point: the result confirms the diagnosis while leaving it unlikely."
+  },
+  {
+    "id": "irrelevant-conjunction",
+    "section": "the-hypothetico-deductive-method",
+    "question": "On the hypothetico-deductive account, the observed deflection of starlight confirms general relativity. Why does it equally confirm \"general relativity is true and the moon is made of cheese\"?",
+    "options": [
+      "Because the conjunction, like general relativity alone, entails the observation",
+      "Because the conjunction is at least as probable as general relativity alone",
+      "Because auxiliary assumptions cannot be separated from the hypothesis they serve",
+      "Because confirmation transfers between logically equivalent hypotheses"
+    ],
+    "answer": 0,
+    "explanation": "If $H$ entails $E$, so does $H \\land X$ for any $X$, and on this account entailing the evidence is all confirmation requires. The equivalence condition is not what drives it, since the conjunction is not equivalent to general relativity; and the auxiliaries point names a different problem, about where to lay blame when a prediction fails."
+  },
+  {
+    "id": "failed-prediction-blame",
+    "section": "the-hypothetico-deductive-method",
+    "question": "A prediction derived from a hypothesis together with assumptions about the instruments turns out false. What does logic alone license?",
+    "options": [
+      "Rejecting the hypothesis, by modus tollens",
+      "Rejecting the instrument assumptions, since the hypothesis was the claim under test",
+      "Nothing at all, since a failed prediction has no logical bearing on the hypothesis",
+      "Rejecting at least one of them: the hypothesis or one of the auxiliaries"
+    ],
+    "answer": 3,
+    "explanation": "What entails the prediction is the conjunction of hypothesis and auxiliaries, so modus tollens denies only that conjunction, leaving open which conjunct is false. Applying modus tollens to the hypothesis alone is the tempting mistake; it is valid only if the auxiliaries are held fixed, and logic does not say they should be."
+  },
+  {
+    "id": "which-premise-to-reject",
+    "section": "the-raven-paradox",
+    "question": "A philosopher wants to deny that a white shoe confirms \"all ravens are black\" while keeping the equivalence condition. Which premise of the raven paradox must she give up?",
+    "options": [
+      "That \"all ravens are black\" is logically equivalent to its contrapositive",
+      "That the hypothesis is really about every object in the universe, not just about ravens",
+      "That a non-black non-raven confirms the contrapositive, by Nicod's criterion",
+      "That whatever confirms a hypothesis confirms every hypothesis logically equivalent to it"
+    ],
+    "answer": 2,
+    "explanation": "The contrapositive equivalence is a matter of logic, and she has chosen to keep the equivalence condition, so the only premise left to give up is Nicod's criterion as applied to the contrapositive. The claim that the hypothesis is about everything is Hempel's diagnosis of the paradox, not one of its premises."
+  },
+  {
+    "id": "hempel-versus-bayes",
+    "section": "hempels-response",
+    "question": "According to Hempel, why does the white shoe seem irrelevant to whether all ravens are black?",
+    "options": [
+      "Because we tacitly use our knowledge that it is a shoe, so we already knew it was no raven",
+      "Because its confirmatory effect, though real, is vanishingly small",
+      "Because it is not an instance of the hypothesis once the hypothesis is properly formalised",
+      "Because the equivalence condition fails for generalisations about natural kinds"
+    ],
+    "answer": 0,
+    "explanation": "Hempel accepted the conclusion and explained the sense of paradox as an illusion: we assess the case while silently relying on knowledge that the object is a shoe, which makes its colour uninformative about ravens. The tiny-effect explanation is the Bayesian response, which is a different diagnosis that works by degree."
+  },
+  {
+    "id": "better-sampling",
+    "section": "the-bayesian-response",
+    "question": "You want to test \"all ravens are black\". On the Bayesian account, why is examining randomly chosen ravens a better test than examining randomly chosen non-black things?",
+    "options": [
+      "Only ravens are instances of the hypothesis, so only they can confirm it",
+      "Non-black things bear on it only through the equivalence condition, which Bayesians reject",
+      "A non-black non-raven slightly lowers the probability of the hypothesis",
+      "Ravens are far fewer, so each one covers a larger share of the possible counterexamples"
+    ],
+    "answer": 3,
+    "explanation": "Both kinds of observation raise the probability of the hypothesis, but a random raven checks a significant fraction of the population that could falsify it, while a random non-black thing checks an infinitesimal one. The first option gets the Bayesian view wrong: on it the white shoe does confirm, just by an amount that rounds to nothing."
+  },
+  {
+    "id": "black-swan-disconfirms",
+    "section": "the-bayesian-response",
+    "question": "You know you are in one of two worlds. In the first there are 50 swans, all black, and 10,000 other birds. In the second there are 500 black swans, 5 white swans, and 10,000 other birds. A bird drawn at random is a black swan. What does this do to \"all swans are black\"?",
+    "options": [
+      "Confirms it, by Nicod's criterion, since any black swan is an instance of the generalisation",
+      "Disconfirms it, since drawing a black swan is far likelier in the second world",
+      "Leaves it unchanged, since black swans exist in both worlds",
+      "Confirms it, but only slightly, like the white shoe on the Bayesian account"
+    ],
+    "answer": 1,
+    "explanation": "A black swan is about ten times as likely to be drawn in the second world, so the draw raises your credence in that world, where not all swans are black: this is Good's red herring with new numbers. Nicod's criterion treats every instance as confirming whatever the background, and the case shows that it fails once background information about the possible worlds is taken into account."
+  },
+  {
+    "id": "grue-defeats-syntax",
+    "section": "grue",
+    "question": "Why does grue show that no purely syntactic account of confirmation can succeed?",
+    "options": [
+      "Because grue mentions a time, and syntactic accounts cannot handle temporal predicates",
+      "Because \"all emeralds are green\" and \"all emeralds are grue\" are logically equivalent",
+      "Because the two hypotheses have the same logical form, so form alone cannot favour one",
+      "Because the emeralds examined so far are not instances of the grue hypothesis"
+    ],
+    "answer": 2,
+    "explanation": "Every examined emerald instantiates both generalisations, and since they share a logical form, any criterion that lets green be confirmed lets grue be confirmed too. The time reference is the tempting diagnosis, but it depends on taking green as basic: in a grue language it is green that is defined using a time."
+  },
+  {
+    "id": "bayes-relocates-grue",
+    "section": "does-bayesianism-help",
+    "question": "On the article's account, what does Bayesianism do with the new riddle of induction?",
+    "options": [
+      "Relocates it to the priors, without saying why a reasoner who favours grue is wrong",
+      "Solves it, since green emeralds favour the green hypothesis over the grue one whatever the priors",
+      "Dissolves it, since both hypotheses must end with the same posterior",
+      "Shows that green emeralds examined before $t$ do not confirm the grue hypothesis at all"
+    ],
+    "answer": 0,
+    "explanation": "Both hypotheses entail the observed evidence, so conditionalizing raises both and leaves their ratio where the priors put it; the difference between them lies wholly in the priors. That is why the second option fails, and why the article treats the new riddle and the problem of the priors as the same problem."
+  },
+  {
+    "id": "naturalness-difficulty",
+    "section": "natural-kinds",
+    "question": "What is the main difficulty for answering Goodman by saying that green is a natural property and grue is not?",
+    "options": [
+      "Natural properties belong only to fundamental physics, so colour properties cannot be among them",
+      "Entrenchment, not naturalness, is what in fact explains which predicates are projected",
+      "Our sense of similarity was shaped by natural selection, so it cannot be trusted to track anything real",
+      "A grue speaker defines green using a time, so the asymmetry must lie in the world, not in language"
+    ],
+    "answer": 3,
+    "explanation": "From inside a grue language, grue and bleen are basic and green is the gerrymandered one, so any asymmetry has to be in nature rather than in our vocabulary, and saying where it lies is a substantial metaphysical commitment. Quine's appeal to selection was offered as support for the view, not as an objection to it."
+  }
+]

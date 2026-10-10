@@ -1,0 +1,93 @@
+[
+  {
+    "id": "what-makes-a-theory-refutable",
+    "section": "the-demand",
+    "question": "What makes a moral theory refutable, on the article's account?",
+    "options": [
+      "It predicts how people will in fact behave, and those predictions can be checked",
+      "It is built only from cases everyone agrees on, so any error will show",
+      "It reaches cases it was not built from, where its verdicts can be monstrous",
+      "It must be stated in terms that every reasonable reader already accepts"
+    ],
+    "answer": 2,
+    "explanation": "A theory has to reach beyond the examples that motivated it, so applying it to a new case can expose a verdict nobody can accept. Predicting behaviour is the trap: that would make it a descriptive theory, and a moral theory is answerable to what is right, not to what people do."
+  },
+  {
+    "id": "right-verdicts-wrong-feature",
+    "section": "the-demand",
+    "question": "A theory says lying is wrong because liars tend to lose their friends. Suppose it classifies every case of lying correctly. Can it still fail, on the article's account?",
+    "options": [
+      "Yes: it may have identified the wrong feature as the one that makes lying wrong",
+      "No: a theory is falsified only when it delivers a wrong verdict on some case",
+      "Yes: because it has not also been stated as a usable decision procedure",
+      "No: it states a real connection between lying and losing friends, which is all a principle claims"
+    ],
+    "answer": 0,
+    "explanation": "A principle claims that actions are wrong in virtue of a feature, not merely that the two go together. A real correlation is not enough: a theory can track the right cases while explaining them by a feature nobody thinks does the work."
+  },
+  {
+    "id": "permitted-not-required",
+    "section": "what-the-verdicts-are-verdicts-about",
+    "question": "Sam spends Saturday reading rather than gardening, and neither choice would be wrong. On the article's categories, what is the status of reading?",
+    "options": [
+      "Required, since it is a right action and right actions are required",
+      "Permitted, so right in the wide sense but not the narrow sense",
+      "Right in the narrow sense, since it is not wrong to do",
+      "Outside morality altogether, since no duty of any kind is in play"
+    ],
+    "answer": 1,
+    "explanation": "Reading is permissible: doing it and not doing it are both in order. The narrow sense of right picks out the one action you are required to do, which reading is not; nor does the absence of a duty take it outside morality, since the permitted category is where almost everything people do belongs."
+  },
+  {
+    "id": "nurse-criterion-procedure",
+    "section": "criterion-and-procedure",
+    "question": "A consequentialist tells a new nurse never to falsify a chart, even when she thinks it would help. A critic says this contradicts consequentialism. Which reply uses the article's distinction?",
+    "options": [
+      "The adviser has quietly abandoned consequentialism in favour of deontology",
+      "Consequentialism is a decision procedure, so the nurse should calculate each time",
+      "Falsifying charts is wrong whatever its consequences, so the rule stands",
+      "The theory is a criterion of rightness, and a firm rule may best serve it"
+    ],
+    "answer": 3,
+    "explanation": "A theory can say outcomes make acts right while recommending that people not reason about outcomes case by case, since real-time calculation is slow, ill-informed and self-serving. The first option misses this: following a rule for consequentialist reasons is still consequentialism."
+  },
+  {
+    "id": "when-unusable-counts",
+    "section": "criterion-and-procedure",
+    "question": "On the article's account, when does \"this theory would be a disaster to apply\" become a genuine objection to it?",
+    "options": [
+      "When it claims to be a decision procedure, or no workable procedure fits it",
+      "Always, since a theory that cannot be applied in practice is useless to anyone",
+      "Never, since criteria of rightness and decision procedures are unrelated",
+      "Only when the theory also gets some of the clear cases wrong"
+    ],
+    "answer": 0,
+    "explanation": "The complaint lands only against a theory offered as a procedure, or one no workable procedure could serve. \"Never\" goes too far the other way: the article still asks that a theory be usable, in the sense of connecting to some procedure a person could follow."
+  },
+  {
+    "id": "which-demand-fails",
+    "section": "what-a-theory-owes",
+    "question": "A theory implies that the same act, in the same circumstances, is both forbidden and permitted. Which of the four demands does it fail?",
+    "options": [
+      "Getting the clear cases right",
+      "Explaining rather than merely tracking",
+      "Being usable",
+      "Being consistent"
+    ],
+    "answer": 3,
+    "explanation": "Consistency asks for one verdict per case, and a theory that condemns and permits the same act has told you nothing. It could still get many clear cases right while failing here, since the four demands can fail independently."
+  },
+  {
+    "id": "grammar-analogy",
+    "section": "what-a-theory-owes",
+    "question": "The objection says good people never consult moral theories. What is the reply's main move?",
+    "options": [
+      "Good people do consult moral theories, only without noticing that they do",
+      "Like a grammar, a theory can be real without anyone consulting it",
+      "People who study theories do behave better",
+      "Theory is needed most in the clear cases, where judgement is unreliable"
+    ],
+    "answer": 1,
+    "explanation": "The criterion and procedure distinction handles most of the objection: fluent speakers do not consult a grammar, and that is no evidence there is no grammar to state. The last option reverses the reply, which says theory is wanted where judgement runs out, not in the clear cases."
+  }
+]

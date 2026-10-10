@@ -1,0 +1,130 @@
+[
+  {
+    "id": "hotel-subtraction-undefined",
+    "section": "the-two-traditional-arguments",
+    "question": "In Hilbert's hotel, removing infinitely many guests can leave either infinitely many or three. What is the standard reply to the argument built on this?",
+    "options": [
+      "Transfinite arithmetic is inconsistent, but only in its treatment of subtraction, so the rest survives",
+      "The two check-outs remove different numbers of guests, so the inputs were never the same",
+      "Subtraction is undefined for infinite cardinals, and an undefined operation is not a contradiction",
+      "The hotel describes only a potential infinite"
+    ],
+    "answer": 2,
+    "explanation": "Cantor's theory is consistent: addition and multiplication of infinite cardinals behave as the hotel describes, and subtraction is left undefined precisely because the same inputs would yield different outputs, much as division by zero is. The second option is the tempting misreading, since both check-outs remove a countably infinite number of guests."
+  },
+  {
+    "id": "successive-addition-smuggles-a-start",
+    "section": "the-two-traditional-arguments",
+    "question": "What does the standard reply say the argument from successive addition smuggles in?",
+    "options": [
+      "The assumption that some past events lie infinitely many events before the present moment",
+      "Cantor's theory of transfinite numbers",
+      "The assumption that time is discrete, so that past events can be counted off one by one",
+      "A starting point from which the series grows, which a beginningless past does not have"
+    ],
+    "answer": 3,
+    "explanation": "Counting to infinity is impossible because counting begins somewhere, but a beginningless past has no stage at which it was finite and had to grow. The first option gets the hypothesis backwards: on a beginningless past every event lies only finitely many events before now, which is all that is needed for each to have been reached."
+  },
+  {
+    "id": "benacerraf-on-the-lamp",
+    "section": "supertasks",
+    "question": "What, according to Benacerraf, is wrong with Thomson's argument from the lamp?",
+    "options": [
+      "The setup fixes the lamp's state only inside the interval, so it is silent about the end",
+      "The flip times form a convergent series, so infinitely many flips can be completed in a finite time",
+      "No physical switch could move fast enough, so the case is not genuinely possible",
+      "The lamp must be on at the end, since the final flip turned it on"
+    ],
+    "answer": 0,
+    "explanation": "The limit is not one of the moments the description covers, so any end state is consistent with the setup. Convergence is the answer to Zeno, which Thomson had already granted; it says nothing about the value of a quantity that oscillates and has no limit."
+  },
+  {
+    "id": "benacerraf-did-not-show-possibility",
+    "section": "supertasks",
+    "question": "Benacerraf's reply to Thomson shows that supertasks are possible.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "He showed only that the lamp fails to show they are impossible, which left the question open. It also left a template: a better argument would need a setup that determines its outcome, and determines it inconsistently, which is what the Benardete cases supply."
+  },
+  {
+    "id": "which-change-keeps-the-paradox",
+    "section": "the-benardete-construction",
+    "question": "Which change to the Grim Reaper setup leaves the paradox intact?",
+    "options": [
+      "Giving the series an earliest reaper, while keeping every reaper's instruction exactly as before",
+      "Making every reaper strike whether or not Fred is already dead",
+      "Replacing the reapers with gods who raise walls at marks crowding toward the start of a path",
+      "Spacing the reapers' times an hour apart, forward without end"
+    ],
+    "answer": 2,
+    "explanation": "New furniture keeps all four ingredients: infinitely many agents, a trigger conditional on no earlier agent having acted, no earliest member, and a bounded region; that is Benardete's traveller. Each other change removes one ingredient and the paradox dissolves with it, which is why any diagnosis has to target that combination rather than infinity in general."
+  },
+  {
+    "id": "pruss-one-principle-for-the-family",
+    "section": "causal-finitism",
+    "question": "Why does Pruss take causal finitism to be better supported than resolving each Benardete case on its own terms?",
+    "options": [
+      "It shows that transfinite arithmetic cannot describe anything real, which dissolves every case",
+      "One principle blocks the whole family and explains why the paradox keeps recurring",
+      "The piecemeal resolutions each turn out to contain a contradiction of their own",
+      "It follows from the principle of sufficient reason"
+    ],
+    "answer": 1,
+    "explanation": "Each piecemeal resolution is fitted to its own case and leaves the recurrence unexplained, while a single principle that disposes of every version is the kind of consideration that supports a thesis anywhere in philosophy. The piecemeal answers are ad hoc rather than inconsistent, and the article stresses that this route never depends on the principle of sufficient reason."
+  },
+  {
+    "id": "what-causal-finitism-requires",
+    "section": "causal-finitism",
+    "question": "Which of these is causal finitism committed to?",
+    "options": [
+      "There are only finitely many things",
+      "Space and time are discrete",
+      "The actual infinite is impossible, in mathematics as well as in the world",
+      "No event has infinitely many causal antecedents"
+    ],
+    "answer": 3,
+    "explanation": "The thesis restricts only causal history, which is why it is compatible with a great deal its neighbours are not. Discreteness is tempting because discrete time would also stop the reapers, but that is a rival repair, not something causal finitism requires."
+  },
+  {
+    "id": "reductio-leaves-the-repair-open",
+    "section": "what-the-paradox-actually-establishes",
+    "question": "Grant that the Grim Reaper arrangement entails a contradiction. On the article's account, why does causal finitism not yet follow?",
+    "options": [
+      "A reductio shows only that some assumption is false, and other repairs are available",
+      "The result is merely strange, like the ball-and-vase case, rather than a genuine contradiction",
+      "Causal finitism blocks the walls and the lamp but not the reapers",
+      "A contradiction in an infinite collection shows nothing about what its finite parts can do"
+    ],
+    "answer": 0,
+    "explanation": "Discrete time, jointly unsatisfiable instructions and an indeterminate outcome are all rival repairs, so the advance over the older arguments, a flat contradiction rather than mere strangeness, leaves the gap at the end where it always was. The ball-and-vase case is the article's calibration for outcomes that are merely strange, and the reapers are explicitly worse than that."
+  },
+  {
+    "id": "reapers-fix-the-outcome-twice",
+    "section": "what-the-paradox-actually-establishes",
+    "question": "Why is Benacerraf's move, that the setup simply fails to fix an outcome, harder to sustain for the reapers than for the lamp?",
+    "options": [
+      "The reapers are agents acting on intentions, whereas the lamp is a mere object with no instructions",
+      "The reapers' times converge on noon, whereas the lamp's flip times do not converge at all",
+      "The instructions alone seem to entail both that Fred dies and that no reaper kills him",
+      "The reaper series has a first member, whereas the lamp's flips do not"
+    ],
+    "answer": 2,
+    "explanation": "The lamp's description is silent about the limit, so there is nothing to explain; the reaper instructions appear to entail both that Fred dies and that nobody kills him, though whether they really do depends on how the conditionals are regimented. Both series are packed into a bounded interval, so convergence does not tell them apart."
+  },
+  {
+    "id": "first-cause-short-of-god",
+    "section": "what-the-paradox-actually-establishes",
+    "question": "Suppose causal finitism is established. On the article's account, how far does that take the argument toward theism?",
+    "options": [
+      "To a first cause, with nothing yet said about whether it is personal, powerful, good, or one rather than many",
+      "To God, since a first cause must be necessary and therefore maximally great",
+      "To a finite past, but not to a first cause, since a causal series per se may still be infinite",
+      "Nowhere, since causal finitism is compatible with a beginningless past"
+    ],
+    "answer": 0,
+    "explanation": "Ruling out infinitely many causal antecedents rules out both an infinite causal series per se and a beginningless past, which yields a first cause. Identifying that cause with God needs arguments of an entirely different kind, and treating it as God already is the step the article says this literature tends to hurry past."
+  }
+]

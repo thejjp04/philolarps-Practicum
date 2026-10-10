@@ -1,0 +1,127 @@
+[
+  {
+    "id": "underived-theorem",
+    "section": "the-principle",
+    "question": "Ana knows the axioms of a theory, and they entail a theorem she has never derived. Does the refined closure principle say that she knows the theorem?",
+    "options": [
+      "Yes, because knowledge is preserved under entailment, whether or not the entailment is noticed",
+      "Yes, provided the theorem is in fact true, since truth and the axioms are then enough",
+      "No, because she has not competently deduced it from the axioms",
+      "No, because closure applies only to the denials of sceptical hypotheses"
+    ],
+    "answer": 2,
+    "explanation": "The version under dispute is hedged to require competent deduction and retained knowledge of the premise. The first option states the crude principle that anyone knows all the consequences of what they know, which the article sets aside as obviously false."
+  },
+  {
+    "id": "moore-premise",
+    "section": "the-sceptical-argument",
+    "question": "Moore reasons: \"I know I have hands, so I know I am not a handless brain in a vat.\" Which part of the closure-based sceptical argument is he rejecting?",
+    "options": [
+      "The first premise, the closure principle, which he takes to fail for sceptical hypotheses",
+      "The second premise, that you do not know you are not a handless brain in a vat",
+      "The conclusion only, while granting both premises",
+      "The validity of the argument"
+    ],
+    "answer": 1,
+    "explanation": "Moore uses closure himself, running it from his hands to the falsity of the sceptical hypothesis, so it is the second premise he denies. Rejecting the first premise is the closure denier's move, which is the opposite way of escaping the same valid argument."
+  },
+  {
+    "id": "nozick-route",
+    "section": "the-denial",
+    "question": "On Nozick's tracking account, why do you know you have hands but not that you are not a handless brain in a vat?",
+    "options": [
+      "Had you been envatted, you would still have believed you were not",
+      "The brain in a vat possibility is not a relevant alternative in ordinary contexts, so you need not rule it out",
+      "You have never competently deduced the anti-sceptical conclusion",
+      "Your belief that you are not envatted rests on no evidence at all"
+    ],
+    "answer": 0,
+    "explanation": "Nozick's route is sensitivity: the first belief would vanish if false, the second would not, because the hypothesis specifies that you would believe you were not envatted. The relevant alternatives answer is Dretske's different route to the same denial of closure."
+  },
+  {
+    "id": "painted-sparrow",
+    "section": "the-denial",
+    "question": "A birdwatcher identifies a goldfinch by its red face, ruling out the other finches found locally. She has not ruled out that it is a sparrow cleverly painted to look like a goldfinch. On Dretske's relevant alternatives view, what follows?",
+    "options": [
+      "She does not know it is a goldfinch, since she has not ruled out every alternative",
+      "She knows both that it is a goldfinch and that it is not a painted sparrow",
+      "She knows it is not a painted sparrow, but not that it is a goldfinch",
+      "She knows it is a goldfinch, though she does not know it is not a painted sparrow"
+    ],
+    "answer": 3,
+    "explanation": "Knowing requires ruling out only the alternatives relevant in the setting, and a painted sparrow is not one, so she knows it is a goldfinch without knowing the entailed denial. Saying she knows both keeps closure, which is exactly what Dretske's view gives up."
+  },
+  {
+    "id": "abominable-conjunction",
+    "section": "what-the-denial-costs",
+    "question": "Which of these sentences would a closure denier have to be prepared to assert, and why is that a cost?",
+    "options": [
+      "\"I know the animal is a zebra, but I don't know it isn't a painted mule\", which sounds defective rather than merely surprising",
+      "\"I don't know the animal is a zebra, but I know it isn't a painted mule\", which inverts the order of evidence",
+      "\"I know the animal is a zebra, so I know it isn't a painted mule\", which begs the question against the sceptic by assuming what it sets out to show",
+      "\"I don't know whether the animal is a zebra\", which concedes everything to the sceptic"
+    ],
+    "answer": 0,
+    "explanation": "This is one of DeRose's abominable conjunctions: knowing the ordinary claim while disclaiming knowledge of what it obviously entails. The third sentence is the Moorean inference that the closure denier refuses to make, so it is the one sentence the denier must avoid."
+  },
+  {
+    "id": "repair-or-discovery",
+    "section": "what-the-denial-costs",
+    "question": "Critics say closure denial is selective, denying closure only where it makes trouble. What must the denier show to answer this charge?",
+    "options": [
+      "That abominable conjunctions sound acceptable once they are stated carefully and in context",
+      "That deduction is not, in general, a reliable way of extending knowledge",
+      "That the relevant alternatives framework independently predicts where closure fails",
+      "That sceptical hypotheses cannot be coherently stated"
+    ],
+    "answer": 2,
+    "explanation": "If the framework predicts failure exactly where the entailed proposition rules out a never-relevant alternative, the denial is a consequence rather than a patch. Giving up deduction in general would make the second cost, about the point of reasoning, much worse."
+  },
+  {
+    "id": "closure-fails-everywhere",
+    "section": "what-the-denial-costs",
+    "question": "On Dretske's view, closure fails for every inference from ordinary knowledge to its consequences.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Closure holds wherever the entailed proposition stays within the relevant set and fails only where it rules out an alternative that was never relevant. A denier who gave up all deductive extension of knowledge would be in far worse trouble than the selective one."
+  },
+  {
+    "id": "contextualism-keeps-closure",
+    "section": "what-the-denial-costs",
+    "question": "What chiefly separates the contextualist response to the sceptical argument from Dretske's closure denial?",
+    "options": [
+      "Contextualism accepts the sceptical conclusion at every standard",
+      "Contextualism denies that knowing ever requires ruling out alternatives",
+      "Contextualism holds that the brain in a vat hypothesis cannot be coherently stated",
+      "Contextualism keeps closure within each context and blames a shift in the standards for \"know\""
+    ],
+    "answer": 3,
+    "explanation": "For the contextualist the paradox comes from drifting between a low-standards context, where you know you have hands, and a high-standards one, where you know neither claim. The incoherence option belongs to Putnam's semantic argument, a separate strategy."
+  },
+  {
+    "id": "two-standards",
+    "section": "what-the-denial-costs",
+    "question": "How does the contextualist explain why abominable conjunctions sound defective?",
+    "options": [
+      "They are true but pragmatically misleading in ordinary conversation",
+      "They try to speak at two different standards for \"know\" in a single sentence",
+      "They report a genuine failure of closure that ordinary speakers have not noticed",
+      "They contain a word, \"vat\", that fails to refer in the speaker's mouth"
+    ],
+    "answer": 1,
+    "explanation": "The first conjunct is evaluated at low standards and the second at high ones, and a single sentence cannot hold both. Treating them as a genuine failure of closure is the denier's reading, which the contextualist is trying to avoid."
+  },
+  {
+    "id": "putnam-weaker-conclusion",
+    "section": "taking-stock",
+    "question": "Grant that a lifelong envatted brain's sentence \"I am a brain in a vat\" is false whenever it utters it. According to the reply, what does this establish?",
+    "options": [
+      "That you are not a brain in a vat, so the sceptic's second premise is false",
+      "That closure fails for sceptical hypotheses, as Dretske claimed",
+      "That if you are envatted you cannot truly say so, which the sceptic can absorb",
+      "That the closure-based sceptical argument is invalid"
+    ],
+    "answer": 2,
+    "explanation": "Putnam's result concerns what a victim can truly say, not whether you are a victim, and the sceptic needs only that you cannot rule the hypothesis out. Reading it as proof that you are not envatted is the tempting overreach the reply rejects."
+  }
+]

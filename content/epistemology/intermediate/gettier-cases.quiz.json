@@ -1,0 +1,127 @@
+[
+  {
+    "id": "what-gettier-refutes",
+    "section": "the-shape-of-the-problem",
+    "question": "Which claim of the justified true belief analysis do Gettier cases refute?",
+    "options": [
+      "That justification is necessary for knowledge, as opposed to merely typical of it",
+      "That truth is necessary for knowledge",
+      "That belief is necessary for knowledge",
+      "That justification, truth and belief are together sufficient for knowledge"
+    ],
+    "answer": 3,
+    "explanation": "In a Gettier case all three conditions are met and knowledge is still missing, so the conditions are not sufficient. Nothing in the cases suggests that any one condition is unnecessary; the repairs all keep the three and look for something to add or replace."
+  },
+  {
+    "id": "car-park-case",
+    "section": "the-shape-of-the-problem",
+    "question": "Priya sees her colleague Dev's car in the car park and concludes that someone from her team is in the office. Dev lent the car to his brother and is at home, but a teammate she has not seen happens to be in. Is this a Gettier case?",
+    "options": [
+      "Yes: it is justified and true, but its truth is unconnected to its justification",
+      "No: her belief is false, because Dev is not in the office",
+      "No: her belief is unjustified, because it was inferred from the false belief that Dev is in",
+      "No: she would have to be certain for her belief to be justified"
+    ],
+    "answer": 0,
+    "explanation": "This follows the recipe exactly: a justified false belief about Dev, a justified inference to a weaker claim, and a world that makes the weaker claim true for an unrelated reason. The third option forgets that justification transmits across competent inference even from a falsehood, which is what the recipe relies on."
+  },
+  {
+    "id": "escaping-the-recipe",
+    "section": "the-shape-of-the-problem",
+    "question": "Which kind of theory of justification would escape Gettier's recipe altogether?",
+    "options": [
+      "One on which justification is a matter of reliable belief-forming processes",
+      "One on which justification entails the truth of what is believed",
+      "One on which justification depends on the coherence of a whole belief set",
+      "One on which the justifying grounds must be accessible to the believer"
+    ],
+    "answer": 1,
+    "explanation": "The recipe needs only that justification be compatible with falsity, so it works whatever account of justification is given, provided it is fallible. Reliabilist, coherentist and access-based accounts all allow fallible evidence to justify, so all of them are exposed."
+  },
+  {
+    "id": "lucky-overhearing",
+    "section": "the-shape-of-the-problem",
+    "question": "By pure chance you walk past just as a reliable colleague announces that the meeting has moved to Thursday, and you believe it. Does the luck involved prevent you from knowing?",
+    "options": [
+      "Yes, since any luck at all in how a belief is acquired rules out knowledge, however good the source",
+      "Yes, since a belief formed by chance cannot be justified",
+      "No, since the luck affects whether you got the evidence, not the link between evidence and truth",
+      "No, since luck only matters when the belief turns out to be false"
+    ],
+    "answer": 2,
+    "explanation": "Knowledge survives luck about whether you encounter evidence at all; what it does not survive is luck sitting between the evidence and the truth. Treating all luck as hostile would rule out nearly everything anyone knows."
+  },
+  {
+    "id": "barn-beats-lemmas",
+    "section": "the-first-repair",
+    "question": "On the article's account, why does the fake barn case defeat the no-false-lemmas condition?",
+    "options": [
+      "Henry infers nothing from any falsehood, yet he still fails to know",
+      "Henry's belief that there is a barn in front of him is false",
+      "Henry's perceptual faculties are not working normally in the district",
+      "Henry's belief rests on the false lemma that every barn-like thing in the district is a barn"
+    ],
+    "answer": 0,
+    "explanation": "Henry simply looks and believes, so there is no false step for the condition to catch, and knowledge is still absent. The last option tries to rescue the condition by finding a hidden lemma, but the article's point is that Gettier used inference as a convenient construction, not because inference is where the defect lies."
+  },
+  {
+    "id": "defeasibility-approach",
+    "section": "the-second-repair",
+    "question": "How does the defeasibility analysis differ in approach from no false lemmas?",
+    "options": [
+      "It locates the defect in an inference from a falsehood",
+      "It ignores the route to the belief and asks whether a missed truth would defeat it",
+      "It requires the believer to have considered and rejected every possible defeater before believing",
+      "It replaces justification with the reliability of the process that produced the belief"
+    ],
+    "answer": 1,
+    "explanation": "Defeasibility does not care about the route to the belief, only about whether there is an undefeated truth in the vicinity that the believer has missed. Locating the defect in a false inference is the no-false-lemmas approach, which is exactly what it is being contrasted with."
+  },
+  {
+    "id": "defeasibility-handles-barn",
+    "section": "the-second-repair",
+    "question": "Unlike no false lemmas, the defeasibility analysis can explain why Henry in the fake barn case lacks knowledge.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Henry has missed a truth, that the district is full of facades, which would have dismantled his confidence had he learned it. Because defeasibility ignores the route to the belief, the absence of any false inference does not matter to it."
+  },
+  {
+    "id": "grabit-too-strong",
+    "section": "the-second-repair",
+    "question": "You see Tom Grabit steal a book. Unknown to you, his mother has falsely told the police he was far away and has a twin; she is a compulsive liar and there is no twin. What problem does this raise for the defeasibility analysis as stated?",
+    "options": [
+      "It grants knowledge in a Gettier case where knowledge should be denied",
+      "It cannot handle cases that involve no inference from a falsehood",
+      "It counts a misleading truth as a defeater, and so denies knowledge you actually have",
+      "It makes knowledge depend on the route by which the belief was formed"
+    ],
+    "answer": 2,
+    "explanation": "That the mother said these things is true and would have destroyed your justification, yet you saw the theft, so the condition is too strong. The first option has the failure the wrong way round: the problem is that the analysis excludes genuine knowledge, not that it lets Gettier cases in."
+  },
+  {
+    "id": "shared-explanation",
+    "section": "what-the-failures-have-in-common",
+    "question": "On the article's diagnosis, what does the pattern of failed repairs suggest knowledge requires?",
+    "options": [
+      "A fourth condition, still undiscovered, added to the other three",
+      "That the belief be true because of whatever makes it justified",
+      "That the believer be able to rule out every incompatible possibility",
+      "That the justification be infallible"
+    ],
+    "answer": 1,
+    "explanation": "In a Gettier case truth and justification have separate explanations, so the target looks like a relation between them rather than another ingredient. The first option is the strategy the pattern of failures counts against."
+  },
+  {
+    "id": "contrived-cases",
+    "section": "what-the-failures-have-in-common",
+    "question": "The objection says Gettier cases are too artificial to be data. According to the reply, why does their artificiality not undermine their use against the justified true belief analysis?",
+    "options": [
+      "Because cases like them are in fact common in everyday life",
+      "Because intuitions about every Gettier case have replicated across cultures",
+      "Because contrived cases test only sufficient conditions, which is all the analysis offers",
+      "Because one counterexample, however contrived, refutes a universal claim, and the analysis is one"
+    ],
+    "answer": 3,
+    "explanation": "Contrived cases are how necessary conditions are tested everywhere, and a universal claim falls to a single exception. The replication option overstates the evidence: Smith-style intuitions replicated, but fake barn intuitions proved less stable."
+  }
+]

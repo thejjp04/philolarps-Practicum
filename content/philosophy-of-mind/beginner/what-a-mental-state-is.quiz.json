@@ -1,0 +1,93 @@
+[
+  {
+    "id": "mode-versus-content",
+    "section": "states-that-are-about-something",
+    "question": "How does hoping that the train is on time differ from doubting that the train is on time?",
+    "options": [
+      "In attitude, while sharing the same content",
+      "In content, while sharing the same attitude",
+      "In both attitude and content",
+      "In neither: they are one state described in two ways"
+    ],
+    "answer": 0,
+    "explanation": "Both states have the same proposition at their centre, that the train is on time, and differ in the relation the subject bears to it. Because the sentences differ in their verbs it is tempting to think the contents differ, but the content is what follows \"that\"."
+  },
+  {
+    "id": "classify-direction-of-fit",
+    "section": "states-that-are-about-something",
+    "question": "Which of these works like the shopper's list in Anscombe's case, so that when it fails to match the world, the world is what has to change?",
+    "options": [
+      "A surveyor's report on the condition of an existing house",
+      "A builder's instructions for a house not yet built",
+      "A photograph of the house taken from the street this morning",
+      "An estate agent's description of the house"
+    ],
+    "answer": 1,
+    "explanation": "If the finished house departs from the instructions, the fault is in the building, which is the direction of fit of desire. The other three are records like the detective's list: if they fail to match the house, they are what is wrong, as with belief."
+  },
+  {
+    "id": "pain-as-representation",
+    "section": "states-that-are-not-obviously-about-anything",
+    "question": "On the second response to states such as a knee ache, what is the ache doing?",
+    "options": [
+      "Nothing contentful: it belongs to a separate category of merely qualitative states",
+      "Taking an attitude toward the proposition that the knee hurts",
+      "Representing a disturbance in a part of the body, so it has content after all",
+      "Disposing the subject to rub the knee, which is all a pain is"
+    ],
+    "answer": 2,
+    "explanation": "The second response holds that the appearance of contentlessness is misleading, so the whole mental realm is contentful. The first option is the rival response, which splits the mental into content-bearing states and merely qualitative ones."
+  },
+  {
+    "id": "classify-dispositional",
+    "section": "a-different-cut-entirely",
+    "question": "You have long preferred tea to coffee, but you are not thinking about drinks at all just now. What is that preference at the moment?",
+    "options": [
+      "A dispositional state",
+      "An occurrent state",
+      "Not a mental state at all, since it is doing nothing",
+      "A sensation, since preferences are felt"
+    ],
+    "answer": 0,
+    "explanation": "A standing preference that is not currently active, but would be acted on given the occasion, is dispositional; in the shop it would become occurrent. Denying it is a mental state at all is tempting, but like the belief about Lisbon, it is still yours while it does nothing."
+  },
+  {
+    "id": "sensations-not-dispositional",
+    "section": "a-different-cut-entirely",
+    "question": "The occurrent and dispositional division cuts across the division between kinds of mental state. Which kind does the article suggest arguably does not come in both varieties?",
+    "options": [
+      "Beliefs, such as that Lisbon is in Portugal",
+      "Desires, such as wanting to be elsewhere",
+      "Preferences, such as for one brand over another",
+      "Sensations, such as a knee ache"
+    ],
+    "answer": 3,
+    "explanation": "A pain nobody is feeling is not obviously a pain at all, so sensations seem to be only occurrent. Beliefs, desires and preferences can all be standing states that become active on occasion, which is what makes the two divisions cut across each other."
+  },
+  {
+    "id": "two-hundred-seventeen",
+    "section": "a-different-cut-entirely",
+    "question": "On the usual response to the problem of infinitely many beliefs, what was the status of your belief that 217 is greater than 3 before anyone asked?",
+    "options": [
+      "A stored belief, one of infinitely many held somewhere in the brain at once",
+      "An occurrent belief that was active, though you had not noticed it",
+      "Only a disposition to assent, generated on demand from what is stored",
+      "Not connected to your mind in any way until the question was asked"
+    ],
+    "answer": 2,
+    "explanation": "A finite stock of stored information plus a capacity to generate answers yields unlimited dispositions to assent, and only the stored part is a state in the demanding sense. Treating every such belief as stored is what produces the impossible demand for infinite storage in a finite brain."
+  },
+  {
+    "id": "humours-reply",
+    "section": "what-the-categories-are-for",
+    "question": "The objection compares beliefs and desires to the humours, a prescientific scheme that named nothing. What is the reply's first point against the comparison?",
+    "options": [
+      "Beliefs and desires have already been located in particular regions of the brain",
+      "Ordinary psychological explanation predicts very well, and the humours never worked",
+      "The folk categories are natural kinds that any future science must preserve unchanged",
+      "Cognitive science has stopped using states with contents, so the comparison is moot"
+    ],
+    "answer": 1,
+    "explanation": "A framework as wrong as the humours would be an odd thing to be so useful across cultures and without training. The third option overstates the reply, which explicitly recommends holding the taxonomy as a working scheme rather than as natural kinds established in advance."
+  }
+]

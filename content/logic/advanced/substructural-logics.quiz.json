@@ -1,0 +1,132 @@
+[
+  {
+    "id": "which-theorem-needs-contraction",
+    "section": "the-three-rules",
+    "question": "Given the usual rules for $\\rightarrow$, which of these needs contraction to derive?",
+    "options": [
+      "$\\varphi \\rightarrow (\\psi \\rightarrow \\varphi)$",
+      "$(\\varphi \\rightarrow (\\psi \\rightarrow \\chi)) \\rightarrow (\\psi \\rightarrow (\\varphi \\rightarrow \\chi))$",
+      "$(\\varphi \\rightarrow (\\varphi \\rightarrow \\psi)) \\rightarrow (\\varphi \\rightarrow \\psi)$",
+      "$\\varphi \\rightarrow \\varphi$"
+    ],
+    "answer": 2,
+    "explanation": "A single assumption of $\\varphi$ has to feed both antecedents of $\\varphi \\rightarrow (\\varphi \\rightarrow \\psi)$, so it is used twice, which is what contraction licenses. The first formula needs weakening instead (its $\\psi$ goes unused), the second needs exchange (it reorders premises), and $\\varphi \\rightarrow \\varphi$ needs no structural rule at all."
+  },
+  {
+    "id": "contraction-and-curry",
+    "section": "the-three-rules",
+    "question": "Why are contraction-free logics of particular interest to people working on the paradoxes?",
+    "options": [
+      "Curry's paradox is derived from naive comprehension through contraction, so dropping it may save naive comprehension",
+      "Contraction is the rule that validates explosion, so dropping it makes a logic paraconsistent and the paradoxes harmless",
+      "Contraction is what lets a self-referential sentence be formed in the first place, so without it no paradox can be stated",
+      "Contraction is needed to prove $\\varphi \\rightarrow (\\psi \\rightarrow \\varphi)$, which underlies the paradoxes of implication"
+    ],
+    "answer": 0,
+    "explanation": "The Curry derivation uses its self-referential assumption twice, and identifying the two uses is contraction. Self-reference is supplied by comprehension rather than by any structural rule, and $\\varphi \\rightarrow (\\psi \\rightarrow \\varphi)$ is the signature of weakening, the rule relevance logic drops."
+  },
+  {
+    "id": "linear-use-exactly-once",
+    "section": "the-three-rules",
+    "question": "On the computational reading, a calculus without weakening and contraction, but with exchange, is one in which:",
+    "options": [
+      "every value is used at most once",
+      "every value is used at least once",
+      "values must be consumed in the order they were supplied",
+      "every value is used exactly once"
+    ],
+    "answer": 3,
+    "explanation": "Losing weakening forbids discarding a value, so each is used at least once; losing contraction forbids copying, so each is used at most once. \"At most once\" is the discipline with only contraction dropped, and since exchange is kept, order does not matter."
+  },
+  {
+    "id": "why-conjunction-splits",
+    "section": "linear-logic",
+    "question": "Classically, the conjunction rule with a shared context and the rule combining disjoint contexts define one connective. Why do they define two in linear logic?",
+    "options": [
+      "Linear logic adds a further conjunction rule of its own, which classical logic lacks, giving a second connective",
+      "Weakening and contraction make each rule derivable from the other; without them they come apart",
+      "Classical logic has exchange and linear logic does not, so linear contexts cannot be merged freely",
+      "Classical conjunction is truth-functional and the linear conjunctions are not, so they cannot coincide"
+    ],
+    "answer": 1,
+    "explanation": "Getting the shared-context rule from the disjoint one means merging two copies of the context, which is contraction; going the other way pads each context with unused premises, which is weakening. Linear logic keeps exchange, so blaming its absence misidentifies the rules dropped."
+  },
+  {
+    "id": "vending-machine-additive",
+    "section": "linear-logic",
+    "question": "A machine sells a drink or a snack for one coin, at the buyer's choice. Read in linear logic, which is true of one coin?",
+    "options": [
+      "It yields the multiplicative conjunction of a drink and a snack",
+      "It yields the additive conjunction of a drink and a snack",
+      "It yields the multiplicative conjunction of a drink and a drink",
+      "It yields both conjunctions, since they say the same thing"
+    ],
+    "answer": 1,
+    "explanation": "The additive conjunction means being able to choose either resource but not both, which is the machine's offer. The multiplicative conjunction means having both, which one coin does not buy; treating the two as the same is exactly what classical logic does and why it cannot state the difference."
+  },
+  {
+    "id": "exponential-reusable",
+    "section": "linear-logic",
+    "question": "What does placing a formula under an exponential do in linear logic?",
+    "options": [
+      "It marks the formula as reusable, so weakening and contraction apply to it",
+      "It marks the formula as already consumed, so no later step of the proof may use it",
+      "It restores exchange for that formula alone, so it can move past its neighbours",
+      "It converts the formula's multiplicative connectives into the corresponding additive ones"
+    ],
+    "answer": 0,
+    "explanation": "The exponentials reinstate the dropped structural rules locally, which is how classical and intuitionistic logic embed into linear logic. Exchange was never lost in linear logic, so there is nothing for an exponential to restore there."
+  },
+  {
+    "id": "discard-but-not-copy",
+    "section": "linear-logic",
+    "question": "A programming language lets values be silently discarded but copied only on explicit request. Which structural rule has it restricted?",
+    "options": [
+      "Weakening",
+      "Exchange",
+      "Contraction",
+      "Both weakening and contraction"
+    ],
+    "answer": 2,
+    "explanation": "Copying a value is contraction, and requiring copies to be requested is the ownership discipline the article attributes to Rust. Discarding is weakening, which this language still allows, so restricting both would describe a stricter, fully linear language."
+  },
+  {
+    "id": "lambek-word-order",
+    "section": "the-lambek-calculus",
+    "question": "In the Lambek calculus, why does \"Kim sleeps\" derive the sentence category while \"sleeps Kim\" does not?",
+    "options": [
+      "Without weakening, the word \"sleeps\" cannot be left unused at the front of the string",
+      "Without contraction, the name cannot be used twice to fill both argument places",
+      "The verb's category is a multiplicative conjunction, and the tensor ignores order",
+      "The verb seeks its noun phrase on the left, and without exchange the order is fixed"
+    ],
+    "answer": 3,
+    "explanation": "Dropping exchange makes the antecedent a sequence and splits implication into leftward and rightward forms, so word order is carried by the direction of the verb's category. Both strings use each word exactly once, so weakening and contraction play no part in the difference."
+  },
+  {
+    "id": "lambek-semantics-for-free",
+    "section": "the-lambek-calculus",
+    "question": "Why does a derivation in the Lambek calculus deliver a semantic composition for free?",
+    "options": [
+      "Word order alone fixes the truth conditions of a sentence",
+      "A derivation is a term, so the syntactic analysis is also a lambda term composing the words' meanings",
+      "The calculus restores exchange at the level of meanings",
+      "Every category denotes a truth value, so composition is truth-functional"
+    ],
+    "answer": 1,
+    "explanation": "By the Curry-Howard correspondence, a proof that the categories derive the sentence category is a lambda term, and reading it with word meanings plugged in composes them. That pairing of derivation and term is why the calculus is the natural proof theory for Montague's compositional semantics."
+  },
+  {
+    "id": "relevance-drops-weakening-why",
+    "section": "the-lambek-calculus",
+    "question": "The reply points out that relevance logic also drops weakening. On its account, what motivates the move there?",
+    "options": [
+      "An irrelevant premise should not license a conclusion, which is a claim about entailment rather than resources",
+      "Premises are resources that are consumed when they are used",
+      "Premises form a sequence whose order carries information",
+      "Dropping weakening is what blocks the Curry paradox"
+    ],
+    "answer": 0,
+    "explanation": "The point is that one formal move can carry several interpretations, so the resource reading does not exhaust what substructural logic is about. Blocking the Curry paradox is the motivation for dropping contraction, not weakening."
+  }
+]

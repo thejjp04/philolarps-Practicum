@@ -1,0 +1,114 @@
+[
+  {
+    "id": "good-key-entry",
+    "section": "fixing-the-letters",
+    "question": "Which of these is an acceptable entry in a translation key?",
+    "options": [
+      "$S$: the sample",
+      "$N$: the seal is not broken",
+      "$B$: the seal is broken",
+      "$E$: the seal is broken or the coolant failed"
+    ],
+    "answer": 2,
+    "explanation": "Each letter must stand for a complete declarative sentence with no connective left inside it. \"The seal is not broken\" is tempting because it is a full sentence, but it hides a negation that should be written as $\\neg B$ so the structure is exposed."
+  },
+  {
+    "id": "scope-readings-differ",
+    "section": "which-connective-governs",
+    "question": "\"The seal is broken and the coolant failed, or the sample was mishandled\" can be read as $(B \\land C) \\lor M$ or as $B \\land (C \\lor M)$. In which situation do the two readings differ in truth value?",
+    "options": [
+      "$B$ false, $C$ false, $M$ true",
+      "$B$ true, $C$ true, $M$ false",
+      "$B$ true, $C$ false, $M$ true",
+      "$B$ false, $C$ true, $M$ false"
+    ],
+    "answer": 0,
+    "explanation": "The first reading is true whenever $M$ is, but the second requires $B$, so a mishandled sample with an intact seal separates them. In the other three situations the readings agree, which is why an ambiguous sentence can pass unnoticed until exactly such a case comes up."
+  },
+  {
+    "id": "just-in-case",
+    "section": "the-reliable-cues",
+    "question": "\"A number is even just in case it is divisible by two.\" With $E$ and $D$, which formula captures this?",
+    "options": [
+      "$E \\rightarrow D$",
+      "$D \\rightarrow E$",
+      "$E \\land D$",
+      "$E \\leftrightarrow D$"
+    ],
+    "answer": 3,
+    "explanation": "\"Just in case\" is a cue for the biconditional, like \"exactly when\", so the claim runs in both directions. Read as a one-way conditional it loses half of what is said, and the everyday sense of \"just in case\" (as a precaution) is not the one in play."
+  },
+  {
+    "id": "unless-reading",
+    "section": "which-side-of-the-arrow",
+    "question": "\"The match goes ahead unless it rains.\" With $M$ and $R$, which formula says what the words require and no more?",
+    "options": [
+      "$R \\rightarrow \\neg M$",
+      "$M \\lor R$",
+      "$M \\land \\neg R$",
+      "$M \\leftrightarrow \\neg R$"
+    ],
+    "answer": 1,
+    "explanation": "\"A unless B\" gives $A \\lor B$, equivalently $\\neg R \\rightarrow M$: if it does not rain, the match goes ahead. The biconditional reading adds that rain guarantees no match, which is a stronger claim than the words make and should be written out only where it is clearly meant."
+  },
+  {
+    "id": "necessary-condition",
+    "section": "which-side-of-the-arrow",
+    "question": "\"Being over eighteen is necessary for holding this licence.\" With $O$ and $L$, which formula says this?",
+    "options": [
+      "$O \\rightarrow L$",
+      "$L \\rightarrow O$",
+      "$O \\leftrightarrow L$",
+      "$O \\land L$"
+    ],
+    "answer": 1,
+    "explanation": "A necessary condition is one the other cannot hold without, so holding the licence implies being over eighteen, and the arrow runs from the sufficient condition to the necessary one. $O \\rightarrow L$ would make being over eighteen sufficient, promising a licence to everyone of that age."
+  },
+  {
+    "id": "not-both",
+    "section": "where-the-negation-lands",
+    "question": "\"The drug is not both safe and effective.\" With $S$ and $E$, which formula captures this?",
+    "options": [
+      "$\\neg S \\land \\neg E$",
+      "$\\neg (S \\lor E)$",
+      "$\\neg (S \\land E)$",
+      "$\\neg S \\land E$"
+    ],
+    "answer": 2,
+    "explanation": "Only the combination is denied, so the sentence leaves open that the drug is safe, or that it is effective. $\\neg S \\land \\neg E$ is the tempting misreading, but it says the drug is neither, and $\\neg (S \\lor E)$ is that same \"neither\" claim written another way."
+  },
+  {
+    "id": "counterfactual-both-true",
+    "section": "where-the-arrow-and-the-word-if-come-apart",
+    "question": "The dam did not fail. Translated with the arrow, \"If the dam had failed, the town would have flooded\" and \"If the dam had failed, the town would have stayed dry\" both come out true.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "A material conditional with a false antecedent is true, so both come out true, though at most one of them can be right. That is why counterfactuals are not material conditionals, and translating them with the arrow is a mistake rather than an approximation."
+  },
+  {
+    "id": "what-the-arrow-captures",
+    "section": "where-the-arrow-and-the-word-if-come-apart",
+    "question": "On the article's account, what is the one feature of an English \"if\" that the arrow captures exactly?",
+    "options": [
+      "The antecedent is a cause of the consequent",
+      "The antecedent gives evidence for the consequent",
+      "The conditional holds in both directions",
+      "A true antecedent with a false consequent breaks it"
+    ],
+    "answer": 3,
+    "explanation": "The arrow reports only that one combination of values does not occur; it registers no causal, evidential or definitional link between the halves. That is why it counts \"if the moon is made of cheese, then two plus two is four\" as true even though nothing connects the two."
+  },
+  {
+    "id": "only-if-compound",
+    "section": "a-worked-translation",
+    "question": "\"The concert is cancelled only if the singer is ill or the hall is flooded.\" With $C$, $I$ and $H$, which formula is right?",
+    "options": [
+      "$(I \\lor H) \\rightarrow C$",
+      "$C \\rightarrow (I \\lor H)$",
+      "$(C \\rightarrow I) \\lor H$",
+      "$C \\leftrightarrow (I \\lor H)$"
+    ],
+    "answer": 1,
+    "explanation": "The clause before \"only if\" goes on the left, and the clause after it is a disjunction that has to be translated and bracketed as a unit. Putting the disjunction first is the classic \"only if\" error: the sentence does not promise that every illness or flood cancels the concert."
+  }
+]

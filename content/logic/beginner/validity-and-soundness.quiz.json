@@ -1,0 +1,88 @@
+[
+  {
+    "id": "valid-with-false-parts",
+    "section": "validity",
+    "question": "\"Every planet is made of cheese. Mars is a planet. So Mars is made of cheese.\" Which description is right?",
+    "options": [
+      "Valid, though its first premise and its conclusion are false",
+      "Invalid, because its conclusion is false",
+      "Invalid, because one of its premises is false",
+      "Valid and sound, because its form is correct"
+    ],
+    "answer": 0,
+    "explanation": "If every planet were cheese and Mars were a planet, Mars would be cheese, so no possible situation makes the premises true and the conclusion false. A false conclusion does not make an argument invalid; here the machine works and the input is bad, which is why it is valid but not sound."
+  },
+  {
+    "id": "valid-false-conclusion",
+    "section": "what-validity-does-not-rule-out",
+    "question": "You are told that an argument is valid and that its conclusion is false. What can you infer about its premises?",
+    "options": [
+      "All of them are false",
+      "At least one of them is false",
+      "Nothing, since validity says nothing about truth",
+      "They contradict each other"
+    ],
+    "answer": 1,
+    "explanation": "Validity rules out exactly one combination, true premises with a false conclusion, so with a false conclusion some premise must be false. It need not be all of them: the penguin argument has a false conclusion and a true second premise."
+  },
+  {
+    "id": "true-true-not-enough",
+    "section": "what-validity-does-not-rule-out",
+    "question": "An argument has true premises and a true conclusion. Is it valid?",
+    "options": [
+      "Yes, since validity is a matter of getting from truths to truths",
+      "Yes, since the actual world is not a counterexample to it",
+      "Not necessarily: that pattern tells you nothing about validity",
+      "No, since a valid argument cannot have a true conclusion"
+    ],
+    "answer": 2,
+    "explanation": "Invalid arguments have true premises and a true conclusion all the time. The actual world is indeed not a counterexample, but a counterexample can be any possible situation, so ruling out the actual one settles nothing."
+  },
+  {
+    "id": "contradictory-premises",
+    "section": "what-validity-does-not-rule-out",
+    "question": "\"The shop is open and the shop is not open. So the moon is made of cheese.\" This argument is valid.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Contradictory premises can never all be true, so no possible situation makes them true with the conclusion false, and the argument passes the definition whatever it concludes. It is valid and useless, which shows how low a bar validity is on its own."
+  },
+  {
+    "id": "find-the-counterexample",
+    "section": "counterexamples",
+    "question": "\"If the alarm went off, the cat is hiding. The cat is hiding. So the alarm went off.\" Which situation is a counterexample?",
+    "options": [
+      "The alarm went off and the cat is hiding",
+      "The alarm went off and the cat is not hiding",
+      "The alarm did not go off and the cat is not hiding",
+      "The alarm did not go off, yet the cat is hiding"
+    ],
+    "answer": 3,
+    "explanation": "A counterexample needs every premise true and the conclusion false. With no alarm and a hiding cat, both premises hold and the conclusion fails. The alarm going off with the cat not hiding makes the first premise false, so it cannot be a counterexample to this argument."
+  },
+  {
+    "id": "same-shape-shows",
+    "section": "counterexamples",
+    "question": "You attack an argument by giving another of exactly the same shape with true premises and a false conclusion. On the article's account, what has this strictly shown?",
+    "options": [
+      "That the original argument's conclusion is false",
+      "That the form does not by itself guarantee validity",
+      "That the original argument is invalid, whatever it is about",
+      "That one of the original argument's premises is false"
+    ],
+    "answer": 1,
+    "explanation": "An argument can occasionally be valid for reasons its visible form does not display, as with \"this is a square, so this has four sides\". So the honest report is that the form does not carry the argument; the stronger claim that the argument itself is invalid only becomes automatic in a formal language, where the form is all there is."
+  },
+  {
+    "id": "which-flavour-of-unsound",
+    "section": "soundness",
+    "question": "An objector says: \"Your argument is valid, but your second premise is false.\" If the objector is right, which of these is true?",
+    "options": [
+      "The argument is sound, since soundness only needs validity",
+      "The argument is unsound, and the objector owes a counterexample",
+      "The argument is unsound, and its form is not in dispute",
+      "The argument's conclusion has been shown to be false"
+    ],
+    "answer": 2,
+    "explanation": "This objection grants the form and denies a premise, so what the objector owes is a reason to think that premise false. A counterexample is what you owe when you claim an argument is invalid, and an unsound argument can still have a true conclusion."
+  }
+]

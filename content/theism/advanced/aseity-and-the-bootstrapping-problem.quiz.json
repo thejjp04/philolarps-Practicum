@@ -1,0 +1,132 @@
+[
+  {
+    "id": "two-claims-inside-aseity",
+    "section": "the-doctrine",
+    "question": "Imagine a necessary being that depends on nothing and exists alongside other necessary, independent things that it did not produce. Which part of aseity does it have?",
+    "options": [
+      "Both parts, since it is necessary, uncaused, and depends on nothing outside itself",
+      "Only the first: it depends on nothing, but it is not the source of everything else",
+      "Only the second: everything else depends on it, though it is not itself independent",
+      "Neither part, since aseity requires simplicity"
+    ],
+    "answer": 1,
+    "explanation": "The doctrine bundles two claims, that God depends on nothing and that everything other than God depends on God, and this being satisfies only the first. The distinction matters because the second claim is the one abstract objects threaten; independence alone is untroubled by uncreated numbers."
+  },
+  {
+    "id": "hardest-case-is-gods-essence",
+    "section": "the-challenge",
+    "question": "Which item poses the hardest case for the strong reading of aseity, on the article's account?",
+    "options": [
+      "God's own essence, since deciding on a nature presupposes already having one",
+      "The number seven, since it is necessary, uncreated, and indispensable to science",
+      "Possible worlds, since there are infinitely many of them",
+      "The property of redness, since physical objects as well as God exemplify properties"
+    ],
+    "answer": 0,
+    "explanation": "Whatever else might be a divine product, the nature that makes God what he is cannot have been chosen, so the theist must either deny that God has a nature distinct from himself or call it uncreated but not distinct enough to count. Numbers are the loudest case but the easiest, since nothing about God's own nature depends on them."
+  },
+  {
+    "id": "creationism-thesis-activism-mechanism",
+    "section": "creating-the-abstract-objects",
+    "question": "How does the article distinguish absolute creationism from theistic activism?",
+    "options": [
+      "Absolute creationism places abstract objects in God's mind; theistic activism has God create them outside it",
+      "They are two names for one view, which is why Craig called for uniform terminology",
+      "Absolute creationism is the thesis; theistic activism is one mechanism for it, God's thinking",
+      "Theistic activism denies that abstract objects exist, while absolute creationism affirms that they do"
+    ],
+    "answer": 2,
+    "explanation": "The thesis could be held with a different account of the mechanism, which is why the article keeps the terms apart. The first option confuses creationism with divine conceptualism, on which abstract objects are constituents of God's mind and so need no creating at all."
+  },
+  {
+    "id": "who-the-bootstrapping-problem-catches",
+    "section": "the-circle",
+    "question": "Who is caught by the bootstrapping problem?",
+    "options": [
+      "Any Platonist, theist or atheist, who accepts uncreated properties into the inventory",
+      "Any nominalist, since nominalism has no account of what makes God omnipotent",
+      "Any theist who accepts divine simplicity, since simplicity makes God identical with properties",
+      "Only those who want both a full inventory of abstracta and unrestricted divine sourcehood"
+    ],
+    "answer": 3,
+    "explanation": "A Platonist atheist is untroubled by uncreated properties and a nominalist has no properties to worry about; the dilemma bites only where both commitments are held together. Simplicity is the tempting wrong answer, but it is the classical shortcut by which the problem never arises, since there are no properties in God distinct from God."
+  },
+  {
+    "id": "explanatory-priority-restatement",
+    "section": "the-circle",
+    "question": "Menzel answers the bootstrapping objection by denying that God's eternal activity has any ordering in which having a property comes before producing it. What is the critics' reply?",
+    "options": [
+      "It can be restated with explanatory priority, which needs no time, so the circle remains",
+      "An activity that produces many distinct objects must have stages, so an ordering creeps back",
+      "Eternal activity is impossible, since all activity takes time",
+      "The objection was never about priority, only about whether properties exist at all"
+    ],
+    "answer": 0,
+    "explanation": "If God's power to create explains the existence of properties and the existence of properties explains God's power, the circle is vicious whether or not anything happens in sequence. The activist's remaining move is to deny explanatory priority in either direction, which declares the configuration primitive at exactly the place aseity was meant to explain."
+  },
+  {
+    "id": "truth-not-settled-by-activity",
+    "section": "the-circle",
+    "question": "On the proposition version of the objection, the activist says the proposition that God exists owes its existence to God's thinking it but its truth to God's existence. What does this reply concede?",
+    "options": [
+      "That the proposition that God exists is uncreated, contrary to absolute creationism",
+      "That divine activity does not settle the truth of that proposition",
+      "That God's thinking takes place in time, since it follows his existing",
+      "That propositions are constituents of the divine mind rather than products of it"
+    ],
+    "answer": 1,
+    "explanation": "Separating existence from truth keeps the proposition a product of divine activity while admitting that its being true is not something the thinking accomplished. That is a smaller concession than the objection wanted; the first option overstates it, since the proposition's existence is still credited to God."
+  },
+  {
+    "id": "conceptualism-individuation-problem",
+    "section": "the-mind-of-god",
+    "question": "What is the sharper of the two objections to divine conceptualism?",
+    "options": [
+      "That it makes abstract objects into created things, and so falls straight into the bootstrapping circle",
+      "That it has no precedent in the medieval tradition, which kept the forms apart from God",
+      "That there are more propositions than any mind could entertain as discrete items",
+      "That contents individuate thoughts, so God's thoughts presuppose propositions rather than reduce them"
+    ],
+    "answer": 3,
+    "explanation": "If contents individuate thoughts, the abstract object has been presupposed rather than explained, which pushes the view toward something much less like thinking. The counting problem is the other, milder objection, and the first option misdescribes conceptualism, which treats abstract objects as uncreated constituents of God's mind."
+  },
+  {
+    "id": "shortcut-trades-for-predication",
+    "section": "the-classical-shortcut",
+    "question": "On the article's account, what does the classical shortcut trade the problem about abstract objects for?",
+    "options": [
+      "The bootstrapping problem in a new form, now posed about the divine ideas rather than properties",
+      "A commitment to nominalism about mathematics, since numbers have no place in it",
+      "A problem about predication: whether creatures' respects of resemblance to God are real in God",
+      "A problem about how God can know infinitely many propositions as discrete items"
+    ],
+    "answer": 2,
+    "explanation": "If the respects of resemblance are real and distinct in God, simplicity is under pressure again; if they are distinct only in our speech, it is unclear what makes a horse and a stone resemble God differently. Bootstrapping is precisely what the shortcut avoids, since nothing in God is distinct from God to be created or uncreated."
+  },
+  {
+    "id": "anti-realist-needs-a-principled-line",
+    "section": "denying-the-objects",
+    "question": "A theist holds that quantifying over numbers carries no ontological commitment. What further difficulty, specific to theism, does the article say she faces?",
+    "options": [
+      "She needs a principled line for why theological quantification does carry commitment",
+      "She must hold that numbers are created by God after all, since fictions need an author",
+      "She must deny divine simplicity, since simplicity requires realism about properties",
+      "She must treat God's own existence as a useful fiction"
+    ],
+    "answer": 0,
+    "explanation": "Theistic language quantifies over things that look abstract, so commitment cannot be denied for mathematicians and affirmed for theologians without a principled line between them. The last option is what she must avoid rather than accept, which is exactly why the line needs drawing."
+  },
+  {
+    "id": "cost-of-restricting-aseity",
+    "section": "scoring-the-options",
+    "question": "A theist restricts aseity to concrete reality, leaving abstract objects outside God's sourcehood. On the article's account, what does this cost?",
+    "options": [
+      "Nothing, since the creeds were never about the ontological status of abstract objects",
+      "It forces the theist into absolute creationism about the remaining abstract objects",
+      "It commits the theist to nominalism",
+      "It weakens the earlier arguments, which concluded to an unrestricted ultimate"
+    ],
+    "answer": 3,
+    "explanation": "A cosmological argument concluding to a being on which everything depends has not concluded to one on which only concrete things depend, and a modal argument loses its interest if necessary beings are cheap and numerous. The first option is the objection's historical point, which the article grants while denying that the philosophical conclusion follows from it."
+  }
+]

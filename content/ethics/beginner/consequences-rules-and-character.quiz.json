@@ -1,0 +1,101 @@
+[
+  {
+    "id": "what-a-consequentialist-counts",
+    "section": "look-at-what-happens",
+    "question": "On a consequentialist theory, which of these could make it wrong to break a promise?",
+    "options": [
+      "That an honest person, of settled good character, would not break it",
+      "That breaking it would bring about a worse state of the world",
+      "That breaking a promise uses the person it was made to as a tool",
+      "That promising creates an obligation that holds whatever follows"
+    ],
+    "answer": 1,
+    "explanation": "For consequentialism nothing about an act matters morally except the state of the world it brings about. The other options locate the wrong in character or in what the act is, which is virtue ethics and deontology respectively."
+  },
+  {
+    "id": "preference-version",
+    "section": "look-at-what-happens",
+    "question": "A theorist holds that an act is right when it maximises the satisfaction of people's preferences. Is this a form of consequentialism?",
+    "options": [
+      "Yes: it differs from classical utilitarianism only in what makes outcomes better",
+      "No: consequentialism requires that pleasure or happiness be the only good",
+      "No: it counts as virtue ethics, since preferences belong to the agents who have them",
+      "Only if it also includes a firm rule against lying and promise-breaking"
+    ],
+    "answer": 0,
+    "explanation": "Versions of consequentialism differ mainly in their account of which outcomes are better, and preference satisfaction is one of the standard substitutes for happiness. The second option confuses the family with its classical utilitarian member."
+  },
+  {
+    "id": "shape-of-the-objections",
+    "section": "look-at-what-happens",
+    "question": "What do the objections from framing an innocent person and from harvesting one patient's organs have in common, on the article's account?",
+    "options": [
+      "They show that consequentialism miscounts the outcomes in such cases",
+      "They rely on false empirical assumptions about riots and about hospitals",
+      "The theory has no place for a consideration that resists being weighed",
+      "They show that consequentialism is not, after all, impartial between people"
+    ],
+    "answer": 2,
+    "explanation": "In each case the numbers favour the ugly act, and the complaint is that something, such as the innocence of the person framed, should count other than as a quantity. Saying the outcomes were miscounted misses the point: the objection grants the arithmetic and denies that arithmetic is all that matters."
+  },
+  {
+    "id": "paradox-of-deontology",
+    "section": "look-at-what-you-are-doing",
+    "question": "A deontologist holds that lying is wrong in virtue of what lying is. Telling one lie now would prevent five other people from lying. Why is this a puzzle for the view?",
+    "options": [
+      "The view implies you must tell the lie, so it contradicts its own constraint",
+      "It shows that the wrongness of lying depends on its outcomes after all",
+      "It means the five other liars would not be doing anything wrong",
+      "It forbids you to minimise what it says is wrong, and owes an account why"
+    ],
+    "answer": 3,
+    "explanation": "If lying is what is bad, it seems you should minimise lying, yet the constraint forbids your one lie. The first option is the trap: the view does not imply you must lie; the puzzle is that it forbids you to, and so has to say what a constraint is if not something to be minimised."
+  },
+  {
+    "id": "aristotelian-honesty",
+    "section": "look-at-who-you-are-becoming",
+    "question": "On the Aristotelian picture in the article, what is honesty?",
+    "options": [
+      "The disposition to produce true sentences whenever someone asks for them",
+      "Obedience to a principle forbidding every lie, whatever the circumstances",
+      "A concern with truth, used with judgement, that can deceive the murderer",
+      "A habit of saying whatever will produce the best outcome"
+    ],
+    "answer": 2,
+    "explanation": "Virtue is a trained capacity to see what a situation calls for, not the application of a rule, and every reading of Aristotle has the virtuous agent deceive the murderer. Producing true sentences on demand is exactly what the article says honesty is not."
+  },
+  {
+    "id": "virtue-ethics-pressure",
+    "section": "look-at-who-you-are-becoming",
+    "question": "Asked what to say at the door, a virtue ethicist answers: whatever a person of practical wisdom would say. What is the standing pressure on this answer?",
+    "options": [
+      "It does not answer the question asked, or borrows its content elsewhere",
+      "It commits the agent to telling the murderer the truth, exactly as Kant held",
+      "It makes rightness depend on outcomes, just as consequentialism does",
+      "It treats the agent's emotions as obstacles to acting well"
+    ],
+    "answer": 0,
+    "explanation": "The person at the door still does not know what to say, and critics add that any content the answer has is borrowed from one of the other families. Defenders reply that demanding a formula was the mistake; the option about emotions has the view backwards, since it counts emotions as part of virtue."
+  },
+  {
+    "id": "derived-rule-still-consequentialist",
+    "section": "where-the-disagreement-actually-lies",
+    "question": "A consequentialist endorses a strict rule against lying because general rule-following produces better outcomes. On the reply's account, what is she?",
+    "options": [
+      "A deontologist, since she now accepts a constraint on lying",
+      "A virtue ethicist, since rule-following becomes a settled habit of character",
+      "A hybrid, since she gives weight to both rules and outcomes",
+      "Still a consequentialist, since the rule is derived from outcomes"
+    ],
+    "answer": 3,
+    "explanation": "Families are individuated by what is fundamental, not by what they admit. Her rule is explained by outcomes, so outcomes remain basic; a hybrid would need a component, such as a constraint, that is not itself outcome-determined."
+  },
+  {
+    "id": "three-families-not-a-partition",
+    "section": "where-the-disagreement-actually-lies",
+    "question": "On the article's account, every moral theory belongs to exactly one of the three families.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The three are the standing families, not a partition of the space. Contractualism, particularism and constructivism do not sit comfortably in any of them, which is where the objection to the taxonomy has real force."
+  }
+]

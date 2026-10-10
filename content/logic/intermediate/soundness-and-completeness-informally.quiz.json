@@ -1,0 +1,114 @@
+[
+  {
+    "id": "no-rules-at-all",
+    "section": "the-two-directions",
+    "question": "A proof system has no axioms and no rules at all. Which describes it?",
+    "options": [
+      "Sound but not complete, since it never derives anything invalid",
+      "Complete but not sound, since it never rules anything out",
+      "Both sound and complete, since it never makes a mistake",
+      "Neither sound nor complete, since it proves nothing of interest"
+    ],
+    "answer": 0,
+    "explanation": "Proving nothing, it never proves anything invalid, so it is trivially sound, and it misses every valid argument, so it is not complete. A system letting any formula be written at any time is the mirror case: complete but not sound."
+  },
+  {
+    "id": "two-senses-of-sound",
+    "section": "the-two-directions",
+    "question": "How does the soundness of the soundness theorem differ from the soundness the beginner tier applied to arguments?",
+    "options": [
+      "It is the same property, applied to derivations instead of arguments",
+      "It requires every premise to be a tautology",
+      "It belongs to a proof system and concerns validity alone",
+      "It belongs to single arguments that are both derivable and valid"
+    ],
+    "answer": 2,
+    "explanation": "The beginner tier's sound argument is valid and has true premises, a property of one argument on one occasion. The soundness theorem's property belongs to a whole proof system and says only that whatever it derives is valid, with nothing said about whether any premises are actually true."
+  },
+  {
+    "id": "soundness-is-easy",
+    "section": "the-two-directions",
+    "question": "Why is soundness the easy half?",
+    "options": [
+      "It follows at once from completeness, which is proved first",
+      "It needs only finitely many interpretations to be checked",
+      "It holds of every proof system automatically, whatever its rules",
+      "Check axioms valid and rules validity-preserving, then induct"
+    ],
+    "answer": 3,
+    "explanation": "Check each axiom and rule once, and induction on the length of derivations gives that everything derivable is valid, so the work is finite and mechanical. It is not automatic: a system with a bad rule fails it."
+  },
+  {
+    "id": "why-completeness-is-hard",
+    "section": "why-the-second-half-is-hard",
+    "question": "What makes completeness hard to prove in its original form?",
+    "options": [
+      "There are uncountably many derivations that would need to be searched",
+      "The lack of a countermodel among uncountably many interpretations must yield a finite proof",
+      "Interpretations are finite objects, while derivations are infinite ones",
+      "It is false for first-order logic and holds only for propositional logic"
+    ],
+    "answer": 1,
+    "explanation": "The hypothesis is the absence of a countermodel anywhere in an uncountable collection of interpretations, and the conclusion is one specific finite object, so there is nothing to induct on. Derivations are countable and finite, and completeness does hold for first-order logic."
+  },
+  {
+    "id": "consistent-not-yet-model",
+    "section": "consistency",
+    "question": "Before completeness has been proved, someone shows that no contradiction is derivable from a set $\\Gamma$. What has been established?",
+    "options": [
+      "That $\\Gamma$ is consistent, not yet that it has a model",
+      "That $\\Gamma$ has a model, since consistent sets are satisfiable",
+      "That every member of $\\Gamma$ is a tautology of the language",
+      "That $\\Gamma$ is inconsistent in some other, stronger proof system"
+    ],
+    "answer": 0,
+    "explanation": "Consistency is syntactic: no contradiction can be derived. That a consistent set has a model is exactly what completeness supplies, so it cannot be assumed beforehand; only the other direction, that a set with a model is consistent, comes cheaply from soundness."
+  },
+  {
+    "id": "which-set-is-inconsistent",
+    "section": "consistency",
+    "question": "In reducing completeness to \"every consistent set has a model\", which set is shown to be inconsistent?",
+    "options": [
+      "The premises alone, since they entail the conclusion",
+      "The conclusion together with the negation of each premise",
+      "Every set of formulas not derivable from the premises",
+      "The premises plus the negated conclusion"
+    ],
+    "answer": 3,
+    "explanation": "If the conclusion is a semantic consequence, the premises plus its negation have no model, so by the claim they are inconsistent, and a contradiction derived from them converts into a derivation of the conclusion. The premises alone may well be consistent, and usually are."
+  },
+  {
+    "id": "consistency-defined-syntactically",
+    "section": "consistency",
+    "question": "It would be harmless to define consistency at the outset as the possibility of all the formulas being true together, since that picks out the same sets.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "The two definitions pick out the same sets only once completeness is proved. Building their equivalence into the definition would assume the very result the reformulation is meant to make provable."
+  },
+  {
+    "id": "completeness-and-incompleteness",
+    "section": "what-the-theorems-do-not-say",
+    "question": "How can Gödel's completeness theorem and his incompleteness theorems both be true?",
+    "options": [
+      "Completeness holds only for propositional logic, incompleteness for first-order logic",
+      "Incompleteness shows that some valid first-order arguments have no derivation",
+      "One concerns proof and semantics; the other, axioms settling arithmetic",
+      "They concern different proof systems that disagree about arithmetic"
+    ],
+    "answer": 2,
+    "explanation": "Completeness says every consequence of a set of premises is derivable; incompleteness says no suitable axiom set for arithmetic has every arithmetical truth among its consequences. The second option is the confusion the article warns about: it reads incompleteness as a failure of completeness."
+  },
+  {
+    "id": "results-can-fail",
+    "section": "what-the-theorems-do-not-say",
+    "question": "According to the reply to the objection, why do soundness and completeness results have real content even though the metatheory uses ordinary reasoning?",
+    "options": [
+      "The metatheory has itself been proved sound and complete beforehand",
+      "The results are checked mechanically rather than by anyone's reasoning",
+      "The metatheory avoids ordinary reasoning",
+      "They can fail, as completeness does for second-order logic"
+    ],
+    "answer": 3,
+    "explanation": "If the metatheory merely reflected the logic back at itself, no such proof could ever fail, yet completeness fails for second-order logic on its standard semantics and soundness has failed for proposed systems. The reply concedes that the metatheory has not been justified from nothing."
+  }
+]

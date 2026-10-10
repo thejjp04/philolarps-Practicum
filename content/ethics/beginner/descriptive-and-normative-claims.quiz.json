@@ -1,0 +1,75 @@
+[
+  {
+    "id": "spot-the-normative-claim",
+    "section": "two-kinds-of-claim",
+    "question": "Which of these is a normative claim?",
+    "options": [
+      "Most residents believe the council should reopen the library",
+      "The council ought to reopen the library",
+      "The law requires councils of this size to run a library",
+      "Reopening the library would cost forty thousand pounds a year"
+    ],
+    "answer": 1,
+    "explanation": "Only the second says what the situation calls for. The first contains \"should\" but reports what residents believe, which a survey would settle, so it is descriptive; the legal claim is descriptive too, since the state of the law is something you can look up."
+  },
+  {
+    "id": "normative-survives-the-facts",
+    "section": "two-kinds-of-claim",
+    "question": "\"The company should have installed the filter\" is refuted by pointing out that the company did not install it.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "A normative claim is not answerable to what happened in the way a descriptive one is; it is the standard against which what happened is assessed. That the company fell short of the standard is what makes the claim a criticism, not evidence against it."
+  },
+  {
+    "id": "good-without-an-ought",
+    "section": "evaluation-and-prescription",
+    "question": "\"It would be wonderful if the derelict lot became a community garden.\" On the article's distinctions, what kind of claim is this?",
+    "options": [
+      "An ought-claim directed at whoever owns the lot",
+      "A descriptive claim about what people would enjoy",
+      "An evaluative claim, which by itself requires nothing of anyone",
+      "An evaluative claim, which entails that someone ought to bring it about"
+    ],
+    "answer": 2,
+    "explanation": "The sentence grades a possible state of affairs rather than directing anyone to act. The last option misses the article's point that evaluation and prescription come apart: something can be good without any ought falling on anyone to bring it about."
+  },
+  {
+    "id": "ought-of-expectation",
+    "section": "evaluation-and-prescription",
+    "question": "Which of these uses of \"ought\" prescribes nothing at all?",
+    "options": [
+      "The parcel ought to arrive by tomorrow",
+      "You ought to stretch before a long run",
+      "As goalkeeper, you ought to stay on your line",
+      "You ought to hand the wallet in to the police"
+    ],
+    "answer": 0,
+    "explanation": "The parcel case is the ought of expectation, which predicts rather than directs. The others all prescribe: a prudential ought about your own interest, an ought internal to a role in a game, and a moral ought."
+  },
+  {
+    "id": "descriptive-premises-normative-conclusion",
+    "section": "crossing-the-line",
+    "question": "\"This drug relieves pain better than any alternative. So doctors ought to prescribe it.\" What does the article say a reader is entitled to do with this argument?",
+    "options": [
+      "Accept it, since its premise is a well-established fact",
+      "Treat the conclusion as descriptive, since it is about what doctors do",
+      "Reject the conclusion, since an ought can never follow from an is",
+      "Ask what has been added, since the premise is descriptive and the conclusion normative"
+    ],
+    "answer": 3,
+    "explanation": "The modest point the article takes from Hume is that something unstated sits between a descriptive premise and a normative conclusion, here roughly that relieving pain is what doctors should aim at. Rejecting the conclusion outright reads into Hume a stronger claim, and what exactly he claimed is disputed."
+  },
+  {
+    "id": "thick-terms-lesson",
+    "section": "crossing-the-line",
+    "question": "According to the reply, what does the objection from thick terms such as \"cruel\" actually establish?",
+    "options": [
+      "That it sorts the jobs a claim does, not sentences into two bins",
+      "That the descriptive and normative distinction should be abandoned",
+      "That thick terms turn out to be purely descriptive once analysed",
+      "That only thin terms like \"good\" and \"wrong\" carry any evaluation"
+    ],
+    "answer": 0,
+    "explanation": "The reply grants that many sentences describe and evaluate at once, and keeps the distinction by applying it to what a claim does rather than to whole sentences. Abandoning it does not follow, since someone can accept every descriptive condition for cruelty and still deny the practice is objectionable, which shows the two jobs come apart."
+  }
+]

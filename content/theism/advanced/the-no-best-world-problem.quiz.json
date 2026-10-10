@@ -1,0 +1,130 @@
+[
+  {
+    "id": "what-leibniz-claimed",
+    "section": "leibnizs-assumption",
+    "question": "On the article's account, what did Leibniz actually claim that the caricature in *Candide* misses?",
+    "options": [
+      "That each event in the world, however terrible it may look, is good when considered in itself",
+      "That the whole is the best whole available, since removing its evils would remove more good",
+      "That this world is good enough, though God could have made better worlds instead",
+      "That God creates every universe worth creating, so that none is ever passed over"
+    ],
+    "answer": 1,
+    "explanation": "Leibniz's claim concerned the whole: goods and evils are so entangled that removing any evil would remove more good, so the world is the best available whole, not a collection of individually good events. The first option is the caricature, the philosopher insisting amid catastrophe that each thing is for the best."
+  },
+  {
+    "id": "one-improving-operation",
+    "section": "why-there-may-be-no-best",
+    "question": "An objector says value is not additive, since a good addition can spoil a well-made whole. Why does the article think this does not stop the argument that worlds have no upper bound?",
+    "options": [
+      "It needs only one operation that reliably improves a world, not that every addition does",
+      "Organic unities apply only to works of art and never to whole worlds containing persons",
+      "An omnipotent being could always undo the spoiling effect of any addition it made",
+      "Value is additive after all, as adding a life of great value to a world directly demonstrates"
+    ],
+    "answer": 0,
+    "explanation": "Granting organic unities, the friend of the argument can pick a case where the addition is clearly an enhancement rather than an intrusion, and one reliable improving operation is enough to make the series unbounded. The argument does not need value to be additive in general, so it need not claim, as the last option does, that the objection is false."
+  },
+  {
+    "id": "dilemma-conclusion",
+    "section": "why-there-may-be-no-best",
+    "question": "If the no-best-world dilemma is sound, it shows that God does not exist.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Its conclusion is a disjunction: either God does not create freely, or God is not unsurpassable. The consequence for theism is that a dilemma opens, and each horn costs something the theist wants to keep, rather than a proof of non-existence."
+  },
+  {
+    "id": "first-horn-modal-cost",
+    "section": "the-first-horn",
+    "question": "A theist takes the first horn but argues that acting from one's own nature is genuine freedom and, following Frankfurt, that praise does not require alternatives. What cost remains?",
+    "options": [
+      "Creation is no longer free in any sense at all, since God acted under a kind of external compulsion",
+      "God is no longer praiseworthy for creating, because praise always requires the ability to do otherwise",
+      "This world becomes the only one that could have existed, which takes the free will defence with it",
+      "God becomes surpassable, since some other being could have created a better world"
+    ],
+    "answer": 2,
+    "explanation": "The moderate reply can rescue freedom, understood as acting from one's own nature, and praiseworthiness, if Frankfurt's point generalises, but it cannot rescue the modal cost: if God must create the best, this world exists necessarily. The free will defence relies on alternatives God could have brought about, so it falls with them; surpassability is the cost of the other horn."
+  },
+  {
+    "id": "no-standing-to-complain",
+    "section": "the-second-horn",
+    "question": "Someone complains that God should have created a better world. On the point Adams's defenders press, why does the complainant generally lack standing?",
+    "options": [
+      "We cannot tell which world is better, since the space of goods lies beyond our ken",
+      "Every world above the threshold is equally good, so no better world was available",
+      "A complaint against God is impious, so it cannot ground a philosophical objection",
+      "A better world would usually lack them, so they are wishing they had never existed"
+    ],
+    "answer": 3,
+    "explanation": "Different creative choices bring different individuals into being, so the complaint is generally that God should have made a world without the complainant in it. The first option belongs to skeptical theism, which plays no part in Adams's reply; Adams grants that better worlds exist and denies that goodness requires making them."
+  },
+  {
+    "id": "satisficing-and-rowe",
+    "section": "what-satisficing-costs",
+    "question": "How does satisficing creation bear on Rowe's evidential argument from evil?",
+    "options": [
+      "It blocks the argument without skeptical theism, by conceding that God may permit gratuitous evils",
+      "It strengthens the argument, since a satisficing God would prevent every evil it could prevent",
+      "It leaves the argument untouched, since that argument concerns suffering rather than creation",
+      "It blocks the argument by showing that every evil is needed for the world to reach the threshold"
+    ],
+    "answer": 0,
+    "explanation": "Rowe's argument needs the principle that a good being would prevent suffering it could prevent without loss, and a satisficing God is not bound by it, so any evil permitted while the world stays above the threshold is gratuitous in Rowe's sense. That blocks the argument, but at the price of conceding gratuitous evil, which many theists find worse than the argument itself."
+  },
+  {
+    "id": "fine-tuning-and-the-multiverse",
+    "section": "creating-everything-worth-creating",
+    "question": "Why should a theist who defends the fine-tuning argument be wary of the theistic multiverse?",
+    "options": [
+      "Fine-tuning requires that there be only one universe, so any multiverse refutes it outright",
+      "Having posited countless universes, they lose the easy charge that the naturalist's multiverse is extravagant",
+      "A theistic multiverse would contain universes not fine-tuned for life, which seems to contradict God's goodness",
+      "The multiverse makes this universe's fine-tuning certain, so it is no longer evidence for anything"
+    ],
+    "answer": 1,
+    "explanation": "The standard theistic reply to the naturalistic multiverse is that positing countless unobserved universes is extravagant, and that reply is no longer available in its easy form to someone who posits them too. The theist can still argue that a divinely created plurality is better grounded than a brute one, but has to make that argument."
+  },
+  {
+    "id": "plenitude-and-the-first-horn",
+    "section": "creating-everything-worth-creating",
+    "question": "A theist adopts the principle of plenitude to solve the no-best-world problem. What does the article warn may follow?",
+    "options": [
+      "Plenitude implies that there is a single best world after all, which brings back Leibniz's view",
+      "Plenitude fixes the threshold of universes worth creating precisely, so no arbitrariness remains",
+      "Plenitude conflicts with the ancient idea that goodness spreads itself, so it lacks support",
+      "Taken strictly, God must realise every possibility, which removes freedom and concedes the first horn"
+    ],
+    "answer": 3,
+    "explanation": "Lovejoy documented the old difficulty: a God who must realise every possibility has no choices to make, so the problem is solved by giving up divine freedom, which is the first horn. Plenitude is in fact a descendant of the idea that goodness spreads itself, so the third option reverses the history."
+  },
+  {
+    "id": "incommensurability-reply",
+    "section": "creating-everything-worth-creating",
+    "question": "The objection says worlds are only partially ordered by value, so there may be many unsurpassed worlds and no best. Why, according to the reply, does this not escape the dilemma?",
+    "options": [
+      "Incommensurable values cannot be realised together in a single world, so unsurpassed worlds cannot exist",
+      "A partial ordering of worlds must still have exactly one maximal element, which is the best world",
+      "Adding a valuable life gives a comparable, better world, so the series stays unbounded where it matters",
+      "Incommensurability makes every world equally good, so nothing is left for divine choice to settle"
+    ],
+    "answer": 2,
+    "explanation": "The objection needs unsurpassed worlds, and the original operation tells against them: a world with everything the first had plus one more valuable life is comparable to it and better. The reply adds a cost, since genuine incommensurability would also disable comparisons the theist relies on elsewhere, such as that a secured good outweighs a permitted evil."
+  },
+  {
+    "id": "dropping-a-commitment",
+    "section": "whether-the-problem-is-peculiar-to-theism",
+    "question": "On the article's account, which change to the conception of God would dissolve the dilemma?",
+    "options": [
+      "Holding that God exists necessarily rather than contingently",
+      "Holding that God is omniscient as well as omnipotent and good",
+      "Holding that some possible worlds contain no persons at all",
+      "Holding that the world emerged from God without being chosen"
+    ],
+    "answer": 3,
+    "explanation": "The dilemma needs unlimited power, perfect goodness and a creative choice together; a world that is not chosen is not answerable to a comparison with alternatives. Necessary existence and omniscience leave all three commitments in place, and the first horn's necessitarian cost already presupposes a necessarily existing God."
+  }
+]

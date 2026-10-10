@@ -1,0 +1,130 @@
+[
+  {
+    "id": "gap-type",
+    "section": "types",
+    "question": "In the theory of dense linear orders without endpoints, take the formulas $x > q$ for each rational $q$ below $\\sqrt{2}$ and $x < q$ for each rational above it. What is the status of the type they generate?",
+    "options": [
+      "The rationals omit it, and the reals realise it",
+      "It is inconsistent",
+      "The rationals realise it, by an element that lies infinitely close to $\\sqrt{2}$",
+      "It is not a type of this theory, since $\\sqrt{2}$ is not named in the language of orders"
+    ],
+    "answer": 0,
+    "explanation": "Each finite subset is satisfied by some rational, so the set is consistent and extends to a complete type, but no rational satisfies all of it. The type describes a gap using only the order; $\\sqrt{2}$ is used to choose the formulas, not mentioned in them."
+  },
+  {
+    "id": "types-realised-somewhere",
+    "section": "types",
+    "question": "Why is every complete type of a theory realised in some model of that theory?",
+    "options": [
+      "Because every model of a theory realises every one of the theory's complete types",
+      "Because maximality means the type already contains a formula naming its realiser",
+      "Its finite parts are satisfiable, so compactness gives a model realising the whole",
+      "Because saturated models of the theory exist in every infinite cardinality"
+    ],
+    "answer": 2,
+    "explanation": "Consistency of a type means every finite subset is satisfiable in a model of the theory, and compactness turns that into a model satisfying the whole type. Particular models can omit types, as the rationals omit the gap at $\\sqrt{2}$, and saturated models are not guaranteed at every cardinality."
+  },
+  {
+    "id": "saturation-homogeneity",
+    "section": "types",
+    "question": "In a saturated model, two elements satisfy exactly the same formulas. What follows?",
+    "options": [
+      "They must be one and the same element, since a saturated model has no duplicates",
+      "Some automorphism of the model maps one element to the other",
+      "They both lie in every infinite definable set, and in no finite one",
+      "Neither can be named by a closed term"
+    ],
+    "answer": 1,
+    "explanation": "Saturated models are homogeneous: tuples with the same type are interchangeable by an automorphism. Distinct elements can certainly share a type, as any two rationals do in the theory of dense orders, so sameness of type does not mean identity."
+  },
+  {
+    "id": "eliminating-one-quantifier",
+    "section": "quantifier-elimination",
+    "question": "In the theory of dense linear orders without endpoints, $\\exists x\\,(a < x \\wedge x < b)$ is equivalent to which quantifier-free formula?",
+    "options": [
+      "$a = b$",
+      "$a < b \\wedge b < a$, which is never satisfied, since a dense order has no gaps to fill",
+      "$a \\neq b$, since density gives a point between any two distinct elements, whatever their order",
+      "$a < b$, since density supplies a point strictly between them"
+    ],
+    "answer": 3,
+    "explanation": "If $a < b$, density supplies an $x$ between them, and if not, no $x$ can be above $a$ and below $b$. Distinctness is not enough, since $b < a$ leaves nothing strictly above $a$ and below $b$."
+  },
+  {
+    "id": "qe-gives-decidability",
+    "section": "quantifier-elimination",
+    "question": "A theory has quantifier elimination, and which atomic sentences it proves is decidable. What follows?",
+    "options": [
+      "The theory is decidable, since each sentence reduces to a combination of atomic ones",
+      "The theory is categorical in every infinite cardinality, since its definable sets are so simple",
+      "Every set definable in a model of the theory is finite, since atomic formulas define finite sets",
+      "It has countably many models up to isomorphism in each cardinality"
+    ],
+    "answer": 0,
+    "explanation": "To check a sentence, replace it by its quantifier-free equivalent, a boolean combination of atomic sentences, and evaluate. Quantifier elimination makes definable sets transparent but not finite: dense orders define intervals, and algebraically closed fields have elimination without being categorical in the countable cardinality."
+  },
+  {
+    "id": "categoricity-gives-completeness",
+    "section": "categoricity",
+    "question": "Why is a theory with no finite models that is categorical in some infinite cardinal $\\kappa$ complete?",
+    "options": [
+      "Because categoricity in $\\kappa$ means all of its models, of every size, are isomorphic",
+      "Because by Morley's theorem it is then categorical in every cardinal, and so has one model",
+      "Models of an undecided sentence and of its negation could be resized to $\\kappa$ and be isomorphic",
+      "Because having no finite models already settles every sentence, by compactness"
+    ],
+    "answer": 2,
+    "explanation": "Löwenheim-Skolem moves infinite models up or down to size $\\kappa$ while keeping the sentences they satisfy, and isomorphic models cannot disagree on a sentence. The absence of finite models matters because a finite model cannot be resized; categoricity in $\\kappa$ says nothing about models of other sizes."
+  },
+  {
+    "id": "dlo-uncountable",
+    "section": "categoricity",
+    "question": "Dense linear orders without endpoints are categorical in the countable cardinality. Why not at the cardinality of the reals?",
+    "options": [
+      "Because dense linear orders without endpoints have no uncountable models at all",
+      "Because back-and-forth extends to uncountable orders, which makes them all isomorphic",
+      "Because every uncountable dense linear order must have at least one endpoint",
+      "The reals, and the reals with an extra copy of the rationals inserted, differ"
+    ],
+    "answer": 3,
+    "explanation": "Both orders are dense without endpoints and of the same size, but one has a gap the other fills, so they are not isomorphic. Back-and-forth works by enumerating both orders, which is exactly what fails for uncountable ones."
+  },
+  {
+    "id": "morley-application",
+    "section": "categoricity",
+    "question": "A countable first-order theory is categorical in one uncountable cardinality. What follows by Morley's theorem?",
+    "options": [
+      "It is categorical in every infinite cardinality, the countable one included",
+      "It is categorical in every uncountable cardinality",
+      "It is categorical in that cardinality only, since categoricity is fixed cardinal by cardinal",
+      "It has exactly one model up to isomorphism"
+    ],
+    "answer": 1,
+    "explanation": "Uncountable categoricity is a single property, not one indexed by cardinals. It need not extend to the countable case: algebraically closed fields of fixed characteristic are categorical in every uncountable cardinality yet have many countable models."
+  },
+  {
+    "id": "o-minimal-integers",
+    "section": "o-minimality",
+    "question": "The set of integers is definable in the real field with exponentiation.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Wilkie proved that structure o-minimal, so its definable subsets of the line are finite unions of points and intervals. The integers form an infinite discrete set, which is no such union, so they cannot be definable there."
+  },
+  {
+    "id": "classification-replaced-question",
+    "section": "o-minimality",
+    "question": "The objection says categoricity failed at the job it was introduced for. On the reply, what did the classification programme do?",
+    "options": [
+      "It asked whether a theory's models can be described, and proved no description exists for some",
+      "It showed that first-order arithmetic is categorical after all, in every uncountable cardinality",
+      "It settled the question of reference by showing that each stable theory has exactly one model",
+      "It abandoned counting models altogether, in favour of Putnam's model-theoretic argument"
+    ],
+    "answer": 0,
+    "explanation": "Shelah's dividing lines separate theories classifiable by cardinal invariants from those with the maximum number of models and no classification, which is informative in the way an impossibility result is. Arithmetic is on the unclassifiable side, and the reference question moved on separately, to debates about what constrains interpretation."
+  }
+]

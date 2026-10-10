@@ -1,0 +1,88 @@
+[
+  {
+    "id": "suspension-done-badly",
+    "section": "three-attitudes-not-two",
+    "question": "Someone with ordinary access to the evidence says they suspend judgement on whether the Earth is round. On the article's account, how should this be assessed?",
+    "options": [
+      "As an admirable refusal to overreach, since suspending is always safe",
+      "As a failure to respond to the evidence that is available",
+      "As no attitude at all, since suspension is just an absence of belief",
+      "As beyond assessment, since only beliefs can be done well or badly"
+    ],
+    "answer": 1,
+    "explanation": "Suspension is a genuine third attitude, and it can be taken well or badly; here the evidence is plain, so suspending is a failure. Treating suspension as automatically safe misses that any account of appropriate belief also has to say when suspending is appropriate."
+  },
+  {
+    "id": "spot-the-epistemic-reason",
+    "section": "reasons-of-the-right-kind",
+    "question": "Which of these is an epistemic reason to believe that the old bridge is safe?",
+    "options": [
+      "An engineer who inspected it last week says it is sound",
+      "Believing it will make you less anxious while crossing",
+      "You will be late for work if you take the long way round",
+      "Your friends will think you brave if you believe it"
+    ],
+    "answer": 0,
+    "explanation": "An epistemic reason bears on whether the claim is true, and testimony from someone in a position to know does. The others are practical reasons: feeling calmer may genuinely count in favour of holding the belief, but none of them makes it more likely to be correct."
+  },
+  {
+    "id": "james-and-knowledge",
+    "section": "reasons-of-the-right-kind",
+    "question": "Suppose James is right that, in some forced and momentous cases, a person may believe without sufficient evidence and do nothing wrong. On the article's account, what follows about knowledge?",
+    "options": [
+      "Such beliefs count as knowledge whenever they turn out true",
+      "Practical reasons can, in those cases, make a belief more likely true",
+      "Little, since belief without evidence is not knowledge anyway",
+      "Clifford's rule must be the correct account of what knowledge is"
+    ],
+    "answer": 2,
+    "explanation": "The Clifford and James exchange is about the ethics of belief, which is separable from the question of knowledge. Even if James is right that such a belief is permissible, it still rests on something other than epistemic reasons, so it is not the kind of support knowledge needs."
+  },
+  {
+    "id": "justified-but-false",
+    "section": "justification",
+    "question": "A navigator uses accurate charts and good instruments and concludes the ship is ten miles from port, but an unusual current has carried it further off. On the article's account, was her belief justified?",
+    "options": [
+      "No, since a justified belief cannot be false",
+      "Yes, since justification does not guarantee truth",
+      "No, since she did not know where the ship really was",
+      "Only to the degree that her estimate was close"
+    ],
+    "answer": 1,
+    "explanation": "She believed on epistemic reasons of real strength, which is what justification is, and the improbable sometimes happens. A view on which justification guaranteed truth would leave almost nothing justified, since almost nothing is certain."
+  },
+  {
+    "id": "justification-relative",
+    "section": "justification",
+    "question": "The same claim can be justified for one person and unjustified for another at the same time.",
+    "options": ["True", "False"],
+    "answer": 0,
+    "explanation": "Justification is a status relative to a person and a time, because people stand in different relations to the evidence: a specialist who has examined the data and a layman who merely heard the claim can differ. That is a difference in their standing, not in whether the claim is true."
+  },
+  {
+    "id": "having-versus-resting-on",
+    "section": "having-a-reason-and-using-it",
+    "question": "A juror has heard decisive forensic evidence against the defendant, but believes him guilty because he reminds her of someone she dislikes. Which is right?",
+    "options": [
+      "Her belief is justified, since she possesses decisive evidence for it",
+      "The claim is unjustified for her, since her motive is prejudice",
+      "Her evidence supports the claim, but her belief does not rest on it",
+      "Her belief is justified as long as the defendant is in fact guilty"
+    ],
+    "answer": 2,
+    "explanation": "She has justification available, since her evidence supports the claim, but the belief she actually holds rests on dislike rather than on that evidence. Merely possessing the evidence alongside the belief is not enough: knowledge needs the belief to rest on it."
+  },
+  {
+    "id": "why-not-just-truth",
+    "section": "having-a-reason-and-using-it",
+    "question": "An objector says justification is redundant, since all anyone wants from a belief is that it be true. What is the article's central reply?",
+    "options": [
+      "Justified beliefs are always true, so the two goals coincide",
+      "Truth is not the aim of belief, so justification is all that matters",
+      "A well-supported falsehood is worth more than an unsupported truth",
+      "When deciding what to believe, support is the only handle on truth you have"
+    ],
+    "answer": 3,
+    "explanation": "Nobody assesses beliefs after the answers are in; from the inside, what supports a belief is the only guide to whether it is true, and a method that follows reasons hits the truth far more often than chance. The first option is the trap: justification does not guarantee truth, which is exactly why it is a separate requirement."
+  }
+]

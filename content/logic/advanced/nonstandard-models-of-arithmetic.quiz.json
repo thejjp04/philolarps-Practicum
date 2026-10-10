@@ -1,0 +1,130 @@
+[
+  {
+    "id": "finite-parts-satisfiable",
+    "section": "the-construction",
+    "question": "Why does every finite subset of true arithmetic plus the sentences $c > 0$, $c > 1$, $c > 2$, and so on, have a model?",
+    "options": [
+      "Because true arithmetic is complete, so it decides every sentence about $c$ there is",
+      "Because Peano arithmetic cannot prove that $c$ equals some particular numeral",
+      "It names finitely many numerals, so $c$ can be read as one more than the largest",
+      "Because the natural numbers already contain an element larger than every numeral"
+    ],
+    "answer": 2,
+    "explanation": "A finite subset contains only finitely many of the new axioms, so the ordinary natural numbers satisfy it with $c$ interpreted as $n + 1$ for the largest numeral $n$ mentioned. Completeness of true arithmetic plays no role, and no natural number exceeds every numeral, which is why compactness is needed for the whole set."
+  },
+  {
+    "id": "not-a-symptom-of-incompleteness",
+    "section": "the-construction",
+    "question": "Nonstandard models of arithmetic exist only because Peano arithmetic is incomplete.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "The construction uses compactness alone and applies to true arithmetic, which is complete by construction. Incompleteness supplies a second, different source, such as models of Peano arithmetic plus the negation of its consistency statement."
+  },
+  {
+    "id": "two-ways-to-be-wrong",
+    "section": "the-construction",
+    "question": "What is peculiar about a model of Peano arithmetic plus the negation of its consistency statement, as against a compactness model of true arithmetic?",
+    "options": [
+      "It makes true a sentence false of the natural numbers, witnessed by a nonstandard element",
+      "It is inconsistent, since it satisfies the claim that Peano arithmetic proves a contradiction",
+      "It gets every arithmetical sentence right and is peculiar only in its order structure",
+      "Its proof of a contradiction is coded by a standard number, though it cannot be checked"
+    ],
+    "answer": 0,
+    "explanation": "The \"proof of a contradiction\" it contains is a nonstandard element, so no real proof exists and the model is a perfectly consistent structure believing something false. Getting every sentence right and differing only in structure is what the compactness model of true arithmetic does."
+  },
+  {
+    "id": "why-integer-blocks",
+    "section": "the-shape-of-such-a-model",
+    "question": "Why does each nonstandard element sit inside a block ordered like the integers?",
+    "options": [
+      "Because the model proves that every number is either even or odd, which splits it into blocks",
+      "Because between any two nonstandard elements there is always a third",
+      "Because compactness adds one copy of the integers for each new constant it introduces",
+      "It has a nonstandard predecessor and a successor, so chains run down and up forever"
+    ],
+    "answer": 3,
+    "explanation": "The model proves every nonzero number has a predecessor, and a standard element has only standard elements below it, so the descending chain never reaches the standard part. Density holds between blocks, not within them: inside a block the elements are discretely ordered like the integers."
+  },
+  {
+    "id": "no-least-block",
+    "section": "the-shape-of-such-a-model",
+    "question": "Why is there no least block of nonstandard elements?",
+    "options": [
+      "Every nonstandard element has a nonstandard predecessor, which lies below it",
+      "Half of a nonstandard $a$ lies in a strictly lower block",
+      "The standard part has no greatest element, so nothing marks where the blocks start",
+      "The blocks are densely ordered, so none can be least"
+    ],
+    "answer": 1,
+    "explanation": "The model proves every number is twice another or one more than twice another, and halving a nonstandard element drops it by a nonstandard amount, into a lower block. Predecessors stay inside the same block, so they show only that blocks have no least element, not that there is no least block; and dense orders can have least members."
+  },
+  {
+    "id": "order-type-is-cheap",
+    "section": "the-shape-of-such-a-model",
+    "question": "All countable nonstandard models share the order type of the natural numbers followed by rationals-many copies of the integers. What does this description leave out?",
+    "options": [
+      "Nothing: two countable nonstandard models with the same order type are isomorphic",
+      "The standard part, which the description treats as one more copy of the integers",
+      "Addition and multiplication, so models with this order type can fail to be isomorphic",
+      "Whether the blocks are densely ordered, since that varies from one model to another"
+    ],
+    "answer": 2,
+    "explanation": "The order type says nothing about the arithmetical operations, and classifying countable models of Peano arithmetic up to isomorphism is a deep subject. The standard part is the initial segment like the natural numbers, and the density of the blocks is common to all such models."
+  },
+  {
+    "id": "overspill-uses-least-number",
+    "section": "overspill",
+    "question": "Suppose a formula $\\varphi$ held of exactly the standard elements of a nonstandard model. Which principle satisfied by the model does this contradict?",
+    "options": [
+      "The least number principle, applied to $\\neg \\varphi$",
+      "Compactness, since $\\varphi$ would separate the standard part from the rest of the model",
+      "Induction in the standard model, since $\\varphi$ holds of zero and is closed under successor",
+      "The theorem that every number is even or odd"
+    ],
+    "answer": 0,
+    "explanation": "The least element failing $\\varphi$ would be nonstandard, so its predecessor would be nonstandard and fail $\\varphi$ too, contradicting leastness. Hence $\\varphi$ also holds of some nonstandard element, and the standard part is not definable, which is why the model cannot notice its extra elements."
+  },
+  {
+    "id": "what-tennenbaum-rules-out",
+    "section": "tennenbaums-theorem",
+    "question": "What does Tennenbaum's theorem rule out?",
+    "options": [
+      "Any countable nonstandard model of PA at all",
+      "A computable presentation of the ordering of a countable nonstandard model",
+      "A presentation of the standard model on which addition and multiplication are computable",
+      "A countable nonstandard model of PA with computable addition"
+    ],
+    "answer": 3,
+    "explanation": "No nonstandard model with domain the natural numbers has a computable addition, let alone both operations computable. Countable nonstandard models exist by compactness and downward Löwenheim-Skolem, the standard model is plainly computable, and the order type alone can be presented computably: the obstruction is in the arithmetic."
+  },
+  {
+    "id": "tennenbaum-overspill-step",
+    "section": "tennenbaums-theorem",
+    "question": "Where does overspill enter the proof of Tennenbaum's theorem?",
+    "options": [
+      "In showing that the model can define binary expansions of its elements in its own sense",
+      "In supplying a nonstandard element whose digits at standard places track one of the two sets",
+      "In showing that the two recursively enumerable sets cannot be recursively separated",
+      "In showing that every element of a recursive presentation must in fact be standard"
+    ],
+    "answer": 1,
+    "explanation": "Overspill yields an element whose binary expansion matches the membership pattern of one set at every standard position; if the operations were computable, its digits would be too, separating sets that cannot be recursively separated. That the sets are inseparable is an input from computability, not something overspill provides."
+  },
+  {
+    "id": "objects-of-proof",
+    "section": "tennenbaums-theorem",
+    "question": "The objection says nonstandard models are fictions, since none can be exhibited. On the reply, what tells against this?",
+    "options": [
+      "They prove results about standard structures, and their inexhibitability is itself a theorem",
+      "Someone will eventually exhibit one, once the right computable addition is found for it",
+      "First-order logic does pin down the natural numbers, so the models must be something else",
+      "The models can all be presented once one drops the requirement that their addition be computable"
+    ],
+    "answer": 0,
+    "explanation": "Transfer arguments of nonstandard analysis yield theorems about the ordinary reals, and an object provably lacking a recursive presentation is being described with precision. Tennenbaum's theorem guarantees that no computable addition will ever be found, and the reply agrees that first-order logic does not pin down the natural numbers."
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "why-negative-duties-dont-compete",
+    "section": "two-shapes-a-duty-can-have",
+    "question": "Why can everyone satisfy a duty not to steal toward everyone else at the same time, when the same is not true of a duty to relieve suffering?",
+    "options": [
+      "Stealing is always intended, while suffering is usually unforeseen",
+      "Refraining uses up nothing that another duty would need to draw on",
+      "Negative duties are owed only to people within the agent's reach",
+      "Positive duties bind only those who caused the suffering in question"
+    ],
+    "answer": 1,
+    "explanation": "Negative duties are jointly satisfiable because refraining costs nothing in the sense that matters, while the resources that discharge one positive duty are not available for another. The intention option borrows a distinction from elsewhere that plays no part in this one."
+  },
+  {
+    "id": "duty-to-pursue-an-end",
+    "section": "two-shapes-a-duty-can-have",
+    "question": "On the traditional account, a duty to help the badly off is a duty to pursue an end. What follows?",
+    "options": [
+      "It is not really binding, since the agent may ignore it entirely",
+      "Each badly off person can demand help from each well off person",
+      "It binds, though nobody in particular can demand its performance",
+      "It must be discharged at once, toward whoever happens to be nearest"
+    ],
+    "answer": 2,
+    "explanation": "A duty to pursue an end is genuinely binding while leaving the agent latitude about when, how and toward whom. The first option mistakes that latitude for optionality, although the article grants that latitude is what lets a comfortable person go a lifetime without noticing the duty."
+  },
+  {
+    "id": "why-the-pond-is-easy",
+    "section": "the-one-positive-duty-nearly-everyone-accepts",
+    "question": "Why does the duty of rescue in the pond case command near-universal agreement, on the article's diagnosis?",
+    "options": [
+      "Victim, rescuer, action and small cost are all fixed, so it is determinate",
+      "The victim is a child, and duties owed to children are especially strong",
+      "The rescuer can see the victim, and being visible is what grounds duties",
+      "Many legal systems require rescue, so the duty there is a legal one too"
+    ],
+    "answer": 0,
+    "explanation": "Every feature that makes positive duties indeterminate has been removed, so the duty becomes as determinate as a negative one. Visibility is exactly the candidate the article says is hard to defend as morally relevant once stated openly."
+  },
+  {
+    "id": "distance-owes-an-account",
+    "section": "the-one-positive-duty-nearly-everyone-accepts",
+    "question": "Someone accepts the duty to save the drowning toddler but denies any duty to save a distant stranger in equal peril whom they could help at small cost. What does the article say they owe?",
+    "options": [
+      "Nothing, since distance is plainly one of the four conditions on rescue",
+      "Proof that the distant stranger has a lower moral status than the toddler",
+      "A demonstration that help sent from far away would never actually arrive",
+      "An account of which feature of the pond case they are relying on"
+    ],
+    "answer": 3,
+    "explanation": "Distance is not among the four conditions that make the pond case compelling, so denying the extension requires naming some other feature. The first option gets the conditions wrong, and the other replies the article lists, such as uncertainty about whether help arrives, are said to be only partial."
+  },
+  {
+    "id": "staying-out-of-the-fire",
+    "section": "better-than-required",
+    "question": "One neighbour runs into a burning house at great risk to rescue a stranger. Another waits outside for the firefighters. On Urmson's view, how should these be classified?",
+    "options": [
+      "The first discharged a duty, and the second failed to discharge one",
+      "Both acts are merely permitted, like stopping to have some lunch",
+      "The first went beyond duty, and the second did nothing wrong",
+      "The first did what is required of anyone able to do it"
+    ],
+    "answer": 2,
+    "explanation": "Urmson's point is that the obligatory, the permitted and the forbidden leave out acts that are good beyond what is required. Calling the rescue merely permitted puts it alongside having lunch, which gets it as wrong as calling it required."
+  },
+  {
+    "id": "paradox-assumption",
+    "section": "better-than-required",
+    "question": "Which assumption generates the paradox of supererogation?",
+    "options": [
+      "What is morally best is thereby what one ought to do",
+      "Only acts that cost the agent nothing can be required",
+      "Every moral reason commends an act without demanding it",
+      "Duties of rescue extend to strangers at any distance"
+    ],
+    "answer": 0,
+    "explanation": "If the best act is thereby required, a better-than-required act becomes required and stops being supererogatory. The third option is close to what unqualified supererogationism holds about some reasons, which is its way of rejecting the assumption."
+  },
+  {
+    "id": "qualified-supererogationism",
+    "section": "better-than-required",
+    "question": "A theorist says the soldier had a duty to jump on the grenade, but that it was excused by the enormity of the cost. Which position is this?",
+    "options": [
+      "Anti-supererogationism",
+      "Qualified supererogationism",
+      "Unqualified supererogationism"
+    ],
+    "answer": 1,
+    "explanation": "Qualified supererogationism keeps the category by weakening the duty, which is defeated or excused by the cost. Unqualified supererogationism instead denies there was any duty, holding that some reasons commend without demanding."
+  },
+  {
+    "id": "where-the-line-sits",
+    "section": "better-than-required",
+    "question": "According to the aside, what fixes where the boundary between duty and supererogation falls?",
+    "options": [
+      "Whether the act in question would be demanded by law in most places",
+      "Whether the act is done for the right motive rather than for praise",
+      "Whether the person who would benefit could demand it from the agent",
+      "How heavily a person may weight their own life against others' good"
+    ],
+    "answer": 3,
+    "explanation": "Every workable morality protects a person's right to a life of their own, and actions that cross that protection become admirable rather than required. The aside adds that the threshold is fixed by intuition, which is why its convenient location is suspicious."
+  },
+  {
+    "id": "real-category-wrong-side",
+    "section": "better-than-required",
+    "question": "Someone accepts that some acts are beyond duty and concludes that their own failure to give anything to charity is beyond criticism. What does the reply say?",
+    "options": [
+      "The category is real, but that does not show they are on its right side",
+      "The inference is sound, since giving to charity is supererogatory",
+      "The category is unreal, so every failure to give is a wrong",
+      "Giving cannot be supererogatory, since it costs the giver little"
+    ],
+    "answer": 0,
+    "explanation": "The reply defends the category while conceding that nothing in it defends the current placement of the line. Inferring that one's own conduct is beyond criticism is exactly the mistake the objection describes."
+  }
+]

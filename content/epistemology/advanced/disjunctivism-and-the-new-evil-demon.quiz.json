@@ -1,0 +1,127 @@
+[
+  {
+    "id": "new-use-for-the-demon",
+    "section": "the-new-evil-demon-problem",
+    "question": "Descartes used the demon to threaten knowledge. What does the new evil demon problem put in question instead?",
+    "options": [
+      "Whether the deceived subject's beliefs are justified, granting that they are not knowledge",
+      "Whether anyone can know that they are not being deceived by a demon",
+      "Whether the deceived subject's perceptual processes are in fact unreliable",
+      "Whether the deceived subject's experiences are internally the same as a normal perceiver's"
+    ],
+    "answer": 0,
+    "explanation": "The problem grants that the victim lacks knowledge and asks whether they are nonetheless justified, which most people affirm and reliabilism denies. Whether anyone can know they are not deceived is the old sceptical question; the unreliability and the internal sameness are both stipulated, not in question."
+  },
+  {
+    "id": "normal-worlds-verdict",
+    "section": "the-new-evil-demon-problem",
+    "question": "Goldman proposed assessing reliability in normal worlds, those that match our general beliefs about the actual world. What verdict does this give about the demon victim?",
+    "options": [
+      "Unjustified, since perception is unreliable in the world the victim inhabits",
+      "Unjustified, since the victim's internal states differ from a normal perceiver's",
+      "Justified, since perception is reliable in worlds matching our general beliefs",
+      "Neither, since normal-worlds reliability is a condition on knowledge rather than justification"
+    ],
+    "answer": 2,
+    "explanation": "Moving the test away from the victim's demon-ridden world to normal worlds lets the victim's perceptual processes count as reliable, and so their beliefs as justified. The first option gives the verdict of unrepaired reliabilism, the very verdict the repair was designed to avoid, and the article notes that making the repair concedes something to the internalist."
+  },
+  {
+    "id": "internalism-feeds-scepticism",
+    "section": "the-internalists-dilemma",
+    "question": "Why does the access internalist's verdict on the demon victim seem to play into the sceptic's hands?",
+    "options": [
+      "It makes the victim unjustified, and so implies that nobody's perceptual beliefs are justified",
+      "If you share all your reasons with your duplicate, none of them entails its conclusion",
+      "It denies that reflection can reveal anything about one's own reasons",
+      "It makes justification depend on reliability, which no one can check by reflection"
+    ],
+    "answer": 1,
+    "explanation": "The internalist secures the right verdict by making your reasons whatever you share with the duplicate, such as seeming to see a cup, and the duplicate has that with no cup present, so your reasons always fall short of the truth. The first option reverses the internalist verdict: internalism says the victim is justified, and that is precisely how the trouble arises."
+  },
+  {
+    "id": "disjunctivism-combination",
+    "section": "epistemological-disjunctivism",
+    "question": "Which combination of claims about your rational support in a paradigm case of perceptual knowledge is distinctive of epistemological disjunctivism?",
+    "options": [
+      "It is factive, but not reflectively accessible to you",
+      "It is reflectively accessible to you, but not factive",
+      "It is neither factive nor accessible, but is reliably produced",
+      "It is both factive and reflectively accessible to you"
+    ],
+    "answer": 3,
+    "explanation": "The disjunctivist holds that your support is seeing that p, which entails p and which you can know by reflection that you have. That seeing is factive is something externalists and Williamson already accept; the distinctive claim is the accessibility, which is how the view hopes to combine the strengths of both sides."
+  },
+  {
+    "id": "spot-the-factive-reason",
+    "section": "epistemological-disjunctivism",
+    "question": "Which of these is a factive reason for believing that the kettle has boiled?",
+    "options": [
+      "Hearing that the kettle has boiled",
+      "Seeming to hear the kettle click off",
+      "Believing, on excellent evidence, that the kettle has boiled",
+      "Having a highly reliable habit of noticing when the kettle has boiled"
+    ],
+    "answer": 0,
+    "explanation": "One cannot hear that the kettle has boiled unless it has, so possessing this reason entails the truth of what it supports. Excellent evidence and reliable habits make a belief very likely to be true, but a belief based on them can still be false, so they are not factive."
+  },
+  {
+    "id": "victim-blameless-but-worse",
+    "section": "what-happens-to-the-demon-case",
+    "question": "How does Pritchard's disjunctivism describe the demon victim?",
+    "options": [
+      "As well supported as you, since from the inside the two cases are identical",
+      "As blameworthy, since a careful thinker would have detected the deception",
+      "As blameless but less well supported, having a seeming rather than a seeing",
+      "As unjustified in every sense, since their perceptual processes are unreliable"
+    ],
+    "answer": 2,
+    "explanation": "The victim responds reasonably to how things seem and so is blameless, but has a worse reason than you. Equal support is what the new evil demon intuition demands, and critics say the disjunctivist concedes too little; Pritchard replies that the intuition depends on the internalist picture of shared reasons."
+  },
+  {
+    "id": "access-without-a-priori",
+    "section": "the-access-problem",
+    "question": "The access problem says that knowing by reflection that you see a cup would give you reflective knowledge that there is a cup. How does Pritchard respond?",
+    "options": [
+      "He denies that seeing that there is a cup entails that there is a cup",
+      "Reflection reveals what kind of reason you have, but the knowledge that there is a cup came first, by seeing",
+      "He accepts that one can know by reflection alone that there is a cup on the table",
+      "He holds that reflection reveals seemings only, so one never knows reflectively that one sees"
+    ],
+    "answer": 1,
+    "explanation": "You know there is a cup empirically, by seeing it, and reflection then tells you what your support for that belief is; it does not deliver facts about the world by itself. Denying that seeing is factive would abandon the core of the view, and the last option would surrender its distinctive claim to accessibility."
+  },
+  {
+    "id": "discriminating-versus-favouring",
+    "section": "the-access-problem",
+    "question": "You cannot tell by introspection whether you are seeing a cup or hallucinating one. How does Pritchard square this with the claim that you have reflective access to your seeing?",
+    "options": [
+      "By arguing that careful introspection can in fact discriminate seeing from hallucinating",
+      "By conceding that reflective access holds only in cases where you can discriminate the good case from the bad",
+      "By appealing to metaphysical disjunctivism, on which veridical experience and hallucination differ in kind",
+      "By separating discriminating between cases, which you cannot do, from having a reason favouring the good one"
+    ],
+    "answer": 3,
+    "explanation": "Pritchard concedes that you cannot discriminate the good case from the bad, but holds that you can still have a reason favouring the claim that you are in the good case, namely that you see you are. Appealing to metaphysical disjunctivism is tempting but unavailable, since Pritchard takes care not to commit himself to it."
+  },
+  {
+    "id": "metaphysical-independence",
+    "section": "the-highest-common-factor-view",
+    "question": "Accepting epistemological disjunctivism commits one to the view that a veridical experience and a hallucination are different kinds of mental state.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "That claim is metaphysical disjunctivism, a thesis about the nature of experience, and the article says the two views are logically independent. One can hold that perceptual reasons differ between the good and bad cases while granting that the experiences themselves are of one kind, which is Pritchard's careful position."
+  },
+  {
+    "id": "diagnostic-aim",
+    "section": "assessment",
+    "question": "A sceptic objects that \"I know I am in the good case because I see that I am\" begs the question. According to the reply in the article, what is the disjunctivist trying to achieve?",
+    "options": [
+      "To show that a premise the sceptic needs, the highest-common-factor view, is optional",
+      "To persuade the sceptic of the existence of the external world from premises the sceptic accepts",
+      "To prove by reflection alone that one is not the victim of a deceiving demon",
+      "To show that the sceptic's conclusion is self-contradictory and so cannot be coherently stated"
+    ],
+    "answer": 0,
+    "explanation": "The aim is diagnostic: the sceptical argument silently relies on the highest-common-factor view, and showing that a coherent alternative exists means the conclusion is not forced on us. Persuading the sceptic from their own premises is not the aim, and the reply notes that no anti-sceptical view, Moore's or the contextualist's included, achieves it."
+  }
+]

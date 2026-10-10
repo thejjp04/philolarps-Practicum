@@ -35,6 +35,8 @@ The structural rule permitting the formulas in a sequent to be reordered. It exp
 
 Each rule corresponds to something on the computational side of the previous article. Weakening is discarding a value; contraction is copying one; exchange is reordering arguments. A calculus without weakening and contraction is one in which every value is used exactly once, which is the discipline a language for memory or for physical resources would need, and the connection is exact rather than suggestive.
 
+<Check id="linear-use-exactly-once" />
+
 ## Linear logic
 
 <Definition term="Linear logic">
@@ -48,6 +50,8 @@ Girard's illustration is a vending machine. One unit of currency and the multipl
 The expressive power that was lost returns in a controlled form through the exponentials, modal operators marking a formula as reusable. A formula under the exponential may be weakened and contracted, so classical and intuitionistic logic embed into linear logic by placing exponentials at the right positions. Nothing is given up; the structural rules become explicit rather than implicit, which is the point. Linear logic has cut elimination, and its proof nets give a representation of proofs that quotients away the irrelevant ordering of rule applications, a problem natural deduction has and does not solve.
 
 The applications followed quickly and are concrete. Session types for communication protocols, where a channel is used according to a schedule and reuse is a bug; the ownership discipline of the Rust programming language, in which a value has one owner and copying must be requested; quantum computation, where the no-cloning theorem is the failure of contraction stated in physics.
+
+<Check id="why-conjunction-splits" />
 
 ## The Lambek calculus
 
@@ -66,6 +70,8 @@ These systems are not logics but algebras of something else. A logic states whic
 <Reply>
 The complaint would apply to modal logic and was made about it. It is better answered by looking at what the systems do than by disputing the label. Substructural systems have cut elimination, a subformula property, an algebraic semantics in residuated lattices, and a proof theory continuous with Gentzen's, so they are logics by every structural criterion available. The resource reading is one interpretation, and the same formalism carries others: relevance logic drops weakening because an irrelevant premise should not license a conclusion, which is a claim about entailment and not about resources, and the contraction-free systems are studied for their treatment of paradox, which is a claim about truth. The deeper reply is that the structural rules were never neutral. Presenting them as bookkeeping concealed three substantive assumptions about premises, and making them explicit is what a proof-theoretic analysis is supposed to do.
 </Reply>
+
+<Check id="lambek-word-order" />
 
 ## Next
 

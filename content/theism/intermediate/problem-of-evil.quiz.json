@@ -1,0 +1,127 @@
+[
+  {
+    "id": "premises-from-the-theist",
+    "section": "the-shape-of-the-problem",
+    "question": "What makes the problem of evil structurally unlike the other arguments in this tier?",
+    "options": [
+      "It is the only argument that claims to prove its conclusion rather than make it probable",
+      "Every premise comes from the theist's own commitments, plus a fact no one disputes",
+      "It relies on contested empirical claims about how much suffering there actually is",
+      "It targets every conception of the divine, not only the God of classical theism"
+    ],
+    "answer": 1,
+    "explanation": "The critic takes the attributes as the tradition states them and adds only that suffering exists, so the argument cannot be answered by attacking the critic's evidence. Its reach is limited to classical theism, as the aside stresses, so the last option overstates it."
+  },
+  {
+    "id": "why-the-distinction-matters",
+    "section": "two-kinds-of-suffering",
+    "question": "Why does the distinction between moral and natural evil carry so much weight in this debate?",
+    "options": [
+      "Natural evil is not really evil in the technical sense, since no agent intended it",
+      "The logical version concerns only natural evil and the evidential only moral evil",
+      "Free-will responses cover moral evil directly but natural evil only by some further manoeuvre",
+      "Moral evil can always be blamed on human beings, so it raises no problem for theism at all"
+    ],
+    "answer": 2,
+    "explanation": "The responses divide along the line, so the asymmetry shapes the whole debate. \"Evil\" is a term of art for bad states of affairs generally, so a fawn's suffering counts as evil whether or not anyone intended it."
+  },
+  {
+    "id": "mackie-freely-right",
+    "section": "the-logical-version",
+    "question": "How does Mackie answer, in advance, the reply that God permits evil because free agents are valuable?",
+    "options": [
+      "Freedom is an illusion, so nothing of value is gained by creating supposedly free agents",
+      "Free agents could still be made to do right by God's direct intervention in each choice",
+      "The value of freedom is plainly outweighed by the amount of evil that free agents have actually produced",
+      "Agents can freely do right on any occasion, so God could have made ones who freely do right on every one"
+    ],
+    "answer": 3,
+    "explanation": "If freely doing right on one occasion involves no contradiction, nor does freely doing right on every occasion, so an omnipotent being could have created such agents. The weighing option belongs to evidential reasoning; Mackie's counter is a claim about consistency, not about how much evil there is."
+  },
+  {
+    "id": "what-the-defeat-showed",
+    "section": "the-logical-version",
+    "question": "On the article's account, what did the defeat of the logical version actually show?",
+    "options": [
+      "Only that theism and some evil are not formally inconsistent, nothing about amount or distribution",
+      "That theism is more probable than not despite evil, since a coherent story about evil can be told",
+      "That the problem of evil has been solved, since inconsistency was its strongest form",
+      "That Mackie's added principles are false, so a good being need not prevent evil at all"
+    ],
+    "answer": 0,
+    "explanation": "Refuting a claim of impossibility requires only one coherent possibility, which says nothing about the quantity or distribution of suffering. Announcing that the problem is solved is the misreport the article warns about, and the philosophers who did the work do not make it."
+  },
+  {
+    "id": "defence-enough-for-logical",
+    "section": "what-a-response-has-to-do",
+    "question": "Why is a defence enough against the logical version of the problem but not against the evidential version?",
+    "options": [
+      "A defence claims to know God's actual reasons, which only the logical version requires",
+      "A bare possibility refutes an impossibility claim but does nothing to make the proposal probable",
+      "The evidential version claims outright impossibility, so it needs something stronger than a story",
+      "A defence is offered by believers, and the evidential version is aimed at unbelievers"
+    ],
+    "answer": 1,
+    "explanation": "As with keys that could conceivably be in the car, describing an alternative gives no reason to expect it, so the evidential problem needs a proposal that is probable or at least not improbable. Claiming to know God's actual reasons is what a theodicy does, not a defence."
+  },
+  {
+    "id": "theist-must-deny",
+    "section": "the-evidential-version",
+    "question": "On the article's account, what exactly is the theist committed to denying?",
+    "options": [
+      "That terrible things happen, since a good God would never allow them",
+      "That most suffering is gratuitous, though a few pointless cases may occur",
+      "That any single instance of suffering is gratuitous, taken one at a time",
+      "That suffering is gratuitous in total, though individual cases might be pointless"
+    ],
+    "answer": 2,
+    "explanation": "The attributes require that every instance, each taken separately, serves an outweighing good or avoids something equally bad or worse. Allowing a few pointless cases would mean a being who could have prevented a pointless horror and did not, which perfect goodness rules out."
+  },
+  {
+    "id": "fawn-is-engineered",
+    "section": "the-evidential-version",
+    "question": "Why, on the article's account, is Rowe's fawn chosen as the example?",
+    "options": [
+      "It is the most emotionally powerful case, and so the hardest for a theist to dismiss",
+      "It shows that animal suffering is worse than human suffering, which theists ignore",
+      "It involves a human decision at some point, so free-will replies can be tested on it",
+      "Each feature blocks a standard reply: no free choice, no moral growth, no observer"
+    ],
+    "answer": 3,
+    "explanation": "The example is engineered rather than emotive: freedom, soul-making and the improvement of witnesses are all ruled out by the case itself. No human ever knows of the fire, which is exactly why free-will replies do not reach it."
+  },
+  {
+    "id": "rowe-premise-not-proved",
+    "section": "the-evidential-version",
+    "question": "Rowe claimed that the premise that there is pointless intense suffering could be proved.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "He offered it as a reasonable inference from what we can observe and allowed that a theist with independent grounds might rationally reject it, the position he called friendly atheism. That restraint is usually dropped when the argument is repeated."
+  },
+  {
+    "id": "rowe-counter-to-limits",
+    "section": "the-evidential-version",
+    "question": "The principal reply says our failing to see a reason for an evil is weak evidence that there is none. What is Rowe's counter?",
+    "options": [
+      "We reason from \"none discernible\" to \"none there\" everywhere, and suspending that here has costs",
+      "Our cognitive position is in fact close enough to an omniscient being's to see its reasons",
+      "Theists have never offered any reason for any particular evil, so we may conclude none exists",
+      "A justifying reason would have to be known to us, since a loving God would surely reveal it to us"
+    ],
+    "answer": 0,
+    "explanation": "Rowe defends the inference as ordinary reasoning and warns that abandoning it in this one case has consequences its proponents may not want. He does not claim our cognitive position matches an omniscient being's, which is the point the reply exploits."
+  },
+  {
+    "id": "draper-avoids-gratuitous",
+    "section": "drapers-version",
+    "question": "How does Draper's version of the argument avoid the reply aimed at Rowe?",
+    "options": [
+      "It shows that pain and pleasure are not tied to biological function at all, so no reason for them is available",
+      "It claims no particular evil is gratuitous, comparing how well theism and indifference predict pain and pleasure",
+      "It proves that the hypothesis of indifference is true by deduction from the distribution of pleasure",
+      "It grants our cognitive limits but argues God must reveal any reasons for suffering to us"
+    ],
+    "answer": 1,
+    "explanation": "With no claim that a specific evil is pointless, the appeal to our cognitive limits has nothing to fasten on; the argument becomes a likelihood comparison. Draper's data are that pain and pleasure are closely tied to biological function, which is the reverse of the first option."
+  }
+]

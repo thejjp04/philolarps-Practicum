@@ -1,0 +1,130 @@
+[
+  {
+    "id": "defeat-not-refutation",
+    "section": "the-claim",
+    "question": "If the evolutionary argument succeeds, what has it shown about naturalism?",
+    "options": [
+      "That naturalism is false, because accepting it leads straight to a contradiction in the naturalist's beliefs",
+      "That naturalism cannot be rationally held by someone who sees what it implies, though it may be true",
+      "That naturalism is improbable once all the evidence for and against it has been weighed",
+      "That the naturalist's cognitive faculties are in fact unreliable, so their beliefs are mostly false"
+    ],
+    "answer": 1,
+    "explanation": "The argument offers a defeater, a reason to give up a belief, not a demonstration that the belief is false; that is how self-defeat differs from self-contradiction. The reading on which it shows our faculties to be unreliable mistakes an undercutting defeater for a rebutting one."
+  },
+  {
+    "id": "theist-who-accepts-evolution",
+    "section": "what-unguided-is-doing",
+    "question": "A theist accepts common descent and holds that natural selection was the principal mechanism producing the human mind. Does the evolutionary argument against naturalism give her a defeater for her beliefs?",
+    "options": [
+      "No, because the argument targets evolution plus the claim that the process was unaimed, which she denies",
+      "Yes, because any creature whose faculties arose by natural selection has reason to doubt their reliability",
+      "No, because theism supplies her with a non-circular proof that her cognitive faculties are reliable",
+      "Yes, but only for her beliefs about matters remote from ancestral survival, such as metaphysics"
+    ],
+    "answer": 0,
+    "explanation": "That the process was unguided is a metaphysical addition supplied by naturalism, not part of evolutionary theory, and the argument attacks only the conjunction. The option about a non-circular proof is the trap: the argument never claims theism provides one, only that theism does not generate a defeater."
+  },
+  {
+    "id": "content-invisible-to-selection",
+    "section": "why-the-probability-might-be-low",
+    "question": "Selection acts on behaviour. What further claim does Plantinga need in order to conclude that the content of our beliefs is invisible to selection?",
+    "options": [
+      "That most of the beliefs animals act on are in fact false, though they happen to be adaptive",
+      "That natural selection works too slowly to fix truth-tracking traits in a population",
+      "That a creature's beliefs never influence its behaviour in any way at all, whether through content or otherwise",
+      "That beliefs cause behaviour through their neurophysiological properties, with content carried along"
+    ],
+    "answer": 3,
+    "explanation": "On the materialism that Plantinga takes naturalism to bring with it, a belief is a neural structure whose physical properties do the causal work, so selection tests those properties and not what the belief is about. He does not need the stronger claim that beliefs have no influence at all, which is only one branch of his analysis, and he never claims that most adaptive beliefs are false, only that their truth is unconstrained."
+  },
+  {
+    "id": "efficacious-content-not-enough",
+    "section": "branching-on-the-mind",
+    "question": "Take the branch on which belief content is itself causally efficacious. What does Plantinga say must still hold before reliability follows?",
+    "options": [
+      "Nothing further, since selection will then favour true content automatically",
+      "That content-driven behaviour be adaptive, and that the adaptive content be true",
+      "That content be fixed by the state's neurophysiological properties",
+      "That the organism be capable of reflecting on its own beliefs"
+    ],
+    "answer": 1,
+    "explanation": "Causal efficacy only puts content within selection's reach: content could still drive maladaptive behaviour, and adaptive content need not be accurate, as the predator case was meant to show. Assuming that efficacious content is automatically selected for truth is exactly the gap the branch analysis is built to expose."
+  },
+  {
+    "id": "undercutting-analogue",
+    "section": "two-kinds-of-defeat",
+    "question": "Which case is the closest analogue to the kind of defeater the evolutionary argument claims the naturalist has for R?",
+    "options": [
+      "A second, calibrated thermometer shows a different temperature from yours",
+      "A reliable friend tells you that your belief about the temperature is false",
+      "You learn that the thermometer you have trusted all morning was never calibrated",
+      "You notice that your belief about the temperature contradicts another of your beliefs"
+    ],
+    "answer": 2,
+    "explanation": "The argument is offered as an undercutting defeater: it removes the naturalist's grounds for trusting their faculties without giving a reason to think them unreliable, just as learning the thermometer was never calibrated removes support without showing the reading wrong. The second thermometer and the friend's testimony supply evidence against the belief itself, which makes them rebutting defeaters, the kind the argument is often wrongly taken to offer."
+  },
+  {
+    "id": "main-objection-target",
+    "section": "the-main-objection",
+    "question": "The main objection holds that a belief's content is constituted by what typically causes the state and what it typically leads the organism to do. Which premise does it attack, and how?",
+    "options": [
+      "That R is improbable given N and E, since true content and adaptive behaviour then cannot come apart freely",
+      "That grasping a low probability for R gives a defeater, since a probability is not itself a reason to doubt anything",
+      "That a defeater for R spreads to every belief, since some beliefs are formed without the faculties",
+      "The conclusion, since belief in N and E was formed by reflection rather than by evolved faculties"
+    ],
+    "answer": 0,
+    "explanation": "If content is fixed by causal role, the fanciful assignments in Plantinga's examples fail to attach to any real state, and the probability of R given N and E is no longer low. Plantinga's answer is that relying on a naturalistic theory of content to vindicate one's faculties is circular, not that the objection has picked the wrong premise."
+  },
+  {
+    "id": "inscrutability-and-defeat",
+    "section": "the-probabilistic-objection",
+    "question": "Plantinga meets the objection that no probability can be assigned to R given N and E by saying that inscrutability is itself enough for a defeater. On the article's account, what does the resulting dispute turn on?",
+    "options": [
+      "Whether a precise value for that probability can eventually be found, whether low or high, by further work",
+      "Whether the probability of R given theism is any easier to assess than R given N and E",
+      "Whether a defeater needs a positive reason to doubt, or the absence of a supporting reason suffices",
+      "Whether the content of a belief is causally efficacious after all, as the main objection says"
+    ],
+    "answer": 2,
+    "explanation": "If defeat requires a positive reason to doubt, inscrutability gives the naturalist none; if the mere absence of support is enough, it does. That is a question in the theory of defeat rather than about evolution or numbers, which is why objection and response pass each other until it is settled."
+  },
+  {
+    "id": "tu-quoque-what-is-claimed",
+    "section": "the-tu-quoque",
+    "question": "On the article's account, the evolutionary argument claims that theism, unlike naturalism, provides a non-circular justification of the reliability of our faculties.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "Everyone starts by trusting their faculties and can defend that trust only by using them, theist included. The theist's reply to the tu quoque is that the argument asks which positions generate a defeater for that starting trust on reflection, not which can be established from a neutral standpoint that nobody occupies."
+  },
+  {
+    "id": "local-reliability-consequence",
+    "section": "local-reliability",
+    "question": "Suppose the sceptical conclusion is restricted to beliefs about matters remote from ancestral survival. What follows, on the article's account?",
+    "options": [
+      "The argument is defused entirely, since naturalism is a belief about the physical environment",
+      "Global self-defeat survives intact, since belief in naturalism is among the beliefs selection favours",
+      "Only theistic belief is put in question, since theism concerns matters remote from survival",
+      "Ordinary beliefs are safe, but abstract ones, naturalism and theism included, are exposed"
+    ],
+    "answer": 3,
+    "explanation": "Selection plausibly favours accuracy about the nearby physical world, so the dramatic global result disappears. But the beliefs left exposed are precisely the theoretical ones, and belief in naturalism, belief in theism and the evolutionary argument itself are all of that kind, which makes the milder scepticism uncomfortable for both sides."
+  },
+  {
+    "id": "when-debunking-works",
+    "section": "local-reliability",
+    "question": "According to the reply to the objection that the argument proves too much, when does a belief's causal history undermine it?",
+    "options": [
+      "When the history would have produced the belief whether or not it was true",
+      "Whenever the history can be described without mentioning the belief's truth",
+      "Whenever natural selection played some part in producing the belief",
+      "When the believer cannot recall how the belief was formed"
+    ],
+    "answer": 0,
+    "explanation": "A history that runs through the fact believed in, as seeing a chair runs through the chair, does not undermine the belief. The objection's version, that any history describable without mentioning truth undermines, is the trap: every belief has such a description, which is why that version proves too much."
+  }
+]

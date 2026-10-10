@@ -1,0 +1,119 @@
+[
+  {
+    "id": "classify-version",
+    "section": "two-problems-under-one-name",
+    "question": "Someone says: \"I grant that 'my sister is in pain' makes perfectly good sense. What I want to know is what my evidence for it is.\" Which problem are they raising?",
+    "options": [
+      "The conceptual version, which asks how the thought can even be formed",
+      "The epistemological version, which asks how the belief is justified",
+      "Solipsism, which holds that no mind exists except one's own",
+      "The mind-body problem, which asks how her pain relates to her brain"
+    ],
+    "answer": 1,
+    "explanation": "Granting that the claim makes sense and asking for the evidence is exactly the epistemological version. The conceptual version would challenge the very thing this speaker grants, that a concept learned from one's own case can apply to someone else at all."
+  },
+  {
+    "id": "brain-map-indirect",
+    "section": "what-there-is-to-go-on",
+    "question": "Why does the article count even a complete map of someone's brain activity as indirect evidence of their mental states?",
+    "options": [
+      "Brain imaging is still too imprecise to pick out individual mental states reliably",
+      "Brain activity is not behaviour, so it cannot count as evidence about the mind at all",
+      "Only what a person says, not how their body works, bears on what they feel",
+      "It maps the brain, and the move from there to how things are for them needs a licence"
+    ],
+    "answer": 3,
+    "explanation": "However complete the data, they describe the brain, and the problem is precisely what entitles anyone to move from that to a claim about experience. The article counts physiology and imaging as behavioural evidence in its broad sense, so the second option gets the category wrong."
+  },
+  {
+    "id": "analogy-sample",
+    "section": "the-classic-argument",
+    "question": "What is the well-known defect of the argument from analogy?",
+    "options": [
+      "It generalises from a single case that can never be checked against another",
+      "It assumes other people's bodies resemble one's own, though they vary a great deal",
+      "It relies on behaviour, which can always be faked by a good enough actor",
+      "It proves too much, since it would make every behaving machine conscious"
+    ],
+    "answer": 0,
+    "explanation": "Ordinary inductions draw strength from many varied instances, but the only mind anyone can inspect from the inside is their own, so the sample is one and always will be. Pretence is a worry the article raises later, against the criterial view, not the defect of the analogy argument."
+  },
+  {
+    "id": "analogy-too-weak",
+    "section": "the-classic-argument",
+    "question": "Even if the argument from analogy worked, why would it not be the justification people actually rely on?",
+    "options": [
+      "It would license certainty, while ordinary belief in other minds is merely tentative",
+      "It applies only to other humans, while people also believe animals have minds",
+      "It would license only modest confidence, while everyone's belief is unshakeable",
+      "It requires knowing the workings of other people's brains, which few people do"
+    ],
+    "answer": 2,
+    "explanation": "A single-case induction would support a tentative conclusion of modest strength, yet nobody holds the belief that way and no evidence would shake it. The first option reverses the mismatch: the trouble is too little confidence licensed, not too much."
+  },
+  {
+    "id": "best-explanation-gain",
+    "section": "better-versions",
+    "question": "What does treating the inference as one to the best explanation gain over the argument from analogy?",
+    "options": [
+      "It yields certainty that other people have inner lives, not mere probability",
+      "It does not need a large sample in the way enumerative induction does",
+      "It shows directly that others feel, without any inference at all",
+      "It guarantees that every rival hypothesis has been considered and ruled out"
+    ],
+    "answer": 1,
+    "explanation": "The hypothesis of other minds explains the intricacy and coherence of people's behaviour, and that does not depend on counting instances. The last option names one of its weaknesses instead: a best explanation is only best among the alternatives actually considered."
+  },
+  {
+    "id": "explanation-and-feeling",
+    "section": "better-versions",
+    "question": "Why does the explanatory argument have particular trouble with phenomenal consciousness?",
+    "options": [
+      "Felt experience cannot be described in words, so it can never appear in any explanation",
+      "Other people's behaviour is too irregular to be explained by any hypothesis",
+      "Phenomenal consciousness is the only thing behaviour could be explained by",
+      "Information processing explains the behaviour, so whether anything is felt looks idle"
+    ],
+    "answer": 3,
+    "explanation": "What the behaviour needs explaining by is the processing, and adding that it is felt seems to explain nothing further, which is the gap the second article identified. The third option inverts this: the worry is that feeling does no explanatory work, not that it does all of it."
+  },
+  {
+    "id": "beetle-lesson",
+    "section": "the-conceptual-attack",
+    "question": "What is Wittgenstein's beetle in the box meant to show?",
+    "options": [
+      "Whatever gives the word its meaning, it cannot be the private object in each box",
+      "Everyone's box probably holds the same kind of beetle, by analogy with one's own",
+      "Words for private objects have no meaning, since nobody can check their use",
+      "Each person's word \"beetle\" means something different, fixed by their own box"
+    ],
+    "answer": 0,
+    "explanation": "The word has a shared use that could not change whatever the boxes held, or if they were empty, so its meaning must be fixed publicly. The third option overshoots: the point is that sensation words do have public meaning, just not meaning fixed by a private item."
+  },
+  {
+    "id": "criterion-not-sign",
+    "section": "the-conceptual-attack",
+    "question": "On the criterial view, how is someone writhing and crying out related to their being in pain?",
+    "options": [
+      "As a sign, linked by a contingent correlation discovered like smoke and fire",
+      "As a guarantee, since pretending to be in pain turns out to be impossible",
+      "As a criterion, since the link is part of what makes the concept what it is",
+      "As irrelevant, since pain is a private object the behaviour cannot reach"
+    ],
+    "answer": 2,
+    "explanation": "A criterion's connection to the state holds in virtue of what the term means, not in virtue of an empirical discovery, so there is no inferential gap to bridge. The view does not deny pretence; its defenders say criteria are defeasible, which is where critics press."
+  },
+  {
+    "id": "reasons-versus-justification",
+    "section": "the-conceptual-attack",
+    "question": "The objection says nobody outside philosophy has this problem. What is the reply's first point?",
+    "options": [
+      "Many ordinary people do in fact doubt whether their families really have inner lives",
+      "Whether a belief was adopted on reasons differs from whether it can be justified",
+      "A belief that nobody can justify ought to be abandoned once that is shown",
+      "The problem only arises for machines, never for other human beings"
+    ],
+    "answer": 1,
+    "explanation": "Perceptual beliefs are not adopted on the basis of arguments either, yet asking what makes them reasonable is not idle. The reply grants that people would not abandon the belief, so it does not claim, as the third option does, that an unjustified belief must be given up."
+  }
+]

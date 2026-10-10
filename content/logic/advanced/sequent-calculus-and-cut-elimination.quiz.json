@@ -1,0 +1,127 @@
+[
+  {
+    "id": "sequent-for-incompatibility",
+    "section": "sequents",
+    "question": "Which sequent says that $P$ and $Q$ cannot both hold?",
+    "options": [
+      "$P, Q \\Rightarrow$",
+      "$\\Rightarrow P, Q$",
+      "$P \\lor Q \\Rightarrow$",
+      "$\\Rightarrow \\neg P, Q$"
+    ],
+    "answer": 0,
+    "explanation": "Formulas on the left are read together, and an empty succedent says the antecedent is contradictory. $P \\lor Q \\Rightarrow$ says something stronger, that neither holds, while $\\Rightarrow P, Q$ asserts $P \\lor Q$, since commas on the right are read disjunctively."
+  },
+  {
+    "id": "eigenvariable-blocks",
+    "section": "the-quantifier-rules",
+    "question": "Which sequent would become provable if the eigenvariable condition were dropped?",
+    "options": [
+      "$\\forall x P(x) \\Rightarrow P(a)$",
+      "$P(a) \\Rightarrow \\exists x P(x)$",
+      "$P(a) \\Rightarrow \\forall x P(x)$",
+      "$\\exists x P(x) \\Rightarrow \\exists x P(x)$"
+    ],
+    "answer": 2,
+    "explanation": "From the axiom $P(a) \\Rightarrow P(a)$, Right $\\forall$ would generalise on $a$ even though $a$ occurs in the antecedent, licensing the move from one case to all. The other three are provable with the condition in force, since Left $\\forall$ and Right $\\exists$ may use any term."
+  },
+  {
+    "id": "which-structural-rule",
+    "section": "the-structural-rules",
+    "question": "A cut-free proof of $\\Rightarrow Q \\rightarrow (P \\rightarrow P)$ in LK must use which structural rule?",
+    "options": [
+      "Contraction, to merge two occurrences of $P$ on the left of the arrow",
+      "Weakening, to bring in $Q$ as an assumption that is never used",
+      "Contraction, to merge two copies of $P \\rightarrow P$ on the right of the arrow",
+      "None, since the logical rules for the conditional suffice on their own"
+    ],
+    "answer": 1,
+    "explanation": "Working backwards, Right $\\rightarrow$ twice leaves $Q, P \\Rightarrow P$, and the axiom has only $P$ on the left, so $Q$ must be added by weakening. This is the step relevance logic refuses: dropping weakening blocks conclusions that ignore their premises."
+  },
+  {
+    "id": "why-cut-blocks-search",
+    "section": "the-cut-rule",
+    "question": "Why is cut, alone among the rules, an obstacle to searching backwards for a proof?",
+    "options": [
+      "It has two premises, so the search tree branches at every cut that is tried",
+      "It is the only rule that moves a formula from one side of the arrow to the other",
+      "It can be applied only after weakening has been used on both of its premises",
+      "Its conclusion does not reveal the cut formula, so any formula might be needed"
+    ],
+    "answer": 3,
+    "explanation": "Every other rule's premises can be read off its conclusion, built from what the conclusion contains; after a cut the vanished formula could have been anything. Two premises are not the problem, since Right $\\land$ and Left $\\lor$ have two and leave search finite, and the negation rules also move formulas across the arrow."
+  },
+  {
+    "id": "conjunction-detour",
+    "section": "cut-elimination",
+    "question": "A proof cuts on $\\varphi \\land \\psi$. The left premise came by Right $\\land$ from proofs of $\\Gamma \\Rightarrow \\varphi$ and $\\Gamma \\Rightarrow \\psi$, and the right premise by Left $\\land$ from $\\varphi, \\Gamma \\Rightarrow \\Delta$. What does the reduction step do?",
+    "options": [
+      "Cuts the proof of $\\Gamma \\Rightarrow \\varphi$ against that of $\\varphi, \\Gamma \\Rightarrow \\Delta$, dropping the proof of $\\psi$",
+      "Cuts first on $\\varphi$ and then on $\\psi$, keeping both halves of the proof of the left premise",
+      "Moves the cut above the Right $\\land$ rule, leaving the cut formula as $\\varphi \\land \\psi$ itself",
+      "Removes the cut and weakens the proof of $\\Gamma \\Rightarrow \\varphi$ into a proof of $\\Gamma \\Rightarrow \\Delta$"
+    ],
+    "answer": 0,
+    "explanation": "The conjunction was built on one side only to be taken apart on the other, so the detour is deleted and the cut falls to a simpler formula. The proof of $\\psi$ was never needed; moving a cut upward without simplifying it is the other kind of step, used only when a premise does not act on the cut formula."
+  },
+  {
+    "id": "cut-free-cost",
+    "section": "cut-elimination",
+    "question": "Because cut is admissible, a cut-free proof of a sequent is never vastly longer than a proof of it that uses cuts.",
+    "options": ["True", "False"],
+    "answer": 1,
+    "explanation": "Admissibility concerns what is provable, not at what length: eliminating cuts can enlarge a proof by more than any tower of exponentials of fixed height. Lemmas are how proofs stay short, and the theorem's uses are uses of the possibility, not of the transformation."
+  },
+  {
+    "id": "consistency-by-shape",
+    "section": "the-subformula-property",
+    "question": "How do cut elimination and the subformula property show that the empty sequent has no proof?",
+    "options": [
+      "Every axiom is true under every interpretation, so no derivation can ever reach a false sequent",
+      "The empty sequent has no subformulas, so no cut on any of its formulas can be performed",
+      "A cut-free proof of it could hold only subformulas of nothing, hence no formulas and no axioms",
+      "Contraction cannot shrink a sequent to nothing, so every proof must end with a non-empty one"
+    ],
+    "answer": 2,
+    "explanation": "Any proof can be made cut-free, and every formula in a cut-free proof is a subformula of the end sequent, which here has none; a proof with no formulas has no axioms at its leaves. The appeal to interpretations is soundness, a semantic argument, whereas this one inspects only the shape of proofs."
+  },
+  {
+    "id": "find-the-interpolant",
+    "section": "the-subformula-property",
+    "question": "$P \\land Q$ implies $Q \\lor R$. Which formula is an interpolant for that implication?",
+    "options": [
+      "$P$",
+      "$P \\land Q$",
+      "$Q \\lor R$",
+      "$Q$"
+    ],
+    "answer": 3,
+    "explanation": "An interpolant may use only vocabulary common to both sides, which here is just $Q$, and $P \\land Q$ implies $Q$, which implies $Q \\lor R$. Taking either given formula as its own interpolant fails, since each contains a letter, $P$ or $R$, that the other lacks."
+  },
+  {
+    "id": "what-gentzen-measured",
+    "section": "the-consistency-of-arithmetic",
+    "question": "On the article's account, what does Gentzen's consistency proof for arithmetic establish?",
+    "options": [
+      "That arithmetic is consistent on the basis of pure logic alone, by eliminating every cut",
+      "That arithmetic's consistency follows from induction up to epsilon zero, which arithmetic cannot prove",
+      "That arithmetic proves its own consistency once the induction rule is treated as a kind of cut",
+      "That cuts on induction formulas can be eliminated, giving arithmetic the subformula property"
+    ],
+    "answer": 1,
+    "explanation": "Induction behaves like cut and cannot simply be eliminated, so Gentzen assigns ordinals to proofs and relies on the well-foundedness of the ordering below epsilon zero. That assumption is the exact price: arithmetic proves well-foundedness for every shorter ordering but not this one, as the second incompleteness theorem requires."
+  },
+  {
+    "id": "where-lj-stops",
+    "section": "where-excluded-middle-comes-from",
+    "question": "The LK derivation of $\\Rightarrow P \\lor \\neg P$ is blocked in LJ. Where, and why?",
+    "options": [
+      "At line 2, because two formulas stand in the succedent",
+      "At line 5, because LJ has no contraction rule at all",
+      "At line 3, because LJ lacks the right rule for disjunction",
+      "At line 2, because LJ has no right rule for negation"
+    ],
+    "answer": 0,
+    "explanation": "Every rule used is also an LJ rule; what LJ forbids is the format, a second formula on the right, which first appears at line 2. Nothing was added to obtain classical logic: the extra room in the succedent is what buys excluded middle."
+  }
+]

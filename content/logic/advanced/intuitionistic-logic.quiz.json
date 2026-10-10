@@ -1,0 +1,131 @@
+[
+  {
+    "id": "irrational-powers-nonconstructive",
+    "question": "What, by intuitionist lights, is wrong with the proof that some irrational $a$ and $b$ have $a^b$ rational via $\\sqrt{2}^{\\sqrt{2}}$?",
+    "options": [
+      "It relies on reductio, which intuitionists reject in every form, negation introduction included",
+      "Its case split is not exhaustive, so the proof is invalid even by classical standards",
+      "It reasons by cases on an undecided instance of excluded middle, so it names no witness",
+      "It assumes without proof that $\\sqrt{2}^{\\sqrt{2}}$ is irrational in the second case"
+    ],
+    "answer": 2,
+    "explanation": "The proof is classically valid but rests on \"$\\sqrt{2}^{\\sqrt{2}}$ is rational or not\" without deciding which, so it never says which pair works. It does not assume either case, and intuitionists keep the negation-introducing form of reductio; only the classical form that concludes $\\varphi$ from the absurdity of $\\neg \\varphi$ goes."
+  },
+  {
+    "id": "double-negated-excluded-middle",
+    "section": "the-interpretation",
+    "question": "Intuitionistic logic proves $\\neg\\neg(\\varphi \\lor \\neg\\varphi)$. What does this show about the intuitionist's rejection of excluded middle?",
+    "options": [
+      "No instance can be refuted; only the unrestricted licence to assert one is withheld",
+      "Excluded middle is intuitionistically valid after all, by one step of double negation elimination",
+      "Some sentences are neither true nor false, which is why only the double negation is provable",
+      "Intuitionistic logic is inconsistent, since it proves the double negation of a formula it will not assert"
+    ],
+    "answer": 0,
+    "explanation": "Refuting an instance would mean proving $\\neg(\\varphi \\lor \\neg\\varphi)$, which contradicts the theorem, so the intuitionist denies no instance; she only declines to assert one. The double negation elimination step needed to reach $\\varphi \\lor \\neg\\varphi$ is exactly what the logic gives up, and nothing here posits a third truth value."
+  },
+  {
+    "id": "bhk-double-negation-asymmetry",
+    "section": "the-interpretation",
+    "question": "On the BHK reading, why does $\\varphi \\rightarrow \\neg\\neg\\varphi$ hold while $\\neg\\neg\\varphi \\rightarrow \\varphi$ fails?",
+    "options": [
+      "$\\neg\\neg\\varphi$ is a stronger claim than $\\varphi$, so it can only be weakened in one direction",
+      "Negation is primitive under BHK rather than defined, so a double negation cannot be unpacked into a construction",
+      "Going back would need a witness, and $\\neg\\neg\\varphi$ is never an existential claim",
+      "A proof of $\\varphi$ turns refutations into contradictions; the absence of refutations constructs nothing"
+    ],
+    "answer": 3,
+    "explanation": "With $\\neg \\varphi$ read as $\\varphi \\rightarrow \\bot$, a proof of $\\varphi$ gives the required map from refutations to $\\bot$ at once. Going back would need a proof of $\\varphi$ conjured from the mere impossibility of refuting it; and $\\neg\\neg\\varphi$ is weaker than $\\varphi$, not stronger."
+  },
+  {
+    "id": "bhk-proof-of-conditional",
+    "section": "the-interpretation",
+    "question": "Which of these is a proof of $(\\varphi \\land \\psi) \\rightarrow (\\psi \\land \\varphi)$ on the BHK reading?",
+    "options": [
+      "A truth table showing that antecedent and consequent agree in value on every one of their rows",
+      "A construction taking any pair of proofs to the same pair with its components swapped",
+      "A proof of $\\varphi$ together with a proof of $\\psi$, which is all the conditional needs",
+      "A derivation of a contradiction from the assumption that the conditional is false"
+    ],
+    "answer": 1,
+    "explanation": "A proof of a conditional is a construction transforming proofs of the antecedent into proofs of the consequent, and a proof of a conjunction is a pair, so the swap does the job. Supplying proofs of $\\varphi$ and $\\psi$ would prove the conjunction itself, which the conditional does not claim; and refuting the negation only yields the double negation."
+  },
+  {
+    "id": "classical-disjunction-property",
+    "section": "the-interpretation",
+    "question": "Classical arithmetic proves $\\varphi \\lor \\neg\\varphi$ for a sentence $\\varphi$ that it neither proves nor refutes. What does this show?",
+    "options": [
+      "Classical arithmetic lacks the disjunction property",
+      "Classical arithmetic is inconsistent",
+      "Classical arithmetic lacks the existence property but keeps the disjunction property",
+      "The sentence $\\varphi$ is neither true nor false"
+    ],
+    "answer": 0,
+    "explanation": "The disjunction property requires that a provable disjunction have a provable disjunct, and here neither disjunct is provable. Failing to decide a sentence is incompleteness, not inconsistency, and the article cites exactly this lack as the precise sense in which classical proofs are not constructive."
+  },
+  {
+    "id": "two-stage-model",
+    "section": "kripke-semantics",
+    "question": "A Kripke model has stages $s \\leq t$, with the atom $p$ established at $t$ only. Which of these holds at $s$?",
+    "options": [
+      "$p \\lor \\neg p$",
+      "$\\neg p$",
+      "$\\neg\\neg p$",
+      "$\\neg\\neg p \\rightarrow p$"
+    ],
+    "answer": 2,
+    "explanation": "$\\neg p$ fails at $s$ because $p$ holds later, and it fails at $t$ because $p$ holds there; so $\\neg p$ holds at no stage from $s$ on, which is what $\\neg\\neg p$ requires. The tempting $\\neg p$ treats negation as local, but $\\neg p$ must look ahead, which is why both $p \\lor \\neg p$ and double negation elimination fail at $s$."
+  },
+  {
+    "id": "implication-looks-ahead",
+    "section": "kripke-semantics",
+    "question": "Why does the Kripke clause for $\\varphi \\rightarrow \\psi$ quantify over later stages instead of checking only the current one?",
+    "options": [
+      "Conjunction and disjunction look ahead too, and implication must match them",
+      "The ordering of stages is symmetric, so later and earlier stages coincide",
+      "A clause checking only the current stage would make excluded middle fail",
+      "A conditional asserted now must survive whatever is established later"
+    ],
+    "answer": 3,
+    "explanation": "If $\\varphi \\rightarrow \\psi$ were checked only at the current stage, it could hold because $\\varphi$ is not yet established and then be lost when $\\varphi$ arrives without $\\psi$. A local clause would in fact restore the material conditional and with it excluded middle; and conjunction and disjunction are evaluated at the stage, not ahead."
+  },
+  {
+    "id": "s4-not-s5",
+    "section": "kripke-semantics",
+    "question": "Gödel embedded intuitionistic logic in S4. Why is S4, rather than S5, the natural target on the semantic side?",
+    "options": [
+      "S4 is the only Lewis system in which excluded middle fails, as the translation requires",
+      "Intuitionistic models are partial orders; S5's symmetry would stop information growing",
+      "Intuitionistic negation is the S4 diamond, an operator for which S5 has no counterpart",
+      "S5 is not normal, so it cannot share its models with a logic closed under necessitation"
+    ],
+    "answer": 1,
+    "explanation": "S4 is the logic of reflexive transitive frames, and a partial order is such a frame that is also antisymmetric, so the models are the same objects. A symmetric order would make every later stage also earlier, collapsing growth of information. Excluded middle holds in every modal logic, which is built on classical propositional logic."
+  },
+  {
+    "id": "dummett-meaning-argument",
+    "section": "kripke-semantics",
+    "question": "Which motivation for intuitionism is Dummett's?",
+    "options": [
+      "Understanding a sentence is a capacity to recognise what would establish it, and realist truth conditions outrun any capacity speakers could manifest",
+      "Mathematical objects exist only as the constructions of an idealised mathematician",
+      "Classical reasoning wrongly treats infinite totalities as completed",
+      "A stage of a Kripke model is a state of knowledge that can only grow"
+    ],
+    "answer": 0,
+    "explanation": "Dummett recast the dispute as one about meaning and manifestability. The constructions of an idealised mathematician and the attack on completed infinities are Brouwer's, and the information reading of stages belongs to neither; the article's point is that one formal system can be motivated by distinct positions."
+  },
+  {
+    "id": "constructive-incomparable",
+    "section": "kripke-semantics",
+    "question": "Which claim does the reply make against the charge that intuitionistic logic is classical logic with the useful parts removed?",
+    "options": [
+      "Every classical theorem has a constructive proof, so nothing is lost",
+      "Constructive analysis works only once Brouwer's anti-classical principles are adopted",
+      "With Brouwer's continuity principles added, intuitionistic and classical mathematics are incomparable, each proving things the other does not",
+      "Classical analysis is inconsistent, so the restriction is forced"
+    ],
+    "answer": 2,
+    "explanation": "The reply concedes a genuine loss, with the usual form of the intermediate value theorem as the standard case, and argues that the accounting cuts both ways. Bishop's analysis is cited precisely because it avoids Brouwer's distinctive principles, so the second option inverts the point."
+  }
+]

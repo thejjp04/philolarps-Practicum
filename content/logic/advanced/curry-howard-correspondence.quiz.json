@@ -1,0 +1,130 @@
+[
+  {
+    "id": "free-variable-as-assumption",
+    "section": "the-calculus",
+    "question": "Given $y$ of type $A \\rightarrow B$, the term $\\lambda x^{A}.\\, y\\, x$ has type $A \\rightarrow B$. Read as a proof, what does the free variable $y$ correspond to?",
+    "options": [
+      "A discharged assumption of $A$",
+      "An undischarged assumption of $A \\rightarrow B$",
+      "An application of the elimination rule for $\\rightarrow$",
+      "A detour that normalisation will remove"
+    ],
+    "answer": 1,
+    "explanation": "Discharging an assumption is binding a variable, so the bound $x$ is the discharged assumption of $A$, and the free $y$ is an assumption the proof still depends on. Confusing the two gets the direction of the correspondence backwards: only abstraction discharges."
+  },
+  {
+    "id": "which-type-inhabited",
+    "section": "the-calculus",
+    "question": "For type variables $A$ and $B$, which of these types has a closed term?",
+    "options": [
+      "$A + (A \\rightarrow \\bot)$",
+      "$((A \\rightarrow B) \\rightarrow A) \\rightarrow A$",
+      "$((A \\rightarrow \\bot) \\rightarrow \\bot) \\rightarrow A$",
+      "$A \\rightarrow (B \\rightarrow A)$"
+    ],
+    "answer": 3,
+    "explanation": "The term $\\lambda x.\\, \\lambda y.\\, x$ inhabits it, and provability is inhabitation. The others are excluded middle, Peirce's law and double negation elimination, which are classical and have no closed terms; Peirce's law is the tempting one because it uses only arrows, but being purely implicational does not make it intuitionistically provable."
+  },
+  {
+    "id": "negation-as-function-to-empty",
+    "section": "the-calculus",
+    "question": "Under propositions as types, what does a closed term of type $A \\rightarrow \\bot$ establish?",
+    "options": [
+      "That $A$ is uninhabited, since a term of $A$ would yield a closed term of $\\bot$",
+      "That $A$ is inhabited but none of its values can actually be computed in finite time",
+      "That every term of type $A$ fails to terminate when it is evaluated",
+      "That $A$ is a sum type one of whose two components is the empty type"
+    ],
+    "answer": 0,
+    "explanation": "The empty type has no closed terms, so a function into it can exist only if its domain is empty too; this is the program-side reading of $\\neg A$ as $A \\rightarrow \\bot$. Nothing about termination is involved, since in the simply typed calculus every term terminates."
+  },
+  {
+    "id": "what-counts-as-detour",
+    "section": "normalisation",
+    "question": "Which of these is a detour of the kind proof normalisation removes?",
+    "options": [
+      "An elimination of $\\varphi \\rightarrow \\psi$ immediately followed by an introduction of the same conditional",
+      "Two eliminations of $\\rightarrow$ in succession",
+      "An introduction of $\\varphi \\rightarrow \\psi$ immediately followed by an elimination of that conditional",
+      "An assumption of $\\varphi$ discharged without ever being used"
+    ],
+    "answer": 2,
+    "explanation": "Building a conditional and then using it at once is unnecessary: the proof of $\\varphi$ could have been substituted for the assumption directly. On the term side this is a redex $(\\lambda x.\\, t)\\, u$; the reverse order creates no such redex, and a vacuous discharge is a legitimate step, not a detour."
+  },
+  {
+    "id": "compute-normal-form",
+    "section": "normalisation",
+    "question": "Let $u$ have type $A$ and $v$ type $B$. What is the normal form of $(\\lambda x.\\, \\lambda y.\\, x)\\, u\\, v$?",
+    "options": [
+      "$u$",
+      "$v$",
+      "$\\lambda y.\\, u$",
+      "$u\\, v$"
+    ],
+    "answer": 0,
+    "explanation": "Application associates to the left, so the first beta step substitutes $u$ for $x$, giving $(\\lambda y.\\, u)\\, v$, and the second substitutes $v$ for a $y$ that does not occur, leaving $u$. Stopping at $\\lambda y.\\, u$ forgets the second application; on the proof side, a proof of $A \\rightarrow (B \\rightarrow A)$ used against proofs of $A$ and $B$ just hands back the proof of $A$."
+  },
+  {
+    "id": "strong-normalisation-definition",
+    "section": "normalisation",
+    "question": "Strong normalisation is the claim that from every typed term some reduction sequence reaches a normal form.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "That is weak normalisation, which is what Prawitz's theorem gives. Strong normalisation says every reduction sequence terminates, whichever redex is chosen at each step, and it is this stronger property that rules out non-terminating computation altogether."
+  },
+  {
+    "id": "fixed-point-inconsistency",
+    "section": "normalisation",
+    "question": "Adding a fixed point operator makes the typed lambda calculus Turing complete. Why does it also make the corresponding logic inconsistent?",
+    "options": [
+      "It makes type checking undecidable, so proofs can no longer be checked",
+      "It adds classical principles such as Peirce's law to the logic",
+      "It creates terms with no normal form, and a proof that is not normal proves nothing",
+      "It inhabits every type, the empty type included, so every formula gets a proof"
+    ],
+    "answer": 3,
+    "explanation": "A closed term of the empty type is a proof of $\\bot$, and a fixed point operator supplies one in the form of a looping computation. Proofs containing detours still prove their conclusions, so the third option misplaces the problem: the trouble is that the empty type stops being empty."
+  },
+  {
+    "id": "past-the-intuitionistic-boundary",
+    "section": "what-the-correspondence-became",
+    "question": "Which extension carried the correspondence past the intuitionistic boundary?",
+    "options": [
+      "The polymorphic lambda calculus, matching second-order propositional quantification",
+      "Dependent type theory, matching the universal and existential quantifiers of predicate logic",
+      "Typing control operators, matching Peirce's law and double negation elimination",
+      "Cartesian closed categories, matching proofs with morphisms and formulas with objects"
+    ],
+    "answer": 2,
+    "explanation": "Peirce's law and double negation elimination are classical, and Griffin showed that operators such as call with current continuation have those types. Polymorphism and dependent types widened the correspondence to more expressive logics that are still intuitionistic, and the categorical column is a third presentation of the same structure."
+  },
+  {
+    "id": "dependent-function-universal",
+    "section": "what-the-correspondence-became",
+    "question": "In dependent type theory, what is a proof of $\\forall x\\, \\varphi$?",
+    "options": [
+      "A pair consisting of an object and a proof that the object satisfies $\\varphi$",
+      "A function taking each object $a$ to a proof that $a$ satisfies $\\varphi$",
+      "A function taking proofs of $\\varphi$ into the empty type, one for each object",
+      "A tagged value indicating which instance of $\\varphi$ holds"
+    ],
+    "answer": 1,
+    "explanation": "The universal quantifier is the dependent function type: one function, uniform across objects, whose result type depends on the argument. The pair is the dependent pair type, which matches the existential, mirroring the BHK clause that an existential proof supplies a witness."
+  },
+  {
+    "id": "restriction-is-the-content",
+    "section": "what-the-correspondence-became",
+    "question": "The objection says the correspondence works only because both sides were trimmed to fit, since typed programs always terminate. How does the reply turn this restriction into support?",
+    "options": [
+      "Strong normalisation and consistency are the same theorem, so unrestricted recursion predictably costs both at once",
+      "Only terminating programs can be run in proof assistants, which is all that matters in practice",
+      "Classical proofs are not programs, so they were never meant to be covered",
+      "Non-terminating programs have no use outside the foundations of mathematics"
+    ],
+    "answer": 0,
+    "explanation": "The correspondence predicts in advance that a language gaining general recursion loses consistency, and that is what happens with a fixed point operator. The reply also rejects the third option directly, citing Griffin's classical typing of control operators."
+  }
+]

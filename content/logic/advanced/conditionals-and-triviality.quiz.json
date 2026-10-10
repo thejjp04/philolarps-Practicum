@@ -1,0 +1,130 @@
+[
+  {
+    "id": "oswald-pair-lesson",
+    "section": "two-conditionals",
+    "question": "What does Adams's Oswald pair establish?",
+    "options": [
+      "The material conditional is right for indicatives, though not for subjunctives, since only one is true",
+      "A subjunctive conditional is false whenever its antecedent is false, unlike an indicative",
+      "The two moods carry different contents, since sentences differing only in mood differ in truth value",
+      "Indicatives concern what actually happened, and subjunctives what speakers at the time believed"
+    ],
+    "answer": 2,
+    "explanation": "The sentences concern the same event and differ only in mood, yet the indicative is true and the subjunctive false, so no account giving them one content can be right. The material conditional fails for the indicative too, by validating inferences that ordinary indicatives do not license."
+  },
+  {
+    "id": "material-overgenerates",
+    "section": "two-conditionals",
+    "question": "Which inference does the material conditional validate that fails for the indicative conditional?",
+    "options": [
+      "From $\\neg \\varphi$ to $\\varphi \\rightarrow \\psi$",
+      "From $\\varphi$ and $\\varphi \\rightarrow \\psi$ to $\\psi$",
+      "From $\\varphi \\rightarrow \\psi$ to $\\neg(\\varphi \\land \\neg \\psi)$",
+      "From $\\varphi \\rightarrow \\psi$ and $\\varphi$ to $\\varphi \\land \\psi$"
+    ],
+    "answer": 0,
+    "explanation": "The moon is not cheese, yet no one accepts that if the moon is cheese then arithmetic is inconsistent. The other three are accepted on all the accounts the article discusses, since any reasonable indicative at least excludes a true antecedent with a false consequent."
+  },
+  {
+    "id": "strengthening-shifts-worlds",
+    "section": "the-stalnaker-lewis-semantics",
+    "question": "\"If this match had been struck, it would have lit\" is true; \"if it had been struck under water, it would have lit\" is false. What explains this on the Stalnaker-Lewis semantics?",
+    "options": [
+      "The second antecedent is impossible, so that counterfactual is vacuously false",
+      "Adding to the antecedent shifts which worlds are closest, and the new ones lack the consequent",
+      "Counterfactuals are strict conditionals, and strict conditionals do not allow strengthening",
+      "Similarity weighs exact match of fact most heavily, and being under water destroys that match"
+    ],
+    "answer": 1,
+    "explanation": "The closest struck worlds are dry ones where the match lights; the closest struck-under-water worlds are different worlds where it does not. A strict conditional, requiring the consequent at every accessible antecedent world, would validate strengthening, so the strict reading cannot explain the failure."
+  },
+  {
+    "id": "strict-conditional-strengthening",
+    "section": "the-stalnaker-lewis-semantics",
+    "question": "If a counterfactual were a strict conditional, true when the consequent holds at every accessible antecedent world, strengthening the antecedent would still fail.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "answer": 1,
+    "explanation": "If every accessible $\\varphi$-world is a $\\psi$-world, then so is every accessible world where $\\varphi$ and something else hold, so strengthening is valid for strict conditionals. It fails on the Stalnaker-Lewis semantics only because the conditional consults the closest antecedent worlds, a set that changes when the antecedent does."
+  },
+  {
+    "id": "hoover-transitivity",
+    "section": "the-stalnaker-lewis-semantics",
+    "question": "\"If Hoover had been born in Russia, he would have been a communist. If he had been a communist, he would have been a traitor.\" Why can both be true while \"if he had been born in Russia, he would have been a traitor\" is false?",
+    "options": [
+      "The argument is really a disguised contraposition, and contraposition fails for counterfactuals",
+      "The premises are vacuously true, since both of their antecedents are actually false",
+      "Similarity is not transitive, though the semantics needs it to be for the chain to hold",
+      "The closest Russian-born worlds need not be among the closest worlds where he is a communist"
+    ],
+    "answer": 3,
+    "explanation": "The second premise is evaluated at the closest communist worlds, where he is an American and so a traitor; the conclusion is evaluated at the closest Russian-born worlds, where he is a loyal Soviet communist. Transitivity fails because the antecedent changes between the links, not because false antecedents make counterfactuals vacuous."
+  },
+  {
+    "id": "lewis-miracles-response",
+    "section": "the-stalnaker-lewis-semantics",
+    "question": "Fine pressed the Nixon example against the similarity semantics. How did Lewis respond?",
+    "options": [
+      "He ranked avoiding large miracles above preserving exact match of particular fact",
+      "He replaced similarity with intervention on a causal model, holding the laws fixed throughout",
+      "He accepted that the war counterfactual is false, since the wire-failure world is closer",
+      "He adopted Stalnaker's assumption of a unique closest world, which settles which worlds count"
+    ],
+    "answer": 0,
+    "explanation": "The wire-failure world needs a second small miracle and so ranks below the war world once miracles are weighted heavily, keeping the counterfactual true. Intervention on causal models is Pearl's alternative to similarity, not Lewis's repair of it."
+  },
+  {
+    "id": "adams-thesis-compute",
+    "section": "adamss-thesis",
+    "question": "Let $R$ be \"it rains\" and $C$ \"it is cold\", with $P(R) = 0.5$ and $P(R \\land C) = 0.1$. By Adams' thesis, how assertible is \"if it rains, it is cold\"?",
+    "options": [
+      "$0.1$",
+      "$0.5$",
+      "$0.2$",
+      "$0.6$"
+    ],
+    "answer": 2,
+    "explanation": "Assertibility goes by $P(C \\mid R) = 0.1 / 0.5 = 0.2$. The tempting $0.6$ is the probability of the material conditional, $P(\\neg R \\lor C) = 0.5 + 0.1$, inflated by the chance of no rain, which is exactly the false-antecedent support the thesis refuses to count."
+  },
+  {
+    "id": "triviality-conclusion",
+    "section": "adamss-thesis",
+    "question": "Lewis supposes that $P(\\varphi > \\psi) = P(\\psi \\mid \\varphi)$ for every function in a class closed under conditionalising. What does the argument derive?",
+    "options": [
+      "That the indicative conditional must be the material conditional, whatever its probability",
+      "That conditional probability is undefined whenever the antecedent has probability zero",
+      "That the conditional's probability always exceeds the matching conditional probability",
+      "That $P(\\psi \\mid \\varphi) = P(\\psi)$ for arbitrary $\\varphi$ and $\\psi$, so the class is trivial"
+    ],
+    "answer": 3,
+    "explanation": "Expanding $P(\\varphi > \\psi)$ by total probability over $\\psi$ and $\\neg \\psi$, and applying the supposition to each conditionalised function, makes every pair of propositions independent, which only a space with very few atoms allows. Nothing in the proof identifies the conditional with the material one."
+  },
+  {
+    "id": "jackson-robustness",
+    "section": "adamss-thesis",
+    "question": "Jackson keeps the material conditional as the semantics of the indicative. How does he explain why a conditional believed only because its antecedent is false is not assertible?",
+    "options": [
+      "A conventional implicature that the conditional is robust, staying probable given the antecedent",
+      "Indicatives have no truth conditions, and express conditional beliefs rather than propositions",
+      "Adams' thesis holds only approximately, and only over a restricted class of conditionals",
+      "The conditional's content shifts with the speaker's state of information, as van Fraassen allowed"
+    ],
+    "answer": 0,
+    "explanation": "A conditional believed only through a false antecedent would be abandoned on learning the antecedent, so it lacks the robustness its assertion conventionally signals. Denying truth conditions is the response of Adams and Edgington, and accepting the thesis only approximately is Stalnaker's."
+  },
+  {
+    "id": "triviality-shapes-answers",
+    "section": "adamss-thesis",
+    "question": "Van Fraassen built models satisfying the thesis by letting the conditional's content shift with the epistemic state. Granting this, what does the reply say the triviality results show?",
+    "options": [
+      "That Adams' thesis fails for every class of probability functions, so it must be abandoned",
+      "That its content must vary with the probability function, so it expresses no fixed proposition",
+      "That the closure assumption is required by any adequate theory, so van Fraassen's models fail",
+      "That indicatives are material conditionals after all, with the divergence explained pragmatically, as Grice and Jackson held"
+    ],
+    "answer": 1,
+    "explanation": "The escape is real but not optional: any adequate theory must make the conditional's content depend on the probability function, so compositional semantics has to be rebuilt around that. The reply accepts van Fraassen's models as establishing consistency, so it does not claim they fail."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "negated-diamond",
+    "section": "two-new-operators",
+    "question": "Which formula is equivalent to $\\neg \\Diamond P$?",
+    "options": [
+      "$\\Diamond \\neg P$",
+      "$\\neg \\Box P$",
+      "$\\Box \\neg P$",
+      "$\\Box P$"
+    ],
+    "answer": 2,
+    "explanation": "$\\Diamond P$ abbreviates $\\neg \\Box \\neg P$, so its negation is $\\Box \\neg P$: nothing possible means necessarily not. $\\Diamond \\neg P$ is the trap, the modal analogue of confusing \"nothing is $F$\" with \"something is not $F$\"; it is equivalent to $\\neg \\Box P$."
+  },
+  {
+    "id": "box-not-truth-function",
+    "section": "why-truth-values-are-not-enough",
+    "question": "What shows that $\\Box$ cannot be given a truth table?",
+    "options": [
+      "It applies to one formula, while tables are for connectives joining two",
+      "$\\Box P$ can be true while $P$ itself is false, which no table allows",
+      "It is interdefinable with $\\Diamond$, so neither can have a table of its own",
+      "Two true sentences can give different values once boxed"
+    ],
+    "answer": 3,
+    "explanation": "That two and two make four and that Paris is the capital of France are both true, but only the first is necessary, so the same input value gives different outputs. A one-place truth function can perfectly well turn false into true, as negation does, so the second option shows nothing."
+  },
+  {
+    "id": "unrelativised-guarantee",
+    "section": "why-quantifying-over-all-worlds-is-too-crude",
+    "question": "If $\\Box$ quantifies over every world without exception, which formula is guaranteed true at every world?",
+    "options": [
+      "$P \\rightarrow \\Box P$",
+      "$\\Box P \\rightarrow P$",
+      "$\\Diamond P \\rightarrow P$",
+      "$\\Diamond P \\rightarrow \\Box P$"
+    ],
+    "answer": 1,
+    "explanation": "If $P$ holds at every world, it holds in particular at the world of evaluation. The converse $P \\rightarrow \\Box P$ fails, since $P$ may hold here and fail elsewhere, and that is exactly the contingent truth the box was introduced to distinguish."
+  },
+  {
+    "id": "knowing-that-you-know",
+    "section": "why-quantifying-over-all-worlds-is-too-crude",
+    "question": "Read $\\Box$ as \"the agent knows that\". Which disputed thesis does the unrelativised clause turn into a truth of logic?",
+    "options": [
+      "Whoever knows something knows that they know it",
+      "Whatever is known is true",
+      "Nothing at all is known, since every world would have to be checked",
+      "Whatever is possible is known, since the box ranges over all worlds"
+    ],
+    "answer": 0,
+    "explanation": "The unrelativised clause guarantees $\\Box \\varphi \\rightarrow \\Box \\Box \\varphi$, which read epistemically says that knowing implies knowing that one knows, a much disputed thesis. That what is known is true is also guaranteed, but it is the consequence the epistemic reading actually wants."
+  },
+  {
+    "id": "dead-end-world",
+    "section": "the-accessibility-relation",
+    "question": "At a world from which no world is accessible, which formula is true?",
+    "options": [
+      "$\\Diamond (P \\lor \\neg P)$",
+      "$\\neg \\Box P$",
+      "$\\Box (P \\land \\neg P)$",
+      "$\\Diamond P$"
+    ],
+    "answer": 2,
+    "explanation": "With nothing accessible, $\\Box \\varphi$ holds vacuously for every $\\varphi$, contradictions included, just as a universal quantifier over an empty range does. Every diamond formula is false there, even $\\Diamond (P \\lor \\neg P)$, because there is no accessible world for it to be true at."
+  },
+  {
+    "id": "epistemic-diamond",
+    "section": "the-accessibility-relation",
+    "question": "On the epistemic reading, $Rwv$ says that $v$ is compatible with everything the agent knows at $w$. What does $\\Diamond \\varphi$ then say at $w$?",
+    "options": [
+      "The agent knows that $\\varphi$, having ruled out every alternative",
+      "$\\varphi$ is true at $w$, but the agent does not yet know it",
+      "The agent has ruled $\\varphi$ out on the evidence available at $w$",
+      "$\\varphi$ is compatible with all the agent knows"
+    ],
+    "answer": 3,
+    "explanation": "$\\Diamond \\varphi$ is true at $w$ when $\\varphi$ holds at some accessible world, which here means some world the agent has not ruled out. Knowing $\\varphi$ is the box, which requires $\\varphi$ at every such world."
+  },
+  {
+    "id": "valid-on-a-frame",
+    "section": "frames-and-models",
+    "question": "What is required for a formula to be valid on a frame?",
+    "options": [
+      "True at every world, under every valuation on that frame",
+      "True at every world of some model built on that frame",
+      "True at some world under every valuation on that frame",
+      "True at every world under the frame's own built-in valuation"
+    ],
+    "answer": 0,
+    "explanation": "Validity on a frame quantifies away the valuations, so it is a claim about structure alone. Truth at every world of one model is the weaker notion of validity on a model, and a frame has no valuation of its own, since that is exactly what a model adds."
+  },
+  {
+    "id": "two-world-countermodel",
+    "section": "a-worked-evaluation",
+    "question": "A model has two worlds: $w_1$ sees $w_2$, $w_2$ sees itself, and nothing else holds. $P$ is true at $w_2$ only. Which formula is false at $w_1$?",
+    "options": [
+      "$\\Box P$",
+      "$\\Box P \\rightarrow P$",
+      "$\\Box \\Box P$",
+      "$\\Diamond P$"
+    ],
+    "answer": 1,
+    "explanation": "The only world $w_1$ sees is $w_2$, where $P$ is true, so $\\Box P$ and $\\Diamond P$ hold at $w_1$; and $\\Box P$ holds at $w_2$, which sees only itself, so $\\Box \\Box P$ holds at $w_1$ too. But $P$ is false at $w_1$, which does not see itself, so $\\Box P \\rightarrow P$ fails there."
+  },
+  {
+    "id": "both-possible",
+    "section": "a-worked-evaluation",
+    "question": "A model has three worlds: $w_1$ sees $w_2$ and $w_3$, and nothing else holds. $P$ is true at $w_2$ only. Which formula is true at $w_1$?",
+    "options": [
+      "$\\Diamond P \\land \\Diamond \\neg P$",
+      "$\\Box P$",
+      "$\\Box \\neg P$",
+      "$\\neg \\Diamond P$"
+    ],
+    "answer": 0,
+    "explanation": "$P$ holds at the accessible world $w_2$ and fails at the accessible world $w_3$, so both $\\Diamond P$ and $\\Diamond \\neg P$ are true at $w_1$. $\\Box P$ fails because of $w_3$, and $\\Box \\neg P$ fails because of $w_2$."
+  },
+  {
+    "id": "worlds-as-fiction",
+    "section": "a-worked-evaluation",
+    "question": "According to the reply to the circularity objection, why can someone who thinks possible worlds are fictions still use every theorem of the semantics?",
+    "options": [
+      "Worlds are officially defined as consistent sets of sentences, which are real",
+      "The theorems concern sets and relations, with nothing modal assumed",
+      "The semantics reduces necessity to non-modal facts about the actual world",
+      "Accessibility is defined from actual facts"
+    ],
+    "answer": 1,
+    "explanation": "A frame is just a non-empty set with a two-place relation, as free of modal content as a group is of geometry, so the results hold whatever worlds are. The reply denies that the semantics is offered as a reductive analysis, so the third option gets its claim backwards."
+  }
+]

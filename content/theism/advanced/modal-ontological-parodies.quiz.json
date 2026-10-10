@@ -1,0 +1,132 @@
+[
+  {
+    "id": "modal-form-sidesteps-kant",
+    "section": "the-argument-and-why-it-is-valid",
+    "question": "How is the modal version designed to avoid the objection Kant pressed against Anselm and Descartes?",
+    "options": [
+      "It treats existence as a great-making property, but only for beings that exist necessarily",
+      "It ranks greatness in every world above greatness in some, not existing above not existing",
+      "It replaces the comparison of greatness with a premise about the logic S5",
+      "It derives God's existence from the coherence of the concept, with no premise about greatness at all"
+    ],
+    "answer": 1,
+    "explanation": "Kant's attack bites on arguments that treat existing as one more property in a list, and the modal version never ranks an existing being above a non-existing one. The first option is the tempting half-truth: it keeps existence on the list, and so stays exposed to the objection the reformulation was built to escape."
+  },
+  {
+    "id": "possibly-necessary-is-necessary",
+    "section": "the-argument-and-why-it-is-valid",
+    "question": "Which principle carries the inference from the two premises to the conclusion?",
+    "options": [
+      "Whatever is conceivable without contradiction is metaphysically possible",
+      "Whatever is possible is actual",
+      "Whatever is actual is necessary",
+      "Whatever is possibly necessary is necessary, and so actual"
+    ],
+    "answer": 3,
+    "explanation": "The S5 principle that modal status does not vary between worlds gives: if maximal greatness is instantiated in some world, it is instantiated in every world, this one included. The conceivability principle is what often silently supports the possibility premise, but it plays no part in the inference, which is why validity is not where the argument is attacked."
+  },
+  {
+    "id": "conceivable-but-impossible",
+    "section": "two-senses-of-possible",
+    "question": "Someone who knows no chemistry finds no incoherence in gold having atomic number 80. Given that gold in fact has atomic number 79, how does the article's distinction classify the claim?",
+    "options": [
+      "Epistemically possible for them, but metaphysically impossible",
+      "Metaphysically possible, since they detect no contradiction in it",
+      "Metaphysically possible but epistemically impossible",
+      "Neither, since a false claim cannot be possible in either sense"
+    ],
+    "answer": 0,
+    "explanation": "Like water being H2O, an element's atomic number is fixed in every world where it exists, so the claim fails in all of them however coherent it seems to someone lacking the information. The tempting option treats failure to find a contradiction as evidence of metaphysical possibility, which is exactly the inference the possibility premise leans on."
+  },
+  {
+    "id": "possibility-premise-is-the-conclusion",
+    "section": "two-senses-of-possible",
+    "question": "Given the argument's second premise, what is the possibility premise equivalent to?",
+    "options": [
+      "The claim that the concept of maximal greatness contains no detectable contradiction",
+      "The claim that a maximally great being exists in some world, though perhaps not this one",
+      "The claim that a maximally great being actually exists",
+      "The claim that S5 is the correct logic of metaphysical possibility"
+    ],
+    "answer": 2,
+    "explanation": "Since a maximally great being exists necessarily or not at all, its being possible already entails its being actual, so the premise is the conclusion in modal dress. The first option describes how the premise is presented, which is why it looks modest; the second describes a contingent being, which the second premise rules out."
+  },
+  {
+    "id": "what-the-pair-establishes",
+    "section": "two-senses-of-possible",
+    "question": "The modal ontological argument and the reverse ontological argument are both valid, and their premises cannot both be true. What do they jointly establish?",
+    "options": [
+      "Nothing, since two valid arguments with incompatible conclusions cancel out",
+      "That one of them must be invalid, since valid arguments cannot reach incompatible conclusions",
+      "That maximal greatness is instantiated in some worlds and not in others",
+      "That maximal greatness is either necessarily instantiated or necessarily uninstantiated"
+    ],
+    "answer": 3,
+    "explanation": "Both arguments share the second premise and the S5 step, and together they rule out any mixed case, which is a substantive result in modal metaphysics. The \"cancel out\" option understates it: what is left open is only which of the two necessary verdicts holds, and that has to be settled by reasons of another kind."
+  },
+  {
+    "id": "independent-support-concedes-dependence",
+    "section": "two-senses-of-possible",
+    "question": "A theist answers the reverse argument by saying there are independent reasons to think maximal greatness coherent and none comparable on the other side. On the article's account, what does this answer concede?",
+    "options": [
+      "That the argument cannot stand alone, which an ontological argument was meant to avoid",
+      "That the reverse argument is invalid, since its premise conflicts with the original one",
+      "That S5 is not the right logic for metaphysical possibility after all",
+      "That the possibility premise is merely epistemically possible, not metaphysically"
+    ],
+    "answer": 0,
+    "explanation": "The answer may be right, but it turns the argument into one that leans on considerations from elsewhere, as an ontological argument propped up by a cosmological one. It does not touch validity: both arguments are granted to be valid, so the whole dispute lies in which premise has the better claim."
+  },
+  {
+    "id": "what-makes-a-parody-work",
+    "section": "parodies",
+    "question": "Which parody does real work against the modal ontological argument, on the article's account?",
+    "options": [
+      "One with the same form, whose premise the parodist simply asserts without further support",
+      "One whose conclusion is absurd, whatever its form",
+      "One with the same form, whose premise is supported just as the target's is",
+      "One that identifies which premise of the target argument is false and explains why"
+    ],
+    "answer": 2,
+    "explanation": "Sharing the form is easy; the work lies in giving the parody's premise the same claim on us, by the same appeal to the absence of any detectable incoherence, since a merely asserted premise can simply be denied. Even a successful parody does not locate the false premise in the target: it shows that the target's credentials are insufficient and shifts the burden onto the proponent."
+  },
+  {
+    "id": "gaunilo-reply-is-a-promissory-note",
+    "section": "parodies",
+    "question": "Anselm replies to Gaunilo that a greatest possible island is incoherent, because island-greatness has no intrinsic maximum. Why does the article call this reply a promissory note?",
+    "options": [
+      "It needs existence to be a great-making property, which is exactly what Kant denied",
+      "It needs power and goodness to have intrinsic maxima, which other articles must defend",
+      "It needs islands to be impossible objects, when islands are plainly contingent ones",
+      "It needs the S5 principle to hold for islands as well as for God, which is doubtful"
+    ],
+    "answer": 1,
+    "explanation": "Knowledge plausibly has a maximum, but the paradox of the stone and the prospect of ever-better worlds put power and goodness in doubt, so the reply is worth only as much as the doctrines defended elsewhere. The Kant option misplaces the issue: the reply concerns whether greatness can be maximal, not whether existence adds to it."
+  },
+  {
+    "id": "parody-without-unbounded-quantities",
+    "section": "parodies",
+    "question": "Which parody is Anselm's reply to Gaunilo least equipped to handle?",
+    "options": [
+      "An island with more palm trees than any other possible island could have",
+      "A greatest possible prime number, larger than every other prime",
+      "A being maximally great in every respect but existing only contingently, in some worlds alone",
+      "A being maximally great except that it permits exactly the world's suffering"
+    ],
+    "answer": 3,
+    "explanation": "The reply works against parodies built from quantities with no intrinsic maximum, and this being has no unbounded parameter and is not obviously incoherent, yet by the same reasoning would exist necessarily. The island is the case the reply was designed for, and a merely contingent maximally great being contradicts the argument's own second premise."
+  },
+  {
+    "id": "necessity-and-bayesian-credence",
+    "section": "parodies",
+    "question": "Why, on the article's account, does the modal result put pressure on the Bayesian project of the first article?",
+    "options": [
+      "Because it shows that the prior probability of theism must be exactly one half",
+      "Because necessary truths cannot serve as evidence for or against any hypothesis",
+      "Because an intermediate probability for a necessary or impossible claim measures only ignorance",
+      "Because it turns the possibility premise into old evidence, which confirms nothing"
+    ],
+    "answer": 2,
+    "explanation": "No possible discovery could make a necessary truth false, so an intermediate credence in theism has to be read as a measure of what we do not know. The modal result fixes no particular prior, a half or otherwise; it changes what any such number can mean."
+  }
+]
