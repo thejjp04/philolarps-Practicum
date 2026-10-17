@@ -1,0 +1,80 @@
+[
+  {
+    "id": "reidentification-question",
+    "section": "two-questions-about-persons",
+    "question": "After a divorce, a woman says: \"I've found myself again; I'm a different person now.\" Which question is she mainly addressing?",
+    "options": [
+      "The reidentification question, since she is denying that she is numerically the same person as before",
+      "The characterisation question, since she speaks of her values and traits, not of there being two people",
+      "Neither, since the sentence is a contradiction and so says nothing at all about persons or their lives",
+      "The question whether a person and a human animal are the same kind of thing or different kinds"
+    ],
+    "answer": 1,
+    "explanation": "She is talking about what she is like, not claiming that a new numerical individual has replaced the old one. Personal identity in the metaphysical sense concerns whether there is one person or two over time."
+  },
+  {
+    "id": "chain-transitivity",
+    "section": "psychological-continuity",
+    "question": "At 60 a woman remembers her 30-year-old self, who remembered her own childhood at 10, though the 60-year-old remembers nothing from age 10. What does the repaired psychological view say?",
+    "options": [
+      "The 60-year-old is not the child, because she lacks any direct memory of the childhood at all",
+      "The 60-year-old is a different person from the 30-year-old, because memory alone is not transitive",
+      "The question has no answer until we know whether the 30-year-old was herself the child at ten years old",
+      "The 60-year-old is the child, because overlapping chains of connection are continuous and so transitive"
+    ],
+    "answer": 3,
+    "explanation": "Continuity needs only overlapping chains of connection, not a direct link between the endpoints, which is how it escapes Reid's objection. The first option states the simple memory criterion that Reid refuted."
+  },
+  {
+    "id": "animalist-transplant",
+    "section": "biological-continuity-and-animalism",
+    "question": "Your cerebrum is moved into another skull while your body is kept alive without a mind. Where does the animalist say you are?",
+    "options": [
+      "With the organism, which keeps the life that is yours",
+      "With the recipient, who now has your memories and character",
+      "Nowhere, since you ceased to exist when the cerebrum was removed",
+      "Both places, since the mind and the body each carry part of you"
+    ],
+    "answer": 0,
+    "explanation": "For the animalist we are organisms, and the organism is the same life even though it has lost its mind. The recipient, on this view, is a different person who has been given your memories."
+  },
+  {
+    "id": "narrative-prior-criterion",
+    "section": "narrative-identity",
+    "question": "Why does the article say the narrative view seems to need some other criterion of who is who?",
+    "options": [
+      "Because stories are always written by the person, who has no independent way of checking them at all",
+      "Because a narrative has to be true, and its truth depends on whom the events happened to",
+      "Because narratives are told in language, and language has no means of referring to a given person",
+      "Because only stories about whole lives count, and nobody can really know their own whole life"
+    ],
+    "answer": 1,
+    "explanation": "If the story is about the same person throughout, something other than the story must fix that the events belong together. If the story may be false or partial, it cannot be what identity consists in."
+  },
+  {
+    "id": "fission-structure",
+    "section": "fission-cases",
+    "question": "Why does the hemisphere case leave the animalist unmoved while embryo twinning does not?",
+    "options": [
+      "The remaining organism is the animal, but a splitting embryo is equally continuous with both twins",
+      "Animals cannot divide at all, and an embryo of that age is not yet an animal in any sense",
+      "Both recipients are the original animal, since each of them has half of the original brain",
+      "The animal always goes with the brain, and an embryo has no brain that it could follow"
+    ],
+    "answer": 0,
+    "explanation": "After the hemisphere transplant the organism that remains is the animal, so the recipients are other animals. In twinning no single organism remains to claim the title, so the biological criterion faces a tie."
+  },
+  {
+    "id": "endurantist-cannot-share",
+    "section": "responses-to-fission",
+    "question": "Why can an endurantist not use Lewis's reply that you survive fission as both recipients?",
+    "options": [
+      "Because Lewis's reply requires that the two recipients be psychologically identical to each other",
+      "Because a person wholly present at a time leaves nothing two people could share before the split",
+      "Because endurantists hold that fission never happens, so the reply is idle for them in practice",
+      "Because the reply denies that identity is transitive, which no endurantist is willing to accept"
+    ],
+    "answer": 1,
+    "explanation": "Lewis's reply says there were two persons all along who share temporal parts until the division, and a wholly present person has no such parts to share. The reply keeps transitivity of identity and so does not deny it."
+  }
+]
