@@ -1,0 +1,80 @@
+[
+  {
+    "id": "denying-the-third-premise",
+    "section": "one-property-two-things",
+    "question": "The one over many argument concludes that something accounts for the postbox and the tomato both being red. A predicate nominalist who takes their redness as ultimate resists the conclusion by rejecting which premise?",
+    "options": [
+      "That the postbox and the tomato are two different things located in two different places",
+      "That where different things agree in a respect, something accounts for it",
+      "That the postbox is red and the tomato is red, as speakers say",
+      "That the two reports of redness are true in the same way, as a single agreement"
+    ],
+    "answer": 1,
+    "explanation": "The predicate nominalist accepts that both things are red and that they agree, but holds that the agreement is brute and needs no account, which is a denial of the third premise. Denying that they agree, or that they are distinct, is not the nominalist's move."
+  },
+  {
+    "id": "redness-and-shades",
+    "section": "realism-about-universals",
+    "question": "A realist is told that the postbox's redness is faded and the tomato's vivid, so by Leibniz's law the two are not the same thing. What is the realist's best reply?",
+    "options": [
+      "Concede that each object instantiates its own universal of redness and give up the claim that one thing is shared",
+      "Deny that Leibniz's law applies to universals, since universals are not the sort of thing that has properties",
+      "Say fadedness and vividness are tropes, which universals are then built from",
+      "Give fadedness to each object's own shade, which has a universal of its own, leaving redness alone"
+    ],
+    "answer": 3,
+    "explanation": "The faded and vivid shades are different determinate universals, while both objects instantiate the common determinable, redness. Nothing true of redness differs, so the law is respected; conceding separate universals would give up the realist's explanation of the likeness."
+  },
+  {
+    "id": "ultimate-redness",
+    "section": "nominalism",
+    "question": "A philosopher says the houses, roses and sunsets are red, that this is simply how they are, and that asking for an entity answering to \"red\" repeats the question. Which position is this?",
+    "options": [
+      "Predicate nominalism, which treats the application of the predicate as ultimate",
+      "Resemblance nominalism, which explains redness by resemblance to paradigm cases",
+      "Trope theory, which finds a particular redness in each of the red things",
+      "Aristotelian realism, which finds one redness wholly present in each of them"
+    ],
+    "answer": 0,
+    "explanation": "The refusal to supply any further entity or relation is what marks predicate nominalism. Resemblance nominalism does offer a content, namely resemblance to the paradigms, and the trope theorist and the realist both posit an item answering to \"red\"."
+  },
+  {
+    "id": "imperfect-community",
+    "section": "resemblance-classes-and-their-troubles",
+    "question": "Object a is red and round, b is round and heavy, and c is red and heavy. Each pair shares a feature. What does this show about resemblance classes?",
+    "options": [
+      "The three form a good resemblance class, since every pair of them resembles in some respect",
+      "The three share a property after all, namely the property of belonging to an overlapping pair",
+      "Pairwise resemblance guarantees no respect common to all, so the class may match no property",
+      "The difficulty arises only for classes of tropes, and never for classes of ordinary objects"
+    ],
+    "answer": 2,
+    "explanation": "Each pair overlaps but no single feature is common to all three, which is Goodman's imperfect community. A class defined by pairwise resemblance can therefore fail to be the class of things sharing one property, and the difficulty is aimed at ordinary objects, not at tropes."
+  },
+  {
+    "id": "trope-versus-universal",
+    "section": "tropes",
+    "question": "The postbox is melted down, while the tomato stays as it is. How do the realist about universals and the trope theorist differ over the postbox's redness?",
+    "options": [
+      "Both say its redness survives the melting, because the tomato is still red afterwards",
+      "On trope theory it is destroyed with the postbox; on realism redness loses an instance",
+      "On realism its redness is destroyed with the postbox, whereas on trope theory it survives in the tomato",
+      "Both say its redness is destroyed, since neither view admits anything beyond the postbox's own properties"
+    ],
+    "answer": 1,
+    "explanation": "A trope belongs to its single bearer and goes when the bearer goes. A universal is wholly present in each instance, so it simply loses one instance while the tomato still instantiates it."
+  },
+  {
+    "id": "laws-and-primitives",
+    "section": "what-the-choice-costs",
+    "question": "A philosopher wants a fundamental law about charge to say something about charge itself, and not merely about each charged particle that exists. Which choice does this most naturally support, and why?",
+    "options": [
+      "Predicate nominalism, because laws are statements and so concern only the predicates they use",
+      "Trope theory, because tropes are the general features all particles share",
+      "Resemblance nominalism, because charged particles resemble one another exactly enough",
+      "Realism, because a law can then relate universals such as charge itself"
+    ],
+    "answer": 3,
+    "explanation": "Armstrong, Dretske and Tooley took laws to be relations between universals, which is what makes them about charge itself. Tropes are particular, not general, so they cannot be shared across particles, and the nominalist options leave the law as a pattern among particulars."
+  }
+]
