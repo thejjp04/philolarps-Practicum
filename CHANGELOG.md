@@ -7,8 +7,10 @@ Regenerate with `npm run changelog`.
 
 ## 17 October 2026
 
-10 changes.
+12 changes.
 
+- Tighten Hacking and McKay-Johnson passages in metaphysics intermediate ([9151579](https://github.com/thejjp04/philolarps/commit/9151579))
+- Regenerate changelog ([e1e105a](https://github.com/thejjp04/philolarps/commit/e1e105a))
 - Add metaphysics intermediate rung 10: Modality and Possible Worlds ([ca4b38c](https://github.com/thejjp04/philolarps/commit/ca4b38c))
 - Add metaphysics intermediate rung 9: Free Will and Determinism ([ed3330b](https://github.com/thejjp04/philolarps/commit/ed3330b))
 - Add metaphysics intermediate rung 8: Theories of Causation ([10e13c5](https://github.com/thejjp04/philolarps/commit/10e13c5))
