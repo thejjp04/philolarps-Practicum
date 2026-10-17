@@ -1,0 +1,80 @@
+[
+  {
+    "id": "repainting-and-persistence",
+    "section": "what-a-substance-is-for",
+    "question": "A theorist says that repainting the postbox from green to red produces a different thing, because the postbox is nothing but its colour, shape and weight. Which of the jobs assigned to substance is this theory leaving undone?",
+    "options": [
+      "Being the bearer, since properties need something that is that way",
+      "Unifying the properties, so that they are had together and not coincidentally",
+      "Ranking above the properties as a more basic sort of entity",
+      "Remaining constant while the properties alter, so that change is possible"
+    ],
+    "answer": 3,
+    "explanation": "If the thing is just its present properties, replacing one replaces the thing, so nothing survives the repainting. The theory may still supply a bearer or a unifier, which is why the three jobs are logically separate."
+  },
+  {
+    "id": "bareness-dilemma",
+    "section": "substrata-and-bare-particulars",
+    "question": "The objection says a bare particular is incoherent, since it must have at least the properties of being a particular and being self-identical. On Sider's reply, what does bareness amount to?",
+    "options": [
+      "Having no properties whatever, formal ones included, which is why the objection fails outright",
+      "Having no qualitative nature of its own, though formal features are allowed",
+      "Having no relations to other particulars, so that nothing else could be said of it",
+      "Being unknowable by any possible observer, whatever else may be true of it"
+    ],
+    "answer": 1,
+    "explanation": "The reply distinguishes a qualitative nature, which makes a thing this way rather than that, from formal features every particular has. The first option concedes the objection instead of answering it."
+  },
+  {
+    "id": "what-compresence-does",
+    "section": "bundle-theory",
+    "question": "A bundle theorist is asked what unites the red, cylindrical and heavy properties of the postbox into one thing. Which answer is the bundle theorist's own?",
+    "options": [
+      "They are compresent, occurring together at one place and time, with no further subject",
+      "They are all instantiated by one bare particular, which is distinct from every one of them",
+      "They are all properties of a thing that persists unchanged while the properties come and go",
+      "They are held together by a relation of instantiation that ties each of them to the whole"
+    ],
+    "answer": 0,
+    "explanation": "Compresence relates the properties directly and the bundle theorist adds no bearer. The other options describe the substratum view or lean on the very bearer that the bundle theorist denies."
+  },
+  {
+    "id": "blue-postbox",
+    "section": "problems-for-bundles",
+    "question": "Why does the possibility of the postbox having been painted blue count against identifying it with a bundle of universals including redness?",
+    "options": [
+      "Because compresence could not hold between redness and the other members of the bundle",
+      "Because bundles cannot contain any universal that also occurs in a different thing",
+      "Because a bundle without redness is a different bundle, making redness essential",
+      "Because the postbox would then be unable to survive any repainting whatever"
+    ],
+    "answer": 2,
+    "explanation": "If the postbox is the bundle, a thing lacking one member is a different bundle and so a different thing, which turns an accidental property into an essential one. The persistence worry is a separate problem, and the options about compresence and shared universals do not follow from the argument."
+  },
+  {
+    "id": "bundles-entail-pii",
+    "section": "the-identity-of-indiscernibles",
+    "question": "If Max Black's universe of two qualitatively identical spheres is possible, what follows for the bundle theory of universals?",
+    "options": [
+      "It is untouched, since the spheres would differ in their bare particulars after all",
+      "It is untouched, since the spheres would still differ in their intrinsic properties",
+      "It is refuted for the spheres, but only if they are not at the same location",
+      "It is false, since it entails the identity of indiscernibles, which the case violates"
+    ],
+    "answer": 3,
+    "explanation": "If an object is just a bundle of universals, two objects with all the same universals would be one bundle, so the theory entails the identity of indiscernibles. Black's case is built to be a counterexample to that principle; the spheres are stipulated to share their intrinsic properties."
+  },
+  {
+    "id": "tropes-and-black",
+    "section": "where-the-two-views-meet",
+    "question": "How can a bundle theorist who uses tropes accept Black's two spheres without giving up bundle theory?",
+    "options": [
+      "By holding that exact resemblance between the tropes makes the two spheres one single sphere",
+      "By making each sphere its own set of tropes, so difference in number needs none in quality",
+      "By adding a bare particular to each sphere, which then carries all of the difference",
+      "By denying that either sphere has any properties other than its location in space"
+    ],
+    "answer": 1,
+    "explanation": "The tropes in the two bundles exactly resemble one another but are numerically distinct, so there are two bundles. Adding bare particulars would abandon the bundle view, and resemblance between tropes does not identify them."
+  }
+]
