@@ -7,8 +7,10 @@ Regenerate with `npm run changelog`.
 
 ## 17 October 2026
 
-12 changes.
+14 changes.
 
+- Add animated quiz intro for returning visitors and a Quiz step in the tour ([6fb8bf6](https://github.com/thejjp04/philolarps/commit/6fb8bf6))
+- Regenerate changelog ([af79264](https://github.com/thejjp04/philolarps/commit/af79264))
 - Tighten Hacking and McKay-Johnson passages in metaphysics intermediate ([9151579](https://github.com/thejjp04/philolarps/commit/9151579))
 - Regenerate changelog ([e1e105a](https://github.com/thejjp04/philolarps/commit/e1e105a))
 - Add metaphysics intermediate rung 10: Modality and Possible Worlds ([ca4b38c](https://github.com/thejjp04/philolarps/commit/ca4b38c))
