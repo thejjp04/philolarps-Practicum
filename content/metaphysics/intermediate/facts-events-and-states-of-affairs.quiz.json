@@ -1,0 +1,80 @@
+[
+  {
+    "id": "two-ways-to-name",
+    "section": "two-ways-of-nominalising-a-sentence",
+    "question": "Which observation would best support treating \"the eruption of Vesuvius\" as naming an event rather than a fact?",
+    "options": [
+      "It can be described as violent and as lasting several hours",
+      "It can be denied by a historian who doubts the evidence",
+      "It can be surprising to people who first learn of it",
+      "It is made true by how things stand in the world"
+    ],
+    "answer": 0,
+    "explanation": "Being sudden, slow or long-lasting is something happenings do, and facts only are the case. The other options all fit the that-clause just as well, since a fact can be denied, be surprising, and be made true."
+  },
+  {
+    "id": "fact-not-true-sentence",
+    "section": "facts-and-states-of-affairs",
+    "question": "A student says that Brutus's being a sailor is a state of affairs and so is a fact. On the usage the article follows, what is wrong with this?",
+    "options": [
+      "It conflates states of affairs with true sentences, which are the real facts",
+      "The state of affairs does not obtain, and only obtaining ones count as facts",
+      "States of affairs are events and so cannot also be facts",
+      "Nothing is wrong, since every state of affairs is automatically a fact"
+    ],
+    "answer": 1,
+    "explanation": "On Plantinga's usage a state of affairs can fail to obtain, and a fact is one that obtains. Facts are not true sentences on this view, and states of affairs are not events."
+  },
+  {
+    "id": "sum-versus-state",
+    "section": "the-unity-problem",
+    "question": "Why does Armstrong deny that Brutus's being a conspirator is simply the sum of Brutus and the property of conspiracy?",
+    "options": [
+      "Properties cannot be parts of anything, so no sum could include one",
+      "The sum exists even if Brutus is loyal, whereas the state of affairs would not",
+      "A sum of an object and a property would have to be located somewhere",
+      "The sum is made of two things, but a state of affairs has only one constituent"
+    ],
+    "answer": 1,
+    "explanation": "The sum of the two constituents exists whether or not Brutus has the property, so it cannot be what makes the sentence true. That is why Armstrong adds a non-mereological way of combining them."
+  },
+  {
+    "id": "kim-event-identity",
+    "section": "events-as-exemplifications",
+    "question": "At noon Brutus insults Caesar, and at noon he also stabs him. On Kim's account of events, how do Brutus's insulting of Caesar and his stabbing of Caesar at noon relate?",
+    "options": [
+      "They are one event, since the object, the victim and the time all agree",
+      "They are two events, since the constitutive properties are different properties",
+      "They are one event, since both are causes of Caesar's anger and death",
+      "They are two events, since they must have happened at slightly different times"
+    ],
+    "answer": 1,
+    "explanation": "Kim's identity condition requires the same object, the same property and the same time. Insulting and stabbing are different properties, so the events differ however much else they share."
+  },
+  {
+    "id": "rotating-heating-ball",
+    "section": "how-finely-to-cut",
+    "question": "Why does a ball that rotates and heats up at once embarrass the view that events are identical when they occupy the same spacetime region?",
+    "options": [
+      "It shows that no event can occupy a region of spacetime at all",
+      "It counts two happenings with different effects as a single event",
+      "It implies that every description of a happening names a separate event",
+      "It shows that heating is not really a property of the ball"
+    ],
+    "answer": 1,
+    "explanation": "The rotation and heating occupy the same region but make different differences, so a region criterion merges them. It errs in the coarse direction, not the fine one, which is the opposite of the profusion worry."
+  },
+  {
+    "id": "mellor-absence",
+    "section": "what-causes-what",
+    "question": "A plant dies because nobody watered it. Which feature of this case does the article offer in support of causes being facts rather than events?",
+    "options": [
+      "The death is a datable occurrence that took place in one particular spot",
+      "Singular causal statements keep their truth when a description is swapped",
+      "There is no particular event of the not-watering to serve as the cause",
+      "Facts can fail to obtain, so a false cause can still produce an effect"
+    ],
+    "answer": 2,
+    "explanation": "An absence is not a happening, so if causes had to be events the case would have no cause. Mellor's facts include negative ones. The extensionality point is Davidson's reason for choosing events, and facts that fail to obtain are not facts at all."
+  }
+]
