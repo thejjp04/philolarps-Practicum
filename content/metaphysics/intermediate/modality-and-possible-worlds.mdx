@@ -1,0 +1,116 @@
+---
+title: Modality and Possible Worlds
+subject: metaphysics
+tier: intermediate
+order: 10
+est_read_min: 16
+summary: "Using worlds to analyse de re and de dicto claims, and the cost of transworld identity"
+prerequisites: ["free-will-and-determinism"]
+introduces: ["possible worlds analysis", "de re modality", "de dicto modality", "transworld identity"]
+requires: ["possibility", "necessity", "modality", "contingent truth", "logical possibility"]
+added: "2026-10-17"
+---
+
+The dispute over free will kept returning to one phrase: could the agent have done otherwise, with certain things held fixed? Everything depended on what "could" ranges over and what is held constant while it ranges. Philosophers had been using modal vocabulary like that for centuries without a systematic account of it. The account that finally became standard, in the 1960s, was strikingly simple, and the rest of modern metaphysics has been shaped by arguing about what it costs.
+
+## Worlds as a way of talking about modality
+
+The idea has an ancestor in Leibniz, who said that God, choosing what to create, surveyed an infinity of possible worlds and made the best. But its modern use is logical rather than theological. Saul Kripke's semantics for modal logic, published in 1959 and 1963, and the closely related work of Jaakko Hintikka and others, gave a precise way to say when a modal sentence is true.
+
+<Definition term="Possible worlds analysis">
+The analysis of modal claims in terms of possible worlds, understood as complete ways things could have been. Something is possible if it is true at some possible world, necessary if it is true at every possible world, and contingent if it is true at some worlds and false at others.
+</Definition>
+
+The actual world is one of the possible worlds, the one that happens to be how things are. A world is not a place you could travel to, and not just a collection of a few facts. It is a complete, maximal way for everything to be, such that for any claim whatever, either the claim or its negation holds there.
+
+The analysis redescribes the familiar modal notions without adding to them. "There could have been a talking donkey" becomes "there is a world with a talking donkey". "Two plus two has to be four" becomes "at every world, two plus two is four". Interdefinability, which the beginner tier noted, comes for free: that something is not necessary just means there is a world where it fails, which is to say that its negation is possible.
+
+Two things are worth seeing at once. First, the analysis fits the standards of possibility from the earlier article, because we can restrict the worlds. Logical possibility corresponds to all the worlds that are consistent, physical possibility to those that share our laws of nature, and so on, so that different grades of modality are different domains of worlds. Second, the analysis gives a way of testing arguments. To show that something follows necessarily from something else, you check every world, and to show that it does not, you exhibit one world where the premise holds and the conclusion fails.
+
+What the analysis does not yet do is say what worlds are, or whether the explanation runs in the direction it appears to. That is the topic of the next two articles. For now the question is what the framework lets us say, and what it forces us to say.
+
+## De dicto and de re
+
+Modal claims come in two forms that ordinary speech runs together, and the distinction is what gives the worlds apparatus most of its use.
+
+<Definition term="De dicto modality">
+Modality attributed to a whole proposition (a *dictum*): the claim that a proposition as a whole is necessary or possible. "Necessarily, every bachelor is unmarried" says of the proposition that every bachelor is unmarried that it could not have been false.
+</Definition>
+
+<Definition term="De re modality">
+Modality attributed to a particular thing (a *res*): the claim that a given object has a property necessarily or possibly. "Socrates is necessarily human" says of Socrates himself that he could not have failed to be human.
+</Definition>
+
+The difference is easy to feel in a case. Suppose a race is run and Ada wins. "Necessarily, the winner of the race wins" is true as a de dicto claim, since in any world where there is a winner, that person wins. But "Ada is necessarily the winner" is a de re claim about Ada, and it is plainly false, since she could have stumbled. The sentence "the winner could not have lost" is ambiguous between them, and moves from the first reading to the second are a standard source of error.
+
+In terms of worlds, the two forms have different truth conditions. A de dicto claim quantifies over worlds and asks about the proposition at each: *p* is necessary when *p* is true at all worlds. A de re claim picks out a thing, takes it to the worlds, and asks about what is true of it there: Ada is necessarily a person when in every world where Ada exists, she is a person. The second requires that the same thing can be found in different worlds, which the first never needed. That requirement is the whole source of the trouble to come.
+
+<Check id="winner-scope" />
+
+## The analysis at work
+
+Why is the distinction worth the machinery? Because a great deal of what we want to say about the world is de re. "Nixon could have lost the 1972 election" is not about the proposition that Nixon won, taken as a block. It is about Nixon, the man, and what could have happened to him. "This table could have been made of ice" is about this table. The analysis has to deliver such claims, and it does so directly: there is a world in which that very man loses, and a world in which that very table is ice.
+
+The point can be seen by comparing what happens when the machinery is mishandled. W. V. O. Quine was the most influential critic of quantified modal logic in the 1950s and 1960s, and his objection was precisely about de re modality. In *Word and Object* (1960) he considers a mathematician who is necessarily rational but not necessarily two-legged, and a cyclist who is necessarily two-legged but not necessarily rational. Suppose that the mathematician and the cyclist are one and the same person. Then that person is both necessarily and not necessarily rational, which looks absurd. Quine concluded that necessity attaches to things only relative to how they are described, and that the idea of a thing having some properties necessarily, independent of any description, belongs to an unscientific Aristotelian essentialism.
+
+Kripke's answer, developed in the 1963 semantics and then in his 1970 lectures published as *Naming and Necessity* (1980), is that the worlds framework shows where the argument slips. Whether the man is rational at a given world is a question about the man, not about the description under which we picked him out. We fix on him, as it were, and ask what he is like at each world. Nothing about his being a mathematician or a cyclist in the actual world bears on whether he is rational there. The framework gives de re modality a clear sense, because the truth of "Nixon could have lost" is settled by what is true of Nixon at the other worlds, whichever description we used to pick him out here.
+
+The price, as the next sections show, is that the same object must be available at other worlds. The scope distinction also keeps modal reasoning valid. Suppose the winner of the race happens to be the tallest runner. It does not follow that necessarily, if Ada is the winner then she is the tallest, because that would turn a contingent fact into a necessity. The error is one of scope, and the worlds apparatus exposes it by showing that the two readings quantify over worlds in different places.
+
+<Check id="nixon-claim" />
+
+## Transworld identity
+
+Everything in the de re analysis depends on one assumption, which Quine's challenge had already pressed: that a thing in one world can be the same thing as something in another.
+
+<Definition term="Transworld identity">
+The identity of an individual across different possible worlds: the sense in which one and the same thing exists in, and has properties at, more than one world.
+</Definition>
+
+Saying that Nixon loses at some world requires that there be an individual at that world who is Nixon himself, not merely someone like him. Otherwise the claim would be about a stranger. So the analysis owes an account of what makes an individual in another world identical with an individual here.
+
+The obvious proposal is qualitative: the person in the other world is Nixon if he is similar enough to the actual Nixon in appearance, history and character. Roderick Chisholm raised the difficulty for this in a 1967 paper. Identity is transitive and similarity is not. Take a series of worlds in each of which the individual differs slightly from the last. Each is similar enough to its neighbours to count as the same person, and so by transitivity the first is the same as the last, however different they have become. But if the first and last are very unlike, they are not the same person on the similarity criterion. The proposal gives inconsistent verdicts, and it also faces the problem that identity is all-or-nothing whereas similarity comes in degrees.
+
+A second difficulty is the one that the ship of Theseus already taught. If qualitative sameness does not settle identity within a world, because a replaced plank can leave two rival candidates, it is not clear why it should settle identity across worlds. Differences of origin, of matter, and of history all pull in different directions, and each is a candidate for what the individual could not have lacked. An answer to the question of which features are essential is an answer to which de re claims are true, and the worlds do not supply it.
+
+## Identity by stipulation
+
+Kripke's response was to deny that the question arises as stated. In *Naming and Necessity* he argued that possible worlds are not distant countries that we discover and then try to identify our friends in. They are stipulated. "Suppose Nixon had lost" starts from Nixon and says how things are to go for him. We never face a world full of anonymous people and have to decide which is Nixon, because the world is given as one in which Nixon is a certain way. Identity across worlds is then fixed by the stipulation, not by a criterion of similarity we apply afterwards.
+
+The reply is attractive, but it has two weaknesses.
+
+<Objection>
+The stipulation answer is not an answer. When we say "suppose Nixon had lost", we might stipulate nonsense, such as that Nixon had been a prime number. Not every stipulation describes a genuine possibility. So some account of which stipulations succeed is still needed, and that account is an account of what Nixon's identity requires, which is the original question again.
+</Objection>
+
+<Reply>
+Kripke accepts this and does not offer a recipe. His claim is more limited: that the problem of transworld identity was posed in a misleading way, as if identity across worlds were a matter of matching up descriptions. Which properties an individual could have lacked is a further question, to be answered case by case, by thinking about what the thing is, and with some modal intuitions as evidence. Kripke's own suggestions, that a person could not have had different parents and that a table could not have been made from entirely different matter, are exactly such answers. The stipulation move relocates the question rather than closing it, but relocating it is progress if the original framing was the source of the paralysis.
+</Reply>
+
+Alvin Plantinga took a bolder line in *The Nature of Necessity* (1974). Perhaps each individual has a haecceity, a property of being that very individual, which is not reducible to any qualitative character and which exists, or is instantiated, only if the individual does. Then identity across worlds is primitive: Nixon is the one with Nixon's haecceity, and no qualitative resemblance is needed. The cost is a metaphysical posit that many find obscure, and a commitment to the idea that two worlds could differ only in which individuals play which roles, with no qualitative difference at all.
+
+<Aside title="Transworld identity as a pseudo-problem">
+Some philosophers conclude that it is never a problem at all. If the relevant notion of "possible world" is defined as a way things could have been, then to say a world contains Nixon is just to say it is a way for Nixon to be, and nothing further needs to be matched. On this view the demand for a criterion of transworld identity assumes a picture on which worlds are independent realms with their own populations, and it is that picture, not modality, that creates the difficulty. Whether the picture is optional depends on what worlds are, which is exactly what the next article asks.
+</Aside>
+
+<Check id="stipulation-limits" />
+
+## What the analysis costs
+
+The possible worlds analysis is among the most productive tools in analytic philosophy. It gave modal logic a semantics, it clarified the difference between claims that were being run together, and it supplied a common language in which questions about essence, causation and counterfactuals could be posed. Its costs fall in three places.
+
+First, there is the question of whether it is an analysis in the strict sense, a reduction of modality to something else. If we say that something is possible when it is true at some world, but a world is just a way things could have been, then the account appears to use the very notion it was meant to explain. Kripke is happy with this: he takes the framework as a model and a heuristic, not a reduction. David Lewis was not. He took worlds to be real, concrete things, and so claimed an analysis that does explain modality in non-modal terms, at a heavy ontological price. His version is the subject of the next article.
+
+Second, there is the commitment to some account of what the worlds are. If they are concrete, there is a vast plurality of universes. If they are abstract, they are sets of propositions or properties or states of affairs, and one must ask what makes some of them possible. Either choice goes well beyond what the original modal sentences said.
+
+Third, there is the cost of transworld identity itself, which is a commitment to say something about how individuals persist across the space of possibilities. Each way of answering, by essential properties, by haecceities, or by dropping strict identity in favour of resemblance, carries consequences for the rest of metaphysics.
+
+The attraction of the framework is that it makes these costs visible. Before it, a claim like "Nixon could have lost" seemed to need nothing, and afterwards it was clear that it needs a great deal. Whether that is a defect in the analysis or a discovery about modality is a question the next article takes up, in Lewis's concrete worlds and the abstract surrogates built to avoid them.
+
+<FurtherReading>
+  <li>Saul A. Kripke, *Naming and Necessity* (Cambridge, MA: Harvard University Press, 1980; based on lectures given in 1970).</li>
+  <li>Saul A. Kripke, "Semantical Considerations on Modal Logic", *Acta Philosophica Fennica*, volume 16 (1963), pages 83 to 94.</li>
+  <li>Roderick M. Chisholm, "Identity Through Possible Worlds: Some Questions", *Noûs*, volume 1, number 1 (1967), pages 1 to 8.</li>
+  <li>Alvin Plantinga, *The Nature of Necessity* (Oxford: Clarendon Press, 1974).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Possible Worlds"](https://plato.stanford.edu/entries/possible-worlds/), by Christopher Menzel.</li>
+</FurtherReading>

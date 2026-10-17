@@ -1,0 +1,80 @@
+[
+  {
+    "id": "worlds-and-grades",
+    "section": "worlds-as-a-way-of-talking-about-modality",
+    "question": "On the possible worlds analysis, what distinguishes physical possibility from logical possibility?",
+    "options": [
+      "Physical possibility requires truth at every world, logical possibility only at some",
+      "Physical possibility concerns propositions and logical possibility concerns objects",
+      "Physical possibility ranges over fewer worlds, those sharing our laws of nature",
+      "There is no difference, since both are truth at some world whatsoever"
+    ],
+    "answer": 2,
+    "explanation": "Different grades of possibility correspond to different domains of worlds: all consistent worlds for logical possibility, only those with our laws for physical possibility. The first option confuses possibility with necessity."
+  },
+  {
+    "id": "winner-scope",
+    "section": "de-dicto-and-de-re",
+    "question": "Which pair correctly classifies the claims (i) 'Necessarily, whoever wins the race wins' and (ii) 'Ada, who won, necessarily won'?",
+    "options": [
+      "(i) is de re and true; (ii) is de dicto and false",
+      "(i) is de dicto and true; (ii) is de re and false",
+      "Both are de dicto, with (i) true and (ii) false",
+      "Both are de re, with (i) true and (ii) false"
+    ],
+    "answer": 1,
+    "explanation": "The first attributes necessity to a whole proposition and holds at every world where there is a winner. The second attributes necessity to Ada herself, and she could have lost."
+  },
+  {
+    "id": "nixon-claim",
+    "section": "the-analysis-at-work",
+    "question": "Quine imagines one man who is a mathematician and a cyclist, and says he is necessarily rational as a mathematician but not as a cyclist. How does the worlds framework answer him?",
+    "options": [
+      "By denying that the man could be both a mathematician and a cyclist in the actual world at once",
+      "By holding that rationality is necessary for every person, however they are described",
+      "By holding that necessity attaches only to propositions and never to individuals",
+      "By evaluating what is true of him at a world, whatever the description used to pick him out"
+    ],
+    "answer": 3,
+    "explanation": "De re necessity is evaluated by taking the man himself to the worlds, so the description used to introduce him does not matter. The third option gives up de re modality, which is what the framework was meant to vindicate."
+  },
+  {
+    "id": "chain-of-worlds",
+    "section": "transworld-identity",
+    "question": "A series of worlds contains a person who differs by a tiny amount from the person in the previous world. Why is this a problem for the proposal that identity across worlds is sufficient similarity?",
+    "options": [
+      "Similarity is not transitive but identity is, so distant unlike individuals would count as one",
+      "Similarity cannot be measured at all, so no individual could ever be matched across worlds",
+      "Identity is not a relation, so it cannot hold between things in different worlds",
+      "Each world contains exactly one person, which makes any comparison across worlds impossible"
+    ],
+    "answer": 0,
+    "explanation": "Small steps of similarity pile up, whereas identity is transitive and all-or-nothing. The first and last members of the chain would have to be one person despite being very unlike."
+  },
+  {
+    "id": "stipulation-limits",
+    "section": "identity-by-stipulation",
+    "question": "Someone says 'suppose Nixon had been a prime number' and takes this to describe a world. What does this show about Kripke's stipulation response?",
+    "options": [
+      "That worlds can only be discovered and never stipulated by anyone",
+      "That a stipulation does not guarantee a possibility, so what Nixon's identity requires is still needed",
+      "That transworld identity is settled by haecceities after all",
+      "That Nixon exists only at the actual world and at no other"
+    ],
+    "answer": 1,
+    "explanation": "The stipulation fixes who the world is about but cannot make just anything possible. Which stipulations succeed depends on what the individual is, so the original question returns in a new place."
+  },
+  {
+    "id": "reductive-or-not",
+    "section": "what-the-analysis-costs",
+    "question": "A critic says the worlds analysis explains 'possible' only by appealing to 'possible' worlds, which are ways things could have been. Which response keeps the analysis non-circular?",
+    "options": [
+      "Reading it as a model of modal reasoning rather than as a reduction of modality",
+      "Treating worlds as real concrete things that are not defined in modal terms",
+      "Restricting it to de dicto claims, where no objects occur at all",
+      "Dropping necessity and keeping only possibility as the basic notion"
+    ],
+    "answer": 1,
+    "explanation": "Lewis keeps the analysis reductive by taking worlds to be concrete things that are not defined modally, at a high ontological price. Kripke's model reading accepts some circularity, and restricting to de dicto claims does not remove the modal notion from the account of worlds."
+  }
+]
