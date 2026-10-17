@@ -8,6 +8,7 @@ import { TopBar } from "@/components/TopBar";
 import { IconClose } from "@/components/icons";
 import type { NavData } from "@/components/nav-data";
 import { MusicProvider } from "@/components/player";
+import { QuizIntro } from "@/components/quiz/QuizIntro";
 import { Tour } from "@/components/tour";
 
 export function AppShell({
@@ -94,6 +95,7 @@ export function AppShell({
           <PlayerBar />
         </div>
       </Tour>
+      <QuizIntro />
     </MusicProvider>
   );
 }

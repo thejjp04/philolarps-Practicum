@@ -62,6 +62,7 @@ const REFERENCE = [
 ];
 
 const TOUR_REFERENCE = "/music";
+const TOUR_QUIZ = "/quiz";
 
 export function Sidebar({
   nav,
@@ -194,7 +195,7 @@ export function Sidebar({
           </h2>
           <ul className="space-y-[2px]">
             {REFERENCE.map(({ href, label, Icon }) => (
-              <li key={href} data-tour={href === TOUR_REFERENCE ? "music" : undefined}>
+              <li key={href} data-tour={href === TOUR_REFERENCE ? "music" : href === TOUR_QUIZ ? "quiz" : undefined}>
                 <Link
                   href={href}
                   onClick={onNavigate}

@@ -87,6 +87,12 @@ const STEPS: Step[] = [
     body: "Inside a subject this opens the order to read it in. Outside one it goes to the three paths that run across subjects.",
   },
   {
+    anchor: "quiz",
+    inSidebar: true,
+    title: "Quiz",
+    body: "Quiz yourself on any articles you pick. Misses come back until you get them, and questions you have learned return on a schedule. Articles also have check-your-understanding questions built in.",
+  },
+  {
     anchor: "music",
     inSidebar: true,
     title: "Music",
