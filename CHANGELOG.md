@@ -5,10 +5,26 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 17 October 2026
+
+10 changes.
+
+- Add metaphysics intermediate rung 10: Modality and Possible Worlds ([ca4b38c](https://github.com/thejjp04/philolarps/commit/ca4b38c))
+- Add metaphysics intermediate rung 9: Free Will and Determinism ([ed3330b](https://github.com/thejjp04/philolarps/commit/ed3330b))
+- Add metaphysics intermediate rung 8: Theories of Causation ([10e13c5](https://github.com/thejjp04/philolarps/commit/10e13c5))
+- Add metaphysics intermediate rung 7: Theories of Time ([5b787d7](https://github.com/thejjp04/philolarps/commit/5b787d7))
+- Add metaphysics intermediate rung 6: Personal Identity ([47e30a7](https://github.com/thejjp04/philolarps/commit/47e30a7))
+- Add metaphysics intermediate rung 5: Persistence: Endurantism and Perdurantism ([b316459](https://github.com/thejjp04/philolarps/commit/b316459))
+- Add metaphysics intermediate rung 4: Supervenience ([c1dfbc1](https://github.com/thejjp04/philolarps/commit/c1dfbc1))
+- Add metaphysics intermediate rung 3: Facts, Events, and States of Affairs ([f87f019](https://github.com/thejjp04/philolarps/commit/f87f019))
+- Add metaphysics intermediate rung 2: Substance and Bundle Theories ([0ed787e](https://github.com/thejjp04/philolarps/commit/0ed787e))
+- Add metaphysics intermediate rung 1: Universals and Particulars ([02d54dc](https://github.com/thejjp04/philolarps/commit/02d54dc))
+
 ## 9 October 2026
 
-2 changes.
+3 changes.
 
+- Regenerate changelog ([4234cac](https://github.com/thejjp04/philolarps/commit/4234cac))
 - Add quiz questions and in-article checks for all articles ([4e0fb89](https://github.com/thejjp04/philolarps/commit/4e0fb89))
 - Add quiz engine, in-article checks and quiz page ([b2fa36c](https://github.com/thejjp04/philolarps/commit/b2fa36c))
 
