@@ -1,0 +1,80 @@
+[
+  {
+    "id": "barometer-and-regularity",
+    "section": "hume-and-the-regularity-theory",
+    "question": "A falling barometer reading is reliably followed by a storm. Why does this trouble a pure regularity theory?",
+    "options": [
+      "The regularity holds only some of the time, so it cannot count as a regularity at all in this case",
+      "The regularity is as strong as a real one, so something more must separate the two",
+      "The reading comes after the storm begins, so the order of the two events is the wrong way round",
+      "The storm is not an event, so no regularity could hold between it and the barometer's reading"
+    ],
+    "answer": 1,
+    "explanation": "The barometer's reading is followed by storms as reliably as a short circuit is followed by fires, so regularity alone cannot say that one is a cause and the other is not. The reading comes before the storm, and storms are events, so neither of the other complaints applies."
+  },
+  {
+    "id": "rooster-and-dawn",
+    "section": "the-counterfactual-analysis",
+    "question": "A rooster crows shortly before every dawn. What does the counterfactual analysis say about whether the crowing causes the dawn?",
+    "options": [
+      "It does, because the crowing is always followed by the dawn, day after day",
+      "It does, because the crowing is a sufficient condition for the dawn to follow",
+      "It is undecided, since the analysis cannot compare cases that never actually occurred",
+      "It does not, because had the rooster stayed silent the dawn would still have come"
+    ],
+    "answer": 3,
+    "explanation": "The analysis asks what would have happened in the nearest situation where the rooster is silent, and the dawn comes anyway, so there is no dependence. The first two answers are the regularity theory's reasoning, which is exactly what the counterfactual test improves on."
+  },
+  {
+    "id": "late-preemption-chain",
+    "section": "overdetermination-and-preemption",
+    "question": "Why does Lewis's chain of dependence handle early preemption but not late preemption?",
+    "options": [
+      "An early backup is cut off before the intermediate events, but a late one stays live to the end",
+      "In early preemption both causes act together, whereas in late preemption only one of the two causes acts at all",
+      "In early preemption the effect never occurs, whereas in late preemption the effect occurs twice over, once per cause",
+      "In early preemption there is no backup at all, so the chain of dependence has nothing left to exclude"
+    ],
+    "answer": 0,
+    "explanation": "Once the backup has stood down, the later stages of the actual process do make the effect depend on them, so the chain delivers the right verdict. In late preemption the backup is ready until the last moment, so no stage of the actual process is needed for the effect. Both causes acting together is overdetermination, a different case."
+  },
+  {
+    "id": "pills-and-probability",
+    "section": "probabilistic-causation",
+    "question": "Birth-control pills can cause thrombosis directly while also preventing pregnancy, which itself raises the risk of thrombosis. What does this show about the criterion that causes raise the probability of their effects?",
+    "options": [
+      "The pills are not really a cause of thrombosis, since the probability criterion settles the matter",
+      "Thrombosis has no cause, because its probability is affected by far too many different factors",
+      "A real cause can fail to raise its effect's probability when it works through competing routes",
+      "Probabilities cannot be measured, so the criterion cannot be applied in practice to any such case"
+    ],
+    "answer": 2,
+    "explanation": "The direct route raises the risk and the route through pregnancy lowers it, so the net effect on probability can be negative even though the pills do cause thrombosis. The case is a counterexample to the criterion, not a reason to deny the causal link or to doubt that probabilities can be measured."
+  },
+  {
+    "id": "intervention-versus-correlation",
+    "section": "interventionism",
+    "question": "People who carry lighters get lung cancer more often. How does an interventionist decide whether carrying lighters causes lung cancer?",
+    "options": [
+      "By checking whether carrying a lighter always comes before the cancer in time",
+      "By checking whether the correlation appears in every population that has ever been studied",
+      "By checking whether carrying a lighter is a necessary condition for getting the cancer at all",
+      "By asking whether setting lighter-carrying from outside would change the cancer rate"
+    ],
+    "answer": 3,
+    "explanation": "The interventionist test is what would happen to the cancer rate if lighter-carrying were changed by an outside intervention. Smoking drives both habits, so changing the lighter would leave the rate alone. Temporal order, ubiquity of the correlation and necessity are not what the test turns on."
+  },
+  {
+    "id": "preemption-as-sharper-test",
+    "section": "what-the-tests-teach",
+    "question": "Why is preemption treated as a sharper test of a theory of causation than overdetermination?",
+    "options": [
+      "Preemption cases are far more common in everyday life than overdetermination cases are",
+      "We are confident which event is the cause in preemption, yet dependence fails to deliver it",
+      "The effect in a preemption case has no cause that any theory of causation could identify",
+      "Overdetermination cases can all be handled by the regularity theory without any trouble"
+    ],
+    "answer": 1,
+    "explanation": "In preemption Suzy's throw plainly caused the shattering, so a theory that cannot say so has failed against a settled verdict. In overdetermination the verdict itself is disputed, so it is unclear whether to revise the theory or the intuition. Neither frequency nor the regularity theory's handling of overdetermination is the issue."
+  }
+]
