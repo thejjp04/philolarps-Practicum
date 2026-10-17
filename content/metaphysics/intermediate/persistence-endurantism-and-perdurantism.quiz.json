@@ -1,0 +1,80 @@
+[
+  {
+    "id": "manner-of-lasting",
+    "section": "two-ways-of-being-around-for-a-while",
+    "question": "A student says: \"Perdurantists deny that things last, since they think a poker is only a string of momentary slices.\" What is the best correction?",
+    "options": [
+      "Perdurantists accept lasting for ordinary things but deny it for anything that is not made of matter",
+      "Perdurantists deny that the poker is one object, and say there are many pokers, one for each moment",
+      "Perdurantists agree that the poker lasts, and differ from endurantists only about how it does so",
+      "Perdurantists say the poker lasts only if it is wholly present at each moment of its history"
+    ],
+    "answer": 2,
+    "explanation": "Both views accept that the poker persists as one object, and they disagree about the manner of persistence: whole at each time, or extended in time with parts. The last option states the endurantist condition, not the perdurantist one."
+  },
+  {
+    "id": "instantaneous-part",
+    "section": "temporal-parts",
+    "question": "A statue exists from 1900 to 2000. Which of these is an instantaneous temporal part of it, as the article defines the term?",
+    "options": [
+      "The statue's nose, which is a spatial part of it and exists throughout the whole of the century",
+      "An object existing only at noon on 1 January 1950, and taking up all that the statue is then",
+      "The phrase \"the statue in 1950\", which is only a way of speaking about the whole statue itself",
+      "The clay of which the statue is made, which also happens to exist at noon on 1 January 1950"
+    ],
+    "answer": 1,
+    "explanation": "A temporal part exists only during the relevant stretch and takes up everything the object is during it. The nose is a spatial part that lasts the whole time, and a way of speaking about the whole statue is not a further object at all."
+  },
+  {
+    "id": "why-intrinsic-matters",
+    "section": "the-problem-of-temporary-intrinsics",
+    "question": "Which of these changes would NOT raise the problem of temporary intrinsics?",
+    "options": [
+      "A leaf that is green in June and has turned brown by October",
+      "A ball that is round on Monday and has been flattened by Tuesday",
+      "A poker that is straight on Monday and bent on Tuesday",
+      "A lamp moved from beside the door to the far side of the room"
+    ],
+    "answer": 3,
+    "explanation": "Being beside the door is a relation to another thing, so the lamp can stand in different relations at different times without any incompatibility. Colour and shape are intrinsic, which is what makes the other three cases difficult."
+  },
+  {
+    "id": "perdurantist-denial",
+    "section": "the-perdurantist-solution",
+    "question": "Which premise of the argument from temporary intrinsics does the perdurantist reject, and on what ground?",
+    "options": [
+      "The third, because the two shapes belong to different temporal parts",
+      "The first, because shape is really a relation to a time",
+      "The second, because a poker that changes shape is no longer the same poker",
+      "None of them, because the argument is invalid so no premise need go"
+    ],
+    "answer": 0,
+    "explanation": "The perdurantist denies that one wholly present thing has both shapes, since each shape belongs to a different part. Denying the first premise is the relational reply, which is a route open to the endurantist, not the perdurantist."
+  },
+  {
+    "id": "three-endurantist-replies",
+    "section": "endurantist-replies",
+    "question": "An endurantist says that shape is relational: the poker bears the straight-at relation to Monday and the bent-at relation to Tuesday. What is the main cost of this reply?",
+    "options": [
+      "It requires that only the present moment exists, so the past poker has no shape at all",
+      "It requires a large new ontology of temporal parts, one for each moment of the poker's whole life",
+      "It makes the two shapes compatible, but at the price of making the poker numerically two things",
+      "Shape is no longer a way the poker is in itself, which sits badly with the nature of shape"
+    ],
+    "answer": 3,
+    "explanation": "If being bent is a relation to a time, it is not an intrinsic property, which is exactly what the first premise insisted on. Presentism and temporal parts are different ways out, not consequences of this one."
+  },
+  {
+    "id": "statue-and-lump",
+    "section": "what-else-is-at-stake",
+    "question": "A statue and its lump of clay are made at the same moment and destroyed together. Why does the perdurantist find it easy to say they are one object?",
+    "options": [
+      "They share all their temporal parts, so nothing at all distinguishes them",
+      "They are made of the same atoms at every moment, whatever their parts in time",
+      "They occupy the same place, and nothing can differ from what it coincides with",
+      "They have the same name, and a single name can only pick out one thing"
+    ],
+    "answer": 0,
+    "explanation": "If statue and lump begin and end together they are composed of the same temporal parts, so the perdurantist can identify them. Sharing a place at a time is the endurantist's puzzle, because for a wholly present object it does not settle identity."
+  }
+]
