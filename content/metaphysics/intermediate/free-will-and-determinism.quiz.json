@@ -1,0 +1,80 @@
+[
+  {
+    "id": "two-futures",
+    "section": "determinism-and-its-rivals",
+    "question": "A physicist says that, because of chaos, nobody could ever predict next year's weather from today's state. Does this show that the weather is indeterministic?",
+    "options": [
+      "Yes, because a state that cannot be predicted has no sufficient cause in the prior state",
+      "Yes, because determinism is the claim that the future can be foreseen by us",
+      "No, because determinism concerns entailment from past and laws, not computation",
+      "No, because weather is not governed by laws of nature at all, only by statistics"
+    ],
+    "answer": 2,
+    "explanation": "Determinism is a thesis about entailment from the past and the laws, so unpredictability by us is a fact about our limits and is compatible with it. The tempting confusion treats determinism as predictability."
+  },
+  {
+    "id": "obstruction-and-freedom",
+    "section": "two-kinds-of-answer",
+    "question": "A traditional compatibilist in the manner of Hume is asked what separates the free stroller from the prisoner. What would they say?",
+    "options": [
+      "The stroller acts on their wants and is unobstructed; the prisoner is prevented",
+      "The stroller's choices are uncaused whilst the prisoner's choices are fixed by his cell and his keepers",
+      "The stroller could have done otherwise with the whole past held fixed, which the prisoner could not",
+      "The stroller is subject to indeterministic laws, whilst the prisoner is subject to deterministic ones"
+    ],
+    "answer": 0,
+    "explanation": "For this compatibilist freedom is the absence of external constraint on acting as one wants. Whether the wants themselves were caused does not enter, which is exactly what the libertarian finds unsatisfying."
+  },
+  {
+    "id": "rule-beta-grip",
+    "section": "the-consequence-argument",
+    "question": "Someone accepts that nobody has a choice about the remote past and about the laws, yet denies the conclusion of the consequence argument. Which premise must they reject?",
+    "options": [
+      "That the past and the laws together entail what you do, if determinism is true",
+      "That having no choice about some propositions carries over to what they entail",
+      "That the remote past occurred before anyone existed to choose",
+      "That the argument concerns what you do now and not what you did"
+    ],
+    "answer": 1,
+    "explanation": "Given determinism's entailment premise and the two premises about the past and the laws, the only remaining step is the transfer of lack of choice across entailment, which is rule beta. The first option is just the definition of determinism, which the argument assumes for the sake of argument."
+  },
+  {
+    "id": "weak-thesis",
+    "section": "compatibilist-replies",
+    "question": "Lewis says that a person who could have raised their hand, but did not, is able to do something such that, were they to do it, a law would have been broken. What does he deny?",
+    "options": [
+      "That the past is fixed before any agent acts, and so cannot be changed by them",
+      "That the laws of nature are the same in every possible world, whatever agents do",
+      "That determinism is compatible with there being any true counterfactuals at all",
+      "That the agent could thereby break a law or cause the divergence miracle"
+    ],
+    "answer": 3,
+    "explanation": "Lewis grants the weak thesis, that the agent can do something such that a law would have failed, and denies the strong thesis that the agent can break a law or cause the miracle. Only the weak thesis is needed to resist the premise that the laws are not up to us."
+  },
+  {
+    "id": "frankfurt-alternatives",
+    "section": "alternate-possibilities-and-responsibility",
+    "question": "In a Frankfurt case the device would have forced Jones to shoot had he wavered, but it never operated. What is the case supposed to show?",
+    "options": [
+      "That Jones is responsible without alternatives, so the principle of alternate possibilities is false",
+      "That Jones is not responsible because the device removed his freedom of action",
+      "That determinism is true in the case, since Black foresaw the outcome in advance",
+      "That responsibility depends entirely on what Black intended Jones to do"
+    ],
+    "answer": 0,
+    "explanation": "The device never acted, so Jones's decision came from his own reasons, yet he lacked any alternative. If he is still responsible, alternatives are not required. The second option treats an idle device as if it had acted."
+  },
+  {
+    "id": "luck-objection",
+    "section": "the-libertarians-cost",
+    "question": "Which situation best illustrates the luck objection to libertarian free will?",
+    "options": [
+      "An agent whose choice is determined by a manipulator who profits from it",
+      "An agent whose indeterministic choice, replayed from the same state, goes either way with nothing about them explaining which",
+      "An agent whose strong desire for revenge leaves no sense of alternatives",
+      "An agent who has all the relevant information but chooses carelessly"
+    ],
+    "answer": 1,
+    "explanation": "The objection is that indeterminism alone leaves the outcome a matter of chance rather than control, since the same agent in the same state could do either. The manipulated agent is a challenge to compatibilism, not an instance of the luck worry."
+  }
+]
