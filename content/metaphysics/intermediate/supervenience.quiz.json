@@ -1,0 +1,80 @@
+[
+  {
+    "id": "twin-paintings",
+    "section": "the-core-idea",
+    "question": "Which discovery would show that beauty fails to supervene on a painting's physical properties?",
+    "options": [
+      "A beautiful painting that is ruined when its pigment fades with age",
+      "Two beautiful paintings that differ in the pigments they use",
+      "Two physically identical paintings, only one of which is beautiful",
+      "Two paintings of different beauty that also differ in their pigments"
+    ],
+    "answer": 2,
+    "explanation": "Supervenience forbids a difference in the supervening family without a difference in the base, so only physical twins that differ in beauty break it. Changes and differences in beauty that are accompanied by physical differences are exactly what it allows."
+  },
+  {
+    "id": "shifting-pairings",
+    "section": "weak-supervenience",
+    "question": "In one world pain goes with neural state N and in another with a different state M, and within each world nothing alike in neural state differs in pain. What follows?",
+    "options": [
+      "Strong supervenience holds, because each world has a stable and consistent pattern within it",
+      "Pain does not supervene on neural state in any sense, since the pairing differs between worlds",
+      "Pain is identical with whichever neural state is present in the world in question",
+      "Weak supervenience holds, since it compares only within each world"
+    ],
+    "answer": 3,
+    "explanation": "Weak supervenience is checked world by world, and each world passes. The pairing shifting between worlds is the very thing that strong supervenience is designed to rule out."
+  },
+  {
+    "id": "weak-versus-strong",
+    "section": "strong-supervenience",
+    "question": "Which situation would satisfy weak supervenience of the mental on the physical but violate strong supervenience?",
+    "options": [
+      "Two minds in the same world are physically alike but differ mentally",
+      "Two minds in one world differ physically but are mentally alike",
+      "A mind in one world and a physical twin in another differ mentally",
+      "Every mind has a physical state that no other mind in its world has"
+    ],
+    "answer": 2,
+    "explanation": "Weak supervenience compares only things within a single world, so it cannot see a difference between a mind and its physical duplicate in another world. The first option violates both versions."
+  },
+  {
+    "id": "parent-and-world",
+    "section": "global-supervenience",
+    "question": "Why can being a parent globally supervene on the physical even though it fails to supervene on a person's own intrinsic physical properties?",
+    "options": [
+      "Parenthood is not a real property, so no base could ever fail to fix it",
+      "Twins can differ in parenthood, but physically alike worlds agree on who has children",
+      "Global supervenience compares only the physical states of a single person at a time",
+      "Parents are physically more alike than non-parents, so their own states fix it"
+    ],
+    "answer": 1,
+    "explanation": "Whether someone has a child depends on how other things are, so the person's own makeup does not fix it, whereas the whole physical distribution of a world does. Parenthood is a perfectly good property, which is why the base matters."
+  },
+  {
+    "id": "supervenience-is-not-dependence",
+    "section": "what-supervenience-does-not-say",
+    "question": "Socrates and his singleton set vary together across worlds. What does this show about using supervenience to capture which one depends on the other?",
+    "options": [
+      "Supervenience holds in both directions, so it cannot tell which depends on which",
+      "Supervenience fails here, since sets are abstract and Socrates is concrete",
+      "Supervenience holds only from the set to Socrates, so Socrates depends on the set",
+      "Supervenience shows that neither of them exists independently of anything"
+    ],
+    "answer": 0,
+    "explanation": "Because supervenience records only covariation, and the covariation runs both ways, it cannot register the direction of dependence. It does not fail here, and it does not favour either direction."
+  },
+  {
+    "id": "kim-pattern",
+    "section": "what-it-is-used-for",
+    "question": "What is Kim's main reservation about resting non-reductive physicalism on strong supervenience alone?",
+    "options": [
+      "It describes a pattern of covariation without saying why it holds",
+      "It permits mental differences between worlds that are physically identical in every way",
+      "It implies that the mental is identical with one single physical property",
+      "It cannot be stated using the notion of necessity at all in any form"
+    ],
+    "answer": 0,
+    "explanation": "For Kim the supervenience is something to be explained, whether by reduction or emergence, and not itself an explanation. It does rule out mental variation with physical constancy, and it does not require identity with a single physical property."
+  }
+]
