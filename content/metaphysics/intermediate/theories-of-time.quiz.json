@@ -1,0 +1,80 @@
+[
+  {
+    "id": "b-series-fact",
+    "section": "two-ways-of-ordering-events",
+    "question": "Which of these facts about the 1966 World Cup final belongs to the B-series rather than the A-series?",
+    "options": [
+      "It is now more than half a century in the past",
+      "It was once in the future and later became present",
+      "It took place four years before the 1970 final",
+      "It is over, unlike the match being played tonight"
+    ],
+    "answer": 2,
+    "explanation": "The B-series contains only earlier-than, later-than and simultaneous-with relations, which never change. The other three describe the final as past, once future, or no longer happening, and those positions are what change and so belong to the A-series."
+  },
+  {
+    "id": "reply-needs-second-series",
+    "section": "mctaggarts-argument",
+    "question": "A defender replies that an event is future, then present, then past, so it never has the incompatible positions together. Why does McTaggart think this reply fails?",
+    "options": [
+      "Saying 'then' appeals to a further series of times, each with its own positions, so the contradiction returns",
+      "Future, present and past turn out to be compatible, so the reply defends something that needed no defence at all",
+      "An event cannot be future at one time and past at another, because the future never becomes the past in fact",
+      "The earlier-than relations never change, so no event can move from one position to another in the series"
+    ],
+    "answer": 0,
+    "explanation": "The reply explains the clash by giving the event its positions at different times, but those times are themselves future, present or past, so the problem recurs and the regress never ends. McTaggart insists the positions are incompatible, and the point about unchanging relations is his second premise, not his answer to this reply."
+  },
+  {
+    "id": "presentist-rejects",
+    "section": "presentism",
+    "question": "Which claim would a presentist reject but an eternalist accept?",
+    "options": [
+      "Dinosaurs existed millions of years before any humans did",
+      "It is true now that dinosaurs once roamed the whole Earth",
+      "Present fossils are good evidence of what the past was like",
+      "Dinosaurs exist, though they are located at a time other than now"
+    ],
+    "answer": 3,
+    "explanation": "Presentism says only present things exist, so it cannot allow that dinosaurs exist at all, while eternalism says all times are equally real. Both sides accept the other three, since the presentist can say dinosaurs existed and that past-tensed claims are true without saying they exist."
+  },
+  {
+    "id": "eternalism-and-a-theory",
+    "section": "eternalism",
+    "question": "Someone holds that every time exists equally, but that exactly one time is objectively present and that the present moves. How is this view best classified?",
+    "options": [
+      "Presentism, since it holds that the present is objectively special",
+      "Eternalism combined with an A-theory of objective passage",
+      "The B-theory, since it holds that every time exists equally",
+      "The growing block, since it holds that becoming is real"
+    ],
+    "answer": 1,
+    "explanation": "Eternalism concerns what exists and the A-theory concerns whether there is an objective present, so the two can be combined. Presentism denies that all times exist, the B-theory denies an objective present, and the growing block denies that the future exists."
+  },
+  {
+    "id": "growing-block-edge",
+    "section": "the-growing-block",
+    "question": "Why does the growing block theory face a sceptical worry about whether one is now at the edge of reality?",
+    "options": [
+      "The future does not exist, so nobody can check which of their beliefs about it are true",
+      "Past thinkers exist but have no thoughts, so there is nothing to compare my own thought with",
+      "Past thinkers still exist and believed they were at the edge, so I cannot rule out being one",
+      "The edge keeps moving, so no thinker ever has time to form a belief about where it is"
+    ],
+    "answer": 2,
+    "explanation": "On the theory the past is as real as the present, so earlier thinkers and their false beliefs about being at the edge are still part of reality, and they outnumber present thinkers. The worry does not depend on the future being unreal or on the edge moving too fast to think about."
+  },
+  {
+    "id": "relativity-pressure-on-a-theory",
+    "section": "what-the-choice-costs",
+    "question": "Why does special relativity put pressure on A-theories in particular?",
+    "options": [
+      "Simultaneity depends on the frame of reference, so no single present is singled out across the universe",
+      "Relativity shows that time does not exist, which makes tensed facts impossible to state at all",
+      "Relativity forbids any change over time, and the A-theory needs change to get started",
+      "Relativity makes the past unreal, and the A-theory requires the past to exist"
+    ],
+    "answer": 0,
+    "explanation": "An A-theory needs an objective present, and if simultaneity varies with the frame there is no frame-independent now to be the present. Relativity does not deny time, change or the reality of the past, and the B-theory is not troubled in the same way because it needs no privileged present."
+  }
+]
