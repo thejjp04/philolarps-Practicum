@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { burstFrom, correctSound, wrongSound } from "@/components/fx";
+import { correctSound, starBurst, wrongSound } from "@/components/fx";
 import { Question } from "@/components/quiz/Question";
 import { recordAnswer } from "@/components/quiz/progress";
 import type { QuizItem } from "@/lib/types";
@@ -16,7 +16,7 @@ export function Check({ item }: { item: QuizItem }) {
     recordAnswer(item.key, correct);
     if (correct) {
       correctSound(0);
-      burstFrom(el, 18);
+      starBurst(el, { count: 22, power: 0.6 });
     } else {
       wrongSound();
     }

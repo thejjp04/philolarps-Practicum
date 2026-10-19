@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { reducedMotion } from "@/components/fx";
+import { reducedMotion, starBurst } from "@/components/fx";
 import { IconArrowRight, IconFlame, IconRetry } from "@/components/icons";
 import { PRIMARY, SECONDARY } from "@/components/quiz/buttons";
 import type { QuizItem } from "@/lib/types";
@@ -69,11 +69,20 @@ export function QuizResults({
   const shown = useCountUp(score);
   const { title, line } = verdict(score);
   const strong = score >= 80;
+  const ringRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!strong) return;
+    const timer = setTimeout(() => {
+      if (ringRef.current) starBurst(ringRef.current, { count: 110, power: 1.3 });
+    }, 280);
+    return () => clearTimeout(timer);
+  }, [strong]);
 
   return (
     <div className="mx-auto max-w-[680px]">
       <section className="quiz-rise flex flex-col items-center text-center">
-        <div className="relative h-[148px] w-[148px]">
+        <div ref={ringRef} className="relative h-[148px] w-[148px]">
           <svg viewBox="0 0 128 128" className="h-full w-full -rotate-90" aria-hidden="true">
             <circle cx="64" cy="64" r={R} fill="none" stroke="var(--bg-subtle)" strokeWidth="11" />
             <circle

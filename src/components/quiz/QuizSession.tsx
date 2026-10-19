@@ -3,11 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import {
-  burstFrom,
   chime,
-  confetti,
   correctSound,
   fanfare,
+  starBurst,
   useSound,
   wrongSound,
 } from "@/components/fx";
@@ -68,7 +67,7 @@ export function QuizSession({
       setBest(Math.max(best, run));
       setMastered({ ...mastered, [key]: true });
       correctSound(run - 1);
-      burstFrom(el, run >= 5 ? 44 : 22);
+      starBurst(el, run >= 5 ? { count: 44, power: 0.85 } : { count: 24, power: 0.65 });
       if (MILESTONES[run]) {
         setToast({ text: MILESTONES[run], id: Date.now() });
         if (run >= 5) window.setTimeout(chime, 260);
@@ -96,12 +95,8 @@ export function QuizSession({
     }
 
     const right = answered.filter((c) => first[c.item.key]).length;
-    if (right / answered.length >= 0.8) {
-      fanfare();
-      confetti({ x: window.innerWidth / 2, y: window.innerHeight * 0.35 }, { count: 160 });
-    } else {
-      chime();
-    }
+    if (right / answered.length >= 0.8) fanfare();
+    else chime();
 
     onFinish({
       total: answered.length,

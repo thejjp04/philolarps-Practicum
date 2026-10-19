@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { IconArrowRight, IconCheck, IconSpark } from "@/components/icons";
-import { chime, confetti, useSound } from "@/components/fx";
+import { chime, starBurst, useSound } from "@/components/fx";
 
 const DONE_KEY = "philolarps-done";
 
@@ -71,8 +71,7 @@ export function FinishArticle({
 
     writeDone(list.includes(href) ? list : [...list, href]);
 
-    const box = event.currentTarget.getBoundingClientRect();
-    confetti({ x: box.left + box.width / 2, y: box.top + box.height / 2 });
+    starBurst(event.currentTarget, { count: 50, power: 0.9 });
     chime();
   }
 
