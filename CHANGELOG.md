@@ -5,10 +5,17 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 18 October 2026
+
+1 change.
+
+- Replace confetti with star bursts, rework sounds and calm the quiz intro ([aea5047](https://github.com/thejjp04/philolarps/commit/aea5047))
+
 ## 17 October 2026
 
-14 changes.
+15 changes.
 
+- Regenerate changelog ([7a5c8c0](https://github.com/thejjp04/philolarps/commit/7a5c8c0))
 - Add animated quiz intro for returning visitors and a Quiz step in the tour ([6fb8bf6](https://github.com/thejjp04/philolarps/commit/6fb8bf6))
 - Regenerate changelog ([af79264](https://github.com/thejjp04/philolarps/commit/af79264))
 - Tighten Hacking and McKay-Johnson passages in metaphysics intermediate ([9151579](https://github.com/thejjp04/philolarps/commit/9151579))
