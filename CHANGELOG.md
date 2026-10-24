@@ -5,10 +5,26 @@ Each entry links to the exact diff.
 
 Regenerate with `npm run changelog`.
 
+## 24 October 2026
+
+10 changes.
+
+- Add metaphysics advanced rung 7: Neo-Aristotelian Hylomorphism ([a5e41d7](https://github.com/thejjp04/philolarps/commit/a5e41d7))
+- Add metaphysics advanced rung 6: The Problem of Material Constitution ([1808b11](https://github.com/thejjp04/philolarps/commit/1808b11))
+- Add metaphysics advanced rung 5: Truthmaker Theory ([33cdf8e](https://github.com/thejjp04/philolarps/commit/33cdf8e))
+- Add metaphysics advanced rung 4: Ontological Dependence ([103f68a](https://github.com/thejjp04/philolarps/commit/103f68a))
+- Add metaphysics advanced rung 3: Fundamentality and Structure ([523d75b](https://github.com/thejjp04/philolarps/commit/523d75b))
+- Add metaphysics advanced rung 2: Essence Is Not Modality ([c080d51](https://github.com/thejjp04/philolarps/commit/c080d51))
+- Add metaphysics advanced rung 1: Grounding and Metaphysical Explanation ([c60a713](https://github.com/thejjp04/philolarps/commit/c60a713))
+- Add metaphysics intermediate rung 13: Mereology and Composition ([c83fe9a](https://github.com/thejjp04/philolarps/commit/c83fe9a))
+- Add metaphysics intermediate rung 12: Essentialism and the Argument from Origins ([0796769](https://github.com/thejjp04/philolarps/commit/0796769))
+- Add metaphysics intermediate rung 11: Modal Realism and Ersatzism ([6f956ae](https://github.com/thejjp04/philolarps/commit/6f956ae))
+
 ## 18 October 2026
 
-1 change.
+2 changes.
 
+- Regenerate changelog ([a46523b](https://github.com/thejjp04/philolarps/commit/a46523b))
 - Replace confetti with star bursts, rework sounds and calm the quiz intro ([aea5047](https://github.com/thejjp04/philolarps/commit/aea5047))
 
 ## 17 October 2026
