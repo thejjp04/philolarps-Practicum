@@ -1,0 +1,80 @@
+[
+  {
+    "id": "pale-socrates",
+    "section": "necessitation-and-states-of-affairs",
+    "question": "On the necessitation account, why can Socrates himself not be the truthmaker for 'Socrates is pale'?",
+    "options": [
+      "Because Socrates is a substance, and substances are never truthmakers for anything",
+      "Because paleness is a universal, and only universals can make predications true",
+      "Because Socrates could exist without being pale, so his existence does not necessitate it",
+      "Because the truth is contingent, and contingent truths have no truthmakers of any kind"
+    ],
+    "answer": 2,
+    "explanation": "A truthmaker must necessitate its truth, and Socrates could have existed tanned. Substances can still make some truths true, such as 'Socrates exists', which is why the first option overstates the point."
+  },
+  {
+    "id": "tower-and-arithmetic",
+    "section": "truth-grounded-in-being",
+    "question": "On the necessitation account the Eiffel Tower is a truthmaker for 'two plus two is four'. How does treating truthmaking as grounding avoid this?",
+    "options": [
+      "The tower necessitates the arithmetic truth but is not what that truth holds in virtue of",
+      "The tower does not necessitate the arithmetic truth, since the tower might not have existed",
+      "Arithmetic truths are grounded in the tower only when someone counts its iron girders",
+      "Grounding requires every truthmaker to be abstract, and the tower is a concrete object"
+    ],
+    "answer": 0,
+    "explanation": "Grounding can separate items that are necessarily connected, so the tower necessitates the truth without grounding it. The second option misreads necessitation, which only requires that the truth cannot be false while the tower exists, and that holds for any necessary truth."
+  },
+  {
+    "id": "unicorn-world",
+    "section": "truth-supervenes-on-being",
+    "question": "Our world and a world exactly like it plus one unicorn differ over 'there are no unicorns'. Why does this not violate the principle that truth supervenes on being?",
+    "options": [
+      "Because the negative existential is necessary, and so is true at both of the worlds",
+      "Because a totality state of affairs in our world serves as the truth's truthmaker",
+      "Because supervenience applies only to positive truths and never to negative ones",
+      "Because the worlds differ in being, since one contains a thing the other lacks"
+    ],
+    "answer": 3,
+    "explanation": "The principle only demands that a difference in truth come with a difference in being, and the extra unicorn is one. No truthmaker in our world is needed, which is why the totality state of affairs is Armstrong's answer and not the supervenience theorist's."
+  },
+  {
+    "id": "molnar-negative-facts",
+    "section": "negative-existentials",
+    "question": "A philosopher holds that 'there are no unicorns' is made true by a basic negative fact, the absence of unicorns. Which of Molnar's four theses does she give up?",
+    "options": [
+      "That the world is the totality of what exists",
+      "That whatever exists in the world is positive",
+      "That some negative claims about the world are true",
+      "That every truth is made true by something existing"
+    ],
+    "answer": 1,
+    "explanation": "A basic negative fact is an existing entity that is not positive, so the second thesis goes while the demand for truthmakers is kept. Giving up the fourth thesis is Lewis's route, which allows the negative existential no truthmaker at all."
+  },
+  {
+    "id": "totality-and-unicorns",
+    "section": "totality-states-of-affairs",
+    "question": "Why does the existence of Armstrong's totality state of affairs necessitate that there are no unicorns?",
+    "options": [
+      "Because it has the absence of unicorns among its parts, as a negative constituent",
+      "Because the totality relation is a negative universal that no unicorn could have",
+      "Because it is the sum of all positive things, and no unicorn is among its parts",
+      "Because a unicorn would add a state of affairs outside the aggregate, so it would not be all"
+    ],
+    "answer": 3,
+    "explanation": "The totality state of affairs says that this aggregate is all the first-order states of affairs, and a unicorn would make that false. A mere sum of positive things could exist alongside a unicorn, which is why Armstrong needs the further totality relation."
+  },
+  {
+    "id": "five-minute-world",
+    "section": "truths-about-the-past",
+    "question": "Why does a world created five minutes ago, presently just like ours, cause trouble for a presentist who accepts that truth supervenes on being?",
+    "options": [
+      "It matches our present being yet differs over whether there were dinosaurs",
+      "It contains dinosaurs that exist now, which presentism says cannot happen",
+      "It shows that past truths are made true by fossils and memories alone",
+      "It is impossible, so presentism cannot even describe what it would be like"
+    ],
+    "answer": 0,
+    "explanation": "For the presentist only present things exist, so the two worlds are alike in being while differing in a past truth, which the principle forbids. Fossils and memories are the same in both worlds, which is exactly why they cannot be what makes the difference."
+  }
+]
