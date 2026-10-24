@@ -1,0 +1,80 @@
+[
+  {
+    "id": "intelligible-not-true",
+    "section": "essentialism-after-quine",
+    "question": "A philosopher accepts the possible worlds account of de re modality but doubts that Socrates is necessarily human. What does the worlds framework, by itself, require her to concede?",
+    "options": [
+      "That the claim has a clear sense, though not that it is true",
+      "That Socrates is necessarily human, since he is human here",
+      "That de re claims make sense only relative to a description",
+      "That only trivial properties are essential to anything at all"
+    ],
+    "answer": 0,
+    "explanation": "The framework says what the claim means: Socrates is human at every world where he exists. Whether that is so needs further evidence, which is why Kripke turned to judgements about cases; the third option is Quine's view, which the framework was used to answer."
+  },
+  {
+    "id": "origin-direction",
+    "section": "the-queen-and-the-table",
+    "question": "A carpenter makes a table from block B. Origin essentialism, as stated, commits you to which claim?",
+    "options": [
+      "Any table made from block B, at any world, is this very table",
+      "This table could not later have been repaired with other wood",
+      "Anything that is this table, at any world, was made from B",
+      "No other table could have looked exactly like this one does"
+    ],
+    "answer": 2,
+    "explanation": "The thesis gives a necessary condition: being this table requires coming from B. The first option is the converse, a sufficiency claim the thesis does not make, and the second concerns later history rather than origin."
+  },
+  {
+    "id": "sufficiency-gap",
+    "section": "salmons-diagnosis",
+    "question": "In the footnote argument, the lone world contains a single table, made from block C. What must be assumed to conclude that this table is S rather than T?",
+    "options": [
+      "That T and S, distinct at one world, are distinct at every world",
+      "That a table's origin and design settle which table it is",
+      "That blocks B and C share no wood, so both tables can be made",
+      "That T exists at the lone world even though B is never used"
+    ],
+    "answer": 1,
+    "explanation": "Distinctness tells you S is not T, but not which of them the lone table is; only a sufficiency principle about origin identifies it as S. Non-overlap is needed for the double world, not for this step."
+  },
+  {
+    "id": "phase-or-substance",
+    "section": "sortal-essentialism",
+    "question": "Socrates was a child, a soldier, a philosopher and a human being. Which does sortal essentialism count as essential to him, and why?",
+    "options": [
+      "Being a child, the first kind of thing he ever belonged to",
+      "Being a philosopher, the kind he is chiefly known as",
+      "None of them, since each applies to him only for a time",
+      "Being a human being, the kind that fixes how he persists"
+    ],
+    "answer": 3,
+    "explanation": "Child, soldier and philosopher are phase sortals: Socrates could stop falling under them and go on existing. Human being is the substance sortal that settles what it takes for him to persist, and that is what the thesis makes essential."
+  },
+  {
+    "id": "table-a-posteriori",
+    "section": "the-necessary-a-posteriori",
+    "question": "On Kripke's model, you know that this table could not have come from anything but block B. Which part of that knowledge depends on experience?",
+    "options": [
+      "The fact that this table was actually made from block B",
+      "The principle that a table's origin is essential to it",
+      "The necessity of identity, from the logic of identity",
+      "None of it, since what is necessary is known a priori"
+    ],
+    "answer": 0,
+    "explanation": "The necessity comes from the essentialist conditional, which Kripke takes to be known by reflection; experience supplies only the antecedent, that the table came from B. The last option is the assumption the necessary a posteriori overturns."
+  },
+  {
+    "id": "inconstant-counterparts",
+    "section": "origins-without-identity",
+    "question": "On Lewis's counterpart theory, why can 'this table could have been made from another block' be true in one conversation and false in another?",
+    "options": [
+      "The table exists at several worlds and its origin varies",
+      "Origin claims are a priori in some contexts, empirical in others",
+      "Context selects which similarities fix the table's counterparts",
+      "The necessity of distinctness holds only in some contexts"
+    ],
+    "answer": 2,
+    "explanation": "Counterparts are things at other worlds that resemble the table in the respects that matter, and context settles which respects those are, so stressing origin and stressing design give different counterparts. The first option misdescribes the theory, on which nothing exists at more than one world."
+  }
+]

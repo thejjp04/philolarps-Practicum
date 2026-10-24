@@ -1,0 +1,152 @@
+---
+title: Essentialism and the Argument from Origins
+subject: metaphysics
+tier: intermediate
+order: 12
+est_read_min: 20
+summary: "Kripke's case that a thing could not have come from different material, and the necessary a posteriori it depends on"
+prerequisites: ["modal-realism-and-ersatzism"]
+introduces: ["essentialism", "origin essentialism", "sortal essentialism", "necessary a posteriori"]
+requires: ["essence", "essential property", "accidental property", "de re modality", "counterpart theory", "sortal"]
+added: "2026-10-24"
+---
+
+The last article asked what possible worlds are: Lewis's concrete universes, whose inhabitants are linked across worlds by counterparts, or the abstract surrogates the ersatzist builds instead. Neither account tells you which de re modal claims are true. Whether a particular table could have been made of ice, or from a different piece of wood, is not settled by deciding what worlds are made of, and that is the question this article takes up.
+
+The answer that has dominated discussion since 1970 is Saul Kripke's. It holds that some of a thing's properties are essential to it in a substantive way, that its origin is among them, and that some necessary truths can only be found out by looking. The argument for the second claim turns out to be more delicate than it first appears.
+
+## Essentialism after Quine
+
+<Definition term="Essentialism">
+The view that some things have some of their properties essentially, in the de re sense: a particular object could not have existed without a given property, whatever description is used to pick it out. Essentialism in the interesting sense claims this for properties that say something about what the object is, not only for trivial ones such as being self-identical.
+</Definition>
+
+The beginner tier separated the essentialism nobody denies from the essentialism worth arguing about. Every object is necessarily self-identical, and no metaphysics turns on that. The substantive claims are of another order: that Socrates could not have been a poached egg, that a person could not have had different parents. These are what W. V. O. Quine had in mind when he argued that quantified modal logic commits its users to Aristotelian essentialism, and took that as a reason to reject both. His mathematician and cyclist, two articles back, were meant to show that necessity attaches to things only relative to a way of describing them.
+
+The worlds framework answered the charge of unintelligibility. A de re claim is evaluated by taking the thing itself to other worlds and asking what it is like there, whichever description introduced it. But intelligibility is not truth. A sceptic can grant that "Socrates is necessarily human" means something and still ask what reason there is to believe it. Kripke's main source of evidence was judgement about cases. Asked whether this very thing could have been otherwise, you find that some verdicts come easily and are hard to dislodge, and Kripke treated them as data.
+
+## The Queen and the table
+
+Kripke's best-known cases appear in *Naming and Necessity*. The first concerns Elizabeth II. She could have lived a very different life: she might never have become queen, might have been raised in obscurity. But could she have been born to different parents, say to the Trumans? Kripke's answer is no. A woman born to other parents, however closely her life followed Elizabeth's, would not be Elizabeth. She would be someone else leading a similar life. Kripke sharpened the point by putting it in terms of the particular sperm and egg from which a person develops: a person who came from a different pair would be a different person.
+
+The second case is a wooden table. It could have been painted, moved to another room, or never used. But it could not, Kripke argued, have been made from an entirely different block of wood, and it could not have been made of ice. A table made from another block, even one that looked the same and stood in the same place, would be a different table that happened to resemble this one.
+
+<Definition term="Origin essentialism">
+The thesis that a thing's origin is essential to it: an object could not have originated from anything other than what it actually originated from. For an organism the origin is usually taken to be the particular cells it developed from; for an artefact, the matter it was originally made from.
+</Definition>
+
+Three features of the thesis matter later. First, it concerns the origin, not the whole history. The table could have been repaired with new wood after it was made; the claim is only that it could not have begun from different matter. Second, it states a necessary condition. It says that anything which is this table came from this block. It does not say that anything made from this block would be this table, and the argument below turns on which direction is assumed. Third, it is a generalisation from judgements about cases, not something derived from a definition. Nothing in the word "table" or the name "Elizabeth" contains it.
+
+<Check id="origin-direction" />
+
+## The footnote argument
+
+Kripke did not rest the table claim on intuition alone. In a footnote he suggested that, for a large class of cases, the principle might be all but provable from the necessity of identity.
+
+The necessity of identity follows from the principle the beginner tier stated: if a is identical with b, everything true of a is true of b. One thing true of a is that it could not have been distinct from a, so the same is true of b. A parallel argument, using one further standard principle of modal logic, gives the necessity of distinctness: if a and b are two things, they could not have been one.
+
+The footnote runs roughly as follows. Let T be the table, made from block B, and let C be a block sharing no wood with B. Suppose T could have been made from C. Since the blocks do not overlap, there is a world, the double world, in which T is made from B while a second table, S, is made from C. There T and S are two, so by the necessity of distinctness they are two at every world. Now take the lone world, where a table is made from C and nothing from B. The table there is S, so it is not T, and T could not have been made from C after all.
+
+The premises look harmless. The trouble lies in the sentence "the table there is S".
+
+## Salmon's diagnosis
+
+Nathan Salmon's *Reference and Essence* (1981) set the argument out carefully and showed that it is not valid as it stands. Nothing in the necessity of identity or of distinctness tells you which table, in the lone world, is the one made from C. It might be S. It might equally be T, which is exactly what the supposition says. To rule out the second option, the argument needs a premise to the effect that a table's origin settles which table it is: a sufficiency principle, to set beside the necessary condition the argument is trying to establish.
+
+<Argument name="The argument from origins, completed">
+  <Premise>Table T was actually made from block B, and block C shares no wood with B.</Premise>
+  <Premise>Suppose, for reductio, that there is a world, the lone world, in which T is made from C to some design.</Premise>
+  <Premise>Because the blocks do not overlap, there is a world, the double world, in which T is made from B while a second table, S, is made from C to that same design.</Premise>
+  <Premise>Things that are distinct at one world are distinct at every world, so S is not T at any world.</Premise>
+  <Premise>Sufficiency: tables made from the same block to the same design, at any two worlds, are the same table.</Premise>
+  <Conclusion>The table made from C in the lone world is S, and so not T, which contradicts the supposition: T could not have been made from C.</Conclusion>
+</Argument>
+
+Two things follow. The first is that the conclusion is narrower than origin essentialism. The argument works only for a block that shares no wood with B, because only then can both tables be made in the double world. It says nothing about a block that is nine-tenths B, which is where most of the interesting cases lie.
+
+The second is that the sufficiency premise is itself an essentialist claim. It says that being made from C to a given design is enough, at any world, to be S: a de re claim of exactly the sort Quine doubted. So the argument does not extract essentialism from the logic of identity. Salmon's broader thesis was that this is no accident. Substantive essentialism cannot be derived from the theory of reference or the logic of identity alone; it comes out of an argument only if an essentialist premise went in.
+
+<Objection>
+Then the argument is circular. It was meant to show that origin is essential, and it assumes a principle about origin and identity across worlds that nobody would accept unless they already accepted origin essentialism. A sceptic who doubts the conclusion has no reason to grant the premise.
+</Objection>
+
+<Reply>
+The premise and the conclusion are different claims, and the difference is the point. The conclusion says that an origin is necessary for being a given table; the premise says that an origin, together with a design, is sufficient. Someone could find the second compelling with no settled view about the first: if two carpenters in two worlds follow the same plan with the same block, it is hard to say what could make their tables two. The argument shows that this judgement commits you to the necessity of origin for non-overlapping matter, which is not obvious and is worth knowing. Most valid arguments in metaphysics work this way, connecting commitments rather than creating them from nothing. The footnote argument is not a proof of essentialism from neutral premises, but it is not empty: it moves the dispute to a premise that is easier to assess.
+</Reply>
+
+<Aside title="Tolerance and the chain of blocks">
+Most origin essentialists want some slack: the table surely could have been made from a block that differed from B by a few splinters. Grant that, and a chain appears. The table could have been made from a block slightly different from B; at that world, it could have been made from one slightly different again; and so on, until a block is reached that shares nothing with B, which strict origin essentialism forbids. This is Chisholm's chain from two articles back, with matter in place of qualities. Salmon's own response was to deny that whatever is possibly possible is possible. Most treatments of metaphysical modality accept the principle he gives up, so the price is real.
+</Aside>
+
+<Check id="sufficiency-gap" />
+
+## Sortal essentialism
+
+Origin is one candidate for what a thing could not have lacked. Kind is another. The beginner tier introduced sortals as the terms that supply a way of counting and of telling one thing from another, and noted that a criterion of identity is always a criterion for things of some kind. David Wiggins, in *Sameness and Substance* (1980), built that observation into an essentialism.
+
+Sortal theorists, Wiggins among them, distinguish two sorts of sortal. A phase sortal applies to a thing for part of its existence: child, adult, caterpillar, student. A substance sortal applies to it throughout and says what it fundamentally is: human being, butterfly, oak. A thing can stop being a child and go on existing. It cannot stop being a human being and go on existing, because the substance sortal fixes the conditions under which it persists at all.
+
+<Definition term="Sortal essentialism">
+The thesis that each thing belongs essentially to its basic kind, the substance sortal that says what it is: a thing could not have existed without falling under that sortal, and so could not have been a thing of a fundamentally different kind.
+</Definition>
+
+The case goes through persistence. What it takes for a thing to survive a change is fixed by its kind: a cat survives losing its fur and does not survive being minced, while the matter that makes it up survives both. If Socrates could have been an alligator, the very same thing would have had a different condition of persistence, and so a different criterion of identity, from the one it actually has. But a criterion of identity is not an extra fact about a thing that might have varied while the thing stayed fixed. It is part of what makes it the one thing it is. So Socrates could not have been an alligator, and still less a poached egg.
+
+<Objection>
+Many sortals apply to Socrates throughout his existence: human being, animal, organism, and perhaps person. If there is no fact about which is his basic kind, sortal essentialism has no definite content. And if the candidates disagree about his persistence, as person and animal may, the thesis is caught in a dispute it has no means of settling.
+</Objection>
+
+<Reply>
+Where the candidates agree on the conditions of persistence, they do not compete. "Human being" and "organism" differ in generality, and the thesis says only that Socrates could not have belonged to a kind whose members persist under different conditions. Where the candidates disagree, the objection is right that the thesis does not settle the matter. Whether Socrates is fundamentally an animal or a person is the dispute between animalism and its rivals from the article on personal identity, and sortal essentialism takes no side. It claims that one of them is the answer, and that whichever it is, Socrates could not have lacked it. That is conditional but not empty: it rules out one and the same thing being a person at one world and a heap of matter at another.
+</Reply>
+
+## The necessary a posteriori
+
+Origin essentialism, if true, has an epistemological consequence that Kripke stressed. Whether this table was made from block B is something you find out by looking; nothing in the concept of a table tells you. Yet if origin essentialism is right, then once you know the table was made from B, you know it could not have been made from anything else. That truth is necessary, and you came to know it through experience.
+
+<Definition term="Necessary a posteriori">
+A truth that is necessary but can be known only a posteriori, through experience: it could not have been false, and yet no amount of reflection without investigation would establish it.
+</Definition>
+
+The long-standing assumption, flagged in the beginner tier, was that the necessary and the a priori coincide. Kripke's examples break the alignment in three standard ways.
+
+The first is identity between names. The ancients called the bright body in the evening sky Hesperus and the one in the morning sky Phosphorus, and astronomers found that they were one planet, Venus. Kripke held that ordinary proper names are rigid designators: a name picks out the same object at every world at which that object exists, rather than whatever happens to fit some description there. Both names pick out Venus at every such world, and the necessity of identity does the rest. Hesperus could not have failed to be Phosphorus, and yet it took observation to learn that it is.
+
+The second is natural kinds. Kripke, and independently Hilary Putnam in "The Meaning of 'Meaning'" (1975), argued that "water" works like a name for a substance, picking out whatever shares the underlying nature of the stuff we actually call water. Chemistry found that nature to be H<sub>2</sub>O. A liquid that looked and tasted like water but had a different composition would not be water. So water is necessarily H<sub>2</sub>O, and that too had to be found out.
+
+The third is origin, and here the structure is clearest. You know a conditional by reflection and its antecedent by experience, and the necessity follows.
+
+<Argument name="Knowing a necessity by looking">
+  <Premise>If this table was made from block B, then necessarily, if it exists, it was made from B. (Known, if at all, by reflection on cases.)</Premise>
+  <Premise>This table was made from block B. (Known by investigation.)</Premise>
+  <Conclusion>Necessarily, if this table exists, it was made from B. (Known a posteriori, since one premise was.)</Conclusion>
+</Argument>
+
+The conclusion inherits its necessity from the first premise and its a posteriori status from the second. That makes the necessary a posteriori less mysterious than it sounds. Experience does not detect necessity; it supplies the fact to which a necessity, known some other way, is attached. The model also shows where the burden falls. The first premise is the essentialist principle, and its claim to be known by reflection is what Salmon's analysis put under pressure.
+
+<Check id="table-a-posteriori" />
+
+## Origins without identity
+
+Counterpart theory handles all of this differently, and the contrast shows how much of Kripke's case depends on treating identity across worlds as strict.
+
+For Lewis no individual exists at more than one world. "This table could have been made from C" is true when the table has a counterpart at some world, something there that resembles it closely enough in the respects that matter, and that counterpart is made from C. So the question of origin essentialism becomes the question of whether origin is among the respects that matter.
+
+Lewis's answer, in *On the Plurality of Worlds* (1986), was that it depends. Similarity has many dimensions: things can be compared by origin, by design, by function, by later history. Lewis held that no single weighting is correct. Different contexts make different counterpart relations salient, so a de re modal claim can be true in one context and false in another, and he called this the inconstancy of the counterpart relation. In a conversation about where the table came from, its counterparts are restricted to tables made from B, and "it could not have been made from C" comes out true. In a conversation about the carpenter's design, a table built to the same plan from C may count, and "it could have been made from C" comes out true. Neither context is in error.
+
+This removes some of the problems the strict view creates. The chain of blocks does not arise in the same form, because a counterpart of a counterpart need not be a counterpart. The footnote argument loses its grip at the step that used the necessity of distinctness: Lewis deliberately left open that two things at one world might share a single counterpart at another, so from T and S being two in the double world nothing follows about every world.
+
+The cost is that essentialist claims lose their standing as deep facts. On Lewis's view, the judgement that the Queen could not have had other parents reports which resemblances the context has made salient. Kripkeans find that a poor fit: the verdict about the Queen does not seem to shift with the conversation, and it seems to be about her rather than about how we compare her with others. The disagreement is not over the examples but over what they are evidence for: a fact about the individual, or a fact about the most natural way of matching it with things elsewhere.
+
+## From origins to parts
+
+The footnote argument traded throughout in talk of matter: a table made from a block, two blocks that share no wood, a block that is nine-tenths B. That is the vocabulary of parts and wholes, used without any theory of it. The next article supplies one. Mereology sets out axioms for the relation of part to whole, and then faces a question that origin essentialism quietly assumed an answer to: when do many things, such as the pieces of wood in a block, compose a single further thing at all?
+
+<FurtherReading>
+  <li>Saul A. Kripke, *Naming and Necessity* (Cambridge, MA: Harvard University Press, 1980; based on lectures given in 1970).</li>
+  <li>Nathan Salmon, *Reference and Essence* (Princeton, NJ: Princeton University Press, 1981).</li>
+  <li>David Wiggins, *Sameness and Substance* (Oxford: Blackwell, 1980); revised as *Sameness and Substance Renewed* (Cambridge: Cambridge University Press, 2001).</li>
+  <li>Hilary Putnam, "The Meaning of 'Meaning'", *Minnesota Studies in the Philosophy of Science*, volume 7 (1975).</li>
+  <li>David Lewis, *On the Plurality of Worlds* (Oxford: Blackwell, 1986).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Essential vs. Accidental Properties"](https://plato.stanford.edu/entries/essential-accidental/), by Teresa Robertson Ishii and Philip Atkins.</li>
+</FurtherReading>
