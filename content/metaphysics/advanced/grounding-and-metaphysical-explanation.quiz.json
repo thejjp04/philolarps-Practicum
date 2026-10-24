@@ -1,0 +1,80 @@
+[
+  {
+    "id": "two-becauses",
+    "section": "explanation-without-causes",
+    "question": "Which of these 'because' claims gives a metaphysical explanation rather than a causal one?",
+    "options": [
+      "The kettle is hot because it was left on the lit stove",
+      "The kettle whistled because the water inside it came to the boil",
+      "The kettle is red because it is the particular shade crimson",
+      "The kettle is dented because someone dropped it hard"
+    ],
+    "answer": 2,
+    "explanation": "Crimson is a determinate way of being red, so the kettle is red in virtue of being crimson, at the same moment and through no law. The other options cite earlier events linked to their effects by causal laws, however close in time they are."
+  },
+  {
+    "id": "conjunction-and-disjunction",
+    "section": "full-and-partial-ground",
+    "question": "Suppose p and q are both true. Which statement about the fact that p is correct?",
+    "options": [
+      "It is a full ground of 'p or q' and a partial ground of 'p and q'",
+      "It is a partial ground of 'p or q' and a full ground of 'p and q'",
+      "It is a full ground of both 'p or q' and 'p and q' on its own",
+      "It is only a partial ground of each, because q holds as well"
+    ],
+    "answer": 0,
+    "explanation": "A true disjunct grounds a disjunction by itself, whereas a conjunction needs both conjuncts, so p is only part of a full ground of 'p and q'. That q also holds does not stop p from sufficing for the disjunction; it merely gives the disjunction a second full ground."
+  },
+  {
+    "id": "singleton-test",
+    "section": "why-supervenience-could-not-do-the-job",
+    "question": "A philosopher proposes that one fact grounds another just when the second supervenes on the first and the first does not supervene on the second. What does the proposal say about Socrates and his singleton?",
+    "options": [
+      "It gets the direction right, since the set supervenes on Socrates",
+      "It gets the direction wrong, making Socrates depend on the set",
+      "It makes each ground the other, since each supervenes on the other",
+      "It finds no grounding either way, as each supervenes on the other"
+    ],
+    "answer": 3,
+    "explanation": "The two facts obtain at exactly the same worlds, so each supervenes on the other and the one-way condition fails in both directions. The third option forgets that the proposal demands that supervenience run one way only."
+  },
+  {
+    "id": "dented-ball",
+    "section": "doubts-about-transitivity",
+    "question": "In Schaffer's case, a dent is a partial ground of a ball's exact shape, and that exact shape grounds the ball's being roughly spherical. What is the case meant to show?",
+    "options": [
+      "That partial grounds can never combine to make up full grounds",
+      "That grounding is not always transitive, since this chain breaks",
+      "That the dent causes the ball's shape rather than grounding it",
+      "That an exact shape cannot ground a ball's being roughly spherical"
+    ],
+    "answer": 1,
+    "explanation": "Transitivity would make the dent a partial ground of the ball's being roughly spherical, yet the ball is roughly spherical despite the dent. The case grants both links of the chain, so it does not deny that the exact shape grounds the rough sphericity."
+  },
+  {
+    "id": "all-the-apples",
+    "section": "grounding-necessitarianism",
+    "question": "Apples a, b and c are red, and they are all the apples on the table. Why do the facts that each of them is red fail to necessitate that all the apples on the table are red?",
+    "options": [
+      "Because a, b and c might each have been some colour other than red",
+      "Because the fact that a is red is a partial ground and not a full one",
+      "Because a, b and c could be red while a green fourth apple sits there",
+      "Because general facts about apples are contingent, so have no ground"
+    ],
+    "answer": 2,
+    "explanation": "Necessitation requires that the grounds cannot obtain without the grounded fact, but the three facts obtain in a world with an extra green apple, where the generalisation fails; the usual repair adds a totality fact to the ground. The first option changes the grounds instead of holding them fixed."
+  },
+  {
+    "id": "small-g-relations",
+    "section": "sceptical-voices",
+    "question": "According to Wilson, what does the bare claim that the mental is Grounded in the physical leave open?",
+    "options": [
+      "Which specific relation holds, such as functional realisation",
+      "Whether the mental facts obtain at all, as Grounding is not factive",
+      "Whether the physical facts are prior to the mental ones or posterior",
+      "Whether the grounds hold at the same time as the facts they ground"
+    ],
+    "answer": 0,
+    "explanation": "Wilson's complaint is that the generic claim says too little until a specific small-g relation is named, and that the specific relation then does all the work. Grounding is factive and directed, so the second and third options are already settled by the claim itself."
+  }
+]
