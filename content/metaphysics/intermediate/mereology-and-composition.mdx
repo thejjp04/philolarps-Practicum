@@ -1,0 +1,158 @@
+---
+title: Mereology and Composition
+subject: metaphysics
+tier: intermediate
+order: 13
+est_read_min: 17
+summary: "Axioms for parthood, and the special composition question that nihilism and universalism answer"
+prerequisites: ["essentialism-and-origin-essentialism"]
+introduces: ["mereology", "parthood", "proper part", "mereological fusion", "special composition question", "mereological nihilism", "mereological universalism"]
+requires: ["object", "existence", "ontological commitment"]
+added: "2026-10-24"
+---
+
+The last article examined Kripke's claim that this table could not have been made from an entirely different block of wood, and its arguments spoke throughout of a table made from a block, of blocks sharing no wood, of a block that is nine-tenths the original. That is the vocabulary of parts and wholes, used without a theory of it. An earlier article borrowed the same vocabulary in passing, when it said that the mereological sum of Brutus and a property would exist whether or not Brutus had the property. This article supplies the theory, and then turns to a question the theory cannot settle by itself: when do many things make one?
+
+## Parts and wholes
+
+Talk of parts is everywhere. The handle is part of the mug, the first movement is part of the symphony, and your liver is part of you. Ordinary uses carry extra freight: a part is often a working component, or a piece with a natural boundary. Mereology strips that away, ignoring what the parts are made of and what they do, and studies only the bare relation of part to whole.
+
+<Definition term="Mereology">
+The formal theory of parthood: the principles governing the relation of part to whole, and the further relations that can be defined from it. The name comes from the Greek *meros*, part.
+</Definition>
+
+The first systematic theory was built by the Polish logician Stanisław Leśniewski, in work beginning in 1916, and the name is his. Troubled by Russell's paradox, he thought part of the trouble lay in running together two ideas of a class: a collection with elements, and a whole made up of its members as a heap is made of grains. His mereology was a rigorous theory of the second. It reached English-speaking philosophy mainly through Henry S. Leonard and Nelson Goodman's paper "The Calculus of Individuals and Its Uses" (1940), which set out a closely related system. The calculus became a central tool of Goodman's nominalism, which refused sets as well as universals: a whole made of concrete things is as concrete as they are, so it can do some of a set's work without the commitment.
+
+<Definition term="Parthood">
+The relation that holds between $x$ and $y$ when $x$ is part of $y$, written $x \leq y$. Mereology takes it in a broad sense on which every object is part of itself, so that "part" means "part, or the whole thing".
+</Definition>
+
+The broad sense, like a mathematician's "less than or equal to", lets the principles be stated without exceptions.
+
+<Definition term="Proper part">
+$x$ is a proper part of $y$, written $x < y$, when $x$ is part of $y$ and $x$ is not identical to $y$. The handle is a proper part of the mug; the mug is a part of itself, but not a proper part.
+</Definition>
+
+Two things overlap, written $x \circ y$, when something is part of both. Two roads that cross overlap at the junction, which is part of each. Things that do not overlap are disjoint, as your two hands are, or the last article's two blocks that share no wood.
+
+## The core principles
+
+Almost everyone who works on mereology accepts three principles. Reflexivity: everything is part of itself, $x \leq x$. Antisymmetry: two different things cannot each be part of the other, so if $x \leq y$ and $y \leq x$, then $x = y$. Transitivity: a part of a part is a part, so if $x \leq y$ and $y \leq z$, then $x \leq z$. Together they make parthood a partial order. Transitivity is sometimes challenged: a soldier's hand is part of the soldier and the soldier part of the platoon, yet calling the hand part of the platoon sounds wrong. The usual reply is that the oddity belongs to a thicker notion, being one of the platoon's units, not to the bare relation.
+
+The three principles do not yet capture parthood. A partial order allows a thing to have exactly one proper part and nothing else, and that seems impossible. If the handle is a proper part of the mug, the mug must have something besides the handle, a remainder sharing no part with the handle. Weak supplementation says exactly this: if $x < y$, then some part of $y$ does not overlap $x$. A whole cannot be exhausted by a single proper part. Many philosophers treat the principle as part of what "proper part" means, so that a theory rejecting it would have changed the subject.
+
+<Check id="one-proper-part" />
+
+Agreement ends with two stronger principles. Extensionality says that composite objects with exactly the same proper parts are identical. Uniqueness of composition says that the same things cannot together make up two different wholes. Both hold in the standard system, usually called classical mereology, and both are contested by anyone who thinks that a statue and its lump of clay are two things. They seem to share every particle, and so every proper part, yet the lump could survive being squashed and the statue could not. If that makes them distinct, both principles fail. The advanced tier gives the problem an article of its own.
+
+## Fusions
+
+<Definition term="Mereological fusion">
+An object made up of some given things and nothing else. An object $z$ is a fusion of some things when each of them is part of $z$, and every part of $z$ overlaps at least one of them. A fusion is also called a mereological sum.
+</Definition>
+
+The first clause makes the fusion big enough: each of the things is in it. The second makes it no bigger: nothing is in it that is not at least partly one of them. The fusion of your two hands contains each hand, and your nose is no part of it, since your nose overlaps neither. When some things have a fusion, they are said to compose it.
+
+A fusion is not a set. The set of your two hands is an abstract object with two members and no location; their fusion, if there is one, is a concrete object where your hands are, with their combined mass. The difference shows in the counting. The set of your hands and the set of your ten fingers and two palms are different sets, with two members and twelve. But if each hand is just its fingers and palm, then on the standard principles the two fusions are one and the same object. And the fusion of a single thing is that thing itself, whereas the set containing it is something else.
+
+Nothing in the definition requires the things to be close together, alike or connected. A fusion of your left shoe and the Moon would be a scattered object, partly on Earth and partly in orbit. That is what lay behind the earlier claim about Brutus: nothing in being a fusion requires the parts to be related, so a sum of Brutus and a property, if there is one, does not wait on Brutus having it. The definition says what a fusion would be, not that any things have one.
+
+## The special composition question
+
+<Definition term="Special composition question">
+The question of what conditions some things must meet for there to be an object that they compose. Peter van Inwagen gave it its name and made it the centre of *Material Beings* (1990).
+</Definition>
+
+Van Inwagen separated it from the general question of what composition is, which mereology answers in outline: to compose something is to have it as a fusion. The special question asks when composition happens, and the principles about parthood are silent on it. Take your shoe and the Moon, the cells of a cat, or the particles in a chair. The question is whether there is, in addition to them, one further object they make up.
+
+An answer settles a great deal of ontological commitment at a stroke. Two people can agree about every particle in a room and still disagree about whether there is a chair in the corner. That disagreement is about the inventory, not the arrangement. The ontology tier taught you to look for the commitments carried by ordinary claims; here a single principle about parts fixes the commitments of every claim about ordinary objects at once.
+
+Answers come in three kinds: composition never happens, always happens, or happens sometimes. An object with no proper parts is called a simple, and the extreme answers are easiest to state as if there are some.
+
+## Nihilism
+
+<Definition term="Mereological nihilism">
+The view that composition never occurs: no two or more things ever compose an object. Nothing has proper parts, so everything that exists is a simple.
+</Definition>
+
+Nihilism sounds like a denial of the obvious, and its defenders work to show that it is not. The central move is a paraphrase. "There is a chair in the corner" is, strictly, false. But there are simples arranged chairwise in the corner, to use van Inwagen's phrase, and that is what makes the ordinary claim acceptable. The paraphrase speaks only of simples and how they stand to one another. It is true in exactly the circumstances in which we would ordinarily say there is a chair there, and it requires nothing to exist but the simples.
+
+There are positive arguments too. Trenton Merricks argued in *Objects and Persons* (2001) that a baseball would be causally idle, since the particles that would make it up are enough to break the window it seems to break, though he exempted persons.
+
+<Objection>
+Nihilism contradicts things we know far better than any premise offered in its favour. You know that you have hands and that there are chairs in your kitchen. An argument whose conclusion is that there are no chairs refutes one of its own premises, since nothing in philosophy is more certain than that there are chairs.
+</Objection>
+
+<Reply>
+The nihilist denies that what you know conflicts with nihilism. When you say there are chairs in the kitchen, you are right about how the kitchen is: there are simples arranged chairwise there, and that is what your claim tracks. Compare "the sun rose at six", which stays a perfectly good thing to say long after everyone accepts that the sun does not travel round the Earth. What is false is only a philosophical gloss on which your claim needs a further object over and above the simples, and that gloss was never something you knew.
+
+The reply has a limit, and van Inwagen thought nihilism ran into it. Chairs do nothing their particles cannot do together. Thinking seems different. You know that you think, and a thought does not look like something many simples can have collectively without there being one thing that has it. If so, there is at least one composite object, and nihilism is false.
+</Reply>
+
+A second difficulty concerns the world rather than us. If every material thing has proper parts all the way down, nihilism implies that nothing material exists at all. The advanced tier takes up that possibility.
+
+## Universalism
+
+<Definition term="Mereological universalism">
+The view that composition always occurs: for any things whatever, there is an object they compose, however scattered, unrelated or unlike one another they may be.
+</Definition>
+
+Its best-known defender is David Lewis, whose example is the trout-turkey, made of the front half of a trout and the back half of a turkey. Universalism says it exists as surely as the trout does. So does the fusion of your left shoe and the Moon. In classical mereology universalism is built in, as the axiom that any things whatever have a fusion.
+
+The difference from nihilism shows in the counting. Take a world whose simples are just two in number. The nihilist says there are two objects. The universalist, assuming uniqueness of composition, says there are three: each simple, and their fusion. As the simples multiply, the gap grows very fast.
+
+The obvious objection is that universalism fills the inventory with things nobody believes in. Universalists have two replies. The first is that ordinary claims about what there is are restricted. Saying there is nothing in the fridge does not deny that it contains air, and saying there is nothing on the table but a cup rightly ignores the fusion of the cup and the table's left leg. Universalism asks only that, among absolutely everything, such fusions are found.
+
+The second reply concerns commitment itself. Lewis argued, in *Parts of Classes* (1991), that mereology is ontologically innocent. If you already accept the front half of the trout and the back half of the turkey, accepting the trout-turkey commits you to nothing more, because a fusion is nothing over and above its parts. It is them, taken together. Critics reply that two simples and their fusion are still three objects, and three is more than two. The claim that a whole is in some sense identical to its parts, which would make the extra count harmless, has an article of its own in the advanced tier.
+
+<Check id="three-simples-count" />
+
+## Moderate answers
+
+Most people, asked the special composition question cold, give an answer in between. The particles in a chair compose something; your shoe and the Moon do not. The difficulty is to say what makes the difference without simply listing the cases we already believe in.
+
+Van Inwagen tested the natural candidates in *Material Beings* and rejected them. Contact is the simplest: things compose an object when they touch. But then two people shaking hands would bring into existence a new object made of the two of them, which perishes when they let go. Fastening, which requires the things to be attached so that they cannot be separated without breaking something, does better, but he argued that it fails the same way, producing new objects where none seems to appear. A physical relation loose enough to take in chairs takes in much else, and one strict enough to exclude the rest excludes chairs too.
+
+His own answer is usually called organicism. Some things compose an object, he held, exactly when their activity constitutes a life, and a single thing trivially composes itself. Cats, oak trees and people exist, each made of the simples whose coordinated activity is its living. Chairs, rocks and stars do not; where we speak of them, there are only simples suitably arranged. The view respects his reason for rejecting nihilism, since thinkers are alive, and draws the line by biology rather than by human interests. The price is that most of what we take to exist is not there, and that life, the notion drawing the line, has borderline cases. That second feature matters for every moderate answer.
+
+## The argument from vagueness
+
+The strongest general argument against moderate answers was given by Lewis in *On the Plurality of Worlds* (1986) and developed by Theodore Sider in *Four-Dimensionalism* (2001). It does not depend on which relation a moderate answer picks, only on the fact that cases shade into one another. On most moderate views the particles of a finished table compose something; the same particles scattered across a workshop floor do not. Between the two lies a series of cases, each differing from the next by one particle's moving a tiny distance. Somewhere along it, on the moderate view, an object comes into existence.
+
+<Argument name="The argument from vagueness">
+  <Premise>If composition is restricted in a moderate way, there is a series of cases, each differing only minutely from the next, that runs from a case in which composition occurs to one in which it does not.</Premise>
+  <Premise>No such series contains a sharp cut-off, a single minute step at which composition suddenly begins.</Premise>
+  <Premise>So if composition is moderately restricted, there are cases in which it is vague whether composition occurs.</Premise>
+  <Premise>If it is vague whether composition occurs, it is vague whether a certain object exists, and so vague how many objects there are.</Premise>
+  <Premise>It cannot be vague how many objects there are.</Premise>
+  <Conclusion>Composition is not restricted in any moderate way, so the answer to the special composition question is one of the two extremes.</Conclusion>
+</Argument>
+
+The second premise rests on the arbitrariness of a cut-off: one particle's moving by a hair's breadth would make the difference between a world with a table and a world without one, while nothing else of note changed.
+
+The fifth premise rests on Lewis's account of vagueness as a matter of language: a word is vague when our usage has not decided between several precise meanings it might have. "Tall" is vague because nothing in how we use it fixes a single height. But a statement of how many objects there are can be written with logical words alone, "there is", "not", "and", "is identical to", and these have no rival precise meanings for usage to be undecided between. So the count cannot be vague, and neither can composition.
+
+<Objection>
+Vagueness about how many things exist is perfectly familiar. It is vague how many clouds are in the sky, since some wisps are borderline cases of being part of a cloud, or of being a cloud at all. So the fifth premise is false.
+</Objection>
+
+<Reply>
+That is vagueness in the word "cloud", not in the count of objects. The universalist says that every candidate is there: the fusion with the wisp, the fusion without it, and every other way of drawing the cloud's edge. What is undecided is which of these precisely bounded objects "cloud" picks out. Counting clouds is vague because "cloud" is vague; counting objects is not, because "object", in the sense of "something", has nothing to be undecided between. The objection succeeds only if the vagueness can be located in "there is" itself, which is what the argument says cannot happen.
+</Reply>
+
+The moderate theorist has three ways out, and each has been taken. She can deny the second premise and accept a sharp cut-off that no one can locate; Ned Markosian's "Brutal Composition" (1998) defends the related view that the facts about composition are brute. She can deny the fifth premise and accept that existence itself can be vague, which is van Inwagen's response: where it is indeterminate whether a life is going on, it can be indeterminate whether there is an organism at all. Or she can deny the first premise, though almost any physical relation can be approached by small steps. Lewis and Sider took the argument to favour universalism, and Sider, as the article on persistence noted, used it in support of temporal parts too.
+
+<Check id="vagueness-premise" />
+
+## The end of the intermediate tier
+
+This article closes the intermediate tier, which added the two tools the rest of metaphysics depends on: supervenience, which says when one set of facts fixes another, and mereology, which says how wholes stand to their parts. Both stop short of something. The arguments above kept reaching for the phrase "in virtue of". The nihilist says chair talk is acceptable in virtue of how simples are arranged; Lewis says a fusion is nothing over and above its parts, which suggests it exists in virtue of them. Mereology says which things are parts of which, but not whether the whole depends on its parts or the parts on the whole, and supervenience, which records only that one thing fixes another, cannot say either. The advanced tier opens with the relation that phrase expresses, in the next article, on grounding and metaphysical explanation.
+
+<FurtherReading>
+  <li>Peter van Inwagen, *Material Beings* (Ithaca, NY: Cornell University Press, 1990).</li>
+  <li>Henry S. Leonard and Nelson Goodman, "The Calculus of Individuals and Its Uses", *The Journal of Symbolic Logic*, volume 5, number 2 (1940), pages 45 to 55.</li>
+  <li>David Lewis, *Parts of Classes* (Oxford: Basil Blackwell, 1991).</li>
+  <li>Theodore Sider, *Four-Dimensionalism: An Ontology of Persistence and Time* (Oxford: Oxford University Press, 2001).</li>
+  <li>Peter Simons, *Parts: A Study in Ontology* (Oxford: Clarendon Press, 1987).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Mereology"](https://plato.stanford.edu/entries/mereology/), by Achille Varzi.</li>
+</FurtherReading>

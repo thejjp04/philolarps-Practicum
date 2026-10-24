@@ -1,0 +1,80 @@
+[
+  {
+    "id": "one-proper-part",
+    "section": "the-core-principles",
+    "question": "Someone describes an object that has exactly one proper part and nothing else. Which principle rules the description out?",
+    "options": [
+      "Transitivity, since a part of that part would also be a part of the object",
+      "Antisymmetry, since the object and its part would each be part of the other",
+      "Weak supplementation, since the object needs a part disjoint from that one",
+      "Reflexivity, since the object would then fail to count as part of itself"
+    ],
+    "answer": 2,
+    "explanation": "Weak supplementation says that whatever has a proper part has another part that does not overlap it, so one proper part cannot exhaust a whole. The partial order principles alone allow the case, which is why supplementation is needed on top of them."
+  },
+  {
+    "id": "fusion-not-set",
+    "section": "fusions",
+    "question": "Compare the fusion of your two hands with the fusion of your ten fingers and two palms, and the corresponding sets. On the standard principles, which is right?",
+    "options": [
+      "The two fusions are one object, but the two sets are different sets",
+      "The two sets are one set, but the two fusions are different objects",
+      "The fusions differ and the sets differ, since the parts are counted differently",
+      "The fusions and the sets coincide, since each is fixed by the same matter"
+    ],
+    "answer": 0,
+    "explanation": "A fusion is fixed by what it is made of, so different ways of dividing the same stuff give the same whole. A set is fixed by its members, and a set with two members cannot be identical with one that has twelve."
+  },
+  {
+    "id": "chairwise-paraphrase",
+    "section": "nihilism",
+    "question": "A nihilist is told: 'You sat on a chair this morning, so chairs exist.' What is the nihilist's best response?",
+    "options": [
+      "You sat on nothing at all, since there are no material things",
+      "There were simples arranged chairwise, and your claim tracked them",
+      "The chair existed while you sat on it and then ceased to exist",
+      "Chairs exist, but only as abstract objects and not as concrete ones"
+    ],
+    "answer": 1,
+    "explanation": "The nihilist accepts simples and paraphrases chair talk into claims about how they are arranged, so the ordinary claim is right about the room without requiring a further object. The first option misstates the view: nihilism denies composite objects, not simples."
+  },
+  {
+    "id": "three-simples-count",
+    "section": "universalism",
+    "question": "A world's simples are exactly three in number. Assuming uniqueness of composition, how many objects does each view say the world contains?",
+    "options": [
+      "Nihilism: 0 objects; universalism: 7 objects",
+      "Nihilism: 3 objects; universalism: 6 objects",
+      "Nihilism: 1 object; universalism: 3 objects",
+      "Nihilism: 3 objects; universalism: 7 objects"
+    ],
+    "answer": 3,
+    "explanation": "Nihilism counts only the simples, which exist on every view. Universalism adds one fusion for each way of choosing two or more of them, three pairs and one triple, giving seven; the count of six forgets the fusion of all three."
+  },
+  {
+    "id": "handshake-case",
+    "section": "moderate-answers",
+    "question": "Why does the handshake case tell against the answer that things compose an object whenever they are in contact?",
+    "options": [
+      "It shows that contact is vague, so the answer falls to the argument from vagueness",
+      "It implies that the two people stop being separate people while their hands touch",
+      "It shows that people shaking hands are never in contact, only very close together",
+      "It implies that a new object appears when they clasp hands and goes when they let go"
+    ],
+    "answer": 3,
+    "explanation": "If contact sufficed, composition would come and go with every touch, producing objects nobody believes in. The vagueness option names a different problem, and the handshake is a clear case of contact, not a borderline one."
+  },
+  {
+    "id": "vagueness-premise",
+    "section": "the-argument-from-vagueness",
+    "question": "A moderate theorist says that as a table is assembled particle by particle, one exact step brings a new object into existence, though nobody could know which. Which premise of the argument from vagueness does she reject?",
+    "options": [
+      "That some series of cases runs from composition to its absence",
+      "That no such series contains a sharp cut-off at a single step",
+      "That vague composition would make existence itself vague too",
+      "That it cannot be vague how many objects there are in total"
+    ],
+    "answer": 1,
+    "explanation": "She accepts a sharp cut-off, so she denies the second premise and can keep the rest. Van Inwagen takes a different exit: he grants that there is no cut-off and denies that the number of objects cannot be vague."
+  }
+]
