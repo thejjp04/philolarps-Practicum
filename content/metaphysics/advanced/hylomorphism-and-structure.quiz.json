@@ -1,0 +1,80 @@
+[
+  {
+    "id": "bricks-and-clay",
+    "section": "matter-and-form-in-aristotle",
+    "question": "A house is built from bricks, and each brick is fired clay. Which description fits Aristotle's account of matter and form?",
+    "options": [
+      "The bricks are the matter of the house, though each brick is itself clay with a form",
+      "Only the clay is matter, since the bricks already have a form and so cannot be matter",
+      "The bricks are the form of the house, since their shapes fix the shape of the whole",
+      "The house has no matter of its own, since each of its components is already formed"
+    ],
+    "answer": 0,
+    "explanation": "Matter is relative to form: the bricks are matter relative to the house and compounds of clay and form relative to themselves. The second option treats matter as a special kind of stuff rather than a role, which is the mistake the relativity of matter corrects."
+  },
+  {
+    "id": "which-premise-goes",
+    "section": "how-form-went-missing",
+    "question": "The mereological argument says the statue and the clay have the same proper parts, and that things with the same proper parts are identical. What does the hylomorphist reject?",
+    "options": [
+      "The second premise, since extensionality fails for every material object",
+      "Neither premise, since the hylomorphist agrees the two are one object",
+      "The first premise, since the statue has a formal part the clay lacks",
+      "The first premise, since the two are made of different clay particles"
+    ],
+    "answer": 2,
+    "explanation": "The hylomorphist grants that the statue and the clay share every material part and denies that material parts are all the parts there are. Rejecting the second premise is the move of the friend of constitution without identity, which leaves the modal difference without a ground."
+  },
+  {
+    "id": "replaced-plank",
+    "section": "fines-theory-of-embodiment",
+    "question": "A boat has one plank replaced every year. Why can it not be a rigid embodiment of its original planks and the relation of being arranged as a boat?",
+    "options": [
+      "A rigid embodiment exists whenever its planks exist, however they are arranged",
+      "A rigid embodiment cannot include a relation, only the objects that stand in one",
+      "A rigid embodiment can have only one object as its base, never several planks",
+      "A rigid embodiment has its parts timelessly, so it ends once a plank is removed"
+    ],
+    "answer": 3,
+    "explanation": "A rigid embodiment exists only while those very objects stand in the relation and can neither gain nor lose them, so a boat that survives replacement must be a variable embodiment. The first option describes a classical sum, which ignores arrangement altogether."
+  },
+  {
+    "id": "dissolved-not-answered",
+    "section": "dissolving-rather-than-answering",
+    "question": "Why does the structural view count as dissolving the constitution problem rather than answering it?",
+    "options": [
+      "It shows that the statue and the clay are one object under two descriptions",
+      "It denies the premise that the statue and the clay share all of their parts",
+      "It shows that the modal difference between the two objects is merely verbal",
+      "It treats constitution as a primitive relation that needs no further account"
+    ],
+    "answer": 1,
+    "explanation": "The puzzle depended on two things having exactly the same parts, and the structural view denies that they do, so no choice among the earlier responses is needed. The first and third options are versions of the identity view, which the hylomorphist does not accept."
+  },
+  {
+    "id": "syllable-regress",
+    "section": "aristotles-regress",
+    "question": "Aristotle argues that the syllable BA is more than its letters, and that the extra cannot be a further element. What does the neo-Aristotelian take this to show?",
+    "options": [
+      "That a form cannot be a part of any kind, so formal parts must be given up",
+      "That a syllable has no real unity, so a heap of letters is all there is",
+      "That the form is not an ingredient like the letters but a requirement they meet",
+      "That a fourth element is needed to bind the letters and the form together"
+    ],
+    "answer": 2,
+    "explanation": "The neo-Aristotelian accepts that the form is not one more element of the letters' sort, and holds that a structural part is instead the requirement the matter satisfies, so no further tie is needed. Adding a fourth element is exactly the step that starts the regress."
+  },
+  {
+    "id": "fusion-of-matter-and-form",
+    "section": "extensionality-returns",
+    "question": "Suppose the statue's structure is a universal shared with other statues. Why does the classical fusion of the statue's clay and its structure trouble the hylomorphist?",
+    "options": [
+      "It has the statue's parts but survives squashing, so two things share every part",
+      "It has no location, so the statue that contains it can have no location either",
+      "It contains the structure twice over, which classical mereology forbids",
+      "It is identical to the clay, so the clay turns out to be partly abstract"
+    ],
+    "answer": 0,
+    "explanation": "Clay and universal both outlast the squashing, so their fusion does too, while the statue does not; two objects with the same parts then differ, and extensionality fails. The hylomorphist must restrict composition or accept that failure, whereas nothing in the case makes the structure occur twice."
+  }
+]
