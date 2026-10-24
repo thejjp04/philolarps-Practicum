@@ -1,0 +1,80 @@
+[
+  {
+    "id": "which-direction-fails",
+    "section": "the-modal-account",
+    "question": "The modal account says both that every essential property is had necessarily and that every property had necessarily is essential. Which claim is Fine's argument aimed at?",
+    "options": [
+      "The second, since a property can be necessary to a thing yet no part of its essence",
+      "The first, since a thing can lack an essential property at some world where it exists",
+      "Both equally, since he rejects any connection at all between essence and necessity",
+      "Neither, since his target is only the existence clause in the conditional formulation"
+    ],
+    "answer": 0,
+    "explanation": "Fine accepts that whatever belongs to what a thing is, the thing could not have been without; his cases show only that necessity is not enough for essence. Rejecting every link between essence and necessity goes further than he does."
+  },
+  {
+    "id": "singleton-source",
+    "section": "socrates-and-his-singleton",
+    "question": "Socrates belongs to his singleton at every world where he exists, and the singleton contains him at every world where it exists. What does this pair of facts show the modal account cannot capture?",
+    "options": [
+      "That the membership holds at some worlds where Socrates exists and fails at others",
+      "That no truth about a concrete person can ever involve an abstract object like a set",
+      "That the connection flows from what the set is rather than from what Socrates is",
+      "That membership in the singleton is a trivial property, like being such that 2 + 2 = 4"
+    ],
+    "answer": 2,
+    "explanation": "The modal profile is the same from both ends, so it cannot register that the connection belongs to the set's nature and not to Socrates'. The membership is not trivial in the way arithmetical properties are, which is why the case is stronger than those."
+  },
+  {
+    "id": "constitutive-or-consequential",
+    "section": "real-definition",
+    "question": "Suppose the real definition of singleton Socrates states that Socrates is its sole member. Which of these is in its consequential essence without being in its constitutive essence?",
+    "options": [
+      "That Socrates is its sole member",
+      "That it has at least one member",
+      "That Socrates is a human being",
+      "That it is not the Eiffel Tower"
+    ],
+    "answer": 1,
+    "explanation": "Having at least one member follows by logic alone from the definition, so it is consequential without being what the definition states. The first option is the definition itself, and the other two depend on the natures of Socrates or the Tower, not the set's alone."
+  },
+  {
+    "id": "distinctness-source",
+    "section": "reversing-the-order-of-explanation",
+    "question": "On the essentialist account, Socrates is necessarily distinct from the Eiffel Tower although this is no part of Socrates' nature. How can the account explain the necessity?",
+    "options": [
+      "By noting that it holds at every world, which is all that necessity amounts to",
+      "By counting relational properties in Socrates' nature, so it is essential to him",
+      "By tracing it to the natures of the two taken together, or to that of identity",
+      "By treating distinctness as contingent, so that it merely looks necessary"
+    ],
+    "answer": 2,
+    "explanation": "The essentialist allows a necessity to have its source in natures other than that of the object it is about. Appealing to truth at every world is the modal account's description, not the essentialist's explanation."
+  },
+  {
+    "id": "sparse-repair",
+    "section": "saving-the-modal-account",
+    "question": "A modal theorist counts as essential only the sparse properties a thing has at every world at which it exists. What is the strongest objection to this repair?",
+    "options": [
+      "It still counts being a member of the singleton as essential to Socrates",
+      "It makes essence depend on our choice of predicates rather than on things",
+      "It cannot be stated at all without first giving up possible worlds",
+      "It also strips having Socrates as sole member from the singleton's essence"
+    ],
+    "answer": 3,
+    "explanation": "Having Socrates as sole member is no more sparse than its converse, so the filter removes both halves of the asymmetry, including the clearest essential property in the case. The first option is wrong because the filter does exclude the membership property from Socrates' essence."
+  },
+  {
+    "id": "dilemma-horn",
+    "section": "the-charge-of-obscurity",
+    "question": "Blackburn's dilemma says a necessity's source is either necessary or contingent. How does the essentialist respond?",
+    "options": [
+      "By taking the contingent horn, holding that a contingent source can still yield necessity",
+      "By taking the necessary horn, holding that explanation may end in what a thing is",
+      "By rejecting both horns, holding that necessary truths need no explanation at all",
+      "By taking both horns, holding that essences are necessary at some worlds only"
+    ],
+    "answer": 1,
+    "explanation": "Essentialist truths are themselves necessary, and the reply is that explanation can properly stop at what a thing is, since a thing could not have a different nature and stay the same thing. Saying necessities need no explanation would abandon the essentialist project rather than defend it."
+  }
+]
