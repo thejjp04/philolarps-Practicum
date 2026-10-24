@@ -1,0 +1,80 @@
+[
+  {
+    "id": "absolute-and-relative",
+    "section": "what-it-is-to-be-fundamental",
+    "question": "Two philosophers agree that every chemical fact is grounded in physical facts. One holds that some physical facts are grounded in nothing further; the other holds that every physical fact is grounded in further physical facts. What are they disagreeing about?",
+    "options": [
+      "Whether chemical facts supervene on the physical facts at all",
+      "Whether anything is fundamental, not whether physics is prior",
+      "Whether grounding runs from physics to chemistry or the reverse",
+      "Whether the basic physical facts are necessary or contingent"
+    ],
+    "answer": 1,
+    "explanation": "Both agree that physics is more fundamental than chemistry; they differ over whether any fact is fundamental in the absolute sense of having no grounds at all. The option about necessity misreads the notion, since fundamentality is not modal and a contingent fact can be ungrounded."
+  },
+  {
+    "id": "endless-descent",
+    "section": "is-there-a-bottom-level",
+    "question": "Suppose every fact is fully grounded in facts about some lower level, and there is no lowest level. On the grounding account of fundamentality, which of these follows?",
+    "options": [
+      "Every fact has a full ground, and no fact is fundamental in the absolute sense",
+      "Some facts go unexplained, since the chain of grounds is never completed",
+      "The higher levels are more fundamental than the lower levels that ground them",
+      "Each level is fundamental relative to the one above, so every level is fundamental"
+    ],
+    "answer": 0,
+    "explanation": "Each fact has a full ground one level down, so none is ungrounded, though each level is more fundamental than those above it. The tempting claim that some facts go unexplained gets the case wrong: the objection to the regress argument is precisely that every fact in the descent has an answer to why it holds."
+  },
+  {
+    "id": "naturalness-without-universals",
+    "section": "lewiss-naturalness",
+    "question": "A philosopher denies that there are universals but agrees that two electrons resemble each other more than an electron and a left shoe do. What does Lewis's argument require of her?",
+    "options": [
+      "That she accept Armstrong's universals, since only they make for resemblance",
+      "Nothing, since abundant properties already settle which things resemble which",
+      "That she let resemblance be fixed by which predicates her language contains",
+      "An objective distinction among properties, by primitive naturalness or resemblance"
+    ],
+    "answer": 3,
+    "explanation": "Lewis argued that the distinction is needed whether or not there are universals, and left open whether to draw it with universals, a primitive distinction among classes, or primitive resemblance. The abundant properties cannot do it, since any two things share infinitely many of them."
+  },
+  {
+    "id": "quus-and-naturalness",
+    "section": "the-work-naturalness-does",
+    "question": "You have never added numbers as large as 57, so all your past sums fit quaddition as well as addition. On Lewis's response to Kripke's sceptic, what makes it the case that you meant addition?",
+    "options": [
+      "A mental image of addition that accompanied each sum you worked out",
+      "Your community's practice, which uses the word for addition alone",
+      "Addition is more natural, and meaning goes to the most natural fit",
+      "Nothing does, since no fact about you separates the two functions"
+    ],
+    "answer": 2,
+    "explanation": "Lewis lets naturalness break the tie that the facts about use leave open: addition is far more natural than quaddition, so it is the better candidate for what \"plus\" means. The last option is the sceptic's own conclusion, which the appeal to naturalness was meant to block."
+  },
+  {
+    "id": "logical-joints",
+    "section": "from-naturalness-to-structure",
+    "question": "A physical theory takes \"charge\" and the existential quantifier as primitive, and it is highly successful. On Sider's reasoning about ideological commitment, what should someone who accepts the theory conclude?",
+    "options": [
+      "That charge carves at the joints, while logical notions are conventions",
+      "That the theory's entities exist, and nothing about its primitive notions",
+      "That neither carves, since carving belongs to properties and not notions",
+      "That both carve at the joints, since success supports all its primitives"
+    ],
+    "answer": 3,
+    "explanation": "Sider treats all of a successful theory's primitive notions alike, so its logical primitives earn the same credit as \"charge\". That is the step from Lewis's naturalness, confined to properties, to structure, which applies to notions of any grammatical category."
+  },
+  {
+    "id": "value-of-carving",
+    "section": "doubts-about-structure",
+    "question": "Dasgupta grants, for the sake of argument, that some notions have the primitive feature of carving at the joints. What does his objection then press?",
+    "options": [
+      "That nothing about the feature explains why we ought to use such notions",
+      "That no one could ever discover which notions in fact have the feature",
+      "That the feature is too abundant to separate green from grue in practice",
+      "That the feature must itself be grounded, and so cannot be primitive"
+    ],
+    "answer": 0,
+    "explanation": "Dasgupta's worry is about value: a bare metaphysical feature carries no reason with it, so the realist's norm that inquiry should use joint-carving notions is left unexplained. The worry about discovering which notions carve is a different, epistemic objection, which the article raises separately."
+  }
+]
