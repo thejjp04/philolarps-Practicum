@@ -1,0 +1,80 @@
+[
+  {
+    "id": "lumpl-difference",
+    "section": "lumpl-and-goliath",
+    "question": "A sculptor joins two pieces of clay into a statue, so that the statue and its lump begin at one moment, and later destroys both at once. What does this case show?",
+    "options": [
+      "That the statue and the lump differ in their history after all",
+      "That a modal difference remains even with every historical one removed",
+      "That a perdurantist can count the two as distinct by their temporal parts",
+      "That the lump could not have survived being squashed into a ball"
+    ],
+    "answer": 1,
+    "explanation": "Lumpl and Goliath begin and end together and share every part throughout, yet Lumpl could survive squashing and Goliath could not, so the modal difference is the core of the puzzle. The perdurantist cannot separate them, because they share all their temporal parts."
+  },
+  {
+    "id": "two-cats",
+    "section": "tibbles-tib-and-the-ship",
+    "question": "Why is the case of Tibbles and Tib harder for a defender of coincident objects than the statue and the lump?",
+    "options": [
+      "After the operation both appear to be cats, so no difference in kind explains it",
+      "Tib and Tibbles never shared any of their matter, either before or after the operation",
+      "Cats have no essential properties, so no modal difference between the two can arise",
+      "Tib is a mere part, and a part can never share a place with the whole it belongs to"
+    ],
+    "answer": 0,
+    "explanation": "The usual explanation of coincidence is that the two things are of different kinds with different persistence conditions, and Wiggins's principle allows coincidence only for things of different kinds. Tib and Tibbles shared most of their matter all along, and after the amputation they share all of it."
+  },
+  {
+    "id": "grounding-demand",
+    "section": "the-grounding-problem",
+    "question": "A pluralist says the statue and the lump differ in what they could survive simply because one is a statue and the other a lump, with nothing microphysical underneath. Which demand is she refusing?",
+    "options": [
+      "That every difference between two objects be visible to the naked eye",
+      "That two objects share all their parts at every moment they exist",
+      "That a modal difference rest on some difference that is not modal",
+      "That Leibniz's law apply to modal properties as well as to others"
+    ],
+    "answer": 2,
+    "explanation": "The grounding problem demands that the modal difference rest on some non-modal difference, and this pluralist takes the difference in kind, fixed by what each thing is, as basic. She keeps Leibniz's law, since it is what makes the modal difference show that the two are distinct."
+  },
+  {
+    "id": "contingent-cost",
+    "section": "contingent-identity",
+    "question": "Gibbard holds that Lumpl is Goliath but could have failed to be. Which widely accepted claim must he reject or restrict?",
+    "options": [
+      "That no two material objects can share all their matter at one time",
+      "That a statue could not survive being squashed into a ball of clay",
+      "That a lump of clay could survive being squashed into a ball",
+      "That if a is identical with b, a is necessarily identical with b"
+    ],
+    "answer": 3,
+    "explanation": "If Lumpl is Goliath but might not have been, true identities can be contingent, which the argument from Leibniz's law that Kripke made famous denies. Gibbard keeps one object to a place and accepts both modal claims, each read relative to its sortal."
+  },
+  {
+    "id": "inconstant-squash",
+    "section": "counterparts-and-inconstancy",
+    "question": "On Lewis's view, how can 'the lump could survive squashing' and 'the statue could not' both be true of one object without breaking Leibniz's law?",
+    "options": [
+      "The object is a lump at some times and a statue at other times",
+      "The two subjects call up different counterpart relations for the predicate",
+      "Leibniz's law holds only for intrinsic properties, and modal ones are extrinsic",
+      "The lump and the statue exist in two different possible worlds"
+    ],
+    "answer": 1,
+    "explanation": "'The statue' and 'the lump' evoke different counterpart relations, so 'could survive squashing' expresses different properties in the two sentences. The object is a statue and a lump at the same times, so the first option misdescribes the case."
+  },
+  {
+    "id": "sculptor-destroys",
+    "section": "dominant-sortals",
+    "question": "On the dominant sortal view, what happens to the lump of clay the sculptor bought on Monday when the statue is finished on Tuesday?",
+    "options": [
+      "It goes on existing alongside the statue, sharing all its matter",
+      "It turns out to have been the statue all along, since Monday",
+      "It survives, with the statue as a temporal part of it",
+      "It ceases to exist, and one new object is both statue and clay"
+    ],
+    "answer": 3,
+    "explanation": "Once 'statue' dominates, the Monday lump, whose persistence conditions were a lump's, is gone, and a new object that is both a statue and a lump takes its place. The first option is the pluralist's answer, which the view was designed to avoid."
+  }
+]
