@@ -1,0 +1,162 @@
+---
+title: Ontological Dependence
+subject: metaphysics
+tier: advanced
+order: 4
+est_read_min: 18
+summary: "Existential, essential, rigid, and generic varieties, and why modal definitions misfire"
+prerequisites: ["fundamentality-and-structure"]
+introduces: ["existential dependence", "essential dependence", "rigid dependence", "generic dependence"]
+requires: ["real definition", "grounding", "substance", "existence", "ontological dependence"]
+added: "2026-10-24"
+---
+
+The last article described reality in levels. At the bottom, on the view it examined, are the perfectly natural properties and the structure they carve; everything else is less fundamental, built out of what lies beneath. That picture leans on a word it never stopped to examine. To be less fundamental is, at least in part, to need something else in order to be, and the need runs one way. The table needs its particles, and the particles do not need the table.
+
+A smile cannot exist without a face that smiles. A set cannot exist without its members: there is no set whose only member is Socrates unless there is Socrates. A hole needs a host to be a hole in, a slice of cheese or a doughnut, and a boundary needs something for it to bound. In each case one thing is secondary to another, and the general name for the relation is ontological dependence: one entity depends on another when it relies on that other for its existence, or for being the very thing it is. This article asks what exactly the relation is. The short answer is that there are several relations here, and the obvious definition runs them together and in places gets them wrong.
+
+## Needing as opposed to being caused
+
+One confusion should go before anything else. You causally depend on your parents, on the oxygen in the room and on the food you ate this morning. None of that is ontological dependence. Your parents brought you about, but if they ceased to exist tomorrow you would carry on. The oxygen keeps you alive, but that is a fact about physiology and its laws, not about what it is to be you. Causal dependence links events across time, it runs through laws of nature, and it would have been different had the laws been different.
+
+Ontological dependence is meant to hold in virtue of what the things themselves are. The smile does not need the face because faces produce smiles. It needs the face because a smile is a way a face is arranged, and there is nothing for a smile to be apart from some face being arranged that way. Likewise the set needs Socrates because a set is fixed by its members.
+
+The clear cases share two features that any account has to respect. The relation is asymmetric: the smile depends on the face and the face does not depend on the smile. And it orders things: what depends is in some sense posterior, and what is depended on is prior. That second feature is the source of the old contrast between things that exist in their own right and things that exist only in or through others, which is the contrast between substance and everything else. It returns at the end.
+
+<Aside title="Pieces and moments">
+One of the first systematic theories of dependence was a theory of parts. In the third of his *Logical Investigations* (1901), Edmund Husserl distinguished parts that could exist detached from their whole, which he called pieces, from parts that could not, which he called moments. A leg of a table is a piece: saw it off and it is still there. The colour of a surface is a moment, since it cannot exist without the extension it is spread over. The modern logical treatment of dependence, much of it set out in Peter Simons's *Parts* (1987), descends from Husserl's.
+</Aside>
+
+## The modal definition
+
+The most natural way to make the relation precise uses the possible worlds machinery of the intermediate tier. One thing needs another to exist if it could not exist without it, which is to say that there is no possible world in which the first exists and the second does not.
+
+<Definition term="Existential dependence">
+Dependence of one thing on another for its existence. On the standard modal definition, x existentially depends on y when x is distinct from y and, necessarily, if x exists then y exists: there is no possible world containing x but not y.
+</Definition>
+
+The definition is clear, uses only notions already understood, and gets the opening cases right. No world contains this smile but not this face. No world contains the singleton of Socrates but not Socrates. No world contains this hole and lacks the cheese it is a hole in. In the other direction, the face exists in worlds where it never smiles, and the cheese exists in worlds where it was cut without holes, so the definition delivers the asymmetry in those cases as well.
+
+Two pieces of detail. The distinctness clause is there because everything trivially satisfies the conditional with respect to itself: necessarily, if Socrates exists, Socrates exists. And "exists" can be read as existing at some time or other in the world, or more strictly as existing at every time at which x exists. The stricter, temporal reading gives a stronger relation, and nothing below turns on the choice.
+
+## How the modal definition misfires
+
+The trouble is that a necessary conditional can be true for reasons that have nothing to do with x needing y. There are three standard ways this happens.
+
+The first is necessary existents. Suppose, as many philosophers of mathematics hold, that the number 2 exists necessarily, at every world. Then for anything whatever, necessarily, if it exists then 2 exists, simply because 2 exists everywhere. The definition then says that Socrates, the Eiffel Tower and every electron existentially depend on the number 2. Nobody thinks a person relies on a number in order to exist. The problem does not go away among the necessary beings themselves. The set whose only member is 2 plainly depends on 2, but since both exist at every world, the definition makes each depend on the other, and indeed makes every necessary existent depend on every other.
+
+The second is the case the supervenience article already used. Socrates and his singleton are both contingent, so the first problem does not arise. But on standard set theory, a set exists whenever its members do, so there is no world containing Socrates without his singleton. The necessity runs both ways, and the definition calls the dependence mutual.
+
+<Argument name="The singleton argument">
+  <Premise>If the modal definition is correct, x existentially depends on y whenever x is distinct from y and, necessarily, if x exists then y exists.</Premise>
+  <Premise>Socrates is distinct from his singleton, and necessarily, if Socrates exists then his singleton exists.</Premise>
+  <Premise>Socrates does not depend on his singleton for his existence.</Premise>
+  <Conclusion>The modal definition is not correct.</Conclusion>
+</Argument>
+
+The third concerns origins. The modality article reported Kripke's suggestion that a person could not have had different parents. If that is right, there is no world containing you but not your parents, and the definition makes you existentially dependent on them. But that is exactly the causal relation the first section set aside. The modal tie here comes from the necessity of origin, not from any need, and your parents' later fate makes no difference to whether you exist.
+
+<Objection>
+The fault lies in the details, not the idea. Restrict the definition so that only contingent things can be depended on, and the number 2 drops out. Add clauses for sets and for origins, and the remaining cases are handled. Every useful definition in philosophy has been refined in this way, and a few counterexamples are a reason to repair the definition, not to abandon the strategy behind it.
+</Objection>
+
+<Reply>
+Each repair handles one case and breaks another. Restricting the definition to contingent things blocks dependence on 2, but it also blocks the dependence of the singleton of 2 on 2, which is as clear a case as the dependence of the singleton of Socrates on Socrates. No restriction concerning necessary existence touches the singleton, where both terms are contingent and the necessity holds in both directions. To rule that case out you would need a clause saying that the necessity holds because of what the singleton is and not because of what Socrates is, and a clause of that kind is no longer modal. The repairs fail for a common reason. A modal profile records which things go together across the worlds. Dependence concerns which of them accounts for the other, and two things can go together at every world while differing in which is prior. The supervenience article reached the same verdict about covariation in general.
+</Reply>
+
+<Check id="singleton-symmetry" />
+
+## Rigid and generic dependence
+
+Before turning to what might replace the modal definition, there is a distinction that holds whichever account is right. What a thing depends on can be a particular, or it can be merely something or other of a kind.
+
+This smile depends on this face; no other face could have worn this very smile. A living body is different. It needs atoms, but not these atoms, since it takes in new ones and loses old ones all the time and survives the exchange of any of them.
+
+<Definition term="Rigid dependence">
+Dependence of one thing on a particular other thing, which could not be swapped for another of the same kind. In modal form: necessarily, if x exists then y, that very thing, exists. A singleton depends rigidly on its member, and a smile on the face that wears it.
+</Definition>
+
+<Definition term="Generic dependence">
+Dependence of one thing on there being something or other of a certain kind, without dependence on any particular member of the kind. In modal form: necessarily, if x exists then some F other than x exists. A living body depends generically on atoms, since it needs some atoms to exist but no atom in particular.
+</Definition>
+
+The examples sort readily once the distinction is in view. A forest depends generically on trees: it survives the felling of any one tree, so long as enough remain. A river depends generically on water. On Armstrong's view of universals as immanent, existing only where they are instantiated, a universal depends generically on particulars, since it needs some instance or other and no instance in particular. A hole depends rigidly on its host, since it cannot migrate from one slab of cheese to another, but only generically on the matter of the host, some of which can be nibbled away without destroying the hole.
+
+The two relations are connected in one direction only. If x rigidly depends on y, and y could not have failed to be an F, then x generically depends on Fs, because any world with x has y and so has an F. The converse fails, and that failure is the point of the distinction. The body's generic dependence on atoms does not pin it to any atom at all.
+
+Stated modally, both relations inherit the misfires of the last section: if 2 exists necessarily, everything depends generically on numbers as well as rigidly on 2. The distinction tells you what kind of thing is needed and leaves open what the needing consists in.
+
+<Check id="forest-and-trees" />
+
+## Dependence as a matter of essence
+
+The article on essence two rungs back followed Kit Fine's argument, in "Essence and Modality" (1994), that essence cannot be defined in modal terms. The argument used the same pair. It is necessary that Socrates is a member of his singleton, yet it is no part of what Socrates is to belong to a set, while it is part of what the singleton is to have Socrates as its member. Necessity is symmetric between them and nature is not. In "Ontological Dependence" (1995) Fine applied the same diagnosis to dependence, and proposed to read dependence off natures rather than off modal profiles.
+
+Fine's formulation is that x depends on y when y is a constituent of some proposition true in virtue of the identity of x. Less formally, x depends on y when y figures in the real definition of x: when a full statement of what x is has to mention y.
+
+<Definition term="Essential dependence">
+Dependence of one thing on another that holds in virtue of what the first thing is: x essentially depends on y when y figures in the essence, or real definition, of x, so that a full statement of what x is must mention y. This is the account Kit Fine gave in "Ontological Dependence" (1995).
+</Definition>
+
+Run the cases through it. The real definition of the singleton is that it is the set whose sole member is Socrates, which mentions Socrates. Whatever the real definition of Socrates is, it concerns a human being of some kind and origin, and it does not mention his singleton. The asymmetry is restored. The real definition of Socrates does not mention the number 2 either, so the necessary existents drop out without any restriction on contingency. And the singleton of 2 is defined as the set whose member is 2, while 2 is not defined in terms of its singleton, so the case that the contingency restriction got wrong now comes out right.
+
+The essentialist approach can also recover an existential notion that avoids the misfires. Say that x depends for its existence on y, in the essentialist sense, when it lies in the nature of x that x exists only if y exists. This is stronger than the modal definition, because it requires the necessity to flow from the nature of x. That 2 exists at every world flows from the nature of 2, not from the nature of Socrates, so the conditional "if Socrates exists, 2 exists" is necessary without being true in virtue of what Socrates is. The modal definition could only ask whether a conditional is necessary. The essentialist one asks where the necessity comes from.
+
+<Objection>
+This trades a clear notion for an obscure one. We have some grip on what is possible, and a worked-out semantics for it. Real definition has neither. Worse, the way we judge real definitions seems to be by consulting modal intuitions, so the essentialist account either borrows from modality the very thing it claims to replace or gives a new name to the bare intuition that the set depends on Socrates.
+</Objection>
+
+<Reply>
+The judgement that the singleton is defined in terms of Socrates is not a modal judgement, and it is not less secure than any modal one. Set theory itself treats sets as determined by their members: the axiom of extensionality says that sets with the same members are the same set, and nothing comparable says that a person is determined by the sets containing them. That is evidence about what sets are, and it is not evidence about which worlds contain what. How we know essences is a real question, but it has a twin in how we know what is possible. Finally, the choice is not between a clear account and an obscure one. The modal account is clear and gets the cases wrong, and an account that is committed to essence and gets them right is not defeated by the charge that essence needs further explanation.
+</Reply>
+
+## Identity dependence
+
+E. J. Lowe, in *The Possibility of Metaphysics* (1998) and later work, drew a further distinction. Some dependence concerns whether a thing exists. Some concerns which thing it is. Lowe called the second *identity dependence*: x depends for its identity on y when which thing x is is fixed by which thing y is. In the formulation that Tuomas Tahko and Lowe give in their encyclopedia entry on the subject, x depends for its identity on y when there is some relation in which, as part of its essence, x stands to y.
+
+Which set the singleton of Socrates is is fixed by Socrates: it is the set with him as its member, and nothing else about it is needed to tell it apart from every other set. Which assassination occurred on a given day is fixed in part by who was assassinated. Which marriage is in question is fixed by the two people married. This smile is the smile of this face, and only the face tells it apart from an exactly similar smile on another. In each case the dependent thing is individuated through the thing it depends on.
+
+Identity dependence is a species of essential dependence, the case in which what figures in x's real definition does so by individuating x. It is not the same as existential dependence, because a thing can need what does not fix its identity. A horse needs some cells or other in order to exist, but which horse it is is not settled by which cells it has, since it would be the same horse with different ones. That gap between needing something and being individuated by it is what the last section of this article puts to use.
+
+## Dependence and grounding
+
+Grounding, as this tier has used the word, is a relation between facts, expressed by "because" and "in virtue of". Dependence, as this article has treated it, is a relation between entities: the smile and the face, the set and its member. The two are evidently connected, and the natural bridge goes through facts about existence. If the singleton of Socrates depends on Socrates, then the fact that the singleton exists obtains in virtue of the fact that Socrates exists. A simple proposal suggests itself: x depends on y just when the fact that x exists is grounded, at least partly, in some fact about y.
+
+The proposal captures something, but the two notions come apart in instructive ways.
+
+Grounding is actual and particular. The fact that this forest exists is grounded in facts about these trees, standing where they stand. Generic dependence is general and modal: the forest needs some trees or other, and no tree in particular. So the existence of a generically dependent thing is grounded in facts about particular things on which it does not rigidly depend. Grounding tells you what does the work in this world; generic dependence tells you what any base would have to be like.
+
+Grounding of existence facts also leaves out identity. That the singleton exists because Socrates does is one claim. That it is the very set it is because of Socrates is another, and it is the second that Lowe's notion captures.
+
+There is also the question of which comes first. One attractive view takes essence to explain ground: the fact that the singleton exists is grounded in the fact that Socrates exists because of what the singleton is, namely a set defined by its member. If that is right, essential dependence is the more basic notion and grounding answers to it. Jonathan Schaffer, in "On What Grounds What" (2009), takes grounding to relate entities of any category, not only facts, and on that usage grounding and rigid ontological dependence come close to merging. The disagreement is partly verbal, but the distinctions above survive it: whatever the relation is called, actual grounds, generic needs and identity fixing are three different things.
+
+## Substance as independent being
+
+The oldest use of dependence is in saying what a substance is. The intermediate article defined substance as a particular that has properties without being a property of anything, and that is in some way more basic than the properties it bears. Dependence says in what way.
+
+Aristotle's *Categories* gives the original version. Primary substances, this man or this horse, are neither said of a subject nor present in one, and everything else is either said of them or present in them, so that if the primary substances did not exist, nothing else would. Descartes, in the *Principles of Philosophy* (1644), made independence the definition: a substance is a thing that exists in such a way as to depend on no other thing for its existence. He drew the consequence at once. Strictly, only God meets that condition, and created minds and bodies are substances in a secondary sense, needing nothing for their existence except God's concurrence. Spinoza, in the *Ethics* (1677), pressed the thought further and concluded that there is only one substance, God or Nature.
+
+The varieties of dependence separate what these definitions could mean.
+
+If substance is independence in the modal existential sense, and numbers exist necessarily, then nothing is a substance at all, since everything depends rigidly on the number 2. Descartes's conclusion that only a necessary being qualifies would then arrive for the wrong reason, and it would not even leave God standing, since God too would come out dependent on 2.
+
+If substance requires generic independence, no composite material thing is a substance. A horse needs some cells, a person some matter, a ship some planks. Only simples, if there are any, would qualify, and the paradigm cases from the *Categories* would be lost.
+
+If substance is independence of identity, the paradigms come back. Lowe's proposal is that a substance is a particular that does not depend for its identity on any other particular. A horse needs cells, but which horse it is is not fixed by any particular cell. The smile, by contrast, is fixed by its face, the set by its member, the hole by its host and the assassination by its victim. Horses and people come out substances, and smiles, sets, holes and events come out dependent, which is the division Aristotle began with. The account allows substances to depend generically on their matter, and it leaves the necessary existents harmless, since nothing about which person Socrates is is fixed by the number 2.
+
+The proposal inherits whatever obscurity attaches to essence. It is under most pressure where origins are concerned: if it lies in a horse's nature to have come from particular parents, its identity looks fixed in part by them, and the proposal must either deny that or explain why such facts about origin do not count. It also settles nothing about the dispute between substrata and bundles, since either view can say that a thing's identity is not fixed by anything outside it. What it does settle is that "independent being", the phrase that runs from Aristotle to Descartes, cannot be read as bare modal independence without emptying the category of substance, and that read as independence of identity it picks out roughly the things the tradition meant.
+
+<Check id="horse-and-cells" />
+
+## Next
+
+Dependence relates entities to entities. The next article turns to a dependence of a different shape: the dependence of truth on being. Truthmaker theory holds that what is true depends on what there is, so that a true proposition is made true by some entity whose existence suffices for it. The view is easy to state for "Socrates exists" and much harder for "there are no unicorns", because no existing thing seems to be what makes a negative existential true. That strain is sharpest for maximalism, the claim that every truth has a truthmaker, and it is where the next article begins.
+
+<FurtherReading>
+  <li>Kit Fine, "Ontological Dependence", *Proceedings of the Aristotelian Society*, volume 95 (1995), pages 269 to 290.</li>
+  <li>Kit Fine, "Essence and Modality", *Philosophical Perspectives*, volume 8 (1994), pages 1 to 16.</li>
+  <li>E. J. Lowe, *The Possibility of Metaphysics: Substance, Identity, and Time* (Oxford: Clarendon Press, 1998).</li>
+  <li>Peter Simons, *Parts: A Study in Ontology* (Oxford: Clarendon Press, 1987).</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Ontological Dependence"](https://plato.stanford.edu/entries/dependence-ontological/), by Tuomas E. Tahko and E. Jonathan Lowe.</li>
+  <li>Stanford Encyclopedia of Philosophy, ["Metaphysical Grounding"](https://plato.stanford.edu/entries/grounding/), by Ricki Bliss and Kelly Trogdon.</li>
+</FurtherReading>

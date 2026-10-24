@@ -1,0 +1,80 @@
+[
+  {
+    "id": "singleton-symmetry",
+    "section": "how-the-modal-definition-misfires",
+    "question": "Someone proposes to save the modal definition by allowing only contingent things to be depended on. Why does this not help with Socrates and his singleton?",
+    "options": [
+      "The singleton exists necessarily, so the restriction removes it from the definition entirely",
+      "Socrates depends causally on his parents, which no restriction on contingency can separate out",
+      "Both are contingent and each necessitates the other, so the dependence still comes out mutual",
+      "Sets are abstract, and the modal definition was only ever meant to apply to concrete objects"
+    ],
+    "answer": 2,
+    "explanation": "The restriction removes only necessary existents, and here both terms are contingent while each necessitates the other, so the definition still calls the dependence mutual. The singleton is not a necessary existent, since it exists only at worlds where Socrates does."
+  },
+  {
+    "id": "forest-and-trees",
+    "section": "rigid-and-generic-dependence",
+    "question": "A forest survives the felling of any one of its trees, so long as enough remain, but it could not exist with no trees at all. Which describes its dependence on trees?",
+    "options": [
+      "It depends generically on trees, and rigidly on none of the trees it actually has",
+      "It depends rigidly on each of its trees, since at any moment it needs all of them",
+      "It depends on no trees at all, since any particular tree can be removed safely",
+      "It depends rigidly on the kind tree, and generically on each of its present trees"
+    ],
+    "answer": 0,
+    "explanation": "The forest needs some trees or other but no tree in particular, which is generic dependence. That any given tree can go shows the dependence is not rigid, but it does not show that no trees are needed."
+  },
+  {
+    "id": "horse-and-cells",
+    "section": "substance-as-independent-being",
+    "question": "A horse needs some cells or other in order to exist, but which horse it is is not fixed by any particular cell. On which reading of independence does it count as a substance?",
+    "options": [
+      "Modal existential independence, since no world contains the horse without cells",
+      "Generic independence, since the horse needs no particular cell in order to exist",
+      "Causal independence, since nothing outside the horse keeps it in existence",
+      "Independence of identity, since no other particular fixes which horse it is"
+    ],
+    "answer": 3,
+    "explanation": "Lowe's criterion asks only that no other particular fix a thing's identity, and the horse's cells do not. Generic independence is the tempting answer, but the horse does depend generically on cells, which is exactly why that reading would exclude it."
+  },
+  {
+    "id": "nature-not-necessity",
+    "section": "dependence-as-a-matter-of-essence",
+    "question": "Suppose the number 2 exists at every possible world. Why does the essentialist account not make Socrates depend on 2?",
+    "options": [
+      "The conditional 'if Socrates exists, then 2 exists' is not in fact necessary",
+      "The necessity flows from what 2 is, and what Socrates is never mentions 2",
+      "The essentialist account applies only to things that exist contingently",
+      "Numbers are abstract and so cannot stand in relations of dependence at all"
+    ],
+    "answer": 1,
+    "explanation": "The conditional is necessary, but only because of the nature of 2; the real definition of Socrates does not mention it, so there is no essential dependence. The account needs no restriction to contingent things, which is why it can still say that the singleton of 2 depends on 2."
+  },
+  {
+    "id": "needing-without-individuating",
+    "section": "identity-dependence",
+    "question": "Which pair shows dependence for existence without dependence for identity?",
+    "options": [
+      "A singleton and the person who is its only member",
+      "An assassination and the person who was assassinated",
+      "A horse and the cells it needs some of in order to exist",
+      "A smile and the face whose arrangement the smile is"
+    ],
+    "answer": 2,
+    "explanation": "The horse needs some cells to exist, but which horse it is does not turn on which cells it has. In the other three pairs the dependent thing is individuated by what it depends on, so they show identity dependence as well."
+  },
+  {
+    "id": "grounds-versus-needs",
+    "section": "dependence-and-grounding",
+    "question": "The fact that a forest exists is grounded in facts about these particular trees, yet the forest depends rigidly on none of them. What does the case show?",
+    "options": [
+      "Grounding tracks the actual base, while generic dependence says what any base must be like",
+      "Grounding relates entities, so it cannot hold between facts about particular trees",
+      "The forest is not grounded in these trees at all, since it could have had others",
+      "Generic dependence is itself a kind of grounding, holding between facts about kinds"
+    ],
+    "answer": 0,
+    "explanation": "Grounds are actual and particular, here these trees, whereas generic dependence says only that some trees or other are needed. That the forest could have had other trees does not stop these ones grounding its existence as things are."
+  }
+]
