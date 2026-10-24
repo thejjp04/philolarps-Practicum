@@ -1,0 +1,80 @@
+[
+  {
+    "id": "what-makes-it-reductive",
+    "section": "the-reductive-payoff",
+    "question": "Lewis says a talking donkey is possible because some world contains one. What lets him count this as a reduction of modality rather than a restatement of it?",
+    "options": [
+      "He restricts the analysis to logical possibility, which needs no further account",
+      "He treats worlds as stipulated by us, so nothing about them needs explaining",
+      "He defines a world by spatiotemporal relations, without using any modal notion",
+      "He applies the analysis only to de dicto claims and leaves de re claims aside"
+    ],
+    "answer": 2,
+    "explanation": "A reduction needs the right-hand side to be free of modal notions, and Lewis defines a world as a maximal whole of spatiotemporally related things. Treating worlds as stipulated is Kripke's model reading, which accepts the circle rather than breaking it."
+  },
+  {
+    "id": "donkey-says-actual",
+    "section": "actuality-as-an-indexical",
+    "question": "A talking donkey in another world says 'only my world is actual'. On the indexical theory of actuality, what is the status of its claim?",
+    "options": [
+      "False, because only our world has actuality and the donkey's world lacks it",
+      "True, because 'actual' picks out the speaker's world, as 'here' picks out a place",
+      "Neither true nor false, because a merely possible speaker cannot refer to anything",
+      "True, because the donkey's world has the absolute property of actuality as well"
+    ],
+    "answer": 1,
+    "explanation": "On the indexical theory every world is actual from its own point of view, so the donkey speaks as truly as you do. The last option goes wrong by treating actuality as an absolute property, which is exactly what the indexical theory denies."
+  },
+  {
+    "id": "two-counterparts",
+    "section": "counterparts-instead-of-identity",
+    "question": "In some world two people resemble Nixon equally, and closely enough to be his counterparts. Why is this no embarrassment for counterpart theory, when it would be for transworld identity?",
+    "options": [
+      "Counterparthood is not identity, so the two need not be identical with each other",
+      "Counterpart theory allows only the closer one, so Nixon has a single counterpart",
+      "The two people are one person, since each of them is identical with Nixon himself",
+      "Counterpart theory denies that Nixon could have been different in any way at all"
+    ],
+    "answer": 0,
+    "explanation": "If both were identical with Nixon, they would be identical with each other by transitivity, which is absurd. Counterparts are related by resemblance, not identity, and a thing may have several in one world, so the option keeping only the closer one misdescribes the theory."
+  },
+  {
+    "id": "ways-premise",
+    "section": "ersatz-worlds",
+    "question": "Stalnaker agrees that there are many ways things could have been, yet rejects Lewis's conclusion. Which claim in the argument from ways does he deny?",
+    "options": [
+      "That things could have been different from how they are in countless ways",
+      "That talk of ways things could have been is an acceptable paraphrase of it",
+      "That a true sentence saying there are many Fs commits us to there being Fs",
+      "That a way things could have been is a thing of the same kind as our universe"
+    ],
+    "answer": 3,
+    "explanation": "Stalnaker treats a way things could have been as something like a property the world might have had, so the way things are is not the universe itself. He keeps the earlier premises, which is why he can agree that there are many such ways."
+  },
+  {
+    "id": "consistency-dilemma",
+    "section": "lewis-against-the-surrogates",
+    "question": "A linguistic ersatzer defines a 'consistent' set of sentences as one from which no contradiction can be derived by the rules of logic. What goes wrong?",
+    "options": [
+      "No set of sentences could pass that test, so there would be no worlds at all",
+      "Sets describing impossibilities, such as a thing red and green all over, pass",
+      "The test excludes genuine possibilities, such as a world in which donkeys talk",
+      "The test makes ersatz worlds concrete, since sentences are physical inscriptions"
+    ],
+    "answer": 1,
+    "explanation": "'This is red all over' and 'this is green all over' are not formally contradictory, so a purely syntactic test admits impossible worlds. Adding rules to exclude such sets means capturing every necessary connection, which brings modality back in as a primitive."
+  },
+  {
+    "id": "sceptic-no-grip",
+    "section": "what-actuality-costs",
+    "question": "Lewis argued that if actuality were absolute, you could not know you are actual. Why does this argument have no force against an ersatzist?",
+    "options": [
+      "Because the ersatzist holds that nothing can be known about the actual world",
+      "Because on ersatzism every world is actual relative to its own inhabitants",
+      "Because on ersatzism no merely possible people exist to be mistaken about it",
+      "Because the ersatzist defines actuality as being here, just as the realist does"
+    ],
+    "answer": 2,
+    "explanation": "The sceptical worry needs merely possible people with evidence like yours who wrongly believe they are actual. Abstract worlds have only represented inhabitants, who believe nothing; the second option describes the indexical theory, not ersatzism."
+  }
+]
